@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@theme {
+  --color-orange-50: #fff7ed;
+  --color-orange-100: #ffedd5;
+  --color-orange-200: #fed7aa;
+  --color-orange-300: #fdba74;
+  --color-orange-400: #fb923c;
+  --color-orange-500: #f97316;
+  --color-orange-600: #ea580c;
+  --color-orange-700: #c2410c;
+  --color-orange-800: #9a3412;
+  --color-orange-900: #7c2d12;
+}
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: var(--font-getai), ui-sans-serif, system-ui, sans-serif;
+  }
+
+  .btn-primary {
+    @apply bg-orange-500 hover:bg-orange-600 text-white font-medium py-3 px-6 rounded-lg transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-6 rounded-lg transition-colors;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent;
+  }
+
+}
+
+@layer utilities {
+  .container {
+    @media (width >= 96rem) {
+      max-width: 80rem;
+    }
+  }
+}
+
+/* Prose styles for blog content */
+.prose {
+  @apply text-gray-700 leading-relaxed;
+}
+
+.prose h2 {
+  @apply text-2xl font-bold text-gray-800 mt-8 mb-4;
+}
+
+.prose h3 {
+  @apply text-xl font-bold text-gray-800 mt-6 mb-3;
+}
+
+.prose p {
+  @apply mb-4;
+}
+
+.prose ul {
+  @apply mb-4 pl-6;
+}
+
+.prose li {
+  @apply mb-2 list-disc;
+}
+
+.prose strong {
+  @apply font-semibold text-gray-800;
+}
+
+/* Print styles for moving checklist */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    margin: 0;
+    padding: 20px;
+    background: white !important;
+  }
+  
+  .bg-gray-50 {
+    background: white !important;
+  }
+  
+  .shadow-md {
+    box-shadow: none !important;
+  }
+  
+  .bg-white {
+    background: white !important;
+  }
+  
+  .rounded-lg {
+    border-radius: 8px;
+  }
+  
+  .border-l-4 {
+    border-left-width: 4px;
+  }
+  
+  .text-red-500 {
+    color: #ef4444 !important;
+  }
+  
+  .text-yellow-500 {
+    color: #f59e0b !important;
+  }
+  
+  .text-blue-500 {
+    color: #3b82f6 !important;
+  }
+  
+  .bg-red-50 {
+    background-color: #fef2f2 !important;
+  }
+  
+  .bg-yellow-50 {
+    background-color: #fffbeb !important;
+  }
+  
+  .bg-blue-50 {
+    background-color: #eff6ff !important;
+  }
+  
+  .border-l-red-500 {
+    border-left-color: #ef4444 !important;
+  }
+  
+  .border-l-yellow-500 {
+    border-left-color: #f59e0b !important;
+  }
+  
+  .border-l-blue-500 {
+    border-left-color: #3b82f6 !important;
+  }
+}

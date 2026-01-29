@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'HelveticaRounded LT';
+    src: url('HelveticaRoundedLT-Bold.woff2') format('woff2'),
+        url('HelveticaRoundedLT-Bold.woff') format('woff'),
+        url('HelveticaRoundedLT-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

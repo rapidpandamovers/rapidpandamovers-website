@@ -1,0 +1,839 @@
+[
+  {
+    "name": "Residential Moving",
+    "slug": "residential-moving",
+    "icon": "Home",
+    "title": "Professional Residential Moving Services in Miami",
+    "description": "Full-service home moves with careful protection and professional handling.",
+    "hero": {
+      "title": "Experience Stress-Free Residential Moving in Miami",
+      "description": "Full-service home moves with careful protection",
+      "cta": "Get Your Free Residential Moving Quote",
+      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+    },
+    "extras": [
+      "Full-service packing and unpacking",
+      "Loading and unloading",
+      "Furniture disassembly and reassembly",
+      "Safe transportation",
+      "Professional moving equipment",
+      "Same-day service available",
+      "Weekend and evening moves",
+      "Storage solutions"
+    ],
+    "process": [
+      {
+        "step": "1",
+        "title": "Get Quote",
+        "description": "Contact us for a free, accurate estimate"
+      },
+      {
+        "step": "2", 
+        "title": "Schedule Move",
+        "description": "Choose your preferred date and time"
+      },
+      {
+        "step": "3",
+        "title": "We Move You",
+        "description": "Our team handles everything professionally"
+      },
+      {
+        "step": "4",
+        "title": "Settle In",
+        "description": "Relax in your new home"
+      }
+    ],
+    "benefits": [
+      "Experienced Local Movers",
+      "Flexible Scheduling", 
+      "Fully Licensed & Insured",
+      "Professional Team"
+    ],
+    "is_active": true
+  },
+  {
+    "name": "Local Moving",
+    "slug": "local-moving",
+    "icon": "Truck",
+    "title": "Professional Local Moving Services in Miami-Dade County",
+    "description": "Same-day and local area moves with quick response and experienced crews.",
+    "meta_title": "Local Moving Services Miami | Same Day Moves | Rapid Panda Movers",
+    "meta_description": "Professional local moving services within Miami-Dade County. Same-day service, experienced crews, and transparent pricing for your local move.",
+    "hero": {
+      "title": "Experience Stress-Free Local Moving in Miami",
+      "description": "Professional local moving services within Miami-Dade County",
+      "cta": "Get Your Free Local Moving Quote",
+      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+    },
+    "extras": [
+      "Full-service packing and unpacking",
+      "Loading and unloading",
+      "Furniture disassembly and reassembly",
+      "Safe transportation",
+      "Professional moving equipment",
+      "Same-day service available",
+      "Weekend and evening moves",
+      "Storage solutions"
+    ],
+    "areas": [
+      "Miami", "Coral Gables", "Miami Beach", "Hialeah",
+      "Doral", "Aventura", "Kendall", "Homestead",
+      "Palmetto Bay", "Pinecrest", "South Beach", "Little Havana"
+    ],
+    "process": [
+      {
+        "step": "1",
+        "title": "Get Quote",
+        "description": "Contact us for a free, accurate estimate"
+      },
+      {
+        "step": "2", 
+        "title": "Schedule Move",
+        "description": "Choose your preferred date and time"
+      },
+      {
+        "step": "3",
+        "title": "We Move You",
+        "description": "Our team handles everything professionally"
+      },
+      {
+        "step": "4",
+        "title": "Settle In",
+        "description": "Relax in your new home"
+      }
+    ],
+    "benefits": [
+      "Experienced Local Movers",
+      "Flexible Scheduling", 
+      "Fully Licensed & Insured",
+      "Professional Team"
+    ],
+    "is_active": true
+  },
+  {
+    "name": "Long Distance Moving",
+    "slug": "long-distance-moving",
+    "icon": "Navigation",
+    "title": "Reliable Interstate Moving Services Across All 50 States",
+    "description": "Statewide and interstate moves with reliable ETAs and real-time tracking.",
+    "meta_title": "Long Distance Moving Services | Interstate Moves | Rapid Panda Movers",
+    "meta_description": "Professional long-distance moving services across all 50 states. Interstate moves with real-time tracking, licensed & insured, and storage solutions.",
+    "hero": {
+      "title": "Reliable Interstate Moving Services",
+      "description": "Professional long-distance moving across all 50 states",
+      "cta": "Get Your Free Long Distance Quote",
+      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+    },
+    "extras": [
+      "Interstate moving services",
+      "Professional packing and crating",
+      "Secure transportation",
+      "Real-time tracking",
+      "Temporary storage solutions",
+      "Full-service moves",
+      "Partial service options",
+      "Flexible scheduling"
+    ],
+    "areas": [
+      "Orlando", "Tampa", "Jacksonville", "Fort Lauderdale",
+      "Atlanta, GA", "Charlotte, NC", "Nashville, TN", "New York, NY",
+      "Chicago, IL", "Dallas, TX", "Los Angeles, CA", "All 50 States"
+    ],
+    "process": [
+      {
+        "step": "1",
+        "title": "Free Consultation",
+        "description": "We assess your moving needs and provide a detailed quote"
+      },
+      {
+        "step": "2", 
+        "title": "Packing & Loading",
+        "description": "Professional packing and careful loading of your belongings"
+      },
+      {
+        "step": "3",
+        "title": "Secure Transport",
+        "description": "Safe transportation with real-time tracking updates"
+      },
+      {
+        "step": "4",
+        "title": "Delivery & Setup",
+        "description": "Careful unloading and placement at your new home"
+      }
+    ],
+    "benefits": [
+      "Licensed & Insured",
+      "Real-Time Tracking",
+      "Experienced Team"
+    ],
+    "is_active": true
+  },
+  {
+    "name": "Packing Services",
+    "slug": "packing-services",
+    "icon": "Package",
+    "title": "Expert Packing & Unpacking Services in Miami",
+    "description": "Professional packing and unpacking services using high-quality materials and proven techniques.",
+    "meta_title": "Professional Packing Services Miami | Packing & Unpacking | Rapid Panda Movers",
+    "meta_description": "Professional packing services in Miami. Expert packing and unpacking with high-quality materials, fragile item care, and full insurance coverage.",
+    "hero": {
+      "title": "Expert Packing & Unpacking Services in Miami",
+      "description": "Professional packing services with high-quality materials",
+      "cta": "Get Your Free Packing Quote",
+      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+    },
+    "extras": [
+      "Professional packing materials",
+      "Fragile item special handling",
+      "Furniture wrapping and protection",
+      "Custom crating for valuables",
+      "Unpacking at your new home",
+      "Box labeling and inventory",
+      "Partial and full-service packing",
+      "Same-day packing available"
+    ],
+    "materials": [
+      { "name": "Moving Boxes", "description": "Various sizes for all your items" },
+      { "name": "Bubble Wrap", "description": "Protection for fragile items" },
+      { "name": "Packing Paper", "description": "Acid-free newsprint wrapping" },
+      { "name": "Tape & Labels", "description": "Heavy-duty sealing supplies" },
+      { "name": "Furniture Pads", "description": "Protection for large items" },
+      { "name": "Specialty Boxes", "description": "Wardrobes, dishes, electronics" }
+    ],
+    "benefits": [
+      "Expert Handling",
+      "Time-Saving",
+      "Quality Materials"
+    ],
+    "is_active": true
+  },
+  {
+    "name": "Commercial Moving",
+    "slug": "commercial-moving",
+    "icon": "Building",
+    "title": "Professional Business & Office Relocations in Miami",
+    "description": "Office and business relocations with minimal downtime and maximum efficiency.",
+    "meta_title": "Commercial Moving Services Miami | Business Relocations | Rapid Panda Movers",
+    "meta_description": "Professional commercial moving services in Miami. Business relocations with minimal downtime, after-hours service, and experienced teams for all industries.",
+    "hero": {
+      "title": "Professional Business & Office Relocations",
+      "description": "Commercial moving services designed to minimize downtime",
+      "cta": "Get Your Free Commercial Quote",
+      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+    },
+    "extras": [
+      "Office relocations",
+      "IT equipment moving",
+      "Furniture disassembly/assembly",
+      "Document and file moving",
+      "Equipment and machinery transport",
+      "Weekend and after-hours moves",
+      "Minimal downtime planning",
+      "Storage solutions"
+    ],
+    "customers": [
+      { "name": "Law Firms", "description": "Confidential document handling" },
+      { "name": "Medical Offices", "description": "Sensitive equipment transport" },
+      { "name": "Tech Companies", "description": "Server and IT equipment moves" },
+      { "name": "Retail Stores", "description": "Inventory and fixture relocation" },
+      { "name": "Restaurants", "description": "Kitchen equipment and furniture" },
+      { "name": "Manufacturing", "description": "Heavy machinery transport" }
+    ],
+    "process": [
+      {
+        "step": "1",
+        "title": "Site Survey",
+        "description": "We assess your business needs and create a detailed moving plan"
+      },
+      {
+        "step": "2", 
+        "title": "Strategic Planning",
+        "description": "Minimize downtime with careful scheduling and logistics"
+      },
+      {
+        "step": "3",
+        "title": "Professional Execution",
+        "description": "Experienced team handles all aspects of your business move"
+      },
+      {
+        "step": "4",
+        "title": "Setup & Testing",
+        "description": "Get your business up and running quickly at the new location"
+      }
+    ],
+    "benefits": [
+      "Minimize Downtime",
+      "Professional Handling",
+      "Flexible Scheduling"
+    ],
+    "is_active": true
+  },
+  {
+    "name": "Furniture Moving",
+    "slug": "furniture-moving",
+    "icon": "Couch",
+    "title": "Specialized Furniture Moving Services in Miami",
+    "description": "Specialized furniture handling and protection for all types of furniture.",
+    "meta_title": "Furniture Moving Services Miami | Specialized Furniture Handling | Rapid Panda Movers",
+    "meta_description": "Professional furniture moving services in Miami. Specialized handling for all furniture types including antiques, pianos, and heavy pieces with expert protection.",
+    "hero": {
+      "title": "Specialized Furniture Moving Services",
+      "description": "Expert handling for all types of furniture",
+      "cta": "Get Your Free Furniture Moving Quote",
+      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+    },
+    "extras": [
+      "Antique furniture handling",
+      "Piano moving services",
+      "Heavy furniture transport",
+      "Furniture disassembly/assembly",
+      "Custom crating for delicate pieces",
+      "White glove service",
+      "Furniture protection materials",
+      "Professional wrapping techniques"
+    ],
+    "furniture": [
+      { "name": "Antique Furniture", "description": "Specialized handling for valuable antiques" },
+      { "name": "Pianos", "description": "Professional piano moving with specialized equipment" },
+      { "name": "Heavy Furniture", "description": "Safe transport of heavy pieces" },
+      { "name": "Modern Furniture", "description": "Careful handling of contemporary pieces" }
+    ],
+    "benefits": [
+      "Specialized Equipment",
+      "Expert Handling",
+      "Full Protection",
+      "White Glove Service"
+    ],
+    "is_active": true
+  },
+  {
+    "name": "Celebrity Moving",
+    "slug": "celebrity-moving",
+    "icon": "Shield",
+    "title": "Discrete Celebrity Moving Services in Miami",
+    "description": "Discrete and confidential moves for high-profile clients with maximum privacy.",
+    "meta_title": "Celebrity Moving Services Miami | Discrete High-Profile Moves | Rapid Panda Movers",
+    "meta_description": "Discrete celebrity moving services in Miami. Confidential moves for high-profile clients with maximum privacy, security, and professional handling.",
+    "hero": {
+      "title": "Discrete Celebrity Moving Services",
+      "description": "Confidential moves for high-profile clients",
+      "cta": "Get Your Free Celebrity Moving Quote",
+      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+    },
+    "extras": [
+      "Confidential moving services",
+      "Privacy protection protocols",
+      "Secure transportation",
+      "NDA compliance",
+      "24/7 availability",
+      "White glove service",
+      "Valuables protection",
+      "Discrete scheduling"
+    ],
+    "benefits": [
+      "Complete Privacy",
+      "NDA Compliance",
+      "24/7 Availability",
+      "Secure Handling"
+    ],
+    "is_active": true
+  },
+  {
+    "name": "Apartment Moving",
+    "slug": "apartment-moving",
+    "icon": "Building2",
+    "title": "Budget-Friendly Apartment Moving in Miami",
+    "description": "Specialized apartment moving services designed for efficiency and affordability.",
+    "meta_title": "Apartment Moving Services Miami | Budget-Friendly Moves | Rapid Panda Movers",
+    "meta_description": "Budget-friendly apartment moving services in Miami. Specialized apartment moves with high-rise expertise, same-day service, and transparent pricing.",
+    "hero": {
+      "title": "Budget-Friendly Apartment Moving in Miami",
+      "description": "Specialized apartment moving services for all sizes",
+      "cta": "Get Your Free Apartment Moving Quote",
+      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+    },
+    "extras": [
+      "Studio and 1-bedroom moves",
+      "Multi-bedroom apartment moves",
+      "High-rise apartment expertise",
+      "Elevator and stair navigation",
+      "Packing and unpacking services",
+      "Furniture disassembly/reassembly",
+      "Same-day service available",
+      "Weekend moves available"
+    ],
+    "sizes": [
+      { "name": "Studio Apartments", "description": "Efficient moves for studio spaces", "time": "2-4 hours" },
+      { "name": "1-Bedroom", "description": "Perfect for single professionals", "time": "3-5 hours" },
+      { "name": "2-Bedroom", "description": "Ideal for couples and roommates", "time": "4-6 hours" },
+      { "name": "3+ Bedrooms", "description": "Family-sized apartment moves", "time": "6-8 hours" }
+    ],
+    "process": [
+      {
+        "step": "1",
+        "title": "Free Assessment",
+        "description": "We evaluate your apartment and provide an accurate quote"
+      },
+      {
+        "step": "2", 
+        "title": "Packing & Prep",
+        "description": "Professional packing with apartment-optimized techniques"
+      },
+      {
+        "step": "3",
+        "title": "Efficient Moving",
+        "description": "Quick loading and transport with minimal building disruption"
+      },
+      {
+        "step": "4",
+        "title": "Setup & Settling",
+        "description": "Unloading and placement to get you settled quickly"
+      }
+    ],
+    "benefits": [
+      "Budget-Friendly Pricing",
+      "High-Rise Expertise",
+      "Quick Turnaround"
+    ],
+    "is_active": true
+  },
+  {
+    "name": "Full-Service Moving",
+    "slug": "full-service-moving",
+    "icon": "CheckCircle",
+    "title": "Complete Full-Service Moving Solutions in Miami",
+    "description": "Complete moving services from start to finish with comprehensive coverage.",
+    "meta_title": "Full-Service Moving Miami | Complete Moving Solutions | Rapid Panda Movers",
+    "meta_description": "Complete full-service moving solutions in Miami. End-to-end moving services including packing, transport, unpacking, and setup with professional teams.",
+    "hero": {
+      "title": "Complete Full-Service Moving Solutions",
+      "description": "End-to-end moving services from start to finish",
+      "cta": "Get Your Free Full-Service Quote",
+      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+    },
+    "extras": [
+      "Complete packing services",
+      "Professional loading and unloading",
+      "Secure transportation",
+      "Unpacking and setup",
+      "Furniture assembly",
+      "Cleaning services",
+      "Storage coordination",
+      "24/7 support"
+    ],
+    "benefits": [
+      "Complete Coverage",
+      "Professional Team",
+      "Time-Saving",
+      "Stress-Free Experience"
+    ],
+    "is_active": true
+  },
+  {
+    "name": "Labor Only Moving",
+    "slug": "labor-only-moving",
+    "icon": "Users",
+    "title": "Labor Only Moving Services in Miami",
+    "description": "Moving labor services when you provide the truck for cost-effective solutions.",
+    "meta_title": "Labor Only Moving Services Miami | Moving Labor | Rapid Panda Movers",
+    "meta_description": "Labor only moving services in Miami. Professional moving labor when you provide the truck. Cost-effective moving solutions with experienced crews.",
+    "hero": {
+      "title": "Labor Only Moving Services",
+      "description": "Professional moving labor when you provide the truck",
+      "cta": "Get Your Free Labor Quote",
+      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+    },
+    "extras": [
+      "Professional moving labor",
+      "Loading and unloading assistance",
+      "Furniture disassembly/assembly",
+      "Heavy lifting services",
+      "Packing assistance",
+      "Time-based pricing",
+      "Experienced crews",
+      "Flexible scheduling"
+    ],
+    "benefits": [
+      "Cost-Effective",
+      "Experienced Labor",
+      "Flexible Scheduling",
+      "No Equipment Costs"
+    ],
+    "is_active": true
+  },
+  {
+    "name": "Military Moving",
+    "slug": "military-moving",
+    "icon": "Flag",
+    "title": "Specialized Military Moving Services in Miami",
+    "description": "Specialized moves for military personnel and families with understanding of unique needs.",
+    "meta_title": "Military Moving Services Miami | Military Relocations | Rapid Panda Movers",
+    "meta_description": "Specialized military moving services in Miami. Military relocations with understanding of unique needs, flexible scheduling, and veteran-friendly service.",
+    "hero": {
+      "title": "Specialized Military Moving Services",
+      "description": "Moving services designed for military personnel and families",
+      "cta": "Get Your Free Military Moving Quote",
+      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+    },
+    "extras": [
+      "PCS move assistance",
+      "Deployment move support",
+      "Flexible scheduling",
+      "Military discount programs",
+      "Storage coordination",
+      "Documentation assistance",
+      "Veteran-friendly service",
+      "Emergency move support"
+    ],
+    "benefits": [
+      "Military Discounts",
+      "Flexible Scheduling",
+      "Veteran-Friendly",
+      "PCS Experience"
+    ],
+    "is_active": true
+  },
+  {
+    "name": "Same Day Moving",
+    "slug": "same-day-moving",
+    "icon": "Clock",
+    "title": "Last Minute Same Day Moving Services in Miami",
+    "description": "Last minute, rapid response moving services for urgent relocations.",
+    "meta_title": "Same Day Moving Services Miami | Last Minute Moves | Rapid Panda Movers",
+    "meta_description": "Same day moving services in Miami. Last minute, rapid response moving services for urgent relocations with experienced crews and quick turnaround.",
+    "hero": {
+      "title": "Last Minute Same Day Moving Services",
+      "description": "Rapid response moving services for urgent relocations",
+      "cta": "Get Your Same Day Quote",
+      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+    },
+    "extras": [
+      "Same-day availability",
+      "Rapid response teams",
+      "Emergency moving services",
+      "Quick turnaround",
+      "Flexible scheduling",
+      "24/7 availability",
+      "Express service",
+      "Urgent relocation support"
+    ],
+    "benefits": [
+      "Rapid Response",
+      "24/7 Availability",
+      "Quick Turnaround",
+      "Emergency Support"
+    ],
+    "is_active": true
+  },
+  {
+    "name": "Senior Moving",
+    "slug": "senior-moving",
+    "icon": "Heart",
+    "title": "Assisted Senior Moving Services in Miami",
+    "description": "Assisted living, retirement home and elderly care moves with compassionate service.",
+    "meta_title": "Senior Moving Services Miami | Assisted Living Moves | Rapid Panda Movers",
+    "meta_description": "Compassionate senior moving services in Miami. Assisted living moves, retirement home relocations, and elderly care moves with understanding and patience.",
+    "hero": {
+      "title": "Compassionate Senior Moving Services",
+      "description": "Assisted living and retirement home moves with care",
+      "cta": "Get Your Free Senior Moving Quote",
+      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+    },
+    "extras": [
+      "Assisted living moves",
+      "Retirement home relocations",
+      "Elderly care transitions",
+      "Compassionate service",
+      "Patient handling",
+      "Family coordination",
+      "Medical equipment transport",
+      "Sensitive item care"
+    ],
+    "benefits": [
+      "Compassionate Service",
+      "Patient Handling",
+      "Family Coordination",
+      "Medical Equipment Care"
+    ],
+    "is_active": true
+  },
+  {
+    "name": "Student Moving",
+    "slug": "student-moving",
+    "icon": "GraduationCap",
+    "title": "Student Moving Services for Schools, Colleges and Universities",
+    "description": "School, college and university moving services designed for student needs and budgets.",
+    "meta_title": "Student Moving Services Miami | College Moves | Rapid Panda Movers",
+    "meta_description": "Student moving services in Miami. College moves, university relocations, and student housing moves with budget-friendly pricing and flexible scheduling.",
+    "hero": {
+      "title": "Student Moving Services for All Education Levels",
+      "description": "School, college and university moves with student-friendly pricing",
+      "cta": "Get Your Free Student Moving Quote",
+      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+    },
+    "extras": [
+      "Dorm room moves",
+      "Off-campus housing",
+      "Summer storage solutions",
+      "Student discount programs",
+      "Flexible scheduling",
+      "Budget-friendly pricing",
+      "Group move coordination",
+      "Campus delivery"
+    ],
+    "benefits": [
+      "Student Discounts",
+      "Flexible Scheduling",
+      "Budget-Friendly",
+      "Campus Experience"
+    ],
+    "is_active": true
+  },
+  {
+    "name": "Safe Moving",
+    "slug": "safe-moving",
+    "icon": "Lock",
+    "title": "Specialized Safe Moving Services in Miami",
+    "description": "Specialized handling for gun and money safe transportation with security protocols.",
+    "meta_title": "Safe Moving Services Miami | Gun Safe & Money Safe Transport | Rapid Panda Movers",
+    "meta_description": "Specialized safe moving services in Miami. Gun safe and money safe transportation with security protocols, specialized equipment, and insured transport.",
+    "hero": {
+      "title": "Specialized Safe Moving Services",
+      "description": "Secure transportation for gun safes and money safes",
+      "cta": "Get Your Free Safe Moving Quote",
+      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+    },
+    "extras": [
+      "Gun safe transportation",
+      "Money safe moving",
+      "Security protocols",
+      "Specialized equipment",
+      "Insured transport",
+      "Professional handling",
+      "Secure storage options",
+      "Documentation services"
+    ],
+    "benefits": [
+      "Security Protocols",
+      "Specialized Equipment",
+      "Insured Transport",
+      "Professional Handling"
+    ],
+    "is_active": true
+  },
+  {
+    "name": "Antique Moving",
+    "slug": "antique-moving",
+    "icon": "Gem",
+    "title": "Art and Valuables Moving with Extra Care in Miami",
+    "description": "Art and valuables moving with extra care and specialized handling techniques.",
+    "meta_title": "Antique Moving Services Miami | Art & Valuables Transport | Rapid Panda Movers",
+    "meta_description": "Professional antique moving services in Miami. Art and valuables transport with extra care, specialized handling, and museum-quality protection.",
+    "hero": {
+      "title": "Art and Valuables Moving with Extra Care",
+      "description": "Specialized handling for antiques, art, and valuable items",
+      "cta": "Get Your Free Antique Moving Quote",
+      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+    },
+    "extras": [
+      "Antique furniture transport",
+      "Artwork moving services",
+      "Collectibles handling",
+      "Museum-quality protection",
+      "Custom crating services",
+      "Climate-controlled transport",
+      "Insurance documentation",
+      "White glove service"
+    ],
+    "benefits": [
+      "Museum-Quality Care",
+      "Specialized Handling",
+      "Custom Crating",
+      "White Glove Service"
+    ],
+    "is_active": true
+  },
+  {
+    "name": "Office Moving",
+    "slug": "office-moving",
+    "icon": "Briefcase",
+    "title": "Professional Office Moving Services in Miami",
+    "description": "Office relocations with minimal disruption and efficient execution.",
+    "meta_title": "Office Moving Services Miami | Office Relocations | Rapid Panda Movers",
+    "meta_description": "Professional office moving services in Miami. Office relocations with minimal disruption, efficient execution, and experienced teams for seamless transitions.",
+    "hero": {
+      "title": "Professional Office Moving Services",
+      "description": "Office relocations with minimal disruption and efficient execution",
+      "cta": "Get Your Free Office Moving Quote",
+      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+    },
+    "extras": [
+      "Office space relocations",
+      "IT equipment moving",
+      "Furniture disassembly/assembly",
+      "Document and file moving",
+      "Workstation setup",
+      "Weekend and after-hours moves",
+      "Minimal downtime planning",
+      "Storage solutions"
+    ],
+    "process": [
+      {
+        "step": "1",
+        "title": "Site Assessment",
+        "description": "We evaluate your office space and create a detailed moving plan"
+      },
+      {
+        "step": "2",
+        "title": "Strategic Planning",
+        "description": "Minimize disruption with careful scheduling and logistics"
+      },
+      {
+        "step": "3",
+        "title": "Professional Execution",
+        "description": "Experienced team handles all aspects of your office move"
+      },
+      {
+        "step": "4",
+        "title": "Setup & Testing",
+        "description": "Get your office operational quickly at the new location"
+      }
+    ],
+    "benefits": [
+      "Minimal Disruption",
+      "Professional Handling",
+      "Flexible Scheduling",
+      "Efficient Execution"
+    ],
+    "is_active": true
+  },
+  {
+    "name": "Same Building Moving",
+    "slug": "same-building-moving",
+    "icon": "Building",
+    "title": "Same Building Moving Services in Miami",
+    "description": "Moving within the same building with elevator and stair navigation expertise.",
+    "meta_title": "Same Building Moving Services Miami | Intra-Building Moves | Rapid Panda Movers",
+    "meta_description": "Same building moving services in Miami. Moving within the same building with elevator navigation, stair expertise, and efficient intra-building relocations.",
+    "hero": {
+      "title": "Same Building Moving Services",
+      "description": "Efficient moves within the same building",
+      "cta": "Get Your Free Same Building Quote",
+      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+    },
+    "extras": [
+      "Floor-to-floor moves",
+      "Unit-to-unit relocations",
+      "Elevator navigation",
+      "Stair navigation",
+      "Packing and unpacking",
+      "Furniture disassembly/reassembly",
+      "Minimal disruption",
+      "Same-day service available"
+    ],
+    "benefits": [
+      "Building Expertise",
+      "Efficient Navigation",
+      "Minimal Disruption",
+      "Quick Turnaround"
+    ],
+    "is_active": true
+  },
+  {
+    "name": "Last Minute Moving",
+    "slug": "last-minute-moving",
+    "icon": "Zap",
+    "title": "Last Minute Moving Services in Miami",
+    "description": "Urgent moving services for last-minute relocations with rapid response.",
+    "meta_title": "Last Minute Moving Services Miami | Urgent Moves | Rapid Panda Movers",
+    "meta_description": "Last minute moving services in Miami. Urgent moving services for last-minute relocations with rapid response, experienced crews, and quick turnaround.",
+    "hero": {
+      "title": "Last Minute Moving Services",
+      "description": "Urgent moving services for last-minute relocations",
+      "cta": "Get Your Last Minute Quote",
+      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+    },
+    "extras": [
+      "Urgent move availability",
+      "Rapid response teams",
+      "Emergency moving services",
+      "Quick turnaround",
+      "Flexible scheduling",
+      "24/7 availability",
+      "Express service",
+      "Last-minute relocation support"
+    ],
+    "benefits": [
+      "Rapid Response",
+      "24/7 Availability",
+      "Emergency Support",
+      "Quick Turnaround"
+    ],
+    "is_active": true
+  },
+  {
+    "name": "Hourly Moving",
+    "slug": "hourly-moving",
+    "icon": "Clock",
+    "title": "Hourly Moving Services in Miami",
+    "description": "Flexible hourly moving services with transparent time-based pricing.",
+    "meta_title": "Hourly Moving Services Miami | Time-Based Pricing | Rapid Panda Movers",
+    "meta_description": "Hourly moving services in Miami. Flexible hourly moving with transparent time-based pricing, experienced crews, and flexible scheduling options.",
+    "hero": {
+      "title": "Hourly Moving Services",
+      "description": "Flexible hourly moving with transparent pricing",
+      "cta": "Get Your Hourly Moving Quote",
+      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+    },
+    "extras": [
+      "Time-based pricing",
+      "Hourly rate transparency",
+      "Flexible scheduling",
+      "Loading and unloading",
+      "Furniture disassembly/assembly",
+      "Packing assistance",
+      "Multiple crew options",
+      "No hidden fees"
+    ],
+    "benefits": [
+      "Transparent Pricing",
+      "Flexible Scheduling",
+      "Cost-Effective",
+      "No Hidden Fees"
+    ],
+    "is_active": true
+  },
+  {
+    "name": "Special Needs Moving",
+    "slug": "special-needs-moving",
+    "icon": "HeartHandshake",
+    "title": "Special Needs Moving Services in Miami",
+    "description": "Compassionate moving services for individuals with disabilities and special requirements.",
+    "meta_title": "Special Needs Moving Services Miami | Disability-Friendly Moves | Rapid Panda Movers",
+    "meta_description": "Special needs moving services in Miami. Compassionate moving for individuals with disabilities and special requirements with understanding, patience, and specialized care.",
+    "hero": {
+      "title": "Special Needs Moving Services",
+      "description": "Compassionate moving for individuals with special requirements",
+      "cta": "Get Your Free Special Needs Quote",
+      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+    },
+    "extras": [
+      "Disability-friendly service",
+      "Medical equipment transport",
+      "Accessibility considerations",
+      "Compassionate handling",
+      "Patient service",
+      "Family coordination",
+      "Sensitive item care",
+      "Flexible scheduling"
+    ],
+    "benefits": [
+      "Compassionate Service",
+      "Accessibility Focus",
+      "Patient Handling",
+      "Medical Equipment Care"
+    ],
+    "is_active": true
+  }
+]
+  
