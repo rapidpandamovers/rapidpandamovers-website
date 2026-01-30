@@ -1,6 +1,5 @@
 import Hero from '../components/Hero';
-import MovingTips from '../components/MovingTips';
-import OrangeCTASection from '../components/OrangeCTASection';
+import TipSection from '../components/TipSection';
 import content from '../../data/content.json';
 
 export default function MovingTipsPage() {
@@ -14,12 +13,11 @@ export default function MovingTipsPage() {
         cta={tipsData.hero.cta}
         image_url={tipsData.hero.image_url}
       />
-      <MovingTips
+      <TipSection
         title={tipsData.title}
         description={tipsData.description}
         categories={tipsData.categories}
       />
-      <OrangeCTASection />
     </div>
   );
 }

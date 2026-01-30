@@ -1,16 +1,19 @@
 import Hero from './components/Hero'
-import PlatformRatings from './components/PlatformRatings'
-import OrangeCTASection from './components/OrangeCTASection'
-import ServicesGrid from './components/ServicesGrid'
-import TestimonialsSection from './components/TestimonialsSection'
-import MovingCategories from './components/MovingCategories'
-import WhatsIncluded from './components/WhatsIncluded'
-import WhyChoose from './components/WhyChoose'
-import ServiceLocations from './components/ServiceLocations'
-import AboutUs from './components/AboutUs'
-import RecentPosts from './components/RecentPosts'
-import FinalCTASection from './components/FinalCTASection'
+import RatingSection from './components/RatingSection'
+import MediaSection from './components/MediaSection'
+import ServiceSection from './components/ServiceSection'
+import ReviewSection from './components/ReviewSection'
+import PricingSection from './components/PricingSection'
+import IncludedSection from './components/IncludedSection'
+import WhySection from './components/WhySection'
+import LocationSection from './components/LocationSection'
+import AboutSection from './components/AboutSection'
+import BlogSection from './components/BlogSection'
+import ChecklistSection from './components/ChecklistSection'
+import ContactSection from './components/ContactSection'
 import FAQSection from './components/FAQSection'
+import GlossarySection from './components/GlossarySection'
+import NewsletterSection from './components/NewsletterSection'
 import content from '../data/content.json'
 
 export default function Home() {
@@ -22,24 +25,26 @@ export default function Home() {
         cta={content.home.hero.cta}
         image_url={content.home.hero.image_url}
       />
-      <PlatformRatings />
-      <OrangeCTASection />
-      <ServicesGrid />
-      <TestimonialsSection />
-      <MovingCategories />
-      <WhatsIncluded />
-      <WhyChoose />
-      <ServiceLocations />
-      <AboutUs />
-      <RecentPosts 
+      <RatingSection />
+      <MediaSection showArrows={false} showDots={false} enableModal={false} />
+      <ServiceSection />
+      <ReviewSection />
+      <IncludedSection />
+      <WhySection />
+      <LocationSection />
+      <AboutSection />
+      <BlogSection
         showFeatured={true}
         showCategories={false}
-        showNewsletter={false}
         maxPosts={3}
         className="bg-gray-50"
       />
-      <FinalCTASection />
       <FAQSection />
+      <ChecklistSection />
+      <GlossarySection />
+      <PricingSection />
+      <ContactSection />
+      <NewsletterSection />
     </>
   )
 }

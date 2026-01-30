@@ -1,6 +1,7 @@
-import { Truck, Package, Shield, Clock, DollarSign, Users, CheckCircle, ArrowRight, Phone, Mail, Star, MapPin, Home as HomeIcon, Building, Car, Archive, Briefcase } from 'lucide-react'
+import { Truck, Package, Shield, Clock, DollarSign, Users, CheckCircle, ArrowRight, Phone, Mail, Star, Home as HomeIcon, Building, Car, Archive, Briefcase } from 'lucide-react'
 import Link from 'next/link'
-import Image from 'next/image'
+import Hero from '../components/Hero'
+import LocationSection from '../components/LocationSection'
 
 export default function ServicesPage() {
   const mainServices = [
@@ -83,32 +84,13 @@ export default function ServicesPage() {
   ]
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative bg-cover bg-center py-20" style={{
-        backgroundImage: "url('https://www.rapidpandamovers.com/wp-content/uploads/2024/10/Rectangle-39-scaled.jpg')"
-      }}>
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center text-white max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="block">Complete Moving</span>
-              <span className="text-orange-400">Services in Miami</span>
-            </h1>
-            <p className="text-xl mb-8 leading-relaxed">
-              From local moves to long-distance relocations, packing to storage - we provide comprehensive moving services designed to make your relocation stress-free and affordable. Discover all the ways Rapid Panda Movers can help with your next move.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/quote" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg transition-colors">
-                Get Free Quote
-              </Link>
-              <a href="tel:(305)555-0123" className="border border-white text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-orange-500 transition-colors">
-                Call (305) 555-0123
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Hero
+        title="Complete Moving Services in Miami"
+        description="From local moves to long-distance relocations, packing to storage - we provide comprehensive moving services designed to make your relocation stress-free and affordable."
+        cta="Get Your Free Quote"
+      />
 
       {/* Main Services */}
       <section className="py-20 bg-white">
@@ -210,52 +192,8 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Service Areas */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              Service Areas
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We provide professional moving services throughout Miami-Dade County and beyond.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {[
-              'Miami', 'Coral Gables', 'Miami Beach', 'Hialeah', 'Doral', 'Aventura',
-              'Kendall', 'Homestead', 'Palmetto Bay', 'Pinecrest', 'South Beach', 'Brickell',
-              'Downtown Miami', 'Wynwood', 'Little Havana', 'Coconut Grove', 'Key Biscayne', 'Fisher Island'
-            ].map((location, index) => (
-              <div key={index} className="bg-white rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-shadow">
-                <MapPin className="w-5 h-5 text-orange-500 mx-auto mb-2" />
-                <h4 className="font-medium text-gray-800 text-sm">{location}</h4>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-orange-500 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Contact us today for a free, no-obligation quote. Our team is ready to make your next move the easiest one yet.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/quote" className="bg-white text-orange-500 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors">
-              Get Free Quote
-            </Link>
-            <a href="tel:(305)555-0123" className="border border-white text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-orange-500 transition-colors">
-              Call (305) 555-0123
-            </a>
-          </div>
-        </div>
-      </section>
+      {/* Service Locations */}
+      <LocationSection />
     </div>
   )
 }

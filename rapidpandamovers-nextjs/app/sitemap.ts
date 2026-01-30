@@ -1,30 +1,86 @@
-import { allCities, allRoutes, getServiceSlugs } from '@/lib/data';
+import { allCities, allLongDistanceRoutes, allLocalRoutes, getServiceSlugs } from '@/lib/data';
+import blogPosts from '@/data/blog.json';
 
 export default async function sitemap() {
   const base = 'https://www.rapidpandamovers.com';
   const now = new Date().toISOString();
 
-  const allCitiesFlat = allCities.states.flatMap(state => 
-    state.counties.flatMap(county => county.cities)
-  );
-  
-  const cityUrls = allCitiesFlat.map(c => ({
-    url: `${base}/${c.slug}-movers`,
+  // Static pages
+  const staticPages = [
+    { url: base, priority: 1.0 },
+    { url: `${base}/about`, priority: 0.8 },
+    { url: `${base}/services`, priority: 0.9 },
+    { url: `${base}/locations`, priority: 0.8 },
+    { url: `${base}/contact`, priority: 0.8 },
+    { url: `${base}/blog`, priority: 0.7 },
+    { url: `${base}/faq`, priority: 0.6 },
+    { url: `${base}/moving-rates`, priority: 0.7 },
+    { url: `${base}/reviews`, priority: 0.6 },
+    { url: `${base}/reservations`, priority: 0.7 },
+    { url: `${base}/moving-checklist`, priority: 0.6 },
+    { url: `${base}/moving-tips`, priority: 0.6 },
+    { url: `${base}/moving-glossary`, priority: 0.5 },
+    { url: `${base}/routes`, priority: 0.7 },
+    { url: `${base}/sitemap`, priority: 0.3 },
+    { url: `${base}/privacy`, priority: 0.3 },
+    { url: `${base}/terms`, priority: 0.3 },
+  ].map(page => ({ ...page, lastModified: now }));
+
+  // Blog posts
+  const blogUrls = blogPosts.map((post: { slug: string }) => ({
+    url: `${base}/blog/${post.slug}`,
     lastModified: now,
-    priority: 0.8
+    priority: 0.6
   }));
 
-  const routeUrls = allRoutes.map(r => ({
-    url: `${base}/${r.slug}`,
-    lastModified: now,
-    priority: 0.7
-  }));
-
+  // Services
   const serviceUrls = getServiceSlugs().map(s => ({
     url: `${base}/${s}`,
     lastModified: now,
     priority: 0.9
   }));
 
-  return [...cityUrls, ...routeUrls, ...serviceUrls];
+  // Cities (active only)
+  const allCitiesFlat = allCities.states.flatMap(state =>
+    state.counties.flatMap(county =>
+      county.cities.filter(c => c.is_active)
+    )
+  );
+
+  const cityUrls = allCitiesFlat.map(c => ({
+    url: `${base}/${c.slug}-movers`,
+    lastModified: now,
+    priority: 0.8
+  }));
+
+  // Neighborhoods (active only)
+  const allNeighborhoods = allCitiesFlat.flatMap(city =>
+    (city.neighborhoods || []).filter((n: any) => n.is_active !== false)
+  );
+
+  const neighborhoodUrls = allNeighborhoods.map((n: any) => ({
+    url: `${base}/${n.slug}-movers`,
+    lastModified: now,
+    priority: 0.7
+  }));
+
+  // Long distance routes (active only, with -movers suffix)
+  const longDistanceRouteUrls = allLongDistanceRoutes
+    .filter(r => r.is_active !== false)
+    .map(r => ({
+      url: `${base}/${r.slug}-movers`,
+      lastModified: now,
+      priority: 0.7
+    }));
+
+  // Local routes (active only, with -movers suffix)
+  const localRouteUrls = allLocalRoutes
+    .filter((r: any) => r.is_active !== false)
+    .map((r: any) => ({
+      url: `${base}/${r.slug}-movers`,
+      lastModified: now,
+      priority: 0.6
+    }));
+
+  return [...staticPages, ...blogUrls, ...serviceUrls, ...cityUrls, ...neighborhoodUrls, ...longDistanceRouteUrls, ...localRouteUrls];
 }

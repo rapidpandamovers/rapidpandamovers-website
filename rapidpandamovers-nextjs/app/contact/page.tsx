@@ -1,24 +1,15 @@
 import { Phone, Mail, MapPin, Clock, CheckCircle } from 'lucide-react'
+import Hero from '../components/Hero'
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative bg-cover bg-center py-20" style={{
-        backgroundImage: "url('https://www.rapidpandamovers.com/wp-content/uploads/2024/10/Rectangle-39-scaled.jpg')"
-      }}>
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Contact <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Rapid Panda Movers</span>
-            </h1>
-            <p className="text-xl max-w-2xl mx-auto">
-              Ready to make your move? Get in touch with Miami's trusted moving professionals for a free quote and consultation.
-            </p>
-          </div>
-        </div>
-      </section>
+      <Hero
+        title="Contact Rapid Panda Movers"
+        description="Ready to make your move? Get in touch with Miami's trusted moving professionals for a free quote and consultation."
+        cta="Get Your Free Quote"
+      />
       
       {/* Contact Information & Form Section */}
       <section className="py-20 bg-white">

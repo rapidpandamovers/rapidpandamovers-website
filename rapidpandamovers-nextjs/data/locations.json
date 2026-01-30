@@ -22,175 +22,258 @@
                 {
                   "name": "Allapattah",
                   "slug": "allapattah",
-                  "zip_codes": ["33125", "33127", "33142"],
+                  "zip_codes": [
+                    "33125",
+                    "33127",
+                    "33142"
+                  ],
                   "is_active": true
                 },
                 {
                   "name": "Arts & Entertainment District",
                   "slug": "arts-entertainment-district",
-                  "zip_codes": ["33132"],
+                  "zip_codes": [
+                    "33132"
+                  ],
                   "is_active": true
                 },
                 {
                   "name": "Bay Point",
                   "slug": "bay-point",
-                  "zip_codes": ["33137"],
+                  "zip_codes": [
+                    "33137"
+                  ],
                   "is_active": true
                 },
                 {
                   "name": "Belle Meade",
                   "slug": "belle-meade",
-                  "zip_codes": ["33138"],
+                  "zip_codes": [
+                    "33138"
+                  ],
                   "is_active": true
                 },
                 {
                   "name": "Brickell",
                   "slug": "brickell",
-                  "zip_codes": ["33129", "33130", "33131"],
+                  "zip_codes": [
+                    "33129",
+                    "33130",
+                    "33131"
+                  ],
                   "is_active": true
                 },
                 {
                   "name": "Brickell Key",
                   "slug": "brickell-key",
-                  "zip_codes": ["33131"],
+                  "zip_codes": [
+                    "33131"
+                  ],
                   "is_active": true
                 },
                 {
                   "name": "Buena Vista",
                   "slug": "buena-vista",
-                  "zip_codes": ["33127"],
+                  "zip_codes": [
+                    "33127"
+                  ],
                   "is_active": true
                 },
                 {
                   "name": "Coconut Grove",
                   "slug": "coconut-grove",
-                  "zip_codes": ["33133"],
+                  "zip_codes": [
+                    "33133"
+                  ],
                   "is_active": true
                 },
                 {
                   "name": "Coral Way / Shenandoah",
                   "slug": "coral-way-shenandoah",
-                  "zip_codes": ["33133", "33134", "33145"],
+                  "zip_codes": [
+                    "33133",
+                    "33134",
+                    "33145"
+                  ],
                   "is_active": true
                 },
                 {
                   "name": "Design District",
                   "slug": "design-district",
-                  "zip_codes": ["33137"],
+                  "zip_codes": [
+                    "33137"
+                  ],
                   "is_active": true
                 },
                 {
                   "name": "Downtown / CBD / Park West",
                   "slug": "downtown-cbd-park-west",
-                  "zip_codes": ["33128", "33130", "33131", "33132", "33136"],
+                  "zip_codes": [
+                    "33128",
+                    "33130",
+                    "33131",
+                    "33132",
+                    "33136"
+                  ],
                   "is_active": true
                 },
                 {
                   "name": "Edgewater",
                   "slug": "edgewater",
-                  "zip_codes": ["33137"],
+                  "zip_codes": [
+                    "33137"
+                  ],
                   "is_active": true
                 },
                 {
                   "name": "Flagami",
                   "slug": "flagami",
-                  "zip_codes": ["33125", "33126", "33135", "33144"],
+                  "zip_codes": [
+                    "33125",
+                    "33126",
+                    "33135",
+                    "33144"
+                  ],
                   "is_active": true
                 },
                 {
                   "name": "Grapeland Heights",
                   "slug": "grapeland-heights",
-                  "zip_codes": ["33125", "33142"],
+                  "zip_codes": [
+                    "33125",
+                    "33142"
+                  ],
                   "is_active": true
                 },
                 {
                   "name": "Health District / Civic Center",
                   "slug": "health-district-civic-center",
-                  "zip_codes": ["33136"],
+                  "zip_codes": [
+                    "33136"
+                  ],
                   "is_active": true
                 },
                 {
                   "name": "Little Haiti",
                   "slug": "little-haiti",
-                  "zip_codes": ["33138", "33137", "33150"],
+                  "zip_codes": [
+                    "33138",
+                    "33137",
+                    "33150"
+                  ],
                   "is_active": true
                 },
                 {
                   "name": "Little Havana",
                   "slug": "little-havana",
-                  "zip_codes": ["33125", "33126", "33128", "33130", "33135"],
+                  "zip_codes": [
+                    "33125",
+                    "33126",
+                    "33128",
+                    "33130",
+                    "33135"
+                  ],
                   "is_active": true
                 },
                 {
                   "name": "Liberty City",
                   "slug": "liberty-city",
-                  "zip_codes": ["33142", "33147", "33150"],
+                  "zip_codes": [
+                    "33142",
+                    "33147",
+                    "33150"
+                  ],
                   "is_active": true
                 },
                 {
                   "name": "Midtown",
                   "slug": "midtown",
-                  "zip_codes": ["33137"],
+                  "zip_codes": [
+                    "33137"
+                  ],
                   "is_active": true
                 },
                 {
                   "name": "Morningside",
                   "slug": "morningside",
-                  "zip_codes": ["33137"],
+                  "zip_codes": [
+                    "33137"
+                  ],
                   "is_active": true
                 },
                 {
                   "name": "Overtown",
                   "slug": "overtown",
-                  "zip_codes": ["33136"],
+                  "zip_codes": [
+                    "33136"
+                  ],
                   "is_active": true
                 },
                 {
                   "name": "Palm Grove",
                   "slug": "palm-grove",
-                  "zip_codes": ["33138"],
+                  "zip_codes": [
+                    "33138"
+                  ],
                   "is_active": true
                 },
                 {
                   "name": "Spring Garden",
                   "slug": "spring-garden",
-                  "zip_codes": ["33136"],
+                  "zip_codes": [
+                    "33136"
+                  ],
                   "is_active": true
                 },
                 {
                   "name": "The Roads",
                   "slug": "the-roads",
-                  "zip_codes": ["33129", "33130"],
+                  "zip_codes": [
+                    "33129",
+                    "33130"
+                  ],
                   "is_active": true
                 },
                 {
                   "name": "Upper Eastside / MiMo",
                   "slug": "upper-eastside-mimo",
-                  "zip_codes": ["33138", "33137"],
+                  "zip_codes": [
+                    "33138",
+                    "33137"
+                  ],
                   "is_active": true
                 },
                 {
                   "name": "Virginia Key",
                   "slug": "virginia-key",
-                  "zip_codes": ["33149"],
+                  "zip_codes": [
+                    "33149"
+                  ],
                   "is_active": true
                 },
                 {
                   "name": "Watson Island",
                   "slug": "watson-island",
-                  "zip_codes": ["33139"],
+                  "zip_codes": [
+                    "33139"
+                  ],
                   "is_active": true
                 },
                 {
                   "name": "West Flagler",
                   "slug": "west-flagler",
-                  "zip_codes": ["33125", "33135"],
+                  "zip_codes": [
+                    "33125",
+                    "33135"
+                  ],
                   "is_active": true
                 },
                 {
                   "name": "Wynwood",
                   "slug": "wynwood",
-                  "zip_codes": ["33127"],
+                  "zip_codes": [
+                    "33127"
+                  ],
                   "is_active": true
                 }
               ]
@@ -206,7 +289,12 @@
                 {
                   "name": "Coral Gables",
                   "slug": "coral-gables",
-                  "zip_codes": ["33134", "33146", "33143", "33133"],
+                  "zip_codes": [
+                    "33134",
+                    "33146",
+                    "33143",
+                    "33133"
+                  ],
                   "is_active": true
                 }
               ]
@@ -222,7 +310,12 @@
                 {
                   "name": "Doral",
                   "slug": "doral",
-                  "zip_codes": ["33122", "33166", "33178", "33172"],
+                  "zip_codes": [
+                    "33122",
+                    "33166",
+                    "33178",
+                    "33172"
+                  ],
                   "is_active": true
                 }
               ]
@@ -232,13 +325,16 @@
               "slug": "aventura",
               "population": 37000,
               "lat": 25.9565,
-              "lng": -80.1390,
+              "lng": -80.139,
               "is_active": true,
               "neighborhoods": [
                 {
                   "name": "Aventura",
                   "slug": "aventura",
-                  "zip_codes": ["33160", "33180"],
+                  "zip_codes": [
+                    "33160",
+                    "33180"
+                  ],
                   "is_active": true
                 }
               ]
@@ -254,7 +350,9 @@
                 {
                   "name": "Bal Harbour",
                   "slug": "bal-harbour",
-                  "zip_codes": ["33154"],
+                  "zip_codes": [
+                    "33154"
+                  ],
                   "is_active": true
                 }
               ]
@@ -270,7 +368,9 @@
                 {
                   "name": "Bay Harbor Islands",
                   "slug": "bay-harbor-islands",
-                  "zip_codes": ["33154"],
+                  "zip_codes": [
+                    "33154"
+                  ],
                   "is_active": true
                 }
               ]
@@ -286,7 +386,11 @@
                 {
                   "name": "Cutler Bay",
                   "slug": "cutler-bay",
-                  "zip_codes": ["33157", "33189", "33190"],
+                  "zip_codes": [
+                    "33157",
+                    "33189",
+                    "33190"
+                  ],
                   "is_active": true
                 }
               ]
@@ -302,7 +406,10 @@
                 {
                   "name": "El Portal",
                   "slug": "el-portal",
-                  "zip_codes": ["33138", "33150"],
+                  "zip_codes": [
+                    "33138",
+                    "33150"
+                  ],
                   "is_active": true
                 }
               ]
@@ -318,7 +425,10 @@
                 {
                   "name": "Florida City",
                   "slug": "florida-city",
-                  "zip_codes": ["33034", "33035"],
+                  "zip_codes": [
+                    "33034",
+                    "33035"
+                  ],
                   "is_active": true
                 }
               ]
@@ -334,7 +444,9 @@
                 {
                   "name": "Golden Beach",
                   "slug": "golden-beach",
-                  "zip_codes": ["33160"],
+                  "zip_codes": [
+                    "33160"
+                  ],
                   "is_active": true
                 }
               ]
@@ -350,7 +462,14 @@
                 {
                   "name": "Hialeah",
                   "slug": "hialeah",
-                  "zip_codes": ["33010", "33012", "33013", "33014", "33015", "33016"],
+                  "zip_codes": [
+                    "33010",
+                    "33012",
+                    "33013",
+                    "33014",
+                    "33015",
+                    "33016"
+                  ],
                   "is_active": true
                 }
               ]
@@ -366,7 +485,9 @@
                 {
                   "name": "Hialeah Gardens",
                   "slug": "hialeah-gardens",
-                  "zip_codes": ["33018"],
+                  "zip_codes": [
+                    "33018"
+                  ],
                   "is_active": true
                 }
               ]
@@ -382,7 +503,12 @@
                 {
                   "name": "Homestead",
                   "slug": "homestead",
-                  "zip_codes": ["33030", "33031", "33032", "33033"],
+                  "zip_codes": [
+                    "33030",
+                    "33031",
+                    "33032",
+                    "33033"
+                  ],
                   "is_active": true
                 }
               ]
@@ -398,7 +524,9 @@
                 {
                   "name": "Indian Creek",
                   "slug": "indian-creek",
-                  "zip_codes": ["33154"],
+                  "zip_codes": [
+                    "33154"
+                  ],
                   "is_active": true
                 }
               ]
@@ -408,13 +536,15 @@
               "slug": "key-biscayne",
               "population": 13000,
               "lat": 25.6931,
-              "lng": -80.1620,
+              "lng": -80.162,
               "is_active": true,
               "neighborhoods": [
                 {
                   "name": "Key Biscayne",
                   "slug": "key-biscayne",
-                  "zip_codes": ["33149"],
+                  "zip_codes": [
+                    "33149"
+                  ],
                   "is_active": true
                 }
               ]
@@ -430,7 +560,10 @@
                 {
                   "name": "Medley",
                   "slug": "medley",
-                  "zip_codes": ["33166", "33178"],
+                  "zip_codes": [
+                    "33166",
+                    "33178"
+                  ],
                   "is_active": true
                 }
               ]
@@ -440,13 +573,18 @@
               "slug": "miami-beach",
               "population": 92000,
               "lat": 25.7907,
-              "lng": -80.1300,
+              "lng": -80.13,
               "is_active": true,
               "neighborhoods": [
                 {
                   "name": "Miami Beach",
                   "slug": "miami-beach",
-                  "zip_codes": ["33109", "33139", "33140", "33141"],
+                  "zip_codes": [
+                    "33109",
+                    "33139",
+                    "33140",
+                    "33141"
+                  ],
                   "is_active": true
                 }
               ]
@@ -455,14 +593,18 @@
               "name": "Miami Gardens",
               "slug": "miami-gardens",
               "population": 110000,
-              "lat": 25.9420,
+              "lat": 25.942,
               "lng": -80.2456,
               "is_active": true,
               "neighborhoods": [
                 {
                   "name": "Miami Gardens",
                   "slug": "miami-gardens",
-                  "zip_codes": ["33054", "33055", "33056"],
+                  "zip_codes": [
+                    "33054",
+                    "33055",
+                    "33056"
+                  ],
                   "is_active": true
                 }
               ]
@@ -478,7 +620,11 @@
                 {
                   "name": "Miami Lakes",
                   "slug": "miami-lakes",
-                  "zip_codes": ["33014", "33016", "33018"],
+                  "zip_codes": [
+                    "33014",
+                    "33016",
+                    "33018"
+                  ],
                   "is_active": true
                 }
               ]
@@ -494,7 +640,10 @@
                 {
                   "name": "Miami Shores",
                   "slug": "miami-shores",
-                  "zip_codes": ["33138", "33150"],
+                  "zip_codes": [
+                    "33138",
+                    "33150"
+                  ],
                   "is_active": true
                 }
               ]
@@ -510,7 +659,10 @@
                 {
                   "name": "Miami Springs",
                   "slug": "miami-springs",
-                  "zip_codes": ["33142", "33166"],
+                  "zip_codes": [
+                    "33142",
+                    "33166"
+                  ],
                   "is_active": true
                 }
               ]
@@ -526,7 +678,9 @@
                 {
                   "name": "North Bay Village",
                   "slug": "north-bay-village",
-                  "zip_codes": ["33141"],
+                  "zip_codes": [
+                    "33141"
+                  ],
                   "is_active": true
                 }
               ]
@@ -542,7 +696,12 @@
                 {
                   "name": "North Miami",
                   "slug": "north-miami",
-                  "zip_codes": ["33161", "33162", "33167", "33168"],
+                  "zip_codes": [
+                    "33161",
+                    "33162",
+                    "33167",
+                    "33168"
+                  ],
                   "is_active": true
                 }
               ]
@@ -552,13 +711,17 @@
               "slug": "north-miami-beach",
               "population": 43000,
               "lat": 25.9331,
-              "lng": -80.1620,
+              "lng": -80.162,
               "is_active": true,
               "neighborhoods": [
                 {
                   "name": "North Miami Beach",
                   "slug": "north-miami-beach",
-                  "zip_codes": ["33160", "33162", "33169"],
+                  "zip_codes": [
+                    "33160",
+                    "33162",
+                    "33169"
+                  ],
                   "is_active": true
                 }
               ]
@@ -574,7 +737,10 @@
                 {
                   "name": "Opa-locka",
                   "slug": "opa-locka",
-                  "zip_codes": ["33054", "33055"],
+                  "zip_codes": [
+                    "33054",
+                    "33055"
+                  ],
                   "is_active": true
                 }
               ]
@@ -590,7 +756,11 @@
                 {
                   "name": "Palmetto Bay",
                   "slug": "palmetto-bay",
-                  "zip_codes": ["33157", "33158", "33176"],
+                  "zip_codes": [
+                    "33157",
+                    "33158",
+                    "33176"
+                  ],
                   "is_active": true
                 }
               ]
@@ -606,7 +776,11 @@
                 {
                   "name": "Pinecrest",
                   "slug": "pinecrest",
-                  "zip_codes": ["33156", "33143", "33176"],
+                  "zip_codes": [
+                    "33156",
+                    "33143",
+                    "33176"
+                  ],
                   "is_active": true
                 }
               ]
@@ -622,7 +796,10 @@
                 {
                   "name": "South Miami",
                   "slug": "south-miami",
-                  "zip_codes": ["33143", "33155"],
+                  "zip_codes": [
+                    "33143",
+                    "33155"
+                  ],
                   "is_active": true
                 }
               ]
@@ -638,7 +815,9 @@
                 {
                   "name": "Sunny Isles Beach",
                   "slug": "sunny-isles-beach",
-                  "zip_codes": ["33160"],
+                  "zip_codes": [
+                    "33160"
+                  ],
                   "is_active": true
                 }
               ]
@@ -654,7 +833,9 @@
                 {
                   "name": "Surfside",
                   "slug": "surfside",
-                  "zip_codes": ["33154"],
+                  "zip_codes": [
+                    "33154"
+                  ],
                   "is_active": true
                 }
               ]
@@ -670,7 +851,10 @@
                 {
                   "name": "Sweetwater",
                   "slug": "sweetwater",
-                  "zip_codes": ["33172", "33174"],
+                  "zip_codes": [
+                    "33172",
+                    "33174"
+                  ],
                   "is_active": true
                 }
               ]
@@ -686,7 +870,9 @@
                 {
                   "name": "Virginia Gardens",
                   "slug": "virginia-gardens",
-                  "zip_codes": ["33166"],
+                  "zip_codes": [
+                    "33166"
+                  ],
                   "is_active": true
                 }
               ]
@@ -702,7 +888,10 @@
                 {
                   "name": "West Miami",
                   "slug": "west-miami",
-                  "zip_codes": ["33144", "33155"],
+                  "zip_codes": [
+                    "33144",
+                    "33155"
+                  ],
                   "is_active": true
                 }
               ]
@@ -718,7 +907,12 @@
                 {
                   "name": "Westchester",
                   "slug": "westchester",
-                  "zip_codes": ["33144", "33165", "33175", "33174"],
+                  "zip_codes": [
+                    "33144",
+                    "33165",
+                    "33175",
+                    "33174"
+                  ],
                   "is_active": true
                 }
               ]
@@ -734,42 +928,14 @@
                 {
                   "name": "Kendall",
                   "slug": "kendall",
-                  "zip_codes": ["33156", "33176", "33183", "33186", "33193", "33196"],
-                  "is_active": true
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Broward",
-          "slug": "broward",
-          "is_active": true,
-          "cities": [
-            {
-              "name": "Fort Lauderdale",
-              "slug": "fort-lauderdale",
-              "population": 183000,
-              "lat": 26.1224,
-              "lng": -80.1373,
-              "is_active": true,
-              "neighborhoods": [
-                {
-                  "name": "Las Olas",
-                  "slug": "las-olas",
-                  "zip_codes": ["33301", "33304"],
-                  "is_active": true
-                },
-                {
-                  "name": "Victoria Park",
-                  "slug": "victoria-park",
-                  "zip_codes": ["33301"],
-                  "is_active": true
-                },
-                {
-                  "name": "Downtown",
-                  "slug": "downtown",
-                  "zip_codes": ["33301", "33304"],
+                  "zip_codes": [
+                    "33156",
+                    "33176",
+                    "33183",
+                    "33186",
+                    "33193",
+                    "33196"
+                  ],
                   "is_active": true
                 }
               ]

@@ -1,10 +1,11 @@
 import Hero from './Hero';
-import WhyChoose from './WhyChoose';
-import FinalCTASection from './FinalCTASection';
+import WhySection from './WhySection';
+import AboutSection from './AboutSection';
 import AutoLinks from '@/components/AutoLinks';
 import { buildLinkBlocks } from '@/components/buildLinkBlocks';
 import { allRoutes, allServices, titleCase } from '@/lib/data';
 import { MapPin, Navigation } from 'lucide-react';
+import Link from 'next/link';
 
 interface LocationPageProps {
   city: {
@@ -26,9 +27,9 @@ export default function LocationPage({ city }: LocationPageProps) {
   const slug = `${city.slug}-movers`;
   const blocks = buildLinkBlocks(slug);
   
-  // Get routes from this city
-  const routesFromCity = allRoutes.filter(r => 
-    r.from_city.toLowerCase() === city.name.toLowerCase()
+  // Get routes from this city (compare slugs)
+  const routesFromCity = allRoutes.filter(r =>
+    r.origin_name === city.slug
   );
 
   return (
@@ -77,13 +78,17 @@ export default function LocationPage({ city }: LocationPageProps) {
               {city.neighborhoods
                 .filter(n => n.is_active !== false)
                 .map((neighborhood, index) => (
-                  <div key={index} className="bg-white rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-shadow">
+                  <Link
+                    key={index}
+                    href={`/${neighborhood.slug}-movers`}
+                    className="bg-white rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-shadow group"
+                  >
                     <MapPin className="w-5 h-5 text-orange-500 mx-auto mb-2" />
-                    <h4 className="font-medium text-gray-800 text-sm mb-1">{neighborhood.name}</h4>
+                    <h4 className="font-medium text-gray-800 group-hover:text-orange-500 text-sm mb-1 transition-colors">{neighborhood.name}</h4>
                     {neighborhood.zip_codes && neighborhood.zip_codes.length > 0 && (
                       <p className="text-xs text-gray-500">{neighborhood.zip_codes.join(', ')}</p>
                     )}
-                  </div>
+                  </Link>
                 ))}
             </div>
           </div>
@@ -112,11 +117,11 @@ export default function LocationPage({ city }: LocationPageProps) {
                     </span>
                   </div>
                   <h3 className="text-xl font-bold text-gray-800 mb-2">
-                    {titleCase(route.from_city)} to {titleCase(route.to_city)}
+                    {titleCase(route.origin_name)} to {titleCase(route.destination_name)}
                   </h3>
-                  {route.avg_cost_usd && (
+                  {route.house_sizes?.['1_bedroom']?.min_cost && (
                     <p className="text-orange-500 font-semibold">
-                      Starting from ${route.avg_cost_usd.toLocaleString()}
+                      Starting from ${route.house_sizes['1_bedroom'].min_cost.toLocaleString()}
                     </p>
                   )}
                   <a
@@ -164,7 +169,7 @@ export default function LocationPage({ city }: LocationPageProps) {
       </section>
 
       {/* Why Choose Us */}
-      <WhyChoose />
+      <WhySection />
 
       {/* Auto Links */}
       {blocks.length > 0 && (
@@ -175,8 +180,10 @@ export default function LocationPage({ city }: LocationPageProps) {
         </section>
       )}
 
+      {/* About Us */}
+      <AboutSection />
+
       {/* Final CTA */}
-      <FinalCTASection />
     </div>
   );
 }

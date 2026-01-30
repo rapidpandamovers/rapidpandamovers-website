@@ -20,12 +20,12 @@ export function buildLinkBlocks(slug: string) {
   
   if (city) {
     const cityName = city.name;
-    const routes = allRoutes.filter(r => r.from_city === city.name.toLowerCase());
+    const routes = allRoutes.filter(r => r.origin_name === city.name.toLowerCase());
     blocks.push({
       title: `Popular routes from ${cityName}`,
       items: routes.map(r => ({
         href: `/${r.slug}`,
-        label: `${titleCase(r.from_city)} to ${titleCase(r.to_city)} Movers`
+        label: `${titleCase(r.origin_name)} to ${titleCase(r.destination_name)} Movers`
       }))
     });
     blocks.push({
@@ -43,8 +43,8 @@ export function buildLinkBlocks(slug: string) {
     blocks.push({
       title: `Origin & destination`,
       items: [
-        { href: `/${route.from_city}-movers`, label: `${titleCase(route.from_city)} Movers` },
-        { href: `/${route.to_city}-movers`, label: `${titleCase(route.to_city)} Movers` }
+        { href: `/${route.origin_name}-movers`, label: `${titleCase(route.origin_name)} Movers` },
+        { href: `/${route.destination_name}-movers`, label: `${titleCase(route.destination_name)} Movers` }
       ]
     });
   }

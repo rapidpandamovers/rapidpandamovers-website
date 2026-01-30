@@ -2,20 +2,20 @@
 
 This document describes the reusable components created for the Rapid Panda Movers website.
 
-## AboutUs Component (Simplified)
+## AboutSection Component (Simplified)
 
-The `AboutUs` component provides a simple about section with paragraph, image, and link to the full about page.
+The `AboutSection` component provides a simple about section with paragraph, image, and link to the full about page.
 
 ### Usage
 
 ```tsx
-import AboutUs from './components/AboutUs'
+import AboutSection from './components/AboutSection'
 
 // Basic usage
-<AboutUs />
+<AboutSection />
 
 // With custom styling
-<AboutUs className="bg-gray-50" />
+<AboutSection className="bg-gray-50" />
 ```
 
 ### Props
@@ -31,40 +31,20 @@ import AboutUs from './components/AboutUs'
 - **Learn More Link**: Link to the full about page
 - **Responsive Design**: Works on all screen sizes
 
-## AboutUsFull Component
+## BlogSection Component
 
-The `AboutUsFull` component provides the complete about page with all sections.
-
-### Usage
-
-```tsx
-import AboutUsFull from './components/AboutUsFull'
-
-// Full about page
-<AboutUsFull />
-```
-
-### Features
-
-- **Hero Section**: Background image with company introduction and quote form
-- **About Content**: Mission, values, and why choose us sections
-- **Service Areas**: Grid of cities served (Miami-Dade County)
-- **CTA Section**: Call-to-action with quote and contact links
-
-## RecentPosts Component
-
-The `RecentPosts` component displays blog posts with customizable features.
+The `BlogSection` component displays blog posts with customizable features.
 
 ### Usage
 
 ```tsx
-import RecentPosts from './components/RecentPosts'
+import BlogSection from './components/BlogSection'
 
 // Basic usage (all features enabled)
-<RecentPosts />
+<BlogSection />
 
 // Customized usage
-<RecentPosts 
+<BlogSection
   showFeatured={true}
   showCategories={false}
   showNewsletter={false}
@@ -90,58 +70,20 @@ import RecentPosts from './components/RecentPosts'
 - **Posts Grid**: Responsive grid of blog posts
 - **Newsletter Signup**: Email subscription form
 
-## MovingChecklist Component
+## ContactSection Component
 
-The `MovingChecklist` component displays a process checklist with default values or loads process steps from services.json.
-
-### Usage
-
-```tsx
-import MovingChecklist from './components/MovingChecklist'
-
-// Basic usage with default steps
-<MovingChecklist />
-
-// With custom title and description
-<MovingChecklist 
-  title="Our Moving Process"
-  description="Follow our proven process for a smooth move"
-/>
-
-// Load steps from specific service
-<MovingChecklist serviceSlug="local-moving" />
-```
-
-### Props
-
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `serviceSlug` | string | undefined | Service slug to load process_steps from services.json |
-| `title` | string | "Our Moving Process" | Section title |
-| `description` | string | "Follow our proven process..." | Section description |
-| `className` | string | "" | Additional CSS classes |
-
-### Features
-
-- **Default Steps**: 4-step default moving process
-- **Service Integration**: Loads process_steps from services.json by service slug
-- **Visual Design**: Step-by-step visual process with connecting lines
-- **Responsive Layout**: Works on all screen sizes
-
-## ContactUs Component
-
-The `ContactUs` component provides a contact section with title, description, image, and contact information.
+The `ContactSection` component provides a contact section with title, description, image, and contact information.
 
 ### Usage
 
 ```tsx
-import ContactUs from './components/ContactUs'
+import ContactSection from './components/ContactSection'
 
 // Basic usage
-<ContactUs />
+<ContactSection />
 
 // Customized usage
-<ContactUs 
+<ContactSection 
   title="Get In Touch"
   description="Ready to start your move? Contact us today!"
   imageUrl="/custom-image.jpg"
@@ -171,7 +113,7 @@ import ContactUs from './components/ContactUs'
 ### Homepage with Recent Posts
 ```tsx
 // Show 3 recent posts without categories or newsletter
-<RecentPosts 
+<BlogSection 
   showFeatured={true}
   showCategories={false}
   showNewsletter={false}
@@ -183,19 +125,19 @@ import ContactUs from './components/ContactUs'
 ### About Page
 ```tsx
 // Full about page with all sections
-<AboutUs />
+<AboutSection />
 ```
 
 ### Blog Page
 ```tsx
 // Full blog page with all features
-<RecentPosts />
+<BlogSection />
 ```
 
 ### Custom About Section
 ```tsx
 // About section without quote form and service areas
-<AboutUs 
+<AboutSection 
   showQuoteForm={false}
   showServiceAreas={false}
   showCTA={true}
@@ -204,7 +146,7 @@ import ContactUs from './components/ContactUs'
 
 ## Data Dependencies
 
-- **RecentPosts**: Requires `data/blog.json` with the following structure:
+- **BlogSection**: Requires `data/blog.json` with the following structure:
   ```json
   [
     {

@@ -1,7 +1,6 @@
 import Hero from './Hero';
-import WhyChoose from './WhyChoose';
-import FinalCTASection from './FinalCTASection';
-import MovingCategories from './MovingCategories';
+import WhySection from './WhySection';
+import PricingSection from './PricingSection';
 import AutoLinks from '@/components/AutoLinks';
 import { buildLinkBlocks } from '@/components/buildLinkBlocks';
 import { allRoutes, titleCase } from '@/lib/data';
@@ -20,8 +19,10 @@ interface HouseSize {
 
 interface RoutePageProps {
   route: {
-    from_city: string;
-    to_city: string;
+    origin_name: string;
+    origin_zip?: string;
+    destination_name: string;
+    destination_zip?: string;
     distance_mi: number;
     drive_time_min: number;
     avg_cost_usd?: number;
@@ -56,12 +57,12 @@ export default function RoutePage({ route }: RoutePageProps) {
     .filter(r => 
       r.slug !== route.slug && 
       r.is_active !== false &&
-      (r.from_city === route.from_city || r.to_city === route.to_city)
+      (r.origin_name === route.origin_name || r.destination_name === route.destination_name)
     )
     .slice(0, 6);
 
-  const fromCityTitle = titleCase(route.from_city);
-  const toCityTitle = titleCase(route.to_city);
+  const fromCityTitle = titleCase(route.origin_name);
+  const toCityTitle = titleCase(route.destination_name);
   const hours = Math.floor(route.drive_time_min / 60);
   const minutes = route.drive_time_min % 60;
   const timeDisplay = hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`;
@@ -117,7 +118,7 @@ export default function RoutePage({ route }: RoutePageProps) {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Link 
-                  href={`/${route.from_city}-movers`}
+                  href={`/${route.origin_name}-movers`}
                   className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow flex items-center justify-between group"
                 >
                   <div className="flex items-center space-x-4">
@@ -130,7 +131,7 @@ export default function RoutePage({ route }: RoutePageProps) {
                   <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-orange-500 group-hover:translate-x-1 transition-all" />
                 </Link>
                 <Link 
-                  href={`/${route.to_city}-movers`}
+                  href={`/${route.destination_name}-movers`}
                   className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow flex items-center justify-between group"
                 >
                   <div className="flex items-center space-x-4">
@@ -176,7 +177,7 @@ export default function RoutePage({ route }: RoutePageProps) {
                     </span>
                   </div>
                   <h3 className="text-xl font-bold text-gray-800 mb-2">
-                    {titleCase(relatedRoute.from_city)} to {titleCase(relatedRoute.to_city)}
+                    {titleCase(relatedRoute.origin_name)} to {titleCase(relatedRoute.destination_name)}
                   </h3>
                   {avgCost && (
                     <p className="text-orange-500 font-semibold">
@@ -197,11 +198,11 @@ export default function RoutePage({ route }: RoutePageProps) {
 
       {/* Moving Categories with Pricing */}
       {route.house_sizes && (
-        <MovingCategories houseSizes={route.house_sizes} />
+        <PricingSection houseSizes={route.house_sizes} />
       )}
 
       {/* Why Choose Us */}
-      <WhyChoose />
+      <WhySection />
 
       {/* Auto Links */}
       {blocks.length > 0 && (
@@ -213,7 +214,6 @@ export default function RoutePage({ route }: RoutePageProps) {
       )}
 
       {/* Final CTA */}
-      <FinalCTASection />
     </div>
   );
 }

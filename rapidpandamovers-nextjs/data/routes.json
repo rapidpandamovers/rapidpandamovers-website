@@ -1,6 +1,0 @@
-[
-    {"from_city":"miami","to_city":"orlando","distance_mi":235,"drive_time_min":225,"avg_cost_usd":1300,"slug":"miami-to-orlando","is_active":true},
-    {"from_city":"miami","to_city":"tampa","distance_mi":280,"drive_time_min":250,"avg_cost_usd":1500,"slug":"miami-to-tampa","is_active":true},
-    {"from_city":"miami","to_city":"fort-lauderdale","distance_mi":28,"drive_time_min":40,"avg_cost_usd":550,"slug":"miami-to-fort-lauderdale","is_active":true}
-  ]
-  

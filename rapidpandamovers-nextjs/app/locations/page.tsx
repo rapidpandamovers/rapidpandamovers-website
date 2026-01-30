@@ -1,46 +1,20 @@
-'use client'
-
 import { MapPin, Phone, Mail, Clock, Navigation } from 'lucide-react'
 import { allContent, allCities } from '@/lib/data'
-import QuoteModal from '@/app/components/QuoteModal'
-import { useState } from 'react'
+import Hero from '@/app/components/Hero'
 
 export default function LocationsPage() {
-  const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false)
   const content = allContent
   const contactInfo = content.contact.contact_info
   const serviceAreas = content.contact.service_areas
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-orange-500 to-orange-600 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              {serviceAreas.title}
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-orange-100">
-              {serviceAreas.description}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-                onClick={() => setIsQuoteModalOpen(true)}
-                className="bg-white text-orange-600 px-8 py-4 rounded-lg font-semibold hover:bg-orange-50 transition-colors inline-flex items-center justify-center gap-2"
-              >
-                Get Free Quote
-              </button>
-              <a 
-                href={`tel:${contactInfo.phone}`}
-                className="bg-white text-orange-600 px-8 py-4 rounded-lg font-semibold hover:bg-orange-50 transition-colors inline-flex items-center justify-center gap-2"
-              >
-                <Phone className="w-5 h-5" />
-                Call {contactInfo.phone}
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Hero
+        title={serviceAreas.title}
+        description={serviceAreas.description}
+        cta="Get Your Free Quote"
+      />
 
       {/* Primary Service Areas */}
       <section className="py-20 bg-gray-50">
@@ -179,13 +153,13 @@ export default function LocationsPage() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-                onClick={() => setIsQuoteModalOpen(true)}
+              <a
+                href="/contact"
                 className="bg-orange-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-600 transition-colors inline-flex items-center justify-center gap-2"
               >
                 Get Free Quote
-              </button>
-              <a 
+              </a>
+              <a
                 href={`tel:${contactInfo.phone}`}
                 className="bg-orange-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-600 transition-colors inline-flex items-center justify-center gap-2"
               >
@@ -196,12 +170,6 @@ export default function LocationsPage() {
           </div>
         </div>
       </section>
-      
-      {/* Quote Modal */}
-      <QuoteModal 
-        isOpen={isQuoteModalOpen} 
-        onClose={() => setIsQuoteModalOpen(false)} 
-      />
     </div>
   )
 }

@@ -41,7 +41,7 @@ export default function Hero({
           {/* Right side - Content */}
           <div className="space-y-6">
             <div>
-              <h1 className="font-display text-5xl md:text-6xl text-white mb-4 font-black tracking-tight">
+              <h1 className="font-display text-4xl md:text-5xl text-white mb-4 font-black tracking-tight">
                 {displayTitle}
               </h1>
               <p className="text-xl text-white mb-8">

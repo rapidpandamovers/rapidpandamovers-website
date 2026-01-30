@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import content from '../../data/content.json'
+import Hero from '../components/Hero'
 
 export default function FAQPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
@@ -14,24 +15,11 @@ export default function FAQPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-orange-500 to-orange-600 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center text-white">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              {content.faq.title}
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              {content.faq.description}
-            </p>
-            <Link 
-              href="/contact" 
-              className="bg-white text-orange-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-colors inline-block"
-            >
-              Get Your Free Quote
-            </Link>
-          </div>
-        </div>
-      </section>
+      <Hero
+        title={content.faq.title}
+        description={content.faq.description}
+        cta="Get Your Free Quote"
+      />
 
       {/* FAQ Section */}
       <section className="py-20">

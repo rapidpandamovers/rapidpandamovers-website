@@ -1,8 +1,7 @@
-'use client'
-
 import { Star, Users, Award, TrendingUp, Phone, Mail, MapPin, Clock } from 'lucide-react'
 import Link from 'next/link'
 import content from '../../data/content.json'
+import Hero from '../components/Hero'
 
 export default function ReviewsPage() {
   const { reviews } = content
@@ -10,24 +9,11 @@ export default function ReviewsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-orange-500 to-orange-600 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center text-white">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              {reviews.title}
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              {reviews.description}
-            </p>
-            <Link 
-              href="/contact" 
-              className="bg-white text-orange-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-colors inline-block"
-            >
-              Get Your Free Quote
-            </Link>
-          </div>
-        </div>
-      </section>
+      <Hero
+        title={reviews.title}
+        description={reviews.description}
+        cta="Get Your Free Quote"
+      />
 
       {/* Statistics Section */}
       <section className="py-16 bg-white">

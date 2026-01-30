@@ -1,103 +1,131 @@
 import Link from 'next/link'
-import { Phone, Mail, MapPin, Facebook, Twitter, Instagram } from 'lucide-react'
+import { Phone, Mail, MapPin, Clock, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react'
+import { getAllActiveCities, getAllActiveServices } from '@/lib/data'
 
 export default function Footer() {
-  return (
-    <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div>
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold">🐼</span>
-              </div>
-              <div>
-                <span className="text-lg font-bold block leading-none">Rapid Panda Movers</span>
-                <span className="text-sm text-orange-500">Professional Moving Services</span>
-              </div>
-            </div>
-            <p className="text-gray-300 mb-4">
-              Your trusted Miami moving company providing professional, reliable, and affordable moving services throughout Florida.
-            </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
-                <Instagram className="w-5 h-5" />
-              </a>
-            </div>
-          </div>
+  const cities = getAllActiveCities()
+  const services = getAllActiveServices()
 
-          {/* Quick Links */}
+  return (
+    <footer className="py-5 px-4 md:px-6 lg:px-8 text-white">
+      <div className="container mx-auto rounded-4xl border border-gray-700 bg-black p-6 md:p-12">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+          {/* Moving Services */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li><Link href="/" className="text-gray-300 hover:text-orange-500 transition-colors">Home</Link></li>
-              <li><Link href="/about" className="text-gray-300 hover:text-orange-500 transition-colors">About Us</Link></li>
-              <li><Link href="/services" className="text-gray-300 hover:text-orange-500 transition-colors">Services</Link></li>
-              <li><Link href="/blog" className="text-gray-300 hover:text-orange-500 transition-colors">Blog</Link></li>
-              <li><Link href="/contact" className="text-gray-300 hover:text-orange-500 transition-colors">Contact</Link></li>
-              <li><Link href="/quote" className="text-gray-300 hover:text-orange-500 transition-colors">Get Quote</Link></li>
+            <h3 className="text-lg font-bold mb-4 text-white">Moving Services</h3>
+            <ul className="space-y-2 text-sm">
+              {services.map((service) => (
+                <li key={service.slug}>
+                  <Link href={`/${service.slug}`} className="text-gray-400 hover:text-orange-500 transition-colors">
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Moving Locations */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Services</h3>
-            <ul className="space-y-2">
-              <li><Link href="/local-moving" className="text-gray-300 hover:text-orange-500 transition-colors">Local Moving</Link></li>
-              <li><Link href="/apartment-moving" className="text-gray-300 hover:text-orange-500 transition-colors">Apartment Moving</Link></li>
-              <li><Link href="/packing-services" className="text-gray-300 hover:text-orange-500 transition-colors">Packing Services</Link></li>
-              <li><Link href="/long-distance" className="text-gray-300 hover:text-orange-500 transition-colors">Long Distance</Link></li>
-              <li><Link href="/commercial-moving" className="text-gray-300 hover:text-orange-500 transition-colors">Commercial Moving</Link></li>
-              <li><Link href="/storage-solutions" className="text-gray-300 hover:text-orange-500 transition-colors">Storage Solutions</Link></li>
+            <h3 className="text-lg font-bold mb-4 text-white">Moving Locations</h3>
+            <ul className="space-y-2 text-sm">
+              {cities.map((city) => (
+                <li key={city.slug}>
+                  <Link href={`/${city.slug}-movers`} className="text-gray-400 hover:text-orange-500 transition-colors">
+                    {city.name} Movers
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources & Company */}
+          <div>
+            <h3 className="text-lg font-bold mb-4 text-white">Resources</h3>
+            <ul className="space-y-2 text-sm mb-8">
+              <li><Link href="/faq" className="text-gray-400 hover:text-orange-500 transition-colors">FAQ</Link></li>
+              <li><Link href="/moving-rates" className="text-gray-400 hover:text-orange-500 transition-colors">Moving Rates</Link></li>
+              <li><Link href="/moving-tips" className="text-gray-400 hover:text-orange-500 transition-colors">Moving Tips</Link></li>
+              <li><Link href="/moving-checklist" className="text-gray-400 hover:text-orange-500 transition-colors">Moving Checklist</Link></li>
+              <li><Link href="/moving-glossary" className="text-gray-400 hover:text-orange-500 transition-colors">Moving Glossary</Link></li>
+              <li><Link href="/blog" className="text-gray-400 hover:text-orange-500 transition-colors">Blog</Link></li>
+              <li><Link href="/routes" className="text-gray-400 hover:text-orange-500 transition-colors">Moving Routes</Link></li>
+            </ul>
+
+            <h3 className="text-lg font-bold mb-4 text-white">Company</h3>
+            <ul className="space-y-2 text-sm">
+              <li><Link href="/about" className="text-gray-400 hover:text-orange-500 transition-colors">About Us</Link></li>
+              <li><Link href="/contact" className="text-gray-400 hover:text-orange-500 transition-colors">Contact</Link></li>
+              <li><Link href="/reviews" className="text-gray-400 hover:text-orange-500 transition-colors">Reviews</Link></li>
+              <li><Link href="/reservations" className="text-gray-400 hover:text-orange-500 transition-colors">Book Online</Link></li>
+              <li><Link href="/services" className="text-gray-400 hover:text-orange-500 transition-colors">All Services</Link></li>
+              <li><Link href="/sitemap" className="text-gray-400 hover:text-orange-500 transition-colors">Sitemap</Link></li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Contact Info</h3>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-orange-500" />
+            <h3 className="text-lg font-bold mb-4 text-white">Contact Us</h3>
+            <div className="space-y-4 text-sm">
+              <a href="tel:786-585-4269" className="flex items-start space-x-3 text-gray-400 hover:text-orange-500 transition-colors">
+                <Phone className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-gray-300">(305) 555-0123</p>
-                  <p className="text-sm text-gray-400">Available 24/7</p>
+                  <p className="font-semibold text-white">(786) 585-4269</p>
+                </div>
+              </a>
+              <a href="mailto:info@rapidpandamovers.com" className="flex items-start space-x-3 text-gray-400 hover:text-orange-500 transition-colors">
+                <Mail className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
+                <span>info@rapidpandamovers.com</span>
+              </a>
+              <div className="flex items-start space-x-3">
+                <MapPin className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
+                <div className="text-gray-400">
+                  <p>7001 North Waterway Dr #107</p>
+                  <p>Miami, FL 33155</p>
                 </div>
               </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-orange-500" />
-                <div>
-                  <p className="text-gray-300">info@rapidpandamovers.com</p>
-                  <p className="text-sm text-gray-400">Quick response</p>
+              <div className="flex items-start space-x-3">
+                <Clock className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
+                <div className="text-gray-400">
+                  <p>Mon-Fri: 8AM - 8PM</p>
+                  <p>Sat-Sun: 9AM - 6PM</p>
                 </div>
               </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-orange-500" />
-                <div>
-                  <p className="text-gray-300">Miami, FL</p>
-                  <p className="text-sm text-gray-400">Serving all of South Florida</p>
-                </div>
+              {/* Social Media */}
+              <div className="flex space-x-4 pt-2">
+                <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors" aria-label="Facebook">
+                  <Facebook className="w-5 h-5" />
+                </a>
+                <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors" aria-label="Twitter">
+                  <Twitter className="w-5 h-5" />
+                </a>
+                <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors" aria-label="Instagram">
+                  <Instagram className="w-5 h-5" />
+                </a>
+                <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors" aria-label="LinkedIn">
+                  <Linkedin className="w-5 h-5" />
+                </a>
               </div>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-8 pt-8">
+        <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2024 Rapid Panda Movers. All rights reserved.
-            </p>
+            <div className="flex items-center space-x-4 mb-4 md:mb-0">
+              <img
+                src="/images/rapidpandamovers-logo.png"
+                alt="Rapid Panda Movers"
+                className="h-10 w-auto brightness-0 invert"
+              />
+              <p className="text-gray-400 text-sm">
+                © 2024 Rapid Panda Movers. All rights reserved.
+              </p>
+            </div>
             <div className="flex space-x-6 text-sm">
               <Link href="/privacy" className="text-gray-400 hover:text-orange-500 transition-colors">Privacy Policy</Link>
-              <Link href="/terms" className="text-gray-400 hover:text-orange-500 transition-colors">Terms of Service</Link>
-              <Link href="/sitemap" className="text-gray-400 hover:text-orange-500 transition-colors">Sitemap</Link>
+              <Link href="/terms" className="text-gray-400 hover:text-orange-500 transition-colors">Terms & Conditions</Link>
             </div>
           </div>
         </div>

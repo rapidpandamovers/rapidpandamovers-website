@@ -24,9 +24,6 @@ export default function Header() {
               <Link href="/" className="text-gray-700 hover:text-orange-500 transition-colors uppercase">
                 Home
               </Link>
-              <Link href="/rates" className="text-gray-700 hover:text-orange-500 transition-colors uppercase">
-                Rates
-              </Link>
               <div className="relative group">
                 <button className="text-gray-700 hover:text-orange-500 transition-colors flex items-center uppercase">
                   Services
@@ -85,6 +82,10 @@ export default function Header() {
                     <Link href="/faq" className="block px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors border-b border-gray-100">
                       <div className="font-medium">FAQ</div>
                       <div className="text-sm text-gray-500">Common questions</div>
+                    </Link>
+                    <Link href="/moving-rates" className="block px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">
+                      <div className="font-medium">Moving Rates</div>
+                      <div className="text-sm text-gray-500">Pricing information</div>
                     </Link>
                     <Link href="/moving-tips" className="block px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">
                       <div className="font-medium">Moving Tips</div>

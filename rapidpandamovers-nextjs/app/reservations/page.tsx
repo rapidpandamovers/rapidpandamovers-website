@@ -1,6 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import content from '../../data/content.json';
+import Hero from '../components/Hero';
 
 export const metadata: Metadata = {
   title: `Reservations - ${content.site.title}`,
@@ -11,32 +12,11 @@ export default function ReservationsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-orange-500 to-orange-600 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Book Your Move Today
-            </h1>
-            <p className="text-xl md:text-2xl mb-8">
-              Professional moving services with transparent pricing and flexible scheduling
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:786-585-4269" 
-                className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Call Now: {content.site.phone}
-              </a>
-              <a 
-                href="#booking-form" 
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors"
-              >
-                Get Free Quote
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Hero
+        title="Book Your Move Today"
+        description="Professional moving services with transparent pricing and flexible scheduling"
+        cta="Get Your Free Quote"
+      />
 
       {/* Pricing Overview */}
       <section className="py-16 bg-white">
@@ -111,160 +91,427 @@ export default function ReservationsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Get Your Free Quote</h2>
+              <h2 className="text-3xl font-bold mb-4">Book Your Move</h2>
               <p className="text-xl text-gray-600">
-                Fill out the form below and we'll contact you within 24 hours with a detailed estimate.
+                Fill out the form below to reserve your moving date
               </p>
             </div>
 
             <div className="bg-white rounded-lg shadow-lg p-8">
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                      placeholder="Your full name"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                      Phone Number *
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                      placeholder="(555) 123-4567"
-                    />
-                  </div>
-                </div>
-
+              <form className="space-y-8">
+                {/* Section 1: Personal Details */}
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                    placeholder="your.email@example.com"
-                  />
+                  <h3 className="text-xl font-semibold mb-4 text-orange-600 border-b border-gray-200 pb-2">
+                    1. Personal Details
+                  </h3>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                        Full Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                        placeholder="Your full name"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                        Email Address *
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                        placeholder="your.email@example.com"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                        Phone Number *
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                        placeholder="(786) 555-1234"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="reference" className="block text-sm font-medium text-gray-700 mb-2">
+                        Reference Number (if any)
+                      </label>
+                      <input
+                        type="text"
+                        id="reference"
+                        name="reference"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                        placeholder="Quote reference #"
+                      />
+                    </div>
+                  </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="move-date" className="block text-sm font-medium text-gray-700 mb-2">
-                      Preferred Move Date *
+                {/* Section 2: Moving Locations */}
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 text-orange-600 border-b border-gray-200 pb-2">
+                    2. Moving Locations
+                  </h3>
+
+                  {/* Pick-up Location */}
+                  <div className="mb-6">
+                    <h4 className="font-medium text-gray-800 mb-3">Pick-up Location</h4>
+                    <div className="grid md:grid-cols-3 gap-4">
+                      <div className="md:col-span-2">
+                        <label htmlFor="pickup-address" className="block text-sm font-medium text-gray-700 mb-2">
+                          Address *
+                        </label>
+                        <input
+                          type="text"
+                          id="pickup-address"
+                          name="pickup-address"
+                          required
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                          placeholder="Street address"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="pickup-apt" className="block text-sm font-medium text-gray-700 mb-2">
+                          Apt/Unit #
+                        </label>
+                        <input
+                          type="text"
+                          id="pickup-apt"
+                          name="pickup-apt"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                          placeholder="Apt #"
+                        />
+                      </div>
+                    </div>
+                    <div className="grid md:grid-cols-3 gap-4 mt-4">
+                      <div>
+                        <label htmlFor="pickup-city" className="block text-sm font-medium text-gray-700 mb-2">
+                          City *
+                        </label>
+                        <input
+                          type="text"
+                          id="pickup-city"
+                          name="pickup-city"
+                          required
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                          placeholder="City"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="pickup-state" className="block text-sm font-medium text-gray-700 mb-2">
+                          State *
+                        </label>
+                        <input
+                          type="text"
+                          id="pickup-state"
+                          name="pickup-state"
+                          required
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                          placeholder="FL"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="pickup-zip" className="block text-sm font-medium text-gray-700 mb-2">
+                          Zip Code *
+                        </label>
+                        <input
+                          type="text"
+                          id="pickup-zip"
+                          name="pickup-zip"
+                          required
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                          placeholder="33101"
+                        />
+                      </div>
+                    </div>
+                    <label className="flex items-center mt-3">
+                      <input type="checkbox" name="pickup-storage" className="mr-3 w-4 h-4 text-orange-500" />
+                      <span className="text-sm text-gray-600">Pick-up is from a storage facility</span>
                     </label>
-                    <input
-                      type="date"
-                      id="move-date"
-                      name="move-date"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                    />
                   </div>
+
+                  {/* Drop-off Location */}
                   <div>
-                    <label htmlFor="move-type" className="block text-sm font-medium text-gray-700 mb-2">
-                      Type of Move *
+                    <h4 className="font-medium text-gray-800 mb-3">Drop-off Location</h4>
+                    <div className="grid md:grid-cols-3 gap-4">
+                      <div className="md:col-span-2">
+                        <label htmlFor="dropoff-address" className="block text-sm font-medium text-gray-700 mb-2">
+                          Address *
+                        </label>
+                        <input
+                          type="text"
+                          id="dropoff-address"
+                          name="dropoff-address"
+                          required
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                          placeholder="Street address"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="dropoff-apt" className="block text-sm font-medium text-gray-700 mb-2">
+                          Apt/Unit #
+                        </label>
+                        <input
+                          type="text"
+                          id="dropoff-apt"
+                          name="dropoff-apt"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                          placeholder="Apt #"
+                        />
+                      </div>
+                    </div>
+                    <div className="grid md:grid-cols-3 gap-4 mt-4">
+                      <div>
+                        <label htmlFor="dropoff-city" className="block text-sm font-medium text-gray-700 mb-2">
+                          City *
+                        </label>
+                        <input
+                          type="text"
+                          id="dropoff-city"
+                          name="dropoff-city"
+                          required
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                          placeholder="City"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="dropoff-state" className="block text-sm font-medium text-gray-700 mb-2">
+                          State *
+                        </label>
+                        <input
+                          type="text"
+                          id="dropoff-state"
+                          name="dropoff-state"
+                          required
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                          placeholder="FL"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="dropoff-zip" className="block text-sm font-medium text-gray-700 mb-2">
+                          Zip Code *
+                        </label>
+                        <input
+                          type="text"
+                          id="dropoff-zip"
+                          name="dropoff-zip"
+                          required
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                          placeholder="33101"
+                        />
+                      </div>
+                    </div>
+                    <label className="flex items-center mt-3">
+                      <input type="checkbox" name="dropoff-storage" className="mr-3 w-4 h-4 text-orange-500" />
+                      <span className="text-sm text-gray-600">Drop-off is to a storage facility</span>
+                    </label>
+                  </div>
+                </div>
+
+                {/* Section 3: Date & Time */}
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 text-orange-600 border-b border-gray-200 pb-2">
+                    3. Moving Date & Time
+                  </h3>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="move-date" className="block text-sm font-medium text-gray-700 mb-2">
+                        Moving Date *
+                      </label>
+                      <input
+                        type="date"
+                        id="move-date"
+                        name="move-date"
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="move-time" className="block text-sm font-medium text-gray-700 mb-2">
+                        Preferred Start Time *
+                      </label>
+                      <select
+                        id="move-time"
+                        name="move-time"
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                      >
+                        <option value="">Select a time</option>
+                        <option value="8-9am">8:00 AM - 9:00 AM</option>
+                        <option value="9-10am">9:00 AM - 10:00 AM</option>
+                        <option value="10-11am">10:00 AM - 11:00 AM</option>
+                        <option value="11-12pm">11:00 AM - 12:00 PM</option>
+                        <option value="12-1pm">12:00 PM - 1:00 PM</option>
+                        <option value="1-2pm">1:00 PM - 2:00 PM</option>
+                        <option value="2-5pm">2:00 PM - 5:00 PM (Afternoon)</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Section 4: Move Size */}
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 text-orange-600 border-b border-gray-200 pb-2">
+                    4. Move Size
+                  </h3>
+                  <div>
+                    <label htmlFor="move-size" className="block text-sm font-medium text-gray-700 mb-2">
+                      Select Your Move Size *
                     </label>
                     <select
-                      id="move-type"
-                      name="move-type"
+                      id="move-size"
+                      name="move-size"
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                     >
-                      <option value="">Select move type</option>
-                      <option value="local">Local Moving</option>
-                      <option value="long-distance">Long Distance Moving</option>
-                      <option value="commercial">Commercial Moving</option>
-                      <option value="apartment">Apartment Moving</option>
+                      <option value="">Select move size</option>
+                      <option value="studio">Studio</option>
+                      <option value="1br-small">1 Bedroom (Small)</option>
+                      <option value="1br-average">1 Bedroom (Average)</option>
+                      <option value="1br-large">1 Bedroom (Large)</option>
+                      <option value="2br-small">2 Bedroom (Small)</option>
+                      <option value="2br-average">2 Bedroom (Average)</option>
+                      <option value="2br-large">2 Bedroom (Large)</option>
+                      <option value="3br-average">3 Bedroom (Average)</option>
+                      <option value="3br-large">3 Bedroom (Large)</option>
+                      <option value="4br-average">4 Bedroom (Average)</option>
+                      <option value="4br-large">4 Bedroom (Large)</option>
+                      <option value="5br-plus">5+ Bedroom</option>
+                      <option value="commercial-small">Commercial (Small Office)</option>
+                      <option value="commercial-average">Commercial (Average Office)</option>
+                      <option value="commercial-large">Commercial (Large Office)</option>
                     </select>
                   </div>
                 </div>
 
+                {/* Section 5: Additional Services */}
                 <div>
-                  <label htmlFor="origin-address" className="block text-sm font-medium text-gray-700 mb-2">
-                    Origin Address *
-                  </label>
-                  <textarea
-                    id="origin-address"
-                    name="origin-address"
-                    required
-                    rows={3}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                    placeholder="Street address, city, state, zip code"
-                  />
-                </div>
+                  <h3 className="text-xl font-semibold mb-4 text-orange-600 border-b border-gray-200 pb-2">
+                    5. Additional Services
+                  </h3>
 
-                <div>
-                  <label htmlFor="destination-address" className="block text-sm font-medium text-gray-700 mb-2">
-                    Destination Address *
-                  </label>
-                  <textarea
-                    id="destination-address"
-                    name="destination-address"
-                    required
-                    rows={3}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                    placeholder="Street address, city, state, zip code"
-                  />
-                </div>
+                  <div className="space-y-6">
+                    {/* Packing Service */}
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Do you need packing services?
+                      </label>
+                      <div className="grid md:grid-cols-3 gap-4">
+                        <label className="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-orange-500">
+                          <input type="radio" name="packing" value="no" className="mr-3" defaultChecked />
+                          <span>No packing needed</span>
+                        </label>
+                        <label className="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-orange-500">
+                          <input type="radio" name="packing" value="partial" className="mr-3" />
+                          <span>Partial packing</span>
+                        </label>
+                        <label className="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-orange-500">
+                          <input type="radio" name="packing" value="full" className="mr-3" />
+                          <span>Full packing service</span>
+                        </label>
+                      </div>
+                    </div>
 
-                <div>
-                  <label htmlFor="additional-services" className="block text-sm font-medium text-gray-700 mb-2">
-                    Additional Services Needed
-                  </label>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <label className="flex items-center">
-                      <input type="checkbox" name="packing" className="mr-3" />
-                      <span>Packing Services</span>
-                    </label>
-                    <label className="flex items-center">
-                      <input type="checkbox" name="unpacking" className="mr-3" />
-                      <span>Unpacking Services</span>
-                    </label>
-                    <label className="flex items-center">
-                      <input type="checkbox" name="storage" className="mr-3" />
-                      <span>Storage Services</span>
-                    </label>
-                    <label className="flex items-center">
-                      <input type="checkbox" name="furniture" className="mr-3" />
-                      <span>Furniture Assembly</span>
-                    </label>
+                    {/* Additional Services Checkboxes */}
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Select any additional services needed:
+                      </label>
+                      <div className="grid md:grid-cols-2 gap-4">
+                        <label className="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer hover:border-orange-500">
+                          <input type="checkbox" name="service-unpacking" className="mr-3 w-4 h-4 text-orange-500" />
+                          <span>Unpacking Services</span>
+                        </label>
+                        <label className="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer hover:border-orange-500">
+                          <input type="checkbox" name="service-furniture" className="mr-3 w-4 h-4 text-orange-500" />
+                          <span>Furniture Disassembly/Assembly</span>
+                        </label>
+                        <label className="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer hover:border-orange-500">
+                          <input type="checkbox" name="service-piano" className="mr-3 w-4 h-4 text-orange-500" />
+                          <span>Piano Moving</span>
+                        </label>
+                        <label className="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer hover:border-orange-500">
+                          <input type="checkbox" name="service-storage" className="mr-3 w-4 h-4 text-orange-500" />
+                          <span>Storage Services</span>
+                        </label>
+                        <label className="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer hover:border-orange-500">
+                          <input type="checkbox" name="service-specialty" className="mr-3 w-4 h-4 text-orange-500" />
+                          <span>Specialty Items (Art, Antiques)</span>
+                        </label>
+                        <label className="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer hover:border-orange-500">
+                          <input type="checkbox" name="service-cleaning" className="mr-3 w-4 h-4 text-orange-500" />
+                          <span>Cleaning Services</span>
+                        </label>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
+                {/* Section 6: Additional Information */}
                 <div>
-                  <label htmlFor="special-instructions" className="block text-sm font-medium text-gray-700 mb-2">
-                    Special Instructions
-                  </label>
-                  <textarea
-                    id="special-instructions"
-                    name="special-instructions"
-                    rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                    placeholder="Any special requirements, fragile items, or additional information..."
-                  />
+                  <h3 className="text-xl font-semibold mb-4 text-orange-600 border-b border-gray-200 pb-2">
+                    6. Additional Information
+                  </h3>
+
+                  <div className="space-y-6">
+                    <div>
+                      <label htmlFor="special-items" className="block text-sm font-medium text-gray-700 mb-2">
+                        Special Items or Concerns
+                      </label>
+                      <textarea
+                        id="special-items"
+                        name="special-items"
+                        rows={4}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                        placeholder="Please list any fragile items, heavy furniture, stairs, elevators, parking restrictions, or any other special requirements..."
+                      />
+                    </div>
+
+                    <div>
+                      <label htmlFor="hear-about" className="block text-sm font-medium text-gray-700 mb-2">
+                        How did you hear about us?
+                      </label>
+                      <select
+                        id="hear-about"
+                        name="hear-about"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                      >
+                        <option value="">Select an option</option>
+                        <option value="google">Google Search</option>
+                        <option value="yelp">Yelp</option>
+                        <option value="facebook">Facebook</option>
+                        <option value="instagram">Instagram</option>
+                        <option value="referral">Friend/Family Referral</option>
+                        <option value="previous">Previous Customer</option>
+                        <option value="bbb">BBB</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+                  </div>
                 </div>
 
-                <div className="text-center">
+                {/* Submit Button */}
+                <div className="text-center pt-6 border-t border-gray-200">
+                  <p className="text-sm text-gray-500 mb-4">
+                    By submitting this form, you agree to receive SMS and email notifications about your move.
+                  </p>
                   <button
                     type="submit"
-                    className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+                    className="bg-orange-500 hover:bg-orange-600 text-white px-12 py-4 rounded-lg font-semibold text-lg transition-colors"
                   >
-                    Get My Free Quote
+                    Book My Move
                   </button>
                 </div>
               </form>

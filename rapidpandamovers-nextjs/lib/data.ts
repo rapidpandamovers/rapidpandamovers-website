@@ -1,11 +1,15 @@
 import cities from '@/data/locations.json';
 import services from '@/data/services.json';
-import routes from '@/data/miami_routes.json';
+import longDistanceRoutes from '@/data/long_distance_routes.json';
+import localRoutes from '@/data/local_routes.json';
 import pageContent from '@/data/content.json';
 
 export const allCities = cities;
 export const allServices = services;
-export const allRoutes = routes;
+export const allLongDistanceRoutes = longDistanceRoutes as typeof longDistanceRoutes;
+export const allLocalRoutes = localRoutes as Array<typeof longDistanceRoutes[number]>;
+// Combined routes for backwards compatibility
+export const allRoutes = [...longDistanceRoutes, ...(localRoutes as Array<typeof longDistanceRoutes[number]>)];
 export const allContent = pageContent;
 
 export const getServiceBySlug = (slug: string) => {
@@ -70,6 +74,29 @@ export const getRouteBySlug = (slug: string) => {
   // Handle slugs with or without -movers suffix
   const cleanSlug = slug.endsWith('-movers') ? slug.replace(/-movers$/, '') : slug;
   return allRoutes.find(r => r.slug === cleanSlug);
+};
+
+export const getNeighborhoodBySlug = (slug: string) => {
+  // Handle slugs with or without -movers suffix
+  const cleanSlug = slug.endsWith('-movers') ? slug.replace(/-movers$/, '') : slug;
+  for (const state of allCities.states) {
+    for (const county of state.counties) {
+      for (const city of county.cities) {
+        if (city.neighborhoods) {
+          const neighborhood = city.neighborhoods.find(n => n.slug === cleanSlug);
+          if (neighborhood) {
+            return {
+              ...neighborhood,
+              parentCity: city,
+              county: county,
+              state: state
+            };
+          }
+        }
+      }
+    }
+  }
+  return null;
 };
 
 export const titleCase = (s: string) =>

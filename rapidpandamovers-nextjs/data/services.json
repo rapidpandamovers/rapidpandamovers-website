@@ -1,53 +1,58 @@
 [
   {
-    "name": "Residential Moving",
-    "slug": "residential-moving",
-    "icon": "Home",
-    "title": "Professional Residential Moving Services in Miami",
-    "description": "Full-service home moves with careful protection and professional handling.",
+    "name": "Packing Services",
+    "slug": "packing-services",
+    "icon": "Package",
+    "title": "Expert Packing & Unpacking Services in Miami",
+    "description": "Professional packing and unpacking services using high-quality materials and proven techniques.",
+    "meta_title": "Professional Packing Services Miami | Packing & Unpacking | Rapid Panda Movers",
+    "meta_description": "Professional packing services in Miami. Expert packing and unpacking with high-quality materials, fragile item care, and full insurance coverage.",
     "hero": {
-      "title": "Experience Stress-Free Residential Moving in Miami",
-      "description": "Full-service home moves with careful protection",
-      "cta": "Get Your Free Residential Moving Quote",
+      "title": "Expert Packing & Unpacking Services in Miami",
+      "description": "Professional packing services with high-quality materials",
+      "cta": "Get Your Free Packing Quote",
       "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
     },
     "extras": [
-      "Full-service packing and unpacking",
-      "Loading and unloading",
-      "Furniture disassembly and reassembly",
-      "Safe transportation",
-      "Professional moving equipment",
-      "Same-day service available",
-      "Weekend and evening moves",
-      "Storage solutions"
+      "Professional packing materials",
+      "Fragile item special handling",
+      "Furniture wrapping and protection",
+      "Custom crating for valuables",
+      "Unpacking at your new home",
+      "Box labeling and inventory",
+      "Partial and full-service packing",
+      "Same-day packing available"
     ],
-    "process": [
+    "materials": [
       {
-        "step": "1",
-        "title": "Get Quote",
-        "description": "Contact us for a free, accurate estimate"
+        "name": "Moving Boxes",
+        "description": "Various sizes for all your items"
       },
       {
-        "step": "2", 
-        "title": "Schedule Move",
-        "description": "Choose your preferred date and time"
+        "name": "Bubble Wrap",
+        "description": "Protection for fragile items"
       },
       {
-        "step": "3",
-        "title": "We Move You",
-        "description": "Our team handles everything professionally"
+        "name": "Packing Paper",
+        "description": "Acid-free newsprint wrapping"
       },
       {
-        "step": "4",
-        "title": "Settle In",
-        "description": "Relax in your new home"
+        "name": "Tape & Labels",
+        "description": "Heavy-duty sealing supplies"
+      },
+      {
+        "name": "Furniture Pads",
+        "description": "Protection for large items"
+      },
+      {
+        "name": "Specialty Boxes",
+        "description": "Wardrobes, dishes, electronics"
       }
     ],
     "benefits": [
-      "Experienced Local Movers",
-      "Flexible Scheduling", 
-      "Fully Licensed & Insured",
-      "Professional Team"
+      "Expert Handling",
+      "Time-Saving",
+      "Quality Materials"
     ],
     "is_active": true
   },
@@ -76,9 +81,18 @@
       "Storage solutions"
     ],
     "areas": [
-      "Miami", "Coral Gables", "Miami Beach", "Hialeah",
-      "Doral", "Aventura", "Kendall", "Homestead",
-      "Palmetto Bay", "Pinecrest", "South Beach", "Little Havana"
+      "Miami",
+      "Coral Gables",
+      "Miami Beach",
+      "Hialeah",
+      "Doral",
+      "Aventura",
+      "Kendall",
+      "Homestead",
+      "Palmetto Bay",
+      "Pinecrest",
+      "South Beach",
+      "Little Havana"
     ],
     "process": [
       {
@@ -87,7 +101,7 @@
         "description": "Contact us for a free, accurate estimate"
       },
       {
-        "step": "2", 
+        "step": "2",
         "title": "Schedule Move",
         "description": "Choose your preferred date and time"
       },
@@ -104,7 +118,7 @@
     ],
     "benefits": [
       "Experienced Local Movers",
-      "Flexible Scheduling", 
+      "Flexible Scheduling",
       "Fully Licensed & Insured",
       "Professional Team"
     ],
@@ -135,9 +149,18 @@
       "Flexible scheduling"
     ],
     "areas": [
-      "Orlando", "Tampa", "Jacksonville", "Fort Lauderdale",
-      "Atlanta, GA", "Charlotte, NC", "Nashville, TN", "New York, NY",
-      "Chicago, IL", "Dallas, TX", "Los Angeles, CA", "All 50 States"
+      "Orlando",
+      "Tampa",
+      "Jacksonville",
+      "Fort Lauderdale",
+      "Atlanta, GA",
+      "Charlotte, NC",
+      "Nashville, TN",
+      "New York, NY",
+      "Chicago, IL",
+      "Dallas, TX",
+      "Los Angeles, CA",
+      "All 50 States"
     ],
     "process": [
       {
@@ -146,7 +169,7 @@
         "description": "We assess your moving needs and provide a detailed quote"
       },
       {
-        "step": "2", 
+        "step": "2",
         "title": "Packing & Loading",
         "description": "Professional packing and careful loading of your belongings"
       },
@@ -169,41 +192,54 @@
     "is_active": true
   },
   {
-    "name": "Packing Services",
-    "slug": "packing-services",
-    "icon": "Package",
-    "title": "Expert Packing & Unpacking Services in Miami",
-    "description": "Professional packing and unpacking services using high-quality materials and proven techniques.",
-    "meta_title": "Professional Packing Services Miami | Packing & Unpacking | Rapid Panda Movers",
-    "meta_description": "Professional packing services in Miami. Expert packing and unpacking with high-quality materials, fragile item care, and full insurance coverage.",
+    "name": "Residential Moving",
+    "slug": "residential-moving",
+    "icon": "Home",
+    "title": "Professional Residential Moving Services in Miami",
+    "description": "Full-service home moves with careful protection and professional handling.",
     "hero": {
-      "title": "Expert Packing & Unpacking Services in Miami",
-      "description": "Professional packing services with high-quality materials",
-      "cta": "Get Your Free Packing Quote",
+      "title": "Experience Stress-Free Residential Moving in Miami",
+      "description": "Full-service home moves with careful protection",
+      "cta": "Get Your Free Residential Moving Quote",
       "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
     },
     "extras": [
-      "Professional packing materials",
-      "Fragile item special handling",
-      "Furniture wrapping and protection",
-      "Custom crating for valuables",
-      "Unpacking at your new home",
-      "Box labeling and inventory",
-      "Partial and full-service packing",
-      "Same-day packing available"
+      "Full-service packing and unpacking",
+      "Loading and unloading",
+      "Furniture disassembly and reassembly",
+      "Safe transportation",
+      "Professional moving equipment",
+      "Same-day service available",
+      "Weekend and evening moves",
+      "Storage solutions"
     ],
-    "materials": [
-      { "name": "Moving Boxes", "description": "Various sizes for all your items" },
-      { "name": "Bubble Wrap", "description": "Protection for fragile items" },
-      { "name": "Packing Paper", "description": "Acid-free newsprint wrapping" },
-      { "name": "Tape & Labels", "description": "Heavy-duty sealing supplies" },
-      { "name": "Furniture Pads", "description": "Protection for large items" },
-      { "name": "Specialty Boxes", "description": "Wardrobes, dishes, electronics" }
+    "process": [
+      {
+        "step": "1",
+        "title": "Get Quote",
+        "description": "Contact us for a free, accurate estimate"
+      },
+      {
+        "step": "2",
+        "title": "Schedule Move",
+        "description": "Choose your preferred date and time"
+      },
+      {
+        "step": "3",
+        "title": "We Move You",
+        "description": "Our team handles everything professionally"
+      },
+      {
+        "step": "4",
+        "title": "Settle In",
+        "description": "Relax in your new home"
+      }
     ],
     "benefits": [
-      "Expert Handling",
-      "Time-Saving",
-      "Quality Materials"
+      "Experienced Local Movers",
+      "Flexible Scheduling",
+      "Fully Licensed & Insured",
+      "Professional Team"
     ],
     "is_active": true
   },
@@ -232,12 +268,30 @@
       "Storage solutions"
     ],
     "customers": [
-      { "name": "Law Firms", "description": "Confidential document handling" },
-      { "name": "Medical Offices", "description": "Sensitive equipment transport" },
-      { "name": "Tech Companies", "description": "Server and IT equipment moves" },
-      { "name": "Retail Stores", "description": "Inventory and fixture relocation" },
-      { "name": "Restaurants", "description": "Kitchen equipment and furniture" },
-      { "name": "Manufacturing", "description": "Heavy machinery transport" }
+      {
+        "name": "Law Firms",
+        "description": "Confidential document handling"
+      },
+      {
+        "name": "Medical Offices",
+        "description": "Sensitive equipment transport"
+      },
+      {
+        "name": "Tech Companies",
+        "description": "Server and IT equipment moves"
+      },
+      {
+        "name": "Retail Stores",
+        "description": "Inventory and fixture relocation"
+      },
+      {
+        "name": "Restaurants",
+        "description": "Kitchen equipment and furniture"
+      },
+      {
+        "name": "Manufacturing",
+        "description": "Heavy machinery transport"
+      }
     ],
     "process": [
       {
@@ -246,7 +300,7 @@
         "description": "We assess your business needs and create a detailed moving plan"
       },
       {
-        "step": "2", 
+        "step": "2",
         "title": "Strategic Planning",
         "description": "Minimize downtime with careful scheduling and logistics"
       },
@@ -293,10 +347,22 @@
       "Professional wrapping techniques"
     ],
     "furniture": [
-      { "name": "Antique Furniture", "description": "Specialized handling for valuable antiques" },
-      { "name": "Pianos", "description": "Professional piano moving with specialized equipment" },
-      { "name": "Heavy Furniture", "description": "Safe transport of heavy pieces" },
-      { "name": "Modern Furniture", "description": "Careful handling of contemporary pieces" }
+      {
+        "name": "Antique Furniture",
+        "description": "Specialized handling for valuable antiques"
+      },
+      {
+        "name": "Pianos",
+        "description": "Professional piano moving with specialized equipment"
+      },
+      {
+        "name": "Heavy Furniture",
+        "description": "Safe transport of heavy pieces"
+      },
+      {
+        "name": "Modern Furniture",
+        "description": "Careful handling of contemporary pieces"
+      }
     ],
     "benefits": [
       "Specialized Equipment",
@@ -363,10 +429,26 @@
       "Weekend moves available"
     ],
     "sizes": [
-      { "name": "Studio Apartments", "description": "Efficient moves for studio spaces", "time": "2-4 hours" },
-      { "name": "1-Bedroom", "description": "Perfect for single professionals", "time": "3-5 hours" },
-      { "name": "2-Bedroom", "description": "Ideal for couples and roommates", "time": "4-6 hours" },
-      { "name": "3+ Bedrooms", "description": "Family-sized apartment moves", "time": "6-8 hours" }
+      {
+        "name": "Studio Apartments",
+        "description": "Efficient moves for studio spaces",
+        "time": "2-4 hours"
+      },
+      {
+        "name": "1-Bedroom",
+        "description": "Perfect for single professionals",
+        "time": "3-5 hours"
+      },
+      {
+        "name": "2-Bedroom",
+        "description": "Ideal for couples and roommates",
+        "time": "4-6 hours"
+      },
+      {
+        "name": "3+ Bedrooms",
+        "description": "Family-sized apartment moves",
+        "time": "6-8 hours"
+      }
     ],
     "process": [
       {
@@ -375,7 +457,7 @@
         "description": "We evaluate your apartment and provide an accurate quote"
       },
       {
-        "step": "2", 
+        "step": "2",
         "title": "Packing & Prep",
         "description": "Professional packing with apartment-optimized techniques"
       },
@@ -836,4 +918,3 @@
     "is_active": true
   }
 ]
-  
