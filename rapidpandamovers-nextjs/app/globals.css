@@ -17,6 +17,14 @@
   html {
     font-family: 'Inter', system-ui, sans-serif;
   }
+
+  h1, h2, h3 {
+    font-family: var(--font-getai), ui-sans-serif, system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: none;
+  }
 }
 
 @layer components {
@@ -27,9 +35,9 @@
   .btn-primary {
     @apply bg-orange-500 hover:bg-orange-600 text-white font-medium py-3 px-6 rounded-lg transition-colors;
   }
-  
+
   .btn-secondary {
-    @apply bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-6 rounded-lg transition-colors;
+    @apply bg-white hover:bg-gray-100 text-orange-500 font-medium py-3 px-6 rounded-lg transition-colors;
   }
   
   .gradient-text {

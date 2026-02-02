@@ -46,7 +46,7 @@ export default function SitemapPage() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about" className="text-gray-600 hover:text-orange-500 transition-colors">
+                  <Link href="/about-us" className="text-gray-600 hover:text-orange-500 transition-colors">
                     About Us
                   </Link>
                 </li>
@@ -66,7 +66,7 @@ export default function SitemapPage() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className="text-gray-600 hover:text-orange-500 transition-colors">
+                  <Link href="/contact-us" className="text-gray-600 hover:text-orange-500 transition-colors">
                     Contact
                   </Link>
                 </li>

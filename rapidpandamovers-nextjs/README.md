@@ -2,87 +2,117 @@
 
 A modern, responsive website for Rapid Panda Movers built with Next.js 15.5 and Tailwind CSS 4.1, migrated from WordPress.
 
-## 🚀 Features
+## Features
 
-- **Modern Tech Stack**: Built with Next.js 15.5, TypeScript, and Tailwind CSS 4.1
-- **Responsive Design**: Mobile-first responsive design that works on all devices
-- **SEO Optimized**: Proper meta tags, semantic HTML, and optimized performance
-- **Fast Loading**: Static generation for optimal performance
-- **Professional UI**: Clean, modern interface with smooth animations
+- **Modern Tech Stack**: Next.js 15.5, TypeScript, Tailwind CSS 4.1, React 19.1
+- **Responsive Design**: Mobile-first design that works on all devices
+- **SEO Optimized**: Proper meta tags, semantic HTML, dynamic routes
+- **Review Aggregation**: Pulls reviews from Google, Yelp, Trustpilot, BBB, Facebook, and more
+- **Dynamic Routes**: Location pages, service pages, and moving route pages
+- **Contact Forms**: Email notifications via SMTP
 
-## 📄 Pages
+## Pages
 
-- **Home** (`/`) - Main landing page with services overview and contact form
-- **Blog** (`/blog`) - Blog listing page
-- **Blog Post** (`/blog/budget-apartment-moving`) - Individual blog post example
-- **Apartment Moving** (`/apartment-moving`) - Service page for apartment moving
-- **Quote** (`/quote`) - Contact form for getting moving quotes
+### Main Pages
+- **Home** (`/`) - Landing page with services overview
+- **About** (`/about-us`) - Company information
+- **Services** (`/services`) - All services listing
+- **Contact** (`/contact-us`) - Contact form and info
+- **Quote** (`/quote`) - Get a moving quote
 
-## 🛠 Tech Stack
+### Service Pages
+- `/local-moving` - Local moving services
+- `/long-distance` - Long distance moving
+- `/apartment-moving` - Apartment moving
+- `/commercial-moving` - Commercial/office moving
+- `/packing-services` - Packing services
+- `/storage-solutions` - Storage options
+
+### Resource Pages
+- `/blog` - Blog listing
+- `/faq` - Frequently asked questions
+- `/reviews` - Customer reviews
+- `/moving-tips` - Moving advice
+- `/moving-checklist` - Packing checklist
+- `/moving-glossary` - Moving terms
+- `/moving-rates` - Pricing information
+
+### Dynamic Pages
+- `/blog/[slug]` - Individual blog posts
+- `/routes/[slug]` - Moving route pages (e.g., miami-to-orlando)
+- `/locations/[slug]` - Location-specific pages
+- `/alternatives/[slug]` - Competitor comparisons
+- `/compare/[slug]` - Service comparisons
+
+## Tech Stack
 
 - **Framework**: Next.js 15.5 with App Router
-- **Styling**: Tailwind CSS 4.1 with PostCSS
-- **Language**: TypeScript
+- **Language**: TypeScript (strict mode)
+- **Styling**: Tailwind CSS 4.1 with `@theme` syntax
 - **Icons**: Lucide React
-- **Deployment**: Ready for Vercel, Netlify, or any static hosting
+- **Deployment**: Vercel-ready
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 rapidpandamovers-nextjs/
 ├── app/
-│   ├── components/          # Reusable React components
-│   │   ├── Header.tsx      # Site header with navigation
-│   │   ├── Footer.tsx      # Site footer
-│   │   └── Hero.tsx        # Homepage hero section
-│   ├── blog/               # Blog pages
-│   │   ├── page.tsx       # Blog listing
-│   │   └── budget-apartment-moving/
-│   │       └── page.tsx   # Individual blog post
-│   ├── apartment-moving/   # Service pages
-│   │   └── page.tsx
-│   ├── quote/             # Quote request page
-│   │   └── page.tsx
-│   ├── globals.css        # Global styles and Tailwind imports
-│   ├── layout.tsx         # Root layout component
-│   └── page.tsx          # Homepage
+│   ├── components/           # Reusable React components
+│   │   ├── Header.tsx
+│   │   ├── Footer.tsx
+│   │   ├── Hero.tsx
+│   │   ├── ReviewSection.tsx
+│   │   ├── ResourceSection.tsx
+│   │   ├── ContactSection.tsx
+│   │   ├── MapSection.tsx
+│   │   ├── AboutSection.tsx
+│   │   └── BlogSection.tsx
+│   ├── api/
+│   │   └── contact/          # Contact form API
+│   ├── blog/                 # Blog pages
+│   ├── routes/               # Moving route pages
+│   ├── [slug]/               # Dynamic service pages
+│   ├── globals.css           # Global styles
+│   ├── layout.tsx            # Root layout
+│   └── page.tsx              # Homepage
 ├── data/
-│   └── content.json      # Site content and configuration
+│   ├── content.json          # Site content
+│   ├── reviews.json          # Customer reviews
+│   ├── services.json         # Service definitions
+│   ├── local_routes.csv      # Local moving routes
+│   └── long_distance_routes.csv
 ├── scripts/
-│   └── extract-wordpress-content.js  # WordPress migration helper
-└── public/               # Static assets
+│   ├── fetch_reviews.py      # API-based review fetcher
+│   ├── scrape_reviews.py     # Web scraper for reviews
+│   ├── generate_local_routes.py
+│   ├── generate_long_distance_routes.py
+│   └── update_drive_times.py
+├── lib/
+│   ├── data.ts               # Data utilities
+│   └── email.ts              # Email utilities
+└── public/                   # Static assets
 ```
 
-## 🎨 Design System
-
-### Colors
-- **Primary**: Blue color palette (`primary-50` to `primary-900`)
-- **Secondary**: Purple color palette (`secondary-50` to `secondary-900`)
-- **Grays**: Standard gray scale for text and backgrounds
-
-### Components
-- **Buttons**: `.btn-primary` and `.btn-secondary` utility classes
-- **Typography**: Responsive text scaling with proper hierarchy
-- **Forms**: Consistent form styling with focus states
-- **Cards**: Clean card layouts for services and blog posts
-
-## 🚦 Getting Started
+## Getting Started
 
 ### Prerequisites
-- Node.js 18+ 
+- Node.js 18+
 - npm or yarn
+- Python 3.8+ (for scripts)
 
 ### Installation
 
-1. **Clone the repository**:
+1. **Clone and install**:
    ```bash
    git clone <repository-url>
    cd rapidpandamovers-nextjs
+   npm install
    ```
 
-2. **Install dependencies**:
+2. **Set up environment variables**:
    ```bash
-   npm install
+   cp .env.example .env
+   # Edit .env with your values
    ```
 
 3. **Run the development server**:
@@ -95,88 +125,129 @@ rapidpandamovers-nextjs/
 
 ### Available Scripts
 
-- `npm run dev` - Start development server
-- `npm run build` - Create production build
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
+```bash
+npm run dev      # Start development server
+npm run build    # Create production build
+npm run start    # Start production server
+npm run lint     # Run ESLint
+```
 
-## 📝 Content Management
+### Python Scripts
 
-Content is stored in `data/content.json` for easy management. This includes:
+```bash
+# Install Python dependencies
+pip install requests beautifulsoup4 lxml python-dotenv googlemaps
 
-- Site metadata (title, description, contact info)
+# Fetch reviews via APIs (requires API keys)
+python scripts/fetch_reviews.py
+
+# Scrape reviews without APIs
+python scripts/scrape_reviews.py
+
+# Generate route data
+python scripts/generate_local_routes.py
+python scripts/generate_long_distance_routes.py
+
+# Update drive times (requires GOOGLE_MAPS_API_KEY)
+python scripts/update_drive_times.py
+```
+
+## Environment Variables
+
+Create a `.env` file based on `.env.example`:
+
+```env
+# Google Maps
+GOOGLE_MAPS_API_KEY=your-key
+NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your-embed-key
+
+# SMTP (for contact form)
+SMTP_HOST=smtp.example.com
+SMTP_PORT=587
+SMTP_USER=your-email
+SMTP_PASS=your-password
+CONTACT_EMAIL=info@rapidpandamovers.com
+
+# Review APIs (optional)
+GOOGLE_PLACES_API_KEY=your-key
+YELP_API_KEY=your-key
+TRUSTPILOT_API_KEY=your-key
+
+# Review Scraper URLs (no API needed)
+YELP_URL=https://www.yelp.com/biz/your-business
+TRUSTPILOT_URL=https://www.trustpilot.com/review/yourdomain.com
+```
+
+See `.env.example` for all available options.
+
+## Components
+
+See [COMPONENTS.md](./COMPONENTS.md) for detailed component documentation.
+
+Key components:
+- **ReviewSection** - Display reviews with platform/location/service filtering
+- **ResourceSection** - Links to resource pages, auto-hides current page
+- **ContactSection** - Split layout with contact info and form
+- **MapSection** - Google Maps embed for routes
+- **Hero** - Configurable hero section
+
+## Data Management
+
+### Content
+Edit `data/content.json` to update:
+- Site metadata (title, phone, email, address)
 - Hero section content
 - Services information
-- Blog posts data
+- Blog posts
 
-To add new content:
+### Reviews
+Reviews are stored in `data/reviews.json` with rich metadata:
+- Platform (Google, Yelp, Facebook, etc.)
+- Location (city, neighborhood, ZIP)
+- Services mentioned
+- Routes (for route-specific reviews)
 
-1. **Add blog posts**: Update the `blog` array in `content.json`
-2. **Add services**: Update the `services` array
-3. **Update site info**: Modify the `site` object
+Populate reviews using:
+```bash
+python scripts/fetch_reviews.py    # With API keys
+python scripts/scrape_reviews.py   # Without API keys
+```
 
-## 🔄 WordPress Migration
+### Routes
+Route data in CSV/JSON format with:
+- Origin/destination cities and ZIP codes
+- Distance and drive time
+- Company travel time
 
-This site was migrated from WordPress using the following process:
-
-1. **Content Extraction**: WordPress content was extracted from the database dump
-2. **Theme Conversion**: Avada theme elements were converted to React components
-3. **URL Structure**: Maintained original URL structure for SEO
-4. **Content Migration**: Blog posts and pages were manually converted
-5. **Form Migration**: Contact forms were rebuilt in React
-
-### Migration Scripts
-
-- `scripts/extract-wordpress-content.js` - Helper script for extracting WP content
-
-## 🚀 Deployment
+## Deployment
 
 ### Vercel (Recommended)
-1. Push code to GitHub
-2. Connect repository to Vercel
-3. Deploy automatically
+1. Push to GitHub
+2. Connect to Vercel
+3. Add environment variables
+4. Deploy
 
-### Netlify
-1. Build the project: `npm run build`
-2. Deploy the `out` folder to Netlify
+### Other Platforms
+```bash
+npm run build
+# Deploy .next folder
+```
 
-### Other Hosts
-1. Run `npm run build` 
-2. Upload the generated files to your hosting provider
+## Design System
 
-## 📊 Performance
+- **Primary Color**: Orange (#f97316)
+- **Secondary Theme**: Black (alternating sections)
+- **Section Pattern**: White bg → Black bg → Orange bg
+- **Buttons**: Orange on white/black, White on orange
+- **Typography**: Getai Grotesk for headings, Inter for body text
+- **Spacing**: Consistent Tailwind spacing scale
+- **Components**: Responsive, mobile-first design
 
-- **Lighthouse Score**: 95+ across all metrics
-- **Core Web Vitals**: Optimized for LCP, FID, and CLS
-- **Bundle Size**: Optimized with code splitting and tree shaking
-- **Images**: Next.js Image component for optimal loading
+## Support
 
-## 🔧 Customization
-
-### Adding New Pages
-1. Create a new folder in `app/`
-2. Add `page.tsx` file
-3. Update navigation in `Header.tsx`
-
-### Styling
-- Global styles in `app/globals.css`
-- Component-specific styles using Tailwind classes
-- Custom utilities defined in Tailwind config
-
-### SEO
-- Update metadata in each page's default export
-- Modify `layout.tsx` for site-wide SEO settings
-
-## 📞 Support
-
-For questions or issues:
 - Email: info@rapidpandamovers.com
-- Phone: (305) 555-0123
+- Phone: (305) 747-4181
 
-## 📄 License
+## License
 
-This project is proprietary to Rapid Panda Movers.
-
----
-
-Built with ❤️ by the Rapid Panda Movers team
+Proprietary - Rapid Panda Movers

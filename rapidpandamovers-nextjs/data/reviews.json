@@ -1,0 +1,509 @@
+{
+  "reviews": [
+    {
+      "id": "1",
+      "author": "Sarah Johnson",
+      "rating": 5,
+      "text": "Amazing service! The team was professional, careful, and efficient. They moved our 3-bedroom house in Brickell to Coral Gables without a single scratch. Highly recommend!",
+      "date": "2024-11-15",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": "brickell",
+        "zip": "33129"
+      },
+      "services": ["local-moving"],
+      "route": null
+    },
+    {
+      "id": "2",
+      "author": "Mike Rodriguez",
+      "rating": 5,
+      "text": "Best moving experience ever. They handled everything with care and were very affordable. The crew showed up on time and worked non-stop until we were completely moved in.",
+      "date": "2024-11-10",
+      "platform": "yelp",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": "little-havana",
+        "zip": "33135"
+      },
+      "services": ["local-moving"],
+      "route": null
+    },
+    {
+      "id": "3",
+      "author": "Lisa Chen",
+      "rating": 5,
+      "text": "Stress-free move thanks to Rapid Panda Movers. Great communication throughout the process. They packed everything perfectly and moved us the same day. Nothing was damaged.",
+      "date": "2024-11-05",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": "downtown",
+        "zip": "33132"
+      },
+      "services": ["packing-services", "local-moving"],
+      "route": null
+    },
+    {
+      "id": "4",
+      "author": "David Thompson",
+      "rating": 5,
+      "text": "Used them for my office relocation in Doral. Minimal downtime and everything was set up exactly how we wanted. Professional team that understood business needs.",
+      "date": "2024-10-28",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "doral",
+        "neighborhood": null,
+        "zip": "33172"
+      },
+      "services": ["commercial-moving"],
+      "route": null
+    },
+    {
+      "id": "5",
+      "author": "Maria Gonzalez",
+      "rating": 5,
+      "text": "Moved from Miami to Orlando with Rapid Panda. The long-distance team was incredible - they kept me updated the entire way and delivered right on schedule.",
+      "date": "2024-10-20",
+      "platform": "yelp",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": null,
+        "zip": "33101"
+      },
+      "services": ["long-distance-moving"],
+      "route": "miami-to-orlando"
+    },
+    {
+      "id": "6",
+      "author": "James Wilson",
+      "rating": 5,
+      "text": "The packing service was worth every penny. They wrapped each item carefully and labeled every box. Made unpacking so much easier!",
+      "date": "2024-10-15",
+      "platform": "facebook",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": "coconut-grove",
+        "zip": "33133"
+      },
+      "services": ["packing-services"],
+      "route": null
+    },
+    {
+      "id": "7",
+      "author": "Jennifer Martinez",
+      "rating": 5,
+      "text": "Moved my apartment in Wynwood to a new place in Edgewater. Quick, efficient, and reasonably priced. The movers were friendly and handled my artwork with extra care.",
+      "date": "2024-10-10",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": "wynwood",
+        "zip": "33127"
+      },
+      "services": ["apartment-moving"],
+      "route": null
+    },
+    {
+      "id": "8",
+      "author": "Robert Kim",
+      "rating": 5,
+      "text": "Third time using Rapid Panda and they never disappoint. This time was a move from Kendall to Homestead. Same great service every time!",
+      "date": "2024-10-05",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": "kendall",
+        "zip": "33176"
+      },
+      "services": ["local-moving"],
+      "route": "kendall-to-homestead"
+    },
+    {
+      "id": "9",
+      "author": "Amanda Foster",
+      "rating": 5,
+      "text": "Excellent storage solutions! They stored my furniture for 2 months while my new place was being renovated. Everything came back in perfect condition.",
+      "date": "2024-09-28",
+      "platform": "yelp",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": null,
+        "zip": "33131"
+      },
+      "services": ["storage-solutions"],
+      "route": null
+    },
+    {
+      "id": "10",
+      "author": "Carlos Diaz",
+      "rating": 5,
+      "text": "Hired them for a last-minute move in Hialeah. Despite the short notice, they were able to accommodate us and did an amazing job. True professionals!",
+      "date": "2024-09-20",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "hialeah",
+        "neighborhood": null,
+        "zip": "33012"
+      },
+      "services": ["local-moving"],
+      "route": null
+    },
+    {
+      "id": "11",
+      "author": "Emily Watson",
+      "rating": 5,
+      "text": "Moved from Fort Lauderdale to Miami Beach. The team navigated the building restrictions perfectly and got everything done within the allowed time window.",
+      "date": "2024-09-15",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami-beach",
+        "neighborhood": null,
+        "zip": "33139"
+      },
+      "services": ["local-moving", "apartment-moving"],
+      "route": "fort-lauderdale-to-miami-beach"
+    },
+    {
+      "id": "12",
+      "author": "Thomas Brown",
+      "rating": 5,
+      "text": "The commercial moving team relocated our entire dental office over the weekend. They also packed all our equipment securely. Monday morning we were up and running!",
+      "date": "2024-09-10",
+      "platform": "yelp",
+      "verified": true,
+      "location": {
+        "city": "coral-gables",
+        "neighborhood": null,
+        "zip": "33134"
+      },
+      "services": ["commercial-moving", "packing-services"],
+      "route": null
+    },
+    {
+      "id": "13",
+      "author": "Nicole Adams",
+      "rating": 5,
+      "text": "Long distance move from Miami to Atlanta. They handled everything - packing, loading, transport, and unloading. Two weeks later and I'm still impressed!",
+      "date": "2024-09-05",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": null,
+        "zip": "33101"
+      },
+      "services": ["long-distance-moving", "packing-services"],
+      "route": "miami-to-atlanta-ga"
+    },
+    {
+      "id": "14",
+      "author": "Kevin O'Brien",
+      "rating": 5,
+      "text": "Moved my studio apartment in South Beach. Even for a small move, they treated it with the same professionalism. Fair pricing and great work!",
+      "date": "2024-08-28",
+      "platform": "facebook",
+      "verified": true,
+      "location": {
+        "city": "miami-beach",
+        "neighborhood": "south-beach",
+        "zip": "33139"
+      },
+      "services": ["apartment-moving"],
+      "route": null
+    },
+    {
+      "id": "15",
+      "author": "Patricia Lee",
+      "rating": 5,
+      "text": "My piano was handled with extreme care. The specialty moving team knew exactly what they were doing. Not a single scratch on my baby grand!",
+      "date": "2024-08-20",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": "pinecrest",
+        "zip": "33156"
+      },
+      "services": ["local-moving"],
+      "route": null
+    },
+    {
+      "id": "16",
+      "author": "Steven Garcia",
+      "rating": 5,
+      "text": "Moved from Aventura to Tampa. The coordination between pickup and delivery teams was flawless. Everything arrived on the exact day promised.",
+      "date": "2024-08-15",
+      "platform": "yelp",
+      "verified": true,
+      "location": {
+        "city": "aventura",
+        "neighborhood": null,
+        "zip": "33180"
+      },
+      "services": ["long-distance-moving"],
+      "route": "miami-to-tampa"
+    },
+    {
+      "id": "17",
+      "author": "Rachel Cooper",
+      "rating": 5,
+      "text": "Full packing service for our 4-bedroom house, then they moved everything across town. The team was so organized - color-coded boxes for each room!",
+      "date": "2024-08-10",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": "coral-way",
+        "zip": "33145"
+      },
+      "services": ["packing-services", "local-moving"],
+      "route": null
+    },
+    {
+      "id": "18",
+      "author": "Daniel Murphy",
+      "rating": 5,
+      "text": "Our law firm moved to a bigger office in Downtown Miami. Rapid Panda handled all our sensitive documents and equipment with complete discretion and care.",
+      "date": "2024-08-05",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": "downtown",
+        "zip": "33131"
+      },
+      "services": ["commercial-moving"],
+      "route": null
+    },
+    {
+      "id": "19",
+      "author": "Michelle Taylor",
+      "rating": 5,
+      "text": "Used their storage and then they moved everything to my new place. Clean facility, easy access, and fair rates. Perfect for staging my home while it was on the market.",
+      "date": "2024-07-28",
+      "platform": "yelp",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": null,
+        "zip": "33155"
+      },
+      "services": ["storage-solutions", "local-moving"],
+      "route": null
+    },
+    {
+      "id": "20",
+      "author": "Anthony Harris",
+      "rating": 5,
+      "text": "Moved to New York from Miami. Cross-country move was smooth as could be. Daily updates on where our stuff was. Highly recommend for long distance!",
+      "date": "2024-07-20",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": null,
+        "zip": "33101"
+      },
+      "services": ["long-distance-moving"],
+      "route": "miami-to-new-york-ny"
+    },
+    {
+      "id": "21",
+      "author": "Laura Martinez",
+      "rating": 5,
+      "text": "The team that moved us in Doral was fantastic. They assembled all our furniture perfectly and even helped arrange the heavy pieces where we wanted them.",
+      "date": "2024-07-15",
+      "platform": "facebook",
+      "verified": true,
+      "location": {
+        "city": "doral",
+        "neighborhood": null,
+        "zip": "33178"
+      },
+      "services": ["local-moving"],
+      "route": null
+    },
+    {
+      "id": "22",
+      "author": "Christopher Young",
+      "rating": 5,
+      "text": "Apartment move in Midtown. Elevator building with strict rules but the movers handled everything smoothly. No damage to walls or doors. Very impressed!",
+      "date": "2024-07-10",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": "midtown",
+        "zip": "33137"
+      },
+      "services": ["apartment-moving"],
+      "route": null
+    },
+    {
+      "id": "23",
+      "author": "Jessica White",
+      "rating": 5,
+      "text": "Needed partial packing for fragile items and then a local move to our new home. They accommodated my specific needs and charged fairly. The china collection arrived perfectly!",
+      "date": "2024-07-05",
+      "platform": "yelp",
+      "verified": true,
+      "location": {
+        "city": "coral-gables",
+        "neighborhood": null,
+        "zip": "33146"
+      },
+      "services": ["packing-services", "local-moving"],
+      "route": null
+    },
+    {
+      "id": "24",
+      "author": "Brandon Scott",
+      "rating": 5,
+      "text": "Restaurant equipment move in Little Haiti. Heavy commercial appliances handled expertly. The team knew exactly how to maneuver the tight kitchen spaces.",
+      "date": "2024-06-28",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": "little-haiti",
+        "zip": "33137"
+      },
+      "services": ["commercial-moving"],
+      "route": null
+    },
+    {
+      "id": "25",
+      "author": "Samantha Green",
+      "rating": 5,
+      "text": "From Miami to Chicago! They packed our whole house and handled the long-distance logistics perfectly. Everything accounted for and nothing damaged.",
+      "date": "2024-06-20",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": null,
+        "zip": "33101"
+      },
+      "services": ["long-distance-moving", "packing-services"],
+      "route": "miami-to-chicago-il"
+    },
+    {
+      "id": "26",
+      "author": "Andrew Nelson",
+      "rating": 5,
+      "text": "Moved from Pembroke Pines to Weston. Local move done in half a day. The efficiency of this team is unmatched. Will use again for sure!",
+      "date": "2024-06-15",
+      "platform": "yelp",
+      "verified": true,
+      "location": {
+        "city": "pembroke-pines",
+        "neighborhood": null,
+        "zip": "33028"
+      },
+      "services": ["local-moving"],
+      "route": "pembroke-pines-to-weston"
+    },
+    {
+      "id": "27",
+      "author": "Megan Hill",
+      "rating": 5,
+      "text": "High-rise condo move in Brickell Key. The logistics of elevator reservations and loading dock timing - they handled it all. Truly professional service!",
+      "date": "2024-06-10",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": "brickell-key",
+        "zip": "33131"
+      },
+      "services": ["apartment-moving"],
+      "route": null
+    },
+    {
+      "id": "28",
+      "author": "Ryan Phillips",
+      "rating": 5,
+      "text": "They stored our boat equipment and trailer while we were between marinas. Climate-controlled and secure. Great rates compared to other options.",
+      "date": "2024-06-05",
+      "platform": "facebook",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": null,
+        "zip": "33133"
+      },
+      "services": ["storage-solutions"],
+      "route": null
+    },
+    {
+      "id": "29",
+      "author": "Ashley King",
+      "rating": 5,
+      "text": "Medical office move in Coral Gables. Sensitive equipment, patient files - everything handled with HIPAA compliance in mind. They even packed everything securely!",
+      "date": "2024-05-28",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "coral-gables",
+        "neighborhood": null,
+        "zip": "33134"
+      },
+      "services": ["commercial-moving", "packing-services"],
+      "route": null
+    },
+    {
+      "id": "30",
+      "author": "Justin Walker",
+      "rating": 5,
+      "text": "Local move in Homestead. Even for a smaller town, they provided the same excellent service. On time, efficient, and friendly crew!",
+      "date": "2024-05-20",
+      "platform": "yelp",
+      "verified": true,
+      "location": {
+        "city": "homestead",
+        "neighborhood": null,
+        "zip": "33030"
+      },
+      "services": ["local-moving"],
+      "route": null
+    }
+  ],
+  "platforms": {
+    "google": {
+      "name": "Google",
+      "icon": "google",
+      "color": "#4285F4",
+      "url": "https://www.google.com/maps/place/Rapid+Panda+Movers"
+    },
+    "yelp": {
+      "name": "Yelp",
+      "icon": "yelp",
+      "color": "#D32323",
+      "url": "https://www.yelp.com/biz/rapid-panda-movers-miami"
+    },
+    "facebook": {
+      "name": "Facebook",
+      "icon": "facebook",
+      "color": "#1877F2",
+      "url": "https://www.facebook.com/rapidpandamovers"
+    }
+  },
+  "stats": {
+    "total_reviews": 500,
+    "average_rating": 4.9,
+    "five_star_percentage": 96
+  }
+}

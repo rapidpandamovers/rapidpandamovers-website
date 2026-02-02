@@ -1,8 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
-import { Calendar, Clock, ArrowLeft } from 'lucide-react'
+import Image from 'next/image'
+import { Calendar, Clock } from 'lucide-react'
 import { notFound } from 'next/navigation'
-import blogData from '../../../data/blog.json'
+import blogData from '../../../data/posts.json'
+import BackToBlogLink from './BackToBlogLink'
 
 export async function generateStaticParams() {
   return blogData.map((post) => ({
@@ -34,6 +36,119 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     notFound()
   }
 
+  // Parse inline markdown (bold and links) into React elements
+  const parseInlineMarkdown = (text: string, keyPrefix: string): React.ReactNode[] => {
+    const elements: React.ReactNode[] = []
+    // Regex to match:
+    // 1. **[text](url)** - bold wrapped around link
+    // 2. [**text**](url) - bold inside link
+    // 3. **text** - plain bold
+    // 4. [text](url) - plain link
+    const regex = /(\*\*\[[^\]]+\]\([^)]+\)\*\*|\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*)/g
+    let lastIndex = 0
+    let match
+    let elementKey = 0
+
+    while ((match = regex.exec(text)) !== null) {
+      // Add plain text before this match
+      if (match.index > lastIndex) {
+        elements.push(text.slice(lastIndex, match.index))
+      }
+
+      const matched = match[0]
+
+      // Check for **[text](url)** pattern first (bold around link)
+      if (matched.startsWith('**[') && matched.endsWith(')**')) {
+        const innerLink = matched.slice(2, -2) // Remove outer **
+        const linkMatch = innerLink.match(/\[([^\]]+)\]\(([^)]+)\)/)
+        if (linkMatch) {
+          const [, linkText, url] = linkMatch
+          const linkContent = <strong className="font-semibold">{linkText}</strong>
+
+          if (url.startsWith('/')) {
+            elements.push(
+              <Link
+                key={`${keyPrefix}-bl-${elementKey++}`}
+                href={url}
+                className="text-orange-500 hover:text-orange-600 underline"
+              >
+                {linkContent}
+              </Link>
+            )
+          } else {
+            elements.push(
+              <a
+                key={`${keyPrefix}-ba-${elementKey++}`}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-orange-500 hover:text-orange-600 underline"
+              >
+                {linkContent}
+              </a>
+            )
+          }
+        }
+      }
+      // Check for [text](url) pattern (may have **bold** inside)
+      else if (matched.startsWith('[')) {
+        const linkMatch = matched.match(/\[([^\]]+)\]\(([^)]+)\)/)
+        if (linkMatch) {
+          const [, linkText, url] = linkMatch
+          // Strip ** from link text if present (for bold links like [**text**](url))
+          const cleanLinkText = linkText.replace(/\*\*/g, '')
+          const isBold = linkText.includes('**')
+          const linkContent = isBold ? (
+            <strong className="font-semibold">{cleanLinkText}</strong>
+          ) : cleanLinkText
+
+          // Use Next.js Link for internal links, regular anchor for external
+          if (url.startsWith('/')) {
+            elements.push(
+              <Link
+                key={`${keyPrefix}-l-${elementKey++}`}
+                href={url}
+                className="text-orange-500 hover:text-orange-600 underline"
+              >
+                {linkContent}
+              </Link>
+            )
+          } else {
+            elements.push(
+              <a
+                key={`${keyPrefix}-a-${elementKey++}`}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-orange-500 hover:text-orange-600 underline"
+              >
+                {linkContent}
+              </a>
+            )
+          }
+        }
+      }
+      // Plain bold text **text**
+      else if (matched.startsWith('**')) {
+        const boldText = matched.slice(2, -2)
+        elements.push(
+          <strong key={`${keyPrefix}-b-${elementKey++}`} className="font-semibold text-gray-800">
+            {boldText}
+          </strong>
+        )
+      }
+
+      lastIndex = regex.lastIndex
+    }
+
+    // Add remaining plain text
+    if (lastIndex < text.length) {
+      elements.push(text.slice(lastIndex))
+    }
+
+    return elements.length > 0 ? elements : [text]
+  }
+
   // Parse and render formatted content
   const renderContent = () => {
     const lines = post.content.split('\n')
@@ -47,9 +162,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <ul key={currentKey++} className="mb-6 pl-6 space-y-2">
             {listItems.map((item, i) => (
               <li key={i} className="list-disc text-gray-700 leading-relaxed">
-                {item.split('**').map((text, j) =>
-                  j % 2 === 0 ? text : <strong key={j} className="font-semibold text-gray-800">{text}</strong>
-                )}
+                {parseInlineMarkdown(item, `li-${i}`)}
               </li>
             ))}
           </ul>
@@ -68,7 +181,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         flushList()
         elements.push(
           <h2 key={currentKey++} className="text-2xl font-bold text-gray-800 mt-8 mb-4">
-            {line.replace('## ', '')}
+            {parseInlineMarkdown(line.replace('## ', ''), `h2-${currentKey}`)}
           </h2>
         )
       }
@@ -76,7 +189,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         flushList()
         elements.push(
           <h3 key={currentKey++} className="text-xl font-bold text-gray-800 mt-6 mb-3">
-            {line.replace('### ', '')}
+            {parseInlineMarkdown(line.replace('### ', ''), `h3-${currentKey}`)}
           </h3>
         )
       }
@@ -84,14 +197,16 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       else if (line.match(/^[-*]\s+/)) {
         listItems.push(line.replace(/^[-*]\s+/, ''))
       }
+      // Numbered list items (1. 2. 3. etc)
+      else if (line.match(/^\d+\.\s+/)) {
+        listItems.push(line.replace(/^\d+\.\s+/, ''))
+      }
       // Regular paragraphs
       else {
         flushList()
         elements.push(
           <p key={currentKey++} className="mb-4 text-gray-700 leading-relaxed">
-            {line.split('**').map((text, j) =>
-              j % 2 === 0 ? text : <strong key={j} className="font-semibold text-gray-800">{text}</strong>
-            )}
+            {parseInlineMarkdown(line, `p-${currentKey}`)}
           </p>
         )
       }
@@ -104,13 +219,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   return (
     <div className="py-20">
       <div className="container mx-auto px-4 max-w-4xl">
-        <Link
-          href="/blog"
-          className="inline-flex items-center text-orange-500 hover:text-orange-600 mb-8 transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4 mr-2" />
-          Back to Blog
-        </Link>
+        <BackToBlogLink />
 
         <article>
           <header className="mb-12">
@@ -139,6 +248,19 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <p className="text-xl text-gray-600 leading-relaxed">
               {post.excerpt}
             </p>
+
+            {post.image && (
+              <div className="mt-8 rounded-xl overflow-hidden">
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  width={1280}
+                  height={720}
+                  className="w-full h-auto"
+                  priority
+                />
+              </div>
+            )}
           </header>
 
           <div className="prose prose-lg max-w-none">

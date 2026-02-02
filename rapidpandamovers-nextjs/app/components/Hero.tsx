@@ -1,9 +1,8 @@
 'use client'
 
-import Link from 'next/link'
 import { Star } from 'lucide-react'
 import { useState } from 'react'
-import QuoteModal from './QuoteModal'
+import QuoteForm from './QuoteForm'
 
 interface HeroProps {
   title?: string
@@ -12,13 +11,15 @@ interface HeroProps {
   image_url?: string
 }
 
-export default function Hero({ 
-  title, 
-  description, 
-  cta, 
+export default function Hero({
+  title,
+  description,
+  cta,
   image_url
 }: HeroProps = {}) {
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false)
+  const [pickupZip, setPickupZip] = useState('')
+  const [dropoffZip, setDropoffZip] = useState('')
   
   // Use provided props with fallback defaults
   const displayTitle = title || "Family-Owned Moving Company in Miami"
@@ -53,14 +54,18 @@ export default function Hero({
             <div className="space-y-4">
               <p className="text-white font-medium">{displayCta}</p>
               <div className="grid grid-cols-2 gap-4">
-                <input 
-                  type="text" 
-                  placeholder="Enter Pick up Zip" 
+                <input
+                  type="text"
+                  placeholder="Enter Pick up Zip"
+                  value={pickupZip}
+                  onChange={(e) => setPickupZip(e.target.value)}
                   className="px-4 py-3 bg-gray-800 border border-gray-600 text-white placeholder-gray-400 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 />
-                <input 
-                  type="text" 
-                  placeholder="Enter Drop off Zip" 
+                <input
+                  type="text"
+                  placeholder="Enter Drop off Zip"
+                  value={dropoffZip}
+                  onChange={(e) => setDropoffZip(e.target.value)}
                   className="px-4 py-3 bg-gray-800 border border-gray-600 text-white placeholder-gray-400 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 />
               </div>
@@ -87,9 +92,12 @@ export default function Hero({
       </div>
       
       {/* Quote Modal */}
-      <QuoteModal 
-        isOpen={isQuoteModalOpen} 
-        onClose={() => setIsQuoteModalOpen(false)} 
+      <QuoteForm
+        asModal
+        isOpen={isQuoteModalOpen}
+        onClose={() => setIsQuoteModalOpen(false)}
+        initialPickupZip={pickupZip}
+        initialDropoffZip={dropoffZip}
       />
     </section>
   )

@@ -1,4 +1,5 @@
 import { CheckCircle } from 'lucide-react'
+import Link from 'next/link'
 
 interface HouseSize {
   min_cost: number;
@@ -18,9 +19,13 @@ interface PricingSectionProps {
     '4_bedroom'?: HouseSize;
     '4plus_bedroom'?: HouseSize;
   };
+  originCity?: string;
+  originZip?: string;
+  destinationCity?: string;
+  destinationZip?: string;
 }
 
-export default function PricingSection({ houseSizes }: PricingSectionProps) {
+export default function PricingSection({ houseSizes, originCity, originZip, destinationCity, destinationZip }: PricingSectionProps) {
   const baseCategories = [
     { 
       key: '1_bedroom',
@@ -95,10 +100,10 @@ export default function PricingSection({ houseSizes }: PricingSectionProps) {
 
   return (
     <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Special Pricing
+            Estimated Moving Costs
           </h2>
         </div>
         
@@ -114,9 +119,9 @@ export default function PricingSection({ houseSizes }: PricingSectionProps) {
               <p className="text-gray-500 text-sm mb-2">{category.sqft}</p>
               {category.cost && (
                 <div className="mb-3">
-                  <p className="text-2xl font-bold text-orange-500">${category.cost.toLocaleString()}</p>
+                  <p className="text-2xl font-bold text-orange-500">${category.cost.toLocaleString(undefined, { maximumFractionDigits: 2 })}</p>
                   {category.minCost !== category.maxCost && (
-                    <p className="text-xs text-gray-500 mt-1">${category.minCost.toLocaleString()} - ${category.maxCost.toLocaleString()}</p>
+                    <p className="text-xs text-gray-500 mt-1">${category.minCost.toLocaleString(undefined, { maximumFractionDigits: 2 })} - ${category.maxCost.toLocaleString(undefined, { maximumFractionDigits: 2 })}</p>
                   )}
                 </div>
               )}
@@ -130,9 +135,18 @@ export default function PricingSection({ houseSizes }: PricingSectionProps) {
                   </li>
                 ))}
               </ul>
-              <button className={`w-full py-3 px-4 rounded-lg font-semibold transition-colors ${category.popular ? 'bg-orange-500 hover:bg-orange-600 text-white' : 'bg-gray-100 hover:bg-gray-200 text-gray-800'}`}>
-                Get Quote
-              </button>
+              <Link
+                href={`/reservations?${new URLSearchParams({
+                  ...(originCity && { originCity }),
+                  ...(originZip && { originZip }),
+                  ...(destinationCity && { destinationCity }),
+                  ...(destinationZip && { destinationZip }),
+                  size: category.key
+                }).toString()}`}
+                className={`block w-full py-3 px-4 rounded-lg font-semibold transition-colors text-center ${category.popular ? 'bg-orange-500 hover:bg-orange-600 text-white' : 'bg-gray-100 hover:bg-gray-200 text-gray-800'}`}
+              >
+                Reserve Now
+              </Link>
             </div>
           ))}
         </div>

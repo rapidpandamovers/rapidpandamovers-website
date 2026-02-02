@@ -72,6 +72,30 @@ export default function Header() {
               </div>
               <div className="relative group">
                 <button className="text-gray-700 hover:text-orange-500 transition-colors flex items-center uppercase">
+                  Compare
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div className="absolute left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="py-2">
+                    <Link href="/compare" className="block px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">
+                      <div className="font-medium">Compare Movers</div>
+                      <div className="text-sm text-gray-500">See how we stack up</div>
+                    </Link>
+                    <Link href="/alternatives" className="block px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">
+                      <div className="font-medium">Alternative Options</div>
+                      <div className="text-sm text-gray-500">DIY vs full-service</div>
+                    </Link>
+                    <Link href="/why-choose-us" className="block px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">
+                      <div className="font-medium">Why Choose Us</div>
+                      <div className="text-sm text-gray-500">The Rapid Panda difference</div>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div className="relative group">
+                <button className="text-gray-700 hover:text-orange-500 transition-colors flex items-center uppercase">
                   Resources
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -79,9 +103,13 @@ export default function Header() {
                 </button>
                 <div className="absolute left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="py-2">
-                    <Link href="/faq" className="block px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors border-b border-gray-100">
+                    <Link href="/faq" className="block px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">
                       <div className="font-medium">FAQ</div>
                       <div className="text-sm text-gray-500">Common questions</div>
+                    </Link>
+                    <Link href="/blog" className="block px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors border-b border-gray-100">
+                      <div className="font-medium">Blog</div>
+                      <div className="text-sm text-gray-500">Moving tips and news</div>
                     </Link>
                     <Link href="/moving-rates" className="block px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">
                       <div className="font-medium">Moving Rates</div>
@@ -111,13 +139,13 @@ export default function Header() {
                 </button>
                 <div className="absolute left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="py-2">
-                    <Link href="/about" className="block px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors border-b border-gray-100">
+                    <Link href="/about-us" className="block px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors border-b border-gray-100">
                       <div className="font-medium">About Us</div>
                       <div className="text-sm text-gray-500">About Rapid Panda Movers</div>
                     </Link>
-                    <Link href="/blog" className="block px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">
-                      <div className="font-medium">Blog</div>
-                      <div className="text-sm text-gray-500">Expert advice</div>
+                    <Link href="/contact-us" className="block px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">
+                      <div className="font-medium">Contact Us</div>
+                      <div className="text-sm text-gray-500">Get a free quote</div>
                     </Link>
                     <Link href="/reviews" className="block px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">
                       <div className="font-medium">Reviews</div>
@@ -127,14 +155,10 @@ export default function Header() {
                       <div className="font-medium">Reservations</div>
                       <div className="text-sm text-gray-500">Book your move</div>
                     </Link>
-                    <Link href="/contact" className="block px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">
-                      <div className="font-medium">Contact Us</div>
-                      <div className="text-sm text-gray-500">Get a free quote</div>
-                    </Link>
                   </div>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-3">
                 <a href="tel:+13055551234" className="flex items-center space-x-2 border border-orange-500 text-orange-500 hover:bg-orange-50 font-semibold py-3 px-6 rounded-lg transition-colors">
                   <Phone className="w-4 h-4" />

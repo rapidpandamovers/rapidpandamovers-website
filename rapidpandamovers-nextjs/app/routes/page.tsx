@@ -130,7 +130,7 @@ export default function RoutesPage() {
             We serve many more locations. Contact us for a custom quote for your move.
           </p>
           <Link
-            href="/contact"
+            href="/contact-us"
             className="inline-flex items-center px-8 py-4 bg-white text-orange-500 font-bold rounded-lg hover:bg-gray-100 transition-colors"
           >
             Get a Custom Quote

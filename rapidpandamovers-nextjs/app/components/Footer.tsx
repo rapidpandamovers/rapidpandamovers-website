@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import { Phone, Mail, MapPin, Clock, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react'
 import { getAllActiveCities, getAllActiveServices } from '@/lib/data'
+import comparisons from '@/data/comparisons.json'
+import alternatives from '@/data/alternatives.json'
 
 export default function Footer() {
   const cities = getAllActiveCities()
@@ -44,22 +46,43 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-4 text-white">Resources</h3>
             <ul className="space-y-2 text-sm mb-8">
               <li><Link href="/faq" className="text-gray-400 hover:text-orange-500 transition-colors">FAQ</Link></li>
+              <li><Link href="/blog" className="text-gray-400 hover:text-orange-500 transition-colors">Blog</Link></li>
               <li><Link href="/moving-rates" className="text-gray-400 hover:text-orange-500 transition-colors">Moving Rates</Link></li>
               <li><Link href="/moving-tips" className="text-gray-400 hover:text-orange-500 transition-colors">Moving Tips</Link></li>
               <li><Link href="/moving-checklist" className="text-gray-400 hover:text-orange-500 transition-colors">Moving Checklist</Link></li>
               <li><Link href="/moving-glossary" className="text-gray-400 hover:text-orange-500 transition-colors">Moving Glossary</Link></li>
-              <li><Link href="/blog" className="text-gray-400 hover:text-orange-500 transition-colors">Blog</Link></li>
-              <li><Link href="/routes" className="text-gray-400 hover:text-orange-500 transition-colors">Moving Routes</Link></li>
             </ul>
 
             <h3 className="text-lg font-bold mb-4 text-white">Company</h3>
-            <ul className="space-y-2 text-sm">
-              <li><Link href="/about" className="text-gray-400 hover:text-orange-500 transition-colors">About Us</Link></li>
-              <li><Link href="/contact" className="text-gray-400 hover:text-orange-500 transition-colors">Contact</Link></li>
+            <ul className="space-y-2 text-sm mb-8">
+              <li><Link href="/about-us" className="text-gray-400 hover:text-orange-500 transition-colors">About Us</Link></li>
+              <li><Link href="/contact-us" className="text-gray-400 hover:text-orange-500 transition-colors">Contact Us</Link></li>
               <li><Link href="/reviews" className="text-gray-400 hover:text-orange-500 transition-colors">Reviews</Link></li>
-              <li><Link href="/reservations" className="text-gray-400 hover:text-orange-500 transition-colors">Book Online</Link></li>
-              <li><Link href="/services" className="text-gray-400 hover:text-orange-500 transition-colors">All Services</Link></li>
-              <li><Link href="/sitemap" className="text-gray-400 hover:text-orange-500 transition-colors">Sitemap</Link></li>
+              <li><Link href="/reservations" className="text-gray-400 hover:text-orange-500 transition-colors">Reservations</Link></li>
+            </ul>
+
+            <h3 className="text-lg font-bold mb-4 text-white">Compare Movers</h3>
+            <ul className="space-y-2 text-sm mb-8">
+              <li><Link href="/compare" className="text-gray-400 hover:text-orange-500 transition-colors">All Comparisons</Link></li>
+              {comparisons.comparisons.map((comparison) => (
+                <li key={comparison.slug}>
+                  <Link href={`/compare/${comparison.slug}`} className="text-gray-400 hover:text-orange-500 transition-colors">
+                    vs {comparison.competitor.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <h3 className="text-lg font-bold mb-4 text-white">Alternatives</h3>
+            <ul className="space-y-2 text-sm">
+              <li><Link href="/alternatives" className="text-gray-400 hover:text-orange-500 transition-colors">All Alternatives</Link></li>
+              {alternatives.alternatives.map((alt) => (
+                <li key={alt.slug}>
+                  <Link href={`/alternatives/${alt.slug}`} className="text-gray-400 hover:text-orange-500 transition-colors">
+                    {alt.alternative.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 

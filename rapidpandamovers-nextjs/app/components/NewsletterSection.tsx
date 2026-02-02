@@ -13,8 +13,8 @@ export default function NewsletterSection({
 }: NewsletterSectionProps) {
   return (
     <section className={`py-16 ${className}`}>
-      <div className="container mx-auto px-4">
-        <div className="bg-gray-50 rounded-lg p-8 text-center max-w-2xl mx-auto">
+      <div className="container mx-auto">
+        <div className="bg-gray-50 rounded-4xl p-8 text-center mx-auto">
           <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <Mail className="w-6 h-6 text-orange-500" />
           </div>

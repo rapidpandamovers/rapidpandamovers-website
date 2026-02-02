@@ -13,9 +13,9 @@ export default function GlossarySection({ className = "" }: GlossarySectionProps
   ];
 
   return (
-    <section className={`py-16 bg-gray-50 ${className}`}>
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center">
+    <section className={`py-16 ${className}`}>
+      <div className="container mx-auto">
+        <div className="mx-auto text-center">
           <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <BookOpen className="w-8 h-8 text-orange-500" />
           </div>
@@ -23,7 +23,7 @@ export default function GlossarySection({ className = "" }: GlossarySectionProps
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Moving Glossary
           </h2>
-          <p className="text-xl text-gray-600 mb-8">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             New to moving? Learn the terminology used in the moving industry to better understand your move and communicate with your movers.
           </p>
 

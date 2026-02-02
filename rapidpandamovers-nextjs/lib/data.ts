@@ -99,5 +99,109 @@ export const getNeighborhoodBySlug = (slug: string) => {
   return null;
 };
 
-export const titleCase = (s: string) =>
-  s.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+export const titleCase = (s: string) => {
+  const parts = s.split('-');
+  const lastPart = parts[parts.length - 1];
+
+  // Check if last part is a 2-letter state code
+  if (lastPart.length === 2 && /^[a-z]{2}$/i.test(lastPart)) {
+    // Format as "City Name, ST"
+    const cityParts = parts.slice(0, -1);
+    const cityName = cityParts.map(p => p.charAt(0).toUpperCase() + p.slice(1)).join(' ');
+    return `${cityName}, ${lastPart.toUpperCase()}`;
+  }
+
+  // Regular title case
+  return s.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+};
+
+// Get the city name for a location slug (returns parent city name for neighborhoods)
+export const getCityNameBySlug = (slug: string): string | null => {
+  // Check if it's a city
+  const city = getCityBySlug(slug);
+  if (city) return city.name;
+
+  // Check if it's a neighborhood
+  const neighborhood = getNeighborhoodBySlug(slug);
+  if (neighborhood?.parentCity) return neighborhood.parentCity.name;
+
+  return null;
+};
+
+// Parse location-service slugs like "miami-local-moving" -> { location, service }
+export const getLocationServiceBySlug = (slug: string) => {
+  // Get all city and neighborhood slugs
+  const allLocations: Array<{ slug: string; name: string; type: 'city' | 'neighborhood'; data: any }> = [];
+
+  for (const state of allCities.states) {
+    for (const county of state.counties) {
+      for (const city of county.cities) {
+        if (city.is_active !== false) {
+          allLocations.push({ slug: city.slug, name: city.name, type: 'city', data: city });
+        }
+        if (city.neighborhoods) {
+          for (const neighborhood of city.neighborhoods) {
+            if (neighborhood.is_active !== false) {
+              allLocations.push({
+                slug: neighborhood.slug,
+                name: neighborhood.name,
+                type: 'neighborhood',
+                data: { ...neighborhood, parentCity: city, county, state }
+              });
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Sort by slug length descending to match longest first (e.g., "coral-gables" before "coral")
+  allLocations.sort((a, b) => b.slug.length - a.slug.length);
+
+  // Try to match location-service pattern
+  for (const location of allLocations) {
+    if (slug.startsWith(location.slug + '-')) {
+      const serviceSlug = slug.slice(location.slug.length + 1);
+      const service = allServices.find(s => s.slug === serviceSlug);
+      if (service) {
+        return {
+          location: location.data,
+          locationType: location.type,
+          service
+        };
+      }
+    }
+  }
+
+  return null;
+};
+
+// Get all location-service slug combinations for static generation
+export const getAllLocationServiceSlugs = () => {
+  const slugs: string[] = [];
+  const activeServices = allServices.filter(s => s.is_active !== false);
+
+  for (const state of allCities.states) {
+    for (const county of state.counties) {
+      for (const city of county.cities) {
+        if (city.is_active !== false) {
+          for (const service of activeServices) {
+            slugs.push(`${city.slug}-${service.slug}`);
+          }
+        }
+        // Also generate for neighborhoods
+        if (city.neighborhoods) {
+          for (const neighborhood of city.neighborhoods) {
+            if (neighborhood.is_active !== false) {
+              for (const service of activeServices) {
+                slugs.push(`${neighborhood.slug}-${service.slug}`);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  return slugs;
+};

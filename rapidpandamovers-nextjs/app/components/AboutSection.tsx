@@ -22,7 +22,7 @@ export default function AboutSection({ className = "" }: AboutSectionProps) {
                 With years of experience serving the Miami-Dade community, we've built our reputation on reliability, professionalism, and exceptional customer service.
               </p>
               <Link
-                href="/about"
+                href="/about-us"
                 className="inline-flex items-center bg-white hover:bg-gray-100 text-orange-500 font-semibold px-6 py-3 rounded-lg transition-colors"
               >
                 Learn More About Us

@@ -1,10 +1,10 @@
 import Hero from './Hero';
 import WhySection from './WhySection';
 import PricingSection from './PricingSection';
-import AutoLinks from '@/components/AutoLinks';
-import { buildLinkBlocks } from '@/components/buildLinkBlocks';
-import { allRoutes, titleCase } from '@/lib/data';
-import { Navigation, MapPin, Clock, DollarSign, ArrowRight } from 'lucide-react';
+import MapSection from './MapSection';
+import TravelSection from './TravelSection';
+import { allRoutes, titleCase, getCityNameBySlug } from '@/lib/data';
+import { Navigation, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 interface HouseSize {
@@ -49,9 +49,19 @@ function getAvgCost(route: any): number | undefined {
   return undefined;
 }
 
+// Helper function to extract state from location name (e.g., "akron-oh" -> "OH")
+// Returns "FL" for Florida locations without state suffix
+function getStateFromName(name: string): string {
+  const parts = name.split('-');
+  const lastPart = parts[parts.length - 1];
+  // Check if last part is a 2-letter state code
+  if (lastPart.length === 2 && /^[a-z]{2}$/i.test(lastPart)) {
+    return lastPart.toUpperCase();
+  }
+  return 'FL';
+}
+
 export default function RoutePage({ route }: RoutePageProps) {
-  const blocks = buildLinkBlocks(route.slug);
-  
   // Get related routes (same origin or destination)
   const relatedRoutes = allRoutes
     .filter(r => 
@@ -63,9 +73,6 @@ export default function RoutePage({ route }: RoutePageProps) {
 
   const fromCityTitle = titleCase(route.origin_name);
   const toCityTitle = titleCase(route.destination_name);
-  const hours = Math.floor(route.drive_time_min / 60);
-  const minutes = route.drive_time_min % 60;
-  const timeDisplay = hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`;
 
   return (
     <div className="min-h-screen">
@@ -78,76 +85,27 @@ export default function RoutePage({ route }: RoutePageProps) {
       />
 
       {/* Route Details Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                Moving from <span className="text-orange-500">{fromCityTitle}</span> to <span className="text-orange-500">{toCityTitle}</span>
-              </h2>
-              <p className="text-xl text-gray-600 mb-8">
-                Professional moving services for your relocation from {fromCityTitle} to {toCityTitle}
-              </p>
-            </div>
+      <TravelSection
+        origin={fromCityTitle}
+        destination={toCityTitle}
+        originSlug={route.origin_name}
+        destinationSlug={route.destination_name}
+        distanceMiles={route.distance_mi}
+        driveTimeMinutes={route.drive_time_min}
+        startingCost={route.avg_cost_usd}
+        destinationHasPage={getStateFromName(route.destination_name) === 'FL'}
+      />
 
-            {/* Route Info Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-              <div className="bg-gray-50 rounded-lg p-6 text-center">
-                <Navigation className="w-8 h-8 text-orange-500 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-700 mb-2">Distance</h3>
-                <p className="text-2xl font-bold text-gray-800">{route.distance_mi} miles</p>
-              </div>
-              <div className="bg-gray-50 rounded-lg p-6 text-center">
-                <Clock className="w-8 h-8 text-orange-500 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-700 mb-2">Drive Time</h3>
-                <p className="text-2xl font-bold text-gray-800">{timeDisplay}</p>
-              </div>
-              {route.avg_cost_usd && (
-                <div className="bg-gray-50 rounded-lg p-6 text-center">
-                  <DollarSign className="w-8 h-8 text-orange-500 mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold text-gray-700 mb-2">Starting Cost</h3>
-                  <p className="text-2xl font-bold text-gray-800">${route.avg_cost_usd.toLocaleString()}</p>
-                </div>
-              )}
-            </div>
-
-            {/* Origin & Destination Links */}
-            <div className="bg-orange-50 rounded-lg p-8 mb-12">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">
-                Origin & Destination
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Link 
-                  href={`/${route.origin_name}-movers`}
-                  className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow flex items-center justify-between group"
-                >
-                  <div className="flex items-center space-x-4">
-                    <MapPin className="w-6 h-6 text-orange-500" />
-                    <div>
-                      <h4 className="font-semibold text-gray-700 mb-1">Origin</h4>
-                      <p className="text-xl font-bold text-gray-800">{fromCityTitle}</p>
-                    </div>
-                  </div>
-                  <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-orange-500 group-hover:translate-x-1 transition-all" />
-                </Link>
-                <Link 
-                  href={`/${route.destination_name}-movers`}
-                  className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow flex items-center justify-between group"
-                >
-                  <div className="flex items-center space-x-4">
-                    <MapPin className="w-6 h-6 text-orange-500" />
-                    <div>
-                      <h4 className="font-semibold text-gray-700 mb-1">Destination</h4>
-                      <p className="text-xl font-bold text-gray-800">{toCityTitle}</p>
-                    </div>
-                  </div>
-                  <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-orange-500 group-hover:translate-x-1 transition-all" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Estimated Moving Costs */}
+      {route.house_sizes && (
+        <PricingSection
+          houseSizes={route.house_sizes}
+          originCity={getCityNameBySlug(route.origin_name) || fromCityTitle}
+          originZip={route.origin_zip}
+          destinationCity={getCityNameBySlug(route.destination_name) || toCityTitle}
+          destinationZip={route.destination_zip}
+        />
+      )}
 
       {/* Related Routes Section */}
       {relatedRoutes.length > 0 && (
@@ -195,25 +153,21 @@ export default function RoutePage({ route }: RoutePageProps) {
           </div>
         </section>
       )}
-
-      {/* Moving Categories with Pricing */}
-      {route.house_sizes && (
-        <PricingSection houseSizes={route.house_sizes} />
-      )}
+      
+      {/* Map Section */}
+      <MapSection
+        route={{
+          origin: fromCityTitle,
+          destination: toCityTitle,
+          originZip: route.origin_zip,
+          destinationZip: route.destination_zip,
+          originState: getStateFromName(route.origin_name),
+          destinationState: getStateFromName(route.destination_name),
+        }}
+      />
 
       {/* Why Choose Us */}
       <WhySection />
-
-      {/* Auto Links */}
-      {blocks.length > 0 && (
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4 max-w-4xl">
-            <AutoLinks blocks={blocks} />
-          </div>
-        </section>
-      )}
-
-      {/* Final CTA */}
     </div>
   );
 }

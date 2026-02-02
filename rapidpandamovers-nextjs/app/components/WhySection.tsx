@@ -36,7 +36,7 @@ export default function WhySection() {
         </div>
         
         <div className="text-center mt-12">
-          <Link href="/about" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+          <Link href="/why-choose-us" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
             Learn More About Us
           </Link>
         </div>

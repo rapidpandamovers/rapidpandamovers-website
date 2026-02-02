@@ -9,18 +9,18 @@ export default function FAQSection() {
   ]
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+    <section className="py-20">
+      <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-            HAVE A <span className="text-orange-500">QUESTION</span>?
+            Have a <span className="text-orange-500">Question</span>?
           </h2>
           <p className="text-xl text-gray-600">
             Frequently Asked Questions
           </p>
         </div>
         
-        <div className="max-w-4xl mx-auto">
+        <div className="mx-auto">
           <div className="space-y-6">
             {faqs.map((faq, index) => (
               <div key={index} className="border border-gray-200 rounded-lg">
@@ -33,7 +33,7 @@ export default function FAQSection() {
           </div>
           
           <div className="text-center mt-12">
-            <Link href="/contact" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+            <Link href="/contact-us" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
               Contact Us
             </Link>
           </div>

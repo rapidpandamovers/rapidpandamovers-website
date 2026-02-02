@@ -1,5 +1,7 @@
-import { allCities, allLongDistanceRoutes, allLocalRoutes, getServiceSlugs } from '@/lib/data';
+import { allCities, allLongDistanceRoutes, allLocalRoutes, getServiceSlugs, getAllLocationServiceSlugs } from '@/lib/data';
 import blogPosts from '@/data/blog.json';
+import comparisons from '@/data/comparisons.json';
+import alternatives from '@/data/alternatives.json';
 
 export default async function sitemap() {
   const base = 'https://www.rapidpandamovers.com';
@@ -8,10 +10,11 @@ export default async function sitemap() {
   // Static pages
   const staticPages = [
     { url: base, priority: 1.0 },
-    { url: `${base}/about`, priority: 0.8 },
+    { url: `${base}/about-us`, priority: 0.8 },
     { url: `${base}/services`, priority: 0.9 },
     { url: `${base}/locations`, priority: 0.8 },
-    { url: `${base}/contact`, priority: 0.8 },
+    { url: `${base}/contact-us`, priority: 0.8 },
+    { url: `${base}/quote`, priority: 0.9 },
     { url: `${base}/blog`, priority: 0.7 },
     { url: `${base}/faq`, priority: 0.6 },
     { url: `${base}/moving-rates`, priority: 0.7 },
@@ -21,6 +24,9 @@ export default async function sitemap() {
     { url: `${base}/moving-tips`, priority: 0.6 },
     { url: `${base}/moving-glossary`, priority: 0.5 },
     { url: `${base}/routes`, priority: 0.7 },
+    { url: `${base}/compare`, priority: 0.7 },
+    { url: `${base}/alternatives`, priority: 0.7 },
+    { url: `${base}/why-choose-us`, priority: 0.7 },
     { url: `${base}/sitemap`, priority: 0.3 },
     { url: `${base}/privacy`, priority: 0.3 },
     { url: `${base}/terms`, priority: 0.3 },
@@ -82,5 +88,26 @@ export default async function sitemap() {
       priority: 0.6
     }));
 
-  return [...staticPages, ...blogUrls, ...serviceUrls, ...cityUrls, ...neighborhoodUrls, ...longDistanceRouteUrls, ...localRouteUrls];
+  // Location-service pages (e.g., /miami-local-moving)
+  const locationServiceUrls = getAllLocationServiceSlugs().map((slug: string) => ({
+    url: `${base}/${slug}`,
+    lastModified: now,
+    priority: 0.7
+  }));
+
+  // Comparison pages
+  const comparisonUrls = comparisons.comparisons.map((c: { slug: string }) => ({
+    url: `${base}/compare/${c.slug}`,
+    lastModified: now,
+    priority: 0.6
+  }));
+
+  // Alternative pages
+  const alternativeUrls = alternatives.alternatives.map((a: { slug: string }) => ({
+    url: `${base}/alternatives/${a.slug}`,
+    lastModified: now,
+    priority: 0.6
+  }));
+
+  return [...staticPages, ...blogUrls, ...serviceUrls, ...cityUrls, ...neighborhoodUrls, ...longDistanceRouteUrls, ...localRouteUrls, ...locationServiceUrls, ...comparisonUrls, ...alternativeUrls];
 }
