@@ -3,9 +3,8 @@ import WhySection from './WhySection';
 import PricingSection from './PricingSection';
 import MapSection from './MapSection';
 import TravelSection from './TravelSection';
+import RouteSection from './RouteSection';
 import { allRoutes, titleCase, getCityNameBySlug } from '@/lib/data';
-import { Navigation, ArrowRight } from 'lucide-react';
-import Link from 'next/link';
 
 interface HouseSize {
   min_cost: number;
@@ -36,17 +35,6 @@ interface RoutePageProps {
       '4plus_bedroom'?: HouseSize;
     };
   };
-}
-
-// Helper function to get avg_cost_usd from route data
-function getAvgCost(route: any): number | undefined {
-  if ('avg_cost_usd' in route && route.avg_cost_usd) {
-    return route.avg_cost_usd;
-  }
-  if ('house_sizes' in route && route.house_sizes?.['1_bedroom']?.min_cost) {
-    return route.house_sizes['1_bedroom'].min_cost;
-  }
-  return undefined;
 }
 
 // Helper function to extract state from location name (e.g., "akron-oh" -> "OH")
@@ -96,6 +84,18 @@ export default function RoutePage({ route }: RoutePageProps) {
         destinationHasPage={getStateFromName(route.destination_name) === 'FL'}
       />
 
+      {/* Map Section */}
+      <MapSection
+        route={{
+          origin: fromCityTitle,
+          destination: toCityTitle,
+          originZip: route.origin_zip,
+          destinationZip: route.destination_zip,
+          originState: getStateFromName(route.origin_name),
+          destinationState: getStateFromName(route.destination_name),
+        }}
+      />
+
       {/* Estimated Moving Costs */}
       {route.house_sizes && (
         <PricingSection
@@ -108,62 +108,10 @@ export default function RoutePage({ route }: RoutePageProps) {
       )}
 
       {/* Related Routes Section */}
-      {relatedRoutes.length > 0 && (
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                Related <span className="text-orange-500">Routes</span>
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Popular routes from {fromCityTitle} or to {toCityTitle}
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-              {relatedRoutes.map((relatedRoute, index) => {
-                const avgCost = getAvgCost(relatedRoute);
-                return (
-                <Link
-                  key={index}
-                  href={`/${relatedRoute.slug}-movers`}
-                  className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
-                >
-                  <div className="flex items-center justify-between mb-4">
-                    <Navigation className="w-6 h-6 text-orange-500" />
-                    <span className="text-sm text-gray-500 font-normal">
-                      {relatedRoute.distance_mi} mi • {Math.floor(relatedRoute.drive_time_min / 60)}h {relatedRoute.drive_time_min % 60}m
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">
-                    {titleCase(relatedRoute.origin_name)} to {titleCase(relatedRoute.destination_name)}
-                  </h3>
-                  {avgCost && (
-                    <p className="text-orange-500 font-semibold">
-                      Starting from ${avgCost.toLocaleString()}
-                    </p>
-                  )}
-                  <div className="mt-4 text-orange-600 hover:text-orange-700 font-medium flex items-center">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </div>
-                </Link>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-      )}
-      
-      {/* Map Section */}
-      <MapSection
-        route={{
-          origin: fromCityTitle,
-          destination: toCityTitle,
-          originZip: route.origin_zip,
-          destinationZip: route.destination_zip,
-          originState: getStateFromName(route.origin_name),
-          destinationState: getStateFromName(route.destination_name),
-        }}
+      <RouteSection
+        title="Related Routes"
+        subtitle={`Popular routes from ${fromCityTitle} or to ${toCityTitle}`}
+        routes={relatedRoutes}
       />
 
       {/* Why Choose Us */}

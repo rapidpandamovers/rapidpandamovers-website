@@ -224,8 +224,8 @@ export default function SearchSection({
   }
 
   return (
-    <section className="py-12 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section className="py-12">
+      <div className="container mx-auto">
         <div className="text-center mb-8">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
             Find Your <span className="text-orange-500">Moving Service</span>

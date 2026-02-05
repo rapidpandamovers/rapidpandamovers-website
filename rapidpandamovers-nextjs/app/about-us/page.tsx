@@ -3,6 +3,12 @@ import Link from 'next/link'
 import content from '../../data/content.json'
 import Hero from '../components/Hero'
 import StatisticSection from '../components/StatisticSection'
+import QuoteSection from '../components/QuoteSection'
+
+export const metadata = {
+  title: 'About Us - Miami Moving Company',
+  description: 'Learn about Rapid Panda Movers, a family-owned Miami moving company committed to excellence and serving our community since day one.',
+}
 
 export default function AboutPage() {
   const { reviews } = content
@@ -113,24 +119,10 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Experience the Rapid Panda Difference?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Contact us today to learn more about how we can make your next move smooth and stress-free.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/quote" className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
-              Get Free Quote
-            </Link>
-            <Link href="/contact-us" className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-              Contact Us
-            </Link>
-          </div>
-        </div>
-      </section>
+      <QuoteSection
+        title="Ready to Experience the Rapid Panda Difference?"
+        subtitle="Contact us today to learn more about how we can make your next move smooth and stress-free."
+      />
     </div>
   )
 }

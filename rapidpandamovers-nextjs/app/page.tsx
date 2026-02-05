@@ -3,17 +3,12 @@ import RatingSection from './components/RatingSection'
 import MediaSection from './components/MediaSection'
 import ServiceSection from './components/ServiceSection'
 import ReviewSection from './components/ReviewSection'
-import PricingSection from './components/PricingSection'
-import IncludedSection from './components/IncludedSection'
 import WhySection from './components/WhySection'
 import LocationSection from './components/LocationSection'
 import AboutSection from './components/AboutSection'
 import BlogSection from './components/BlogSection'
-import ChecklistSection from './components/ChecklistSection'
-import ContactSection from './components/ContactSection'
 import FAQSection from './components/FAQSection'
-import GlossarySection from './components/GlossarySection'
-import NewsletterSection from './components/NewsletterSection'
+import QuoteSection from './components/QuoteSection'
 import content from '../data/content.json'
 
 export default function Home() {
@@ -26,10 +21,9 @@ export default function Home() {
         image_url={content.home.hero.image_url}
       />
       <RatingSection />
-      <MediaSection showArrows={false} showDots={false} enableModal={false} />
+      <MediaSection showArrows={false} showDots={false} enableModal={false} description="" />
       <ServiceSection />
       <ReviewSection />
-      <IncludedSection />
       <WhySection />
       <LocationSection />
       <AboutSection />
@@ -37,14 +31,9 @@ export default function Home() {
         showFeatured={true}
         showCategories={false}
         maxPosts={3}
-        className="bg-gray-50"
       />
-      <FAQSection />
-      <ChecklistSection />
-      <GlossarySection />
-      <PricingSection />
-      <ContactSection />
-      <NewsletterSection />
+      <FAQSection variant="compact" />
+      <QuoteSection />
     </>
   )
 }

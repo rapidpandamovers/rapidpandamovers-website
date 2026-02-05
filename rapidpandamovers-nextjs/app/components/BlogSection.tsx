@@ -23,7 +23,7 @@ export default function BlogSection({
   
   return (
     <div className={`py-20 ${className}`}>
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
             Moving Tips & Insights

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Phone, Mail, MapPin, Clock, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react'
 import { getAllActiveCities, getAllActiveServices } from '@/lib/data'
 import comparisons from '@/data/comparisons.json'
@@ -48,6 +49,7 @@ export default function Footer() {
               <li><Link href="/faq" className="text-gray-400 hover:text-orange-500 transition-colors">FAQ</Link></li>
               <li><Link href="/blog" className="text-gray-400 hover:text-orange-500 transition-colors">Blog</Link></li>
               <li><Link href="/moving-rates" className="text-gray-400 hover:text-orange-500 transition-colors">Moving Rates</Link></li>
+              <li><Link href="/routes" className="text-gray-400 hover:text-orange-500 transition-colors">Moving Routes</Link></li>
               <li><Link href="/moving-tips" className="text-gray-400 hover:text-orange-500 transition-colors">Moving Tips</Link></li>
               <li><Link href="/moving-checklist" className="text-gray-400 hover:text-orange-500 transition-colors">Moving Checklist</Link></li>
               <li><Link href="/moving-glossary" className="text-gray-400 hover:text-orange-500 transition-colors">Moving Glossary</Link></li>
@@ -59,6 +61,7 @@ export default function Footer() {
               <li><Link href="/contact-us" className="text-gray-400 hover:text-orange-500 transition-colors">Contact Us</Link></li>
               <li><Link href="/reviews" className="text-gray-400 hover:text-orange-500 transition-colors">Reviews</Link></li>
               <li><Link href="/reservations" className="text-gray-400 hover:text-orange-500 transition-colors">Reservations</Link></li>
+              <li><Link href="/quote" className="text-gray-400 hover:text-orange-500 transition-colors">Free Quote</Link></li>
             </ul>
 
             <h3 className="text-lg font-bold mb-4 text-white">Compare Movers</h3>
@@ -137,9 +140,11 @@ export default function Footer() {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-4 mb-4 md:mb-0">
-              <img
+              <Image
                 src="/images/rapidpandamovers-logo.png"
                 alt="Rapid Panda Movers"
+                width={40}
+                height={40}
                 className="h-10 w-auto brightness-0 invert"
               />
               <p className="text-gray-400 text-sm">

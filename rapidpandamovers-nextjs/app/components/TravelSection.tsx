@@ -36,9 +36,9 @@ export default function TravelSection({
     : `${minutes} min`
 
   return (
-    <section className={`py-20 bg-white ${className}`}>
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+    <section className={`py-20 ${className}`}>
+      <div className="container mx-auto">
+        <div className="mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">

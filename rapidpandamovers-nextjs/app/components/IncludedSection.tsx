@@ -25,8 +25,8 @@ export default function IncludedSection({
   if (!items || items.length === 0) return null
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+    <section className="py-20">
+      <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             {title.includes(' ') ? (
@@ -42,9 +42,9 @@ export default function IncludedSection({
             {subtitle}
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto">
           {items.map((item, index) => (
-            <div key={index} className="flex items-center space-x-3 bg-gray-50 rounded-lg p-4">
+            <div key={index} className="flex items-center space-x-3 bg-white rounded-lg p-4 border border-gray-200">
               <CheckCircle className="w-5 h-5 text-orange-500 flex-shrink-0" />
               <span className="text-gray-700 text-sm">{item}</span>
             </div>

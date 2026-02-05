@@ -1,10 +1,10 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import { Calendar, Clock, Tag, ChevronLeft, ChevronRight } from 'lucide-react'
-import blogData from '../../data/posts.json'
+import { getPostsSortedByDate, getCategories, BlogPost } from '../../lib/blog'
 import Hero from '../components/Hero'
 import NewsletterSection from '../components/NewsletterSection'
 import BlogPostLink from './BlogPostLink'
+import BlogPostCard from './BlogPostCard'
 
 const POSTS_PER_PAGE = 12
 
@@ -14,11 +14,9 @@ interface BlogListPageProps {
 }
 
 export default function BlogListPage({ currentPage, category = null }: BlogListPageProps) {
-  // Sort blog posts by date descending (newest first)
-  const sortedBlog = [...blogData].sort((a, b) =>
-    new Date(b.date).getTime() - new Date(a.date).getTime()
-  )
-  const categories = Array.from(new Set(sortedBlog.map(post => post.category)))
+  // Get posts sorted by date descending (newest first)
+  const sortedBlog = getPostsSortedByDate()
+  const categories = getCategories()
 
   // Filter posts by category
   const filteredPosts = category
@@ -47,41 +45,42 @@ export default function BlogListPage({ currentPage, category = null }: BlogListP
   // Generate pagination numbers
   const getPaginationNumbers = (): (number | string)[] => {
     const pages: (number | string)[] = []
-    const showEllipsisStart = currentPage > 3
-    const showEllipsisEnd = currentPage < totalPages - 2
+    const edgeCount = 2 // Show 2 pages at each end
+    const surroundCount = 1 // Show 1 page on each side of current
 
-    // Always show first page
-    pages.push(1)
+    const showEllipsisStart = currentPage > edgeCount + surroundCount + 1
+    const showEllipsisEnd = currentPage < totalPages - edgeCount - surroundCount
 
-    // Show ellipsis or page 2
+    // Always show first edgeCount pages
+    for (let i = 1; i <= Math.min(edgeCount, totalPages); i++) {
+      pages.push(i)
+    }
+
+    // Show ellipsis if needed
     if (showEllipsisStart) {
       pages.push('...')
-    } else if (totalPages > 1) {
-      pages.push(2)
     }
 
     // Show pages around current
-    for (let i = Math.max(3, currentPage - 1); i <= Math.min(totalPages - 2, currentPage + 1); i++) {
+    for (let i = Math.max(edgeCount + 1, currentPage - surroundCount); i <= Math.min(totalPages - edgeCount, currentPage + surroundCount); i++) {
       if (!pages.includes(i)) pages.push(i)
     }
 
-    // Show ellipsis or second-to-last page
+    // Show ellipsis if needed
     if (showEllipsisEnd) {
       pages.push('...')
-    } else if (totalPages > 2 && !pages.includes(totalPages - 1)) {
-      pages.push(totalPages - 1)
     }
 
-    // Always show last page
-    if (totalPages > 1 && !pages.includes(totalPages)) {
-      pages.push(totalPages)
+    // Always show last edgeCount pages
+    for (let i = Math.max(totalPages - edgeCount + 1, edgeCount + 1); i <= totalPages; i++) {
+      if (!pages.includes(i)) pages.push(i)
     }
 
     return pages
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <Hero
         title="Moving Guides & Insights"
@@ -171,61 +170,7 @@ export default function BlogListPage({ currentPage, category = null }: BlogListP
         {paginatedPosts.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {paginatedPosts.map((post) => (
-              <article key={post.id} className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow group">
-                {post.image && (
-                  <BlogPostLink href={`/blog/${post.slug}`}>
-                    <div className="relative h-48 overflow-hidden">
-                      <Image
-                        src={post.image}
-                        alt={post.title}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                  </BlogPostLink>
-                )}
-                <div className="p-6">
-                  <div className="flex items-center justify-between text-sm text-gray-500 mb-3">
-                    <div className="flex items-center">
-                      <Calendar className="w-4 h-4 mr-1" />
-                      <span>{new Date(post.date).toLocaleDateString()}</span>
-                    </div>
-                    <div className="flex items-center">
-                      <Clock className="w-4 h-4 mr-1" />
-                      <span>{post.readTime}</span>
-                    </div>
-                  </div>
-
-                  <div className="mb-3">
-                    <Link
-                      href={`/blog/category/${encodeURIComponent(post.category.toLowerCase().replace(/\s+/g, '-'))}`}
-                      className="inline-block bg-orange-100 text-orange-800 text-xs font-medium px-2 py-1 rounded-full hover:bg-orange-200 transition-colors"
-                    >
-                      {post.category}
-                    </Link>
-                  </div>
-
-                  <h2 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-orange-600 transition-colors">
-                    <BlogPostLink href={`/blog/${post.slug}`}>
-                      {post.title}
-                    </BlogPostLink>
-                  </h2>
-
-                  <p className="text-gray-600 mb-4 line-clamp-3">
-                    {post.excerpt}
-                  </p>
-
-                  <BlogPostLink
-                    href={`/blog/${post.slug}`}
-                    className="text-orange-600 hover:text-orange-700 font-medium inline-flex items-center group"
-                  >
-                    Read More
-                    <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </BlogPostLink>
-                </div>
-              </article>
+              <BlogPostCard key={post.id} post={post} />
             ))}
           </div>
         ) : (

@@ -11,7 +11,7 @@ export interface Sight {
   image: string
   address?: string
   website?: string
-  category?: 'landmark' | 'park' | 'museum' | 'entertainment' | 'shopping' | 'dining' | 'beach' | 'nature'
+  category?: string
 }
 
 interface SightSectionProps {

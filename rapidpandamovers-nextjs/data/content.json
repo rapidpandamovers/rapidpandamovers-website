@@ -63,12 +63,18 @@
   "services": {
     "title": "Our Moving Services",
     "description": "Comprehensive moving solutions for every need",
+    "content": "At Rapid Panda Movers, we understand that every move is unique. Whether you're relocating across town or across the country, our comprehensive range of moving services is designed to meet your specific needs. Our experienced team handles everything from careful packing and loading to safe transportation and unpacking, ensuring your belongings arrive at your new home in perfect condition.",
     "data_source": "services.json",
     "hero": {
       "title": "Professional Moving Services in Miami",
       "description": "From local moves to interstate relocations, we've got you covered",
       "cta": "Get Your Free Quote"
     }
+  },
+  "locations": {
+    "title": "Our Service Areas",
+    "description": "Professional moving services throughout Miami-Dade County",
+    "content": "Rapid Panda Movers proudly serves the entire Miami-Dade County area, from the vibrant streets of Downtown Miami to the family-friendly suburbs of Kendall and Homestead. Our local expertise means we know the best routes, building regulations, and parking situations throughout the region, ensuring your move goes smoothly no matter where you're headed."
   },
   "about": {
     "title": "About Rapid Panda Movers",

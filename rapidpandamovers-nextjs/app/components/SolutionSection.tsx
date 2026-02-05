@@ -57,11 +57,11 @@ export default function SolutionSection({
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {solutions.map((solution, index) => (
-            <div key={index} className="bg-green-50 border border-green-100 rounded-lg p-6 flex items-start space-x-4">
-              <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
+            <div key={index} className="bg-orange-500 rounded-lg p-6 flex items-start space-x-4">
+              <CheckCircle className="w-6 h-6 text-white flex-shrink-0 mt-1" />
               <div>
-                <h3 className="text-lg font-bold text-gray-800 mb-2">{solution.title}</h3>
-                <p className="text-gray-600">{solution.description}</p>
+                <h3 className="text-lg font-bold text-white mb-2">{solution.title}</h3>
+                <p className="text-orange-100">{solution.description}</p>
               </div>
             </div>
           ))}

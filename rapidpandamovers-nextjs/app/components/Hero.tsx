@@ -2,6 +2,7 @@
 
 import { Star } from 'lucide-react'
 import { useState } from 'react'
+import Image from 'next/image'
 import QuoteForm from './QuoteForm'
 
 interface HeroProps {
@@ -27,15 +28,18 @@ export default function Hero({
   const displayCta = cta || "Get a free quote"
   const displayImage = image_url || "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
   return (
-    <section className="py-5 px-4 md:px-6 lg:px-8">
+    <section className="py-5 px-4 md:px-6 lg:px-8 relative z-10">
       <div className="container mx-auto rounded-4xl border border-gray-700 bg-black p-6 md:p-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left side - Image */}
-          <div className="relative">
-            <img 
-              src={displayImage} 
-              alt="Professional movers with moving boxes" 
-              className="w-full h-auto object-contain rounded-lg"
+          <div className="relative aspect-[4/3]">
+            <Image
+              src={displayImage}
+              alt="Professional movers with moving boxes"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-contain rounded-lg"
+              priority
             />
           </div>
           

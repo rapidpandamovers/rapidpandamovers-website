@@ -111,7 +111,7 @@ export default function WhyChooseUsPage() {
             {mainBenefits.map((benefit, index) => {
               const IconComponent = benefit.icon
               return (
-                <div key={index} className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow">
+                <div key={index} className="bg-white rounded-xl p-8 shadow-sm border border-gray-200 hover:border-orange-500 hover:shadow-lg transition-all">
                   <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
                     <IconComponent className="w-8 h-8 text-orange-500" />
                   </div>
@@ -144,19 +144,19 @@ export default function WhyChooseUsPage() {
               When you choose Rapid Panda Movers, you're not just hiring a moving company - you're gaining a partner committed to making your transition as smooth as possible.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-              <div className="bg-gray-800 rounded-lg p-6">
+              <div className="bg-gray-800 rounded-xl p-6 border border-gray-600">
                 <h3 className="text-lg font-bold text-white mb-2">Before Your Move</h3>
                 <p className="text-gray-400 text-sm">
                   Free consultation, detailed quote, move planning assistance, and packing tips to help you prepare.
                 </p>
               </div>
-              <div className="bg-gray-800 rounded-lg p-6">
+              <div className="bg-gray-800 rounded-xl p-6 border border-gray-600">
                 <h3 className="text-lg font-bold text-white mb-2">During Your Move</h3>
                 <p className="text-gray-400 text-sm">
                   Professional crews, careful handling, real-time updates, and on-site supervision for quality control.
                 </p>
               </div>
-              <div className="bg-gray-800 rounded-lg p-6">
+              <div className="bg-gray-800 rounded-xl p-6 border border-gray-600">
                 <h3 className="text-lg font-bold text-white mb-2">After Your Move</h3>
                 <p className="text-gray-400 text-sm">
                   Follow-up call, satisfaction survey, and quick resolution of any concerns. We're here until you're settled.
@@ -180,7 +180,7 @@ export default function WhyChooseUsPage() {
             {additionalReasons.map((reason, index) => {
               const IconComponent = reason.icon
               return (
-                <div key={index} className="text-center p-6">
+                <div key={index} className="bg-white rounded-xl p-6 text-center shadow-sm border border-gray-200 hover:border-orange-500 hover:shadow-md transition-all">
                   <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="w-6 h-6 text-orange-500" />
                   </div>
@@ -268,7 +268,6 @@ export default function WhyChooseUsPage() {
       <QuoteSection
         title="Ready to Experience the Difference?"
         subtitle="Join thousands of satisfied customers who chose Rapid Panda Movers for their Miami move."
-        showPhone
       />
 
       <ContactSection />

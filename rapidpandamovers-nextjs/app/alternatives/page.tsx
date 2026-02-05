@@ -5,8 +5,8 @@ import Hero from '../components/Hero';
 import QuoteSection from '../components/QuoteSection';
 
 export const metadata = {
-  title: 'Moving Alternatives | DIY vs Full-Service Movers | Rapid Panda Movers',
-  description: 'Compare DIY moving options like PODS, U-Haul, and labor services to full-service movers. Find out which option saves you the most time and money.',
+  title: 'DIY Moving Alternatives vs Full-Service Movers',
+  description: 'Compare DIY moving options like PODS, U-Haul, and labor services to full-service movers. Find the best option for your move.',
 };
 
 const typeIcons: Record<string, React.ReactNode> = {

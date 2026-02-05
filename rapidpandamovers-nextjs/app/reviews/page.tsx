@@ -2,12 +2,13 @@ import content from '../../data/content.json'
 import Hero from '../components/Hero'
 import ReviewSection from '../components/ReviewSection'
 import ResourceSection from '../components/ResourceSection'
+import QuoteSection from '../components/QuoteSection'
 
 export default function ReviewsPage() {
   const { reviews } = content
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <Hero
         title={reviews.title}
@@ -29,6 +30,12 @@ export default function ReviewsPage() {
         title="More Moving Resources"
         subtitle="Explore our comprehensive guides and services for a successful move"
         variant="grid"
+      />
+
+      {/* CTA Section */}
+      <QuoteSection
+        title="Join Our Satisfied Customers"
+        subtitle="Experience the Rapid Panda difference. Get your free quote today and see why Miami trusts us with their moves."
       />
     </div>
   )

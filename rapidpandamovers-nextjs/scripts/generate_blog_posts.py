@@ -1713,38 +1713,260 @@ def generate_all_posts():
     return posts
 
 
+def extend_posts(existing_posts, start_date, end_date):
+    """Extend existing posts with new posts from start_date through end_date.
+
+    Args:
+        existing_posts: List of existing post dictionaries
+        start_date: First Monday to start generating from
+        end_date: Last date to generate posts through (generates up to last full week before this)
+
+    Returns:
+        List of new posts only (does not include existing posts)
+    """
+    global _used_service_titles, _used_location_titles, _used_listicle_titles
+
+    # Initialize used slugs and titles from existing posts
+    used_slugs = {p["slug"] for p in existing_posts}
+
+    # Extract used titles to avoid duplicates
+    _used_service_titles = {p["title"] for p in existing_posts if p.get("category") == "Moving Tips" and p.get("service_link")}
+    _used_location_titles = {p["title"] for p in existing_posts if p.get("category") == "Location Guide"}
+    _used_listicle_titles = {p["title"] for p in existing_posts
+                            if p.get("category") in ["Fun Facts", "Lifestyle", "Home & Living", "Moving Tips"]
+                            and not p.get("service_link")}
+
+    # Find next post ID
+    max_id = max(int(p["id"]) for p in existing_posts)
+    post_id = max_id + 1
+
+    new_posts = []
+
+    # Calculate number of weeks
+    weeks = (end_date - start_date).days // 7
+
+    # Create shuffled lists for variety with enough items
+    shuffled_services = SERVICES * ((weeks // len(SERVICES)) + 2)
+    random.shuffle(shuffled_services)
+
+    shuffled_cities = CITIES * ((weeks // len(CITIES)) + 2)
+    random.shuffle(shuffled_cities)
+
+    city_index = 0
+
+    for week in range(weeks):
+        # Monday post (Service + Topical)
+        monday = start_date + timedelta(weeks=week)
+        if monday > end_date:
+            break
+
+        month_data = MONTHLY_THEMES[monday.month]
+        service = shuffled_services[week % len(shuffled_services)]
+
+        service_post = generate_service_post(post_id, monday, service, month_data)
+        service_post["slug"] = ensure_unique_slug(service_post["slug"], used_slugs, monday)
+        image_folder = generate_image_path(monday, service_post["slug"])
+        service_post["image_folder"] = image_folder
+        service_post["image"] = get_featured_image_path(image_folder)
+        used_slugs.add(service_post["slug"])
+        new_posts.append(service_post)
+        post_id += 1
+
+        # Wednesday post (Listicle)
+        wednesday = monday + timedelta(days=2)
+        if wednesday > end_date:
+            break
+
+        month_data = MONTHLY_THEMES[wednesday.month]
+        template = random.choice(LISTICLE_TEMPLATES)
+        city_for_listicle = shuffled_cities[city_index % len(shuffled_cities)] if template.get("needs_city") else None
+
+        listicle_post = generate_listicle_post(post_id, wednesday, template, city_for_listicle or random.choice(CITIES), month_data)
+        listicle_post["slug"] = ensure_unique_slug(listicle_post["slug"], used_slugs, wednesday)
+        image_folder = generate_image_path(wednesday, listicle_post["slug"])
+        listicle_post["image_folder"] = image_folder
+        listicle_post["image"] = get_featured_image_path(image_folder)
+        used_slugs.add(listicle_post["slug"])
+        new_posts.append(listicle_post)
+        post_id += 1
+
+        # Thursday post (Location)
+        thursday = monday + timedelta(days=3)
+        if thursday > end_date:
+            break
+
+        month_data = MONTHLY_THEMES[thursday.month]
+        city = shuffled_cities[city_index % len(shuffled_cities)]
+
+        location_post = generate_location_post(post_id, thursday, city, month_data)
+        location_post["slug"] = ensure_unique_slug(location_post["slug"], used_slugs, thursday)
+        image_folder = generate_image_path(thursday, location_post["slug"])
+        location_post["image_folder"] = image_folder
+        location_post["image"] = get_featured_image_path(image_folder)
+        used_slugs.add(location_post["slug"])
+        new_posts.append(location_post)
+        post_id += 1
+        city_index += 1
+
+    return new_posts
+
+
 def main():
-    """Main function to generate and save blog posts."""
-    print("Generating 312 blog posts (3 per week for 2 years)...")
+    """Main function to generate and save blog posts.
 
-    posts = generate_all_posts()
-
-    print(f"Generated {len(posts)} posts")
-
-    # Check date distribution
+    Modes:
+    - Default (no args): Generate fresh posts from Feb 2026
+    - --fill-gap: Generate posts to fill gap between blog.json (ends Sept 2024) and posts.json (starts Feb 2026)
+    - --extend: Extend existing posts.json through end of 2030
+    """
+    import sys
     from collections import Counter
-    days = Counter()
-    for p in posts:
-        d = datetime.strptime(p["date"], "%Y-%m-%d")
-        days[d.strftime("%A")] += 1
 
-    print(f"By day: {dict(days)}")
-
-    # Check categories
-    categories = Counter(p["category"] for p in posts)
-    print(f"By category: {dict(categories)}")
-
-    # Save to file
     output_path = Path(__file__).parent.parent / "data" / "posts.json"
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(posts, f, indent=2, ensure_ascii=False)
+    gap_output_path = Path(__file__).parent.parent / "data" / "gap_posts.json"
 
-    print(f"Saved posts to {output_path}")
+    # Check for fill-gap mode
+    if len(sys.argv) > 1 and sys.argv[1] == "--fill-gap":
+        print("Generating gap-filling posts (Sept 2024 to Feb 2026)...")
 
-    # Print date range
-    first_date = posts[0]["date"]
-    last_date = posts[-1]["date"]
-    print(f"Date range: {first_date} to {last_date}")
+        # Gap parameters
+        # blog.json ends at 2024-09-24 (Tuesday), so start from next Monday (2024-09-30)
+        start_date = datetime(2024, 9, 30)  # First Monday after Sept 24
+        end_date = datetime(2026, 2, 1)  # Day before posts.json starts
+        start_id = 70  # Continue from blog.json which ends at 69
+
+        # Calculate weeks
+        weeks = (end_date - start_date).days // 7
+        print(f"Generating posts from {start_date.strftime('%Y-%m-%d')} to {end_date.strftime('%Y-%m-%d')}")
+        print(f"Approximately {weeks} weeks = {weeks * 3} posts")
+
+        # Generate posts using extend_posts with empty existing posts
+        # We need to seed the title trackers with blog.json titles
+        blog_path = Path(__file__).parent.parent / "data" / "blog.json"
+        with open(blog_path, "r", encoding="utf-8") as f:
+            blog_posts = json.load(f)
+
+        gap_posts = extend_posts(blog_posts, start_date, end_date)
+
+        # Renumber the gap posts to start at 70
+        for i, post in enumerate(gap_posts):
+            post["id"] = start_id + i
+            # Update image paths with new ID
+            old_folder = post.get("image_folder", "")
+            if old_folder:
+                # Image folder doesn't have ID in path, so no change needed
+                pass
+
+        print(f"Generated {len(gap_posts)} gap posts")
+
+        # Save gap posts separately
+        with open(gap_output_path, "w", encoding="utf-8") as f:
+            json.dump(gap_posts, f, indent=2, ensure_ascii=False)
+
+        print(f"Saved gap posts to {gap_output_path}")
+
+        if gap_posts:
+            first_date = gap_posts[0]["date"]
+            last_date = gap_posts[-1]["date"]
+            print(f"Gap posts date range: {first_date} to {last_date}")
+            print(f"Gap posts ID range: {gap_posts[0]['id']} to {gap_posts[-1]['id']}")
+
+            # Check day distribution
+            days = Counter()
+            for p in gap_posts:
+                d = datetime.strptime(p["date"], "%Y-%m-%d")
+                days[d.strftime("%A")] += 1
+            print(f"Gap posts by day: {dict(days)}")
+
+            # Check categories
+            categories = Counter(p["category"] for p in gap_posts)
+            print(f"Gap posts by category: {dict(categories)}")
+
+    # Check for extend mode
+    elif len(sys.argv) > 1 and sys.argv[1] == "--extend":
+        print("Extending existing posts through 2028...")
+
+        # Load existing posts
+        with open(output_path, "r", encoding="utf-8") as f:
+            existing_posts = json.load(f)
+
+        print(f"Loaded {len(existing_posts)} existing posts")
+
+        # Find the last post date
+        last_date = max(datetime.strptime(p["date"], "%Y-%m-%d") for p in existing_posts)
+        print(f"Last existing post date: {last_date.strftime('%Y-%m-%d')}")
+
+        # Find next Monday after last post
+        days_until_monday = (7 - last_date.weekday()) % 7
+        if days_until_monday == 0:
+            days_until_monday = 7
+        start_date = last_date + timedelta(days=days_until_monday)
+
+        # Set end date to Dec 31, 2030
+        end_date = datetime(2030, 12, 31)
+
+        print(f"Generating posts from {start_date.strftime('%Y-%m-%d')} to {end_date.strftime('%Y-%m-%d')}")
+
+        # Generate new posts
+        new_posts = extend_posts(existing_posts, start_date, end_date)
+
+        print(f"Generated {len(new_posts)} new posts")
+
+        # Merge and save
+        all_posts = existing_posts + new_posts
+        print(f"Total posts: {len(all_posts)}")
+
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(all_posts, f, indent=2, ensure_ascii=False)
+
+        print(f"Saved {len(all_posts)} posts to {output_path}")
+
+        # Print new posts date range
+        if new_posts:
+            first_new = new_posts[0]["date"]
+            last_new = new_posts[-1]["date"]
+            print(f"New posts date range: {first_new} to {last_new}")
+
+            # Check day distribution for new posts
+            days = Counter()
+            for p in new_posts:
+                d = datetime.strptime(p["date"], "%Y-%m-%d")
+                days[d.strftime("%A")] += 1
+            print(f"New posts by day: {dict(days)}")
+
+            # Check categories for new posts
+            categories = Counter(p["category"] for p in new_posts)
+            print(f"New posts by category: {dict(categories)}")
+
+    else:
+        print("Generating 312 blog posts (3 per week for 2 years)...")
+
+        posts = generate_all_posts()
+
+        print(f"Generated {len(posts)} posts")
+
+        # Check date distribution
+        days = Counter()
+        for p in posts:
+            d = datetime.strptime(p["date"], "%Y-%m-%d")
+            days[d.strftime("%A")] += 1
+
+        print(f"By day: {dict(days)}")
+
+        # Check categories
+        categories = Counter(p["category"] for p in posts)
+        print(f"By category: {dict(categories)}")
+
+        # Save to file
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(posts, f, indent=2, ensure_ascii=False)
+
+        print(f"Saved posts to {output_path}")
+
+        # Print date range
+        first_date = posts[0]["date"]
+        last_date = posts[-1]["date"]
+        print(f"Date range: {first_date} to {last_date}")
 
 
 if __name__ == "__main__":

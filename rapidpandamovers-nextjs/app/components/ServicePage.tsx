@@ -1,13 +1,14 @@
 import Hero from './Hero';
 import WhySection from './WhySection';
-import AboutSection from './AboutSection';
+import QuoteSection from './QuoteSection';
 import RouteSection from './RouteSection';
 import LocationSection from './LocationSection';
 import IncludedSection from './IncludedSection';
 import ProcessSection from './ProcessSection';
-import BenefitSection from './BenefitSection';
 import ProblemSection from './ProblemSection';
 import SolutionSection from './SolutionSection';
+import ContentSection from './ContentSection';
+import FAQSection from './FAQSection';
 import { allLongDistanceRoutes, titleCase } from '@/lib/data';
 import { MapPin, Navigation, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
@@ -37,9 +38,12 @@ interface ServicePageProps {
       title: string;
       description: string;
     }>;
-    benefits?: string[];
-    extras?: string[];
+    included?: string[];
     areas?: string[];
+    faq?: Array<{
+      question: string;
+      answer: string;
+    }>;
   };
   // Optional location for location-specific service pages (e.g., /miami-local-moving)
   location?: {
@@ -61,7 +65,7 @@ interface ServicePageProps {
 export default function ServicePage({ service, location }: ServicePageProps) {
   // Get long distance routes for the long-distance-moving service (only when not location-specific)
   const longDistanceRoutes = !location && service.slug === 'long-distance-moving'
-    ? allLongDistanceRoutes.filter(r => r.is_active !== false).slice(0, 12)
+    ? allLongDistanceRoutes.filter(r => r.is_active !== false).slice(0, 6)
     : [];
 
   // Determine if this is a neighborhood (has parentCity)
@@ -86,6 +90,14 @@ export default function ServicePage({ service, location }: ServicePageProps) {
         image_url={service.hero?.image_url}
       />
 
+      {/* Content Section */}
+      <ContentSection
+        title="About"
+        titleHighlight={location ? `${location.name} ${service.name}` : service.name}
+        description={service.description}
+        subtitle={location ? `Professional ${service.name.toLowerCase()} services in ${location.name}` : undefined}
+      />
+
       {/* Problems Section */}
       <ProblemSection problems={service.problems} />
 
@@ -95,20 +107,23 @@ export default function ServicePage({ service, location }: ServicePageProps) {
       {/* Process Steps */}
       <ProcessSection steps={service.process} />
 
-      {/* Benefits Section */}
-      <BenefitSection
-        benefits={service.benefits}
-        serviceName={service.name}
-        locationName={location?.name}
-      />
+      {/* Included Items */}
+      <IncludedSection items={service.included} />
 
-      {/* Extras/Included Items */}
-      <IncludedSection items={service.extras} />
+      {/* FAQ Section */}
+      {service.faq && service.faq.length > 0 && (
+        <FAQSection
+          title={`${service.name} FAQ`}
+          subtitle={`Common questions about our ${service.name.toLowerCase()} services`}
+          faqs={service.faq}
+          variant="compact"
+        />
+      )}
 
       {/* Service Areas - Only show when not location-specific */}
       {!location && service.areas && service.areas.length > 0 && (
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
+        <section className="py-20">
+          <div className="container mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                 Service <span className="text-orange-500">Areas</span>
@@ -117,7 +132,7 @@ export default function ServicePage({ service, location }: ServicePageProps) {
                 We provide {service.name.toLowerCase()} services in these areas
               </p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mx-auto">
               {service.areas.map((area, index) => (
                 <div key={index} className="bg-white rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-shadow">
                   <MapPin className="w-5 h-5 text-orange-500 mx-auto mb-2" />
@@ -157,7 +172,7 @@ export default function ServicePage({ service, location }: ServicePageProps) {
                   <Link
                     key={index}
                     href={`/${route.slug}-movers`}
-                    className="bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow group"
+                    className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:border-orange-500 hover:shadow-md transition-all group"
                   >
                     <div className="flex items-center justify-between mb-4">
                       <Navigation className="w-6 h-6 text-orange-500" />
@@ -183,10 +198,10 @@ export default function ServicePage({ service, location }: ServicePageProps) {
             </div>
             <div className="text-center mt-12">
               <Link
-                href="/routes"
+                href="/routes?type=long-distance"
                 className="inline-flex items-center px-8 py-4 bg-orange-500 text-white font-bold rounded-lg hover:bg-orange-600 transition-colors"
               >
-                See All Routes
+                See All Long Distance Routes
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
@@ -197,8 +212,8 @@ export default function ServicePage({ service, location }: ServicePageProps) {
       {/* Why Choose Us */}
       <WhySection />
 
-      {/* About Us */}
-      <AboutSection />
+      {/* CTA Section */}
+      <QuoteSection />
     </div>
   );
 }

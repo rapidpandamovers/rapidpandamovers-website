@@ -12,33 +12,35 @@ export default function WhySection() {
   ]
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-            Why Choose <span className="text-orange-500">Rapid Panda Movers</span>?
-          </h2>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {benefits.map((benefit, index) => {
-            const IconComponent = benefit.icon
-            return (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <IconComponent className="w-8 h-8 text-orange-500" />
+    <section className="py-20">
+      <div className="container mx-auto">
+        <div className="bg-gray-100 rounded-4xl p-8 md:p-12">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+              Why Choose <span className="text-orange-500">Rapid Panda Movers</span>?
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => {
+              const IconComponent = benefit.icon
+              return (
+                <div key={index} className="bg-white rounded-xl p-6 text-center">
+                  <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <IconComponent className="w-8 h-8 text-orange-500" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-3">{benefit.title}</h3>
+                  <p className="text-gray-600">{benefit.desc}</p>
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-3">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.desc}</p>
-              </div>
-            )
-          })}
-        </div>
-        
-        <div className="text-center mt-12">
-          <Link href="/why-choose-us" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
-            Learn More About Us
-          </Link>
+              )
+            })}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link href="/why-choose-us" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+              Learn More About Us
+            </Link>
+          </div>
         </div>
       </div>
     </section>

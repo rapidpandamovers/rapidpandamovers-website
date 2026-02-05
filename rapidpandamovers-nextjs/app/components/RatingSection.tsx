@@ -62,9 +62,10 @@ export default function RatingSection({
   className = ''
 }: RatingSectionProps) {
   return (
-    <section className={`py-8 ${className}`}>
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+    <section className={`-mt-16 pb-8 relative z-0 ${className}`}>
+      <div className="container mx-auto">
+        <div className="bg-gray-100 rounded-b-4xl px-6 pt-20 pb-6 md:px-8">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
           {/* Title */}
           <h2 className="text-xl md:text-2xl font-bold text-gray-900 lg:flex-shrink-0">
             {title}
@@ -97,6 +98,7 @@ export default function RatingSection({
                 </div>
               </div>
             ))}
+            </div>
           </div>
         </div>
       </div>

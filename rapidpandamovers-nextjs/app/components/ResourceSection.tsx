@@ -131,7 +131,7 @@ export default function ResourceSection({
               <Link
                 key={resource.href}
                 href={resource.href}
-                className="group bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100"
+                className="group bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:border-orange-500 hover:shadow-md transition-all"
               >
                 <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center text-orange-500 mb-4 group-hover:bg-orange-500 group-hover:text-white transition-colors">
                   {resource.icon}
@@ -161,7 +161,7 @@ export default function ResourceSection({
             <Link
               key={resource.href}
               href={resource.href}
-              className="group flex items-center gap-4 bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-all border border-gray-100 hover:border-orange-200"
+              className="group flex items-center gap-4 bg-white rounded-xl p-5 shadow-sm border border-gray-200 hover:border-orange-500 hover:shadow-md transition-all"
             >
               <div className="flex-shrink-0 w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-colors">
                 {resource.icon}

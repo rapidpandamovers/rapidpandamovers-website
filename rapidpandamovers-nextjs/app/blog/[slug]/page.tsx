@@ -2,19 +2,22 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Calendar, Clock } from 'lucide-react'
+import QuoteSection from '../../components/QuoteSection'
 import { notFound } from 'next/navigation'
-import blogData from '../../../data/posts.json'
+import { getAllPosts, getPostBySlug, getRelatedPosts } from '../../../lib/blog'
 import BackToBlogLink from './BackToBlogLink'
+import BlogHeroImage from '../BlogHeroImage'
 
 export async function generateStaticParams() {
-  return blogData.map((post) => ({
+  const posts = getAllPosts()
+  return posts.map((post) => ({
     slug: post.slug,
   }))
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const post = blogData.find((p) => p.slug === slug)
+  const post = getPostBySlug(slug)
 
   if (!post) {
     return {
@@ -30,7 +33,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const post = blogData.find((p) => p.slug === slug)
+  const post = getPostBySlug(slug)
 
   if (!post) {
     notFound()
@@ -39,27 +42,20 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   // Parse inline markdown (bold and links) into React elements
   const parseInlineMarkdown = (text: string, keyPrefix: string): React.ReactNode[] => {
     const elements: React.ReactNode[] = []
-    // Regex to match:
-    // 1. **[text](url)** - bold wrapped around link
-    // 2. [**text**](url) - bold inside link
-    // 3. **text** - plain bold
-    // 4. [text](url) - plain link
     const regex = /(\*\*\[[^\]]+\]\([^)]+\)\*\*|\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*)/g
     let lastIndex = 0
     let match
     let elementKey = 0
 
     while ((match = regex.exec(text)) !== null) {
-      // Add plain text before this match
       if (match.index > lastIndex) {
         elements.push(text.slice(lastIndex, match.index))
       }
 
       const matched = match[0]
 
-      // Check for **[text](url)** pattern first (bold around link)
       if (matched.startsWith('**[') && matched.endsWith(')**')) {
-        const innerLink = matched.slice(2, -2) // Remove outer **
+        const innerLink = matched.slice(2, -2)
         const linkMatch = innerLink.match(/\[([^\]]+)\]\(([^)]+)\)/)
         if (linkMatch) {
           const [, linkText, url] = linkMatch
@@ -70,7 +66,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <Link
                 key={`${keyPrefix}-bl-${elementKey++}`}
                 href={url}
-                className="text-orange-500 hover:text-orange-600 underline"
+                className="text-orange-500 hover:text-orange-600 underline decoration-orange-300"
               >
                 {linkContent}
               </Link>
@@ -82,7 +78,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-orange-500 hover:text-orange-600 underline"
+                className="text-orange-500 hover:text-orange-600 underline decoration-orange-300"
               >
                 {linkContent}
               </a>
@@ -90,25 +86,22 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           }
         }
       }
-      // Check for [text](url) pattern (may have **bold** inside)
       else if (matched.startsWith('[')) {
         const linkMatch = matched.match(/\[([^\]]+)\]\(([^)]+)\)/)
         if (linkMatch) {
           const [, linkText, url] = linkMatch
-          // Strip ** from link text if present (for bold links like [**text**](url))
           const cleanLinkText = linkText.replace(/\*\*/g, '')
           const isBold = linkText.includes('**')
           const linkContent = isBold ? (
             <strong className="font-semibold">{cleanLinkText}</strong>
           ) : cleanLinkText
 
-          // Use Next.js Link for internal links, regular anchor for external
           if (url.startsWith('/')) {
             elements.push(
               <Link
                 key={`${keyPrefix}-l-${elementKey++}`}
                 href={url}
-                className="text-orange-500 hover:text-orange-600 underline"
+                className="text-orange-500 hover:text-orange-600 underline decoration-orange-300"
               >
                 {linkContent}
               </Link>
@@ -120,7 +113,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-orange-500 hover:text-orange-600 underline"
+                className="text-orange-500 hover:text-orange-600 underline decoration-orange-300"
               >
                 {linkContent}
               </a>
@@ -128,11 +121,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           }
         }
       }
-      // Plain bold text **text**
       else if (matched.startsWith('**')) {
         const boldText = matched.slice(2, -2)
         elements.push(
-          <strong key={`${keyPrefix}-b-${elementKey++}`} className="font-semibold text-gray-800">
+          <strong key={`${keyPrefix}-b-${elementKey++}`} className="font-semibold text-gray-900">
             {boldText}
           </strong>
         )
@@ -141,7 +133,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       lastIndex = regex.lastIndex
     }
 
-    // Add remaining plain text
     if (lastIndex < text.length) {
       elements.push(text.slice(lastIndex))
     }
@@ -149,7 +140,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     return elements.length > 0 ? elements : [text]
   }
 
-  // Parse and render formatted content
+  // Track image index for alternating float
+  let imageIndex = 0
+
+  // Parse and render formatted content with magazine layout
   const renderContent = () => {
     const lines = post.content.split('\n')
     const elements: React.ReactElement[] = []
@@ -159,10 +153,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     const flushList = () => {
       if (listItems.length > 0) {
         elements.push(
-          <ul key={currentKey++} className="mb-6 pl-6 space-y-2">
+          <ul key={currentKey++} className="my-6 space-y-3 pl-0">
             {listItems.map((item, i) => (
-              <li key={i} className="list-disc text-gray-700 leading-relaxed">
-                {parseInlineMarkdown(item, `li-${i}`)}
+              <li key={i} className="flex items-start gap-3 text-gray-700 leading-relaxed">
+                <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-orange-100 text-orange-600 text-sm font-medium flex-shrink-0 mt-0.5">
+                  {i + 1}
+                </span>
+                <span>{parseInlineMarkdown(item, `li-${i}`)}</span>
               </li>
             ))}
           </ul>
@@ -176,19 +173,21 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
       if (!line) continue
 
-      // Headers
+      // H2 Headers - Magazine style with decorative element
       if (line.startsWith('## ')) {
         flushList()
         elements.push(
-          <h2 key={currentKey++} className="text-2xl font-bold text-gray-800 mt-8 mb-4">
+          <h2 key={currentKey++} className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-6 flex items-center gap-3">
+            <span className="w-1 h-8 bg-orange-500 rounded-full"></span>
             {parseInlineMarkdown(line.replace('## ', ''), `h2-${currentKey}`)}
           </h2>
         )
       }
+      // H3 Headers
       else if (line.startsWith('### ')) {
         flushList()
         elements.push(
-          <h3 key={currentKey++} className="text-xl font-bold text-gray-800 mt-6 mb-3">
+          <h3 key={currentKey++} className="text-xl font-bold text-gray-800 mt-8 mb-4 border-l-2 border-orange-300 pl-4">
             {parseInlineMarkdown(line.replace('### ', ''), `h3-${currentKey}`)}
           </h3>
         )
@@ -197,15 +196,51 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       else if (line.match(/^[-*]\s+/)) {
         listItems.push(line.replace(/^[-*]\s+/, ''))
       }
-      // Numbered list items (1. 2. 3. etc)
+      // Numbered list items
       else if (line.match(/^\d+\.\s+/)) {
         listItems.push(line.replace(/^\d+\.\s+/, ''))
+      }
+      // Images - Alternating float layout with responsive srcset
+      else if (line.match(/^!\[([^\]]*)\]\(([^)]+)\)/)) {
+        flushList()
+        const imageMatch = line.match(/^!\[([^\]]*)\]\(([^)]+)\)/)
+        if (imageMatch) {
+          const [, alt, src] = imageMatch
+          // Skip if this is the featured image
+          if (src !== post.featured) {
+            const floatClass = imageIndex % 2 === 0
+              ? 'sm:float-left sm:mr-6 sm:mb-4'
+              : 'sm:float-right sm:ml-6 sm:mb-4'
+            const isFirstBodyImage = imageIndex === 0
+            imageIndex++
+
+            // Generate srcset paths for responsive images
+            const basePath = src.replace(/\.(webp|jpg|jpeg|png)$/, '')
+            const ext = src.match(/\.(webp|jpg|jpeg|png)$/)?.[1] || 'webp'
+
+            elements.push(
+              <figure key={currentKey++} className={`my-6 ${floatClass} sm:w-64 md:w-72`}>
+                <div className="overflow-hidden rounded-lg shadow-lg">
+                  <Image
+                    src={src}
+                    alt={alt || 'Blog post image'}
+                    width={300}
+                    height={225}
+                    className="w-full h-auto hover:scale-105 transition-transform duration-300"
+                    loading={isFirstBodyImage ? 'eager' : 'lazy'}
+                    sizes="(max-width: 640px) 100vw, 300px"
+                  />
+                </div>
+              </figure>
+            )
+          }
+        }
       }
       // Regular paragraphs
       else {
         flushList()
         elements.push(
-          <p key={currentKey++} className="mb-4 text-gray-700 leading-relaxed">
+          <p key={currentKey++} className="mb-5 text-gray-700 leading-relaxed text-[17px]">
             {parseInlineMarkdown(line, `p-${currentKey}`)}
           </p>
         )
@@ -217,94 +252,78 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   }
 
   return (
-    <div className="py-20">
-      <div className="container mx-auto px-4 max-w-4xl">
+    <div className="min-h-screen bg-white">
+      {/* Hero Section - Magazine Style with Rounded Box */}
+      <div className="container mx-auto pt-8">
         <BackToBlogLink />
 
-        <article>
-          <header className="mb-12">
-            <div className="mb-4">
-              <span className="inline-block bg-orange-100 text-orange-800 text-sm font-medium px-3 py-1 rounded-full">
-                {post.category}
-              </span>
-            </div>
+        <BlogHeroImage
+          featured={post.featured}
+          title={post.title}
+          category={post.category}
+          date={post.date}
+          readTime={post.readTime}
+        />
+      </div>
 
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-              {post.title}
-            </h1>
+      {/* Article Content */}
+      <article className="container mx-auto">
+        {/* Lead/Excerpt */}
+        <div className="py-8 border-b border-gray-200">
+          <p className="text-xl md:text-2xl text-gray-600 leading-relaxed font-light">
+            {post.excerpt}
+          </p>
+        </div>
 
-            <div className="flex items-center text-gray-600 mb-6">
-              <Calendar className="w-4 h-4 mr-2" />
-              <span>{new Date(post.date).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-              })}</span>
-              <span className="mx-3">•</span>
-              <Clock className="w-4 h-4 mr-2" />
-              <span>{post.readTime}</span>
-            </div>
+        {/* Main Content */}
+        <div className="py-10 overflow-hidden">
+          {renderContent()}
+          <div className="clear-both"></div>
+        </div>
 
-            <p className="text-xl text-gray-600 leading-relaxed">
-              {post.excerpt}
-            </p>
+        <QuoteSection
+          title="Ready to get started?"
+          subtitle="Let Rapid Panda Movers handle your move with professionalism and care."
+        />
+      </article>
 
-            {post.image && (
-              <div className="mt-8 rounded-xl overflow-hidden">
-                <Image
-                  src={post.image}
-                  alt={post.title}
-                  width={1280}
-                  height={720}
-                  className="w-full h-auto"
-                  priority
-                />
-              </div>
-            )}
-          </header>
-
-          <div className="prose prose-lg max-w-none">
-            {renderContent()}
-          </div>
-
-          <div className="bg-orange-50 rounded-lg p-8 mt-12">
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">Ready to get started?</h3>
-            <p className="text-gray-600 mb-6">
-              Let Rapid Panda Movers handle your move with professionalism and care. Get your free quote today!
-            </p>
-            <Link
-              href="/quote"
-              className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors inline-block"
-            >
-              Get Your Free Quote
-            </Link>
-          </div>
-        </article>
-
-        {/* Related Posts */}
-        <div className="mt-16 border-t border-gray-200 pt-16">
-          <h3 className="text-2xl font-bold text-gray-800 mb-8">Related Articles</h3>
+      {/* Related Posts */}
+      <div className="py-16">
+        <div className="container mx-auto">
+          <h3 className="text-2xl font-bold text-gray-800 mb-8 flex items-center gap-3">
+            <span className="w-1 h-6 bg-orange-500 rounded-full"></span>
+            Related Articles
+          </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {blogData
-              .filter((p) => p.slug !== post.slug && p.category === post.category)
-              .slice(0, 2)
-              .map((relatedPost) => (
-                <Link
-                  key={relatedPost.id}
-                  href={`/blog/${relatedPost.slug}`}
-                  className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow"
-                >
+            {getRelatedPosts(slug, 2).map((relatedPost) => (
+              <Link
+                key={relatedPost.id}
+                href={`/blog/${relatedPost.slug}`}
+                className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
+              >
+                {relatedPost.featured && (
+                  <div className="relative h-40 overflow-hidden">
+                    <Image
+                      src={relatedPost.featured}
+                      alt={relatedPost.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                )}
+                <div className="p-5">
                   <div className="text-sm text-orange-600 font-medium mb-2">
                     {relatedPost.category}
                   </div>
-                  <h4 className="text-lg font-bold text-gray-800 mb-2">
+                  <h4 className="text-lg font-bold text-gray-800 mb-2 group-hover:text-orange-600 transition-colors">
                     {relatedPost.title}
                   </h4>
-                  <p className="text-gray-600 text-sm">
-                    {relatedPost.excerpt.substring(0, 100)}...
+                  <p className="text-gray-600 text-sm line-clamp-2">
+                    {relatedPost.excerpt}
                   </p>
-                </Link>
-              ))}
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </div>

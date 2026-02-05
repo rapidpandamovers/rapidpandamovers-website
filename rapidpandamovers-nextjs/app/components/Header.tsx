@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Phone, Mail } from 'lucide-react'
 import { getAllActiveCities, getAllActiveServices } from '@/lib/data'
 
@@ -13,10 +14,13 @@ export default function Header() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <Link href="/" className="flex items-center space-x-3">
-              <img 
-                src="/images/rapidpandamovers-logo.png" 
-                alt="Rapid Panda Movers" 
+              <Image
+                src="/images/rapidpandamovers-logo.png"
+                alt="Rapid Panda Movers"
+                width={64}
+                height={64}
                 className="h-16 w-auto"
+                priority
               />
             </Link>
             
@@ -115,6 +119,10 @@ export default function Header() {
                       <div className="font-medium">Moving Rates</div>
                       <div className="text-sm text-gray-500">Pricing information</div>
                     </Link>
+                    <Link href="/routes" className="block px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">
+                      <div className="font-medium">Moving Routes</div>
+                      <div className="text-sm text-gray-500">Popular moving routes</div>
+                    </Link>
                     <Link href="/moving-tips" className="block px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">
                       <div className="font-medium">Moving Tips</div>
                       <div className="text-sm text-gray-500">Expert advice</div>
@@ -154,6 +162,10 @@ export default function Header() {
                     <Link href="/reservations" className="block px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">
                       <div className="font-medium">Reservations</div>
                       <div className="text-sm text-gray-500">Book your move</div>
+                    </Link>
+                    <Link href="/quote" className="block px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">
+                      <div className="font-medium">Free Quote</div>
+                      <div className="text-sm text-gray-500">Get a free estimate</div>
                     </Link>
                   </div>
                 </div>

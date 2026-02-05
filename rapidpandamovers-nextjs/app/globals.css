@@ -83,71 +83,312 @@
   @apply font-semibold text-gray-800;
 }
 
-/* Print styles for moving checklist */
+/* PDF Generation styles - match print exactly */
+.generating-pdf {
+  background: white !important;
+  font-size: 11pt !important;
+  line-height: 1.4 !important;
+}
+
+.generating-pdf .no-print {
+  display: none !important;
+}
+
+.generating-pdf .pdf-header,
+.generating-pdf .pdf-footer {
+  display: block !important;
+}
+
+.generating-pdf .screen-checkbox {
+  display: none !important;
+}
+
+.generating-pdf .print-checkbox {
+  width: 14px !important;
+  height: 14px !important;
+  border: 2px solid #374151 !important;
+  border-radius: 3px !important;
+  display: inline-block !important;
+  vertical-align: middle;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.generating-pdf .print-checkbox-checked {
+  background: #22c55e !important;
+  border-color: #22c55e !important;
+  position: relative;
+}
+
+.generating-pdf .print-priority-badge {
+  display: block !important;
+}
+
+/* Grid layout for PDF - match print */
+.generating-pdf .grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 16px !important;
+}
+
+.generating-pdf .checklist-card {
+  box-shadow: none !important;
+  border: 1px solid #e5e7eb !important;
+  margin-bottom: 16px !important;
+  break-inside: avoid;
+}
+
+.generating-pdf .checklist-header {
+  background: #f9fafb !important;
+  border-bottom: 1px solid #e5e7eb !important;
+}
+
+.generating-pdf .checklist-task {
+  border: 1px solid #e5e7eb !important;
+  background: white !important;
+  padding: 8px 12px !important;
+  margin-bottom: 4px !important;
+}
+
+/* Match print text sizes for PDF */
+.generating-pdf .checklist-task span.text-sm {
+  font-size: 0.75rem !important; /* text-xs equivalent */
+}
+
+.generating-pdf .checklist-header h3 {
+  font-size: 1rem !important; /* print:text-base */
+}
+
+.generating-pdf .checklist-header p {
+  font-size: 0.75rem !important; /* print:text-xs */
+}
+
+.generating-pdf .checklist-card .p-4 {
+  padding: 0.5rem !important; /* print:p-2 */
+}
+
+.generating-pdf .checklist-header {
+  padding: 0.75rem !important; /* print:p-3 */
+}
+
+/* Hide decorative elements */
+.generating-pdf .rounded-full.bg-orange-100 {
+  display: none !important;
+}
+
+/* Priority badges for PDF - match print */
+.generating-pdf .priority-badge {
+  border: 1px solid currentColor !important;
+  padding: 2px 6px !important;
+  font-size: 9pt !important;
+  border-radius: 3px !important;
+}
+
+.generating-pdf .priority-high {
+  color: #dc2626 !important;
+  background: #fef2f2 !important;
+  border-color: #fecaca !important;
+}
+
+.generating-pdf .priority-medium {
+  color: #d97706 !important;
+  background: #fffbeb !important;
+  border-color: #fde68a !important;
+}
+
+.generating-pdf .priority-low {
+  color: #ea580c !important;
+  background: #fff7ed !important;
+  border-color: #fed7aa !important;
+}
+
+/* Simplify backgrounds - match print */
+.generating-pdf .bg-gradient-to-r {
+  background: #f9fafb !important;
+}
+
+.generating-pdf .shadow-sm,
+.generating-pdf .shadow-md,
+.generating-pdf .shadow-lg {
+  box-shadow: none !important;
+}
+
+.generating-pdf .bg-gray-50,
+.generating-pdf .bg-white {
+  background: white !important;
+}
+
+/* Print styles */
 @media print {
-  .no-print {
+  /* Hide non-essential elements */
+  .no-print,
+  header,
+  footer,
+  nav {
     display: none !important;
   }
-  
+
+  /* Reset page */
+  @page {
+    margin: 0.5in;
+    size: letter;
+  }
+
   body {
     margin: 0;
-    padding: 20px;
+    padding: 0;
     background: white !important;
+    font-size: 11pt;
+    line-height: 1.4;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
-  
-  .bg-gray-50 {
-    background: white !important;
-  }
-  
-  .shadow-md {
+
+  /* Remove shadows and simplify backgrounds */
+  .shadow-sm,
+  .shadow-md,
+  .shadow-lg {
     box-shadow: none !important;
   }
-  
+
+  .bg-gray-50,
   .bg-white {
     background: white !important;
   }
-  
-  .rounded-lg {
-    border-radius: 8px;
+
+  /* Checklist specific styles */
+  .checklist-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    border: 1px solid #e5e7eb !important;
+    margin-bottom: 16px;
   }
-  
-  .border-l-4 {
-    border-left-width: 4px;
+
+  .checklist-header {
+    background: #f9fafb !important;
+    border-bottom: 1px solid #e5e7eb !important;
   }
-  
-  .text-red-500 {
-    color: #ef4444 !important;
+
+  .checklist-task {
+    border: 1px solid #e5e7eb !important;
+    background: white !important;
+    padding: 8px 12px !important;
+    margin-bottom: 4px !important;
   }
-  
-  .text-yellow-500 {
-    color: #f59e0b !important;
+
+  /* Print-friendly checkboxes */
+  .print-checkbox {
+    width: 14px !important;
+    height: 14px !important;
+    border: 2px solid #374151 !important;
+    border-radius: 3px !important;
+    display: inline-block !important;
+    vertical-align: middle;
+    margin-right: 10px;
+    flex-shrink: 0;
   }
-  
-  .text-blue-500 {
-    color: #3b82f6 !important;
+
+  .print-checkbox-checked {
+    background: #22c55e !important;
+    border-color: #22c55e !important;
+    position: relative;
   }
-  
-  .bg-red-50 {
-    background-color: #fef2f2 !important;
+
+  .print-checkbox-checked::after {
+    content: "✓";
+    color: white;
+    font-size: 10px;
+    position: absolute;
+    top: -1px;
+    left: 2px;
   }
-  
-  .bg-yellow-50 {
-    background-color: #fffbeb !important;
+
+  /* Priority badges for print */
+  .priority-badge {
+    border: 1px solid currentColor !important;
+    padding: 2px 6px !important;
+    font-size: 9pt !important;
+    border-radius: 3px !important;
   }
-  
-  .bg-blue-50 {
-    background-color: #eff6ff !important;
+
+  .priority-high {
+    color: #dc2626 !important;
+    background: #fef2f2 !important;
+    border-color: #fecaca !important;
   }
-  
-  .border-l-red-500 {
-    border-left-color: #ef4444 !important;
+
+  .priority-medium {
+    color: #d97706 !important;
+    background: #fffbeb !important;
+    border-color: #fde68a !important;
   }
-  
-  .border-l-yellow-500 {
-    border-left-color: #f59e0b !important;
+
+  .priority-low {
+    color: #ea580c !important;
+    background: #fff7ed !important;
+    border-color: #fed7aa !important;
   }
-  
-  .border-l-blue-500 {
-    border-left-color: #3b82f6 !important;
+
+  /* Progress bars for print - show as text */
+  .progress-bar-container {
+    display: none !important;
+  }
+
+  .progress-text-print {
+    display: block !important;
+  }
+
+  /* Hide gradient backgrounds */
+  .bg-gradient-to-r {
+    background: #f9fafb !important;
+  }
+
+  /* Ensure text colors print correctly */
+  .text-gray-800 {
+    color: #1f2937 !important;
+  }
+
+  .text-gray-600,
+  .text-gray-500 {
+    color: #4b5563 !important;
+  }
+
+  .text-orange-500,
+  .text-orange-600 {
+    color: #ea580c !important;
+  }
+
+  /* Print title styles */
+  .print-title {
+    font-size: 18pt !important;
+    font-weight: bold !important;
+    margin-bottom: 8px !important;
+  }
+
+  .print-subtitle {
+    font-size: 11pt !important;
+    color: #4b5563 !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* Grid layout for print */
+  .grid.lg\\:grid-cols-2 {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* Hide decorative elements */
+  .rounded-full.bg-orange-100 {
+    display: none !important;
+  }
+
+  /* Simplify hover states */
+  .hover\\:shadow-md:hover,
+  .hover\\:border-orange-200:hover,
+  .hover\\:bg-orange-50\\/30:hover {
+    box-shadow: none !important;
+    border-color: inherit !important;
+    background: inherit !important;
   }
 }

@@ -3,7 +3,15 @@ const redirectsData = require('./data/redirects.json');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['www.rapidpandamovers.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'www.rapidpandamovers.com',
+        pathname: '/**',
+      },
+    ],
+    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 60 * 60 * 24 * 365, // 1 year cache
   },
   async redirects() {
     return redirectsData.redirects.map(redirect => ({

@@ -2,75 +2,135 @@ import { Navigation, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { allRoutes, allLocalRoutes, titleCase } from '@/lib/data';
 
+interface Route {
+  origin_name: string;
+  destination_name: string;
+  distance_mi: number;
+  drive_time_min: number;
+  slug: string;
+  is_active?: boolean;
+  avg_cost_usd?: number;
+  house_sizes?: {
+    '1_bedroom'?: {
+      min_cost: number;
+    };
+  };
+}
+
 interface RouteSectionProps {
-  location: {
+  // Option 1: Pass location to auto-fetch relevant routes
+  location?: {
     name: string;
     slug: string;
-    // If parentCity is present, this is a neighborhood
     parentCity?: {
       name: string;
       slug: string;
     };
   };
+  // Option 2: Pass routes directly
+  routes?: Route[];
+  // Customization
+  title?: string;
+  subtitle?: string;
+  maxItems?: number;
 }
 
-export default function RouteSection({ location }: RouteSectionProps) {
-  const isNeighborhood = !!location.parentCity;
+// Helper function to get cost from route data
+function getRouteCost(route: Route): number | undefined {
+  if (route.avg_cost_usd) {
+    return route.avg_cost_usd;
+  }
+  if (route.house_sizes?.['1_bedroom']?.min_cost) {
+    return route.house_sizes['1_bedroom'].min_cost;
+  }
+  return undefined;
+}
 
-  // Get routes based on whether this is a neighborhood or city
-  let relevantRoutes: any[] = [];
+export default function RouteSection({
+  location,
+  routes: providedRoutes,
+  title,
+  subtitle,
+  maxItems = 6
+}: RouteSectionProps) {
+  let relevantRoutes: Route[] = [];
+  let defaultTitle = 'Popular Routes';
+  let defaultSubtitle = '';
 
-  if (isNeighborhood) {
-    // For neighborhoods: get routes specific to this neighborhood first
-    const neighborhoodRoutes = allLocalRoutes.filter((r: any) =>
-      r.is_active !== false &&
-      (r.origin_name === location.slug || r.destination_name === location.slug)
-    );
+  // If routes are provided directly, use them
+  if (providedRoutes && providedRoutes.length > 0) {
+    relevantRoutes = providedRoutes.slice(0, maxItems);
+  }
+  // Otherwise, fetch based on location
+  else if (location) {
+    const isNeighborhood = !!location.parentCity;
 
-    // Then get parent city routes as fallback
-    const cityRoutes = allLocalRoutes.filter((r: any) =>
-      r.is_active !== false &&
-      (r.origin_name === location.parentCity!.slug || r.destination_name === location.parentCity!.slug) &&
-      r.origin_name !== location.slug &&
-      r.destination_name !== location.slug
-    );
+    if (isNeighborhood) {
+      // For neighborhoods: get routes specific to this neighborhood first
+      const neighborhoodRoutes = allLocalRoutes.filter((r: Route) =>
+        r.is_active !== false &&
+        (r.origin_name === location.slug || r.destination_name === location.slug)
+      );
 
-    relevantRoutes = [...neighborhoodRoutes, ...cityRoutes].slice(0, 6);
-  } else {
-    // For cities: get routes from this city
-    relevantRoutes = allRoutes.filter(r =>
-      r.origin_name === location.slug
-    ).slice(0, 6);
+      // Then get parent city routes as fallback
+      const cityRoutes = allLocalRoutes.filter((r: Route) =>
+        r.is_active !== false &&
+        (r.origin_name === location.parentCity!.slug || r.destination_name === location.parentCity!.slug) &&
+        r.origin_name !== location.slug &&
+        r.destination_name !== location.slug
+      );
+
+      relevantRoutes = [...neighborhoodRoutes, ...cityRoutes].slice(0, maxItems);
+      defaultTitle = 'Popular Routes';
+      defaultSubtitle = `Moving routes from ${location.name} and ${location.parentCity!.name}`;
+    } else {
+      // For cities: get routes from this city
+      relevantRoutes = allRoutes.filter((r: Route) =>
+        r.origin_name === location.slug
+      ).slice(0, maxItems);
+      defaultTitle = `Popular Routes from ${location.name}`;
+      defaultSubtitle = `Moving from ${location.name}? We provide reliable moving services to these popular destinations`;
+    }
   }
 
   if (relevantRoutes.length === 0) {
     return null;
   }
 
+  const displayTitle = title ?? defaultTitle;
+  const displaySubtitle = subtitle ?? defaultSubtitle;
+
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Popular <span className="text-orange-500">Routes</span>{!isNeighborhood && ` from ${location.name}`}
+            {displayTitle.includes(' ') ? (
+              <>
+                {displayTitle.split(' ').slice(0, -1).join(' ')}{' '}
+                <span className="text-orange-500">{displayTitle.split(' ').slice(-1)}</span>
+              </>
+            ) : (
+              <span className="text-orange-500">{displayTitle}</span>
+            )}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            {isNeighborhood
-              ? `Moving routes from ${location.name} and ${location.parentCity!.name}`
-              : `Moving from ${location.name}? We provide reliable moving services to these popular destinations`
-            }
-          </p>
+          {displaySubtitle && (
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              {displaySubtitle}
+            </p>
+          )}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {relevantRoutes.map((route: any, index: number) => {
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
+          {relevantRoutes.map((route, index) => {
             const hours = Math.floor(route.drive_time_min / 60);
             const mins = route.drive_time_min % 60;
             const timeDisplay = hours > 0 ? `${hours}h ${mins}m` : `${mins}m`;
+            const cost = getRouteCost(route);
             return (
               <Link
                 key={index}
                 href={`/${route.slug}-movers`}
-                className="bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow group"
+                className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:border-orange-500 hover:shadow-md transition-all group"
               >
                 <div className="flex items-center justify-between mb-4">
                   <Navigation className="w-6 h-6 text-orange-500" />
@@ -78,12 +138,12 @@ export default function RouteSection({ location }: RouteSectionProps) {
                     {route.distance_mi} mi • {timeDisplay}
                   </span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">
+                <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-orange-500 transition-colors">
                   {titleCase(route.origin_name)} to {titleCase(route.destination_name)}
                 </h3>
-                {route.house_sizes?.['1_bedroom']?.min_cost && (
-                  <p className="text-orange-500 font-semibold mb-3">
-                    Starting from ${route.house_sizes['1_bedroom'].min_cost.toLocaleString()}
+                {cost && (
+                  <p className="text-orange-500 font-bold text-lg mb-3">
+                    Starting from ${cost.toLocaleString()}
                   </p>
                 )}
                 <div className="text-orange-600 group-hover:text-orange-700 font-medium flex items-center">
@@ -94,13 +154,13 @@ export default function RouteSection({ location }: RouteSectionProps) {
             );
           })}
         </div>
-        {isNeighborhood && (
+        {location && (
           <div className="text-center mt-12">
             <Link
-              href="/routes"
-              className="inline-flex items-center text-orange-500 hover:text-orange-600 font-medium"
+              href={`/routes?from=${location.slug}`}
+              className="inline-flex items-center px-6 py-3 border-2 border-orange-500 text-orange-500 font-semibold rounded-lg hover:bg-orange-500 hover:text-white transition-colors"
             >
-              View All Routes
+              View All {location.name} Routes
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
           </div>

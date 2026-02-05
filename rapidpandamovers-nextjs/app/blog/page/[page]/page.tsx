@@ -1,14 +1,12 @@
 import { notFound, redirect } from 'next/navigation'
 import BlogListPage from '../../BlogListPage'
-import blogData from '../../../../data/posts.json'
+import { getPostsSortedByDate } from '../../../../lib/blog'
 
 const POSTS_PER_PAGE = 12
 
 // Generate static params for all pages
 export async function generateStaticParams() {
-  const sortedBlog = [...blogData].sort((a, b) =>
-    new Date(b.date).getTime() - new Date(a.date).getTime()
-  )
+  const sortedBlog = getPostsSortedByDate()
   // Exclude featured post from pagination count
   const postsForPagination = sortedBlog.slice(1)
   const totalPages = Math.ceil(postsForPagination.length / POSTS_PER_PAGE)
@@ -39,9 +37,7 @@ export default async function BlogPaginatedPage({ params }: { params: Promise<{ 
   }
 
   // Validate page number
-  const sortedBlog = [...blogData].sort((a, b) =>
-    new Date(b.date).getTime() - new Date(a.date).getTime()
-  )
+  const sortedBlog = getPostsSortedByDate()
   const postsForPagination = sortedBlog.slice(1)
   const totalPages = Math.ceil(postsForPagination.length / POSTS_PER_PAGE)
 

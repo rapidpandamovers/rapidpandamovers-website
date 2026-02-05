@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 
 export default function QuotePage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
               Get Your <span className="text-orange-500">Free Moving Quote</span>
@@ -26,8 +26,8 @@ export default function QuotePage() {
 
       {/* Form Section */}
       <section className="py-12">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
+        <div className="container mx-auto">
+          <div className="mx-auto">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden p-8">
               <QuoteForm />
             </div>

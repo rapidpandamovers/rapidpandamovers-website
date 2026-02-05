@@ -4,7 +4,7 @@
     "slug": "packing-services",
     "icon": "Package",
     "title": "Expert Packing & Unpacking Services in Miami",
-    "description": "Professional packing and unpacking services using high-quality materials and proven techniques.",
+    "description": "Our professional packing team takes the stress out of preparing for your move with expert techniques and premium materials. We carefully wrap and box everything from everyday items to fragile valuables, using dish packs, wardrobe boxes, and custom crating as needed. Whether you need full-service packing or just help with delicate items, we ensure everything arrives at your new home safely.",
     "meta_title": "Professional Packing Services Miami | Packing & Unpacking | Rapid Panda Movers",
     "meta_description": "Professional packing services in Miami. Expert packing and unpacking with high-quality materials, fragile item care, and full insurance coverage.",
     "hero": {
@@ -49,7 +49,7 @@
         "description": "Every box is labeled by room and contents for quick, organized unpacking at your new home."
       }
     ],
-    "extras": [
+    "included": [
       "Professional packing materials",
       "Fragile item special handling",
       "Furniture wrapping and protection",
@@ -85,10 +85,23 @@
         "description": "Wardrobes, dishes, electronics"
       }
     ],
-    "benefits": [
-      "Expert Handling",
-      "Time-Saving",
-      "Quality Materials"
+    "faq": [
+      {
+        "question": "What's included in your packing services?",
+        "answer": "Our packing services include all materials (boxes, tape, bubble wrap, packing paper), professional packers, labeling by room, and careful handling of fragile items. We offer full-service packing for your entire home or partial packing for specific rooms or items."
+      },
+      {
+        "question": "How long does professional packing take?",
+        "answer": "Packing time depends on your home size. A typical 2-bedroom home takes 3-5 hours, while larger homes may take a full day. We can often pack and move on the same day for smaller homes, or pack the day before for larger moves."
+      },
+      {
+        "question": "Should I pack anything myself before the movers arrive?",
+        "answer": "You don't have to, but we recommend packing personal items, valuables, important documents, and medications separately. You should also set aside items you'll need immediately at your new home in a clearly marked essentials box."
+      },
+      {
+        "question": "Do you provide unpacking services too?",
+        "answer": "Yes! We offer complete unpacking services at your new home. Our team will unpack boxes, place items where you want them, and remove all packing materials. You can choose full unpacking or just help with specific rooms."
+      }
     ],
     "is_active": true
   },
@@ -97,7 +110,7 @@
     "slug": "local-moving",
     "icon": "Truck",
     "title": "Professional Local Moving Services in Miami-Dade County",
-    "description": "Same-day and local area moves with quick response and experienced crews.",
+    "description": "Moving within Miami-Dade County? Our local moving crews know every neighborhood from Brickell to Kendall, handling your belongings with care while navigating Miami's unique challenges. We offer flexible scheduling including same-day service, with transparent hourly rates and no hidden fees. From studio apartments to large family homes, our experienced teams make local moves fast, affordable, and stress-free.",
     "meta_title": "Local Moving Services Miami | Same Day Moves | Rapid Panda Movers",
     "meta_description": "Professional local moving services within Miami-Dade County. Same-day service, experienced crews, and transparent pricing for your local move.",
     "hero": {
@@ -142,7 +155,7 @@
         "description": "We protect your property and belongings with padding, dollies, and experienced handling."
       }
     ],
-    "extras": [
+    "included": [
       "Full-service packing and unpacking",
       "Loading and unloading",
       "Furniture disassembly and reassembly",
@@ -188,11 +201,23 @@
         "description": "Relax in your new home"
       }
     ],
-    "benefits": [
-      "Experienced Local Movers",
-      "Flexible Scheduling",
-      "Fully Licensed & Insured",
-      "Professional Team"
+    "faq": [
+      {
+        "question": "How much does a local move in Miami cost?",
+        "answer": "Local moves are typically charged hourly, ranging from $100-$200 per hour depending on crew size. A typical 2-bedroom apartment move takes 3-5 hours. We provide free estimates so you know exactly what to expect with no hidden fees."
+      },
+      {
+        "question": "Do I need to reserve an elevator for my move?",
+        "answer": "Most Miami buildings require elevator reservations for moves. We recommend checking with your building management at least a week in advance. Our team is experienced with high-rise moves and can help coordinate building requirements."
+      },
+      {
+        "question": "Can you move me on the same day?",
+        "answer": "Yes! We offer same-day moving services for urgent relocations within Miami-Dade County. Availability depends on scheduling, so call us as early as possible. Same-day moves are subject to availability and may have slightly higher rates."
+      },
+      {
+        "question": "What areas do you serve for local moves?",
+        "answer": "We serve all of Miami-Dade County including Miami, Coral Gables, Miami Beach, Hialeah, Doral, Aventura, Kendall, Homestead, Brickell, Coconut Grove, and surrounding areas."
+      }
     ],
     "is_active": true
   },
@@ -201,7 +226,7 @@
     "slug": "long-distance-moving",
     "icon": "Navigation",
     "title": "Reliable Interstate Moving Services Across All 50 States",
-    "description": "Statewide and interstate moves with reliable ETAs and real-time tracking.",
+    "description": "When your move takes you beyond South Florida, trust Rapid Panda Movers to get you there safely and on schedule. We handle interstate relocations across all 50 states with dedicated trucks, GPS tracking, and guaranteed delivery windows. Our binding quotes mean no surprise charges, and your belongings stay with our crew from pickup to delivery—no warehouses, no transfers, no uncertainty.",
     "meta_title": "Long Distance Moving Services | Interstate Moves | Rapid Panda Movers",
     "meta_description": "Professional long-distance moving services across all 50 states. Interstate moves with real-time tracking, licensed & insured, and storage solutions.",
     "hero": {
@@ -246,7 +271,7 @@
         "description": "Your written quote is locked in - the price we quote is the price you pay, guaranteed."
       }
     ],
-    "extras": [
+    "included": [
       "Interstate moving services",
       "Professional packing and crating",
       "Secure transportation",
@@ -292,10 +317,23 @@
         "description": "Careful unloading and placement at your new home"
       }
     ],
-    "benefits": [
-      "Licensed & Insured",
-      "Real-Time Tracking",
-      "Experienced Team"
+    "faq": [
+      {
+        "question": "How far in advance should I book a long distance move?",
+        "answer": "We recommend booking 4-8 weeks in advance, especially during peak moving season (May-September). This ensures you get your preferred dates and gives us time to plan the most efficient route for your belongings."
+      },
+      {
+        "question": "How long will my long distance move take?",
+        "answer": "Delivery times depend on distance. Moves within Florida typically take 1-3 days. Cross-country moves can take 7-14 days. We provide guaranteed delivery windows so you can plan your arrival at your new home."
+      },
+      {
+        "question": "Are my belongings insured during an interstate move?",
+        "answer": "Yes, we offer full-value protection coverage for interstate moves. Basic liability coverage is included at no extra cost, and we recommend full-value protection for complete peace of mind during long-distance relocations."
+      },
+      {
+        "question": "Will the same crew load and unload my belongings?",
+        "answer": "Yes! Unlike many long-distance movers, we use dedicated trucks and crews. Your belongings stay on one truck with our team from pickup to delivery—no warehouses, no transfers, and no middlemen."
+      }
     ],
     "is_active": true
   },
@@ -304,7 +342,7 @@
     "slug": "residential-moving",
     "icon": "Home",
     "title": "Professional Residential Moving Services in Miami",
-    "description": "Full-service home moves with careful protection and professional handling.",
+    "description": "Your home deserves movers who treat every item like their own. Our residential moving service covers everything from careful furniture wrapping to systematic room-by-room unpacking at your new place. We protect floors, doorways, and walls throughout the process, and our crews are trained to handle the unique layouts of Miami's diverse housing—from historic Coral Gables estates to modern high-rise condos.",
     "hero": {
       "title": "Experience Stress-Free Residential Moving in Miami",
       "description": "Full-service home moves with careful protection",
@@ -347,7 +385,7 @@
         "description": "Properly sized trucks and experienced loading means everything moves in one organized trip."
       }
     ],
-    "extras": [
+    "included": [
       "Full-service packing and unpacking",
       "Loading and unloading",
       "Furniture disassembly and reassembly",
@@ -379,11 +417,23 @@
         "description": "Relax in your new home"
       }
     ],
-    "benefits": [
-      "Experienced Local Movers",
-      "Flexible Scheduling",
-      "Fully Licensed & Insured",
-      "Professional Team"
+    "faq": [
+      {
+        "question": "What's included in your residential moving service?",
+        "answer": "Our residential moving includes furniture disassembly/reassembly, wrapping and padding of all furniture, loading and unloading, transportation, and placement in your new home. Packing services are available as an add-on."
+      },
+      {
+        "question": "How do you protect my furniture during the move?",
+        "answer": "We use professional-grade moving blankets, stretch wrap, and corner protectors on all furniture. Floors and doorways are protected with runners and padding. Our crews are trained in proper lifting and carrying techniques."
+      },
+      {
+        "question": "Can you move my home on a weekend?",
+        "answer": "Yes! We offer weekend and evening moves to accommodate your schedule. Weekend slots fill up quickly, so we recommend booking in advance. Rates are the same whether you move on a weekday or weekend."
+      },
+      {
+        "question": "Do you move items into storage?",
+        "answer": "Absolutely. We can move your belongings directly to a storage facility if your new home isn't ready yet. We also offer coordination with storage facilities and can handle pickup from storage when you're ready."
+      }
     ],
     "is_active": true
   },
@@ -392,7 +442,7 @@
     "slug": "commercial-moving",
     "icon": "Building",
     "title": "Professional Business & Office Relocations in Miami",
-    "description": "Office and business relocations with minimal downtime and maximum efficiency.",
+    "description": "Business relocations require precision planning to minimize disruption and keep your operations running. Our commercial moving team works around your schedule—evenings, weekends, or overnight—to ensure a seamless transition. We safely handle IT equipment, office furniture, and confidential files with systematic labeling so your team can get back to work quickly at your new location.",
     "meta_title": "Commercial Moving Services Miami | Business Relocations | Rapid Panda Movers",
     "meta_description": "Professional commercial moving services in Miami. Business relocations with minimal downtime, after-hours service, and experienced teams for all industries.",
     "hero": {
@@ -437,7 +487,7 @@
         "description": "We move evenings and weekends so your business operations continue uninterrupted."
       }
     ],
-    "extras": [
+    "included": [
       "Office relocations",
       "IT equipment moving",
       "Furniture disassembly/assembly",
@@ -495,10 +545,23 @@
         "description": "Get your business up and running quickly at the new location"
       }
     ],
-    "benefits": [
-      "Minimize Downtime",
-      "Professional Handling",
-      "Flexible Scheduling"
+    "faq": [
+      {
+        "question": "Can you move my office on evenings or weekends?",
+        "answer": "Yes! We specialize in after-hours and weekend office moves to minimize disruption to your business operations. Most commercial moves are scheduled outside regular business hours so you can be operational Monday morning."
+      },
+      {
+        "question": "How do you handle IT equipment during an office move?",
+        "answer": "Our team safely disconnects, packs, transports, and reconnects computers, servers, and other IT equipment. We use anti-static materials and proper handling procedures. We recommend backing up all data before the move."
+      },
+      {
+        "question": "How much advance notice do you need for a commercial move?",
+        "answer": "We recommend 4-6 weeks notice for commercial moves to allow proper planning. However, we can accommodate shorter timelines when needed. Larger offices with complex IT needs may require more lead time."
+      },
+      {
+        "question": "Do you offer office furniture assembly services?",
+        "answer": "Yes, we handle complete disassembly at your current location and reassembly at your new office. This includes desks, cubicles, conference tables, and other office furniture. Everything is placed according to your floor plan."
+      }
     ],
     "is_active": true
   },
@@ -507,7 +570,7 @@
     "slug": "furniture-moving",
     "icon": "Couch",
     "title": "Specialized Furniture Moving Services in Miami",
-    "description": "Specialized furniture handling and protection for all types of furniture.",
+    "description": "Large, heavy, or delicate furniture requires specialized knowledge and equipment to move safely. Our furniture moving specialists handle everything from sectional sofas and king-size beds to antique armoires and grand pianos. We use furniture blankets, stretch wrap, and corner protectors to prevent scratches, and our crews are experts at navigating tight doorways, staircases, and elevators.",
     "meta_title": "Furniture Moving Services Miami | Specialized Furniture Handling | Rapid Panda Movers",
     "meta_description": "Professional furniture moving services in Miami. Specialized handling for all furniture types including antiques, pianos, and heavy pieces with expert protection.",
     "hero": {
@@ -552,7 +615,7 @@
         "description": "Stair dollies, furniture sliders, and lifting straps make tight spaces manageable."
       }
     ],
-    "extras": [
+    "included": [
       "Antique furniture handling",
       "Piano moving services",
       "Heavy furniture transport",
@@ -580,11 +643,23 @@
         "description": "Careful handling of contemporary pieces"
       }
     ],
-    "benefits": [
-      "Specialized Equipment",
-      "Expert Handling",
-      "Full Protection",
-      "White Glove Service"
+    "faq": [
+      {
+        "question": "Can you move a piano or other heavy items?",
+        "answer": "Yes! We have specialized equipment and trained crews for moving pianos, safes, pool tables, and other heavy items. These require special handling techniques and may have additional fees based on weight and complexity."
+      },
+      {
+        "question": "How do you protect antique furniture during a move?",
+        "answer": "Antique furniture receives extra care with acid-free packing materials, custom padding, and climate considerations. Our crews are trained in proper handling techniques for delicate pieces. We also offer custom crating for extremely valuable items."
+      },
+      {
+        "question": "Do you disassemble and reassemble furniture?",
+        "answer": "Yes, furniture disassembly and reassembly is included in our service. We carefully label and bag all hardware so nothing gets lost. Our crews are experienced with all types of furniture including IKEA, bedroom sets, and sectional sofas."
+      },
+      {
+        "question": "What if my furniture doesn't fit through the door?",
+        "answer": "Our experienced crews know techniques for maneuvering large furniture through tight spaces. In rare cases where furniture truly won't fit, we can often remove doors or hinges temporarily. We'll assess this during your estimate."
+      }
     ],
     "is_active": true
   },
@@ -593,7 +668,7 @@
     "slug": "celebrity-moving",
     "icon": "Shield",
     "title": "Discrete Celebrity Moving Services in Miami",
-    "description": "Discrete and confidential moves for high-profile clients with maximum privacy.",
+    "description": "High-profile individuals need movers they can trust with their privacy and security. Our celebrity moving service features NDA-bound crews, unmarked vehicles, and flexible scheduling to avoid public attention. We coordinate directly with security teams and property managers, ensuring a seamless relocation whether you're moving between Miami Beach estates or relocating from out of state.",
     "meta_title": "Celebrity Moving Services Miami | Discrete High-Profile Moves | Rapid Panda Movers",
     "meta_description": "Discrete celebrity moving services in Miami. Confidential moves for high-profile clients with maximum privacy, security, and professional handling.",
     "hero": {
@@ -638,7 +713,7 @@
         "description": "We work around your schedule, whether that's midnight, weekends, or short notice."
       }
     ],
-    "extras": [
+    "included": [
       "Confidential moving services",
       "Privacy protection protocols",
       "Secure transportation",
@@ -648,11 +723,23 @@
       "Valuables protection",
       "Discrete scheduling"
     ],
-    "benefits": [
-      "Complete Privacy",
-      "NDA Compliance",
-      "24/7 Availability",
-      "Secure Handling"
+    "faq": [
+      {
+        "question": "How do you ensure privacy during a celebrity move?",
+        "answer": "All crew members sign NDAs before your move. We use unmarked vehicles, coordinate strategic timing to avoid attention, and can arrange for minimal crew presence. Your privacy and security are our top priorities."
+      },
+      {
+        "question": "Can you accommodate last-minute schedule changes?",
+        "answer": "Yes, we understand that high-profile schedules change frequently. We maintain flexibility and can adjust moving dates and times with reasonable notice. Our 24/7 availability means we work around your schedule."
+      },
+      {
+        "question": "Do you coordinate with security teams?",
+        "answer": "Absolutely. We work directly with your security personnel, property managers, and assistants to ensure seamless coordination. Background-checked crews and secure protocols give you complete peace of mind."
+      },
+      {
+        "question": "Can you handle high-value items and artwork?",
+        "answer": "Yes, we're experienced with moving valuable art, collectibles, and luxury furnishings. We offer custom crating, climate-controlled transport, and full-value insurance options based on professional appraisals."
+      }
     ],
     "is_active": true
   },
@@ -661,7 +748,7 @@
     "slug": "apartment-moving",
     "icon": "Building2",
     "title": "Budget-Friendly Apartment Moving in Miami",
-    "description": "Specialized apartment moving services designed for efficiency and affordability.",
+    "description": "Apartment moves come with unique challenges—elevator reservations, parking restrictions, and tight hallways. Our apartment moving specialists handle these logistics daily across Miami's high-rises and garden-style complexes. We bring floor runners and door protectors to meet building requirements, work efficiently to minimize elevator time, and offer budget-friendly rates perfect for studios through multi-bedroom units.",
     "meta_title": "Apartment Moving Services Miami | Budget-Friendly Moves | Rapid Panda Movers",
     "meta_description": "Budget-friendly apartment moving services in Miami. Specialized apartment moves with high-rise expertise, same-day service, and transparent pricing.",
     "hero": {
@@ -706,7 +793,7 @@
         "description": "We bring floor runners, door jamb protectors, and meet all building moving requirements."
       }
     ],
-    "extras": [
+    "included": [
       "Studio and 1-bedroom moves",
       "Multi-bedroom apartment moves",
       "High-rise apartment expertise",
@@ -760,10 +847,23 @@
         "description": "Unloading and placement to get you settled quickly"
       }
     ],
-    "benefits": [
-      "Budget-Friendly Pricing",
-      "High-Rise Expertise",
-      "Quick Turnaround"
+    "faq": [
+      {
+        "question": "How do you handle building elevator reservations?",
+        "answer": "We coordinate with your building management to reserve service elevators and loading docks. Let us know your building's requirements, and we'll handle the scheduling. Many Miami buildings require 48-72 hours notice."
+      },
+      {
+        "question": "Is apartment moving cheaper than house moving?",
+        "answer": "Often yes! Apartments typically have fewer items and smaller furniture. We offer competitive hourly rates for apartment moves, and studio or 1-bedroom moves can often be completed in 2-4 hours."
+      },
+      {
+        "question": "Can you move me from a walk-up apartment?",
+        "answer": "Absolutely. Our crews are experienced with stairs and don't charge extra for standard stair carries. For walk-ups above the third floor or with unusually narrow stairs, we'll discuss any considerations during your estimate."
+      },
+      {
+        "question": "Do you bring floor protection for my apartment building?",
+        "answer": "Yes, we bring floor runners, door jamb protectors, and elevator pads as standard practice. This protects both your apartment and common areas, and satisfies most building requirements for professional moves."
+      }
     ],
     "is_active": true
   },
@@ -772,7 +872,7 @@
     "slug": "full-service-moving",
     "icon": "CheckCircle",
     "title": "Complete Full-Service Moving Solutions in Miami",
-    "description": "Complete moving services from start to finish with comprehensive coverage.",
+    "description": "For a truly hands-off moving experience, our full-service option handles everything from the first box to the final piece of furniture placement. We pack your entire home, load and transport your belongings, then unpack and organize at your new place. You can leave for work and return to a fully set-up home—beds made, kitchen unpacked, and boxes broken down for recycling.",
     "meta_title": "Full-Service Moving Miami | Complete Moving Solutions | Rapid Panda Movers",
     "meta_description": "Complete full-service moving solutions in Miami. End-to-end moving services including packing, transport, unpacking, and setup with professional teams.",
     "hero": {
@@ -817,7 +917,7 @@
         "description": "Arrive at your new home with everything unpacked, organized, and ready to live."
       }
     ],
-    "extras": [
+    "included": [
       "Complete packing services",
       "Professional loading and unloading",
       "Secure transportation",
@@ -827,11 +927,23 @@
       "Storage coordination",
       "24/7 support"
     ],
-    "benefits": [
-      "Complete Coverage",
-      "Professional Team",
-      "Time-Saving",
-      "Stress-Free Experience"
+    "faq": [
+      {
+        "question": "What does full-service moving include?",
+        "answer": "Full-service moving includes packing all your belongings, loading, transportation, unloading, unpacking, and furniture assembly. We handle everything from start to finish—you can literally leave for work and come home to a fully set-up new place."
+      },
+      {
+        "question": "How much more does full-service cost compared to basic moving?",
+        "answer": "Full-service typically adds 40-60% to a basic move, mainly for packing time and materials. However, many customers find the time savings and reduced stress well worth it, especially for busy professionals and families."
+      },
+      {
+        "question": "Can I choose which rooms get full-service packing?",
+        "answer": "Absolutely! Many customers opt for full-service on kitchens and fragile items while packing bedrooms themselves. We're flexible and can customize the service to match your needs and budget."
+      },
+      {
+        "question": "Do you remove packing materials after unpacking?",
+        "answer": "Yes! After unpacking, we break down all boxes and remove packing materials from your new home. You won't have to deal with mountains of cardboard and bubble wrap—we take it all away."
+      }
     ],
     "is_active": true
   },
@@ -840,7 +952,7 @@
     "slug": "labor-only-moving",
     "icon": "Users",
     "title": "Labor Only Moving Services in Miami",
-    "description": "Moving labor services when you provide the truck for cost-effective solutions.",
+    "description": "Already have a truck or moving container? Our labor-only service provides the professional muscle you need without paying for transportation. Our trained crews handle loading, unloading, furniture disassembly, and heavy lifting with the same care as our full-service moves. It's a cost-effective solution that still gives you experienced professionals instead of unreliable help from friends.",
     "meta_title": "Labor Only Moving Services Miami | Moving Labor | Rapid Panda Movers",
     "meta_description": "Labor only moving services in Miami. Professional moving labor when you provide the truck. Cost-effective moving solutions with experienced crews.",
     "hero": {
@@ -885,7 +997,7 @@
         "description": "Experienced crews work quickly and systematically to complete your move faster."
       }
     ],
-    "extras": [
+    "included": [
       "Professional moving labor",
       "Loading and unloading assistance",
       "Furniture disassembly/assembly",
@@ -895,11 +1007,23 @@
       "Experienced crews",
       "Flexible scheduling"
     ],
-    "benefits": [
-      "Cost-Effective",
-      "Experienced Labor",
-      "Flexible Scheduling",
-      "No Equipment Costs"
+    "faq": [
+      {
+        "question": "What does labor-only moving include?",
+        "answer": "Labor-only includes our professional crew for loading, unloading, and furniture handling. You provide the truck or container (rental truck, PODS, etc.). It's perfect if you want pro help but prefer to handle transportation yourself."
+      },
+      {
+        "question": "How much can I save with labor-only service?",
+        "answer": "Labor-only typically costs 30-50% less than full-service moving since you're not paying for our trucks and fuel. If you have access to a suitable vehicle or are using a container service, it's a great cost-effective option."
+      },
+      {
+        "question": "Will your crew load a rental truck I've rented?",
+        "answer": "Yes! We work with all major rental trucks including U-Haul, Penske, Budget, and others. Our crews are experienced with maximizing space in rental trucks and securing loads properly for transport."
+      },
+      {
+        "question": "Can you help load a portable moving container?",
+        "answer": "Absolutely. We regularly load PODS, ABF U-Pack, 1-800-PACK-RAT, and similar containers. Our crews know how to maximize space and secure items properly for container transport."
+      }
     ],
     "is_active": true
   },
@@ -908,7 +1032,7 @@
     "slug": "military-moving",
     "icon": "Flag",
     "title": "Specialized Military Moving Services in Miami",
-    "description": "Specialized moves for military personnel and families with understanding of unique needs.",
+    "description": "We understand the unique demands of military relocations—short-notice PCS orders, deployment timelines, and strict documentation requirements. Our military moving service offers rapid response scheduling and works seamlessly with families when service members can't be present. We provide the paperwork you need and offer military discounts to thank you for your service.",
     "meta_title": "Military Moving Services Miami | Military Relocations | Rapid Panda Movers",
     "meta_description": "Specialized military moving services in Miami. Military relocations with understanding of unique needs, flexible scheduling, and veteran-friendly service.",
     "hero": {
@@ -953,7 +1077,7 @@
         "description": "Careful packing techniques ensure your belongings survive multiple relocations."
       }
     ],
-    "extras": [
+    "included": [
       "PCS move assistance",
       "Deployment move support",
       "Flexible scheduling",
@@ -963,11 +1087,23 @@
       "Veteran-friendly service",
       "Emergency move support"
     ],
-    "benefits": [
-      "Military Discounts",
-      "Flexible Scheduling",
-      "Veteran-Friendly",
-      "PCS Experience"
+    "faq": [
+      {
+        "question": "Do you offer military discounts?",
+        "answer": "Yes! We're proud to offer discounts to active duty military, veterans, and military families. Present your military ID when booking, and we'll apply your discount to the final bill."
+      },
+      {
+        "question": "Can you handle short-notice PCS moves?",
+        "answer": "Absolutely. We understand military orders don't always give much advance notice. We maintain availability for urgent moves and can often accommodate PCS relocations with just a few days' notice."
+      },
+      {
+        "question": "Do you provide the documentation needed for military moves?",
+        "answer": "Yes, we provide all necessary paperwork including weight tickets, inventories, and receipts that you may need for reimbursement or records. Our team understands military move documentation requirements."
+      },
+      {
+        "question": "Can you move my family if I'm deployed?",
+        "answer": "Yes, we regularly work with military families when the service member can't be present. We'll coordinate with your spouse, family member, or designated representative to ensure a smooth relocation."
+      }
     ],
     "is_active": true
   },
@@ -976,7 +1112,7 @@
     "slug": "same-day-moving",
     "icon": "Clock",
     "title": "Last Minute Same Day Moving Services in Miami",
-    "description": "Last minute, rapid response moving services for urgent relocations.",
+    "description": "Life doesn't always give you advance notice. When you need to move today, our same-day moving service delivers. We keep crews and trucks available specifically for urgent situations, and our experienced teams work efficiently to complete your move within tight timelines. Call in the morning and be in your new place by evening—no compromises on quality or care.",
     "meta_title": "Same Day Moving Services Miami | Last Minute Moves | Rapid Panda Movers",
     "meta_description": "Same day moving services in Miami. Last minute, rapid response moving services for urgent relocations with experienced crews and quick turnaround.",
     "hero": {
@@ -1021,7 +1157,7 @@
         "description": "Our 24/7 dispatch means help is available whenever your emergency strikes."
       }
     ],
-    "extras": [
+    "included": [
       "Same-day availability",
       "Rapid response teams",
       "Emergency moving services",
@@ -1031,11 +1167,23 @@
       "Express service",
       "Urgent relocation support"
     ],
-    "benefits": [
-      "Rapid Response",
-      "24/7 Availability",
-      "Quick Turnaround",
-      "Emergency Support"
+    "faq": [
+      {
+        "question": "How quickly can you move me today?",
+        "answer": "Depending on availability, we can often have a crew at your location within 2-4 hours of your call. For guaranteed same-day service, call us as early in the day as possible."
+      },
+      {
+        "question": "Is same-day moving more expensive?",
+        "answer": "Same-day moves may have slightly higher rates due to urgency, but we keep pricing fair—no price gouging when you're in a bind. We'll give you an honest quote before we start."
+      },
+      {
+        "question": "What size moves can you do same-day?",
+        "answer": "We can handle same-day moves of any size, from studio apartments to full homes. Larger moves may require multiple trips or crews, which we'll coordinate to complete your move as quickly as possible."
+      },
+      {
+        "question": "Do I need to have everything packed for same-day service?",
+        "answer": "Not necessarily. We can provide packing services as part of your same-day move. However, if you can pack smaller items in advance, it helps us complete the move faster."
+      }
     ],
     "is_active": true
   },
@@ -1044,7 +1192,7 @@
     "slug": "senior-moving",
     "icon": "Heart",
     "title": "Assisted Senior Moving Services in Miami",
-    "description": "Assisted living, retirement home and elderly care moves with compassionate service.",
+    "description": "Moving a senior loved one requires patience, compassion, and understanding of the emotional weight of leaving a longtime home. Our senior moving specialists take their time, helping with downsizing decisions and coordinating with assisted living facilities on timing requirements. We handle everything gently and set up the new space so it feels like home from day one.",
     "meta_title": "Senior Moving Services Miami | Assisted Living Moves | Rapid Panda Movers",
     "meta_description": "Compassionate senior moving services in Miami. Assisted living moves, retirement home relocations, and elderly care moves with understanding and patience.",
     "hero": {
@@ -1089,7 +1237,7 @@
         "description": "We work directly with assisted living facilities to meet all deadlines smoothly."
       }
     ],
-    "extras": [
+    "included": [
       "Assisted living moves",
       "Retirement home relocations",
       "Elderly care transitions",
@@ -1099,11 +1247,23 @@
       "Medical equipment transport",
       "Sensitive item care"
     ],
-    "benefits": [
-      "Compassionate Service",
-      "Patient Handling",
-      "Family Coordination",
-      "Medical Equipment Care"
+    "faq": [
+      {
+        "question": "How do you help seniors who need to downsize?",
+        "answer": "We assist with sorting decisions, can coordinate donation pickups, and help organize what's going to the new home. Our patient crews understand this is an emotional process and take the time needed to do it right."
+      },
+      {
+        "question": "Do you work with assisted living facilities?",
+        "answer": "Yes, we regularly coordinate with assisted living and retirement communities. We understand their move-in requirements, timing restrictions, and can work directly with facility staff to ensure smooth transitions."
+      },
+      {
+        "question": "Can family members be involved in the move?",
+        "answer": "Absolutely! We encourage family participation and can coordinate with adult children or other family members. We'll keep everyone informed and involved in decisions throughout the process."
+      },
+      {
+        "question": "How do you handle sentimental items and memories?",
+        "answer": "We treat every item with respect and care. Our crews are trained to be patient and understanding when items have sentimental value. We take extra time to properly wrap and protect cherished belongings."
+      }
     ],
     "is_active": true
   },
@@ -1112,7 +1272,7 @@
     "slug": "student-moving",
     "icon": "GraduationCap",
     "title": "Student Moving Services for Schools, Colleges and Universities",
-    "description": "School, college and university moving services designed for student needs and budgets.",
+    "description": "College students face unique moving challenges—tight budgets, academic schedules, and often no vehicle large enough for furniture. Our student moving service offers affordable rates and flexible scheduling around finals and move-in days. We handle dorm rooms, off-campus apartments, and summer storage transitions for students at UM, FIU, and colleges throughout Florida.",
     "meta_title": "Student Moving Services Miami | College Moves | Rapid Panda Movers",
     "meta_description": "Student moving services in Miami. College moves, university relocations, and student housing moves with budget-friendly pricing and flexible scheduling.",
     "hero": {
@@ -1157,7 +1317,7 @@
         "description": "Affordable summer storage keeps your belongings safe between semesters."
       }
     ],
-    "extras": [
+    "included": [
       "Dorm room moves",
       "Off-campus housing",
       "Summer storage solutions",
@@ -1167,11 +1327,23 @@
       "Group move coordination",
       "Campus delivery"
     ],
-    "benefits": [
-      "Student Discounts",
-      "Flexible Scheduling",
-      "Budget-Friendly",
-      "Campus Experience"
+    "faq": [
+      {
+        "question": "Do you offer student discounts?",
+        "answer": "Yes! Show your valid student ID and we'll apply a student discount to your move. We know students are on tight budgets and work to make professional moving accessible."
+      },
+      {
+        "question": "Can you move me during finals week?",
+        "answer": "We offer flexible scheduling to work around academic calendars. Book in advance for move-out dates around finals, as these are busy times. We can often accommodate evening or early morning moves."
+      },
+      {
+        "question": "Do you handle dorm room moves?",
+        "answer": "Absolutely! We're experienced with dorm moves at UM, FIU, and other local colleges. We know the tight spaces, elevator limitations, and time restrictions that come with dorm relocations."
+      },
+      {
+        "question": "Can you store my stuff over summer break?",
+        "answer": "Yes, we can coordinate storage solutions for summer break and move your belongings back when the new semester starts. This is a popular option for students who don't want to ship everything home."
+      }
     ],
     "is_active": true
   },
@@ -1180,7 +1352,7 @@
     "slug": "safe-moving",
     "icon": "Lock",
     "title": "Specialized Safe Moving Services in Miami",
-    "description": "Specialized handling for gun and money safe transportation with security protocols.",
+    "description": "Moving a safe requires specialized equipment and expertise—these heavy items can weigh hundreds to thousands of pounds and damage floors if handled improperly. Our safe moving team uses stair-climbing dollies, rigging equipment, and plywood paths to transport gun safes and money safes without damaging your home. We're fully insured for high-value item transport.",
     "meta_title": "Safe Moving Services Miami | Gun Safe & Money Safe Transport | Rapid Panda Movers",
     "meta_description": "Specialized safe moving services in Miami. Gun safe and money safe transportation with security protocols, specialized equipment, and insured transport.",
     "hero": {
@@ -1225,7 +1397,7 @@
         "description": "Our trucks and lift gates are rated for heavy safe transport with proper securing."
       }
     ],
-    "extras": [
+    "included": [
       "Gun safe transportation",
       "Money safe moving",
       "Security protocols",
@@ -1235,11 +1407,23 @@
       "Secure storage options",
       "Documentation services"
     ],
-    "benefits": [
-      "Security Protocols",
-      "Specialized Equipment",
-      "Insured Transport",
-      "Professional Handling"
+    "faq": [
+      {
+        "question": "How heavy of a safe can you move?",
+        "answer": "We can move safes weighing up to several thousand pounds using specialized equipment including heavy-duty dollies, stair-climbing equipment, and proper rigging. We'll assess your safe and location during the estimate."
+      },
+      {
+        "question": "Will moving a safe damage my floors?",
+        "answer": "No, we use plywood paths, floor protectors, and proper equipment to distribute weight and prevent floor damage. Our crews are trained in safe-moving techniques that protect both the safe and your home."
+      },
+      {
+        "question": "Can you move a safe up or down stairs?",
+        "answer": "Yes, we have stair-climbing equipment and trained crews for moving safes on stairs. This requires careful planning and additional crew members. We'll discuss the specifics during your in-home estimate."
+      },
+      {
+        "question": "Do I need to empty my safe before the move?",
+        "answer": "For lighter safes, contents can often stay inside. For heavier safes or long moves, we may recommend removing contents to reduce weight and protect valuables. We'll advise you based on your specific situation."
+      }
     ],
     "is_active": true
   },
@@ -1248,7 +1432,7 @@
     "slug": "antique-moving",
     "icon": "Gem",
     "title": "Art and Valuables Moving with Extra Care in Miami",
-    "description": "Art and valuables moving with extra care and specialized handling techniques.",
+    "description": "Antiques and fine art represent irreplaceable value that standard moving practices can't protect. Our antique moving service uses museum-quality handling techniques, acid-free packing materials, and climate considerations for delicate items. We offer custom crating for sculptures, mirrors, and fragile furniture, plus full-value insurance options based on professional appraisals.",
     "meta_title": "Antique Moving Services Miami | Art & Valuables Transport | Rapid Panda Movers",
     "meta_description": "Professional antique moving services in Miami. Art and valuables transport with extra care, specialized handling, and museum-quality protection.",
     "hero": {
@@ -1293,7 +1477,7 @@
         "description": "Climate-controlled transport and proper wrapping prevent environmental damage."
       }
     ],
-    "extras": [
+    "included": [
       "Antique furniture transport",
       "Artwork moving services",
       "Collectibles handling",
@@ -1303,11 +1487,23 @@
       "Insurance documentation",
       "White glove service"
     ],
-    "benefits": [
-      "Museum-Quality Care",
-      "Specialized Handling",
-      "Custom Crating",
-      "White Glove Service"
+    "faq": [
+      {
+        "question": "How do you protect antiques during a move?",
+        "answer": "We use museum-quality techniques including acid-free tissue, custom padding, and specialized wrapping. Delicate items receive individual attention, and we offer custom crating for extremely valuable or fragile pieces."
+      },
+      {
+        "question": "Do you offer insurance for antiques and artwork?",
+        "answer": "Yes, we offer full-value protection options for antiques and art. For high-value items, we recommend obtaining a professional appraisal beforehand and discussing coverage that matches the item's true value."
+      },
+      {
+        "question": "Can you move large artwork and mirrors?",
+        "answer": "Absolutely. We have specialized picture boxes, mirror cartons, and custom crating options for artwork of all sizes. Oversized pieces receive custom protection and careful handling throughout the move."
+      },
+      {
+        "question": "Do you have experience with valuable collectibles?",
+        "answer": "Yes, we've moved valuable collections including fine art, antique furniture, vintage items, and memorabilia. Our crews are trained in proper handling techniques and understand the irreplaceable nature of these items."
+      }
     ],
     "is_active": true
   },
@@ -1316,7 +1512,7 @@
     "slug": "office-moving",
     "icon": "Briefcase",
     "title": "Professional Office Moving Services in Miami",
-    "description": "Office relocations with minimal disruption and efficient execution.",
+    "description": "Office moves require careful coordination to keep your business running smoothly. Our office moving team handles workstation disassembly, IT equipment, and file systems with color-coded organization so everything lands in the right place. We work after hours and weekends to minimize disruption, getting your team operational at the new location as quickly as possible.",
     "meta_title": "Office Moving Services Miami | Office Relocations | Rapid Panda Movers",
     "meta_description": "Professional office moving services in Miami. Office relocations with minimal disruption, efficient execution, and experienced teams for seamless transitions.",
     "hero": {
@@ -1361,7 +1557,7 @@
         "description": "Locked containers and vetted staff protect your confidential business materials."
       }
     ],
-    "extras": [
+    "included": [
       "Office space relocations",
       "IT equipment moving",
       "Furniture disassembly/assembly",
@@ -1393,11 +1589,23 @@
         "description": "Get your office operational quickly at the new location"
       }
     ],
-    "benefits": [
-      "Minimal Disruption",
-      "Professional Handling",
-      "Flexible Scheduling",
-      "Efficient Execution"
+    "faq": [
+      {
+        "question": "How do you minimize business downtime during an office move?",
+        "answer": "We primarily work evenings, nights, and weekends to avoid disrupting business hours. With proper planning, most offices can close Friday and be fully operational at the new location Monday morning."
+      },
+      {
+        "question": "How do you keep track of which items go to which desk?",
+        "answer": "We use a color-coded labeling system where each employee or department gets a color. Boxes, furniture, and equipment are labeled so everything arrives at the correct workstation in the new office."
+      },
+      {
+        "question": "Can you move computer equipment safely?",
+        "answer": "Yes, we use anti-static materials and proper handling procedures for all IT equipment. We recommend backing up data before the move. Our crews can disconnect and reconnect basic computer setups."
+      },
+      {
+        "question": "Do you handle confidential documents securely?",
+        "answer": "Absolutely. We use sealed containers for confidential files and can work with your security protocols. Our crews are professionals who understand the importance of business confidentiality."
+      }
     ],
     "is_active": true
   },
@@ -1406,7 +1614,7 @@
     "slug": "same-building-moving",
     "icon": "Building",
     "title": "Same Building Moving Services in Miami",
-    "description": "Moving within the same building with elevator and stair navigation expertise.",
+    "description": "Moving to a different unit in your building might seem simple, but it still involves heavy lifting and building logistics. Our same-building moving service gets you relocated quickly and professionally, minimizing elevator usage time and disruption to neighbors. We handle all the heavy furniture so you don't risk injury or damage trying to do it yourself.",
     "meta_title": "Same Building Moving Services Miami | Intra-Building Moves | Rapid Panda Movers",
     "meta_description": "Same building moving services in Miami. Moving within the same building with elevator navigation, stair expertise, and efficient intra-building relocations.",
     "hero": {
@@ -1451,7 +1659,7 @@
         "description": "Our professional approach keeps building management and neighbors happy."
       }
     ],
-    "extras": [
+    "included": [
       "Floor-to-floor moves",
       "Unit-to-unit relocations",
       "Elevator navigation",
@@ -1461,11 +1669,23 @@
       "Minimal disruption",
       "Same-day service available"
     ],
-    "benefits": [
-      "Building Expertise",
-      "Efficient Navigation",
-      "Minimal Disruption",
-      "Quick Turnaround"
+    "faq": [
+      {
+        "question": "Is it worth hiring movers for a same-building move?",
+        "answer": "Absolutely! Even short moves involve heavy lifting that can cause injury. Professional movers complete same-building moves quickly and safely, minimizing elevator use time and disruption to neighbors."
+      },
+      {
+        "question": "How long does a same-building move typically take?",
+        "answer": "Most same-building moves take 1-3 hours depending on the amount of furniture and the distance between units. We work efficiently to minimize your time and building disruption."
+      },
+      {
+        "question": "Do I need to reserve the elevator for a same-building move?",
+        "answer": "Usually yes. Most buildings require elevator reservations even for internal moves. Check with your building management—we can help coordinate timing to minimize the reservation needed."
+      },
+      {
+        "question": "Is same-building moving cheaper than a regular local move?",
+        "answer": "Yes, since there's no transportation involved, same-building moves are typically our most affordable service. You're paying only for labor time, which is minimal for short-distance moves."
+      }
     ],
     "is_active": true
   },
@@ -1474,7 +1694,7 @@
     "slug": "last-minute-moving",
     "icon": "Zap",
     "title": "Last Minute Moving Services in Miami",
-    "description": "Urgent moving services for last-minute relocations with rapid response.",
+    "description": "When an emergency forces a sudden move, most companies are booked weeks out. We maintain availability specifically for last-minute situations—whether it's a job that starts Monday, a lease issue, or a family emergency. Our last-minute rates are fair (no price gouging), and you get the same professional crews and careful handling as any scheduled move.",
     "meta_title": "Last Minute Moving Services Miami | Urgent Moves | Rapid Panda Movers",
     "meta_description": "Last minute moving services in Miami. Urgent moving services for last-minute relocations with rapid response, experienced crews, and quick turnaround.",
     "hero": {
@@ -1519,7 +1739,7 @@
         "description": "Urgent moves get our same professional, experienced teams - no compromises."
       }
     ],
-    "extras": [
+    "included": [
       "Urgent move availability",
       "Rapid response teams",
       "Emergency moving services",
@@ -1529,11 +1749,23 @@
       "Express service",
       "Last-minute relocation support"
     ],
-    "benefits": [
-      "Rapid Response",
-      "24/7 Availability",
-      "Emergency Support",
-      "Quick Turnaround"
+    "faq": [
+      {
+        "question": "How much notice do you need for a last-minute move?",
+        "answer": "We can often accommodate same-day or next-day moves depending on availability. The sooner you call, the better your chances of getting the time slot you need. Don't hesitate to reach out even for urgent situations."
+      },
+      {
+        "question": "Do you charge extra for last-minute moves?",
+        "answer": "Our last-minute rates are fair and transparent—we don't believe in price gouging during emergencies. Rates may be slightly higher than pre-scheduled moves, but we keep pricing reasonable."
+      },
+      {
+        "question": "What if I haven't had time to pack?",
+        "answer": "No problem! We can provide packing services as part of your last-minute move. Our crews can pack and move on the same day for most apartments and smaller homes."
+      },
+      {
+        "question": "Can you do a last-minute long-distance move?",
+        "answer": "Yes, we can accommodate urgent long-distance moves within Florida and to other states. Availability for immediate long-distance moves depends on truck scheduling, so call us right away to discuss options."
+      }
     ],
     "is_active": true
   },
@@ -1542,7 +1774,7 @@
     "slug": "hourly-moving",
     "icon": "Clock",
     "title": "Hourly Moving Services in Miami",
-    "description": "Flexible hourly moving services with transparent time-based pricing.",
+    "description": "Our hourly moving service lets you pay only for the time you actually need. It's ideal for smaller moves, single-item transport, or when you want to do some of the work yourself. You get transparent pricing—we track time from arrival to completion—with experienced crews who work efficiently because their reputation depends on it.",
     "meta_title": "Hourly Moving Services Miami | Time-Based Pricing | Rapid Panda Movers",
     "meta_description": "Hourly moving services in Miami. Flexible hourly moving with transparent time-based pricing, experienced crews, and flexible scheduling options.",
     "hero": {
@@ -1587,7 +1819,7 @@
         "description": "Our experienced teams work quickly because efficiency builds our reputation."
       }
     ],
-    "extras": [
+    "included": [
       "Time-based pricing",
       "Hourly rate transparency",
       "Flexible scheduling",
@@ -1597,11 +1829,23 @@
       "Multiple crew options",
       "No hidden fees"
     ],
-    "benefits": [
-      "Transparent Pricing",
-      "Flexible Scheduling",
-      "Cost-Effective",
-      "No Hidden Fees"
+    "faq": [
+      {
+        "question": "What's the minimum time for hourly moving?",
+        "answer": "We have a 2-hour minimum for hourly moves. This covers most small moves like studios or single-item moves. Time starts when our crew arrives and ends when the job is complete."
+      },
+      {
+        "question": "How is time calculated for hourly moves?",
+        "answer": "Time is calculated from arrival at your first location until completion at your final location. We don't charge for travel time to your home or back to our base after the job."
+      },
+      {
+        "question": "Can I get an estimate for how long my move will take?",
+        "answer": "Yes! Based on your inventory and locations, we can provide a time estimate so you know what to budget. We're experienced at estimating move times accurately."
+      },
+      {
+        "question": "What if my move takes less time than expected?",
+        "answer": "You only pay for the time actually used (above the 2-hour minimum). If our efficient crew finishes faster than expected, you pay less. We don't pad time or work slowly."
+      }
     ],
     "is_active": true
   },
@@ -1610,7 +1854,7 @@
     "slug": "special-needs-moving",
     "icon": "HeartHandshake",
     "title": "Special Needs Moving Services in Miami",
-    "description": "Compassionate moving services for individuals with disabilities and special requirements.",
+    "description": "Moving can be especially challenging for individuals with disabilities or special requirements. Our trained crews understand the importance of maintaining routines, handling medical equipment with care, and setting up spaces for accessibility needs. We work patiently, communicate clearly, and ensure essential equipment is unpacked and functional first.",
     "meta_title": "Special Needs Moving Services Miami | Disability-Friendly Moves | Rapid Panda Movers",
     "meta_description": "Special needs moving services in Miami. Compassionate moving for individuals with disabilities and special requirements with understanding, patience, and specialized care.",
     "hero": {
@@ -1655,7 +1899,7 @@
         "description": "We place furniture and items according to specific accessibility and mobility needs."
       }
     ],
-    "extras": [
+    "included": [
       "Disability-friendly service",
       "Medical equipment transport",
       "Accessibility considerations",
@@ -1665,11 +1909,23 @@
       "Sensitive item care",
       "Flexible scheduling"
     ],
-    "benefits": [
-      "Compassionate Service",
-      "Accessibility Focus",
-      "Patient Handling",
-      "Medical Equipment Care"
+    "faq": [
+      {
+        "question": "How do you accommodate individuals with mobility challenges?",
+        "answer": "We plan furniture placement around accessibility needs, ensure clear pathways, and prioritize setting up mobility equipment first. Our crews understand the importance of specific room layouts for wheelchairs, walkers, and other mobility aids."
+      },
+      {
+        "question": "Can you move medical equipment safely?",
+        "answer": "Yes, we handle medical equipment with extra care and prioritize setting it up immediately at your new home. We'll coordinate timing so essential equipment is unpacked and functional before other items."
+      },
+      {
+        "question": "How do you handle moves for individuals with sensory sensitivities?",
+        "answer": "Our crews work calmly and quietly, minimize disruption, and can work in stages if needed. We communicate clearly about what's happening and can adjust our approach based on individual needs."
+      },
+      {
+        "question": "Can family members or caregivers be involved in the move?",
+        "answer": "Absolutely. We encourage involvement from family members or caregivers who understand specific needs. They can direct placement, oversee equipment setup, and help ensure the new space is arranged optimally."
+      }
     ],
     "is_active": true
   }

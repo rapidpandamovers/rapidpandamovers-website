@@ -1,6 +1,7 @@
-import { Truck, Package, Shield, Home as HomeIcon, Building, Car, ArrowRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { allServices } from '@/lib/data'
+import ServiceIllustration from './ServiceIllustration'
 
 interface ServiceSectionProps {
   // When location is provided, show services for that location
@@ -13,9 +14,13 @@ interface ServiceSectionProps {
       slug: string;
     };
   };
+  // Show all services from data instead of hardcoded preview
+  variant?: 'preview' | 'full';
+  // Hide the section title and description
+  hideHeader?: boolean;
 }
 
-export default function ServiceSection({ location }: ServiceSectionProps = {}) {
+export default function ServiceSection({ location, variant = 'preview', hideHeader = false }: ServiceSectionProps = {}) {
   // If location is provided, show location-specific services
   if (location) {
     const isNeighborhood = !!location.parentCity;
@@ -23,7 +28,7 @@ export default function ServiceSection({ location }: ServiceSectionProps = {}) {
 
     return (
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
               {isNeighborhood ? 'Our' : 'Moving'} <span className="text-orange-500">Services</span> in {location.name}
@@ -40,13 +45,16 @@ export default function ServiceSection({ location }: ServiceSectionProps = {}) {
               <Link
                 key={index}
                 href={`/${location.slug}-${service.slug}`}
-                className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow group"
+                className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:border-orange-500 hover:shadow-md transition-all group"
               >
-                <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-orange-500 transition-colors">
+                <div className="flex justify-center mb-4">
+                  <ServiceIllustration service={service.slug} className="w-20 h-20" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-orange-500 transition-colors text-center">
                   {service.name}
                 </h3>
-                <p className="text-gray-600 mb-4 text-sm">{service.description}</p>
-                <div className="text-orange-600 group-hover:text-orange-700 font-medium flex items-center text-sm">
+                <p className="text-gray-600 mb-4 text-sm text-center">{service.description}</p>
+                <div className="text-orange-600 group-hover:text-orange-700 font-medium flex items-center justify-center text-sm">
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -58,41 +66,85 @@ export default function ServiceSection({ location }: ServiceSectionProps = {}) {
     );
   }
 
-  // Default: show hardcoded services with icons
-  const services = [
-    { icon: HomeIcon, title: 'Local Moving', desc: 'Professional local moving services within Miami-Dade County with experienced crews.' },
-    { icon: Building, title: 'Commercial Moving', desc: 'Expert office and business relocations with minimal downtime and maximum efficiency.' },
-    { icon: Package, title: 'Packing Services', desc: 'Complete packing and unpacking services using professional-grade materials and techniques.' },
-    { icon: Car, title: 'Long Distance Moving', desc: 'Reliable interstate moving services across Florida and beyond with full tracking.' },
-    { icon: Shield, title: 'Specialized Moving', desc: 'Piano, artwork, and fragile item moving with specialized equipment and expertise.' },
-    { icon: Truck, title: 'Same Day Service', desc: 'Emergency and last-minute moving services available 7 days a week for urgent moves.' }
-  ]
+  // Full variant: show all services from data with links
+  if (variant === 'full') {
+    const activeServices = allServices.filter(service => service.is_active !== false);
+
+    return (
+      <section className="py-0">
+        <div className="container mx-auto">
+          {!hideHeader && (
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                Our Moving <span className="text-orange-500">Services</span>
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Professional moving services tailored to meet your specific needs, timeline, and budget.
+              </p>
+            </div>
+          )}
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {activeServices.map((service, index) => (
+              <Link
+                key={index}
+                href={`/${service.slug}`}
+                className="bg-white rounded-xl p-6 border-2 border-orange-500 hover:bg-orange-500 transition-all group"
+              >
+                <div className="flex justify-center mb-4">
+                  <ServiceIllustration service={service.slug} className="w-24 h-24" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-white transition-colors text-center">
+                  {service.name}
+                </h3>
+                <p className="text-gray-600 mb-4 group-hover:text-white transition-colors text-center">{service.description}</p>
+                <div className="text-orange-600 group-hover:text-white font-medium flex items-center justify-center transition-colors">
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  // Default (preview): show first 6 services from data
+  const previewServices = allServices.filter(service => service.is_active !== false).slice(0, 6);
 
   return (
     <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Experience The Best In <span className="text-orange-500">Miami</span>
+            Our Moving <span className="text-orange-500">Services</span>
           </h2>
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-800">
-            Moving Services
-          </h3>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional moving services tailored to meet your specific needs, timeline, and budget.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => {
-            const IconComponent = service.icon
-            return (
-              <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow text-center">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <IconComponent className="w-8 h-8 text-orange-500" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-3">{service.title}</h3>
-                <p className="text-gray-600">{service.desc}</p>
+          {previewServices.map((service, index) => (
+            <Link
+              key={index}
+              href={`/${service.slug}`}
+              className="bg-white rounded-xl p-6 border-2 border-orange-500 hover:bg-orange-500 transition-all group"
+            >
+              <div className="flex justify-center mb-4">
+                <ServiceIllustration service={service.slug} className="w-24 h-24" />
               </div>
-            )
-          })}
+              <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-white transition-colors text-center">
+                {service.name}
+              </h3>
+              <p className="text-gray-600 mb-4 group-hover:text-white transition-colors text-center">{service.description}</p>
+              <div className="text-orange-600 group-hover:text-white font-medium flex items-center justify-center transition-colors">
+                Learn More
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+          ))}
         </div>
 
         <div className="text-center mt-12">
