@@ -1,7 +1,7 @@
 import Hero from '../components/Hero'
 import ContactSection from '../components/ContactSection'
 import MapSection from '../components/MapSection'
-import LocationSection from '../components/LocationSection'
+import NewsletterSection from '../components/NewsletterSection'
 
 export const metadata = {
   title: 'Contact Us | Rapid Panda Movers Miami',
@@ -31,10 +31,8 @@ export default function ContactPage() {
         height="450px"
       />
 
-      <LocationSection
-        title="Areas We Serve"
-        description="Rapid Panda Movers proudly serves all of Miami-Dade County and beyond"
-      />
+      <NewsletterSection />
+
     </div>
   )
 }

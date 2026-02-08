@@ -8,17 +8,19 @@ updated: "2026-05-07"
 readTime: "5 min read"
 category: "Location Guide"
 image_folder: "/images/blog/2026/05/making-coral-gables-your-new-home-a-practical-guide"
-featured: "/images/blog/2026/05/making-coral-gables-your-new-home-a-practical-guide/coral-gables-mediterranean-biltmore-tips.webp"
+featured: "/images/blog/2026/05/making-coral-gables-your-new-home-a-practical-guide/facade-of-an-elegant-building-with-a-pro-1.webp"
 image_keywords:
   - "coral gables"
   - "mediterranean"
   - "biltmore"
   - "luxury homes"
 images:
-  - "/images/blog/2026/05/making-coral-gables-your-new-home-a-practical-guide/coral-gables-mediterranean-biltmore-checklist.webp"
-  - "/images/blog/2026/05/making-coral-gables-your-new-home-a-practical-guide/coral-gables-mediterranean-biltmore-essentials.webp"
-  - "/images/blog/2026/05/making-coral-gables-your-new-home-a-practical-guide/coral-gables-mediterranean-biltmore-guide.webp"
-  - "/images/blog/2026/05/making-coral-gables-your-new-home-a-practical-guide/coral-gables-mediterranean-biltmore-tips.webp"
+  - "/images/blog/2026/05/making-coral-gables-your-new-home-a-practical-guide/facade-of-an-elegant-building-with-a-pro-1.webp"
+  - "/images/blog/2026/05/making-coral-gables-your-new-home-a-practical-guide/lush-university-campus-in-coral-gables-f-3.webp"
+  - "/images/blog/2026/05/making-coral-gables-your-new-home-a-practical-guide/modern-university-campus-building-by-a-t-4.webp"
+  - "/images/blog/2026/05/making-coral-gables-your-new-home-a-practical-guide/students-walking-on-a-university-campus--2.webp"
+  - "/images/blog/2026/05/making-coral-gables-your-new-home-a-practical-guide/view-of-a-modern-university-campus-in-co-5.webp"
+
 service_link: null
 location_link: "/coral-gables-movers"
 status: "pending"
@@ -31,7 +33,7 @@ Thinking about moving to Coral Gables? Known as "The City Beautiful," Coral Gabl
 
 Coral Gables is a planned community of approximately 50,400 residents, developed by George Merrick in the 1920s as a Mediterranean-inspired paradise. The city maintains strict architectural standards that preserve its unique character and historic charm.
 
-![Coral Gables Mediterranean Biltmore Checklist](/images/blog/2026/05/making-coral-gables-your-new-home-a-practical-guide/coral-gables-mediterranean-biltmore-checklist.webp)
+![Lush University Campus In Coral Gables F 3](/images/blog/2026/05/making-coral-gables-your-new-home-a-practical-guide/lush-university-campus-in-coral-gables-f-3.webp)
 
 
 ### Demographics at a Glance
@@ -77,6 +79,9 @@ Coral Gables offers some of Miami-Dade's most desirable real estate.
 ### Mediterranean Mandate
 The Coral Gables Zoning Code requires "Coral Gables Mediterranean Architecture" that reflects George Merrick's original vision. The city offers incentive bonuses for compliant construction.
 
+![Modern University Campus Building By A T 4](/images/blog/2026/05/making-coral-gables-your-new-home-a-practical-guide/modern-university-campus-building-by-a-t-4.webp)
+
+
 ### Historic Landmarks
 - **Biltmore Hotel**: National Historic Landmark, 1926
 - **Venetian Pool**: Historic public swimming pool in a coral rock quarry
@@ -89,9 +94,6 @@ All new construction and significant renovations require Board of Architects app
 ## Schools and Education
 
 Coral Gables is served by excellent public and private schools.
-
-![Coral Gables Mediterranean Biltmore Essentials](/images/blog/2026/05/making-coral-gables-your-new-home-a-practical-guide/coral-gables-mediterranean-biltmore-essentials.webp)
-
 
 ### Notable Schools
 - Coral Gables Senior High School
@@ -115,6 +117,9 @@ The UM campus anchors the educational landscape, bringing cultural events, athle
 - **Shops at Merrick Park**: Upscale open-air mall
 - **Village of Merrick Park**: Dining and boutiques
 - **Numerous independent restaurants and cafes**
+
+![Students Walking On A University Campus  2](/images/blog/2026/05/making-coral-gables-your-new-home-a-practical-guide/students-walking-on-a-university-campus--2.webp)
+
 
 ### Recreation
 - **Venetian Pool**: Historic spring-fed swimming pool
@@ -152,7 +157,7 @@ Douglas Road and University Metrorail stations provide direct access to Downtown
 - Parking restrictions near historic properties
 - Permits may be needed for large moving trucks
 
-![Coral Gables Mediterranean Biltmore Guide](/images/blog/2026/05/making-coral-gables-your-new-home-a-practical-guide/coral-gables-mediterranean-biltmore-guide.webp)
+![View Of A Modern University Campus In Co 5](/images/blog/2026/05/making-coral-gables-your-new-home-a-practical-guide/view-of-a-modern-university-campus-in-co-5.webp)
 
 
 ### HOA and Covenant Requirements

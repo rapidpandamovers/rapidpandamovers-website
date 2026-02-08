@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import content from '@/data/content.json'
 
 interface QuoteSectionProps {
   title?: string
@@ -9,13 +10,17 @@ interface QuoteSectionProps {
   phoneDisplay?: string
 }
 
+const sitePhone = content.site.phone
+const defaultPhone = sitePhone.replace(/-/g, '')
+const defaultPhoneDisplay = `(${sitePhone.slice(0,3)}) ${sitePhone.slice(4,7)}-${sitePhone.slice(8)}`
+
 export default function QuoteSection({
   title = 'Let Us Handle the Heavy Lifting',
   subtitle = "Skip the DIY stress. Get a free quote from Rapid Panda Movers and discover how affordable full-service moving can be.",
   buttonText = 'Get Your Free Quote',
   buttonHref = '/quote',
-  phone = '7865854269',
-  phoneDisplay = '(786) 585-4269'
+  phone = defaultPhone,
+  phoneDisplay = defaultPhoneDisplay
 }: QuoteSectionProps) {
   return (
     <section className="py-5">

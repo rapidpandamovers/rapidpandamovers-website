@@ -1,5 +1,6 @@
 import Hero from '../components/Hero';
 import TipSection from '../components/TipSection';
+import ResourceSection from '../components/ResourceSection';
 import content from '../../data/content.json';
 
 export default function MovingTipsPage() {
@@ -17,6 +18,13 @@ export default function MovingTipsPage() {
         title={tipsData.title}
         description={tipsData.description}
         categories={tipsData.categories}
+      />
+
+      {/* Resources Section */}
+      <ResourceSection
+        title="More Moving Resources"
+        subtitle="Explore our comprehensive guides and services for a successful move"
+        variant="grid"
       />
     </div>
   );

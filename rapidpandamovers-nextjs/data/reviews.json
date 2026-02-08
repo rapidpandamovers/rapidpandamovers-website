@@ -2,482 +2,802 @@
   "reviews": [
     {
       "id": "1",
-      "author": "Sarah Johnson",
+      "author": "Julio Larios",
       "rating": 5,
-      "text": "Amazing service! The team was professional, careful, and efficient. They moved our 3-bedroom house in Brickell to Coral Gables without a single scratch. Highly recommend!",
-      "date": "2024-11-15",
+      "text": "Outstanding company . Timely, friendly, efficient and best of all, trustworthy. They are  versatile and have solutions to most of my moving challenges .\nFully recommended !",
+      "date": "2021-04-10",
       "platform": "google",
       "verified": true,
       "location": {
         "city": "miami",
-        "neighborhood": "brickell",
-        "zip": "33129"
+        "neighborhood": null,
+        "zip": null
       },
-      "services": ["local-moving"],
+      "services": [],
       "route": null
     },
     {
       "id": "2",
-      "author": "Mike Rodriguez",
+      "author": "breanna xxx",
       "rating": 5,
-      "text": "Best moving experience ever. They handled everything with care and were very affordable. The crew showed up on time and worked non-stop until we were completely moved in.",
-      "date": "2024-11-10",
-      "platform": "yelp",
+      "text": "made moving so easy for me we\u2019re on time and helped me assemble my furniture they were super professional and I will recommend them to anybody!",
+      "date": "2021-04-27",
+      "platform": "google",
       "verified": true,
       "location": {
         "city": "miami",
-        "neighborhood": "little-havana",
-        "zip": "33135"
+        "neighborhood": null,
+        "zip": null
       },
-      "services": ["local-moving"],
+      "services": [],
       "route": null
     },
     {
       "id": "3",
-      "author": "Lisa Chen",
+      "author": "Mike",
       "rating": 5,
-      "text": "Stress-free move thanks to Rapid Panda Movers. Great communication throughout the process. They packed everything perfectly and moved us the same day. Nothing was damaged.",
-      "date": "2024-11-05",
+      "text": "This was far and away the most outstanding moving company that I have ever used. And I have moved 6 times with various large and small companies previously. Andy, the owner is a true professional, with extremely fair pricing.  His workers were of a quality and expertise that is rarely found in the moving industry, and they were able to move a very large spa across uneven and difficult terrain\n- doing so in a very careful manner.  I recommend them to anyone that values their personal effects, because Andy and his team will treat your furnishings with the utmost care. Easily the best moving experience I have had.\nMike",
+      "date": "2021-05-01",
       "platform": "google",
       "verified": true,
       "location": {
         "city": "miami",
-        "neighborhood": "downtown",
-        "zip": "33132"
+        "neighborhood": null,
+        "zip": null
       },
-      "services": ["packing-services", "local-moving"],
+      "services": [],
       "route": null
     },
     {
       "id": "4",
-      "author": "David Thompson",
+      "author": "Lastena Shahid",
       "rating": 5,
-      "text": "Used them for my office relocation in Doral. Minimal downtime and everything was set up exactly how we wanted. Professional team that understood business needs.",
-      "date": "2024-10-28",
+      "text": "I don\u2019t even know where to start. We found this company at the last minute for our recent move. They were very accommodating with the last minute booking changes, as our new building had very strict rules. Kara was super helpful with taking my calls and remained super kind and professional in spite of my changing needs.  Andy and another young man showed up to our home punctual and ready to move. They took exceptional car of our furniture, taking apart pieces to  make sure they stayed in tact during transport. We ran across a roadblock when my new building wouldn\u2019t allow us to move in because of our arrival time. What was I supposed to do with my furniture?! Andy came up with a quick and safe solution that didn\u2019t break my pockets as we would have to pay for storage overnight for my items. The next day they arrived at the new apartment to unload the furniture and were very swift and efficient. Throughout the whole process they were very professional and kind! They made me forget that I was stressing out the day prior. I would definitely use this company and I highly recommend them!",
+      "date": "2021-05-29",
       "platform": "google",
       "verified": true,
       "location": {
-        "city": "doral",
+        "city": "miami",
         "neighborhood": null,
-        "zip": "33172"
+        "zip": null
       },
-      "services": ["commercial-moving"],
+      "services": [],
       "route": null
     },
     {
       "id": "5",
-      "author": "Maria Gonzalez",
+      "author": "Geisabeth Castillo",
       "rating": 5,
-      "text": "Moved from Miami to Orlando with Rapid Panda. The long-distance team was incredible - they kept me updated the entire way and delivered right on schedule.",
-      "date": "2024-10-20",
-      "platform": "yelp",
+      "text": "\ud83d\udcaf % Satisfecha",
+      "date": "2021-07-20",
+      "platform": "google",
       "verified": true,
       "location": {
         "city": "miami",
         "neighborhood": null,
-        "zip": "33101"
+        "zip": null
       },
-      "services": ["long-distance-moving"],
-      "route": "miami-to-orlando"
+      "services": [],
+      "route": null
     },
     {
       "id": "6",
-      "author": "James Wilson",
+      "author": "NFC Nicaragua",
       "rating": 5,
-      "text": "The packing service was worth every penny. They wrapped each item carefully and labeled every box. Made unpacking so much easier!",
-      "date": "2024-10-15",
-      "platform": "facebook",
+      "text": "These guys did an outstanding job today. They came 15min early and got to work, all my stuff got wrapped in blue blankets and handled with care. I jus told them where I wanted everything there they put it. They disassembled all my furniture and put back together. Fair pricing for all the work they did\u2026so Rapid Panda Highly recommended.",
+      "date": "2021-07-21",
+      "platform": "google",
       "verified": true,
       "location": {
         "city": "miami",
-        "neighborhood": "coconut-grove",
-        "zip": "33133"
+        "neighborhood": null,
+        "zip": null
       },
-      "services": ["packing-services"],
+      "services": [],
       "route": null
     },
     {
       "id": "7",
-      "author": "Jennifer Martinez",
+      "author": "XR_T_strat 112",
       "rating": 5,
-      "text": "Moved my apartment in Wynwood to a new place in Edgewater. Quick, efficient, and reasonably priced. The movers were friendly and handled my artwork with extra care.",
-      "date": "2024-10-10",
+      "text": "Andy and his crew are professionals. I immediately received an accurate quote with fair pricing. They showed up on time and got right to work. They were very delicate and caring of my belongings, wrapping things so they wouldn\u2019t be scratched or damaged in the move. I would highly recommend to any family member or friend. Can\u2019t say enough about how pleased I am that I chose them!!",
+      "date": "2021-07-31",
       "platform": "google",
       "verified": true,
       "location": {
         "city": "miami",
-        "neighborhood": "wynwood",
-        "zip": "33127"
+        "neighborhood": null,
+        "zip": null
       },
-      "services": ["apartment-moving"],
+      "services": [],
       "route": null
     },
     {
       "id": "8",
-      "author": "Robert Kim",
+      "author": "Alex Texidor",
       "rating": 5,
-      "text": "Third time using Rapid Panda and they never disappoint. This time was a move from Kendall to Homestead. Same great service every time!",
-      "date": "2024-10-05",
+      "text": "The team at Rapid Panda Movers came highly recommended by the management at my new apartment.  Andy was really friendly and transparent about pricing during the quote.\n\nOn moving day the team pulled up promptly at 9am.  Their truck and equipment was clean and organized.  They wrapped and secured everything really well and followed all the instructions when they unloaded the truck at my new apartment.\n\nMoving is a stressful process and using Rapid Panda Movers made for a smoother moving day experience.  I highly recommend Rapid Panda Movers and am definitely using them again.",
+      "date": "2021-09-10",
       "platform": "google",
       "verified": true,
       "location": {
         "city": "miami",
-        "neighborhood": "kendall",
-        "zip": "33176"
+        "neighborhood": null,
+        "zip": null
       },
-      "services": ["local-moving"],
-      "route": "kendall-to-homestead"
+      "services": [],
+      "route": null
     },
     {
       "id": "9",
-      "author": "Amanda Foster",
+      "author": "Mike Hefty",
       "rating": 5,
-      "text": "Excellent storage solutions! They stored my furniture for 2 months while my new place was being renovated. Everything came back in perfect condition.",
-      "date": "2024-09-28",
-      "platform": "yelp",
+      "text": "These guys ROCKED!!! They were fast but cautious, and moved a huge amount of my belongings in a short amount of time. Andy gave me a spot on quote, and his men even helped us load some items onto a separate trailer that was going to storage. These guys went above and beyond and I would definitely use them again in the future.",
+      "date": "2021-09-27",
+      "platform": "google",
       "verified": true,
       "location": {
         "city": "miami",
         "neighborhood": null,
-        "zip": "33131"
+        "zip": null
       },
-      "services": ["storage-solutions"],
+      "services": [],
       "route": null
     },
     {
       "id": "10",
-      "author": "Carlos Diaz",
+      "author": "Ellen Goldberg",
       "rating": 5,
-      "text": "Hired them for a last-minute move in Hialeah. Despite the short notice, they were able to accommodate us and did an amazing job. True professionals!",
-      "date": "2024-09-20",
+      "text": "Rapid Panda was excellent. Professional, competitive pricing (better, actually), responsive to calls and your texts, and really pleasant to deal with. We couldn\u2019t be happier, and highly recommend the company.",
+      "date": "2022-02-20",
       "platform": "google",
       "verified": true,
       "location": {
-        "city": "hialeah",
+        "city": "miami",
         "neighborhood": null,
-        "zip": "33012"
+        "zip": null
       },
-      "services": ["local-moving"],
+      "services": [],
       "route": null
     },
     {
       "id": "11",
-      "author": "Emily Watson",
+      "author": "Esteban Obando",
       "rating": 5,
-      "text": "Moved from Fort Lauderdale to Miami Beach. The team navigated the building restrictions perfectly and got everything done within the allowed time window.",
-      "date": "2024-09-15",
+      "text": "Awesome guys! They really save me in a hard move!",
+      "date": "2022-02-22",
       "platform": "google",
       "verified": true,
       "location": {
-        "city": "miami-beach",
+        "city": "miami",
         "neighborhood": null,
-        "zip": "33139"
+        "zip": null
       },
-      "services": ["local-moving", "apartment-moving"],
-      "route": "fort-lauderdale-to-miami-beach"
+      "services": [],
+      "route": null
     },
     {
       "id": "12",
-      "author": "Thomas Brown",
+      "author": "Bianca Li",
       "rating": 5,
-      "text": "The commercial moving team relocated our entire dental office over the weekend. They also packed all our equipment securely. Monday morning we were up and running!",
-      "date": "2024-09-10",
-      "platform": "yelp",
+      "text": "Andy was super responsive when I needed a last-minute long-distance mover. The team was incredibly fast at everything: packing the items that I hadn't been able to box myself, moving my belongings out of my apartment, driving to my new location, and dropping my belongings off in my new house. The cost of the move was also very transparent from the start.",
+      "date": "2022-03-17",
+      "platform": "google",
       "verified": true,
       "location": {
-        "city": "coral-gables",
+        "city": "miami",
         "neighborhood": null,
-        "zip": "33134"
+        "zip": null
       },
-      "services": ["commercial-moving", "packing-services"],
+      "services": [],
       "route": null
     },
     {
       "id": "13",
-      "author": "Nicole Adams",
+      "author": "Maria Vittori",
       "rating": 5,
-      "text": "Long distance move from Miami to Atlanta. They handled everything - packing, loading, transport, and unloading. Two weeks later and I'm still impressed!",
-      "date": "2024-09-05",
+      "text": "I cannot say enough good things about this moving company! We were going to rent a Uhaul truck to drive up to Palm Coast, FL (about a 4hr drive from Miami) only to discover upon pick up that Uhaul would not allow us to leave the city of Miami with the Uhaul truck we reserved! We had to quickly find a solution. We called Rapid Panda Movers and spoke to Andy, the owner, who was not only professional and courteous, but also willing to accommodate us at last minute for the next-day. He quoted us a great rate for the 12 hours we needed. We were still a little hesitant and we were finally able to line up renting a long distance Penske truck - but at more than half the cost of RPM, and with RPM we would save 12 hours and not need to do any heavy lifting- we ultimately decided to go with RPM. BEST DECISION EVER!! Andy and his team were extremely punctual, meticulous and careful with all of our things, and personable. They were fantastic overall! They took all of the furniture to my aunt\u2019s house in Palm Coast, and my aunt had an excellent experience with them - Andy and his team helped her arrange things in her home and assembled all the furniture for her. She loved them so much she asked if they could bring some of her furniture to my cousin\u2019s house that lives by her for only $130 -right there and then Andy agreed and his team got to work on the second job! Over all Rapid Panda Movers impressed the entire family. I highly highly recommend and will be using them in the future! If you\u2019re on the fence about who to use for your move - your search ends here!",
+      "date": "2022-03-21",
       "platform": "google",
       "verified": true,
       "location": {
         "city": "miami",
         "neighborhood": null,
-        "zip": "33101"
+        "zip": null
       },
-      "services": ["long-distance-moving", "packing-services"],
-      "route": "miami-to-atlanta-ga"
+      "services": [],
+      "route": null
     },
     {
       "id": "14",
-      "author": "Kevin O'Brien",
+      "author": "Amex Amexamex",
       "rating": 5,
-      "text": "Moved my studio apartment in South Beach. Even for a small move, they treated it with the same professionalism. Fair pricing and great work!",
-      "date": "2024-08-28",
-      "platform": "facebook",
+      "text": "Panda Moving ha sido una excelente experiencia. Muy profesionales, trabajadores, respetuosos, detallistas  y todo dentro del servicio y el tiempo acordado. Desde su llegada al sitio desde donde fueron a buscar mis muebles y cajas  en Miami y hasta Pompano Beach, donde llevaron mis cosas. Los recomiendo ampliamente sin ning\u00fan tipo de dudas.\nArturo C Guevara.",
+      "date": "2022-03-30",
+      "platform": "google",
       "verified": true,
       "location": {
-        "city": "miami-beach",
-        "neighborhood": "south-beach",
-        "zip": "33139"
+        "city": "miami",
+        "neighborhood": null,
+        "zip": null
       },
-      "services": ["apartment-moving"],
+      "services": [],
       "route": null
     },
     {
       "id": "15",
-      "author": "Patricia Lee",
+      "author": "Lilianeth Cajina",
       "rating": 5,
-      "text": "My piano was handled with extreme care. The specialty moving team knew exactly what they were doing. Not a single scratch on my baby grand!",
-      "date": "2024-08-20",
+      "text": "Muchas Gracias por su buen servicio, atenci\u00f3n al cliente y su responsabilidad.\nAndy siempre est\u00e1 velando porque se cumpla el trabajo a cabalidad, cuidan muy bien tus cosas, r\u00e1pidos en el traslado y siempre con una excelente sonrisa.\n\nPostdata: Son s\u00faper precios! Y el trabajo que realizan genial",
+      "date": "2022-05-08",
       "platform": "google",
       "verified": true,
       "location": {
         "city": "miami",
-        "neighborhood": "pinecrest",
-        "zip": "33156"
+        "neighborhood": null,
+        "zip": null
       },
-      "services": ["local-moving"],
+      "services": [],
       "route": null
     },
     {
       "id": "16",
-      "author": "Steven Garcia",
+      "author": "Symone Ford",
       "rating": 5,
-      "text": "Moved from Aventura to Tampa. The coordination between pickup and delivery teams was flawless. Everything arrived on the exact day promised.",
-      "date": "2024-08-15",
-      "platform": "yelp",
-      "verified": true,
-      "location": {
-        "city": "aventura",
-        "neighborhood": null,
-        "zip": "33180"
-      },
-      "services": ["long-distance-moving"],
-      "route": "miami-to-tampa"
-    },
-    {
-      "id": "17",
-      "author": "Rachel Cooper",
-      "rating": 5,
-      "text": "Full packing service for our 4-bedroom house, then they moved everything across town. The team was so organized - color-coded boxes for each room!",
-      "date": "2024-08-10",
+      "text": "Andy and his Team are amazing and lifesavers! Very quick, responsive and professional. So pleased with how the service turned out to be, can\u2019t thank them enough for a job well done!",
+      "date": "2022-05-10",
       "platform": "google",
       "verified": true,
       "location": {
         "city": "miami",
-        "neighborhood": "coral-way",
-        "zip": "33145"
+        "neighborhood": null,
+        "zip": null
       },
-      "services": ["packing-services", "local-moving"],
+      "services": [],
+      "route": null
+    },
+    {
+      "id": "17",
+      "author": "Sparkle Christine",
+      "rating": 5,
+      "text": "They were so great to work with! From the initial call where he was so reassuring to the arrival and prompt service. I was already overwhelmed with such a rigorous move but they made me feel very comfortable with booking their services. I highly recommend this company. They took care with my belongings and was considerate on where and how to place them. Not to mention this move was on the third floor in blistering temps. You won\u2019t go wrong with this company!",
+      "date": "2022-05-11",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": null,
+        "zip": null
+      },
+      "services": [],
       "route": null
     },
     {
       "id": "18",
-      "author": "Daniel Murphy",
+      "author": "Kellie Flowers",
       "rating": 5,
-      "text": "Our law firm moved to a bigger office in Downtown Miami. Rapid Panda handled all our sensitive documents and equipment with complete discretion and care.",
-      "date": "2024-08-05",
+      "text": "Rapid panda movers are amazing!! The best and most efficient moving service I have ever used. They were responsive, professional, and moved all my furniture incredibly fast, safe and sound. I accidentally dropped my sunglasses and broke them and one of the movers even fixed them for me. Seriously the best service, I highly recommend these guys!",
+      "date": "2022-05-15",
       "platform": "google",
       "verified": true,
       "location": {
         "city": "miami",
-        "neighborhood": "downtown",
-        "zip": "33131"
+        "neighborhood": null,
+        "zip": null
       },
-      "services": ["commercial-moving"],
+      "services": [],
       "route": null
     },
     {
       "id": "19",
-      "author": "Michelle Taylor",
+      "author": "N F",
       "rating": 5,
-      "text": "Used their storage and then they moved everything to my new place. Clean facility, easy access, and fair rates. Perfect for staging my home while it was on the market.",
-      "date": "2024-07-28",
-      "platform": "yelp",
+      "text": "Man let me tell you, I needed a move the SAME DAY, asap, I hit Andy up and his crew came in clutch. Within 2 hours he pulled up and moved EVERYTHING 5 hours north with a smile! The price beat every competitor. Very quick and professional, definitely go with these guys it\u2019s the best you can get. Thank you team \ud83d\udc4d",
+      "date": "2022-05-15",
+      "platform": "google",
       "verified": true,
       "location": {
         "city": "miami",
         "neighborhood": null,
-        "zip": "33155"
+        "zip": null
       },
-      "services": ["storage-solutions", "local-moving"],
+      "services": [],
       "route": null
     },
     {
       "id": "20",
-      "author": "Anthony Harris",
+      "author": "Andre Killion",
       "rating": 5,
-      "text": "Moved to New York from Miami. Cross-country move was smooth as could be. Daily updates on where our stuff was. Highly recommend for long distance!",
-      "date": "2024-07-20",
+      "text": "I recently moved from Chicago to S. Florida. I saw the add for Rapid Panda movers and read some of the reviews. The feedback made me feel comfortable enough to reserve their services. When I got to S. Florida I had issues with the moving company who was transporting my items from Chicago. This caused my move-in to be delayed by a week. Rapid Panda movers was very accommodating and quick to communicate back and forth as well as reschedule a few times while I was figuring out a new arrival date of my things. The day of the move-in Andy and team arrived on time as promised and knocked out the unloading of the truck quickly. The team was professional and handled my items with care. I will definitely be using them for future moves. I highly recommend them.",
+      "date": "2022-06-09",
       "platform": "google",
       "verified": true,
       "location": {
         "city": "miami",
         "neighborhood": null,
-        "zip": "33101"
+        "zip": null
       },
-      "services": ["long-distance-moving"],
-      "route": "miami-to-new-york-ny"
+      "services": [],
+      "route": null
     },
     {
       "id": "21",
-      "author": "Laura Martinez",
+      "author": "Diana Davis",
       "rating": 5,
-      "text": "The team that moved us in Doral was fantastic. They assembled all our furniture perfectly and even helped arrange the heavy pieces where we wanted them.",
-      "date": "2024-07-15",
-      "platform": "facebook",
+      "text": "I recently moved from Ft. Lauderdale to Orlando. I have had bad experiences with past movers. A friend referred me to Rapid Panda Movers as he had just used their services as well. Andy and his team are great! They are professional and very efficient. Andy always answered his phone and answered any questions or concerns I had. I totally recommend them and will use them again for any future moves. I can now say, I have had a great experience with my move!",
+      "date": "2022-06-29",
+      "platform": "google",
       "verified": true,
       "location": {
-        "city": "doral",
+        "city": "miami",
         "neighborhood": null,
-        "zip": "33178"
+        "zip": null
       },
-      "services": ["local-moving"],
+      "services": [],
       "route": null
     },
     {
       "id": "22",
-      "author": "Christopher Young",
+      "author": "Grace Hoffman",
       "rating": 5,
-      "text": "Apartment move in Midtown. Elevator building with strict rules but the movers handled everything smoothly. No damage to walls or doors. Very impressed!",
-      "date": "2024-07-10",
+      "text": "Rapid Panda Movers accommodated my move in 2 days. They were reliable, respond quickly and were very professional. I will highly recommend their team!",
+      "date": "2022-07-14",
       "platform": "google",
       "verified": true,
       "location": {
         "city": "miami",
-        "neighborhood": "midtown",
-        "zip": "33137"
+        "neighborhood": null,
+        "zip": null
       },
-      "services": ["apartment-moving"],
+      "services": [],
       "route": null
     },
     {
       "id": "23",
-      "author": "Jessica White",
+      "author": "elias DAMMOUS",
       "rating": 5,
-      "text": "Needed partial packing for fragile items and then a local move to our new home. They accommodated my specific needs and charged fairly. The china collection arrived perfectly!",
-      "date": "2024-07-05",
-      "platform": "yelp",
+      "text": "Andy\u2019s service was amazing!",
+      "date": "2022-07-26",
+      "platform": "google",
       "verified": true,
       "location": {
-        "city": "coral-gables",
+        "city": "miami",
         "neighborhood": null,
-        "zip": "33146"
+        "zip": null
       },
-      "services": ["packing-services", "local-moving"],
+      "services": [],
       "route": null
     },
     {
       "id": "24",
-      "author": "Brandon Scott",
+      "author": "Michael Salsberry",
       "rating": 5,
-      "text": "Restaurant equipment move in Little Haiti. Heavy commercial appliances handled expertly. The team knew exactly how to maneuver the tight kitchen spaces.",
-      "date": "2024-06-28",
+      "text": "Honest and reliable company that does great work at a reasonable price. Highly recommended.",
+      "date": "2022-08-15",
       "platform": "google",
       "verified": true,
       "location": {
         "city": "miami",
-        "neighborhood": "little-haiti",
-        "zip": "33137"
+        "neighborhood": null,
+        "zip": null
       },
-      "services": ["commercial-moving"],
+      "services": [],
       "route": null
     },
     {
       "id": "25",
-      "author": "Samantha Green",
+      "author": "Davinia Segovia",
       "rating": 5,
-      "text": "From Miami to Chicago! They packed our whole house and handled the long-distance logistics perfectly. Everything accounted for and nothing damaged.",
-      "date": "2024-06-20",
+      "text": "Professional and reliable.  Discussed the needs and expectations of our family's move. Everything was done well  .",
+      "date": "2022-08-23",
       "platform": "google",
       "verified": true,
       "location": {
         "city": "miami",
         "neighborhood": null,
-        "zip": "33101"
+        "zip": null
       },
-      "services": ["long-distance-moving", "packing-services"],
-      "route": "miami-to-chicago-il"
+      "services": [],
+      "route": null
     },
     {
       "id": "26",
-      "author": "Andrew Nelson",
+      "author": "Caroline Gomez",
       "rating": 5,
-      "text": "Moved from Pembroke Pines to Weston. Local move done in half a day. The efficiency of this team is unmatched. Will use again for sure!",
-      "date": "2024-06-15",
-      "platform": "yelp",
-      "verified": true,
-      "location": {
-        "city": "pembroke-pines",
-        "neighborhood": null,
-        "zip": "33028"
-      },
-      "services": ["local-moving"],
-      "route": "pembroke-pines-to-weston"
-    },
-    {
-      "id": "27",
-      "author": "Megan Hill",
-      "rating": 5,
-      "text": "High-rise condo move in Brickell Key. The logistics of elevator reservations and loading dock timing - they handled it all. Truly professional service!",
-      "date": "2024-06-10",
+      "text": "Seriously the BEST movers EVER! Andy, Gonzalo, and Jorge are incredible. They were punctual, professional, in and out sooo fast, so careful with all our things, and the NICEST guys on top of it all! Their prices are very reasonable too! Look no further- hire these guys today!",
+      "date": "2022-09-17",
       "platform": "google",
       "verified": true,
       "location": {
         "city": "miami",
-        "neighborhood": "brickell-key",
-        "zip": "33131"
+        "neighborhood": null,
+        "zip": null
       },
-      "services": ["apartment-moving"],
+      "services": [],
+      "route": null
+    },
+    {
+      "id": "27",
+      "author": "ROXANA BALLARINO",
+      "rating": 5,
+      "text": "Muy buen trabajo Andy y sus 2 compa\u00f1eros , muy agradecida por su ayuda, mi casa no era f\u00e1cil ya que est\u00e1 en una peque\u00f1a colina, pero ellos tuvieron el mejor servicio y muy buen a actitud en todo momento, los recomiendo100%.",
+      "date": "2022-09-21",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": null,
+        "zip": null
+      },
+      "services": [],
       "route": null
     },
     {
       "id": "28",
-      "author": "Ryan Phillips",
+      "author": "Tiffany Nicole Swanson",
       "rating": 5,
-      "text": "They stored our boat equipment and trailer while we were between marinas. Climate-controlled and secure. Great rates compared to other options.",
-      "date": "2024-06-05",
-      "platform": "facebook",
+      "text": "I wish I could give more stars! They were early, ready, courteous, felt such southern hospitality, friendly, and got the job done. I don't know if I could have had a more seamless experience. They treated my possessions with such care. I really appreciate you guys showing up and showing out. I reserved the evening before and after getting 8 No's from other companies due to being full, you guys were my first Yes! So happy to know your work now.",
+      "date": "2022-10-03",
+      "platform": "google",
       "verified": true,
       "location": {
         "city": "miami",
         "neighborhood": null,
-        "zip": "33133"
+        "zip": null
       },
-      "services": ["storage-solutions"],
+      "services": [],
       "route": null
     },
     {
       "id": "29",
-      "author": "Ashley King",
+      "author": "Prince Hall",
       "rating": 5,
-      "text": "Medical office move in Coral Gables. Sensitive equipment, patient files - everything handled with HIPAA compliance in mind. They even packed everything securely!",
-      "date": "2024-05-28",
+      "text": "I greatly appreciate all the help, these guys were wonderful, I recommend this company to all that need great movers.",
+      "date": "2022-10-05",
       "platform": "google",
       "verified": true,
       "location": {
-        "city": "coral-gables",
+        "city": "miami",
         "neighborhood": null,
-        "zip": "33134"
+        "zip": null
       },
-      "services": ["commercial-moving", "packing-services"],
+      "services": [],
       "route": null
     },
     {
       "id": "30",
-      "author": "Justin Walker",
+      "author": "pierre nicolas",
       "rating": 5,
-      "text": "Local move in Homestead. Even for a smaller town, they provided the same excellent service. On time, efficient, and friendly crew!",
-      "date": "2024-05-20",
-      "platform": "yelp",
+      "text": "Excelente el top",
+      "date": "2022-10-27",
+      "platform": "google",
       "verified": true,
       "location": {
-        "city": "homestead",
+        "city": "miami",
         "neighborhood": null,
-        "zip": "33030"
+        "zip": null
       },
-      "services": ["local-moving"],
+      "services": [],
+      "route": null
+    },
+    {
+      "id": "31",
+      "author": "Sharon Bolivar",
+      "rating": 5,
+      "text": "Great Service from the moment they arrive ! Andy and his team did an excellent job taking care of my move. I moved from a 3rd floor apartment and they handled everything with care! I highly recommend if you are looking for a trust worthy moving service !\n\n** honest review **",
+      "date": "2022-11-20",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": null,
+        "zip": null
+      },
+      "services": [],
+      "route": null
+    },
+    {
+      "id": "32",
+      "author": "Leonardo de Oliveira",
+      "rating": 5,
+      "text": "Great service! Andy and his crew are very good!!",
+      "date": "2022-12-01",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": null,
+        "zip": null
+      },
+      "services": [],
+      "route": null
+    },
+    {
+      "id": "33",
+      "author": "faisal javed",
+      "rating": 4,
+      "text": "our move was longer then usual from south FL to north of GA but it was great with Rapid Panda movers, nothing broke or lost, they arrived well before time on loading and unloading day and waited patiently outside for us before we are ready to let them in, they were fast but not rushing things, overall it was great service lead by Andy",
+      "date": "2023-01-02",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": null,
+        "zip": null
+      },
+      "services": [],
+      "route": null
+    },
+    {
+      "id": "34",
+      "author": "Aaron Molina",
+      "rating": 5,
+      "text": "Rapid Panda Movers are hands down the best moving company in Miami. From start to finish, the team at Rapid Panda were honest, fast and extremely careful with all of our belongings. They helped us move from our apartment to our new home and also assisted with storing the rest of our things. I highly recommend Rapid Panda Movers for anyone in need of a reliable and efficient moving company. 5 stars! Speak with Andy!",
+      "date": "2023-01-27",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": null,
+        "zip": null
+      },
+      "services": [],
+      "route": null
+    },
+    {
+      "id": "35",
+      "author": "Kimberly Gonzalez",
+      "rating": 5,
+      "text": "Move was incredibly easy and affordable! Had a previous mover cancel on me a day before my move and when I scheduled for rapid panda they came out the next day and handled everything swiftly! Truly a great experience. Thank you!",
+      "date": "2023-03-21",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": null,
+        "zip": null
+      },
+      "services": [],
+      "route": null
+    },
+    {
+      "id": "36",
+      "author": "Arlenes Garcia",
+      "rating": 5,
+      "text": "Amazing crew of professionals. Highly recommended.",
+      "date": "2023-04-12",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": null,
+        "zip": null
+      },
+      "services": [],
+      "route": null
+    },
+    {
+      "id": "37",
+      "author": "Dores Gonzalez",
+      "rating": 5,
+      "text": "I called on a Friday afternoon and they were able to fit me in on Saturday. Arrived on time and good customer service",
+      "date": "2023-04-22",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": null,
+        "zip": null
+      },
+      "services": [],
+      "route": null
+    },
+    {
+      "id": "38",
+      "author": "Padmajaa R",
+      "rating": 5,
+      "text": "I want to share with you all how amazing this team is ! A little late post though as I want to take time to share this experience and write it down .. We planned our move 2 months earlier and we booked a moving company who was supposed to show on the day of my move at 8am. All small things were packed waiting for the movers to pack and move the big stuffs \u2026 My husband is reaching out to the company we had booked .. they said they are on the way and we wait every 30 minutes we call and kept checking \u2026 but they never showed up until 11.. I quickly searched in google to see movers available in 33155 zip code and Rapid Panda showed up . Andy picked up and patiently listened to my conversation as explained above \ud83d\udc46I did not expect that they would be able to accept a last minute request but surprisingly Andy mentioned Can you let me know the stuffs you have in place and We are here to help you. All I would need 2 hours of time to coordinate the crew and they will be coming to your location by 12 ! Due to my bitter experience that morning with the other team I kept checking with Andy in intervals and he was so kind to keep me updated ! By 1 the 2 men showed up fully functional\u2026 Those two are so amazing they were so quick , very detail oriented and accomplished all that I requested and finally saved my day ! I felt Andy like a god that day ! Best movers I would recommend who can be relied upon and help the ones in need",
+      "date": "2023-04-22",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": null,
+        "zip": null
+      },
+      "services": [],
+      "route": null
+    },
+    {
+      "id": "39",
+      "author": "John Tetzeli",
+      "rating": 5,
+      "text": "If there were more stsrs I\u2019d give them to Andy and his crew\nThe best!",
+      "date": "2023-05-16",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": null,
+        "zip": null
+      },
+      "services": [],
+      "route": null
+    },
+    {
+      "id": "40",
+      "author": "Jimmy Macias",
+      "rating": 5,
+      "text": "I just had a move on Wednesday, guys showed up on time and were very efficient!!!",
+      "date": "2023-06-24",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": null,
+        "zip": null
+      },
+      "services": [],
+      "route": null
+    },
+    {
+      "id": "41",
+      "author": "Eliud Rizo zeledon",
+      "rating": 5,
+      "text": "This company was by far the MOST HONEST guys I\u2019ve ever come across. I Zelled their payment twice without realizing it and kept going with my day. Later on that day I got a phone call from Andy to let me know that I had paid double and proceeded to return the extra money. You don\u2019t see this level of honesty anymore. Definitely RAPID PANDA RECOMMENDED!!!",
+      "date": "2023-07-03",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": null,
+        "zip": null
+      },
+      "services": [],
+      "route": null
+    },
+    {
+      "id": "42",
+      "author": "Sterling Consultants LLC",
+      "rating": 5,
+      "text": "I highly recommend Rapid Panda for anyone looking for a quality moving experience. Andy is a professional and runs a very tight ship. I have used this company more than once, and they are always on time, offer the highest quality service, and are very fair with their pricing.  Andy\u2019s workers were of a quality and expertise that is rarely found in the moving industry, Andy and his team will treat your property like its is their own-  absolutely the best moving experience!.\nMike",
+      "date": "2023-07-06",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": null,
+        "zip": null
+      },
+      "services": [],
+      "route": null
+    },
+    {
+      "id": "43",
+      "author": "Kimberly Gonzalez",
+      "rating": 5,
+      "text": "The two movers that helped me were phenomenal. Both took their job very seriously and handled all my items with care which was greatly appreciated. Even after all the issues with my apartment building, the movers handled everything perfectly and in a timely manner. Truly thankful for the work and Professionalism shown by the team. Highly recommend!",
+      "date": "2023-10-25",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": null,
+        "zip": null
+      },
+      "services": [],
+      "route": null
+    },
+    {
+      "id": "44",
+      "author": "Jake Greene",
+      "rating": 5,
+      "text": "Exceptional work by the team at Rapid Panda! Andy, who leads the team, was on top of scheduling, very helpful, and informative. His crew showed up early, were all very accommodating and polite. I will continue to use Rapid Panda for any future moves, undoubtedly. Thanks Andy and the Rapid Panda team!",
+      "date": "2023-10-28",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": null,
+        "zip": null
+      },
+      "services": [],
+      "route": null
+    },
+    {
+      "id": "45",
+      "author": "ALFREDO CARRANZA",
+      "rating": 5,
+      "text": "Very detail  movers    Highly recomended",
+      "date": "2024-02-16",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": null,
+        "zip": null
+      },
+      "services": [],
+      "route": null
+    },
+    {
+      "id": "46",
+      "author": "Beach",
+      "rating": 5,
+      "text": "Fast and efficient service and extremely awesome communication , Stop totally reliable I highly recommend!!!!",
+      "date": "2024-03-25",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": null,
+        "zip": null
+      },
+      "services": [],
+      "route": null
+    },
+    {
+      "id": "47",
+      "author": "Stephanie Asim",
+      "rating": 5,
+      "text": "I had the pleasure of meeting the kind gentleman from Rapid Panda to assist with my move. They were professional, organized, and tidy!  Andy and his team made sure I was comfortable, I was left with little to do settling into my new place. I highly recommend RAPID PANDA for your move\ud83d\ude0a\ud83d\udd25",
+      "date": "2024-05-01",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": null,
+        "zip": null
+      },
+      "services": [],
+      "route": null
+    },
+    {
+      "id": "48",
+      "author": "Fatima Chamorro",
+      "rating": 5,
+      "text": "These guys were fantastic. Very friendly and helpful. Their price was fair for the quality of service.  You wont regret hiring them. I fully recommend them.",
+      "date": "2024-05-06",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": null,
+        "zip": null
+      },
+      "services": [],
+      "route": null
+    },
+    {
+      "id": "49",
+      "author": "Carlos Gamero",
+      "rating": 5,
+      "text": "Excelent service and gentle team",
+      "date": "2024-12-11",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": null,
+        "zip": null
+      },
+      "services": [],
+      "route": null
+    },
+    {
+      "id": "50",
+      "author": "Jennifer Pineda",
+      "rating": 5,
+      "text": "Excellent service. Great guys. I will use them again. I recommend this company.",
+      "date": "2024-12-24",
+      "platform": "google",
+      "verified": true,
+      "location": {
+        "city": "miami",
+        "neighborhood": null,
+        "zip": null
+      },
+      "services": [],
       "route": null
     }
   ],
@@ -485,25 +805,32 @@
     "google": {
       "name": "Google",
       "icon": "google",
-      "color": "#4285F4",
-      "url": "https://www.google.com/maps/place/Rapid+Panda+Movers"
+      "url": "https://www.google.com/maps/place/Rapid+Panda+Movers",
+      "rating": 4.8,
+      "reviewCount": 51
     },
     "yelp": {
       "name": "Yelp",
       "icon": "yelp",
-      "color": "#D32323",
-      "url": "https://www.yelp.com/biz/rapid-panda-movers-miami"
+      "url": "https://www.yelp.com/biz/rapid-panda-movers-miami",
+      "rating": 4.2,
+      "reviewCount": 5
     },
-    "facebook": {
-      "name": "Facebook",
-      "icon": "facebook",
-      "color": "#1877F2",
-      "url": "https://www.facebook.com/rapidpandamovers"
+    "bbb": {
+      "name": "BBB",
+      "icon": "bbb",
+      "url": "https://www.bbb.org/us/fl/miami/profile/moving-companies/rapid-panda-movers-llc-0633-92024179",
+      "rating": "A+",
+      "reviewCount": 0
     }
   },
   "stats": {
-    "total_reviews": 500,
-    "average_rating": 4.9,
-    "five_star_percentage": 96
+    "totalReviews": 56,
+    "averageRating": 4.7,
+    "fiveStarCount": 53,
+    "fourStarCount": 1,
+    "threeStarCount": 0,
+    "twoStarCount": 0,
+    "oneStarCount": 2
   }
 }

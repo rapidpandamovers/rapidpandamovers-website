@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import { Calendar, Clock, Tag, ChevronLeft, ChevronRight } from 'lucide-react'
-import { getPostsSortedByDate, getCategories, BlogPost } from '../../lib/blog'
+import { getPostsSortedByDate, getCategories, categoryToSlug } from '../../lib/blog'
 import Hero from '../components/Hero'
+import ResourceSection from '../components/ResourceSection'
 import NewsletterSection from '../components/NewsletterSection'
 import BlogPostLink from './BlogPostLink'
 import BlogPostCard from './BlogPostCard'
@@ -15,8 +16,17 @@ interface BlogListPageProps {
 
 export default function BlogListPage({ currentPage, category = null }: BlogListPageProps) {
   // Get posts sorted by date descending (newest first)
-  const sortedBlog = getPostsSortedByDate()
-  const categories = getCategories()
+  // Handle errors gracefully - if parsing fails, show empty state
+  let sortedBlog: ReturnType<typeof getPostsSortedByDate> = []
+  let categories: ReturnType<typeof getCategories> = []
+  
+  try {
+    sortedBlog = getPostsSortedByDate()
+    categories = getCategories()
+  } catch (error) {
+    console.error('[BlogListPage] Error loading posts:', error)
+    // sortedBlog and categories remain empty arrays
+  }
 
   // Filter posts by category
   const filteredPosts = category
@@ -36,8 +46,13 @@ export default function BlogListPage({ currentPage, category = null }: BlogListP
   const startIndex = (currentPage - 1) * POSTS_PER_PAGE
   const paginatedPosts = postsForPagination.slice(startIndex, startIndex + POSTS_PER_PAGE)
 
-  // Generate page URL
+  // Generate page URL (include category slug when filtering)
   const getPageUrl = (page: number) => {
+    if (category) {
+      const slug = categoryToSlug(category)
+      if (page === 1) return `/blog/category/${encodeURIComponent(slug)}`
+      return `/blog/category/${encodeURIComponent(slug)}/page/${page}`
+    }
     if (page === 1) return '/blog'
     return `/blog/page/${page}`
   }
@@ -88,7 +103,7 @@ export default function BlogListPage({ currentPage, category = null }: BlogListP
         cta="Get Your Free Quote"
       />
 
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto py-16">
 
         {/* Categories Filter */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
@@ -105,7 +120,7 @@ export default function BlogListPage({ currentPage, category = null }: BlogListP
           {categories.map((cat) => (
             <Link
               key={cat}
-              href={`/blog/category/${encodeURIComponent(cat.toLowerCase().replace(/\s+/g, '-'))}`}
+              href={`/blog/category/${encodeURIComponent(categoryToSlug(cat))}`}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                 category === cat
                   ? 'bg-orange-500 text-white'
@@ -185,7 +200,7 @@ export default function BlogListPage({ currentPage, category = null }: BlogListP
             {currentPage > 1 ? (
               <Link
                 href={getPageUrl(currentPage - 1)}
-                className="flex items-center px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 transition-colors"
+                className="flex items-center px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-500 hover:text-orange-500 transition-colors"
               >
                 <ChevronLeft className="w-4 h-4 mr-1" />
                 Previous
@@ -210,7 +225,7 @@ export default function BlogListPage({ currentPage, category = null }: BlogListP
                     className={`w-10 h-10 flex items-center justify-center rounded-lg font-medium transition-colors ${
                       currentPage === page
                         ? 'bg-orange-500 text-white'
-                        : 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-50'
+                        : 'bg-white border border-gray-300 text-gray-700 hover:bg-orange-50 hover:border-orange-500 hover:text-orange-500'
                     }`}
                   >
                     {page}
@@ -222,7 +237,7 @@ export default function BlogListPage({ currentPage, category = null }: BlogListP
             {currentPage < totalPages ? (
               <Link
                 href={getPageUrl(currentPage + 1)}
-                className="flex items-center px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 transition-colors"
+                className="flex items-center px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-500 hover:text-orange-500 transition-colors"
               >
                 Next
                 <ChevronRight className="w-4 h-4 ml-1" />
@@ -239,13 +254,21 @@ export default function BlogListPage({ currentPage, category = null }: BlogListP
         {/* Page indicator */}
         {totalPages > 1 && (
           <p className="text-center text-gray-500 mt-4">
-            Page {currentPage} of {totalPages} ({postsForPagination.length} posts)
+            Page {currentPage} of {totalPages} ({filteredPosts.length} posts)
           </p>
         )}
 
       </div>
 
+      {/* Resources Section */}
+      <ResourceSection
+        title="More Moving Resources"
+        subtitle="Explore our comprehensive guides and services for a successful move"
+        variant="grid"
+      />
+
       <NewsletterSection />
+
     </div>
   )
 }

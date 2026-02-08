@@ -1,4 +1,5 @@
 import { Star } from 'lucide-react'
+import reviewsData from '@/data/reviews.json'
 
 interface PlatformRating {
   name: string
@@ -38,19 +39,19 @@ const BBBIcon = () => (
 const defaultRatings: PlatformRating[] = [
   {
     name: 'Google',
-    rating: '4.9',
+    rating: String(reviewsData.platforms.google.rating),
     icon: <GoogleIcon />,
     color: '#4285F4'
   },
   {
     name: 'Yelp',
-    rating: '4.9',
+    rating: String(reviewsData.platforms.yelp.rating),
     icon: <YelpIcon />,
     color: '#D32323'
   },
   {
     name: 'BBB',
-    rating: 'A+',
+    rating: String(reviewsData.platforms.bbb.rating),
     icon: <BBBIcon />,
     color: '#005A78'
   }

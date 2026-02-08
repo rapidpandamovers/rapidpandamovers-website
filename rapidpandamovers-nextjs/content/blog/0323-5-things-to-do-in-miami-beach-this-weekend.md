@@ -8,17 +8,18 @@ updated: "2026-05-20"
 readTime: "2 min read"
 category: "Lifestyle"
 image_folder: "/images/blog/2026/05/5-things-to-do-in-miami-beach-this-weekend"
-featured: "/images/blog/2026/05/5-things-to-do-in-miami-beach-this-weekend/weekend-activities-entertainment-planning.webp"
+featured: "/images/blog/2026/05/5-things-to-do-in-miami-beach-this-weekend/empty-streets-with-palm-trees-and-modern-2.webp"
 image_keywords:
   - "weekend"
   - "activities"
   - "entertainment"
   - "miami beach"
 images:
-  - "/images/blog/2026/05/5-things-to-do-in-miami-beach-this-weekend/weekend-activities-entertainment-checklist.webp"
-  - "/images/blog/2026/05/5-things-to-do-in-miami-beach-this-weekend/weekend-activities-entertainment-guide.webp"
-  - "/images/blog/2026/05/5-things-to-do-in-miami-beach-this-weekend/weekend-activities-entertainment-overview.webp"
-  - "/images/blog/2026/05/5-things-to-do-in-miami-beach-this-weekend/weekend-activities-entertainment-planning.webp"
+  - "/images/blog/2026/05/5-things-to-do-in-miami-beach-this-weekend/a-carefree-woman-in-summer-attire-enjoys-4.webp"
+  - "/images/blog/2026/05/5-things-to-do-in-miami-beach-this-weekend/empty-streets-with-palm-trees-and-modern-2.webp"
+  - "/images/blog/2026/05/5-things-to-do-in-miami-beach-this-weekend/ferris-wheel-near-palm-lined-waterfront--1.webp"
+  - "/images/blog/2026/05/5-things-to-do-in-miami-beach-this-weekend/view-of-a-distinctive-red-and-white-life-3.webp"
+
 service_link: null
 location_link: "/miami-beach-movers"
 status: "pending"
@@ -29,31 +30,31 @@ Weekends in Miami Beach offer endless possibilities, especially in May. Whether 
 
 ## 1. Find Your Farmers Market Routine
 
-Google 'Miami Beach farmers market' and pick one to visit regularly. Beyond fresh produce, these are where you'll meet neighbors and discover what your new community cares about.
+The Lincoln Road Farmers Market runs every Sunday from 9am to 6pm, offering fresh produce, artisan goods, and local honey. The North Beach Bandshell also hosts a smaller but equally charming market. Beyond fresh produce, these are where you'll meet neighbors and discover what your new community cares about.
 
-![Weekend Activities Entertainment Checklist](/images/blog/2026/05/5-things-to-do-in-miami-beach-this-weekend/weekend-activities-entertainment-checklist.webp)
+![A Carefree Woman In Summer Attire Enjoys 4](/images/blog/2026/05/5-things-to-do-in-miami-beach-this-weekend/a-carefree-woman-in-summer-attire-enjoys-4.webp)
 
 
 ## 2. Leave Earlier Than You Think for Beach Days
 
-Miami beach parking fills up fast. If you're going from Miami Beach, leave by 8am on weekends or prepare for a parking nightmare.
+Public beach parking at South Pointe Park, Lummus Park, and North Shore Open Space Park fills up fast. If you're heading to popular spots like 21st Street Beach or the Art Deco Historic District area, leave by 8am on weekends or prepare for a parking hunt. Pro tip: the metered parking along Collins Avenue north of 46th Street is often easier to find.
 
 ## 3. Make Brunch Reservations Thursday Night
 
-Popular Miami Beach brunch spots book up. If you're planning to explore the brunch scene, reserve ahead or prepare for long waits.
+Popular Miami Beach brunch spots like Nikki Beach, The Front Porch Cafe on Ocean Drive, and Big Pink on Collins Avenue book up fast. For South Beach hotspots like A Fish Called Avalon or Yardbird, reserve Thursday night or prepare for 90-minute waits on Saturday morning.
 
-![Weekend Activities Entertainment Guide](/images/blog/2026/05/5-things-to-do-in-miami-beach-this-weekend/weekend-activities-entertainment-guide.webp)
+![Ferris Wheel Near Palm Lined Waterfront  1](/images/blog/2026/05/5-things-to-do-in-miami-beach-this-weekend/ferris-wheel-near-palm-lined-waterfront--1.webp)
 
 
 ## 4. Rent Before You Buy Gear
 
-Paddleboards, kayaks, bikes—rent them first while you explore Miami Beach. You'll learn which activities you actually enjoy before investing.
+Paddleboards, kayaks, and bikes - rent them first while you explore Miami Beach. South Beach Kayak offers rentals near the Venetian Islands, and Citi Bike stations are scattered throughout Mid-Beach and South Beach. You'll learn which activities you actually enjoy before investing.
 
 ## 5. Check Do305.com and TimeOut Miami
 
-These sites aggregate weekend events across Miami, including Miami Beach. Subscribe to their newsletters to never miss local happenings.
+These sites aggregate weekend events across Miami, including Miami Beach happenings at venues like the Fillmore, the New World Symphony at the New World Center, and Art Deco walking tours. Subscribe to their newsletters to stay on top of concerts at the Bandshell, gallery openings on Lincoln Road, and seasonal events like the South Beach Food and Wine Festival.
 
-![Weekend Activities Entertainment Overview](/images/blog/2026/05/5-things-to-do-in-miami-beach-this-weekend/weekend-activities-entertainment-overview.webp)
+![View Of A Distinctive Red And White Life 3](/images/blog/2026/05/5-things-to-do-in-miami-beach-this-weekend/view-of-a-distinctive-red-and-white-life-3.webp)
 
 
 ## Ready for Your Move?

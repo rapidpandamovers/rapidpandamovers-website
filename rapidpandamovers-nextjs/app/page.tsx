@@ -23,7 +23,12 @@ export default function Home() {
       <RatingSection />
       <MediaSection showArrows={false} showDots={false} enableModal={false} description="" />
       <ServiceSection />
-      <ReviewSection />
+      {/* Reviews Section */}
+      <ReviewSection
+        title="What Our Customers Say"
+        subtitle="Real reviews from real customers"
+        limit={3}
+      />
       <WhySection />
       <LocationSection />
       <AboutSection />

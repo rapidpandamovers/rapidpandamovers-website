@@ -5,7 +5,6 @@ import LocationSection from './LocationSection';
 import RouteSection from './RouteSection';
 import ServiceSection from './ServiceSection';
 import MapSection from './MapSection';
-import SightSection, { Sight } from './SightSection';
 import ContentSection from './ContentSection';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
@@ -130,14 +129,6 @@ export default function LocationPage({ city }: LocationPageProps) {
           <ArrowRight className="w-5 h-5 ml-2" />
         </Link>
       </div>
-
-      {/* Popular Sights Section */}
-      {effectiveSights && effectiveSights.length > 0 && (
-        <SightSection
-          sights={effectiveSights}
-          locationName={city.name}
-        />
-      )}
 
       {/* Popular Routes Section */}
       <RouteSection location={city} />

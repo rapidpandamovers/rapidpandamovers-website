@@ -3,6 +3,10 @@
 import { useState, FormEvent } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Loader2 } from 'lucide-react';
+import content from '@/data/content.json';
+
+const phone = content.site.phone;
+const phoneFormatted = `(${phone.slice(0,3)}) ${phone.slice(4,7)}-${phone.slice(8)}`;
 
 // Map size query param to select option value
 const sizeMap: Record<string, string> = {
@@ -528,7 +532,7 @@ export default function ReservationForm() {
       {/* Error Message */}
       {submitStatus === 'error' && (
         <div className="bg-red-50 text-red-600 p-4 rounded-lg text-sm">
-          Something went wrong. Please try again or call us directly at (786) 585-4269.
+          Something went wrong. Please try again or call us directly at {phoneFormatted}.
         </div>
       )}
 

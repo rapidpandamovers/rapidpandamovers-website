@@ -6,7 +6,6 @@ import {
 import Link from 'next/link'
 import Hero from '../components/Hero'
 import ReviewSection from '../components/ReviewSection'
-import ContactSection from '../components/ContactSection'
 import QuoteSection from '../components/QuoteSection'
 
 export const metadata = {
@@ -262,7 +261,11 @@ export default function WhyChooseUsPage() {
       </section>
 
       {/* Reviews Section */}
-      <ReviewSection />
+      <ReviewSection
+        title="What Our Customers Say"
+        subtitle="Real reviews from real customers"
+        limit={3}
+      />
 
       {/* CTA Section */}
       <QuoteSection
@@ -270,7 +273,6 @@ export default function WhyChooseUsPage() {
         subtitle="Join thousands of satisfied customers who chose Rapid Panda Movers for their Miami move."
       />
 
-      <ContactSection />
     </div>
   )
 }

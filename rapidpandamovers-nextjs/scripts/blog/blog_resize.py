@@ -120,11 +120,30 @@ def resize_image(source: Path, width: int, output_dir: Path = None) -> Path:
         return None
 
     # Create temp resized file using sips
-    temp_path = output_dir / f"_temp_{width}w{source.suffix}"
-    subprocess.run(
-        ['sips', '-Z', str(width), str(source), '--out', str(temp_path)],
-        capture_output=True
-    )
+    # Use PNG as temp format since sips can't write WebP
+    temp_ext = '.png' if source.suffix.lower() == '.webp' else source.suffix
+    temp_path = output_dir / f"_temp_{width}w{temp_ext}"
+
+    # For WebP sources, first convert to PNG using cwebp's sibling dwebp
+    if source.suffix.lower() == '.webp':
+        # Use cwebp in reverse (dwebp) or fall back to sips reading webp -> png
+        subprocess.run(
+            ['sips', '-s', 'format', 'png', str(source), '--out', str(temp_path)],
+            capture_output=True
+        )
+        # Now resize the PNG
+        resized_temp = output_dir / f"_temp_resized_{width}w.png"
+        subprocess.run(
+            ['sips', '-Z', str(width), str(temp_path), '--out', str(resized_temp)],
+            capture_output=True
+        )
+        temp_path.unlink() if temp_path.exists() else None
+        temp_path = resized_temp
+    else:
+        subprocess.run(
+            ['sips', '-Z', str(width), str(source), '--out', str(temp_path)],
+            capture_output=True
+        )
 
     # Convert temp to WebP
     if temp_path.exists():

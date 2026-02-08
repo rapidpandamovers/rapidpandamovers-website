@@ -1,14 +1,25 @@
 #!/usr/bin/env python3
 """
-Calculate word count and readTime for blog posts.
+Calculate word count, readTime, and excerpt length for blog posts.
 
 Usage:
     python scripts/blog/blog_wordcount.py <post_id_or_file>
     python scripts/blog/blog_wordcount.py 0001
     python scripts/blog/blog_wordcount.py content/blog/0001-*.md
     python scripts/blog/blog_wordcount.py --all              # Check all posts
-    python scripts/blog/blog_wordcount.py --fix <post_id>    # Fix readTime in file
+    python scripts/blog/blog_wordcount.py --fix <post_id>    # Fix readTime and excerpt
+
+Checks:
+    - Word count and readTime (based on 200 WPM)
+    - Excerpt length (max 155 characters for SEO)
+
+Fixes (with --fix):
+    - readTime based on word count
+    - Excerpt length (truncates to 155 chars max)
 """
+
+# Maximum excerpt length for SEO meta descriptions
+MAX_EXCERPT_LENGTH = 155
 
 import sys
 import re
@@ -51,6 +62,33 @@ def get_current_read_time(content: str) -> str:
     return match.group(1).strip() if match else None
 
 
+def get_excerpt(content: str) -> str:
+    """Extract excerpt from frontmatter."""
+    match = re.search(r'excerpt:\s*["\']([^"\']+)["\']', content)
+    return match.group(1).strip() if match else None
+
+
+def truncate_excerpt(excerpt: str, max_length: int = MAX_EXCERPT_LENGTH) -> str:
+    """Truncate excerpt to max length at word boundary, ending with period."""
+    if len(excerpt) <= max_length:
+        return excerpt
+
+    # Find last space before max_length
+    truncated = excerpt[:max_length]
+    last_space = truncated.rfind(' ')
+    if last_space > max_length - 30:  # Don't cut too much
+        truncated = truncated[:last_space]
+
+    # Clean up ending
+    truncated = truncated.rstrip('.,;:!? ')
+
+    # Add period if it doesn't end with punctuation
+    if not truncated[-1] in '.!?':
+        truncated += '.'
+
+    return truncated
+
+
 def find_post_file(post_id: str) -> Path:
     """Find post file by ID or glob pattern."""
     if Path(post_id).exists():
@@ -71,38 +109,69 @@ def find_post_file(post_id: str) -> Path:
 
 
 def process_post(file_path: Path, fix: bool = False) -> dict:
-    """Process a single post and return word count info."""
+    """Process a single post and return word count and excerpt info."""
     content = file_path.read_text()
     body = extract_body(content)
     word_count = count_words(body)
     suggested_time = calculate_read_time(word_count)
     current_time = get_current_read_time(content)
 
+    # Check excerpt
+    excerpt = get_excerpt(content)
+    excerpt_length = len(excerpt) if excerpt else 0
+    excerpt_too_long = excerpt_length > MAX_EXCERPT_LENGTH
+
     result = {
         'file': file_path.name,
         'word_count': word_count,
         'suggested_time': suggested_time,
         'current_time': current_time,
-        'needs_update': current_time != suggested_time
+        'needs_time_update': current_time != suggested_time,
+        'excerpt': excerpt,
+        'excerpt_length': excerpt_length,
+        'excerpt_too_long': excerpt_too_long,
+        'needs_update': current_time != suggested_time or excerpt_too_long
     }
 
-    if fix and result['needs_update']:
-        # Update the readTime in the file
-        if current_time:
+    if fix:
+        new_content = content
+        changes_made = False
+
+        # Fix readTime if needed
+        if result['needs_time_update']:
+            if current_time:
+                new_content = re.sub(
+                    r'(readTime:\s*)["\']?[^"\'"\n]+["\']?',
+                    f'readTime: "{suggested_time}"',
+                    new_content
+                )
+            else:
+                # Add readTime after date if not present
+                new_content = re.sub(
+                    r'(date:\s*[^\n]+)',
+                    f'\\1\nreadTime: "{suggested_time}"',
+                    new_content
+                )
+            changes_made = True
+            result['time_fixed'] = True
+
+        # Fix excerpt if too long
+        if excerpt_too_long and excerpt:
+            new_excerpt = truncate_excerpt(excerpt)
+            escaped_excerpt = re.escape(excerpt)
             new_content = re.sub(
-                r'(readTime:\s*)["\']?[^"\'"\n]+["\']?',
-                f'readTime: "{suggested_time}"',
-                content
+                rf'(excerpt:\s*["\']){escaped_excerpt}(["\'])',
+                rf'\g<1>{new_excerpt}\g<2>',
+                new_content
             )
-        else:
-            # Add readTime after date if not present
-            new_content = re.sub(
-                r'(date:\s*[^\n]+)',
-                f'\\1\nreadTime: "{suggested_time}"',
-                content
-            )
-        file_path.write_text(new_content)
-        result['fixed'] = True
+            changes_made = True
+            result['excerpt_fixed'] = True
+            result['new_excerpt'] = new_excerpt
+            result['new_excerpt_length'] = len(new_excerpt)
+
+        if changes_made:
+            file_path.write_text(new_content)
+            result['fixed'] = True
 
     return result
 
@@ -138,25 +207,52 @@ def main():
             print(f"Word count: {result['word_count']}")
             print(f"Suggested readTime: {result['suggested_time']}")
             print(f"Current readTime: {result['current_time']}")
-            if result['needs_update']:
-                if fix_mode:
-                    print("✅ Fixed!")
+
+            # Show readTime status
+            if result['needs_time_update']:
+                if result.get('time_fixed'):
+                    print("✅ readTime fixed")
                 else:
-                    print("⚠️  Needs update (use --fix to update)")
+                    print("⚠️  readTime needs update (use --fix)")
             else:
                 print("✅ readTime is correct")
+
+            # Show excerpt status
+            print(f"Excerpt length: {result['excerpt_length']} chars (max {MAX_EXCERPT_LENGTH})")
+            if result['excerpt_too_long']:
+                if result.get('excerpt_fixed'):
+                    print(f"✅ Excerpt fixed: {result['new_excerpt_length']} chars")
+                else:
+                    print("⚠️  Excerpt too long (use --fix)")
+            else:
+                print("✅ Excerpt length OK")
+
         elif result['needs_update']:
             mismatches.append(result)
 
     if len(posts) > 1:
+        time_issues = [m for m in mismatches if m.get('needs_time_update')]
+        excerpt_issues = [m for m in mismatches if m.get('excerpt_too_long')]
+
         print(f"Checked {len(posts)} posts")
-        print(f"Found {len(mismatches)} with incorrect readTime")
+        print(f"Found {len(time_issues)} with incorrect readTime")
+        print(f"Found {len(excerpt_issues)} with excerpt too long (>{MAX_EXCERPT_LENGTH} chars)")
+
         if mismatches and not fix_mode:
-            print("\nMismatches:")
-            for m in mismatches[:20]:
-                print(f"  {m['file']}: {m['current_time']} → {m['suggested_time']} ({m['word_count']} words)")
-            if len(mismatches) > 20:
-                print(f"  ... and {len(mismatches) - 20} more")
+            if time_issues:
+                print("\nreadTime issues:")
+                for m in time_issues[:10]:
+                    print(f"  {m['file']}: {m['current_time']} → {m['suggested_time']}")
+                if len(time_issues) > 10:
+                    print(f"  ... and {len(time_issues) - 10} more")
+
+            if excerpt_issues:
+                print("\nExcerpt too long:")
+                for m in excerpt_issues[:10]:
+                    print(f"  {m['file']}: {m['excerpt_length']} chars")
+                if len(excerpt_issues) > 10:
+                    print(f"  ... and {len(excerpt_issues) - 10} more")
+
             print("\nRun with --fix to update all")
 
 

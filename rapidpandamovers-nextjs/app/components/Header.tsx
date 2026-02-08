@@ -1,11 +1,15 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Phone, Mail } from 'lucide-react'
+import { Phone } from 'lucide-react'
 import { getAllActiveCities, getAllActiveServices } from '@/lib/data'
+import content from '@/data/content.json'
 
 export default function Header() {
   const cities = getAllActiveCities()
   const services = getAllActiveServices()
+  const phone = content.site.phone
+  const phoneFormatted = `(${phone.slice(0,3)}) ${phone.slice(4,7)}-${phone.slice(8)}`
+  const phoneTel = phone.replace(/-/g, '')
   return (
     <>
           
@@ -17,7 +21,7 @@ export default function Header() {
               <Image
                 src="/images/rapidpandamovers-logo.png"
                 alt="Rapid Panda Movers"
-                width={64}
+                width={109}
                 height={64}
                 className="h-16 w-auto"
                 priority
@@ -172,9 +176,9 @@ export default function Header() {
               </div>
 
               <div className="flex items-center space-x-3">
-                <a href="tel:+13055551234" className="flex items-center space-x-2 border border-orange-500 text-orange-500 hover:bg-orange-50 font-semibold py-3 px-6 rounded-lg transition-colors">
+                <a href={`tel:${phoneTel}`} className="flex items-center space-x-2 border border-orange-500 text-orange-500 hover:bg-orange-50 font-semibold py-3 px-6 rounded-lg transition-colors">
                   <Phone className="w-4 h-4" />
-                  <span>(305) 555-1234</span>
+                  <span>{phoneFormatted}</span>
                 </a>
                 <Link href="/quote" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
                   Get Free Quote

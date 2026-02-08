@@ -27,28 +27,27 @@ interface MediaSectionProps {
 const defaultItems: MediaItem[] = [
   {
     type: 'image',
-    src: 'https://www.rapidpandamovers.com/wp-content/uploads/2024/11/moving-truck-rapid-panda.jpg',
-    title: 'Professional Moving',
-    description: 'Our team in action'
+    src: '/images/sights/brickell-city-centre.jpg',
+    title: 'Brickell Moving',
+    description: 'Downtown Miami relocations'
   },
   {
     type: 'image',
-    src: 'https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png',
-    title: 'Expert Movers',
-    description: 'Trained professionals'
-  },
-  {
-    type: 'video',
-    src: 'dQw4w9WgXcQ', // YouTube video ID placeholder
-    thumbnail: 'https://www.rapidpandamovers.com/wp-content/uploads/2024/11/contact-us-rapid-panda.png',
-    title: 'Moving Day Tips',
-    description: 'Watch our guide'
+    src: '/images/sights/cocowalk.jpg',
+    title: 'Coconut Grove',
+    description: 'Village charm moves'
   },
   {
     type: 'image',
-    src: 'https://www.rapidpandamovers.com/wp-content/uploads/2024/11/moving-truck-rapid-panda.jpg',
-    title: 'Careful Handling',
-    description: 'Your belongings are safe'
+    src: '/images/sights/wynwood-walls.jpg',
+    title: 'Wynwood',
+    description: 'Arts district moves'
+  },
+  {
+    type: 'image',
+    src: '/images/sights/miami-beach-boardwalk.jpg',
+    title: 'Miami Beach',
+    description: 'Coastal relocations'
   },
 ]
 
@@ -173,8 +172,8 @@ export default function MediaSection({
               ref={scrollRef}
               className={`flex gap-4 pb-4 ${
                 showArrows || showDots || autoScroll
-                  ? 'overflow-x-auto scrollbar-hide snap-x snap-mandatory px-1'
-                  : 'overflow-hidden'
+                  ? 'overflow-x-auto scrollbar-hide snap-x snap-mandatory px-1 pt-1'
+                  : 'overflow-visible p-1'
               }`}
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >

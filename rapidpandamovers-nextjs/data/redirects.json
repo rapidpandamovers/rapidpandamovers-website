@@ -226,473 +226,23 @@
       "permanent": true
     },
     {
-      "source": "/moving-gun-safe-stairs",
-      "destination": "/blog/moving-gun-safe-stairs",
-      "permanent": true
-    },
-    {
-      "source": "/moving-gun-safe-stairs/",
-      "destination": "/blog/moving-gun-safe-stairs",
-      "permanent": true
-    },
-    {
-      "source": "/gun-safe-moving-costs",
-      "destination": "/blog/gun-safe-moving-costs",
-      "permanent": true
-    },
-    {
-      "source": "/gun-safe-moving-costs/",
-      "destination": "/blog/gun-safe-moving-costs",
-      "permanent": true
-    },
-    {
-      "source": "/preparing-gun-safe-move",
-      "destination": "/blog/preparing-gun-safe-move",
-      "permanent": true
-    },
-    {
-      "source": "/preparing-gun-safe-move/",
-      "destination": "/blog/preparing-gun-safe-move",
-      "permanent": true
-    },
-    {
-      "source": "/gun-safe-moving-equipment",
-      "destination": "/blog/gun-safe-moving-equipment",
-      "permanent": true
-    },
-    {
-      "source": "/gun-safe-moving-equipment/",
-      "destination": "/blog/gun-safe-moving-equipment",
-      "permanent": true
-    },
-    {
-      "source": "/selecting-gun-safe-movers",
-      "destination": "/blog/selecting-gun-safe-movers",
-      "permanent": true
-    },
-    {
-      "source": "/selecting-gun-safe-movers/",
-      "destination": "/blog/selecting-gun-safe-movers",
-      "permanent": true
-    },
-    {
-      "source": "/planning-residential-move",
-      "destination": "/blog/planning-residential-move",
-      "permanent": true
-    },
-    {
-      "source": "/planning-residential-move/",
-      "destination": "/blog/planning-residential-move",
-      "permanent": true
-    },
-    {
-      "source": "/local-moving-guide",
-      "destination": "/blog/local-moving-guide",
-      "permanent": true
-    },
-    {
-      "source": "/local-moving-guide/",
-      "destination": "/blog/local-moving-guide",
-      "permanent": true
-    },
-    {
-      "source": "/last-minute-local-move",
-      "destination": "/blog/last-minute-local-move",
-      "permanent": true
-    },
-    {
-      "source": "/last-minute-local-move/",
-      "destination": "/blog/last-minute-local-move",
-      "permanent": true
-    },
-    {
-      "source": "/senior-local-moving-guide",
-      "destination": "/blog/senior-local-moving-guide",
-      "permanent": true
-    },
-    {
-      "source": "/senior-local-moving-guide/",
-      "destination": "/blog/senior-local-moving-guide",
-      "permanent": true
-    },
-    {
-      "source": "/pet-friendly-local-moving",
-      "destination": "/blog/pet-friendly-local-moving",
-      "permanent": true
-    },
-    {
-      "source": "/pet-friendly-local-moving/",
-      "destination": "/blog/pet-friendly-local-moving",
-      "permanent": true
-    },
-    {
-      "source": "/moving-locally-with-kids",
-      "destination": "/blog/moving-locally-with-kids",
-      "permanent": true
-    },
-    {
-      "source": "/moving-locally-with-kids/",
-      "destination": "/blog/moving-locally-with-kids",
-      "permanent": true
-    },
-    {
-      "source": "/the-ultimate-local-move-checklist",
-      "destination": "/blog/the-ultimate-local-move-checklist",
-      "permanent": true
-    },
-    {
-      "source": "/the-ultimate-local-move-checklist/",
-      "destination": "/blog/the-ultimate-local-move-checklist",
-      "permanent": true
-    },
-    {
-      "source": "/cut-costs-not-corners-understanding-local-moves",
-      "destination": "/blog/cut-costs-not-corners-understanding-local-moves",
-      "permanent": true
-    },
-    {
-      "source": "/cut-costs-not-corners-understanding-local-moves/",
-      "destination": "/blog/cut-costs-not-corners-understanding-local-moves",
-      "permanent": true
-    },
-    {
-      "source": "/how-to-conduct-research-and-make-comparisons-among-local-moving-companies",
-      "destination": "/blog/how-to-conduct-research-and-make-comparisons-among-local-moving-companies",
-      "permanent": true
-    },
-    {
-      "source": "/how-to-conduct-research-and-make-comparisons-among-local-moving-companies/",
-      "destination": "/blog/how-to-conduct-research-and-make-comparisons-among-local-moving-companies",
-      "permanent": true
-    },
-    {
-      "source": "/apartment-moving-safety-tips",
-      "destination": "/blog/apartment-moving-safety-tips",
-      "permanent": true
-    },
-    {
-      "source": "/apartment-moving-safety-tips/",
-      "destination": "/blog/apartment-moving-safety-tips",
-      "permanent": true
-    },
-    {
-      "source": "/moving-with-pets-apartments",
-      "destination": "/blog/moving-with-pets-apartments",
-      "permanent": true
-    },
-    {
-      "source": "/moving-with-pets-apartments/",
-      "destination": "/blog/moving-with-pets-apartments",
-      "permanent": true
-    },
-    {
-      "source": "/hiring-apartment-movers",
-      "destination": "/blog/hiring-apartment-movers",
-      "permanent": true
-    },
-    {
-      "source": "/hiring-apartment-movers/",
-      "destination": "/blog/hiring-apartment-movers",
-      "permanent": true
-    },
-    {
-      "source": "/unpacking-organizing-apartment",
-      "destination": "/blog/unpacking-organizing-apartment",
-      "permanent": true
-    },
-    {
-      "source": "/unpacking-organizing-apartment/",
-      "destination": "/blog/unpacking-organizing-apartment",
-      "permanent": true
-    },
-    {
-      "source": "/packing-tips-apartment",
-      "destination": "/blog/packing-tips-apartment",
-      "permanent": true
-    },
-    {
-      "source": "/packing-tips-apartment/",
-      "destination": "/blog/packing-tips-apartment",
-      "permanent": true
-    },
-    {
-      "source": "/a-comprehensive-guide-to-small-space-moving",
-      "destination": "/blog/a-comprehensive-guide-to-small-space-moving",
-      "permanent": true
-    },
-    {
-      "source": "/a-comprehensive-guide-to-small-space-moving/",
-      "destination": "/blog/a-comprehensive-guide-to-small-space-moving",
-      "permanent": true
-    },
-    {
-      "source": "/a-guide-to-high-rise-moving-strategies-and-insights",
-      "destination": "/blog/a-guide-to-high-rise-moving-strategies-and-insights",
-      "permanent": true
-    },
-    {
-      "source": "/a-guide-to-high-rise-moving-strategies-and-insights/",
-      "destination": "/blog/a-guide-to-high-rise-moving-strategies-and-insights",
-      "permanent": true
-    },
-    {
-      "source": "/budget-apartment-moving",
-      "destination": "/blog/budget-apartment-moving",
-      "permanent": true
-    },
-    {
-      "source": "/budget-apartment-moving/",
-      "destination": "/blog/budget-apartment-moving",
-      "permanent": true
-    },
-    {
-      "source": "/budget-apartment-moving-your-transition-without-breaking-the-bank",
-      "destination": "/blog/budget-apartment-moving-save-money-on-your-move",
-      "permanent": true
-    },
-    {
-      "source": "/budget-apartment-moving-your-transition-without-breaking-the-bank/",
-      "destination": "/blog/budget-apartment-moving-save-money-on-your-move",
-      "permanent": true
-    },
-    {
-      "source": "/how-soon-before-moving-should-you-look-for-an-apartment",
-      "destination": "/blog/how-soon-before-moving-should-you-look-for-an-apartment",
-      "permanent": true
-    },
-    {
-      "source": "/how-soon-before-moving-should-you-look-for-an-apartment/",
-      "destination": "/blog/how-soon-before-moving-should-you-look-for-an-apartment",
-      "permanent": true
-    },
-    {
-      "source": "/elevator-reservations-moving",
-      "destination": "/blog/elevator-reservations-moving",
-      "permanent": true
-    },
-    {
-      "source": "/elevator-reservations-moving/",
-      "destination": "/blog/elevator-reservations-moving",
-      "permanent": true
-    },
-    {
-      "source": "/long-distance-move-planning",
-      "destination": "/blog/long-distance-move-planning",
-      "permanent": true
-    },
-    {
-      "source": "/long-distance-move-planning/",
-      "destination": "/blog/long-distance-move-planning",
-      "permanent": true
-    },
-    {
-      "source": "/long-distance-moving-guide-a-helpful-checklist-for-a-stress-free-move",
-      "destination": "/blog/long-distance-moving-guide-a-helpful-checklist-for-a-stress-free-move",
-      "permanent": true
-    },
-    {
-      "source": "/long-distance-moving-guide-a-helpful-checklist-for-a-stress-free-move/",
-      "destination": "/blog/long-distance-moving-guide-a-helpful-checklist-for-a-stress-free-move",
-      "permanent": true
-    },
-    {
-      "source": "/from-start-to-finish-planning-your-long-distance-move",
-      "destination": "/blog/from-start-to-finish-planning-your-long-distance-move",
-      "permanent": true
-    },
-    {
-      "source": "/from-start-to-finish-planning-your-long-distance-move/",
-      "destination": "/blog/from-start-to-finish-planning-your-long-distance-move",
-      "permanent": true
-    },
-    {
-      "source": "/how-much-does-a-cross-country-move-cost-key-factors-explained-rapid-panda-movers",
-      "destination": "/blog/how-much-does-a-cross-country-move-cost-key-factors-explained-rapid-panda-movers",
-      "permanent": true
-    },
-    {
-      "source": "/how-much-does-a-cross-country-move-cost-key-factors-explained-rapid-panda-movers/",
-      "destination": "/blog/how-much-does-a-cross-country-move-cost-key-factors-explained-rapid-panda-movers",
-      "permanent": true
-    },
-    {
-      "source": "/interstate-move-packing",
-      "destination": "/blog/interstate-move-packing",
-      "permanent": true
-    },
-    {
-      "source": "/interstate-move-packing/",
-      "destination": "/blog/interstate-move-packing",
-      "permanent": true
-    },
-    {
-      "source": "/managing-long-moving-stress",
-      "destination": "/blog/managing-long-moving-stress",
-      "permanent": true
-    },
-    {
-      "source": "/managing-long-moving-stress/",
-      "destination": "/blog/managing-long-moving-stress",
-      "permanent": true
-    },
-    {
-      "source": "/senior-long-distance-moving",
-      "destination": "/blog/senior-long-distance-moving",
-      "permanent": true
-    },
-    {
-      "source": "/senior-long-distance-moving/",
-      "destination": "/blog/senior-long-distance-moving",
-      "permanent": true
-    },
-    {
-      "source": "/eco-friendly-packing-materials",
-      "destination": "/blog/eco-friendly-packing-materials",
-      "permanent": true
-    },
-    {
-      "source": "/eco-friendly-packing-materials/",
-      "destination": "/blog/eco-friendly-packing-materials",
-      "permanent": true
-    },
-    {
-      "source": "/efficient-packing-strategies",
-      "destination": "/blog/efficient-packing-strategies",
-      "permanent": true
-    },
-    {
-      "source": "/efficient-packing-strategies/",
-      "destination": "/blog/efficient-packing-strategies",
-      "permanent": true
-    },
-    {
-      "source": "/specialized-fragile-packing",
-      "destination": "/blog/specialized-fragile-packing",
-      "permanent": true
-    },
-    {
-      "source": "/specialized-fragile-packing/",
-      "destination": "/blog/specialized-fragile-packing",
-      "permanent": true
-    },
-    {
-      "source": "/organize-packing-process",
-      "destination": "/blog/organize-packing-process",
-      "permanent": true
-    },
-    {
-      "source": "/organize-packing-process/",
-      "destination": "/blog/organize-packing-process",
-      "permanent": true
-    },
-    {
-      "source": "/how-to-pack-electronics-safely-for-moving",
-      "destination": "/blog/how-to-pack-electronics-safely-for-moving",
-      "permanent": true
-    },
-    {
-      "source": "/how-to-pack-electronics-safely-for-moving/",
-      "destination": "/blog/how-to-pack-electronics-safely-for-moving",
-      "permanent": true
-    },
-    {
-      "source": "/packing-office-equipment-for-a-stress-free-move",
-      "destination": "/blog/packing-office-equipment-for-a-stress-free-move",
-      "permanent": true
-    },
-    {
-      "source": "/packing-office-equipment-for-a-stress-free-move/",
-      "destination": "/blog/packing-office-equipment-for-a-stress-free-move",
-      "permanent": true
-    },
-    {
-      "source": "/moving-here-s-how-to-pack-efficiently-without-losing-your-mind",
-      "destination": "/blog/moving-here-s-how-to-pack-efficiently-without-losing-your-mind",
-      "permanent": true
-    },
-    {
-      "source": "/moving-here-s-how-to-pack-efficiently-without-losing-your-mind/",
-      "destination": "/blog/moving-here-s-how-to-pack-efficiently-without-losing-your-mind",
-      "permanent": true
-    },
-    {
       "source": "/your-ultimate-senior-moving-checklist-for-a-smooth-transition",
-      "destination": "/blog/your-ultimate-senior-moving-checklist-for-a-smooth-transition",
+      "destination": "/blog/senior-moving-checklist-for-a-smooth-transition",
       "permanent": true
     },
     {
       "source": "/your-ultimate-senior-moving-checklist-for-a-smooth-transition/",
-      "destination": "/blog/your-ultimate-senior-moving-checklist-for-a-smooth-transition",
-      "permanent": true
-    },
-    {
-      "source": "/what-documents-need-updating-during-a-move",
-      "destination": "/blog/what-documents-need-updating-during-a-move",
-      "permanent": true
-    },
-    {
-      "source": "/what-documents-need-updating-during-a-move/",
-      "destination": "/blog/what-documents-need-updating-during-a-move",
-      "permanent": true
-    },
-    {
-      "source": "/tips-for-quick-and-effective-moving-organization",
-      "destination": "/blog/tips-for-quick-and-effective-moving-organization",
-      "permanent": true
-    },
-    {
-      "source": "/tips-for-quick-and-effective-moving-organization/",
-      "destination": "/blog/tips-for-quick-and-effective-moving-organization",
-      "permanent": true
-    },
-    {
-      "source": "/creating-a-realistic-moving-budget-a-step-by-step-guide",
-      "destination": "/blog/creating-a-realistic-moving-budget-a-step-by-step-guide",
-      "permanent": true
-    },
-    {
-      "source": "/creating-a-realistic-moving-budget-a-step-by-step-guide/",
-      "destination": "/blog/creating-a-realistic-moving-budget-a-step-by-step-guide",
-      "permanent": true
-    },
-    {
-      "source": "/how-to-pick-the-best-moving-date-ultimate-guide",
-      "destination": "/blog/how-to-pick-the-best-moving-date-ultimate-guide",
-      "permanent": true
-    },
-    {
-      "source": "/how-to-pick-the-best-moving-date-ultimate-guide/",
-      "destination": "/blog/how-to-pick-the-best-moving-date-ultimate-guide",
+      "destination": "/blog/senior-moving-checklist-for-a-smooth-transition",
       "permanent": true
     },
     {
       "source": "/top-tips-to-nail-your-moving-company-choice",
-      "destination": "/blog/top-tips-to-nail-your-moving-company-choice",
+      "destination": "/blog/how-to-choose-a-moving-company-in-miami-avoid-scams",
       "permanent": true
     },
     {
       "source": "/top-tips-to-nail-your-moving-company-choice/",
-      "destination": "/blog/top-tips-to-nail-your-moving-company-choice",
-      "permanent": true
-    },
-    {
-      "source": "/what-you-can-leave-behind-when-moving-out",
-      "destination": "/blog/what-you-can-leave-behind-when-moving-out",
-      "permanent": true
-    },
-    {
-      "source": "/what-you-can-leave-behind-when-moving-out/",
-      "destination": "/blog/what-you-can-leave-behind-when-moving-out",
-      "permanent": true
-    },
-    {
-      "source": "/on-the-go-essentials-items-you-should-always-have-at-hand",
-      "destination": "/blog/on-the-go-essentials-items-you-should-always-have-at-hand",
-      "permanent": true
-    },
-    {
-      "source": "/on-the-go-essentials-items-you-should-always-have-at-hand/",
-      "destination": "/blog/on-the-go-essentials-items-you-should-always-have-at-hand",
+      "destination": "/blog/how-to-choose-a-moving-company-in-miami-avoid-scams",
       "permanent": true
     },
     {
@@ -706,163 +256,513 @@
       "permanent": true
     },
     {
-      "source": "/miami-fl-eco-friendly-moving",
-      "destination": "/blog/setting-the-stage-for-an-eco-friendly-miami-fl-move",
+      "source": "/what-you-can-leave-behind-when-moving-out",
+      "destination": "/blog/what-you-can-leave-behind-when-moving-out",
       "permanent": true
     },
     {
-      "source": "/miami-fl-eco-friendly-moving/",
-      "destination": "/blog/setting-the-stage-for-an-eco-friendly-miami-fl-move",
+      "source": "/what-you-can-leave-behind-when-moving-out/",
+      "destination": "/blog/what-you-can-leave-behind-when-moving-out",
       "permanent": true
     },
     {
-      "source": "/miami-fl-transport-accessibility",
-      "destination": "/blog/miami-fl-transport-accessibility",
+      "source": "/the-ultimate-local-move-checklist",
+      "destination": "/blog/the-ultimate-local-move-checklist",
       "permanent": true
     },
     {
-      "source": "/miami-fl-transport-accessibility/",
-      "destination": "/blog/miami-fl-transport-accessibility",
+      "source": "/the-ultimate-local-move-checklist/",
+      "destination": "/blog/the-ultimate-local-move-checklist",
       "permanent": true
     },
     {
-      "source": "/miami-fl-diy-vs-professional-moving",
-      "destination": "/blog/miami-fl-diy-vs-professional-moving",
+      "source": "/how-soon-before-moving-should-you-look-for-an-apartment",
+      "destination": "/blog/how-soon-before-moving-should-you-look-for-an-apartment",
       "permanent": true
     },
     {
-      "source": "/miami-fl-diy-vs-professional-moving/",
-      "destination": "/blog/miami-fl-diy-vs-professional-moving",
+      "source": "/how-soon-before-moving-should-you-look-for-an-apartment/",
+      "destination": "/blog/how-soon-before-moving-should-you-look-for-an-apartment",
       "permanent": true
     },
     {
-      "source": "/miami-fl-packing-unpacking-tips",
-      "destination": "/blog/miami-fl-packing-unpacking-tips",
+      "source": "/moving-here-s-how-to-pack-efficiently-without-losing-your-mind",
+      "destination": "/blog/how-to-pack-efficiently-without-losing-your-mind",
       "permanent": true
     },
     {
-      "source": "/miami-fl-packing-unpacking-tips/",
-      "destination": "/blog/miami-fl-packing-unpacking-tips",
+      "source": "/moving-here-s-how-to-pack-efficiently-without-losing-your-mind/",
+      "destination": "/blog/how-to-pack-efficiently-without-losing-your-mind",
       "permanent": true
     },
     {
-      "source": "/miami-moving-regulations-permits",
-      "destination": "/blog/mastering-miami-relocation-a-comprehensive-guide-to-moving",
+      "source": "/on-the-go-essentials-items-you-should-always-have-at-hand",
+      "destination": "/blog/moving-day-essentials-items-you-should-always-have-at-hand",
       "permanent": true
     },
     {
-      "source": "/miami-moving-regulations-permits/",
-      "destination": "/blog/mastering-miami-relocation-a-comprehensive-guide-to-moving",
+      "source": "/on-the-go-essentials-items-you-should-always-have-at-hand/",
+      "destination": "/blog/moving-day-essentials-items-you-should-always-have-at-hand",
       "permanent": true
     },
     {
-      "source": "/miami-events-community-info",
-      "destination": "/blog/miami-events-may-your-insider-s-guide",
+      "source": "/how-to-pick-the-best-moving-date-ultimate-guide",
+      "destination": "/blog/how-to-pick-the-best-moving-date-ultimate-guide",
       "permanent": true
     },
     {
-      "source": "/miami-events-community-info/",
-      "destination": "/blog/miami-events-may-your-insider-s-guide",
+      "source": "/how-to-pick-the-best-moving-date-ultimate-guide/",
+      "destination": "/blog/how-to-pick-the-best-moving-date-ultimate-guide",
       "permanent": true
     },
     {
-      "source": "/miami-shopping-guide",
-      "destination": "/blog/miami-shopping-odyssey-unveiling-the-city-s-hidden-retail",
+      "source": "/how-to-conduct-research-and-make-comparisons-among-local-moving-companies",
+      "destination": "/blog/how-to-research-and-compare-local-moving-companies",
       "permanent": true
     },
     {
-      "source": "/miami-shopping-guide/",
-      "destination": "/blog/miami-shopping-odyssey-unveiling-the-city-s-hidden-retail",
+      "source": "/how-to-conduct-research-and-make-comparisons-among-local-moving-companies/",
+      "destination": "/blog/how-to-research-and-compare-local-moving-companies",
       "permanent": true
     },
     {
-      "source": "/miami-dining-in-2024-a-culinary-journey-through-the-magic-city",
-      "destination": "/blog/miami-dining-a-culinary-journey-through-the-magic-city",
+      "source": "/tips-for-quick-and-effective-moving-organization",
+      "destination": "/blog/tips-for-quick-and-effective-moving-organization",
       "permanent": true
     },
     {
-      "source": "/miami-dining-in-2024-a-culinary-journey-through-the-magic-city/",
-      "destination": "/blog/miami-dining-a-culinary-journey-through-the-magic-city",
+      "source": "/tips-for-quick-and-effective-moving-organization/",
+      "destination": "/blog/tips-for-quick-and-effective-moving-organization",
+      "permanent": true
+    },
+    {
+      "source": "/what-documents-need-updating-during-a-move",
+      "destination": "/blog/what-documents-need-updating-during-a-move",
+      "permanent": true
+    },
+    {
+      "source": "/what-documents-need-updating-during-a-move/",
+      "destination": "/blog/what-documents-need-updating-during-a-move",
+      "permanent": true
+    },
+    {
+      "source": "/cut-costs-not-corners-understanding-local-moves",
+      "destination": "/blog/cut-costs-not-corners-understanding-local-moves",
+      "permanent": true
+    },
+    {
+      "source": "/cut-costs-not-corners-understanding-local-moves/",
+      "destination": "/blog/cut-costs-not-corners-understanding-local-moves",
+      "permanent": true
+    },
+    {
+      "source": "/creating-a-realistic-moving-budget-a-step-by-step-guide",
+      "destination": "/blog/creating-a-realistic-moving-budget-a-step-by-step-guide",
+      "permanent": true
+    },
+    {
+      "source": "/creating-a-realistic-moving-budget-a-step-by-step-guide/",
+      "destination": "/blog/creating-a-realistic-moving-budget-a-step-by-step-guide",
+      "permanent": true
+    },
+    {
+      "source": "/senior-long-distance-moving",
+      "destination": "/blog/senior-long-distance-moving",
+      "permanent": true
+    },
+    {
+      "source": "/senior-long-distance-moving/",
+      "destination": "/blog/senior-long-distance-moving",
+      "permanent": true
+    },
+    {
+      "source": "/managing-long-moving-stress",
+      "destination": "/blog/how-to-manage-long-distance-moving-stress",
+      "permanent": true
+    },
+    {
+      "source": "/managing-long-moving-stress/",
+      "destination": "/blog/how-to-manage-long-distance-moving-stress",
+      "permanent": true
+    },
+    {
+      "source": "/specialized-fragile-packing",
+      "destination": "/blog/the-ultimate-guide-to-packing-special-fragile-items",
+      "permanent": true
+    },
+    {
+      "source": "/specialized-fragile-packing/",
+      "destination": "/blog/the-ultimate-guide-to-packing-special-fragile-items",
+      "permanent": true
+    },
+    {
+      "source": "/packing-office-equipment-for-a-stress-free-move",
+      "destination": "/blog/packing-office-equipment-for-a-stress-free-move",
+      "permanent": true
+    },
+    {
+      "source": "/packing-office-equipment-for-a-stress-free-move/",
+      "destination": "/blog/packing-office-equipment-for-a-stress-free-move",
+      "permanent": true
+    },
+    {
+      "source": "/interstate-move-packing",
+      "destination": "/blog/mastering-packing-for-an-interstate-move",
+      "permanent": true
+    },
+    {
+      "source": "/interstate-move-packing/",
+      "destination": "/blog/mastering-packing-for-an-interstate-move",
+      "permanent": true
+    },
+    {
+      "source": "/budget-apartment-moving",
+      "destination": "/blog/first-apartment-move-budget-friendly-tips-for-renters",
+      "permanent": true
+    },
+    {
+      "source": "/budget-apartment-moving/",
+      "destination": "/blog/first-apartment-move-budget-friendly-tips-for-renters",
+      "permanent": true
+    },
+    {
+      "source": "/selecting-gun-safe-movers",
+      "destination": "/blog/how-to-select-the-best-gun-safe-movers",
+      "permanent": true
+    },
+    {
+      "source": "/selecting-gun-safe-movers/",
+      "destination": "/blog/how-to-select-the-best-gun-safe-movers",
       "permanent": true
     },
     {
       "source": "/miami-moving-mastery-2024-your-ultimate-relocation-guide-by-rapid-panda-movers",
-      "destination": "/blog/miami-moving-mastery-your-ultimate-relocation-guide-by-rapid-panda-movers",
+      "destination": "/blog/miami-moving-guide-your-ultimate-relocation-resource",
       "permanent": true
     },
     {
       "source": "/miami-moving-mastery-2024-your-ultimate-relocation-guide-by-rapid-panda-movers/",
-      "destination": "/blog/miami-moving-mastery-your-ultimate-relocation-guide-by-rapid-panda-movers",
+      "destination": "/blog/miami-moving-guide-your-ultimate-relocation-resource",
       "permanent": true
     },
     {
-      "source": "/understanding-miami-s-2024-real-estate-market",
-      "destination": "/blog/understanding-miami-s-real-estate-market",
+      "source": "/miami-moving-regulations-permits",
+      "destination": "/blog/miami-moving-permits-and-regulations-guide",
       "permanent": true
     },
     {
-      "source": "/understanding-miami-s-2024-real-estate-market/",
-      "destination": "/blog/understanding-miami-s-real-estate-market",
+      "source": "/miami-moving-regulations-permits/",
+      "destination": "/blog/miami-moving-permits-and-regulations-guide",
+      "permanent": true
+    },
+    {
+      "source": "/miami-shopping-guide",
+      "destination": "/blog/miami-shopping-guide-best-retail-districts",
+      "permanent": true
+    },
+    {
+      "source": "/miami-shopping-guide/",
+      "destination": "/blog/miami-shopping-guide-best-retail-districts",
+      "permanent": true
+    },
+    {
+      "source": "/miami-events-community-info",
+      "destination": "/blog/miami-events-may-your-insiders-guide",
+      "permanent": true
+    },
+    {
+      "source": "/miami-events-community-info/",
+      "destination": "/blog/miami-events-may-your-insiders-guide",
+      "permanent": true
+    },
+    {
+      "source": "/miami-dining-in-2024-a-culinary-journey-through-the-magic-city",
+      "destination": "/blog/miami-dining-your-guide-to-the-magic-citys-best-food",
+      "permanent": true
+    },
+    {
+      "source": "/miami-dining-in-2024-a-culinary-journey-through-the-magic-city/",
+      "destination": "/blog/miami-dining-your-guide-to-the-magic-citys-best-food",
+      "permanent": true
+    },
+    {
+      "source": "/miami-beach-uncovered-discover-your-dream-community-with-rapid-panda-movers-2024-guide",
+      "destination": "/blog/miami-beach-uncovered-find-your-dream-community",
+      "permanent": true
+    },
+    {
+      "source": "/miami-beach-uncovered-discover-your-dream-community-with-rapid-panda-movers-2024-guide/",
+      "destination": "/blog/miami-beach-uncovered-find-your-dream-community",
+      "permanent": true
+    },
+    {
+      "source": "/exploring-miami-coral-gables-a-rapid-panda-movers-insightful-neighborhood-spotlight-for-2024",
+      "destination": "/blog/coral-gables-neighborhood-guide-moving-tips-and-insights",
+      "permanent": true
+    },
+    {
+      "source": "/exploring-miami-coral-gables-a-rapid-panda-movers-insightful-neighborhood-spotlight-for-2024/",
+      "destination": "/blog/coral-gables-neighborhood-guide-moving-tips-and-insights",
       "permanent": true
     },
     {
       "source": "/decoding-miami-s-cost-of-living-2024-your-ultimate-financial-navigation-guide",
-      "destination": "/blog/decoding-miami-s-cost-of-living-your-ultimate-financial",
+      "destination": "/blog/miami-cost-of-living-your-complete-financial-guide",
       "permanent": true
     },
     {
       "source": "/decoding-miami-s-cost-of-living-2024-your-ultimate-financial-navigation-guide/",
-      "destination": "/blog/decoding-miami-s-cost-of-living-your-ultimate-financial",
+      "destination": "/blog/miami-cost-of-living-your-complete-financial-guide",
       "permanent": true
     },
     {
-      "source": "/expert-reviews-of-miami-fl-moving-companies",
-      "destination": "/blog/expert-reviews-of-miami-fl-moving-companies",
+      "source": "/moving-to-miami-shores-a-comprehensive-guide",
+      "destination": "/blog/moving-to-miami-shores-your-complete-relocation-guide",
       "permanent": true
     },
     {
-      "source": "/expert-reviews-of-miami-fl-moving-companies/",
-      "destination": "/blog/expert-reviews-of-miami-fl-moving-companies",
+      "source": "/moving-to-miami-shores-a-comprehensive-guide/",
+      "destination": "/blog/moving-to-miami-shores-your-complete-relocation-guide",
       "permanent": true
     },
     {
-      "source": "/miami-beach-cultural-blog",
-      "destination": "/blog/miami-beach-cultural-blog",
+      "source": "/a-comprehensive-guide-to-small-space-moving",
+      "destination": "/blog/small-space-moving-tips-for-apartments-and-compact-homes",
       "permanent": true
     },
     {
-      "source": "/miami-beach-cultural-blog/",
-      "destination": "/blog/miami-beach-cultural-blog",
+      "source": "/a-comprehensive-guide-to-small-space-moving/",
+      "destination": "/blog/small-space-moving-tips-for-apartments-and-compact-homes",
       "permanent": true
     },
     {
-      "source": "/miami-beach-school-education-overview",
-      "destination": "/blog/miami-beach-school-education-overview",
+      "source": "/budget-apartment-moving-your-transition-without-breaking-the-bank",
+      "destination": "/blog/budget-apartment-moving-save-money-on-your-move",
       "permanent": true
     },
     {
-      "source": "/miami-beach-school-education-overview/",
-      "destination": "/blog/miami-beach-school-education-overview",
+      "source": "/budget-apartment-moving-your-transition-without-breaking-the-bank/",
+      "destination": "/blog/budget-apartment-moving-save-money-on-your-move",
       "permanent": true
     },
     {
-      "source": "/miami-beach-lifestyle-blog",
-      "destination": "/blog/miami-beach-lifestyle-blog",
+      "source": "/how-much-does-a-cross-country-move-cost-key-factors-explained-rapid-panda-movers",
+      "destination": "/blog/cost-estimation-for-cross-country-moving",
       "permanent": true
     },
     {
-      "source": "/miami-beach-lifestyle-blog/",
-      "destination": "/blog/miami-beach-lifestyle-blog",
+      "source": "/how-much-does-a-cross-country-move-cost-key-factors-explained-rapid-panda-movers/",
+      "destination": "/blog/cost-estimation-for-cross-country-moving",
       "permanent": true
     },
     {
-      "source": "/miami-beach-summer-moving-advice",
-      "destination": "/blog/miami-beach-summer-moving-advice",
+      "source": "/gun-safe-moving-costs",
+      "destination": "/blog/gun-safe-moving-costs",
       "permanent": true
     },
     {
-      "source": "/miami-beach-summer-moving-advice/",
-      "destination": "/blog/miami-beach-summer-moving-advice",
+      "source": "/gun-safe-moving-costs/",
+      "destination": "/blog/gun-safe-moving-costs",
+      "permanent": true
+    },
+    {
+      "source": "/efficient-packing-strategies",
+      "destination": "/blog/packing-like-a-pro-master-efficient-moving-techniques",
+      "permanent": true
+    },
+    {
+      "source": "/efficient-packing-strategies/",
+      "destination": "/blog/packing-like-a-pro-master-efficient-moving-techniques",
+      "permanent": true
+    },
+    {
+      "source": "/packing-tips-apartment",
+      "destination": "/blog/packing-tips-for-an-apartment-move",
+      "permanent": true
+    },
+    {
+      "source": "/packing-tips-apartment/",
+      "destination": "/blog/packing-tips-for-an-apartment-move",
+      "permanent": true
+    },
+    {
+      "source": "/from-start-to-finish-planning-your-long-distance-move",
+      "destination": "/blog/from-start-to-finish-planning-your-long-distance-move",
+      "permanent": true
+    },
+    {
+      "source": "/from-start-to-finish-planning-your-long-distance-move/",
+      "destination": "/blog/from-start-to-finish-planning-your-long-distance-move",
+      "permanent": true
+    },
+    {
+      "source": "/long-distance-moving-guide-a-helpful-checklist-for-a-stress-free-move",
+      "destination": "/blog/long-distance-moving-guide-a-helpful-checklist",
+      "permanent": true
+    },
+    {
+      "source": "/long-distance-moving-guide-a-helpful-checklist-for-a-stress-free-move/",
+      "destination": "/blog/long-distance-moving-guide-a-helpful-checklist",
+      "permanent": true
+    },
+    {
+      "source": "/a-guide-to-high-rise-moving-strategies-and-insights",
+      "destination": "/blog/a-guide-to-high-rise-moving-strategies-and-insights",
+      "permanent": true
+    },
+    {
+      "source": "/a-guide-to-high-rise-moving-strategies-and-insights/",
+      "destination": "/blog/a-guide-to-high-rise-moving-strategies-and-insights",
+      "permanent": true
+    },
+    {
+      "source": "/hiring-apartment-movers",
+      "destination": "/blog/smart-hiring-choosing-apartment-movers",
+      "permanent": true
+    },
+    {
+      "source": "/hiring-apartment-movers/",
+      "destination": "/blog/smart-hiring-choosing-apartment-movers",
+      "permanent": true
+    },
+    {
+      "source": "/last-minute-local-move",
+      "destination": "/blog/rapid-guide-to-a-last-minute-local-move",
+      "permanent": true
+    },
+    {
+      "source": "/last-minute-local-move/",
+      "destination": "/blog/rapid-guide-to-a-last-minute-local-move",
+      "permanent": true
+    },
+    {
+      "source": "/local-moving-guide",
+      "destination": "/blog/local-moving-guide",
+      "permanent": true
+    },
+    {
+      "source": "/local-moving-guide/",
+      "destination": "/blog/local-moving-guide",
+      "permanent": true
+    },
+    {
+      "source": "/unpacking-organizing-apartment",
+      "destination": "/blog/unpacking-organizing-your-apartment-a-step-by-step-guide",
+      "permanent": true
+    },
+    {
+      "source": "/unpacking-organizing-apartment/",
+      "destination": "/blog/unpacking-organizing-your-apartment-a-step-by-step-guide",
+      "permanent": true
+    },
+    {
+      "source": "/moving-locally-with-kids",
+      "destination": "/blog/how-to-manage-local-moving-with-kids",
+      "permanent": true
+    },
+    {
+      "source": "/moving-locally-with-kids/",
+      "destination": "/blog/how-to-manage-local-moving-with-kids",
+      "permanent": true
+    },
+    {
+      "source": "/pet-friendly-local-moving",
+      "destination": "/blog/pet-friendly-local-moving",
+      "permanent": true
+    },
+    {
+      "source": "/pet-friendly-local-moving/",
+      "destination": "/blog/pet-friendly-local-moving",
+      "permanent": true
+    },
+    {
+      "source": "/long-distance-move-planning",
+      "destination": "/blog/step-by-step-long-distance-move-planning-timeline",
+      "permanent": true
+    },
+    {
+      "source": "/long-distance-move-planning/",
+      "destination": "/blog/step-by-step-long-distance-move-planning-timeline",
+      "permanent": true
+    },
+    {
+      "source": "/apartment-moving-safety-tips",
+      "destination": "/blog/apartment-moving-safety-tips",
+      "permanent": true
+    },
+    {
+      "source": "/apartment-moving-safety-tips/",
+      "destination": "/blog/apartment-moving-safety-tips",
+      "permanent": true
+    },
+    {
+      "source": "/senior-local-moving-guide",
+      "destination": "/blog/senior-moving-guide-for-local-relocations",
+      "permanent": true
+    },
+    {
+      "source": "/senior-local-moving-guide/",
+      "destination": "/blog/senior-moving-guide-for-local-relocations",
+      "permanent": true
+    },
+    {
+      "source": "/moving-with-pets-apartments",
+      "destination": "/blog/paws-and-pack-apartment-moving-tips-for-pet-owners",
+      "permanent": true
+    },
+    {
+      "source": "/moving-with-pets-apartments/",
+      "destination": "/blog/paws-and-pack-apartment-moving-tips-for-pet-owners",
+      "permanent": true
+    },
+    {
+      "source": "/organize-packing-process",
+      "destination": "/blog/packing-simplified-expert-tips-for-staying-organized",
+      "permanent": true
+    },
+    {
+      "source": "/organize-packing-process/",
+      "destination": "/blog/packing-simplified-expert-tips-for-staying-organized",
+      "permanent": true
+    },
+    {
+      "source": "/gun-safe-moving-equipment",
+      "destination": "/blog/gun-safe-moving-equipment",
+      "permanent": true
+    },
+    {
+      "source": "/gun-safe-moving-equipment/",
+      "destination": "/blog/gun-safe-moving-equipment",
+      "permanent": true
+    },
+    {
+      "source": "/preparing-gun-safe-move",
+      "destination": "/blog/preparing-a-gun-safe-for-a-move-steps-and-tips",
+      "permanent": true
+    },
+    {
+      "source": "/preparing-gun-safe-move/",
+      "destination": "/blog/preparing-a-gun-safe-for-a-move-steps-and-tips",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-pack-electronics-safely-for-moving",
+      "destination": "/blog/how-to-pack-electronics-safely-for-moving",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-pack-electronics-safely-for-moving/",
+      "destination": "/blog/how-to-pack-electronics-safely-for-moving",
+      "permanent": true
+    },
+    {
+      "source": "/elevator-reservations-moving",
+      "destination": "/blog/essential-tips-for-smooth-moves-with-elevator-reservations",
+      "permanent": true
+    },
+    {
+      "source": "/elevator-reservations-moving/",
+      "destination": "/blog/essential-tips-for-smooth-moves-with-elevator-reservations",
       "permanent": true
     },
     {
@@ -876,13 +776,43 @@
       "permanent": true
     },
     {
-      "source": "/miami-beach-uncovered-discover-your-dream-community-with-rapid-panda-movers-2024-guide",
-      "destination": "/blog/miami-beach-uncovered-discover-your-dream-community-with",
+      "source": "/miami-beach-summer-moving-advice",
+      "destination": "/blog/miami-beach-summer-moving-advice",
       "permanent": true
     },
     {
-      "source": "/miami-beach-uncovered-discover-your-dream-community-with-rapid-panda-movers-2024-guide/",
-      "destination": "/blog/miami-beach-uncovered-discover-your-dream-community-with",
+      "source": "/miami-beach-summer-moving-advice/",
+      "destination": "/blog/miami-beach-summer-moving-advice",
+      "permanent": true
+    },
+    {
+      "source": "/miami-beach-lifestyle-blog",
+      "destination": "/blog/miami-beach-lifestyle-what-to-expect-and-how-to-adapt",
+      "permanent": true
+    },
+    {
+      "source": "/miami-beach-lifestyle-blog/",
+      "destination": "/blog/miami-beach-lifestyle-what-to-expect-and-how-to-adapt",
+      "permanent": true
+    },
+    {
+      "source": "/miami-beach-school-education-overview",
+      "destination": "/blog/miami-beach-school-education-top-learning-opportunities",
+      "permanent": true
+    },
+    {
+      "source": "/miami-beach-school-education-overview/",
+      "destination": "/blog/miami-beach-school-education-top-learning-opportunities",
+      "permanent": true
+    },
+    {
+      "source": "/miami-beach-cultural-blog",
+      "destination": "/blog/discovering-the-vibrant-culture-of-miami-beach",
+      "permanent": true
+    },
+    {
+      "source": "/miami-beach-cultural-blog/",
+      "destination": "/blog/discovering-the-vibrant-culture-of-miami-beach",
       "permanent": true
     },
     {
@@ -896,143 +826,93 @@
       "permanent": true
     },
     {
-      "source": "/moving-to-miami-shores-a-comprehensive-guide",
-      "destination": "/blog/moving-to-miami-shores-a-comprehensive-guide",
+      "source": "/understanding-miami-s-2024-real-estate-market",
+      "destination": "/blog/understanding-miamis-real-estate-market",
       "permanent": true
     },
     {
-      "source": "/moving-to-miami-shores-a-comprehensive-guide/",
-      "destination": "/blog/moving-to-miami-shores-a-comprehensive-guide",
+      "source": "/understanding-miami-s-2024-real-estate-market/",
+      "destination": "/blog/understanding-miamis-real-estate-market",
       "permanent": true
     },
     {
-      "source": "/exploring-miami-coral-gables-a-rapid-panda-movers-insightful-neighborhood-spotlight-for-2024",
-      "destination": "/blog/exploring-miami-coral-gables-a-rapid-panda-movers",
+      "source": "/expert-reviews-of-miami-fl-moving-companies",
+      "destination": "/blog/expert-reviews-of-miami-fl-moving-companies",
       "permanent": true
     },
     {
-      "source": "/exploring-miami-coral-gables-a-rapid-panda-movers-insightful-neighborhood-spotlight-for-2024/",
-      "destination": "/blog/exploring-miami-coral-gables-a-rapid-panda-movers",
+      "source": "/expert-reviews-of-miami-fl-moving-companies/",
+      "destination": "/blog/expert-reviews-of-miami-fl-moving-companies",
       "permanent": true
     },
     {
-      "source": "/blog/miami-moving-mastery-2024-your-ultimate-relocation-guide-by-rapid-panda-movers",
-      "destination": "/blog/miami-moving-mastery-your-ultimate-relocation-guide-by-rapid-panda-movers",
+      "source": "/miami-fl-packing-unpacking-tips",
+      "destination": "/blog/efficient-miami-fl-packing-unpacking-tips",
       "permanent": true
     },
     {
-      "source": "/blog/miami-moving-mastery-2024-your-ultimate-relocation-guide-by-rapid-panda-movers/",
-      "destination": "/blog/miami-moving-mastery-your-ultimate-relocation-guide-by-rapid-panda-movers",
+      "source": "/miami-fl-packing-unpacking-tips/",
+      "destination": "/blog/efficient-miami-fl-packing-unpacking-tips",
       "permanent": true
     },
     {
-      "source": "/blog/miami-moving-regulations-permits",
-      "destination": "/blog/mastering-miami-relocation-a-comprehensive-guide-to-moving",
+      "source": "/miami-fl-diy-vs-professional-moving",
+      "destination": "/blog/choosing-diy-or-pro-movers-in-miami-fl",
       "permanent": true
     },
     {
-      "source": "/blog/miami-moving-regulations-permits/",
-      "destination": "/blog/mastering-miami-relocation-a-comprehensive-guide-to-moving",
+      "source": "/miami-fl-diy-vs-professional-moving/",
+      "destination": "/blog/choosing-diy-or-pro-movers-in-miami-fl",
       "permanent": true
     },
     {
-      "source": "/blog/miami-shopping-guide",
-      "destination": "/blog/miami-shopping-odyssey-unveiling-the-city-s-hidden-retail",
+      "source": "/miami-fl-transport-accessibility",
+      "destination": "/blog/miami-fl-transport-options-for-new-residents",
       "permanent": true
     },
     {
-      "source": "/blog/miami-shopping-guide/",
-      "destination": "/blog/miami-shopping-odyssey-unveiling-the-city-s-hidden-retail",
+      "source": "/miami-fl-transport-accessibility/",
+      "destination": "/blog/miami-fl-transport-options-for-new-residents",
       "permanent": true
     },
     {
-      "source": "/blog/miami-events-community-info",
-      "destination": "/blog/miami-events-may-your-insider-s-guide",
-      "permanent": true
-    },
-    {
-      "source": "/blog/miami-events-community-info/",
-      "destination": "/blog/miami-events-may-your-insider-s-guide",
-      "permanent": true
-    },
-    {
-      "source": "/blog/miami-dining-in-2024-a-culinary-journey-through-the-magic-city",
-      "destination": "/blog/miami-dining-a-culinary-journey-through-the-magic-city",
-      "permanent": true
-    },
-    {
-      "source": "/blog/miami-dining-in-2024-a-culinary-journey-through-the-magic-city/",
-      "destination": "/blog/miami-dining-a-culinary-journey-through-the-magic-city",
-      "permanent": true
-    },
-    {
-      "source": "/blog/miami-beach-uncovered-discover-your-dream-community-with-rapid-panda-movers-2024-guide",
-      "destination": "/blog/miami-beach-uncovered-discover-your-dream-community-with",
-      "permanent": true
-    },
-    {
-      "source": "/blog/miami-beach-uncovered-discover-your-dream-community-with-rapid-panda-movers-2024-guide/",
-      "destination": "/blog/miami-beach-uncovered-discover-your-dream-community-with",
-      "permanent": true
-    },
-    {
-      "source": "/blog/exploring-miami-coral-gables-a-rapid-panda-movers-insightful-neighborhood-spotlight-for-2024",
-      "destination": "/blog/exploring-miami-coral-gables-a-rapid-panda-movers",
-      "permanent": true
-    },
-    {
-      "source": "/blog/exploring-miami-coral-gables-a-rapid-panda-movers-insightful-neighborhood-spotlight-for-2024/",
-      "destination": "/blog/exploring-miami-coral-gables-a-rapid-panda-movers",
-      "permanent": true
-    },
-    {
-      "source": "/blog/decoding-miami-s-cost-of-living-2024-your-ultimate-financial-navigation-guide",
-      "destination": "/blog/decoding-miami-s-cost-of-living-your-ultimate-financial",
-      "permanent": true
-    },
-    {
-      "source": "/blog/decoding-miami-s-cost-of-living-2024-your-ultimate-financial-navigation-guide/",
-      "destination": "/blog/decoding-miami-s-cost-of-living-your-ultimate-financial",
-      "permanent": true
-    },
-    {
-      "source": "/blog/budget-apartment-moving-your-transition-without-breaking-the-bank",
-      "destination": "/blog/budget-apartment-moving-save-money-on-your-move",
-      "permanent": true
-    },
-    {
-      "source": "/blog/budget-apartment-moving-your-transition-without-breaking-the-bank/",
-      "destination": "/blog/budget-apartment-moving-save-money-on-your-move",
-      "permanent": true
-    },
-    {
-      "source": "/blog/miami-beach-job-market-2024-moving-employment-guide",
-      "destination": "/blog/miami-beach-job-market-moving-employment-guide",
-      "permanent": true
-    },
-    {
-      "source": "/blog/miami-beach-job-market-2024-moving-employment-guide/",
-      "destination": "/blog/miami-beach-job-market-moving-employment-guide",
-      "permanent": true
-    },
-    {
-      "source": "/blog/understanding-miami-s-2024-real-estate-market",
-      "destination": "/blog/understanding-miami-s-real-estate-market",
-      "permanent": true
-    },
-    {
-      "source": "/blog/understanding-miami-s-2024-real-estate-market/",
-      "destination": "/blog/understanding-miami-s-real-estate-market",
-      "permanent": true
-    },
-    {
-      "source": "/blog/miami-fl-eco-friendly-moving",
+      "source": "/miami-fl-eco-friendly-moving",
       "destination": "/blog/setting-the-stage-for-an-eco-friendly-miami-fl-move",
       "permanent": true
     },
     {
-      "source": "/blog/miami-fl-eco-friendly-moving/",
+      "source": "/miami-fl-eco-friendly-moving/",
       "destination": "/blog/setting-the-stage-for-an-eco-friendly-miami-fl-move",
+      "permanent": true
+    },
+    {
+      "source": "/eco-friendly-packing-materials",
+      "destination": "/blog/embrace-green-moving-with-eco-packing-materials",
+      "permanent": true
+    },
+    {
+      "source": "/eco-friendly-packing-materials/",
+      "destination": "/blog/embrace-green-moving-with-eco-packing-materials",
+      "permanent": true
+    },
+    {
+      "source": "/planning-residential-move",
+      "destination": "/blog/how-to-plan-your-residential-move-successfully",
+      "permanent": true
+    },
+    {
+      "source": "/planning-residential-move/",
+      "destination": "/blog/how-to-plan-your-residential-move-successfully",
+      "permanent": true
+    },
+    {
+      "source": "/moving-gun-safe-stairs",
+      "destination": "/blog/step-by-step-moving-a-gun-safe-upstairs",
+      "permanent": true
+    },
+    {
+      "source": "/moving-gun-safe-stairs/",
+      "destination": "/blog/step-by-step-moving-a-gun-safe-upstairs",
       "permanent": true
     }
   ]

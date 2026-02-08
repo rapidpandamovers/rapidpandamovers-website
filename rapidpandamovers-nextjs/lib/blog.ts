@@ -39,47 +39,70 @@ const postsDirectory = path.join(process.cwd(), 'content/blog')
 // Cache for posts to avoid re-reading files on every request
 let postsCache: BlogPost[] | null = null
 let indexCache: BlogPostSummary[] | null = null
+// Cache for related posts to ensure consistency
+const relatedPostsCache = new Map<string, BlogPost[]>()
 
 /**
  * Get all posts from markdown files
+ * Silently skips files that fail to parse to ensure the blog remains accessible
  */
 export function getAllPosts(): BlogPost[] {
   if (postsCache) {
     return postsCache
   }
 
-  const files = fs.readdirSync(postsDirectory)
-    .filter(file => file.endsWith('.md'))
-    .sort() // Sort by filename (which includes zero-padded ID)
+  try {
+    const files = fs.readdirSync(postsDirectory)
+      .filter(file => file.endsWith('.md'))
+      .sort() // Sort by filename (which includes zero-padded ID)
 
-  const posts = files.map(filename => {
-    const filePath = path.join(postsDirectory, filename)
-    const fileContents = fs.readFileSync(filePath, 'utf8')
-    const { data, content } = matter(fileContents)
+    const posts: BlogPost[] = []
 
-    return {
-      id: data.id as number,
-      title: data.title as string,
-      slug: data.slug as string,
-      excerpt: data.excerpt as string || '',
-      date: data.date as string,
-      updated: data.updated as string || data.date as string,
-      readTime: data.readTime as string || '3 min read',
-      category: data.category as string || 'Moving Tips',
-      image_folder: data.image_folder as string | null,
-      featured: data.featured as string | null,
-      image_keywords: (data.image_keywords as string[]) || [],
-      images: (data.images as string[]) || [],
-      service_link: data.service_link as string | null,
-      location_link: data.location_link as string | null,
-      status: data.status as string || 'pending',
-      needs_ai_image: data.needs_ai_image as boolean || false,
-      content: content.trim(),
-    } as BlogPost
-  })
+    for (const filename of files) {
+      try {
+        const filePath = path.join(postsDirectory, filename)
+        const fileContents = fs.readFileSync(filePath, 'utf8')
+        const { data, content } = matter(fileContents)
 
-  postsCache = posts
-  return posts
+        // Validate required fields
+        if (!data.id || !data.title || !data.slug || !data.date) {
+          console.warn(`[Blog] Skipping ${filename}: missing required fields`)
+          continue
+        }
+
+        posts.push({
+          id: data.id as number,
+          title: data.title as string,
+          slug: data.slug as string,
+          excerpt: data.excerpt as string || '',
+          date: data.date as string,
+          updated: data.updated as string || data.date as string,
+          readTime: data.readTime as string || '3 min read',
+          category: data.category as string || 'Moving Tips',
+          image_folder: data.image_folder as string | null,
+          featured: data.featured as string | null,
+          image_keywords: (data.image_keywords as string[]) || [],
+          images: (data.images as string[]) || [],
+          service_link: data.service_link as string | null,
+          location_link: data.location_link as string | null,
+          status: data.status as string || 'pending',
+          needs_ai_image: data.needs_ai_image as boolean || false,
+          content: content.trim(),
+        } as BlogPost)
+      } catch (error) {
+        // Log error but continue processing other files
+        console.error(`[Blog] Failed to parse ${filename}:`, error instanceof Error ? error.message : String(error))
+        continue
+      }
+    }
+
+    postsCache = posts
+    return posts
+  } catch (error) {
+    // If directory read fails, return empty array
+    console.error('[Blog] Failed to read blog directory:', error instanceof Error ? error.message : String(error))
+    return []
+  }
 }
 
 /**
@@ -90,28 +113,33 @@ export function getPostSummaries(): BlogPostSummary[] {
     return indexCache
   }
 
-  const indexPath = path.join(postsDirectory, 'index.json')
+  try {
+    const indexPath = path.join(postsDirectory, 'index.json')
 
-  if (fs.existsSync(indexPath)) {
-    const indexContents = fs.readFileSync(indexPath, 'utf8')
-    indexCache = JSON.parse(indexContents) as BlogPostSummary[]
+    if (fs.existsSync(indexPath)) {
+      const indexContents = fs.readFileSync(indexPath, 'utf8')
+      indexCache = JSON.parse(indexContents) as BlogPostSummary[]
+      return indexCache
+    }
+
+    // Fallback: build from posts
+    const posts = getAllPosts()
+    indexCache = posts.map(post => ({
+      id: post.id,
+      title: post.title,
+      slug: post.slug,
+      date: post.date,
+      category: post.category,
+      excerpt: post.excerpt,
+      readTime: post.readTime,
+      featured: post.featured,
+    }))
+
     return indexCache
+  } catch (error) {
+    console.error('[Blog] Failed to get post summaries:', error instanceof Error ? error.message : String(error))
+    return []
   }
-
-  // Fallback: build from posts
-  const posts = getAllPosts()
-  indexCache = posts.map(post => ({
-    id: post.id,
-    title: post.title,
-    slug: post.slug,
-    date: post.date,
-    category: post.category,
-    excerpt: post.excerpt,
-    readTime: post.readTime,
-    featured: post.featured,
-  }))
-
-  return indexCache
 }
 
 /**
@@ -134,8 +162,29 @@ export function getPostById(id: number): BlogPost | null {
  * Get all unique categories
  */
 export function getCategories(): string[] {
-  const posts = getAllPosts()
-  return Array.from(new Set(posts.map(post => post.category)))
+  try {
+    const posts = getAllPosts()
+    return Array.from(new Set(posts.map(post => post.category)))
+  } catch (error) {
+    console.error('[Blog] Failed to get categories:', error instanceof Error ? error.message : String(error))
+    return []
+  }
+}
+
+/**
+ * Convert category display name to URL slug (lowercase, spaces to hyphens)
+ */
+export function categoryToSlug(category: string): string {
+  return category.toLowerCase().replace(/\s+/g, '-')
+}
+
+/**
+ * Resolve URL slug to category display name, or null if no category matches
+ */
+export function getCategoryBySlug(slug: string): string | null {
+  const categories = getCategories()
+  const normalized = decodeURIComponent(slug).toLowerCase()
+  return categories.find(cat => categoryToSlug(cat) === normalized) ?? null
 }
 
 /**
@@ -150,21 +199,36 @@ export function getPostsByCategory(category: string): BlogPost[] {
  * Get posts sorted by date (newest first), then by ID (highest first) for same dates
  */
 export function getPostsSortedByDate(): BlogPost[] {
-  const posts = getAllPosts()
-  return [...posts].sort((a, b) => {
-    const dateCompare = new Date(b.date).getTime() - new Date(a.date).getTime()
-    if (dateCompare !== 0) return dateCompare
-    // For same dates, sort by ID descending (higher ID = newer post)
-    return b.id - a.id
-  })
+  try {
+    const posts = getAllPosts()
+    return [...posts].sort((a, b) => {
+      const dateCompare = new Date(b.date).getTime() - new Date(a.date).getTime()
+      if (dateCompare !== 0) return dateCompare
+      // For same dates, sort by ID descending (higher ID = newer post)
+      return b.id - a.id
+    })
+  } catch (error) {
+    console.error('[Blog] Failed to get sorted posts:', error instanceof Error ? error.message : String(error))
+    return []
+  }
 }
 
 /**
  * Get related posts based on category, service link, and keyword similarity
+ * Results are cached to prevent re-computation on re-renders
  */
 export function getRelatedPosts(slug: string, limit: number = 2): BlogPost[] {
+  // Check cache first
+  const cacheKey = `${slug}:${limit}`
+  if (relatedPostsCache.has(cacheKey)) {
+    return relatedPostsCache.get(cacheKey)!
+  }
+
   const currentPost = getPostBySlug(slug)
-  if (!currentPost) return []
+  if (!currentPost) {
+    relatedPostsCache.set(cacheKey, [])
+    return []
+  }
 
   const posts = getAllPosts()
   const otherPosts = posts.filter(post => post.slug !== slug)
@@ -237,7 +301,12 @@ export function getRelatedPosts(slug: string, limit: number = 2): BlogPost[] {
     [topCandidates[i], topCandidates[j]] = [topCandidates[j], topCandidates[i]]
   }
 
-  return topCandidates.slice(0, limit).map(item => item.post)
+  const result = topCandidates.slice(0, limit).map(item => item.post)
+  
+  // Cache the result to prevent re-computation
+  relatedPostsCache.set(cacheKey, result)
+  
+  return result
 }
 
 /**
@@ -246,6 +315,7 @@ export function getRelatedPosts(slug: string, limit: number = 2): BlogPost[] {
 export function clearCache(): void {
   postsCache = null
   indexCache = null
+  relatedPostsCache.clear()
 }
 
 /**

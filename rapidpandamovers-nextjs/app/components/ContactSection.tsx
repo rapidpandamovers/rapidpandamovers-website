@@ -135,17 +135,17 @@ export default function ContactSection({
                 </div>
                 <div className="space-y-2 text-orange-100">
                   <div className="flex justify-between">
-                    <span>Monday - Friday</span>
-                    <span className="text-white font-medium">7:00 AM - 9:00 PM</span>
+                    <span>{content.site.hours.weekdayLabel}</span>
+                    <span className="text-white font-medium">{content.site.hours.weekdayTime}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Saturday - Sunday</span>
-                    <span className="text-white font-medium">8:00 AM - 6:00 PM</span>
+                    <span>{content.site.hours.weekendLabel}</span>
+                    <span className="text-white font-medium">{content.site.hours.weekendTime}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Emergency</span>
-                    <span className="text-white font-medium">Available 24/7</span>
-                  </div>  
+                    <span>{content.site.hours.emergencyLabel}</span>
+                    <span className="text-white font-medium">{content.site.hours.emergencyTime}</span>
+                  </div>
                 </div>
               </div>
             </div>

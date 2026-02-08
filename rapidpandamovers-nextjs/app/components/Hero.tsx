@@ -4,6 +4,7 @@ import { Star } from 'lucide-react'
 import { useState } from 'react'
 import Image from 'next/image'
 import QuoteForm from './QuoteForm'
+import reviewsData from '@/data/reviews.json'
 
 interface HeroProps {
   title?: string
@@ -88,7 +89,7 @@ export default function Hero({
                   <Star key={i} className="w-5 h-5 text-orange-500 fill-current" />
                 ))}
               </div>
-              <span className="text-white">4,9/5 Based on 9,568+ verified reviews</span>
+              <span className="text-white">{reviewsData.stats.averageRating}/5 Based on {reviewsData.stats.totalReviews}+ verified reviews</span>
             </div>
           </div>
         </div>

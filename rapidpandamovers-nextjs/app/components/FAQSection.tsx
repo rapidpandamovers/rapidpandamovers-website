@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import content from '@/data/content.json'
 
 interface FAQ {
   question: string
@@ -19,6 +20,10 @@ interface FAQSectionProps {
   phoneDisplay?: string
 }
 
+const sitePhone = content.site.phone
+const defaultPhone = sitePhone.replace(/-/g, '')
+const defaultPhoneDisplay = `(${sitePhone.slice(0,3)}) ${sitePhone.slice(4,7)}-${sitePhone.slice(8)}`
+
 const defaultFaqs: FAQ[] = [
   { question: 'How much will my move cost?', answer: 'Moving costs depend on several factors including distance, size of move, and services needed. Contact us for a free, accurate quote.' },
   { question: 'What happens if something gets damaged?', answer: 'We are fully licensed and insured. All moves are covered by our comprehensive insurance policy for your peace of mind.' },
@@ -33,8 +38,8 @@ export default function FAQSection({
   showViewAllLink = true,
   showContactCTA = false,
   variant = 'default',
-  phone = '7865854269',
-  phoneDisplay = '(786) 585-4269'
+  phone = defaultPhone,
+  phoneDisplay = defaultPhoneDisplay
 }: FAQSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 

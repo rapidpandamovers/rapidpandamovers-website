@@ -8,21 +8,20 @@ updated: "2026-09-16"
 readTime: "3 min read"
 category: "Lifestyle"
 image_folder: "/images/blog/2026/09/9-best-parks-and-outdoor-spaces-in-miami"
-featured: "/images/blog/2026/09/9-best-parks-and-outdoor-spaces-in-miami/parks-nature-outdoor-overview.webp"
+featured: "/images/blog/2026/09/9-best-parks-and-outdoor-spaces-in-miami/aerial-shot-of-miami-s-ferris-wheel-and--1.webp"
 image_keywords:
-  - "parks"
-  - "nature"
-  - "outdoor"
-  - "recreation"
+  - "miami parks"
+  - "florida nature"
+  - "outdoor recreation"
+  - "tropical park"
 images:
-  - "/images/blog/2026/09/9-best-parks-and-outdoor-spaces-in-miami/parks-nature-outdoor-checklist.webp"
-  - "/images/blog/2026/09/9-best-parks-and-outdoor-spaces-in-miami/parks-nature-outdoor-overview.webp"
-  - "/images/blog/2026/09/9-best-parks-and-outdoor-spaces-in-miami/parks-nature-outdoor-planning.webp"
-  - "/images/blog/2026/09/9-best-parks-and-outdoor-spaces-in-miami/parks-nature-outdoor-steps.webp"
-  - "/images/blog/2026/09/9-best-parks-and-outdoor-spaces-in-miami/parks-nature-outdoor-tips.webp"
+  - "/images/blog/2026/09/9-best-parks-and-outdoor-spaces-in-miami/a-picturesque-miami-park-scene-featuring-3.webp"
+  - "/images/blog/2026/09/9-best-parks-and-outdoor-spaces-in-miami/a-woman-enjoys-horseback-riding-in-a-sun-2.webp"
+  - "/images/blog/2026/09/9-best-parks-and-outdoor-spaces-in-miami/aerial-shot-of-miami-s-ferris-wheel-and--1.webp"
+
 service_link: null
 location_link: "/miami-movers"
-status: "pending"
+status: "complete"
 needs_ai_image: false
 ---
 
@@ -32,7 +31,7 @@ Whether you're a nature lover, fitness enthusiast, or just need a break from the
 
 **3400 NE 163rd Street, North Miami Beach** | $6 per vehicle
 
-![Parks Nature Outdoor Checklist](/images/blog/2026/09/9-best-parks-and-outdoor-spaces-in-miami/parks-nature-outdoor-checklist.webp)
+![A Picturesque Miami Park Scene Featuring 3](/images/blog/2026/09/9-best-parks-and-outdoor-spaces-in-miami/a-picturesque-miami-park-scene-featuring-3.webp)
 
 
 Florida's largest urban park spans 1,033 acres of dense mangroves, peaceful waterways, and pristine nature. With 15 miles of off-road biking trails, kayak routes through mangrove tunnels, fishing spots, and rustic cabins for overnight stays, it feels worlds away from the city.
@@ -41,14 +40,11 @@ Florida's largest urban park spans 1,033 acres of dense mangroves, peaceful wate
 
 **Below Metrorail, from Brickell to Dadeland**
 
-This transformative linear park converts the space beneath Miami's Metrorail into a vibrant urban trail. Features include an outdoor gym, basketball court, running track, butterfly gardens, and gaming tables—all connecting multiple neighborhoods for walkers and cyclists.
+This transformative linear park converts the space beneath Miami's Metrorail into a vibrant urban trail. Features include an outdoor gym, basketball court, running track, butterfly gardens, and gaming tables. The trail connects multiple neighborhoods for walkers and cyclists.
 
 ## 3. Matheson Hammock Park
 
 **9610 Old Cutler Road, Coral Gables** | $7 per vehicle
-
-![Parks Nature Outdoor Planning](/images/blog/2026/09/9-best-parks-and-outdoor-spaces-in-miami/parks-nature-outdoor-planning.webp)
-
 
 This stunning 630-acre Coral Gables park features winding mangrove trails, picnic areas, and a unique man-made atoll pool that fills with the tide. The views of Biscayne Bay are breathtaking, and the historic marina adds to the charm.
 
@@ -68,7 +64,7 @@ Home to the historic Cape Florida Lighthouse (built 1825), this scenic park offe
 
 **1 Washington Avenue, South Beach** | Free
 
-![Parks Nature Outdoor Steps](/images/blog/2026/09/9-best-parks-and-outdoor-spaces-in-miami/parks-nature-outdoor-steps.webp)
+![A Woman Enjoys Horseback Riding In A Sun 2](/images/blog/2026/09/9-best-parks-and-outdoor-spaces-in-miami/a-woman-enjoys-horseback-riding-in-a-sun-2.webp)
 
 
 This 17-acre gem at the southern tip of South Beach offers green space, waterfront views, and direct beach access. Walking trails, a splash pad for kids, picnic areas, and a pier with panoramic views of Fisher Island make it perfect for sunset watching.
@@ -82,9 +78,6 @@ This 515-acre park offers mountain biking trails, a fishing pier, and wakeboardi
 ## 8. Simpson Park Hammock
 
 **55 SW 17th Road, Brickell** | Free
-
-![Parks Nature Outdoor Tips](/images/blog/2026/09/9-best-parks-and-outdoor-spaces-in-miami/parks-nature-outdoor-tips.webp)
-
 
 A hidden 7.8-acre preserve in the heart of Brickell featuring Miami's original hardwood hammock ecosystem. Native trees, shaded trails, and peaceful atmosphere make it perfect for a quick nature escape without leaving the urban core.
 

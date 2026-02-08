@@ -1,5 +1,6 @@
 import Hero from '../components/Hero';
 import ChecklistSection from '../components/ChecklistSection';
+import ResourceSection from '../components/ResourceSection';
 import QuoteSection from '../components/QuoteSection';
 import content from '../../data/content.json';
 
@@ -28,6 +29,13 @@ export default function MovingChecklistPage() {
         categories={checklistData.categories}
         showPrintButton
         variant="full"
+      />
+
+      {/* Resources Section */}
+      <ResourceSection
+        title="More Moving Resources"
+        subtitle="Explore our comprehensive guides and services for a successful move"
+        variant="grid"
       />
 
       <div className="no-print">

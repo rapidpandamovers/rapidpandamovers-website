@@ -4,7 +4,18 @@
     "description": "Professional moving services in Miami - Budget-friendly, reliable, and efficient moving solutions",
     "phone": "786-585-4269",
     "email": "info@rapidpandamovers.com",
-    "address": "7001 North Waterway Dr #107 Miami, Fl 33155"
+    "address": "7001 North Waterway Dr #107 Miami, FL 33155",
+    "hours": {
+      "weekday": "Mon-Fri: 8AM - 8PM",
+      "weekend": "Sat-Sun: 9AM - 6PM",
+      "emergency": "Emergency: 24/7",
+      "weekdayLabel": "Monday - Friday",
+      "weekdayTime": "8:00 AM - 8:00 PM",
+      "weekendLabel": "Saturday - Sunday",
+      "weekendTime": "9:00 AM - 6:00 PM",
+      "emergencyLabel": "Emergency",
+      "emergencyTime": "Available 24/7"
+    }
   },
   "home": {
     "hero": {

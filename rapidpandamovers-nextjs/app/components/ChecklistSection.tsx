@@ -3,6 +3,10 @@
 import { useState, useRef } from 'react'
 import Link from 'next/link'
 import { CheckCircle, Clock, AlertCircle, Info, Printer, ClipboardList, ArrowRight, Calendar, Download } from 'lucide-react'
+import content from '@/data/content.json'
+
+const phone = content.site.phone
+const phoneFormatted = `(${phone.slice(0,3)}) ${phone.slice(4,7)}-${phone.slice(8)}`
 
 interface Task {
   task: string
@@ -509,7 +513,7 @@ export default function ChecklistSection({
 
           {/* Print Footer */}
           <div className="hidden print:block pdf-footer mt-6 pt-4 border-t border-gray-300 text-center text-xs text-gray-500">
-            <p>Rapid Panda Movers • (786) 585-4269 • www.rapidpandamovers.com</p>
+            <p>Rapid Panda Movers • {phoneFormatted} • www.rapidpandamovers.com</p>
             <p className="mt-1">Need help with your move? Call us for a free quote!</p>
           </div>
         </div>

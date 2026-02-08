@@ -8,31 +8,33 @@ updated: "2026-03-25"
 readTime: "3 min read"
 category: "Lifestyle"
 image_folder: "/images/blog/2026/03/7-things-to-do-in-el-portal-this-weekend"
-featured: "/images/blog/2026/03/7-things-to-do-in-el-portal-this-weekend/weekend-activities-entertainment-guide.webp"
+featured: "/images/blog/2026/03/7-things-to-do-in-el-portal-this-weekend/an-exterior-view-of-parisian-hotel-with--3.webp"
 image_keywords:
-  - "weekend"
-  - "activities"
-  - "entertainment"
-  - "el portal"
+  - "food hall dining"
+  - "kayak mangroves florida"
+  - "art district miami"
+  - "peacock bird tropical"
 images:
-  - "/images/blog/2026/03/7-things-to-do-in-el-portal-this-weekend/weekend-activities-entertainment-guide.webp"
-  - "/images/blog/2026/03/7-things-to-do-in-el-portal-this-weekend/weekend-activities-entertainment-planning.webp"
+  - "/images/blog/2026/03/7-things-to-do-in-el-portal-this-weekend/a-vibrant-view-of-miami-s-skyscrapers-by-1.webp"
+  - "/images/blog/2026/03/7-things-to-do-in-el-portal-this-weekend/an-exterior-view-of-parisian-hotel-with--3.webp"
+  - "/images/blog/2026/03/7-things-to-do-in-el-portal-this-weekend/captivating-miami-skyline-at-night-featu-2.webp"
+
 service_link: null
 location_link: "/el-portal-movers"
-status: "pending"
+status: "complete"
 needs_ai_image: false
 ---
 
-Weekends in El Portal offer a refreshing escape from Miami's busier neighborhoods. This secluded "Garden of Eden" village—barely a square mile—was designated a bird sanctuary by the state and offers unique experiences you won't find elsewhere. Here are seven things to do this weekend.
+Weekends in El Portal offer a refreshing escape from Miami's busier neighborhoods. This secluded "Garden of Eden" village covers barely a square mile. It was designated a bird sanctuary by the state and offers unique experiences you won't find elsewhere. Here are seven things to do this weekend.
 
 ## 1. Explore The Citadel Food Hall
 
 **8300 NE 2nd Avenue, Little River** | Tue-Sun (Closed Mondays)
 
-![Weekend Activities Entertainment Planning](/images/blog/2026/03/7-things-to-do-in-el-portal-this-weekend/weekend-activities-entertainment-planning.webp)
+![A Vibrant View Of Miami S Skyscrapers By 1](/images/blog/2026/03/7-things-to-do-in-el-portal-this-weekend/a-vibrant-view-of-miami-s-skyscrapers-by-1.webp)
 
 
-Just minutes from El Portal, this cultural hub features 15 artisanal food vendors including Stanzione's wood-fired pizzas, Manjay's Caribbean and Haitian specialties, and USBS—widely considered Miami's best smashburger. The Vue rooftop bar offers craft cocktails with neighborhood views. Free parking available.
+Just minutes from El Portal, this cultural hub features 15 artisanal food vendors including Stanzione's wood-fired pizzas, Manjay's Caribbean and Haitian specialties, and USBS, widely considered Miami's best smashburger. The Vue rooftop bar offers craft cocktails with neighborhood views. Free parking available.
 
 ## 2. Visit the Little River Mound
 
@@ -56,6 +58,9 @@ The oldest home in the village was built by pioneer Charles Finch and briefly se
 
 **3400 NE 163rd Street, North Miami Beach** | $6 per vehicle
 
+![Captivating Miami Skyline At Night Featu 2](/images/blog/2026/03/7-things-to-do-in-el-portal-this-weekend/captivating-miami-skyline-at-night-featu-2.webp)
+
+
 A short drive from El Portal, Florida's largest urban park offers kayaking through peaceful mangrove forests, paddleboarding on calm waters, and over 15 miles of mountain biking trails. Spot manatees, dolphins, and roseate spoonbills in this 1,000-acre urban oasis.
 
 ## 6. Browse the Miami Design District
@@ -68,7 +73,7 @@ Just south of El Portal, this luxury shopping and arts destination features cutt
 
 **980 MacArthur Causeway, Watson Island**
 
-A short drive from El Portal, this interactive museum offers hands-on exhibits perfect for families. The building itself—designed by Arquitectonica—is an architectural marvel overlooking Biscayne Bay.
+A short drive from El Portal, this interactive museum offers hands-on exhibits perfect for families. The building, designed by Arquitectonica, is an architectural marvel overlooking Biscayne Bay.
 
 ## Ready for Your Move?
 

@@ -15,6 +15,11 @@ Checks:
     - Image presence and format (WebP, responsive sizes)
     - Required sections (CTA, FAQ, Related Services)
     - Link correctness (service_link, location_link)
+    - Title/slug mismatch
+    - image_keywords match content
+
+Note: To fix excerpt length, use blog_wordcount.py --fix
+Note: To fix image_keywords, update manually during content review (step 4)
 """
 
 import sys
@@ -56,6 +61,58 @@ COMMON_SECTIONS = ['/quote']
 LOCATION_KEYWORDS = ['moving to', 'relocating to', 'guide to', 'living in', 'life in']
 SERVICE_KEYWORDS = ['packing', 'moving tips', 'checklist', 'how to', 'guide']
 LISTICLE_PATTERN = r'^\d+\s+(ways|tips|things|reasons|mistakes|steps)'
+
+# Service link to image keywords mapping
+SERVICE_IMAGE_KEYWORDS = {
+    'local-moving': ['local', 'moving', 'neighborhood'],
+    'long-distance': ['long distance', 'interstate', 'cross country'],
+    'senior-moving': ['senior', 'elderly', 'older adults'],
+    'apartment-moving': ['apartment', 'condo', 'urban'],
+    'commercial-moving': ['office', 'business', 'commercial'],
+    'packing-services': ['packing', 'boxes', 'supplies'],
+    'storage-solutions': ['storage', 'warehouse', 'boxes'],
+    'piano-moving': ['piano', 'instrument', 'music'],
+    'gun-safe-moving': ['safe', 'heavy', 'secure'],
+    'antique-moving': ['antique', 'vintage', 'fragile'],
+    'furniture-moving': ['furniture', 'sofa', 'couch'],
+    'labor-only': ['workers', 'loading', 'unloading'],
+    'last-minute': ['urgent', 'last minute', 'rush'],
+    'same-day': ['urgent', 'same day', 'quick'],
+    'military-moving': ['military', 'veteran', 'service'],
+    'student-moving': ['student', 'college', 'dorm'],
+    'celebrity-moving': ['luxury', 'premium', 'exclusive'],
+    'special-needs': ['accessible', 'care', 'assistance'],
+    'hourly-moving': ['hourly', 'flexible', 'time'],
+    'residential-moving': ['home', 'house', 'residential'],
+    'full-service': ['full service', 'complete', 'all-inclusive'],
+    'safe-moving': ['secure', 'safe', 'protected'],
+    'office-moving': ['office', 'business', 'corporate'],
+}
+
+# Miami area cities/neighborhoods for location keywords
+MIAMI_LOCATIONS = [
+    'miami', 'miami beach', 'coral gables', 'coconut grove', 'brickell',
+    'kendall', 'doral', 'hialeah', 'aventura', 'sunny isles', 'key biscayne',
+    'pinecrest', 'palmetto bay', 'cutler bay', 'homestead', 'florida city',
+    'miami gardens', 'north miami', 'miami shores', 'bal harbour', 'surfside',
+    'bay harbor', 'indian creek', 'golden beach', 'miami lakes', 'miami springs',
+    'south miami', 'west miami', 'sweetwater', 'westchester', 'virginia gardens',
+    'medley', 'opa-locka', 'el portal', 'biscayne park', 'north bay village',
+]
+
+
+def title_to_slug(title: str) -> str:
+    """Convert a title to a URL-friendly slug for comparison."""
+    slug = title.lower()
+    # Remove apostrophes entirely (contractions become single words: aren't -> arent)
+    slug = re.sub(r"[''`]", '', slug)
+    # Replace other special characters with spaces
+    slug = re.sub(r'[^\w\s-]', ' ', slug)
+    # Replace multiple spaces/hyphens with single hyphen
+    slug = re.sub(r'[-\s]+', '-', slug)
+    # Remove leading/trailing hyphens
+    slug = slug.strip('-')
+    return slug
 
 
 def find_post_file(post_id: str) -> Path:
@@ -148,6 +205,97 @@ def check_ai_patterns(content: str) -> list:
     return found
 
 
+def generate_expected_keywords(title: str, service_link: str, location_link: str, category: str) -> list:
+    """Generate expected image_keywords based on post content."""
+    keywords = []
+    title_lower = title.lower()
+
+    # Extract from service_link
+    if service_link:
+        service_slug = service_link.strip('/').split('/')[-1]
+        # Check direct match first
+        for key, kws in SERVICE_IMAGE_KEYWORDS.items():
+            if key in service_slug:
+                keywords.extend(kws[:2])  # Take first 2 keywords
+                break
+        # Fallback: extract words from service slug
+        if not keywords:
+            words = service_slug.replace('-', ' ').split()
+            keywords.extend([w for w in words if len(w) > 3][:2])
+
+    # Extract location from location_link or title
+    location_found = None
+    if location_link:
+        # Extract city name from location link like /miami-movers or /coral-gables-movers
+        loc_slug = location_link.strip('/').replace('-movers', '').replace('-', ' ')
+        for loc in MIAMI_LOCATIONS:
+            if loc in loc_slug.lower():
+                location_found = loc
+                break
+
+    # Also check title for location names
+    if not location_found:
+        for loc in MIAMI_LOCATIONS:
+            if loc in title_lower:
+                location_found = loc
+                break
+
+    if location_found:
+        keywords.append(location_found)
+
+    # Extract from title - look for key topic words
+    title_topics = {
+        'senior': ['senior', 'elderly'],
+        'elderly': ['senior', 'elderly'],
+        'apartment': ['apartment', 'condo'],
+        'office': ['office', 'business'],
+        'packing': ['packing', 'boxes'],
+        'furniture': ['furniture', 'sofa'],
+        'piano': ['piano', 'instrument'],
+        'antique': ['antique', 'vintage'],
+        'student': ['student', 'college'],
+        'military': ['military', 'veteran'],
+        'budget': ['budget', 'affordable'],
+        'long distance': ['long distance', 'interstate'],
+        'local': ['local', 'neighborhood'],
+    }
+
+    for topic, kws in title_topics.items():
+        if topic in title_lower:
+            for kw in kws:
+                if kw not in keywords:
+                    keywords.append(kw)
+                    break
+
+    # Deduplicate and limit to 4
+    seen = set()
+    unique_keywords = []
+    for kw in keywords:
+        if kw.lower() not in seen:
+            seen.add(kw.lower())
+            unique_keywords.append(kw)
+
+    return unique_keywords[:4]
+
+
+def check_image_keywords(current_keywords: list, expected_keywords: list) -> tuple:
+    """Check if current image_keywords match expected. Returns (is_valid, missing, suggested)."""
+    if not current_keywords:
+        return False, expected_keywords, expected_keywords
+
+    current_set = set(k.lower() for k in current_keywords)
+    expected_set = set(k.lower() for k in expected_keywords)
+
+    # Check overlap - at least 1 keyword should match
+    overlap = current_set & expected_set
+
+    if len(overlap) >= 1:
+        return True, [], []
+
+    # No overlap - keywords are mismatched
+    return False, list(expected_set - current_set), expected_keywords
+
+
 def validate_post(file_path: Path) -> dict:
     """Validate a single post and return results."""
     content = file_path.read_text()
@@ -192,9 +340,21 @@ def validate_post(file_path: Path) -> dict:
     if re.search(r'\b20\d{2}\b', title):
         results['errors'].append(f"Title contains year")
 
+    # Title should match slug (slug should be derived from title)
+    slug = fm.get('slug', '')
+    if title and slug:
+        expected_slug = title_to_slug(title)
+        # Check if slugs are substantially different (not just truncation)
+        # Allow for slug truncation but flag if the beginning doesn't match
+        if not expected_slug.startswith(slug[:30]) and not slug.startswith(expected_slug[:30]):
+            results['errors'].append(
+                f"Title/slug mismatch: title says '{title[:40]}...' but slug is '{slug[:40]}...'. "
+                f"Run: python scripts/blog/blog_rename.py {fm.get('id', '')} --fix"
+            )
+
     # Excerpt length
     if len(excerpt) > 155:
-        results['warnings'].append(f"Excerpt too long: {len(excerpt)} chars (max 155)")
+        results['warnings'].append(f"Excerpt too long: {len(excerpt)} chars (max 155, use blog_wordcount.py --fix)")
     if not excerpt:
         results['errors'].append("Missing excerpt")
 
@@ -202,6 +362,26 @@ def validate_post(file_path: Path) -> dict:
     read_time = fm.get('readTime', '')
     if not re.match(r'\d+ min read', str(read_time)):
         results['errors'].append(f"Invalid readTime format: {read_time}")
+
+    # === Image keywords check ===
+    service_link = fm.get('service_link', '')
+    location_link = fm.get('location_link', '')
+    category = fm.get('category', '')
+    current_keywords = fm.get('image_keywords', [])
+
+    expected_keywords = generate_expected_keywords(title, service_link, location_link, category)
+    if expected_keywords:
+        is_valid, missing, suggested = check_image_keywords(current_keywords, expected_keywords)
+        if not is_valid:
+            if not current_keywords:
+                results['warnings'].append(
+                    f"Missing image_keywords. Suggested: {suggested}"
+                )
+            else:
+                results['warnings'].append(
+                    f"image_keywords may need review. Current: {current_keywords}, Suggested: {suggested}"
+                )
+        results['suggested_keywords'] = suggested
 
     # === Image checks ===
 

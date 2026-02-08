@@ -8,7 +8,7 @@ interface AboutSectionProps {
 export default function AboutSection({ className = "" }: AboutSectionProps) {
   return (
     <section className={`py-5 px-4 md:px-6 lg:px-8 ${className}`}>
-      <div className="container mx-auto rounded-4xl bg-orange-500 p-6 md:p-12">
+      <div className="container mx-auto rounded-4xl bg-black p-6 md:p-12">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -23,7 +23,7 @@ export default function AboutSection({ className = "" }: AboutSectionProps) {
               </p>
               <Link
                 href="/about-us"
-                className="inline-flex items-center bg-white hover:bg-gray-100 text-orange-500 font-semibold px-6 py-3 rounded-lg transition-colors"
+                className="inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
               >
                 Learn More About Us
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

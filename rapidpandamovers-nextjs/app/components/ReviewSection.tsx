@@ -1,9 +1,11 @@
 'use client'
 
-import { useState, useMemo } from 'react'
-import { Star, Quote, ChevronLeft, ChevronRight, BadgeCheck } from 'lucide-react'
+import { useState, useMemo, useEffect } from 'react'
+import { Star, Quote, ChevronLeft, ChevronRight, ChevronDown, ChevronUp, BadgeCheck } from 'lucide-react'
 import Link from 'next/link'
 import reviewsData from '@/data/reviews.json'
+
+const TRUNCATE_LENGTH = 200 // Characters before showing "Read more"
 
 interface ReviewSectionProps {
   // Filter options
@@ -15,8 +17,10 @@ interface ReviewSectionProps {
   title?: string
   subtitle?: string
   limit?: number
+  perPage?: number
   showPlatformFilter?: boolean
   showAllLink?: boolean
+  showPagination?: boolean
   className?: string
   variant?: 'default' | 'compact' | 'carousel'
 }
@@ -100,19 +104,22 @@ export default function ReviewSection({
   neighborhood,
   service,
   route,
-  title = "What Our Customers Say",
+  title,
   subtitle,
   limit = 6,
+  perPage = 9,
   showPlatformFilter = false,
   showAllLink = true,
+  showPagination = false,
   className = "",
   variant = 'default'
 }: ReviewSectionProps) {
   const [selectedPlatform, setSelectedPlatform] = useState<string | null>(null)
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [currentPage, setCurrentPage] = useState(1)
 
-  // Filter reviews based on props
-  const filteredReviews = useMemo(() => {
+  // Filter reviews based on props (without limit for pagination)
+  const allFilteredReviews = useMemo(() => {
     let reviews = reviewsData.reviews
 
     // Filter by platform if selected
@@ -138,8 +145,28 @@ export default function ReviewSection({
       reviews = reviews.filter(r => r.route === route)
     }
 
-    return reviews.slice(0, limit)
-  }, [city, neighborhood, service, route, selectedPlatform, limit])
+    // Sort by ID descending (newest first)
+    reviews = [...reviews].sort((a, b) => parseInt(b.id) - parseInt(a.id))
+
+    return reviews
+  }, [city, neighborhood, service, route, selectedPlatform])
+
+  // Calculate pagination
+  const totalPages = showPagination ? Math.ceil(allFilteredReviews.length / perPage) : 1
+
+  // Get reviews for current page
+  const filteredReviews = useMemo(() => {
+    if (showPagination) {
+      const startIndex = (currentPage - 1) * perPage
+      return allFilteredReviews.slice(startIndex, startIndex + perPage)
+    }
+    return allFilteredReviews.slice(0, limit)
+  }, [allFilteredReviews, showPagination, currentPage, perPage, limit])
+
+  // Reset to page 1 when filters change
+  useEffect(() => {
+    setCurrentPage(1)
+  }, [selectedPlatform])
 
   // Get unique platforms from filtered reviews for filter buttons
   const availablePlatforms = useMemo(() => {
@@ -164,47 +191,26 @@ export default function ReviewSection({
     return null
   }
 
-  const defaultSubtitle = subtitle || `Trusted by hundreds of families and businesses for their relocation needs.`
+  const hasHeader = title || subtitle
 
   return (
     <section className={`py-16 md:py-20 ${className}`}>
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {title.includes('Say') ? (
-              <>What Our <span className="text-orange-500">Customers</span> Say</>
-            ) : (
-              title
+        {hasHeader && (
+          <div className="text-center mb-12">
+            {title && (
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                {title}
+              </h2>
             )}
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            {defaultSubtitle}
-          </p>
-
-          {/* Stats */}
-          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10 mt-8">
-            <div className="text-center">
-              <div className="flex items-center justify-center gap-1 mb-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-orange-500 fill-current" />
-                ))}
-              </div>
-              <p className="text-2xl font-bold text-gray-900">{reviewsData.stats.average_rating}</p>
-              <p className="text-sm text-gray-500">Average Rating</p>
-            </div>
-            <div className="w-px h-12 bg-gray-300 hidden md:block" />
-            <div className="text-center">
-              <p className="text-2xl font-bold text-gray-900">{reviewsData.stats.total_reviews}+</p>
-              <p className="text-sm text-gray-500">Happy Customers</p>
-            </div>
-            <div className="w-px h-12 bg-gray-300 hidden md:block" />
-            <div className="text-center">
-              <p className="text-2xl font-bold text-gray-900">{reviewsData.stats.five_star_percentage}%</p>
-              <p className="text-sm text-gray-500">5-Star Reviews</p>
-            </div>
+            {subtitle && (
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                {subtitle}
+              </p>
+            )}
           </div>
-        </div>
+        )}
 
         {/* Platform Filter */}
         {showPlatformFilter && (
@@ -280,8 +286,109 @@ export default function ReviewSection({
           </div>
         )}
 
+        {/* Pagination */}
+        {showPagination && totalPages > 1 && (
+          <>
+            <div className="flex items-center justify-center gap-2 mt-12">
+              {/* Previous Button */}
+              {currentPage > 1 ? (
+                <button
+                  onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                  className="flex items-center px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-500 hover:text-orange-500 transition-colors"
+                >
+                  <ChevronLeft className="w-4 h-4 mr-1" />
+                  Previous
+                </button>
+              ) : (
+                <span className="flex items-center px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-400 cursor-not-allowed opacity-50">
+                  <ChevronLeft className="w-4 h-4 mr-1" />
+                  Previous
+                </span>
+              )}
+
+              {/* Page Numbers */}
+              <div className="flex items-center gap-1">
+                {(() => {
+                  const pages: (number | string)[] = []
+                  const edgeCount = 2
+                  const surroundCount = 1
+
+                  const showEllipsisStart = currentPage > edgeCount + surroundCount + 1
+                  const showEllipsisEnd = currentPage < totalPages - edgeCount - surroundCount
+
+                  // Always show first edgeCount pages
+                  for (let i = 1; i <= Math.min(edgeCount, totalPages); i++) {
+                    pages.push(i)
+                  }
+
+                  // Show ellipsis if needed
+                  if (showEllipsisStart) {
+                    pages.push('...')
+                  }
+
+                  // Show pages around current
+                  for (let i = Math.max(edgeCount + 1, currentPage - surroundCount); i <= Math.min(totalPages - edgeCount, currentPage + surroundCount); i++) {
+                    if (!pages.includes(i)) pages.push(i)
+                  }
+
+                  // Show ellipsis if needed
+                  if (showEllipsisEnd) {
+                    pages.push('...')
+                  }
+
+                  // Always show last edgeCount pages
+                  for (let i = Math.max(totalPages - edgeCount + 1, edgeCount + 1); i <= totalPages; i++) {
+                    if (!pages.includes(i)) pages.push(i)
+                  }
+
+                  return pages.map((page, idx) => (
+                    typeof page === 'string' ? (
+                      <span key={`ellipsis-${idx}`} className="w-10 h-10 flex items-center justify-center text-gray-500">
+                        ...
+                      </span>
+                    ) : (
+                      <button
+                        key={page}
+                        onClick={() => setCurrentPage(page)}
+                        className={`w-10 h-10 flex items-center justify-center rounded-lg font-medium transition-colors ${
+                          currentPage === page
+                            ? 'bg-orange-500 text-white'
+                            : 'bg-white border border-gray-300 text-gray-700 hover:bg-orange-50 hover:border-orange-500 hover:text-orange-500'
+                        }`}
+                      >
+                        {page}
+                      </button>
+                    )
+                  ))
+                })()}
+              </div>
+
+              {/* Next Button */}
+              {currentPage < totalPages ? (
+                <button
+                  onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                  className="flex items-center px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-500 hover:text-orange-500 transition-colors"
+                >
+                  Next
+                  <ChevronRight className="w-4 h-4 ml-1" />
+                </button>
+              ) : (
+                <span className="flex items-center px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-400 cursor-not-allowed opacity-50">
+                  Next
+                  <ChevronRight className="w-4 h-4 ml-1" />
+                </span>
+              )}
+            </div>
+
+            {/* Page indicator */}
+            <p className="text-center text-gray-500 mt-4">
+              Page {currentPage} of {totalPages} ({allFilteredReviews.length} reviews)
+            </p>
+          </>
+        )}
+
         {/* View All Link */}
-        {showAllLink && (
+        {showAllLink && !showPagination && (
           <div className="text-center mt-12">
             <Link
               href="/reviews"
@@ -296,7 +403,7 @@ export default function ReviewSection({
   )
 }
 
-// Review Card Component
+// Review Card Component with expand/collapse
 function ReviewCard({
   review,
   formatDate,
@@ -306,8 +413,11 @@ function ReviewCard({
   formatDate: (date: string) => string
   compact?: boolean
 }) {
+  const [isExpanded, setIsExpanded] = useState(false)
+  const needsTruncation = review.text.length > TRUNCATE_LENGTH
+
   return (
-    <div className={`bg-white rounded-2xl p-6 h-full flex flex-col shadow-sm border border-gray-100 hover:shadow-md transition-shadow ${compact ? 'p-5' : ''}`}>
+    <div className={`bg-white rounded-2xl p-6 flex flex-col shadow-sm border border-gray-100 hover:shadow-md transition-shadow ${compact ? 'p-5' : ''}`}>
       {/* Header */}
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center gap-3">
@@ -344,22 +454,40 @@ function ReviewCard({
       {/* Review Text */}
       <div className="flex-1">
         <Quote className="w-8 h-8 text-orange-100 mb-2" />
-        <p className={`text-gray-700 leading-relaxed ${compact ? 'text-sm line-clamp-3' : ''}`}>
+        <p className={`text-gray-700 leading-relaxed ${compact ? 'text-sm line-clamp-3' : ''} ${!compact && !isExpanded && needsTruncation ? 'line-clamp-4' : ''}`}>
           {review.text}
         </p>
+        {!compact && needsTruncation && (
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="mt-2 text-orange-500 hover:text-orange-600 text-sm font-medium flex items-center gap-1 transition-colors"
+          >
+            {isExpanded ? (
+              <>
+                Show less
+                <ChevronUp className="w-4 h-4" />
+              </>
+            ) : (
+              <>
+                Read more
+                <ChevronDown className="w-4 h-4" />
+              </>
+            )}
+          </button>
+        )}
       </div>
 
       {/* Service/Location Tags */}
       {(review.services?.length > 0 || review.location?.city) && (
         <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-gray-100">
-          {review.services?.map((svc, idx) => (
+          {review.services?.map((svc: string, idx: number) => (
             <span key={idx} className="text-xs bg-orange-50 text-orange-600 px-2.5 py-1 rounded-full font-medium">
-              {svc.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+              {svc.replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase())}
             </span>
           ))}
           {review.location?.city && (
             <span className="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-full font-medium">
-              {review.location.city.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+              {review.location.city.replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase())}
             </span>
           )}
         </div>

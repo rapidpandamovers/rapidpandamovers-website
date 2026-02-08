@@ -2,6 +2,7 @@
 
 import React, { useState, useRef } from 'react';
 import Hero from '../components/Hero';
+import ResourceSection from '../components/ResourceSection';
 import QuoteSection from '../components/QuoteSection';
 import content from '../../data/content.json';
 
@@ -102,6 +103,13 @@ export default function MovingGlossaryPage() {
           </div>
         </div>
       </section>
+
+      {/* Resources Section */}
+      <ResourceSection
+        title="More Moving Resources"
+        subtitle="Explore our comprehensive guides and services for a successful move"
+        variant="grid"
+      />
 
       <QuoteSection
         title="Need Help With Your Move?"

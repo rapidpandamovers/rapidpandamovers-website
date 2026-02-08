@@ -3,6 +3,7 @@ import Link from 'next/link'
 import content from '../../data/content.json'
 import Hero from '../components/Hero'
 import StatisticSection from '../components/StatisticSection'
+import LocationSection from '../components/LocationSection'
 import QuoteSection from '../components/QuoteSection'
 
 export const metadata = {
@@ -14,7 +15,7 @@ export default function AboutPage() {
   const { reviews } = content
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <Hero
         title="About Rapid Panda Moving"
@@ -25,8 +26,8 @@ export default function AboutPage() {
       <StatisticSection stats={reviews.stats} />
 
       {/* About Content Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="py-20">
+        <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
@@ -92,31 +93,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Service Areas Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-              Serving All of Miami-Dade County
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're proud to serve communities throughout Miami-Dade County with professional moving services.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {[
-              'Miami', 'Coral Gables', 'Hialeah', 'Fort Lauderdale',
-              'Doral', 'Sunrise', 'Medley', 'Miami Beach',
-              'Kendall', 'Homestead', 'Aventura', 'Palmetto Bay'
-            ].map((city, index) => (
-              <div key={index} className="bg-white rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-shadow">
-                <h3 className="font-semibold text-gray-800">{city}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <LocationSection
+        title="Areas We Serve"
+        description="Rapid Panda Movers proudly serves all of Miami-Dade County and beyond"
+      />
 
       {/* CTA Section */}
       <QuoteSection

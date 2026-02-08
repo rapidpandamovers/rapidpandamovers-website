@@ -8,12 +8,11 @@ Usage:
     python scripts/blog/blog_rename.py --all               # Check all posts
     python scripts/blog/blog_rename.py --all --fix         # Fix all posts
 
-This script:
-1. Removes year references from titles (e.g., "2024", "for 2024")
-2. Preserves important words (locations, key terms)
-3. Updates the slug in frontmatter to match the new title
-4. Renames the .md file to match the new slug
-5. Ensures no trailing special characters or cutoff text
+This script ensures consistency between:
+1. Title - removes year references, fixes bad endings
+2. Slug - regenerated from title when needed
+3. Filename - matches slug pattern (NNNN-slug.md)
+4. Image folder - path updated to match slug, folder renamed if exists
 
 Examples of titles that will be fixed:
     "Miami Moving Tips for 2024" → "Miami Moving Tips"
@@ -51,7 +50,9 @@ def find_post_file(post_id: str) -> Path:
 def title_to_slug(title: str) -> str:
     """Convert a title to a URL-friendly slug."""
     slug = title.lower()
-    # Replace special characters with spaces
+    # Remove apostrophes entirely (contractions become single words: aren't -> arent)
+    slug = re.sub(r"[''`]", '', slug)
+    # Replace other special characters with spaces
     slug = re.sub(r'[^\w\s-]', ' ', slug)
     # Replace multiple spaces/hyphens with single hyphen
     slug = re.sub(r'[-\s]+', '-', slug)
@@ -237,6 +238,72 @@ def get_slug(content: str) -> str:
     return match.group(1).strip() if match else None
 
 
+def get_date(content: str) -> str:
+    """Extract date from frontmatter."""
+    match = re.search(r'^date:\s*["\']?([^"\'\n]+)["\']?\s*$', content, re.MULTILINE)
+    return match.group(1).strip() if match else None
+
+
+def get_image_folder(content: str) -> str:
+    """Extract image_folder from frontmatter."""
+    match = re.search(r'^image_folder:\s*["\']?([^"\'\n]+)["\']?\s*$', content, re.MULTILINE)
+    return match.group(1).strip() if match else None
+
+
+def update_image_paths(content: str, old_folder: str, new_folder: str) -> str:
+    """Update all image paths in content when folder changes."""
+    if not old_folder or not new_folder or old_folder == new_folder:
+        return content
+
+    # Update image_folder
+    content = re.sub(
+        r'^(image_folder:\s*["\']?)' + re.escape(old_folder) + r'(["\']?\s*)$',
+        rf'\g<1>{new_folder}\g<2>',
+        content,
+        flags=re.MULTILINE
+    )
+
+    # Update featured
+    content = re.sub(
+        r'^(featured:\s*["\']?)' + re.escape(old_folder) + r'/',
+        rf'\g<1>{new_folder}/',
+        content,
+        flags=re.MULTILINE
+    )
+
+    # Update images array items
+    content = re.sub(
+        r'(\s*-\s*["\']?)' + re.escape(old_folder) + r'/',
+        rf'\g<1>{new_folder}/',
+        content
+    )
+
+    # Update body image references ![...](old_folder/...)
+    content = re.sub(
+        r'(\!\[[^\]]*\]\()' + re.escape(old_folder) + r'/',
+        rf'\g<1>{new_folder}/',
+        content
+    )
+
+    return content
+
+
+def move_image_folder(old_folder: str, new_folder: str) -> bool:
+    """Move the actual image folder on disk."""
+    if not old_folder or not new_folder or old_folder == new_folder:
+        return False
+
+    old_path = PROJECT_ROOT / f"public{old_folder}"
+    new_path = PROJECT_ROOT / f"public{new_folder}"
+
+    if old_path.exists() and not new_path.exists():
+        new_path.parent.mkdir(parents=True, exist_ok=True)
+        shutil.move(str(old_path), str(new_path))
+        return True
+
+    return False
+
+
 def update_frontmatter_field(content: str, field: str, new_value: str) -> str:
     """Update a field in frontmatter."""
     # Handle double-quoted values (may contain apostrophes)
@@ -255,13 +322,15 @@ def update_frontmatter_field(content: str, field: str, new_value: str) -> str:
 
 
 def check_post(file_path: Path, fix: bool = False) -> dict:
-    """Check and optionally fix year in title, slug, and filename."""
+    """Check and optionally fix year in title, slug, filename, and image folder."""
     content = file_path.read_text()
 
     post_id = get_post_id(content)
     title = get_title(content)
     current_slug = get_slug(content)
     current_filename = file_path.name
+    current_date = get_date(content)
+    current_image_folder = get_image_folder(content)
 
     if not title or not post_id:
         return {
@@ -282,8 +351,28 @@ def check_post(file_path: Path, fix: bool = False) -> dict:
     bad_slug = has_bad_slug(current_slug)
     bad_filename = has_bad_slug(current_filename.replace('.md', ''))
 
+    # Check if image_folder matches slug
+    image_folder_mismatch = False
+    expected_image_folder = None
+    if current_image_folder and current_date and current_slug:
+        # Extract year/month from date
+        year = current_date[:4] if len(current_date) >= 4 else '2024'
+        month = current_date[5:7] if len(current_date) >= 7 else '01'
+        expected_image_folder = f"/images/blog/{year}/{month}/{current_slug}"
+        if current_image_folder != expected_image_folder:
+            image_folder_mismatch = True
+
+    # Check if title matches slug (slug should be derived from title)
+    title_slug_mismatch = False
+    if title and current_slug:
+        expected_slug = title_to_slug(title)
+        # Check if first 30 chars match (allowing for truncation)
+        if not expected_slug.startswith(current_slug[:30]) and not current_slug.startswith(expected_slug[:30]):
+            title_slug_mismatch = True
+
     needs_fix = (year_in_title or year_in_slug or year_in_filename or
-                 bad_title_ending or bad_slug or bad_filename)
+                 bad_title_ending or bad_slug or bad_filename or image_folder_mismatch or
+                 title_slug_mismatch)
 
     result = {
         'file': file_path.name,
@@ -296,12 +385,16 @@ def check_post(file_path: Path, fix: bool = False) -> dict:
         'bad_title_ending': bad_title_ending,
         'bad_slug': bad_slug,
         'bad_filename': bad_filename,
+        'image_folder_mismatch': image_folder_mismatch,
+        'title_slug_mismatch': title_slug_mismatch,
         'title': title,
         'slug': current_slug,
+        'image_folder': current_image_folder,
         'fixed': False,
         'new_title': None,
         'new_slug': None,
         'new_filename': None,
+        'new_image_folder': None,
     }
 
     if needs_fix:
@@ -313,8 +406,8 @@ def check_post(file_path: Path, fix: bool = False) -> dict:
             new_title = clean_string_endings(new_title)
 
         # Generate new slug from cleaned title (or clean existing slug)
-        if year_in_title or bad_title_ending or bad_slug or bad_filename:
-            # Regenerate from title for any structural issues
+        if year_in_title or bad_title_ending or bad_slug or bad_filename or title_slug_mismatch:
+            # Regenerate from title for any structural issues or mismatches
             new_slug = title_to_slug(new_title)
         elif year_in_slug:
             # Just clean the year from slug
@@ -329,9 +422,17 @@ def check_post(file_path: Path, fix: bool = False) -> dict:
 
         new_filename = f"{post_id}-{new_slug}.md"
 
+        # Calculate new image folder based on new slug
+        new_image_folder = None
+        if current_image_folder and current_date:
+            year = current_date[:4] if len(current_date) >= 4 else '2024'
+            month = current_date[5:7] if len(current_date) >= 7 else '01'
+            new_image_folder = f"/images/blog/{year}/{month}/{new_slug}"
+
         result['new_title'] = new_title
         result['new_slug'] = new_slug
         result['new_filename'] = new_filename
+        result['new_image_folder'] = new_image_folder
 
         if fix:
             new_content = content
@@ -346,6 +447,15 @@ def check_post(file_path: Path, fix: bool = False) -> dict:
             if new_slug != current_slug:
                 new_content = update_frontmatter_field(new_content, 'slug', new_slug)
                 changes_made = True
+
+            # Update image paths if folder changed
+            if new_image_folder and current_image_folder and new_image_folder != current_image_folder:
+                new_content = update_image_paths(new_content, current_image_folder, new_image_folder)
+                changes_made = True
+
+                # Move the actual image folder
+                if move_image_folder(current_image_folder, new_image_folder):
+                    result['image_folder_moved'] = True
 
             # Write updated content
             if changes_made:
@@ -414,6 +524,10 @@ def main():
                 issues.append('bad slug')
             if result.get('bad_filename'):
                 issues.append('bad filename')
+            if result.get('image_folder_mismatch'):
+                issues.append('image folder mismatch')
+            if result.get('title_slug_mismatch'):
+                issues.append('title/slug mismatch')
 
             print(f"{status}: {result['file']} ({', '.join(issues)})")
 
@@ -433,16 +547,24 @@ def main():
             if result.get('file_rename_skipped'):
                 print(f"   File:  ⚠️  {result['file_rename_skipped']}")
 
+            # Show image folder changes
+            if result.get('new_image_folder') and result['image_folder'] != result['new_image_folder']:
+                if result.get('image_folder_moved'):
+                    print(f"   Images: → {result['new_image_folder']}")
+                else:
+                    print(f"   Images: {result['image_folder']}")
+                    print(f"      →   {result['new_image_folder']}")
+
             if result['fixed']:
                 fixed += 1
 
     print(f"\n{'='*50}")
     print(f"Checked {len(posts)} posts")
-    print(f"Found {found} needing fixes (years, bad endings, cutoffs)")
+    print(f"Found {found} needing fixes (years, bad endings, cutoffs, mismatches)")
     if fix:
-        print(f"Fixed {fixed} posts (title, slug, and filename)")
+        print(f"Fixed {fixed} posts (title, slug, filename, and image folder)")
     elif found > 0:
-        print(f"Run with --fix to update titles, slugs, and filenames")
+        print(f"Run with --fix to update slugs, filenames, and image folders to match titles")
 
 
 if __name__ == '__main__':

@@ -9,34 +9,64 @@ import BackToBlogLink from './BackToBlogLink'
 import BlogHeroImage from '../BlogHeroImage'
 
 export async function generateStaticParams() {
-  const posts = getAllPosts()
-  return posts.map((post) => ({
-    slug: post.slug,
-  }))
+  try {
+    const posts = getAllPosts()
+    return posts.map((post) => ({
+      slug: post.slug,
+    }))
+  } catch (error) {
+    console.error('[Blog] Error generating static params:', error)
+    return []
+  }
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params
-  const post = getPostBySlug(slug)
+  try {
+    const { slug } = await params
+    const post = getPostBySlug(slug)
 
-  if (!post) {
-    return {
-      title: 'Post Not Found',
+    if (!post) {
+      return {
+        title: 'Post Not Found',
+      }
     }
-  }
 
-  return {
-    title: `${post.title} | Rapid Panda Movers Blog`,
-    description: post.excerpt,
+    return {
+      title: `${post.title} | Rapid Panda Movers Blog`,
+      description: post.excerpt,
+    }
+  } catch (error) {
+    console.error('[Blog] Error generating metadata:', error)
+    return {
+      title: 'Blog Post | Rapid Panda Movers',
+    }
   }
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params
-  const post = getPostBySlug(slug)
+  let post: ReturnType<typeof getPostBySlug> = null
+  let slug: string = ''
+  
+  try {
+    const paramsResult = await params
+    slug = paramsResult.slug
+    post = getPostBySlug(slug)
+  } catch (error) {
+    console.error('[BlogPostPage] Error loading post:', error)
+    notFound()
+  }
 
   if (!post) {
     notFound()
+  }
+
+  // Get related posts once at component level to prevent re-computation on re-renders
+  let relatedPosts: ReturnType<typeof getRelatedPosts> = []
+  try {
+    relatedPosts = getRelatedPosts(post.slug, 2)
+  } catch (error) {
+    console.error('[BlogPostPage] Error loading related posts:', error)
+    relatedPosts = []
   }
 
   // Parse inline markdown (bold and links) into React elements
@@ -295,7 +325,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             Related Articles
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {getRelatedPosts(slug, 2).map((relatedPost) => (
+            {relatedPosts.map((relatedPost) => (
               <Link
                 key={relatedPost.id}
                 href={`/blog/${relatedPost.slug}`}

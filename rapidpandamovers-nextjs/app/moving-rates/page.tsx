@@ -4,6 +4,7 @@ import content from '../../data/content.json';
 import Hero from '../components/Hero';
 import RateSection from '../components/RateSection';
 import IncludedSection from '../components/IncludedSection';
+import ResourceSection from '../components/ResourceSection';
 import QuoteSection from '../components/QuoteSection';
 
 export const metadata: Metadata = {
@@ -48,6 +49,13 @@ export default function RatesPage() {
         items={rates.whats_included}
         title="What's Included in Your Move"
         subtitle="Everything you need for a successful move, included in our transparent pricing"
+      />
+
+      {/* Resources Section */}
+      <ResourceSection
+        title="More Moving Resources"
+        subtitle="Explore our comprehensive guides and services for a successful move"
+        variant="grid"
       />
 
       {/* Quote CTA Section */}
