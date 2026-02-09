@@ -1,12 +1,24 @@
+import type { Metadata } from 'next'
 import content from '../../data/content.json'
 import Hero from '../components/Hero'
 import FAQSection from '../components/FAQSection'
 import ResourceSection from '../components/ResourceSection'
 import QuoteSection from '../components/QuoteSection'
+import { FAQSchema } from '../components/Schema'
+import { generatePageMetadata } from '../../lib/metadata'
+
+export const metadata: Metadata = generatePageMetadata({
+  title: 'Frequently Asked Questions | Rapid Panda Movers',
+  description: 'Find answers to common questions about our moving services, pricing, insurance, and more. Get the information you need for a stress-free move.',
+  path: '/faq',
+})
 
 export default function FAQPage() {
   return (
     <div className="min-h-screen">
+      {/* Schema Markup */}
+      <FAQSchema faqs={content.faq.questions} />
+
       {/* Hero Section */}
       <Hero
         title={content.faq.title}

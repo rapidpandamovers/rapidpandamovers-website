@@ -3,12 +3,16 @@ import WhySection from './WhySection';
 import QuoteSection from './QuoteSection';
 import RouteSection from './RouteSection';
 import LocationSection from './LocationSection';
+import ServiceSection from './ServiceSection';
+import BlogSection from './BlogSection';
 import IncludedSection from './IncludedSection';
 import ProcessSection from './ProcessSection';
 import ProblemSection from './ProblemSection';
 import SolutionSection from './SolutionSection';
 import ContentSection from './ContentSection';
 import FAQSection from './FAQSection';
+import Breadcrumbs from './Breadcrumbs';
+import { ServiceSchema, FAQSchema } from './Schema';
 import { allLongDistanceRoutes, titleCase } from '@/lib/data';
 import { MapPin, Navigation, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
@@ -80,8 +84,44 @@ export default function ServicePage({ service, location }: ServicePageProps) {
     ? `Professional ${service.name.toLowerCase()} services in ${location.name}${isNeighborhood ? `, ${location.parentCity!.name}` : ''}. Experienced crews, transparent pricing, and reliable service.`
     : (service.hero?.description || service.description);
 
+  // Build breadcrumb items
+  const breadcrumbItems = location
+    ? [
+        { label: 'Services', href: '/services' },
+        { label: service.name, href: `/${service.slug}` },
+        ...(isNeighborhood && location.parentCity
+          ? [{ label: `${location.parentCity.name}`, href: `/${location.parentCity.slug}-movers` }]
+          : []),
+        { label: location.name },
+      ]
+    : [
+        { label: 'Services', href: '/services' },
+        { label: service.name },
+      ];
+
+  // Build service URL for schema
+  const serviceUrl = location
+    ? `/${location.slug}-${service.slug}`
+    : `/${service.slug}`;
+
+  // Build area served for schema
+  const areaServed = location
+    ? isNeighborhood && location.parentCity
+      ? `${location.name}, ${location.parentCity.name}, FL`
+      : `${location.name}, FL`
+    : 'Miami-Dade County, FL';
+
   return (
     <div className="min-h-screen">
+      {/* Schema Markup */}
+      <ServiceSchema
+        name={location ? `${location.name} ${service.name}` : service.name}
+        description={service.description}
+        url={serviceUrl}
+        areaServed={areaServed}
+      />
+      {service.faq && service.faq.length > 0 && <FAQSchema faqs={service.faq} />}
+
       {/* Hero Section */}
       <Hero
         title={heroTitle}
@@ -89,6 +129,9 @@ export default function ServicePage({ service, location }: ServicePageProps) {
         cta={service.hero?.cta || 'Get Your Free Quote'}
         image_url={service.hero?.image_url}
       />
+
+      {/* Breadcrumbs */}
+      <Breadcrumbs items={breadcrumbItems} showBackground={true} />
 
       {/* Content Section */}
       <ContentSection
@@ -208,6 +251,33 @@ export default function ServicePage({ service, location }: ServicePageProps) {
           </div>
         </section>
       )}
+
+      {/* Related Blog Posts */}
+      <BlogSection
+        serviceFilter={service.slug}
+        locationFilter={location?.slug}
+        locationFilterFallback={isNeighborhood ? location!.parentCity!.slug : undefined}
+        maxPosts={3}
+        showFeatured={false}
+        showCategories={false}
+        title={location ? `${service.name} Tips for ${location.name}` : `${service.name} Tips & Guides`}
+        subtitle={location ? `Expert advice for your ${location.name} ${service.name.toLowerCase()}` : `Expert advice for your ${service.name.toLowerCase()}`}
+      />
+
+      {/* Other Services */}
+      <ServiceSection
+        location={location}
+        excludeService={service.slug}
+        title={location
+          ? <>Other <span className="text-orange-500">Services</span> in {location.name}</>
+          : <>Other <span className="text-orange-500">Services</span> You May Need</>
+        }
+        subtitle={location
+          ? `Explore our full range of professional moving services in ${location.name}`
+          : "Explore our full range of professional moving services"
+        }
+        variant="preview"
+      />
 
       {/* Why Choose Us */}
       <WhySection />

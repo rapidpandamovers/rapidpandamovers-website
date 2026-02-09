@@ -1,25 +1,35 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { Search, MapPin, Truck, Navigation, X } from 'lucide-react';
+import { Search, MapPin, Truck, Navigation, X, FileText } from 'lucide-react';
 import Link from 'next/link';
 import { getAllActiveCities, getAllActiveServices, allRoutes, allLocalRoutes, titleCase } from '@/lib/data';
 
 interface SearchResult {
-  type: 'city' | 'neighborhood' | 'service' | 'route';
+  type: 'city' | 'neighborhood' | 'service' | 'route' | 'blog';
   name: string;
   slug: string;
   description?: string;
 }
 
+interface BlogPost {
+  id: string;
+  title: string;
+  slug: string;
+  excerpt: string;
+  category: string;
+}
+
 interface SearchSectionProps {
   placeholder?: string;
   showBackground?: boolean;
+  posts?: BlogPost[];
 }
 
 export default function SearchSection({
-  placeholder = 'Search locations, services, or routes...',
-  showBackground = true
+  placeholder = 'Search locations, services, routes, or blog posts...',
+  showBackground = true,
+  posts = []
 }: SearchSectionProps) {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
@@ -87,6 +97,23 @@ export default function SearchSection({
       }
     });
 
+    // Search blog posts (if provided)
+    if (posts.length > 0) {
+      posts.forEach(post => {
+        if (post.title.toLowerCase().includes(searchQuery) ||
+            post.slug.toLowerCase().includes(searchQuery) ||
+            post.excerpt.toLowerCase().includes(searchQuery) ||
+            post.category.toLowerCase().includes(searchQuery)) {
+          searchResults.push({
+            type: 'blog',
+            name: post.title,
+            slug: `/blog/${post.slug}`,
+            description: post.category
+          });
+        }
+      });
+    }
+
     // Limit results and sort by relevance
     const limitedResults = searchResults
       .sort((a, b) => {
@@ -151,6 +178,8 @@ export default function SearchSection({
         return <Truck className="w-5 h-5 text-orange-500" />;
       case 'route':
         return <Navigation className="w-5 h-5 text-orange-500" />;
+      case 'blog':
+        return <FileText className="w-5 h-5 text-orange-500" />;
       default:
         return <Search className="w-5 h-5 text-orange-500" />;
     }
@@ -231,7 +260,7 @@ export default function SearchSection({
             Find Your <span className="text-orange-500">Moving Service</span>
           </h2>
           <p className="text-gray-600">
-            Search for locations, services, or moving routes
+            Search for locations, services, routes, or blog posts
           </p>
         </div>
         {content}

@@ -3,21 +3,21 @@ id: 413
 title: "6 Critical Steps After Getting Your New Keys"
 slug: "6-critical-steps-after-getting-your-new-keys"
 excerpt: "Just got your new Miami home keys? Follow these 6 essential steps to ensure a smooth transition and avoid costly problems."
-date: "2025-08-13"
-updated: "2025-08-13"
+date: "2026-12-16"
+updated: "2026-12-16"
 readTime: "2 min read"
 category: "Home & Living"
-image_folder: "/images/blog/2025/08/6-critical-steps-after-getting-your-new-keys"
-featured: "/images/blog/2025/08/6-critical-steps-after-getting-your-new-keys/family-unpacking-boxes-in-their-new-kitc-1.webp"
+image_folder: "/images/blog/2026/012/6-critical-steps-after-getting-your-new-keys"
+featured: "/images/blog/2026/012/6-critical-steps-after-getting-your-new-keys/family-unpacking-boxes-in-their-new-kitc-1.webp"
 image_keywords:
   - "new home"
   - "checklist"
   - "settling in"
 images:
-  - "/images/blog/2025/08/6-critical-steps-after-getting-your-new-keys/a-joyful-family-sitting-together-amidst--4.webp"
-  - "/images/blog/2025/08/6-critical-steps-after-getting-your-new-keys/a-joyful-family-unpacking-boxes-while-mo-3.webp"
-  - "/images/blog/2025/08/6-critical-steps-after-getting-your-new-keys/family-unpacking-boxes-in-their-new-kitc-1.webp"
-  - "/images/blog/2025/08/6-critical-steps-after-getting-your-new-keys/young-woman-sitting-on-the-floor-with-bo-2.webp"
+  - "/images/blog/2026/12/6-critical-steps-after-getting-your-new-keys/a-joyful-family-sitting-together-amidst--4.webp"
+  - "/images/blog/2026/12/6-critical-steps-after-getting-your-new-keys/a-joyful-family-unpacking-boxes-while-mo-3.webp"
+  - "/images/blog/2026/12/6-critical-steps-after-getting-your-new-keys/family-unpacking-boxes-in-their-new-kitc-1.webp"
+  - "/images/blog/2026/12/6-critical-steps-after-getting-your-new-keys/young-woman-sitting-on-the-floor-with-bo-2.webp"
 
 service_link: null
 location_link: null
@@ -31,7 +31,7 @@ Just got the keys to your new Miami home this August? Before you start unpacking
 
 You don't know who has keys from before. Previous owners, contractors, real estate agents, or property managers may have copies. Change locks immediately for security and peace of mind.
 
-![A Joyful Family Sitting Together Amidst  4](/images/blog/2025/08/6-critical-steps-after-getting-your-new-keys/a-joyful-family-sitting-together-amidst--4.webp)
+![A Joyful Family Sitting Together Amidst  4](/images/blog/2026/12/6-critical-steps-after-getting-your-new-keys/a-joyful-family-sitting-together-amidst--4.webp)
 
 
 ## 2. Test All Appliances
@@ -42,7 +42,7 @@ Run the dishwasher, check the stove, test the washer/dryer, and ensure the AC is
 
 Find and label water main, electrical panel, and gas shutoff. During Florida's summer storm season, you'll need to know these locations. Better to find them now when there's no emergency.
 
-![A Joyful Family Unpacking Boxes While Mo 3](/images/blog/2025/08/6-critical-steps-after-getting-your-new-keys/a-joyful-family-unpacking-boxes-while-mo-3.webp)
+![A Joyful Family Unpacking Boxes While Mo 3](/images/blog/2026/12/6-critical-steps-after-getting-your-new-keys/a-joyful-family-unpacking-boxes-while-mo-3.webp)
 
 
 ## 4. Set Up Mail Forwarding
@@ -53,7 +53,7 @@ Visit USPS.com to ensure nothing gets lost during the transition period. This sh
 
 Electricity, gas, water, and internet: confirm all accounts are active and in your name before move-in day. Don't get caught in August's heat without AC because of an account issue.
 
-![Young Woman Sitting On The Floor With Bo 2](/images/blog/2025/08/6-critical-steps-after-getting-your-new-keys/young-woman-sitting-on-the-floor-with-bo-2.webp)
+![Young Woman Sitting On The Floor With Bo 2](/images/blog/2026/12/6-critical-steps-after-getting-your-new-keys/young-woman-sitting-on-the-floor-with-bo-2.webp)
 
 
 ## 6. Schedule Critical Installations

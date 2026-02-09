@@ -172,10 +172,16 @@ export function getCategories(): string[] {
 }
 
 /**
- * Convert category display name to URL slug (lowercase, spaces to hyphens)
+ * Convert category display name to URL slug (lowercase, spaces to hyphens, special chars removed)
  */
 export function categoryToSlug(category: string): string {
-  return category.toLowerCase().replace(/\s+/g, '-')
+  return category
+    .toLowerCase()
+    .replace(/&/g, 'and')           // Replace & with "and"
+    .replace(/[^a-z0-9\s-]/g, '')   // Remove special characters
+    .replace(/\s+/g, '-')           // Replace spaces with hyphens
+    .replace(/-+/g, '-')            // Collapse multiple hyphens
+    .replace(/^-|-$/g, '')          // Trim leading/trailing hyphens
 }
 
 /**

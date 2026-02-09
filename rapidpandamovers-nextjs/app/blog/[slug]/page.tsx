@@ -3,8 +3,11 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Calendar, Clock } from 'lucide-react'
 import QuoteSection from '../../components/QuoteSection'
+import Breadcrumbs from '../../components/Breadcrumbs'
+import { ArticleSchema } from '../../components/Schema'
 import { notFound } from 'next/navigation'
-import { getAllPosts, getPostBySlug, getRelatedPosts } from '../../../lib/blog'
+import { getAllPosts, getPostBySlug, getRelatedPosts, categoryToSlug } from '../../../lib/blog'
+import { generateBlogMetadata } from '../../../lib/metadata'
 import BackToBlogLink from './BackToBlogLink'
 import BlogHeroImage from '../BlogHeroImage'
 
@@ -31,10 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       }
     }
 
-    return {
-      title: `${post.title} | Rapid Panda Movers Blog`,
-      description: post.excerpt,
-    }
+    return generateBlogMetadata(post)
   } catch (error) {
     console.error('[Blog] Error generating metadata:', error)
     return {
@@ -281,10 +281,28 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     return elements
   }
 
+  // Breadcrumb items
+  const breadcrumbItems = [
+    { label: 'Blog', href: '/blog' },
+    { label: post.category, href: `/blog/category/${categoryToSlug(post.category)}` },
+    { label: post.title },
+  ]
+
   return (
     <div className="min-h-screen bg-white">
+      {/* Schema Markup */}
+      <ArticleSchema
+        title={post.title}
+        description={post.excerpt}
+        url={`/blog/${post.slug}`}
+        image={post.featured || undefined}
+        datePublished={post.date}
+        dateModified={post.updated}
+      />
+
       {/* Hero Section - Magazine Style with Rounded Box */}
       <div className="container mx-auto pt-8">
+        <Breadcrumbs items={breadcrumbItems} />
         <BackToBlogLink />
 
         <BlogHeroImage

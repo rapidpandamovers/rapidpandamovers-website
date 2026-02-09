@@ -20,6 +20,16 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: '16x16 32x32' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
+  manifest: '/site.webmanifest',
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -156,6 +166,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${getaiGrotesk.variable}`}>
       <head>
+        <meta name="theme-color" content="#f97316" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

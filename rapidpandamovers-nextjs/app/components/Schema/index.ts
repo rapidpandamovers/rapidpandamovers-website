@@ -1,0 +1,6 @@
+export { default as SchemaScript } from './SchemaScript'
+export { default as ArticleSchema } from './ArticleSchema'
+export { default as FAQSchema } from './FAQSchema'
+export { default as ServiceSchema } from './ServiceSchema'
+export { default as BreadcrumbSchema } from './BreadcrumbSchema'
+export { default as RouteSchema } from './RouteSchema'

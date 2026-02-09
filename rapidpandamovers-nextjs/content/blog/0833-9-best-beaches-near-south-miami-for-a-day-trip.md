@@ -3,22 +3,22 @@ id: 833
 title: "9 Best Beaches Near South Miami for a Day Trip"
 slug: "9-best-beaches-near-south-miami-for-a-day-trip"
 excerpt: "Discover 9 beautiful beaches within easy reach of South Miami, from family-friendly shores to quiet retreats, with exact addresses and insider tips."
-date: "2025-08-22"
-updated: "2025-08-22"
+date: "2029-08-21"
+updated: "2029-08-21"
 readTime: "4 min read"
 category: "Lifestyle"
-image_folder: "/images/blog/2025/08/9-best-beaches-near-south-miami-for-a-day-trip"
-featured: "/images/blog/2025/08/9-best-beaches-near-south-miami-for-a-day-trip/beach-ocean-day-trip-tips.webp"
+image_folder: "/images/blog/2029/08/9-best-beaches-near-south-miami-for-a-day-trip"
+featured: "/images/blog/2029/08/9-best-beaches-near-south-miami-for-a-day-trip/beach-ocean-day-trip-tips.webp"
 image_keywords:
   - "beach"
   - "ocean"
   - "day trip"
   - "florida"
 images:
-  - "/images/blog/2025/08/9-best-beaches-near-south-miami-for-a-day-trip/beach-ocean-day-trip-checklist.webp"
-  - "/images/blog/2025/08/9-best-beaches-near-south-miami-for-a-day-trip/beach-ocean-day-trip-guide.webp"
-  - "/images/blog/2025/08/9-best-beaches-near-south-miami-for-a-day-trip/beach-ocean-day-trip-steps.webp"
-  - "/images/blog/2025/08/9-best-beaches-near-south-miami-for-a-day-trip/beach-ocean-day-trip-tips.webp"
+  - "/images/blog/2029/08/9-best-beaches-near-south-miami-for-a-day-trip/beach-ocean-day-trip-checklist.webp"
+  - "/images/blog/2029/08/9-best-beaches-near-south-miami-for-a-day-trip/beach-ocean-day-trip-guide.webp"
+  - "/images/blog/2029/08/9-best-beaches-near-south-miami-for-a-day-trip/beach-ocean-day-trip-steps.webp"
+  - "/images/blog/2029/08/9-best-beaches-near-south-miami-for-a-day-trip/beach-ocean-day-trip-tips.webp"
 service_link: null
 location_link: "/south-miami-movers"
 status: "complete"
@@ -36,7 +36,7 @@ This hidden gem features a man-made atoll pool that fills with fresh seawater at
 
 **Best time to visit:** Weekday mornings for minimal crowds. **Parking:** $7 per vehicle on weekdays, $8 on weekends. Lots fill by 10am on weekends, so arrive early.
 
-![Beach Ocean Day Trip Checklist](/images/blog/2025/08/9-best-beaches-near-south-miami-for-a-day-trip/beach-ocean-day-trip-checklist.webp)
+![Beach Ocean Day Trip Checklist](/images/blog/2029/08/9-best-beaches-near-south-miami-for-a-day-trip/beach-ocean-day-trip-checklist.webp)
 
 ## 2. Crandon Park Beach
 
@@ -56,7 +56,7 @@ Home to the historic Cape Florida Lighthouse (built in 1825), this state park be
 
 **Best time to visit:** Sunrise for photographers, sunset for unforgettable views. **Parking:** $8 per vehicle for up to 8 people. Lighthouse tours run Thursday through Monday.
 
-![Beach Ocean Day Trip Guide](/images/blog/2025/08/9-best-beaches-near-south-miami-for-a-day-trip/beach-ocean-day-trip-guide.webp)
+![Beach Ocean Day Trip Guide](/images/blog/2029/08/9-best-beaches-near-south-miami-for-a-day-trip/beach-ocean-day-trip-guide.webp)
 
 ## 4. Virginia Key Beach
 
@@ -85,7 +85,7 @@ The iconic Miami Beach experience, Lummus Park stretches along Ocean Drive with 
 
 **Best time to visit:** Early morning for exercise, evening for people-watching. **Parking:** Street meters and public garages throughout South Beach ($2-5/hour). Consider taking a rideshare to avoid parking hassles.
 
-![Beach Ocean Day Trip Steps](/images/blog/2025/08/9-best-beaches-near-south-miami-for-a-day-trip/beach-ocean-day-trip-steps.webp)
+![Beach Ocean Day Trip Steps](/images/blog/2029/08/9-best-beaches-near-south-miami-for-a-day-trip/beach-ocean-day-trip-steps.webp)
 
 ## 7. Haulover Beach Park
 

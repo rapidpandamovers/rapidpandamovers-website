@@ -1,8 +1,49 @@
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
 import { getServiceBySlug, getCityBySlug, getRouteBySlug, getNeighborhoodBySlug, getServiceSlugs, getLocationServiceBySlug } from '@/lib/data';
+import { generateServiceMetadata, generateLocationMetadata, generateRouteMetadata } from '@/lib/metadata';
 import ServicePage from '@/app/components/ServicePage';
 import LocationPage from '@/app/components/LocationPage';
 import RoutePage from '@/app/components/RoutePage';
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+
+  // Check for location-service combo first (e.g., miami-local-moving)
+  const locationService = getLocationServiceBySlug(slug);
+  if (locationService) {
+    return generateServiceMetadata(locationService.service, locationService.location);
+  }
+
+  // Check for service page
+  const service = getServiceBySlug(slug);
+  if (service) {
+    return generateServiceMetadata(service);
+  }
+
+  // Check for city page
+  const city = getCityBySlug(slug);
+  if (city) {
+    return generateLocationMetadata(city);
+  }
+
+  // Check for neighborhood page
+  const neighborhood = getNeighborhoodBySlug(slug);
+  if (neighborhood) {
+    return generateLocationMetadata(neighborhood);
+  }
+
+  // Check for route page
+  const route = getRouteBySlug(slug);
+  if (route) {
+    return generateRouteMetadata(route);
+  }
+
+  // Fallback for 404
+  return {
+    title: 'Page Not Found',
+  };
+}
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;

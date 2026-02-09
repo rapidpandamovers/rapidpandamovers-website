@@ -1,8 +1,10 @@
 import Link from 'next/link';
 import SearchSection from './components/SearchSection';
 import BlogSection from './components/BlogSection';
+import { getPostsSortedByDate } from '@/lib/blog';
 
 export default function NotFound() {
+  const posts = getPostsSortedByDate();
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -33,7 +35,10 @@ export default function NotFound() {
       </section>
 
       {/* Search Section */}
-      <SearchSection placeholder="Search for locations, services, or routes..." />
+      <SearchSection
+        placeholder="Search for locations, services, routes, or blog posts..."
+        posts={posts}
+      />
 
       {/* Blog Section */}
       <BlogSection />

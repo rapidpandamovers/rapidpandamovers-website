@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+  <!-- Orange solid background (required for iOS) -->
+  <rect width="180" height="180" fill="#f97316"/>
+
+  <!-- Panda head (scaled up for 180x180) -->
+  <!-- White face -->
+  <circle cx="90" cy="90" r="50" fill="#ffffff"/>
+
+  <!-- Black ears -->
+  <circle cx="56" cy="56" r="20" fill="#000000"/>
+  <circle cx="124" cy="56" r="20" fill="#000000"/>
+
+  <!-- Black eye patches -->
+  <ellipse cx="73" cy="84" rx="11" ry="14" fill="#000000"/>
+  <ellipse cx="107" cy="84" rx="11" ry="14" fill="#000000"/>
+
+  <!-- White eyes -->
+  <circle cx="73" cy="84" r="5.5" fill="#ffffff"/>
+  <circle cx="107" cy="84" r="5.5" fill="#ffffff"/>
+
+  <!-- Black nose -->
+  <ellipse cx="90" cy="106" rx="8" ry="5.5" fill="#000000"/>
+
+  <!-- Moving box at bottom -->
+  <rect x="62" y="128" width="56" height="33" fill="#000000" rx="3"/>
+  <line x1="62" y1="145" x2="118" y2="145" stroke="#f97316" stroke-width="2.5"/>
+  <line x1="90" y1="128" x2="90" y2="161" stroke="#f97316" stroke-width="2.5"/>
+</svg>

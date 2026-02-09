@@ -4,8 +4,10 @@ import AboutSection from './AboutSection';
 import LocationSection from './LocationSection';
 import RouteSection from './RouteSection';
 import ServiceSection from './ServiceSection';
+import BlogSection from './BlogSection';
 import MapSection from './MapSection';
 import ContentSection from './ContentSection';
+import Breadcrumbs from './Breadcrumbs';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
@@ -18,13 +20,11 @@ interface LocationPageProps {
     lng?: number;
     zip_codes?: string[];
     description?: string;
-    sights?: Sight[];
     neighborhoods?: Array<{
       name: string;
       slug: string;
       zip_codes?: string[];
       description?: string;
-      sights?: Sight[];
       is_active?: boolean;
     }>;
     // Neighborhood-specific fields (present when this is a neighborhood, not a city)
@@ -57,7 +57,6 @@ export default function LocationPage({ city }: LocationPageProps) {
   // If there's a single matching neighborhood, use its data
   const effectiveZipCodes = singleMatchingNeighborhood?.zip_codes || city.zip_codes;
   const effectiveDescription = singleMatchingNeighborhood?.description || city.description;
-  const effectiveSights = singleMatchingNeighborhood?.sights || city.sights;
 
   // Don't show neighborhoods section if there's only one matching neighborhood
   const showNeighborhoods = !isNeighborhood && city.neighborhoods && !singleMatchingNeighborhood;
@@ -66,6 +65,18 @@ export default function LocationPage({ city }: LocationPageProps) {
   const heroDescription = isNeighborhood
     ? `Professional moving services in ${city.name}, ${city.parentCity!.name}. Local movers you can trust.`
     : `Professional moving services in ${city.name}. Expert local and long-distance moving with experienced crews and transparent pricing.`;
+
+  // Build breadcrumb items
+  const breadcrumbItems = isNeighborhood
+    ? [
+        { label: 'Locations', href: '/locations' },
+        { label: `${city.parentCity!.name}`, href: `/${city.parentCity!.slug}-movers` },
+        { label: city.name },
+      ]
+    : [
+        { label: 'Locations', href: '/locations' },
+        { label: city.name },
+      ];
 
   return (
     <div className="min-h-screen">
@@ -76,6 +87,9 @@ export default function LocationPage({ city }: LocationPageProps) {
         cta="Get Your Free Quote"
         image_url="https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
       />
+
+      {/* Breadcrumbs */}
+      <Breadcrumbs items={breadcrumbItems} showBackground={true} />
 
       {/* Content Section */}
       <ContentSection
@@ -132,6 +146,21 @@ export default function LocationPage({ city }: LocationPageProps) {
 
       {/* Popular Routes Section */}
       <RouteSection location={city} />
+
+      {/* Related Blog Posts */}
+      <BlogSection
+        locationFilter={city.slug}
+        locationFilterFallback={isNeighborhood ? city.parentCity!.slug : undefined}
+        maxPosts={3}
+        showFeatured={false}
+        showCategories={false}
+        title={`Moving Tips for ${city.name}`}
+        subtitle={`Helpful guides for your ${city.name} move`}
+        showViewMore={true}
+        viewMorePosition="bottom"
+        viewMoreLink="/blog"
+        viewMoreButtonText="View All Moving Tips"
+      />
 
       {/* Why Choose Us */}
       <WhySection />

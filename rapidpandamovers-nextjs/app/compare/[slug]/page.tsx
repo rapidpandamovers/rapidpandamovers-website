@@ -4,6 +4,7 @@ import { CheckCircle, XCircle, ArrowRight, Scale, ExternalLink } from 'lucide-re
 import comparisons from '@/data/comparisons.json';
 import Hero from '../../components/Hero';
 import ContactSection from '../../components/ContactSection';
+import Breadcrumbs from '../../components/Breadcrumbs';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -44,6 +45,15 @@ export default async function ComparisonPage({ params }: PageProps) {
         description={comparison.summary}
         cta="Get Your Free Quote"
         image_url="https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+      />
+
+      {/* Breadcrumbs */}
+      <Breadcrumbs
+        items={[
+          { label: 'Compare', href: '/compare' },
+          { label: `vs ${comparison.competitor.name}` },
+        ]}
+        showBackground={true}
       />
 
       {/* Competitor Overview */}

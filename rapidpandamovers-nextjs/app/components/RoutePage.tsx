@@ -4,6 +4,8 @@ import PricingSection from './PricingSection';
 import MapSection from './MapSection';
 import TravelSection from './TravelSection';
 import RouteSection from './RouteSection';
+import Breadcrumbs from './Breadcrumbs';
+import { RouteSchema } from './Schema';
 import { allRoutes, titleCase, getCityNameBySlug } from '@/lib/data';
 
 interface HouseSize {
@@ -62,8 +64,22 @@ export default function RoutePage({ route }: RoutePageProps) {
   const fromCityTitle = titleCase(route.origin_name);
   const toCityTitle = titleCase(route.destination_name);
 
+  // Breadcrumb items
+  const breadcrumbItems = [
+    { label: 'Routes', href: '/routes' },
+    { label: `${fromCityTitle} to ${toCityTitle}` },
+  ];
+
   return (
     <div className="min-h-screen">
+      {/* Schema Markup */}
+      <RouteSchema
+        originCity={fromCityTitle}
+        destinationCity={toCityTitle}
+        distance={route.distance_mi}
+        url={`/${route.slug}-movers`}
+      />
+
       {/* Hero Section */}
       <Hero
         title={`${fromCityTitle} to ${toCityTitle} Movers`}
@@ -71,6 +87,11 @@ export default function RoutePage({ route }: RoutePageProps) {
         cta="Get Your Free Quote"
         image_url="https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
       />
+
+      {/* Breadcrumbs */}
+      <div className="container mx-auto">
+        <Breadcrumbs items={breadcrumbItems} />
+      </div>
 
       {/* Route Details Section */}
       <TravelSection

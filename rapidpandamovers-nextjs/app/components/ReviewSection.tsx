@@ -137,7 +137,7 @@ export default function ReviewSection({
 
     // Filter by service (check if service is in the services array)
     if (service) {
-      reviews = reviews.filter(r => r.services?.includes(service))
+      reviews = reviews.filter(r => (r.services as string[] | undefined)?.includes(service))
     }
 
     // Filter by route

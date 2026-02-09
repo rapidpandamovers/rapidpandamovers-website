@@ -4,6 +4,7 @@ import { CheckCircle, XCircle, ArrowRight, DollarSign, Clock, Truck, ExternalLin
 import alternatives from '@/data/alternatives.json';
 import Hero from '../../components/Hero';
 import ContactSection from '../../components/ContactSection';
+import Breadcrumbs from '../../components/Breadcrumbs';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -44,6 +45,15 @@ export default async function AlternativePage({ params }: PageProps) {
         description={alternative.summary}
         cta="Get Your Free Quote"
         image_url="https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+      />
+
+      {/* Breadcrumbs */}
+      <Breadcrumbs
+        items={[
+          { label: 'Alternatives', href: '/alternatives' },
+          { label: alternative.alternative.name },
+        ]}
+        showBackground={true}
       />
 
       {/* How It Works */}

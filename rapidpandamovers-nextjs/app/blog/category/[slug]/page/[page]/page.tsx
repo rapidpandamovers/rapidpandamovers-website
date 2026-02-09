@@ -22,7 +22,7 @@ export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string; page: string }>
-}): Promise<{ title: string; description: string }> {
+}): Promise<{ title: string; description?: string }> {
   const { slug, page } = await params
   const category = getCategoryBySlug(slug)
   if (!category) {

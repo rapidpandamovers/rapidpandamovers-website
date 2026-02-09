@@ -2,6 +2,7 @@ import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { allServices } from '@/lib/data'
 import ServiceIllustration from './ServiceIllustration'
+import { ReactNode } from 'react'
 
 interface ServiceSectionProps {
   // When location is provided, show services for that location
@@ -18,28 +19,41 @@ interface ServiceSectionProps {
   variant?: 'preview' | 'full';
   // Hide the section title and description
   hideHeader?: boolean;
+  // Exclude a specific service (useful for "related services" on service pages)
+  excludeService?: string;
+  // Custom title override (can be string or JSX)
+  title?: ReactNode;
+  // Custom subtitle override
+  subtitle?: string;
 }
 
-export default function ServiceSection({ location, variant = 'preview', hideHeader = false }: ServiceSectionProps = {}) {
+export default function ServiceSection({ location, variant = 'preview', hideHeader = false, excludeService, title, subtitle }: ServiceSectionProps = {}) {
   // If location is provided, show location-specific services
   if (location) {
     const isNeighborhood = !!location.parentCity;
-    const activeServices = allServices.filter(service => service.is_active !== false).slice(0, 6);
+    const activeServices = allServices
+      .filter(service => service.is_active !== false)
+      .filter(service => !excludeService || service.slug !== excludeService)
+      .slice(0, 6);
+
+    const defaultTitle = isNeighborhood ? 'Our' : 'Moving';
+    const defaultSubtitle = isNeighborhood
+      ? 'Professional moving services tailored to your needs'
+      : 'We offer a complete range of moving services to meet all your relocation needs';
 
     return (
       <section className="py-20">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              {isNeighborhood ? 'Our' : 'Moving'} <span className="text-orange-500">Services</span> in {location.name}
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {isNeighborhood
-                ? 'Professional moving services tailored to your needs'
-                : 'We offer a complete range of moving services to meet all your relocation needs'
-              }
-            </p>
-          </div>
+          {!hideHeader && (
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                {title || <>{defaultTitle} <span className="text-orange-500">Services</span> in {location.name}</>}
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                {subtitle || defaultSubtitle}
+              </p>
+            </div>
+          )}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {activeServices.map((service, index) => (
               <Link
@@ -68,7 +82,9 @@ export default function ServiceSection({ location, variant = 'preview', hideHead
 
   // Full variant: show all services from data with links
   if (variant === 'full') {
-    const activeServices = allServices.filter(service => service.is_active !== false);
+    const activeServices = allServices
+      .filter(service => service.is_active !== false)
+      .filter(service => !excludeService || service.slug !== excludeService);
 
     return (
       <section className="py-0">
@@ -76,10 +92,10 @@ export default function ServiceSection({ location, variant = 'preview', hideHead
           {!hideHeader && (
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                Our Moving <span className="text-orange-500">Services</span>
+                {title || <>Our Moving <span className="text-orange-500">Services</span></>}
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Professional moving services tailored to meet your specific needs, timeline, and budget.
+                {subtitle || 'Professional moving services tailored to meet your specific needs, timeline, and budget.'}
               </p>
             </div>
           )}
@@ -111,19 +127,24 @@ export default function ServiceSection({ location, variant = 'preview', hideHead
   }
 
   // Default (preview): show first 6 services from data
-  const previewServices = allServices.filter(service => service.is_active !== false).slice(0, 6);
+  const previewServices = allServices
+    .filter(service => service.is_active !== false)
+    .filter(service => !excludeService || service.slug !== excludeService)
+    .slice(0, 6);
 
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Our Moving <span className="text-orange-500">Services</span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional moving services tailored to meet your specific needs, timeline, and budget.
-          </p>
-        </div>
+        {!hideHeader && (
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+              {title || <>Our Moving <span className="text-orange-500">Services</span></>}
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              {subtitle || 'Professional moving services tailored to meet your specific needs, timeline, and budget.'}
+            </p>
+          </div>
+        )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {previewServices.map((service, index) => (
