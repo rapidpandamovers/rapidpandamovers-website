@@ -28,19 +28,19 @@ export default function QuoteSection({
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
           {title}
         </h2>
-        <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
+        <p className="text-xl text-orange-100 mb-8 max-w-4xl mx-auto">
           {subtitle}
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link
             href={buttonHref}
-            className="inline-block bg-white text-orange-500 font-bold py-4 px-8 rounded-lg hover:bg-orange-50 transition-colors"
+            className="bg-white text-orange-500 font-bold py-4 px-8 rounded-lg hover:bg-orange-50 transition-colors text-center"
           >
             {buttonText}
           </Link>
           <a
             href={`tel:${phone}`}
-            className="inline-block border-2 border-white text-white font-bold py-4 px-8 rounded-lg hover:bg-orange-600 transition-colors"
+            className="border-2 border-white text-white font-bold py-4 px-8 rounded-lg hover:bg-orange-600 transition-colors text-center"
           >
             Call {phoneDisplay}
           </a>

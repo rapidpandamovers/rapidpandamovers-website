@@ -8,7 +8,6 @@ import { ArticleSchema } from '../../components/Schema'
 import { notFound } from 'next/navigation'
 import { getAllPosts, getPostBySlug, getRelatedPosts, categoryToSlug } from '../../../lib/blog'
 import { generateBlogMetadata } from '../../../lib/metadata'
-import BackToBlogLink from './BackToBlogLink'
 import BlogHeroImage from '../BlogHeroImage'
 
 export async function generateStaticParams() {
@@ -301,9 +300,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       />
 
       {/* Hero Section - Magazine Style with Rounded Box */}
-      <div className="container mx-auto pt-8">
-        <Breadcrumbs items={breadcrumbItems} />
-        <BackToBlogLink />
+      <div className="container mx-auto py-5">
+        <Breadcrumbs items={breadcrumbItems} variant="blog" />
 
         <BlogHeroImage
           featured={post.featured}

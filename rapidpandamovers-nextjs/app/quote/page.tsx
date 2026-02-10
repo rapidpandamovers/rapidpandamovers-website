@@ -1,13 +1,13 @@
-import { Metadata } from 'next';
-import content from '@/data/content.json';
+'use client'
+
+import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 import QuoteForm from '@/app/components/QuoteForm';
 
-export const metadata: Metadata = {
-  title: `Get a Free Quote - ${content.site.title}`,
-  description: 'Request a free moving quote from Rapid Panda Movers. Professional moving services in Miami with no hidden fees.',
-};
-
-export default function QuotePage() {
+function QuotePageContent() {
+  const searchParams = useSearchParams();
+  const pickupZip = searchParams.get('pickup') || '';
+  const dropoffZip = searchParams.get('dropoff') || '';
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -29,11 +29,22 @@ export default function QuotePage() {
         <div className="container mx-auto">
           <div className="mx-auto">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden p-8">
-              <QuoteForm />
+              <QuoteForm
+                initialPickupZip={pickupZip}
+                initialDropoffZip={dropoffZip}
+              />
             </div>
           </div>
         </div>
       </section>
     </div>
+  );
+}
+
+export default function QuotePage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <QuotePageContent />
+    </Suspense>
   );
 }

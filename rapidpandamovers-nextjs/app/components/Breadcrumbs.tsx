@@ -11,7 +11,7 @@ interface BreadcrumbsProps {
   items: BreadcrumbItem[]
   includeHome?: boolean
   includeSchema?: boolean
-  variant?: 'default' | 'compact' | 'centered'
+  variant?: 'default' | 'compact' | 'centered' | 'blog'
   showBackground?: boolean
 }
 
@@ -38,10 +38,11 @@ export default function Breadcrumbs({
     default: 'py-3',
     compact: 'py-2',
     centered: 'py-3 text-center',
+    blog: 'py-3',
   }
 
   const content = (
-    <nav aria-label="Breadcrumb" className={showBackground ? '' : containerClasses[variant]}>
+    <nav aria-label="Breadcrumb" className={showBackground || variant === 'blog' ? '' : containerClasses[variant]}>
       <ol className={`flex flex-wrap items-center gap-1 text-sm ${variant === 'centered' ? 'justify-center' : ''}`}>
           {breadcrumbItems.map((item, index) => {
             const isLast = index === breadcrumbItems.length - 1
@@ -88,7 +89,11 @@ export default function Breadcrumbs({
       {includeSchema && <BreadcrumbSchema items={items} includeHome={includeHome} />}
 
       {/* Visual Breadcrumbs */}
-      {showBackground ? (
+      {variant === 'blog' ? (
+        <div className="bg-gray-100 rounded-t-4xl rounded-b-4xl px-6 py-4 pb-20 mb-0 md:px-8 relative z-0">
+          {content}
+        </div>
+      ) : showBackground ? (
         <section className="-mt-16 pb-8 relative z-0">
           <div className="container mx-auto">
             <div className="bg-gray-100 rounded-b-4xl px-6 pt-16 pb-6 md:px-8">

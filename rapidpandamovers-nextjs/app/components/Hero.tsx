@@ -3,7 +3,7 @@
 import { Star } from 'lucide-react'
 import { useState } from 'react'
 import Image from 'next/image'
-import QuoteForm from './QuoteForm'
+import Link from 'next/link'
 import reviewsData from '@/data/reviews.json'
 
 interface HeroProps {
@@ -19,15 +19,17 @@ export default function Hero({
   cta,
   image_url
 }: HeroProps = {}) {
-  const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false)
   const [pickupZip, setPickupZip] = useState('')
   const [dropoffZip, setDropoffZip] = useState('')
-  
+
   // Use provided props with fallback defaults
   const displayTitle = title || "Family-Owned Moving Company in Miami"
   const displayDescription = description || "Low-cost moving & packing services"
   const displayCta = cta || "Get a free quote"
   const displayImage = image_url || "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+
+  // Build quote URL with zip codes
+  const quoteUrl = `/quote${pickupZip || dropoffZip ? '?' : ''}${pickupZip ? `pickup=${encodeURIComponent(pickupZip)}` : ''}${pickupZip && dropoffZip ? '&' : ''}${dropoffZip ? `dropoff=${encodeURIComponent(dropoffZip)}` : ''}`
   return (
     <section className="py-5 px-4 md:px-6 lg:px-8 relative z-10">
       <div className="container mx-auto rounded-4xl border border-gray-700 bg-black p-6 md:p-16">
@@ -74,12 +76,12 @@ export default function Hero({
                   className="px-4 py-3 bg-gray-800 border border-gray-600 text-white placeholder-gray-400 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 />
               </div>
-              <button 
-                onClick={() => setIsQuoteModalOpen(true)}
-                className="w-full bg-orange-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-orange-600 transition-colors"
+              <Link
+                href={quoteUrl}
+                className="block w-full bg-orange-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-orange-600 transition-colors text-center"
               >
                 Get Free Quote
-              </button>
+              </Link>
             </div>
             
             {/* Rating display */}
@@ -93,17 +95,7 @@ export default function Hero({
             </div>
           </div>
         </div>
-
       </div>
-      
-      {/* Quote Modal */}
-      <QuoteForm
-        asModal
-        isOpen={isQuoteModalOpen}
-        onClose={() => setIsQuoteModalOpen(false)}
-        initialPickupZip={pickupZip}
-        initialDropoffZip={dropoffZip}
-      />
     </section>
   )
 }

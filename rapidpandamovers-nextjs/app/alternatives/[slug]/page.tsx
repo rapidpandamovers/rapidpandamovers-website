@@ -1,10 +1,13 @@
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
-import { CheckCircle, XCircle, ArrowRight, DollarSign, Clock, Truck, ExternalLink } from 'lucide-react';
+import { DollarSign, Clock, Truck } from 'lucide-react';
 import alternatives from '@/data/alternatives.json';
 import Hero from '../../components/Hero';
-import ContactSection from '../../components/ContactSection';
+import QuoteSection from '../../components/QuoteSection';
 import Breadcrumbs from '../../components/Breadcrumbs';
+import RelatedSection from '../../components/RelatedSection';
+import OverviewSection from '../../components/OverviewSection';
+import CompareSection from '../../components/CompareSection';
+import WhySection from '../../components/WhySection';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -57,24 +60,14 @@ export default async function AlternativePage({ params }: PageProps) {
       />
 
       {/* How It Works */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-gray-50 rounded-xl p-8 mb-12">
-              <div className="flex items-center justify-between mb-6">
-                <h2 className="text-2xl font-bold text-gray-800">
-                  How {alternative.alternative.name} Works
-                </h2>
-                <a
-                  href={alternative.alternative.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-orange-500 hover:text-orange-600 flex items-center text-sm"
-                >
-                  Visit Website
-                  <ExternalLink className="w-4 h-4 ml-1" />
-                </a>
-              </div>
+      <section className="py-16">
+        <div className="container mx-auto">
+          <div className="mx-auto">
+            <OverviewSection
+              title={`How ${alternative.alternative.name} Works`}
+              name={alternative.alternative.name}
+              website={alternative.alternative.website}
+            >
               <p className="text-gray-700 mb-6">{alternative.how_it_works}</p>
 
               {/* Pricing */}
@@ -112,125 +105,53 @@ export default async function AlternativePage({ params }: PageProps) {
                   </div>
                 )}
               </div>
-            </div>
+            </OverviewSection>
 
             {/* Pros and Cons */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              <div className="bg-green-50 rounded-xl p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                  <CheckCircle className="w-6 h-6 text-green-500 mr-2" />
-                  Pros of {alternative.alternative.name}
-                </h3>
-                <ul className="space-y-3">
-                  {alternative.pros.map((pro, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">{pro}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="bg-red-50 rounded-xl p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                  <XCircle className="w-6 h-6 text-red-500 mr-2" />
-                  Cons of {alternative.alternative.name}
-                </h3>
-                <ul className="space-y-3">
-                  {alternative.cons.map((con, index) => (
-                    <li key={index} className="flex items-start">
-                      <XCircle className="w-5 h-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">{con}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            {/* Best For */}
-            <div className="bg-blue-50 rounded-xl p-6 mb-12">
-              <h3 className="text-xl font-bold text-gray-800 mb-4">
-                {alternative.alternative.name} Is Best For:
-              </h3>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {alternative.best_for.map((item, index) => (
-                  <li key={index} className="flex items-center text-gray-700">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Why Full-Service is Better */}
-            <div className="bg-orange-50 rounded-xl p-8 mb-12">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">
-                Why <span className="text-orange-500">Full-Service Moving</span> Might Be Better
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                {alternative.why_full_service_better.map((reason, index) => (
-                  <div key={index} className="flex items-start bg-white rounded-lg p-4">
-                    <CheckCircle className="w-6 h-6 text-orange-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700 font-medium">{reason}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Cost Comparison */}
-            <div className="bg-gray-100 rounded-xl p-8 mb-12">
-              <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                <DollarSign className="w-6 h-6 text-orange-500 mr-2" />
-                The Real Cost Comparison
-              </h3>
-              <p className="text-gray-700">{alternative.cost_comparison}</p>
-            </div>
-
-            {/* Verdict */}
-            <div className="bg-gray-900 rounded-xl p-8 text-center">
-              <h3 className="text-2xl font-bold text-white mb-4">Our Verdict</h3>
-              <p className="text-gray-300 text-lg mb-6">{alternative.verdict}</p>
-              <Link
-                href="/contact-us"
-                className="inline-block bg-orange-500 text-white font-bold py-3 px-8 rounded-lg hover:bg-orange-600 transition-colors"
-              >
-                Get Your Free Quote
-              </Link>
-            </div>
+            <CompareSection
+              name={alternative.alternative.name}
+              pros={alternative.pros}
+              cons={alternative.cons}
+              proTitle={`Pros of ${alternative.alternative.name}`}
+              conTitle={`Cons of ${alternative.alternative.name}`}
+              bestFor={alternative.best_for}
+              costComparison={alternative.cost_comparison}
+            />
           </div>
         </div>
       </section>
+
+      {/* Why Full-Service is Better */}
+      <WhySection
+        title={<>Why <span className="text-orange-500">Full-Service Moving</span> Might Be Better</>}
+        benefits={alternative.why_full_service_better}
+        ctaText="See Why We're Different"
+        ctaLink="/why-choose-us"
+      />
+
+      {/* Verdict */}
+      <QuoteSection
+        title="Our Verdict"
+        subtitle={alternative.verdict}
+      />
 
       {/* Other Alternatives */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold text-gray-800 mb-8 text-center">
-            Explore Other Alternatives
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
-            {alternatives.alternatives
-              .filter((a) => a.slug !== slug)
-              .map((a) => (
-                <Link
-                  key={a.slug}
-                  href={`/alternatives/${a.slug}`}
-                  className="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-all group"
-                >
-                  <span className="text-xs text-gray-500">{a.alternative.type}</span>
-                  <h4 className="font-semibold text-gray-800 group-hover:text-orange-500 transition-colors mt-1">
-                    {a.alternative.name}
-                  </h4>
-                  <span className="text-orange-500 text-sm flex items-center mt-2">
-                    Compare
-                    <ArrowRight className="w-3 h-3 ml-1" />
-                  </span>
-                </Link>
-              ))}
-          </div>
-        </div>
-      </section>
-
-      <ContactSection />
+      <RelatedSection
+        title="Explore Other Alternatives"
+        items={alternatives.alternatives}
+        currentSlug={slug}
+        basePath="/alternatives"
+        getSlug={(a) => a.slug}
+        renderItem={(a) => (
+          <>
+            <span className="text-xs text-gray-500">{a.alternative.type}</span>
+            <h4 className="font-semibold text-gray-800 group-hover:text-orange-500 transition-colors mt-1">
+              {a.alternative.name}
+            </h4>
+          </>
+        )}
+      />
+      
     </div>
   );
 }

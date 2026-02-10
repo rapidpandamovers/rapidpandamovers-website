@@ -1,8 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { Calendar, Clock, ImageOff } from 'lucide-react'
+import { Calendar, Clock, ImageOff, ArrowLeft } from 'lucide-react'
+import { useRouter } from 'next/navigation'
 
 interface BlogHeroImageProps {
   featured: string | null | undefined
@@ -14,11 +15,50 @@ interface BlogHeroImageProps {
 
 export default function BlogHeroImage({ featured, title, category, date, readTime }: BlogHeroImageProps) {
   const [imageError, setImageError] = useState(false)
+  const [backUrl, setBackUrl] = useState('/blog')
+  const [canGoBack, setCanGoBack] = useState(false)
+  const router = useRouter()
   const hasValidImage = featured && typeof featured === 'string' && featured.startsWith('/')
+
+  useEffect(() => {
+    // Check if we came from a blog page
+    const referrer = document.referrer
+    if (referrer) {
+      try {
+        const url = new URL(referrer)
+        // Check if referrer is from the same origin and is a blog listing page
+        if (url.origin === window.location.origin) {
+          if (url.pathname === '/blog' || url.pathname.startsWith('/blog/page/')) {
+            setBackUrl(url.pathname)
+            setCanGoBack(true)
+          }
+        }
+      } catch {
+        // Invalid URL, use default
+      }
+    }
+
+    // Also check sessionStorage for blog page history
+    const storedBlogPage = sessionStorage.getItem('lastBlogPage')
+    if (storedBlogPage && !canGoBack) {
+      setBackUrl(storedBlogPage)
+    }
+  }, [canGoBack])
+
+  const handleBackClick = (e: React.MouseEvent) => {
+    e.preventDefault()
+    if (canGoBack && window.history.length > 1) {
+      // Use browser back if we came from a blog page
+      router.back()
+    } else {
+      // Navigate to the stored or default blog URL
+      router.push(backUrl)
+    }
+  }
 
   if (hasValidImage && !imageError) {
     return (
-      <div className="relative mt-6 rounded-2xl overflow-hidden shadow-xl">
+      <div className="relative -mt-16 rounded-4xl overflow-hidden shadow-xl z-10">
         <div className="relative h-[40vh] md:h-[50vh]">
           <Image
             src={featured}
@@ -31,9 +71,19 @@ export default function BlogHeroImage({ featured, title, category, date, readTim
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
         </div>
 
+        {/* Back to Blog Link - Top Left */}
+        <a
+          href={backUrl}
+          onClick={handleBackClick}
+          className="absolute top-6 left-6 md:top-8 md:left-8 inline-flex items-center bg-orange-500 text-white text-sm font-medium px-4 py-1.5 rounded-full hover:bg-orange-600 transition-colors cursor-pointer z-10"
+        >
+          <ArrowLeft className="w-4 h-4 mr-2" />
+          Back to Blog
+        </a>
+
         {/* Title Overlay */}
         <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-white">
-          <span className="inline-block bg-orange-500 text-white text-sm font-medium px-4 py-1.5 rounded-full mb-4">
+          <span className="inline-block bg-white text-orange-500 text-sm font-medium px-4 py-1.5 rounded-full mb-4">
             {category}
           </span>
 
@@ -63,13 +113,21 @@ export default function BlogHeroImage({ featured, title, category, date, readTim
 
   // Fallback: No image or image failed to load
   return (
-    <div className="mt-6">
-      <span className="inline-block bg-orange-500 text-white text-sm font-medium px-4 py-1.5 rounded-full mb-4">
-        {category}
-      </span>
-      <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 leading-tight text-gray-900">
-        {title}
-      </h1>
+    <div className="-mt-16 relative z-10">
+        <a
+          href={backUrl}
+          onClick={handleBackClick}
+          className="inline-flex items-center text-orange-500 hover:text-orange-600 mb-4 transition-colors cursor-pointer"
+        >
+          <ArrowLeft className="w-4 h-4 mr-2" />
+          Back to Blog
+        </a>
+        <span className="inline-block bg-white text-orange-500 text-sm font-medium px-4 py-1.5 rounded-full mb-4 border border-orange-500">
+          {category}
+        </span>
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 leading-tight text-gray-900">
+          {title}
+        </h1>
       <div className="flex items-center text-gray-600 text-sm gap-4">
         <div className="flex items-center">
           <Calendar className="w-4 h-4 mr-2" />

@@ -1,8 +1,10 @@
-import Link from 'next/link';
-import { ArrowRight, Scale, Star, Shield } from 'lucide-react';
+import { Scale, Star, Shield } from 'lucide-react';
 import comparisons from '@/data/comparisons.json';
 import Hero from '../components/Hero';
 import QuoteSection from '../components/QuoteSection';
+import CompareList from '../components/CompareList';
+import CompareTable from '../components/CompareTable';
+import OverviewSection from '../components/OverviewSection';
 
 export const metadata = {
   title: 'Compare Movers | Rapid Panda Movers vs Competitors',
@@ -20,17 +22,14 @@ export default function ComparePage() {
       />
 
       {/* Introduction */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-              Why Compare <span className="text-orange-500">Moving Companies</span>?
-            </h2>
+      <section className="py-16">
+        <div className="container mx-auto">
+          <OverviewSection title={<>Why Compare <span className="text-orange-500">Moving Companies</span>?</>}>
             <p className="text-xl text-gray-600 mb-8">
               Choosing the right moving company is crucial for a stress-free relocation. We believe in transparency,
               so we've created honest comparisons between Rapid Panda Movers and other popular Miami moving companies.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Scale className="w-8 h-8 text-orange-500" />
@@ -53,52 +52,62 @@ export default function ComparePage() {
                 <p className="text-gray-600">All the info you need to choose confidently</p>
               </div>
             </div>
-          </div>
+          </OverviewSection>
         </div>
       </section>
 
       {/* Comparisons Grid */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              Rapid Panda vs <span className="text-orange-500">The Competition</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Click on any comparison below to see a detailed analysis
+      <CompareList
+        title={<>Rapid Panda vs <span className="text-orange-500">The Competition</span></>}
+        subtitle="Click on any comparison below to see a detailed analysis"
+        items={comparisons.comparisons}
+        basePath="/compare"
+        getSlug={(c) => c.slug}
+        ctaText="View Comparison"
+        renderCard={(comparison) => (
+          <>
+            <div className="flex items-center justify-between mb-4">
+              <Scale className="w-8 h-8 text-orange-500" />
+              {comparison.competitor.rating !== 'N/A' && comparison.competitor.rating !== 'Mixed' && (
+                <span className="text-sm bg-gray-100 px-3 py-1 rounded-full text-gray-600">
+                  {comparison.competitor.rating}
+                </span>
+              )}
+            </div>
+            <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-orange-500 transition-colors">
+              vs {comparison.competitor.name}
+            </h3>
+            <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+              {comparison.summary}
             </p>
-          </div>
+          </>
+        )}
+      />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {comparisons.comparisons.map((comparison) => (
-              <Link
-                key={comparison.slug}
-                href={`/compare/${comparison.slug}`}
-                className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all group"
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <Scale className="w-8 h-8 text-orange-500" />
-                  {comparison.competitor.rating !== 'N/A' && comparison.competitor.rating !== 'Mixed' && (
-                    <span className="text-sm bg-gray-100 px-3 py-1 rounded-full text-gray-600">
-                      {comparison.competitor.rating}
-                    </span>
-                  )}
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-orange-500 transition-colors">
-                  vs {comparison.competitor.name}
-                </h3>
-                <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-                  {comparison.summary}
-                </p>
-                <div className="flex items-center text-orange-500 font-medium">
-                  View Comparison
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Quick Comparison Table */}
+      <CompareTable
+        title="Quick Comparison"
+        columns={[
+          { header: 'Rating' },
+          { header: 'Transparent Pricing' },
+          { header: 'Licensed & Insured' },
+        ]}
+        rows={[
+          {
+            option: 'Rapid Panda Movers',
+            cells: ['4.9/5 (Verified)', 'Yes - no hidden fees', 'Fully licensed & insured'],
+            highlight: true,
+          },
+          ...comparisons.comparisons.map((c) => ({
+            option: c.competitor.name,
+            cells: [
+              c.competitor.rating,
+              c.competitor_cons.find(con => con.toLowerCase().includes('price') || con.toLowerCase().includes('fee') || con.toLowerCase().includes('cost')) ? 'Reports of hidden fees' : 'Varies',
+              c.competitor_cons.find(con => con.toLowerCase().includes('licen') || con.toLowerCase().includes('insur')) ? 'Check credentials' : 'Yes',
+            ],
+          })),
+        ]}
+      />
 
       {/* CTA Section */}
       <QuoteSection
