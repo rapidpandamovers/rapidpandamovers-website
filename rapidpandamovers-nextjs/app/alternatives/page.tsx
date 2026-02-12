@@ -29,28 +29,24 @@ export default function AlternativesPage() {
       />
 
       {/* Introduction */}
-      <section className="py-16">
-        <div className="container mx-auto">
-          <OverviewSection title={<>Rapid Panda Movers vs <span className="text-orange-500">DIY Moving</span></>}>
-            <p className="text-xl text-gray-600 mb-8">
-              There are many ways to move your belongings. From renting a truck to hiring labor-only services
-              to using portable containers, each option has trade-offs. We've analyzed the most popular
-              alternatives to help you make an informed decision.
-            </p>
-            <div className="bg-orange-50 rounded-xl p-6 text-left">
-              <h3 className="font-bold text-gray-800 mb-3 flex items-center">
-                <HelpCircle className="w-5 h-5 text-orange-500 mr-2" />
-                The Real Question to Ask
-              </h3>
-              <p className="text-gray-700">
-                When comparing costs, consider the <strong>true total</strong>: rental fees, mileage, fuel,
-                insurance, packing supplies, your time, physical effort, and stress. DIY options often look
-                cheaper on paper but can cost more when you factor in everything.
-              </p>
-            </div>
-          </OverviewSection>
+      <OverviewSection title={<>Rapid Panda Movers vs <span className="text-orange-500">DIY Moving</span></>}>
+        <p className="text-xl text-gray-600 mb-8">
+          There are many ways to move your belongings. From renting a truck to hiring labor-only services
+          to using portable containers, each option has trade-offs. We've analyzed the most popular
+          alternatives to help you make an informed decision.
+        </p>
+        <div className="bg-orange-50 rounded-xl p-6 text-left">
+          <h3 className="font-bold text-gray-800 mb-3 flex items-center">
+            <HelpCircle className="w-5 h-5 text-orange-500 mr-2" />
+            The Real Question to Ask
+          </h3>
+          <p className="text-gray-700">
+            When comparing costs, consider the <strong>true total</strong>: rental fees, mileage, fuel,
+            insurance, packing supplies, your time, physical effort, and stress. DIY options often look
+            cheaper on paper but can cost more when you factor in everything.
+          </p>
         </div>
-      </section>
+      </OverviewSection>
 
       {/* Alternatives Grid */}
       <CompareList

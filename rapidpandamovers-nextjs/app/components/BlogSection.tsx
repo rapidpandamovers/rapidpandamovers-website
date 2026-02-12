@@ -15,6 +15,8 @@ interface BlogSectionProps {
   locationFilterFallback?: string
   // Filter by category
   categoryFilter?: string
+  // Fallback category filter (used if location filters return no results)
+  categoryFilterFallback?: string
   // Custom title override
   title?: string
   // Custom subtitle override
@@ -44,6 +46,7 @@ export default function BlogSection({
   locationFilter,
   locationFilterFallback,
   categoryFilter,
+  categoryFilterFallback,
   title,
   subtitle,
   hideHeader = false,
@@ -94,6 +97,11 @@ export default function BlogSection({
   }
   if (categoryFilter) {
     filteredBlog = filteredBlog.filter(post => post.category === categoryFilter)
+  }
+
+  // If no results after location/category filtering, fall back to category
+  if (filteredBlog.length === 0 && categoryFilterFallback) {
+    filteredBlog = allPosts.filter(post => post.category === categoryFilterFallback)
   }
 
   const sortedBlog = filteredBlog

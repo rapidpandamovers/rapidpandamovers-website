@@ -28,14 +28,82 @@ interface ServiceSectionProps {
 }
 
 export default function ServiceSection({ location, variant = 'preview', hideHeader = false, excludeService, title, subtitle }: ServiceSectionProps = {}) {
-  // If location is provided, show location-specific services
-  if (location) {
-    const isNeighborhood = !!location.parentCity;
-    const activeServices = allServices
-      .filter(service => service.is_active !== false)
-      .filter(service => !excludeService || service.slug !== excludeService)
-      .slice(0, 6);
+  const activeServices = allServices
+    .filter(service => service.is_active !== false)
+    .filter(service => !excludeService || service.slug !== excludeService);
 
+  const isNeighborhood = !!location?.parentCity;
+
+  // Build link href for a service
+  const getHref = (serviceSlug: string) =>
+    location ? `/${location.slug}-${serviceSlug}` : `/${serviceSlug}`;
+
+  // Build display name for a service
+  const getDisplayName = (serviceName: string) =>
+    location ? `${location.name} ${serviceName}` : serviceName;
+
+  // Full variant: show all services
+  if (variant === 'full') {
+    return (
+      <section className="py-0">
+        <div className="container mx-auto">
+          {!hideHeader && (
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                {title || <>Our Moving <span className="text-orange-500">Services</span></>}
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                {subtitle || 'Professional moving services tailored to meet your specific needs, timeline, and budget.'}
+              </p>
+            </div>
+          )}
+
+          {/* Location filter indicator */}
+          {location && (
+            <div className="mb-8 flex items-center justify-between">
+              <p className="text-lg text-gray-600">
+                Showing services available in <span className="font-semibold text-orange-500">{location.name}</span>
+              </p>
+              <Link
+                href="/services"
+                className="text-orange-500 hover:text-orange-600 font-medium text-sm"
+              >
+                View All Locations →
+              </Link>
+            </div>
+          )}
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {activeServices.map((service, index) => (
+              <Link
+                key={index}
+                href={getHref(service.slug)}
+                className="bg-orange-500 group-hover:bg-orange-600 rounded-4xl overflow-hidden border-2 border-orange-500 hover:shadow-md transition-all group flex flex-col"
+              >
+                <div className="bg-white rounded-b-4xl p-6 flex-1">
+                  <div className="flex justify-center mb-4">
+                    <ServiceIllustration service={service.slug} className="w-24 h-24" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-orange-500 transition-colors text-center">
+                    {getDisplayName(service.name)}
+                  </h3>
+                  <p className="text-gray-600 text-center">{service.description}</p>
+                </div>
+                <div className="text-white font-medium flex items-center justify-center py-3">
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  // Preview variant with location: show 6 services for that location
+  if (location) {
+    const previewServices = activeServices.slice(0, 6);
     const defaultTitle = isNeighborhood ? 'Our' : 'Moving';
     const defaultSubtitle = isNeighborhood
       ? 'Professional moving services tailored to your needs'
@@ -54,86 +122,44 @@ export default function ServiceSection({ location, variant = 'preview', hideHead
               </p>
             </div>
           )}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {activeServices.map((service, index) => (
-              <Link
-                key={index}
-                href={`/${location.slug}-${service.slug}`}
-                className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:border-orange-500 hover:shadow-md transition-all group"
-              >
-                <div className="flex justify-center mb-4">
-                  <ServiceIllustration service={service.slug} className="w-20 h-20" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-orange-500 transition-colors text-center">
-                  {service.name}
-                </h3>
-                <p className="text-gray-600 mb-4 text-sm text-center">{service.description}</p>
-                <div className="text-orange-600 group-hover:text-orange-700 font-medium flex items-center justify-center text-sm">
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-    );
-  }
-
-  // Full variant: show all services from data with links
-  if (variant === 'full') {
-    const activeServices = allServices
-      .filter(service => service.is_active !== false)
-      .filter(service => !excludeService || service.slug !== excludeService);
-
-    return (
-      <section className="py-0">
-        <div className="container mx-auto">
-          {!hideHeader && (
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                {title || <>Our Moving <span className="text-orange-500">Services</span></>}
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                {subtitle || 'Professional moving services tailored to meet your specific needs, timeline, and budget.'}
-              </p>
-            </div>
-          )}
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {activeServices.map((service, index) => (
+            {previewServices.map((service, index) => (
               <Link
                 key={index}
-                href={`/${service.slug}`}
-                className="bg-white rounded-xl p-6 border-2 border-orange-500 hover:bg-orange-500 transition-all group"
+                href={getHref(service.slug)}
+                className="bg-orange-500 group-hover:bg-orange-600 rounded-4xl overflow-hidden border-2 border-orange-500 hover:shadow-md transition-all group flex flex-col"
               >
-                <div className="flex justify-center mb-4">
-                  <ServiceIllustration service={service.slug} className="w-24 h-24" />
+                <div className="bg-white rounded-b-4xl p-6 flex-1">
+                  <div className="flex justify-center mb-4">
+                    <ServiceIllustration service={service.slug} className="w-24 h-24" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-orange-500 transition-colors text-center">
+                    {getDisplayName(service.name)}
+                  </h3>
+                  <p className="text-gray-600 text-center">{service.description}</p>
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-white transition-colors text-center">
-                  {service.name}
-                </h3>
-                <p className="text-gray-600 mb-4 group-hover:text-white transition-colors text-center">{service.description}</p>
-                <div className="text-orange-600 group-hover:text-white font-medium flex items-center justify-center transition-colors">
+                <div className="text-white font-medium flex items-center justify-center py-3">
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
               </Link>
             ))}
           </div>
+          <div className="text-center mt-12">
+            <Link href={`/services?location=${location.slug}`} className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+              View All Services in {location.name}
+            </Link>
+          </div>
         </div>
       </section>
     );
   }
 
-  // Default (preview): show first 6 services from data
-  const previewServices = allServices
-    .filter(service => service.is_active !== false)
-    .filter(service => !excludeService || service.slug !== excludeService)
-    .slice(0, 6);
+  // Default preview: show first 6 services
+  const previewServices = activeServices.slice(0, 6);
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20">
       <div className="container mx-auto">
         {!hideHeader && (
           <div className="text-center mb-16">
@@ -151,16 +177,18 @@ export default function ServiceSection({ location, variant = 'preview', hideHead
             <Link
               key={index}
               href={`/${service.slug}`}
-              className="bg-white rounded-xl p-6 border-2 border-orange-500 hover:bg-orange-500 transition-all group"
+              className="bg-orange-500 group-hover:bg-orange-600 rounded-4xl overflow-hidden border-2 border-orange-500 hover:shadow-md transition-all group flex flex-col"
             >
-              <div className="flex justify-center mb-4">
-                <ServiceIllustration service={service.slug} className="w-24 h-24" />
+              <div className="bg-white rounded-b-4xl p-6 flex-1">
+                <div className="flex justify-center mb-4">
+                  <ServiceIllustration service={service.slug} className="w-24 h-24" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-orange-500 transition-colors text-center">
+                  {service.name}
+                </h3>
+                <p className="text-gray-600 text-center">{service.description}</p>
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-white transition-colors text-center">
-                {service.name}
-              </h3>
-              <p className="text-gray-600 mb-4 group-hover:text-white transition-colors text-center">{service.description}</p>
-              <div className="text-orange-600 group-hover:text-white font-medium flex items-center justify-center transition-colors">
+              <div className="text-white font-medium flex items-center justify-center py-3">
                 Learn More
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </div>

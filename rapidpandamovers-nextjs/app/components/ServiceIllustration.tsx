@@ -584,10 +584,10 @@ export default function ServiceIllustration({ service, className = "w-24 h-24" }
         {/* Clock marks */}
         {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((i) => {
           const angle = (i * 30 - 90) * (Math.PI / 180);
-          const x1 = 50 + 20 * Math.cos(angle);
-          const y1 = 50 + 20 * Math.sin(angle);
-          const x2 = 50 + 23 * Math.cos(angle);
-          const y2 = 50 + 23 * Math.sin(angle);
+          const x1 = Math.round((50 + 20 * Math.cos(angle)) * 100) / 100;
+          const y1 = Math.round((50 + 20 * Math.sin(angle)) * 100) / 100;
+          const x2 = Math.round((50 + 23 * Math.cos(angle)) * 100) / 100;
+          const y2 = Math.round((50 + 23 * Math.sin(angle)) * 100) / 100;
           return <line key={`mark-${i}`} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#1f2937" strokeWidth="2" />;
         })}
         {/* Hands */}
@@ -617,6 +617,26 @@ export default function ServiceIllustration({ service, className = "w-24 h-24" }
         <path d="M70 78 L82 78" stroke="white" strokeWidth="2" strokeLinecap="round" />
         {/* Helping hand */}
         <path d="M40 75 L40 85 Q40 90 45 90 L55 90" stroke="#1f2937" strokeWidth="3" fill="none" strokeLinecap="round" />
+      </svg>
+    ),
+    'junk-removal': (
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+        {/* Dumpster body */}
+        <path d="M15 45 L20 80 L80 80 L85 45 Z" fill="#f97316" />
+        <path d="M15 45 L85 45 L82 55 L18 55 Z" fill="#ea580c" />
+        {/* Junk items sticking out */}
+        <rect x="30" y="28" width="8" height="20" rx="1" fill="#1f2937" />
+        <circle cx="55" cy="35" r="8" fill="#fdba74" />
+        <rect x="62" y="30" width="12" height="4" rx="1" fill="#1f2937" transform="rotate(-20 68 32)" />
+        <path d="M40 32 L48 25 L44 38 Z" fill="#1f2937" />
+        {/* Wheels */}
+        <circle cx="30" cy="83" r="5" fill="#1f2937" />
+        <circle cx="70" cy="83" r="5" fill="#1f2937" />
+        <circle cx="30" cy="83" r="2" fill="#f97316" />
+        <circle cx="70" cy="83" r="2" fill="#f97316" />
+        {/* Recycling arrows on side */}
+        <path d="M42 65 L50 58 L58 65" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+        <path d="M50 58 L50 72" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
       </svg>
     )
   };

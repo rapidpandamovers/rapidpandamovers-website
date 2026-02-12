@@ -301,8 +301,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
       {/* Hero Section - Magazine Style with Rounded Box */}
       <div className="container mx-auto py-5">
-        <Breadcrumbs items={breadcrumbItems} variant="blog" />
-
         <BlogHeroImage
           featured={post.featured}
           title={post.title}
@@ -311,6 +309,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           readTime={post.readTime}
         />
       </div>
+
+      {/* Breadcrumbs */}
+      <Breadcrumbs items={breadcrumbItems} showBackground={true} />
 
       {/* Article Content */}
       <article className="container mx-auto">

@@ -9,7 +9,7 @@ import IncludedSection from './IncludedSection';
 import ProcessSection from './ProcessSection';
 import ProblemSection from './ProblemSection';
 import SolutionSection from './SolutionSection';
-import ContentSection from './ContentSection';
+import OverviewSection from './OverviewSection';
 import FAQSection from './FAQSection';
 import Breadcrumbs from './Breadcrumbs';
 import { ServiceSchema, FAQSchema } from './Schema';
@@ -134,12 +134,16 @@ export default function ServicePage({ service, location }: ServicePageProps) {
       <Breadcrumbs items={breadcrumbItems} showBackground={true} />
 
       {/* Content Section */}
-      <ContentSection
-        title="About"
-        titleHighlight={location ? `${location.name} ${service.name}` : service.name}
-        description={service.description}
-        subtitle={location ? `Professional ${service.name.toLowerCase()} services in ${location.name}` : undefined}
-      />
+      <OverviewSection
+        title={<>About <span className="text-orange-500">{location ? `${location.name} ${service.name}` : service.name}</span></>}
+      >
+        {location && (
+          <p className="text-lg text-gray-700 font-medium mb-4">
+            Professional {service.name.toLowerCase()} services in {location.name}
+          </p>
+        )}
+        <p className="text-gray-600 leading-relaxed">{service.description}</p>
+      </OverviewSection>
 
       {/* Problems Section */}
       <ProblemSection problems={service.problems} />

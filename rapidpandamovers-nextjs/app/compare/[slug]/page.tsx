@@ -59,45 +59,38 @@ export default async function ComparisonPage({ params }: PageProps) {
       />
 
       {/* Competitor Overview */}
-      <section className="py-16">
-        <div className="container mx-auto">
-          <div className="mx-auto">
-            <OverviewSection
-              title={`About ${comparison.competitor.name}`}
-              name={comparison.competitor.name}
-              website={comparison.competitor.website}
-            >
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div>
-                  <span className="text-gray-500 text-sm">Rating</span>
-                  <p className="font-bold text-gray-800">{comparison.competitor.rating}</p>
-                </div>
-                <div>
-                  <span className="text-gray-500 text-sm">Reviews</span>
-                  <p className="font-bold text-gray-800">{comparison.competitor.reviews}</p>
-                </div>
-              </div>
-              <h3 className="font-semibold text-gray-800 mb-3">Services Offered:</h3>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                {comparison.competitor_services.map((service, index) => (
-                  <li key={index} className="text-gray-600 flex items-center">
-                    <span className="w-2 h-2 bg-gray-400 rounded-full mr-2"></span>
-                    {service}
-                  </li>
-                ))}
-              </ul>
-            </OverviewSection>
-
-            {/* Pros and Cons Comparison */}
-            <CompareSection
-              name={comparison.competitor.name}
-              pros={comparison.competitor_pros}
-              cons={comparison.competitor_cons}
-            />
-
+      <OverviewSection
+        title={`About ${comparison.competitor.name}`}
+        name={comparison.competitor.name}
+        website={comparison.competitor.website}
+      >
+        <div className="grid grid-cols-2 gap-4 mb-6">
+          <div>
+            <span className="text-gray-500 text-sm">Rating</span>
+            <p className="font-bold text-gray-800">{comparison.competitor.rating}</p>
+          </div>
+          <div>
+            <span className="text-gray-500 text-sm">Reviews</span>
+            <p className="font-bold text-gray-800">{comparison.competitor.reviews}</p>
           </div>
         </div>
-      </section>
+        <h3 className="font-semibold text-gray-800 mb-3">Services Offered:</h3>
+        <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
+          {comparison.competitor_services.map((service, index) => (
+            <li key={index} className="text-gray-600 flex items-center">
+              <span className="w-2 h-2 bg-gray-400 rounded-full mr-2"></span>
+              {service}
+            </li>
+          ))}
+        </ul>
+      </OverviewSection>
+
+      {/* Pros and Cons Comparison */}
+      <CompareSection
+        name={comparison.competitor.name}
+        pros={comparison.competitor_pros}
+        cons={comparison.competitor_cons}
+      />
 
       {/* Why Choose Us */}
       <WhySection

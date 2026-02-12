@@ -47,21 +47,12 @@ export default function MovingGlossaryPage() {
       />
 
       <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            {/* Page Header */}
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                {glossaryData.title}
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                {glossaryData.description}
-              </p>
-            </div>
+        <div className="container mx-auto">
+          <div className="mx-auto">
 
             {/* Letter Navigation Bar */}
             <div className="mb-12">
-              <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+              <div className="p-6">
                 <h3 className="text-lg font-semibold text-gray-800 mb-4 text-center">
                   Jump to Letter
                 </h3>
@@ -88,7 +79,7 @@ export default function MovingGlossaryPage() {
               {sortedTerms.map((item: { term: string; definition: string }, index: number) => (
                 <div
                   key={index}
-                  className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:border-orange-500 hover:shadow-md transition-all"
+                  className="bg-white rounded-4xl p-6 shadow-sm border border-gray-200 hover:border-orange-500 hover:shadow-md transition-all"
                   data-letter={item.term.charAt(0).toUpperCase()}
                 >
                   <h3 className="text-xl font-bold text-orange-500 mb-4">

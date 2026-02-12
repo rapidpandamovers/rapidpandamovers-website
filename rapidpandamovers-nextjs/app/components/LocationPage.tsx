@@ -6,10 +6,9 @@ import RouteSection from './RouteSection';
 import ServiceSection from './ServiceSection';
 import BlogSection from './BlogSection';
 import MapSection from './MapSection';
-import ContentSection from './ContentSection';
+import OverviewSection from './OverviewSection';
 import Breadcrumbs from './Breadcrumbs';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+
 
 interface LocationPageProps {
   city: {
@@ -78,6 +77,13 @@ export default function LocationPage({ city }: LocationPageProps) {
         { label: city.name },
       ];
 
+  // Build info text for zip codes and population
+  const infoText = isNeighborhood
+    ? (effectiveZipCodes && effectiveZipCodes.length > 0 ? `ZIP Codes: ${effectiveZipCodes.join(', ')}` : undefined)
+    : (effectiveZipCodes && effectiveZipCodes.length > 0
+        ? `ZIP Codes: ${effectiveZipCodes.join(', ')}${city.population ? ` • Population: ${city.population.toLocaleString()}` : ''}`
+        : (city.population ? `Serving ${city.name} (Population: ${city.population.toLocaleString()})` : undefined));
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -92,29 +98,29 @@ export default function LocationPage({ city }: LocationPageProps) {
       <Breadcrumbs items={breadcrumbItems} showBackground={true} />
 
       {/* Content Section */}
-      <ContentSection
-        title="Professional Moving Services in"
-        titleHighlight={city.name}
-        subtitle={isNeighborhood ? `Serving ${city.name} and the greater ${city.parentCity!.name} area` : undefined}
-        description={isNeighborhood ? undefined : `Rapid Panda Movers provides comprehensive moving services throughout ${city.name} and the surrounding areas. Whether you're moving locally or long-distance, we're here to make your move stress-free and efficient.`}
-        locationDescription={effectiveDescription}
-        info={
-          isNeighborhood
-            ? (effectiveZipCodes && effectiveZipCodes.length > 0 ? `ZIP Codes: ${effectiveZipCodes.join(', ')}` : undefined)
-            : (effectiveZipCodes && effectiveZipCodes.length > 0
-                ? `ZIP Codes: ${effectiveZipCodes.join(', ')}${city.population ? ` • Population: ${city.population.toLocaleString()}` : ''}`
-                : (city.population ? `Serving ${city.name} (Population: ${city.population.toLocaleString()})` : undefined))
-        }
-        breadcrumbs={
-          isNeighborhood && city.county && city.state
-            ? [
-                { label: `${city.parentCity!.name} Movers`, href: `/${city.parentCity!.slug}-movers` },
-                { label: `${city.county.name} County` },
-                { label: city.state.name },
-              ]
-            : undefined
-        }
-      />
+      <OverviewSection
+        title={<>Professional Moving Services in <span className="text-orange-500">{city.name}</span></>}
+      >
+        {isNeighborhood ? (
+          <p className="text-lg text-gray-700 font-medium mb-4">
+            Serving {city.name} and the greater {city.parentCity!.name} area
+          </p>
+        ) : (
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Rapid Panda Movers provides comprehensive moving services throughout {city.name} and the surrounding areas. Whether you&apos;re moving locally or long-distance, we&apos;re here to make your move stress-free and efficient.
+          </p>
+        )}
+
+        {effectiveDescription && (
+          <p className="text-gray-600 leading-relaxed mb-4">{effectiveDescription}</p>
+        )}
+
+        {infoText && (
+          <div className="mt-4 pt-4 border-t border-gray-200">
+            <p className="text-sm text-gray-500 font-medium">{infoText}</p>
+          </div>
+        )}
+      </OverviewSection>
 
       {/* Map Section */}
       <MapSection
@@ -132,17 +138,6 @@ export default function LocationPage({ city }: LocationPageProps) {
 
       {/* Available Services Section */}
       <ServiceSection location={city} />
-
-      {/* View All Services Link */}
-      <div className="container mx-auto text-center pb-12">
-        <Link
-          href={`/services?location=${city.slug}`}
-          className="inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors"
-        >
-          View All Services in {city.name}
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
-      </div>
 
       {/* Popular Routes Section */}
       <RouteSection location={city} />

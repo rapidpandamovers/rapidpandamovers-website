@@ -1928,5 +1928,725 @@
       }
     ],
     "is_active": true
+  },
+  {
+    "name": "Appliance Moving",
+    "slug": "appliance-moving",
+    "icon": "Refrigerator",
+    "title": "Professional Appliance Moving Services in Miami",
+    "description": "Moving large appliances requires specialized equipment and know-how that most movers don't have. Our appliance moving team handles refrigerators, washers, dryers, ovens, dishwashers, and other heavy household appliances with the right dollies, straps, and techniques to protect both your appliances and your home. We disconnect, transport, and reconnect so you don't have to worry about a thing.",
+    "meta_title": "Appliance Moving Services Miami | Safe Appliance Transport | Rapid Panda Movers",
+    "meta_description": "Professional appliance moving services in Miami. Safe transport of refrigerators, washers, dryers, and all major appliances with proper equipment and experienced crews.",
+    "hero": {
+      "title": "Professional Appliance Moving Services",
+      "description": "Safe transport for all your major household appliances",
+      "cta": "Get Your Free Appliance Moving Quote",
+      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+    },
+    "problems": [
+      {
+        "title": "Extreme Weight",
+        "description": "Refrigerators, washers, and dryers weigh hundreds of pounds and are nearly impossible to move safely without equipment."
+      },
+      {
+        "title": "Property Damage Risk",
+        "description": "Dragging heavy appliances scratches floors, dents walls, and damages door frames throughout your home."
+      },
+      {
+        "title": "Disconnection Complexity",
+        "description": "Gas lines, water hookups, and electrical connections require careful handling to avoid leaks or hazards."
+      },
+      {
+        "title": "Personal Injury Danger",
+        "description": "Attempting to move heavy appliances without proper training leads to serious back injuries and accidents."
+      }
+    ],
+    "solutions": [
+      {
+        "title": "Professional Equipment",
+        "description": "We use appliance dollies, straps, and sliders designed specifically for heavy household appliances."
+      },
+      {
+        "title": "Floor & Wall Protection",
+        "description": "Protective coverings on floors and padding on corners prevent any damage to your home during the move."
+      },
+      {
+        "title": "Safe Disconnection & Reconnection",
+        "description": "Our crew properly disconnects and reconnects water lines, gas connections, and electrical hookups."
+      },
+      {
+        "title": "Trained Heavy-Lift Crews",
+        "description": "Our experienced teams use proper lifting techniques to move appliances safely without injury or damage."
+      }
+    ],
+    "included": [
+      "Refrigerator and freezer moving",
+      "Washer and dryer transport",
+      "Oven and range moving",
+      "Dishwasher relocation",
+      "Disconnection and reconnection",
+      "Floor and wall protection",
+      "Appliance dollies and straps",
+      "Full insurance coverage"
+    ],
+    "faq": [
+      {
+        "question": "Do you disconnect and reconnect appliances?",
+        "answer": "Yes, our crew handles disconnection and reconnection of water lines and standard electrical connections. For gas appliance disconnection and reconnection, we recommend using a licensed plumber for safety compliance, though we can coordinate this for you."
+      },
+      {
+        "question": "How do you protect floors when moving heavy appliances?",
+        "answer": "We use floor runners, furniture sliders, and protective mats to prevent scratches and dents. We also use appliance dollies with rubber wheels that won't mark your floors."
+      },
+      {
+        "question": "Can you move appliances up or down stairs?",
+        "answer": "Yes, we have stair-climbing dollies and the experience to safely move heavy appliances up and down stairs. We assess the stairway beforehand to plan the safest approach."
+      },
+      {
+        "question": "Should I empty my refrigerator before the move?",
+        "answer": "Yes, we recommend emptying and defrosting your refrigerator 24 hours before the move. This prevents water damage during transport and keeps the compressor safe. We can advise you on the full prep steps when you book."
+      }
+    ],
+    "is_active": true
+  },
+  {
+    "name": "Piano Moving",
+    "slug": "piano-moving",
+    "icon": "Music",
+    "title": "Professional Piano Moving Services in Miami",
+    "description": "Pianos are among the most difficult items to move—heavy, oddly shaped, and incredibly sensitive to impact and temperature changes. Our piano moving specialists use custom padding, piano boards, and climate-aware techniques to transport uprights, baby grands, and concert grands safely. We understand that your piano isn't just furniture; it's a valuable instrument that deserves expert care.",
+    "meta_title": "Piano Moving Services Miami | Safe Piano Transport | Rapid Panda Movers",
+    "meta_description": "Professional piano moving services in Miami. Expert transport for upright, baby grand, and grand pianos with specialized equipment and experienced piano movers.",
+    "hero": {
+      "title": "Professional Piano Moving Services",
+      "description": "Expert piano transport with specialized equipment and care",
+      "cta": "Get Your Free Piano Moving Quote",
+      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+    },
+    "problems": [
+      {
+        "title": "Extreme Weight & Size",
+        "description": "Grand pianos weigh 700-1,200 pounds and uprights 300-800 pounds, making them dangerous to move without expertise."
+      },
+      {
+        "title": "Internal Damage Risk",
+        "description": "Jolts and vibrations during transport can knock piano strings, hammers, and keys out of alignment."
+      },
+      {
+        "title": "Surface Vulnerability",
+        "description": "Piano finishes scratch and dent easily, and humidity changes can warp wood and affect sound quality."
+      },
+      {
+        "title": "Navigating Tight Spaces",
+        "description": "Getting a piano through doorways, around corners, and up or down stairs requires precise maneuvering."
+      }
+    ],
+    "solutions": [
+      {
+        "title": "Piano-Specific Equipment",
+        "description": "We use piano boards, skid boards, heavy-duty straps, and custom padding designed for safe piano transport."
+      },
+      {
+        "title": "Climate-Aware Transport",
+        "description": "Our enclosed trucks and careful handling protect your piano from temperature swings and humidity changes."
+      },
+      {
+        "title": "Full Surface Protection",
+        "description": "Every surface is wrapped with quilted padding to prevent scratches, dents, and finish damage."
+      },
+      {
+        "title": "Expert Navigation",
+        "description": "Our trained crews know exactly how to angle, tilt, and guide pianos through tight spaces safely."
+      }
+    ],
+    "included": [
+      "Upright piano moving",
+      "Baby grand and grand piano transport",
+      "Custom quilted padding",
+      "Piano board and skid board",
+      "Stair and elevator navigation",
+      "Climate-controlled transport",
+      "Post-move tuning recommendation",
+      "Full insurance coverage"
+    ],
+    "faq": [
+      {
+        "question": "Will my piano need tuning after the move?",
+        "answer": "Most pianos benefit from tuning after a move due to changes in humidity and vibrations during transport. We recommend waiting 2-3 weeks after the move for the piano to acclimate to its new environment before having it tuned."
+      },
+      {
+        "question": "Can you move a grand piano up stairs?",
+        "answer": "Yes, our team is experienced in moving grand pianos up and down stairs. We use specialized equipment and techniques to safely navigate staircases. We'll assess the stairway during our pre-move survey to plan the best approach."
+      },
+      {
+        "question": "How do you protect a piano's finish during the move?",
+        "answer": "We wrap the entire piano in quilted moving blankets secured with straps, with extra padding on legs, pedals, and corners. The keyboard lid is locked or secured, and the piano is placed on a padded piano board for transport."
+      },
+      {
+        "question": "How far in advance should I book piano moving?",
+        "answer": "We recommend booking at least one week in advance for piano moves, though we can sometimes accommodate shorter notice. Piano moves require specialized crew scheduling and equipment, so earlier booking ensures your preferred date."
+      }
+    ],
+    "is_active": true
+  },
+  {
+    "name": "Pool Table Moving",
+    "slug": "pool-table-moving",
+    "icon": "Target",
+    "title": "Professional Pool Table Moving Services in Miami",
+    "description": "Pool tables are heavy, precision-leveled pieces that require disassembly, careful transport, and expert reassembly to play correctly. Our pool table movers handle slate removal, felt protection, and frame disassembly with the tools and experience to get it right. We reassemble and re-level at your new location so your table plays perfectly from the first break.",
+    "meta_title": "Pool Table Moving Services Miami | Disassembly & Reassembly | Rapid Panda Movers",
+    "meta_description": "Professional pool table moving in Miami. Expert disassembly, safe slate transport, and precision reassembly with leveling for all pool table sizes and brands.",
+    "hero": {
+      "title": "Professional Pool Table Moving Services",
+      "description": "Expert disassembly, transport, and reassembly with precision leveling",
+      "cta": "Get Your Free Pool Table Moving Quote",
+      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+    },
+    "problems": [
+      {
+        "title": "Massive Weight",
+        "description": "Pool table slate alone weighs 400-800 pounds, making the table nearly impossible to move in one piece."
+      },
+      {
+        "title": "Precision Assembly",
+        "description": "Pool tables must be perfectly level to play correctly—even a slight error ruins the game."
+      },
+      {
+        "title": "Felt & Slate Vulnerability",
+        "description": "Slate cracks if mishandled and felt tears easily, leading to expensive replacement costs."
+      },
+      {
+        "title": "Complex Disassembly",
+        "description": "Rails, pockets, slate sections, and frame all require specific tools and knowledge to take apart and rebuild."
+      }
+    ],
+    "solutions": [
+      {
+        "title": "Expert Disassembly",
+        "description": "Our crews know every pool table type and disassemble rails, slate, and frame with the right tools."
+      },
+      {
+        "title": "Safe Slate Transport",
+        "description": "Each slate section is individually padded and transported flat to prevent cracking or chipping."
+      },
+      {
+        "title": "Felt Protection",
+        "description": "We carefully protect existing felt during the move, or coordinate re-felting if you prefer new cloth."
+      },
+      {
+        "title": "Precision Reassembly & Leveling",
+        "description": "We reassemble your table and use precision levels to ensure a perfectly flat, playable surface."
+      }
+    ],
+    "included": [
+      "Full disassembly",
+      "Slate section transport",
+      "Rail and pocket removal",
+      "Felt protection",
+      "Frame transport",
+      "Precision reassembly",
+      "Professional leveling",
+      "Full insurance coverage"
+    ],
+    "faq": [
+      {
+        "question": "Do I need to replace the felt after a move?",
+        "answer": "Not necessarily. If your felt is in good condition, we carefully protect it during the move. However, if it's already worn or you'd like an upgrade, a move is a great time to re-felt. We can recommend local billiard professionals for re-felting."
+      },
+      {
+        "question": "How long does pool table moving take?",
+        "answer": "Disassembly typically takes 1-2 hours, and reassembly with leveling takes another 1-2 hours at your new location. Total time including transport depends on distance. We schedule enough time to do the job right."
+      },
+      {
+        "question": "Can you move a pool table to a different floor?",
+        "answer": "Yes, we move pool tables between floors regularly. Since we disassemble the table completely, individual pieces are manageable on stairs. We plan the move carefully to protect your stairway and the table components."
+      },
+      {
+        "question": "What sizes of pool tables do you move?",
+        "answer": "We move all standard pool table sizes including 7-foot, 8-foot, and 9-foot tables, as well as snooker tables. We handle all major brands and table types, including slate and non-slate models."
+      }
+    ],
+    "is_active": true
+  },
+  {
+    "name": "Hot Tub Moving",
+    "slug": "hot-tub-moving",
+    "icon": "Waves",
+    "title": "Professional Hot Tub Moving Services in Miami",
+    "description": "Hot tubs are bulky, heavy, and awkward to move—often weighing 500 to 1,000 pounds even when drained. Our hot tub moving team handles draining, disconnection, transport through tight spaces like fences and decks, and placement at your new location. We have the equipment and crew size to move your spa safely without damaging it, your property, or your back.",
+    "meta_title": "Hot Tub Moving Services Miami | Spa Relocation | Rapid Panda Movers",
+    "meta_description": "Professional hot tub and spa moving services in Miami. Expert draining, disconnection, transport, and placement with specialized equipment for all hot tub sizes.",
+    "hero": {
+      "title": "Professional Hot Tub Moving Services",
+      "description": "Expert spa relocation with specialized equipment and crews",
+      "cta": "Get Your Free Hot Tub Moving Quote",
+      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+    },
+    "problems": [
+      {
+        "title": "Extreme Bulk & Weight",
+        "description": "Hot tubs weigh 500-1,000 pounds empty and are too large and awkward for standard moving equipment."
+      },
+      {
+        "title": "Access Challenges",
+        "description": "Spas are often behind fences, on decks, or in backyards with limited access for removal."
+      },
+      {
+        "title": "Electrical & Plumbing",
+        "description": "Hot tubs have dedicated electrical circuits and plumbing connections that need proper disconnection."
+      },
+      {
+        "title": "Shell Damage Risk",
+        "description": "The acrylic shell and cabinet panels crack or scratch easily if not properly supported during transport."
+      }
+    ],
+    "solutions": [
+      {
+        "title": "Specialized Spa Equipment",
+        "description": "We use hot tub dollies, lifting straps, and ramps designed for safe spa transport."
+      },
+      {
+        "title": "Creative Access Solutions",
+        "description": "Whether it's fence removal, crane service, or angled maneuvering, we get your spa out and in safely."
+      },
+      {
+        "title": "Professional Disconnection",
+        "description": "We handle draining and disconnection, and coordinate with electricians for hardwired systems."
+      },
+      {
+        "title": "Full Shell Protection",
+        "description": "Moving blankets and strapping protect every surface of your hot tub during transport."
+      }
+    ],
+    "included": [
+      "Hot tub draining assistance",
+      "Electrical disconnection coordination",
+      "Spa dollies and lifting equipment",
+      "Shell and cabinet protection",
+      "Fence removal if needed",
+      "Placement at new location",
+      "Access path planning",
+      "Full insurance coverage"
+    ],
+    "faq": [
+      {
+        "question": "Do I need to drain my hot tub before the move?",
+        "answer": "Yes, the hot tub must be fully drained and dried before moving. We recommend draining it 24-48 hours before your scheduled move. We can assist with the draining process if needed."
+      },
+      {
+        "question": "Can you move a hot tub through a fence or gate?",
+        "answer": "Yes, we handle tight access regularly. If needed, we can remove fence panels for access and replace them after the move. We assess your property beforehand to plan the best entry and exit routes."
+      },
+      {
+        "question": "Do you handle the electrical reconnection?",
+        "answer": "We can coordinate with a licensed electrician for the disconnection and reconnection of hardwired hot tubs. For plug-in models, we handle the full setup. We'll advise on what's needed during your estimate."
+      },
+      {
+        "question": "How many people does it take to move a hot tub?",
+        "answer": "Typically 4-6 movers depending on the size of the hot tub and the access challenges at your property. We always bring the right crew size for a safe, efficient move."
+      }
+    ],
+    "is_active": true
+  },
+  {
+    "name": "Art Moving",
+    "slug": "art-moving",
+    "icon": "Frame",
+    "title": "Professional Art Moving Services in Miami",
+    "description": "Fine art, sculptures, and valuable collections require a level of care that standard movers can't provide. Our art moving specialists use custom crating, climate-aware transport, and white-glove handling techniques to protect paintings, sculptures, antiques, and mixed-media pieces. Whether you're moving a single painting or an entire gallery, we treat every piece as irreplaceable.",
+    "meta_title": "Art Moving Services Miami | Fine Art Transport | Rapid Panda Movers",
+    "meta_description": "Professional art moving services in Miami. Expert transport for paintings, sculptures, and fine art with custom crating, climate control, and white-glove handling.",
+    "hero": {
+      "title": "Professional Art Moving Services",
+      "description": "White-glove transport for fine art, sculptures, and collections",
+      "cta": "Get Your Free Art Moving Quote",
+      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+    },
+    "problems": [
+      {
+        "title": "Irreplaceable Value",
+        "description": "Fine art pieces are often one-of-a-kind with significant financial and sentimental value."
+      },
+      {
+        "title": "Fragile Materials",
+        "description": "Canvas, glass, delicate frames, and mixed media are extremely susceptible to damage from impact and vibration."
+      },
+      {
+        "title": "Climate Sensitivity",
+        "description": "Temperature and humidity fluctuations can crack paint, warp canvases, and damage sculptures."
+      },
+      {
+        "title": "Insurance Complexity",
+        "description": "Standard moving insurance doesn't adequately cover the true value of fine art and collectibles."
+      }
+    ],
+    "solutions": [
+      {
+        "title": "Custom Crating",
+        "description": "We build custom wooden crates with foam inserts tailored to each piece for maximum protection."
+      },
+      {
+        "title": "White-Glove Handling",
+        "description": "Our trained art handlers use cotton gloves, acid-free materials, and careful techniques for every piece."
+      },
+      {
+        "title": "Climate-Aware Transport",
+        "description": "Enclosed, climate-monitored trucks protect art from temperature swings and humidity during transit."
+      },
+      {
+        "title": "Comprehensive Art Insurance",
+        "description": "We offer specialized fine art coverage that reflects the true appraised value of your collection."
+      }
+    ],
+    "included": [
+      "Custom crating and packaging",
+      "White-glove handling",
+      "Acid-free wrapping materials",
+      "Climate-aware transport",
+      "Sculpture and 3D art handling",
+      "Gallery and collection moves",
+      "Fine art insurance options",
+      "Installation at destination"
+    ],
+    "faq": [
+      {
+        "question": "How do you protect paintings during a move?",
+        "answer": "Each painting is wrapped in acid-free glassine paper, then padded with foam corners and blankets. Framed pieces with glass get protective tape applied first. For high-value works, we build custom crates with foam-fitted interiors for maximum protection."
+      },
+      {
+        "question": "Can you move sculptures and 3D art?",
+        "answer": "Yes, we handle sculptures of all sizes and materials. Each piece is assessed individually for the best protection method—custom crating for fragile works, padded wrapping for sturdier pieces, and secure positioning in the truck to prevent any movement."
+      },
+      {
+        "question": "Do you offer insurance for fine art?",
+        "answer": "Yes, we offer specialized fine art transit insurance based on appraised values. We recommend having current appraisals for high-value pieces. Our standard coverage also applies, but fine art policies provide more comprehensive protection."
+      },
+      {
+        "question": "Can you handle a full gallery or collection move?",
+        "answer": "Absolutely. We've moved private collections and gallery exhibitions throughout Miami. We create a detailed inventory and handling plan for each piece, coordinate timing, and can work with your curator or art advisor throughout the process."
+      }
+    ],
+    "is_active": true
+  },
+  {
+    "name": "White Glove Moving",
+    "slug": "white-glove-moving",
+    "icon": "Crown",
+    "title": "White Glove Moving Services in Miami",
+    "description": "White glove moving is our premium tier of service for clients who want the highest level of care and attention for their belongings. Every item is treated as valuable—furniture is disassembled and wrapped in quilted padding, electronics are carefully disconnected and packed, and fragile items get custom protection. We handle everything from start to finish so you don't lift a finger.",
+    "meta_title": "White Glove Moving Services Miami | Premium Moving | Rapid Panda Movers",
+    "meta_description": "Premium white glove moving services in Miami. Top-tier care for your belongings with custom wrapping, padding, and full-service handling from start to finish.",
+    "hero": {
+      "title": "White Glove Moving Services",
+      "description": "Premium moving service with the highest level of care and attention",
+      "cta": "Get Your Free White Glove Quote",
+      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+    },
+    "problems": [
+      {
+        "title": "Valuable Belongings at Risk",
+        "description": "High-end furniture, electronics, and collectibles deserve more care than standard moving provides."
+      },
+      {
+        "title": "Stress of Supervising",
+        "description": "Worrying about whether movers are being careful enough adds enormous stress to an already stressful day."
+      },
+      {
+        "title": "Incomplete Service",
+        "description": "Most movers just load and unload—leaving you to pack, unpack, and set everything up yourself."
+      },
+      {
+        "title": "Lack of Accountability",
+        "description": "When damage occurs, standard movers offer minimal compensation and take no responsibility."
+      }
+    ],
+    "solutions": [
+      {
+        "title": "Premium Protection",
+        "description": "Every item is wrapped in quilted padding with extra protection for high-value and fragile pieces."
+      },
+      {
+        "title": "Dedicated Move Manager",
+        "description": "A personal move coordinator oversees every detail so you can relax with complete confidence."
+      },
+      {
+        "title": "Full-Service Experience",
+        "description": "We pack, load, transport, unload, unpack, and arrange everything—truly start to finish service."
+      },
+      {
+        "title": "Enhanced Coverage",
+        "description": "Premium valuation coverage ensures your high-value items are fully protected throughout the move."
+      }
+    ],
+    "included": [
+      "Custom wrapping and padding",
+      "Full packing and unpacking",
+      "Furniture disassembly and reassembly",
+      "Electronics setup",
+      "Dedicated move coordinator",
+      "Enhanced valuation coverage",
+      "Floor and wall protection",
+      "Post-move cleanup"
+    ],
+    "faq": [
+      {
+        "question": "What makes white glove moving different from standard moving?",
+        "answer": "White glove service includes premium padding and wrapping for every item, a dedicated move coordinator, full packing and unpacking service, furniture reassembly, electronics setup, and enhanced insurance coverage. It's a fully managed experience where we handle everything."
+      },
+      {
+        "question": "Is white glove moving worth the extra cost?",
+        "answer": "If you have valuable furniture, electronics, art, or fragile items—or simply want a stress-free experience—white glove service provides the highest level of care and convenience. Many clients find the peace of mind and time savings well worth the investment."
+      },
+      {
+        "question": "Do you set up furniture and electronics at the new home?",
+        "answer": "Yes, our white glove service includes furniture reassembly and placement exactly where you want it, plus basic electronics reconnection. We can also hang artwork and mirrors if you'd like everything fully set up."
+      },
+      {
+        "question": "How far in advance should I book white glove service?",
+        "answer": "We recommend booking at least 1-2 weeks ahead to ensure our white glove crew and materials are reserved for your date. However, we do our best to accommodate shorter notice when possible."
+      }
+    ],
+    "is_active": true
+  },
+  {
+    "name": "Specialty Item Moving",
+    "slug": "specialty-item-moving",
+    "icon": "ShieldCheck",
+    "title": "Specialty Item Moving Services in Miami",
+    "description": "Some items don't fit into standard moving categories—antique clocks, wine collections, gun safes, gym equipment, medical devices, and other unusual or oversized items all require specialized handling. Our specialty moving team assesses each item individually, determines the best protection method, and uses the right equipment to move it safely. If it's heavy, fragile, valuable, or just plain awkward, we've moved it before.",
+    "meta_title": "Specialty Item Moving Miami | Unusual & Oversized Items | Rapid Panda Movers",
+    "meta_description": "Professional specialty item moving in Miami. Expert handling for safes, wine collections, gym equipment, antiques, and all unusual or oversized items.",
+    "hero": {
+      "title": "Specialty Item Moving Services",
+      "description": "Expert handling for unusual, oversized, and high-value items",
+      "cta": "Get Your Free Specialty Moving Quote",
+      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+    },
+    "problems": [
+      {
+        "title": "No Standard Approach",
+        "description": "Unusual items don't fit into boxes or onto regular dollies, and most movers refuse to handle them."
+      },
+      {
+        "title": "Extreme Weight or Size",
+        "description": "Gun safes, marble tables, and gym equipment can weigh hundreds or thousands of pounds."
+      },
+      {
+        "title": "Unique Fragility",
+        "description": "Wine collections, antique clocks, and medical devices each have specific vulnerabilities that require expert knowledge."
+      },
+      {
+        "title": "Access Difficulties",
+        "description": "Getting oversized or extremely heavy items in and out of homes often requires creative solutions."
+      }
+    ],
+    "solutions": [
+      {
+        "title": "Custom Assessment",
+        "description": "We evaluate each specialty item individually and create a specific handling plan before the move."
+      },
+      {
+        "title": "Right Equipment for the Job",
+        "description": "Heavy-duty dollies, hoisting straps, ramps, and custom crating—whatever your item needs, we have it."
+      },
+      {
+        "title": "Specialized Knowledge",
+        "description": "Our crew has experience with hundreds of unusual items and knows how to handle each one safely."
+      },
+      {
+        "title": "Creative Problem-Solving",
+        "description": "We find ways to move items through tight spaces, down stairs, or out of difficult locations safely."
+      }
+    ],
+    "included": [
+      "Individual item assessment",
+      "Custom protection methods",
+      "Heavy-duty equipment",
+      "Safe and gun safe moving",
+      "Wine collection transport",
+      "Gym equipment moving",
+      "Antique and heirloom handling",
+      "Full insurance coverage"
+    ],
+    "faq": [
+      {
+        "question": "What qualifies as a specialty item?",
+        "answer": "Specialty items include anything that requires non-standard moving techniques—gun safes, wine collections, marble tables, gym equipment, medical devices, grandfather clocks, large sculptures, and any item that's exceptionally heavy, fragile, oversized, or unusual in shape."
+      },
+      {
+        "question": "Can you move a gun safe?",
+        "answer": "Yes, we move gun safes of all sizes regularly. We use heavy-duty dollies, stair-climbing equipment, and proper strapping techniques. We'll assess your safe's weight and the access path before the move to bring the right equipment and crew."
+      },
+      {
+        "question": "How do you transport wine collections?",
+        "answer": "We use temperature-monitored transport and specialized wine boxes or custom crating to keep bottles secure and at stable temperatures. We handle each bottle carefully to prevent sediment disturbance and ensure proper orientation during transit."
+      },
+      {
+        "question": "Do you move gym equipment like treadmills and weight machines?",
+        "answer": "Yes, we handle all types of gym equipment including treadmills, ellipticals, weight machines, and free weight sets. We disassemble what's needed, use appropriate dollies and ramps, and reassemble at your new location."
+      }
+    ],
+    "is_active": true
+  },
+  {
+    "name": "Storage Solutions",
+    "slug": "storage-solutions",
+    "icon": "Warehouse",
+    "title": "Storage Solutions in Miami",
+    "description": "Sometimes your move doesn't happen all at once. Whether you need short-term storage between moves, long-term storage while downsizing, or a secure place for seasonal items, our storage solutions have you covered. Our climate-controlled facilities keep your belongings safe from Miami's heat and humidity, and our flexible terms mean no long-term commitments if you don't need them.",
+    "meta_title": "Storage Solutions Miami | Climate-Controlled Storage | Rapid Panda Movers",
+    "meta_description": "Flexible storage solutions in Miami. Climate-controlled, secure storage facilities with short-term and long-term options for your moving and storage needs.",
+    "hero": {
+      "title": "Storage Solutions in Miami",
+      "description": "Secure, climate-controlled storage for any timeline",
+      "cta": "Get Your Free Storage Quote",
+      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+    },
+    "problems": [
+      {
+        "title": "Gap Between Moves",
+        "description": "Your move-out and move-in dates don't align, leaving your belongings with nowhere to go."
+      },
+      {
+        "title": "Miami's Climate",
+        "description": "Heat, humidity, and storms make standard storage units risky for furniture, electronics, and valuables."
+      },
+      {
+        "title": "Long-Term Contracts",
+        "description": "Most storage facilities lock you into long-term leases even when you only need temporary space."
+      },
+      {
+        "title": "Double Handling",
+        "description": "Moving items to storage and then to your new home means paying for two moves and doubling damage risk."
+      }
+    ],
+    "solutions": [
+      {
+        "title": "Flexible Terms",
+        "description": "Store for a week or a year—our flexible plans adapt to your timeline without long-term commitments."
+      },
+      {
+        "title": "Climate-Controlled Facilities",
+        "description": "Temperature and humidity-controlled units protect your belongings from Miami's harsh climate."
+      },
+      {
+        "title": "No Long-Term Lock-In",
+        "description": "Month-to-month options with no penalties for early retrieval—store only as long as you need."
+      },
+      {
+        "title": "Seamless Move + Store",
+        "description": "We move your items directly into storage and deliver them when you're ready—one crew, one process."
+      }
+    ],
+    "included": [
+      "Climate-controlled units",
+      "24/7 security monitoring",
+      "Flexible short and long-term plans",
+      "Move-to-storage service",
+      "Storage-to-home delivery",
+      "Online inventory access",
+      "Insurance options",
+      "No long-term contracts required"
+    ],
+    "faq": [
+      {
+        "question": "Are your storage units climate-controlled?",
+        "answer": "Yes, all our storage facilities are climate-controlled with stable temperature and humidity levels. This is essential in Miami to protect furniture, electronics, documents, and other belongings from heat and moisture damage."
+      },
+      {
+        "question": "What sizes of storage units are available?",
+        "answer": "We offer storage units from small locker-sized spaces for a few boxes to large units that can hold a full household. We'll recommend the right size based on your inventory so you don't pay for more space than you need."
+      },
+      {
+        "question": "Can you pick up and deliver items from storage?",
+        "answer": "Yes, we offer full pickup and delivery service. Our crew can move your items into storage and deliver them to your new home whenever you're ready—all handled by the same trusted team."
+      },
+      {
+        "question": "How long can I store my belongings?",
+        "answer": "There's no minimum or maximum storage duration. Store for a few days between moves or for several months while you find your new home. Our month-to-month plans give you complete flexibility."
+      }
+    ],
+    "is_active": true
+  },
+  {
+    "name": "Junk Removal",
+    "slug": "junk-removal",
+    "icon": "Trash2",
+    "title": "Professional Junk Removal Services in Miami",
+    "description": "Whether you're clearing out before a move, downsizing, or just reclaiming your space, our junk removal team handles it all. We remove old furniture, appliances, electronics, yard waste, and general clutter quickly and responsibly. We sort everything for donation, recycling, or proper disposal so you don't have to figure out where it all goes. Just point to what needs to go and we take care of the rest.",
+    "meta_title": "Junk Removal Services Miami | Fast Haul Away | Rapid Panda Movers",
+    "meta_description": "Professional junk removal services in Miami. Fast, affordable removal of furniture, appliances, electronics, and clutter with eco-friendly disposal and donation options.",
+    "hero": {
+      "title": "Professional Junk Removal Services",
+      "description": "Fast, responsible removal of furniture, appliances, and clutter",
+      "cta": "Get Your Free Junk Removal Quote",
+      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+    },
+    "problems": [
+      {
+        "title": "Overwhelming Clutter",
+        "description": "Years of accumulated items make it hard to know where to start when it's time to clear out."
+      },
+      {
+        "title": "Heavy & Bulky Items",
+        "description": "Old furniture, mattresses, and appliances are too heavy and awkward to remove on your own."
+      },
+      {
+        "title": "Disposal Confusion",
+        "description": "Different items require different disposal methods—electronics, paint, and appliances can't just go to the curb."
+      },
+      {
+        "title": "Time & Effort",
+        "description": "Multiple trips to the dump, donation centers, and recycling facilities eat up entire weekends."
+      }
+    ],
+    "solutions": [
+      {
+        "title": "We Handle Everything",
+        "description": "Just point to what goes and our crew removes it all—no sorting, hauling, or trips required from you."
+      },
+      {
+        "title": "Heavy Item Removal",
+        "description": "Our team has the equipment and muscle to remove furniture, appliances, and any oversized items safely."
+      },
+      {
+        "title": "Responsible Disposal",
+        "description": "We sort items for donation, recycling, and proper disposal so nothing goes to waste unnecessarily."
+      },
+      {
+        "title": "Same-Day Service",
+        "description": "Need it gone today? We offer same-day junk removal so you can reclaim your space fast."
+      }
+    ],
+    "included": [
+      "Furniture removal",
+      "Appliance haul-away",
+      "Electronics recycling",
+      "Yard waste removal",
+      "Donation drop-off",
+      "Same-day service available",
+      "Post-removal sweep and cleanup",
+      "Eco-friendly disposal"
+    ],
+    "faq": [
+      {
+        "question": "What items do you remove?",
+        "answer": "We remove almost anything—old furniture, mattresses, appliances, electronics, yard waste, construction debris, and general household clutter. The only items we can't take are hazardous materials like chemicals, paint, and certain batteries. We'll let you know during your estimate if anything falls outside our scope."
+      },
+      {
+        "question": "Do you donate usable items?",
+        "answer": "Yes, we partner with local charities and donation centers in Miami. Items in good condition are donated rather than sent to a landfill. We sort everything on-site so usable items find a second home whenever possible."
+      },
+      {
+        "question": "How is junk removal priced?",
+        "answer": "Pricing is based on the volume of items we remove—essentially how much space your junk takes up in our truck. We provide an upfront quote before we start so there are no surprises. No hidden fees for heavy items or stairs."
+      },
+      {
+        "question": "Can you do junk removal on moving day?",
+        "answer": "Absolutely. Many clients combine junk removal with their move—we clear out what you don't want before or after loading. This is a great way to avoid paying to move items you're getting rid of anyway."
+      }
+    ],
+    "is_active": true
   }
 ]

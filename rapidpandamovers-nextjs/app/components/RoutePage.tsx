@@ -1,12 +1,13 @@
 import Hero from './Hero';
 import WhySection from './WhySection';
+import QuoteSection from './QuoteSection';
 import PricingSection from './PricingSection';
 import MapSection from './MapSection';
 import TravelSection from './TravelSection';
-import RouteSection from './RouteSection';
+import BlogSection from './BlogSection';
 import Breadcrumbs from './Breadcrumbs';
 import { RouteSchema } from './Schema';
-import { allRoutes, titleCase, getCityNameBySlug } from '@/lib/data';
+import { titleCase, getCityNameBySlug } from '@/lib/data';
 
 interface HouseSize {
   min_cost: number;
@@ -52,17 +53,16 @@ function getStateFromName(name: string): string {
 }
 
 export default function RoutePage({ route }: RoutePageProps) {
-  // Get related routes (same origin or destination)
-  const relatedRoutes = allRoutes
-    .filter(r => 
-      r.slug !== route.slug && 
-      r.is_active !== false &&
-      (r.origin_name === route.origin_name || r.destination_name === route.destination_name)
-    )
-    .slice(0, 6);
-
   const fromCityTitle = titleCase(route.origin_name);
   const toCityTitle = titleCase(route.destination_name);
+
+  // Determine if this is a long distance route (different states)
+  const originState = getStateFromName(route.origin_name);
+  const destinationState = getStateFromName(route.destination_name);
+  const isLongDistance = originState !== destinationState;
+
+  // Category fallback based on route type
+  const categoryFallback = isLongDistance ? 'Long Distance Moving' : 'Local Moving';
 
   // Breadcrumb items
   const breadcrumbItems = [
@@ -89,9 +89,7 @@ export default function RoutePage({ route }: RoutePageProps) {
       />
 
       {/* Breadcrumbs */}
-      <div className="container mx-auto">
-        <Breadcrumbs items={breadcrumbItems} />
-      </div>
+      <Breadcrumbs items={breadcrumbItems} showBackground={true} />
 
       {/* Route Details Section */}
       <TravelSection
@@ -128,15 +126,26 @@ export default function RoutePage({ route }: RoutePageProps) {
         />
       )}
 
-      {/* Related Routes Section */}
-      <RouteSection
-        title="Related Routes"
-        subtitle={`Popular routes from ${fromCityTitle} or to ${toCityTitle}`}
-        routes={relatedRoutes}
+      {/* Related Blog Posts */}
+      <BlogSection
+        locationFilter={route.destination_name}
+        categoryFilterFallback={categoryFallback}
+        maxPosts={3}
+        showFeatured={false}
+        showCategories={false}
+        title={`Moving Tips for ${fromCityTitle} to ${toCityTitle}`}
+        subtitle={`Helpful guides for your ${fromCityTitle} to ${toCityTitle} move`}
+        showViewMore={true}
+        viewMorePosition="bottom"
+        viewMoreLink="/blog"
+        viewMoreButtonText="View All Moving Tips"
       />
 
       {/* Why Choose Us */}
       <WhySection />
+
+      {/* CTA Section */}
+      <QuoteSection />
     </div>
   );
 }

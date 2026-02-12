@@ -22,39 +22,35 @@ export default function ComparePage() {
       />
 
       {/* Introduction */}
-      <section className="py-16">
-        <div className="container mx-auto">
-          <OverviewSection title={<>Why Compare <span className="text-orange-500">Moving Companies</span>?</>}>
-            <p className="text-xl text-gray-600 mb-8">
-              Choosing the right moving company is crucial for a stress-free relocation. We believe in transparency,
-              so we've created honest comparisons between Rapid Panda Movers and other popular Miami moving companies.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Scale className="w-8 h-8 text-orange-500" />
-                </div>
-                <h3 className="font-bold text-gray-800 mb-2">Fair Comparisons</h3>
-                <p className="text-gray-600">Honest side-by-side analysis of services and pricing</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Star className="w-8 h-8 text-orange-500" />
-                </div>
-                <h3 className="font-bold text-gray-800 mb-2">Real Reviews</h3>
-                <p className="text-gray-600">Based on actual customer feedback and ratings</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-orange-500" />
-                </div>
-                <h3 className="font-bold text-gray-800 mb-2">Informed Decisions</h3>
-                <p className="text-gray-600">All the info you need to choose confidently</p>
-              </div>
+      <OverviewSection title={<>Why Compare <span className="text-orange-500">Moving Companies</span>?</>}>
+        <p className="text-xl text-gray-600 mb-8">
+          Choosing the right moving company is crucial for a stress-free relocation. We believe in transparency,
+          so we've created honest comparisons between Rapid Panda Movers and other popular Miami moving companies.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="text-center">
+            <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Scale className="w-8 h-8 text-orange-500" />
             </div>
-          </OverviewSection>
+            <h3 className="font-bold text-gray-800 mb-2">Fair Comparisons</h3>
+            <p className="text-gray-600">Honest side-by-side analysis of services and pricing</p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Star className="w-8 h-8 text-orange-500" />
+            </div>
+            <h3 className="font-bold text-gray-800 mb-2">Real Reviews</h3>
+            <p className="text-gray-600">Based on actual customer feedback and ratings</p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Shield className="w-8 h-8 text-orange-500" />
+            </div>
+            <h3 className="font-bold text-gray-800 mb-2">Informed Decisions</h3>
+            <p className="text-gray-600">All the info you need to choose confidently</p>
+          </div>
         </div>
-      </section>
+      </OverviewSection>
 
       {/* Comparisons Grid */}
       <CompareList

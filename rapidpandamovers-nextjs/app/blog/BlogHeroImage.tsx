@@ -58,7 +58,7 @@ export default function BlogHeroImage({ featured, title, category, date, readTim
 
   if (hasValidImage && !imageError) {
     return (
-      <div className="relative -mt-16 rounded-4xl overflow-hidden shadow-xl z-10">
+      <div className="relative rounded-4xl overflow-hidden shadow-xl z-10">
         <div className="relative h-[40vh] md:h-[50vh]">
           <Image
             src={featured}
@@ -113,7 +113,7 @@ export default function BlogHeroImage({ featured, title, category, date, readTim
 
   // Fallback: No image or image failed to load
   return (
-    <div className="-mt-16 relative z-10">
+    <div className="relative z-10">
         <a
           href={backUrl}
           onClick={handleBackClick}

@@ -1,7 +1,7 @@
 import { allContent } from '@/lib/data'
 import Hero from '@/app/components/Hero'
 import QuoteSection from '@/app/components/QuoteSection'
-import ContentSection from '@/app/components/ContentSection'
+import OverviewSection from '@/app/components/OverviewSection'
 import LocationSection from '@/app/components/LocationSection'
 
 export default function LocationsPage() {
@@ -20,7 +20,13 @@ export default function LocationsPage() {
 
       {/* Content Section */}
       {locationsContent?.content && (
-        <ContentSection content={locationsContent.content} />
+        <OverviewSection title="Our Service Areas">
+          <div className="text-gray-600 leading-relaxed space-y-4">
+            {(Array.isArray(locationsContent.content) ? locationsContent.content : [locationsContent.content]).map((paragraph: string, index: number) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
+        </OverviewSection>
       )}
 
       {/* Service Locations */}

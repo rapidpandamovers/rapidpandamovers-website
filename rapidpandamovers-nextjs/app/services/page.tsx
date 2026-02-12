@@ -1,7 +1,7 @@
 import { Suspense } from 'react'
 import Hero from '../components/Hero'
 import QuoteSection from '../components/QuoteSection'
-import ContentSection from '../components/ContentSection'
+import OverviewSection from '../components/OverviewSection'
 import WhySection from '../components/WhySection'
 import ServicesContent from './ServicesContent'
 import { allContent } from '@/lib/data'
@@ -26,11 +26,11 @@ export default function ServicesPage() {
 
       {/* Content Section */}
       {servicesContent?.content && (
-        <ContentSection
-          title="About Our"
-          titleHighlight="Moving Services"
-          description={servicesContent.content}
-        />
+        <OverviewSection
+          title={<>About Our <span className="text-orange-500">Moving Services</span></>}
+        >
+          <p className="text-gray-600 leading-relaxed">{servicesContent.content}</p>
+        </OverviewSection>
       )}
 
       {/* Main Services */}
