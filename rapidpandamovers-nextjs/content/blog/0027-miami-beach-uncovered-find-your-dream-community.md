@@ -21,7 +21,7 @@ images:
   - "/images/blog/2024/02/miami-beach-uncovered-find-your-dream-community/a-person-holding-a-cardboard-box-labeled-3.webp"
   - "/images/blog/2024/02/miami-beach-uncovered-find-your-dream-community/couple-smiling-while-moving-into-a-new-h-2.webp"
 service_link: "/miami-beach-movers"
-location_link: "/locations/miami-beach"
+location_link: "/miami-beach-movers"
 status: "pending"
 needs_ai_image: false
 ---

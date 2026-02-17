@@ -1,13 +1,15 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import BlogListPage from '../../BlogListPage'
-import { getCategoryBySlug, getCategories, categoryToSlug } from '../../../../lib/blog'
+import { getCategoryBySlug, getCategories, categoryToSlug, isEditorialCategory } from '../../../../lib/blog'
 
 export async function generateStaticParams() {
   const categories = getCategories()
-  return categories.map((cat) => ({
-    slug: categoryToSlug(cat),
-  }))
+  return categories
+    .filter(cat => isEditorialCategory(cat))
+    .map((cat) => ({
+      slug: categoryToSlug(cat),
+    }))
 }
 
 export async function generateMetadata({
@@ -33,7 +35,7 @@ export default async function BlogCategoryPage({
 }) {
   const { slug } = await params
   const category = getCategoryBySlug(slug)
-  if (!category) {
+  if (!category || !isEditorialCategory(category)) {
     notFound()
   }
   return <BlogListPage currentPage={1} category={category} />

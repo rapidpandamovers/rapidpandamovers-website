@@ -14,7 +14,7 @@ interface WhySectionProps {
   benefits?: Benefit[] | string[];
   ctaText?: string;
   ctaLink?: string;
-  variant?: 'default' | 'detail';
+  variant?: 'default' | 'detail' | 'left';
 }
 
 const defaultBenefits: Benefit[] = [
@@ -80,6 +80,52 @@ export default function WhySection({
                       ))}
                     </ul>
                   )}
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  // Left variant — left-aligned header with inline CTA link
+  if (variant === 'left') {
+    return (
+      <section className="pt-20">
+        <div className="container mx-auto">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+                {title ? title : 'Why Choose Rapid Panda Movers?'}
+              </h2>
+              {subtitle && (
+                <p className="text-lg text-gray-600">
+                  {subtitle}
+                </p>
+              )}
+            </div>
+            {displayCtaLink && (
+              <Link
+                href={displayCtaLink}
+                className="inline-flex items-center text-orange-500 hover:text-orange-600 font-semibold mt-4 md:mt-0"
+              >
+                {displayCtaText}
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            )}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => {
+              const IconComponent = benefit.icon || CheckCircle
+              return (
+                <div key={index} className={`${bgColors[index % bgColors.length]} rounded-4xl p-8`}>
+                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6">
+                    <IconComponent className="w-8 h-8 text-orange-500" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-3">{benefit.title}</h3>
+                  {benefit.desc && <p className="text-gray-600">{benefit.desc}</p>}
                 </div>
               )
             })}

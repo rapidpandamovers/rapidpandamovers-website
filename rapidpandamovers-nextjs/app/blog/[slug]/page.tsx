@@ -5,7 +5,7 @@ import BlogSection from '../../components/BlogSection'
 import Breadcrumbs from '../../components/Breadcrumbs'
 import { ArticleSchema } from '../../components/Schema'
 import { notFound } from 'next/navigation'
-import { getPublishedPosts, getPostBySlug, categoryToSlug } from '../../../lib/blog'
+import { getPublishedPosts, getPostBySlug, categoryToSlug, isEditorialCategory } from '../../../lib/blog'
 import { generateBlogMetadata } from '../../../lib/metadata'
 import BlogHeroImage from '../BlogHeroImage'
 
@@ -271,9 +271,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   }
 
   // Breadcrumb items
+  const categorySlug = categoryToSlug(post.category)
+  const categoryHref = isEditorialCategory(post.category)
+    ? `/blog/category/${categorySlug}`
+    : `/blog/service/${categorySlug}`
   const breadcrumbItems = [
     { label: 'Blog', href: '/blog' },
-    { label: post.category, href: `/blog/category/${categoryToSlug(post.category)}` },
+    { label: post.category, href: categoryHref },
     { label: post.title },
   ]
 
@@ -321,20 +325,27 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       </article>
 
       {/* Related Posts */}
-      <BlogSection
-        variant="compact"
-        title="Related Articles"
-        categoryFilter={post.category}
-        excludeSlug={post.slug}
-        showFeatured={false}
-        showCategories={false}
-        showImages={false}
-        hideHeader={false}
-        viewMoreTitle="Explore More Articles"
-        viewMoreSubtitle="Discover helpful tips and guides for your move"
-        viewMoreButtonText="View All Articles"
-        viewMoreLink={`/blog/category/${categoryToSlug(post.category)}`}
-      />
+      {(() => {
+        const isService = !isEditorialCategory(post.category)
+        const serviceSlug = isService ? categoryToSlug(post.category) : null
+        return (
+          <BlogSection
+            variant="left"
+            title="Related Articles"
+            subtitle="More helpful tips from this category"
+            serviceFilter={isService ? serviceSlug! : undefined}
+            categoryFilter={!isService ? post.category : undefined}
+            excludeSlug={post.slug}
+            showFeatured={false}
+            showCategories={false}
+            showExcerpts={true}
+            showViewMore
+            viewMoreButtonText="View All Articles"
+            viewMoreLink={isService ? `/blog/service/${serviceSlug}` : `/blog/category/${categoryToSlug(post.category)}`}
+            maxPosts={3}
+          />
+        )
+      })()}
     </div>
   )
 }

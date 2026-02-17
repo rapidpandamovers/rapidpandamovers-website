@@ -43,6 +43,8 @@ interface RouteSectionProps {
   columns?: 3 | 4;
   // Show price
   showPrice?: boolean;
+  // Layout variant
+  variant?: 'default' | 'left';
 }
 
 // Helper function to get cost from route data
@@ -66,6 +68,7 @@ export default function RouteSection({
   initialCount = 12,
   columns = 3,
   showPrice = true,
+  variant = 'default',
 }: RouteSectionProps) {
   const [showAll, setShowAll] = useState(false);
 
@@ -121,6 +124,74 @@ export default function RouteSection({
   const gridCols = columns === 4
     ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
     : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3';
+
+  // Left variant: left-aligned header with inline CTA link
+  if (variant === 'left') {
+    const ctaText = location ? `View All ${location.name} Routes` : 'View All Routes';
+    const ctaHref = location ? `/moving-routes/${location.slug}` : '/moving-routes';
+
+    return (
+      <section className="pt-20">
+        <div className="container mx-auto">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+                {displayTitle}
+              </h2>
+              {displaySubtitle && (
+                <p className="text-lg text-gray-600">
+                  {displaySubtitle}
+                </p>
+              )}
+            </div>
+            <Link
+              href={ctaHref}
+              className="inline-flex items-center text-orange-500 hover:text-orange-600 font-semibold mt-4 md:mt-0"
+            >
+              {ctaText}
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+          </div>
+          <div className="bg-gray-50 rounded-4xl p-8">
+            <div className={`grid ${gridCols} gap-6`}>
+              {relevantRoutes.slice(0, maxItems).map((route, index) => {
+                const hours = Math.floor(route.drive_time_min / 60);
+                const mins = route.drive_time_min % 60;
+                const timeDisplay = hours > 0 ? `${hours}h ${mins}m` : `${mins}m`;
+                const cost = showPrice ? getRouteCost(route) : undefined;
+                return (
+                  <Link
+                    key={index}
+                    href={`/${route.slug}-movers`}
+                    className="bg-white rounded-2xl p-6 hover:bg-orange-50 transition-colors group"
+                  >
+                    <div className="flex items-center justify-between mb-4">
+                      <Navigation className="w-6 h-6 text-orange-500" />
+                      <span className="text-sm text-gray-500">
+                        {route.distance_mi} mi • {timeDisplay}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-orange-500 transition-colors">
+                      {titleCase(route.origin_name)} to {titleCase(route.destination_name)}
+                    </h3>
+                    {cost && (
+                      <p className="text-orange-500 font-bold text-lg mb-3">
+                        Starting from ${cost.toLocaleString()}
+                      </p>
+                    )}
+                    <div className="text-orange-600 group-hover:text-orange-700 font-medium flex items-center">
+                      View Route
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="pt-20">

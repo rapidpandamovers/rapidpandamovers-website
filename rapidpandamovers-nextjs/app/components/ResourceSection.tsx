@@ -82,9 +82,10 @@ export default function ResourceSection({
 }: ResourceSectionProps) {
   const pathname = usePathname()
 
-  // Filter out the current page from the resources list
+  // Filter out the current page and its sub-pages from the resources list
+  // e.g., hide Blog resource when on /blog/category/moving-tips
   const filteredResources = resources.filter(
-    (resource) => resource.href !== pathname
+    (resource) => resource.href !== pathname && !pathname.startsWith(resource.href + '/')
   )
 
   // Apply maxItems limit if specified

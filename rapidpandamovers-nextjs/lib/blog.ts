@@ -220,6 +220,112 @@ export function getPostsByCategory(category: string): BlogPost[] {
   return getPublishedPosts().filter(post => post.category === category)
 }
 
+// Editorial (non-service) categories shown as top-level pills
+const EDITORIAL_CATEGORIES = ['Fun Facts', 'Home & Living', 'Lifestyle', 'Location Guide', 'Moving Tips']
+
+/**
+ * Check if a category name is editorial (not a service category)
+ */
+export function isEditorialCategory(category: string): boolean {
+  return EDITORIAL_CATEGORIES.includes(category)
+}
+
+/**
+ * Check if a service_link matches a service slug
+ * "/senior-moving" matches "senior-moving"
+ * "/miami-senior-moving" matches "senior-moving" (suffix match)
+ */
+function matchesServiceSlug(serviceLink: string, slug: string): boolean {
+  return serviceLink === `/${slug}` ||
+         serviceLink.endsWith(`-${slug}`) ||
+         serviceLink.endsWith(`/${slug}`)
+}
+
+/**
+ * Get published posts by service slug (matches service_link field)
+ */
+export function getPostsByService(serviceSlug: string): BlogPost[] {
+  return getPublishedPosts().filter(post => {
+    const serviceLink = post.service_link || ''
+    return matchesServiceSlug(serviceLink, serviceSlug)
+  })
+}
+
+/**
+ * Get all unique service slugs that have published blog posts
+ */
+export function getServiceSlugsFromBlog(): string[] {
+  const { allServices } = require('@/lib/data')
+  const posts = getPublishedPosts()
+  const slugs = new Set<string>()
+  for (const service of allServices) {
+    const hasPost = posts.some(post => {
+      const serviceLink = post.service_link || ''
+      return matchesServiceSlug(serviceLink, service.slug)
+    })
+    if (hasPost) {
+      slugs.add(service.slug)
+    }
+  }
+  return Array.from(slugs)
+}
+
+/**
+ * Check if a location link matches a location slug precisely
+ * /miami-movers matches "miami", but /miami-gardens-movers does NOT match "miami"
+ */
+function matchesLocationSlug(locationLink: string, slug: string): boolean {
+  return locationLink === `/${slug}` ||
+         locationLink === `/${slug}-movers` ||
+         locationLink === `/locations/${slug}`
+}
+
+/**
+ * Get published posts by location slug (matches location_link field)
+ */
+export function getPostsByLocation(slug: string): BlogPost[] {
+  return getPublishedPosts().filter(post => {
+    const locationLink = post.location_link || ''
+    return matchesLocationSlug(locationLink, slug)
+  })
+}
+
+/**
+ * Extract location slug from a location_link value (e.g., "/kendall-movers" → "kendall")
+ */
+export function locationLinkToSlug(locationLink: string): string {
+  return locationLink
+    .replace(/^\//, '')        // Remove leading slash
+    .replace(/^locations\//, '') // Remove locations/ prefix
+    .replace(/-movers$/, '')   // Remove -movers suffix
+}
+
+/**
+ * Get all unique location slugs that have published posts
+ */
+export function getLocationSlugs(): string[] {
+  const posts = getPublishedPosts()
+  const slugs = new Set<string>()
+  for (const post of posts) {
+    if (post.location_link) {
+      slugs.add(locationLinkToSlug(post.location_link))
+    }
+  }
+  return Array.from(slugs)
+}
+
+/**
+ * Get location display name from slug using city/neighborhood data
+ */
+export function getLocationNameBySlug(slug: string): string | null {
+  const { getCityBySlug, getNeighborhoodBySlug } = require('@/lib/data')
+  const city = getCityBySlug(slug)
+  if (city) return city.name
+  const neighborhood = getNeighborhoodBySlug(slug)
+  if (neighborhood) return neighborhood.name
+  return null
+}
+
 /**
  * Get published posts sorted by date (newest first), then by ID (highest first) for same dates
  */

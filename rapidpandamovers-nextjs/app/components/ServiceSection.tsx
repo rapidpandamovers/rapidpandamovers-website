@@ -16,7 +16,7 @@ interface ServiceSectionProps {
     };
   };
   // Show all services from data instead of hardcoded preview
-  variant?: 'preview' | 'full';
+  variant?: 'preview' | 'full' | 'left';
   // Hide the section title and description
   hideHeader?: boolean;
   // Exclude a specific service (useful for "related services" on service pages)
@@ -75,6 +75,65 @@ export default function ServiceSection({ location, variant = 'preview', hideHead
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {activeServices.map((service, index) => (
+              <Link
+                key={index}
+                href={getHref(service.slug)}
+                className="bg-orange-500 group-hover:bg-orange-600 rounded-4xl overflow-hidden border-2 border-orange-500 hover:shadow-md transition-all group flex flex-col"
+              >
+                <div className="bg-white rounded-b-4xl p-6 flex-1">
+                  <div className="flex justify-center mb-4">
+                    <ServiceIllustration service={service.slug} className="w-24 h-24" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-orange-500 transition-colors text-center">
+                    {getDisplayName(service.name)}
+                  </h3>
+                  <p className="text-gray-600 text-center">{service.description}</p>
+                </div>
+                <div className="text-white font-medium flex items-center justify-center py-3">
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  // Left variant — left-aligned header with inline "View All" link
+  if (variant === 'left') {
+    const leftServices = activeServices.slice(0, 6);
+    const ctaLink = location ? `/services/${location.slug}` : '/services';
+    const ctaText = location ? `View All Services in ${location.name}` : 'View All Services';
+
+    return (
+      <section className="pt-20">
+        <div className="container mx-auto">
+          {!hideHeader && (
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+                  {title || <>Our Moving <span className="text-orange-500">Services</span></>}
+                </h2>
+                {subtitle && (
+                  <p className="text-lg text-gray-600">
+                    {subtitle}
+                  </p>
+                )}
+              </div>
+              <Link
+                href={ctaLink}
+                className="inline-flex items-center text-orange-500 hover:text-orange-600 font-semibold mt-4 md:mt-0"
+              >
+                {ctaText}
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
+          )}
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {leftServices.map((service, index) => (
               <Link
                 key={index}
                 href={getHref(service.slug)}

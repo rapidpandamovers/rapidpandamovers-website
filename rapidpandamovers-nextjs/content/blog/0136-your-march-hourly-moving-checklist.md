@@ -20,7 +20,7 @@ images:
   - "/images/blog/2025/03/your-march-hourly-moving-checklist/two-movers-smiling-from-their-moving-com-4.webp"
   - "/images/blog/2025/03/your-march-hourly-moving-checklist/young-adult-male-smiling-while-handling--1.webp"
 service_link: "/hourly-moving"
-location_link: "/locations/miami"
+location_link: "/miami-movers"
 status: "pending"
 needs_ai_image: false
 ---

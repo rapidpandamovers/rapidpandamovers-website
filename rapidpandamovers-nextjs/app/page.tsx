@@ -24,26 +24,26 @@ export default function Home() {
       <MediaSection showArrows={false} showDots={false} enableModal={false} description="" />
       {/* Reviews Section */}
       <ReviewSection
-        variant="compact"
+        variant="left"
         title="What Our Customers Say"
-        subtitle=""
+        subtitle="Verified reviews from real customers"
       />
-      <ServiceSection />
-      <LocationSection />
-      <WhySection />
+      <ServiceSection variant="left" subtitle="Professional moving services tailored to your needs" />
+      <LocationSection variant="compact" />
+      <WhySection variant="left" subtitle="Trusted by thousands of Miami families" />
       <AboutSection />
       <BlogSection
-        variant="compact"
+        variant="left"
+        title="Moving Tips & Insights"
+        subtitle="Expert advice and practical tips for your move"
         showFeatured={false}
         showCategories={false}
-        showImages={true}
-        showTipsCard={false}
         showExcerpts={false}
         showCategoryPill={false}
-        viewMoreTitle="Explore Our Blog"
-        viewMoreSubtitle="Discover helpful tips and guides for your move"
+        showViewMore
         viewMoreButtonText="View All Articles"
         viewMoreLink="/blog"
+        maxPosts={3}
       />
       <FAQSection variant="compact" />
       <QuoteSection />

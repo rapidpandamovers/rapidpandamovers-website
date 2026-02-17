@@ -19,7 +19,7 @@ images:
   - "/images/blog/2025/03/6-methods-to-get-to-know-your-new-neighbors/two-men-chatting-in-front-of-a-vintage-b-4.webp"
   - "/images/blog/2025/03/6-methods-to-get-to-know-your-new-neighbors/two-senior-men-enjoying-a-friendly-chat--1.webp"
 service_link: "/local-moving"
-location_link: "/locations/miami"
+location_link: "/miami-movers"
 status: "pending"
 needs_ai_image: false
 ---

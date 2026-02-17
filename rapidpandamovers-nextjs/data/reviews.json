@@ -758,7 +758,7 @@
       "rating": 5,
       "text": "These guys were fantastic. Very friendly and helpful. Their price was fair for the quality of service.  You wont regret hiring them. I fully recommend them.",
       "date": "2024-05-06",
-      "platform": "google",
+      "platform": "bbb",
       "verified": true,
       "location": {
         "city": "miami",
@@ -774,7 +774,7 @@
       "rating": 5,
       "text": "Excelent service and gentle team",
       "date": "2024-12-11",
-      "platform": "google",
+      "platform": "facebook",
       "verified": true,
       "location": {
         "city": "miami",
@@ -790,7 +790,7 @@
       "rating": 5,
       "text": "Excellent service. Great guys. I will use them again. I recommend this company.",
       "date": "2024-12-24",
-      "platform": "google",
+      "platform": "yelp",
       "verified": true,
       "location": {
         "city": "miami",

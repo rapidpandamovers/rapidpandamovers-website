@@ -18,7 +18,7 @@ images:
   - "/images/blog/2025/02/9-ways-to-meet-your-new-neighbors/a-happy-moment-capturing-a-man-and-woman-3.webp"
   - "/images/blog/2025/02/9-ways-to-meet-your-new-neighbors/three-men-seated-and-standing-by-a-doorw-2.webp"
 service_link: "/local-moving"
-location_link: "/locations/miami"
+location_link: "/miami-movers"
 status: "pending"
 needs_ai_image: false
 ---

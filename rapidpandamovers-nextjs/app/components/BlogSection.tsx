@@ -39,8 +39,8 @@ interface BlogSectionProps {
   viewMoreButtonText?: string
   // Exclude a specific post by slug (useful for related posts on a blog post page)
   excludeSlug?: string
-  // Compact variant: 3-column layout with 2 posts + 1 orange CTA box
-  variant?: 'default' | 'compact'
+  // Variant: 'default' centered header, 'compact' 2 posts + CTA box, 'left' left-aligned header with inline view more
+  variant?: 'default' | 'compact' | 'left'
   // Show featured images on post cards
   showImages?: boolean
   // Show a Moving Tips CTA card alongside the viewMore card
@@ -99,7 +99,8 @@ export default function BlogSection({
     // /miami-movers matches "miami", but /miami-gardens-movers does NOT match "miami"
     const matchesLocation = (locationLink: string, slug: string): boolean => {
       return locationLink === `/${slug}` ||
-             locationLink === `/${slug}-movers`
+             locationLink === `/${slug}-movers` ||
+             locationLink === `/locations/${slug}`
     }
 
     const locationMatches = filteredBlog.filter(post => {
@@ -233,6 +234,53 @@ export default function BlogSection({
                 </div>
               )}
             </div>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  // Left variant: left-aligned header with inline view more button
+  if (variant === 'left') {
+    return (
+      <section className={`pt-20 ${className}`}>
+        <div className="container mx-auto">
+          {!hideHeader && (
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+                  {title || 'Moving Tips & Insights'}
+                </h2>
+                {subtitle && (
+                  <p className="text-lg text-gray-600">
+                    {subtitle}
+                  </p>
+                )}
+              </div>
+              {showViewMore && (
+                <Link
+                  href={viewMoreLink}
+                  className="inline-flex items-center text-orange-500 hover:text-orange-600 font-semibold mt-4 md:mt-0"
+                >
+                  {viewMoreButtonText || 'View All Articles'}
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+              )}
+            </div>
+          )}
+
+          {/* Featured Post */}
+          {showFeatured && sortedBlog.length > 0 && (
+            <div className="mb-16">
+              <FeaturedPostCard post={sortedBlog[0]} />
+            </div>
+          )}
+
+          {/* Blog Posts Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {sortedBlog.slice(showFeatured ? 1 : 0, showFeatured ? maxPosts + 1 : maxPosts).map((post) => (
+              <BlogPostCard key={post.id} post={post} showExcerpt={showExcerpts} showCategoryPill={showCategoryPill} />
+            ))}
           </div>
         </div>
       </section>

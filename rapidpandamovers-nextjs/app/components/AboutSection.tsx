@@ -80,7 +80,7 @@ export default function AboutSection({ className = "", variant = "default", show
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                About Rapid Panda Moving
+                About Rapid Panda Movers
               </h2>
               <p className="text-lg text-orange-100 mb-6 leading-relaxed">
                 At Rapid Panda Movers, we understand that moving is more than just transporting belongings from one place to another. It's about helping families and businesses transition to new chapters in their lives with confidence and peace of mind.

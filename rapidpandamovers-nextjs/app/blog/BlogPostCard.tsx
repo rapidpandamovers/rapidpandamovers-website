@@ -6,6 +6,18 @@ import Image from 'next/image'
 import { Calendar, Clock, ImageOff, ArrowRight } from 'lucide-react'
 import BlogPostLink from './BlogPostLink'
 
+const EDITORIAL_CATEGORIES = ['Fun Facts', 'Home & Living', 'Lifestyle', 'Location Guide', 'Moving Tips']
+
+function categoryToSlug(category: string): string {
+  return category
+    .toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '')
+}
+
 interface BlogPostCardProps {
   post: {
     id: number
@@ -57,14 +69,20 @@ export default function BlogPostCard({ post, showExcerpt = true, showCategoryPil
           <span>{post.readTime}</span>
         </div>
 
-        {showCategoryPill && (
-          <Link
-            href={`/blog/category/${encodeURIComponent(post.category.toLowerCase().replace(/\s+/g, '-'))}`}
-            className="inline-block bg-orange-100 text-orange-800 text-xs font-medium px-2 py-1 rounded-full hover:bg-orange-200 transition-colors w-fit mb-3"
-          >
-            {post.category}
-          </Link>
-        )}
+        {showCategoryPill && (() => {
+          const slug = categoryToSlug(post.category)
+          const href = EDITORIAL_CATEGORIES.includes(post.category)
+            ? `/blog/category/${encodeURIComponent(slug)}`
+            : `/blog/service/${encodeURIComponent(slug)}`
+          return (
+            <Link
+              href={href}
+              className="inline-block bg-orange-100 text-orange-800 text-xs font-medium px-2 py-1 rounded-full hover:bg-orange-200 transition-colors w-fit mb-3"
+            >
+              {post.category}
+            </Link>
+          )
+        })()}
 
         <h2 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-orange-600 transition-colors">
           <BlogPostLink href={`/blog/${post.slug}`}>

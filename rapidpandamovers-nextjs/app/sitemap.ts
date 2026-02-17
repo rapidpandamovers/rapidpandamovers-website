@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 import { allCities, allLongDistanceRoutes, allLocalRoutes, getServiceSlugs, getAllLocationServiceSlugs, getAllActiveCities } from '@/lib/data'
-import { getPublishedPosts, getCategories, categoryToSlug } from '@/lib/blog'
+import { getPublishedPosts, getCategories, categoryToSlug, isEditorialCategory, getServiceSlugsFromBlog, getPostsByService, getLocationSlugs, getPostsByLocation } from '@/lib/blog'
 import comparisons from '@/data/comparisons.json'
 import alternatives from '@/data/alternatives.json'
 import reviewsData from '@/data/reviews.json'
@@ -63,8 +63,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })
   }
 
-  // Blog category pages
-  const categories = getCategories()
+  // Blog category pages (editorial only)
+  const categories = getCategories().filter(isEditorialCategory)
   const categoryUrls: MetadataRoute.Sitemap = categories.map(category => ({
     url: `${base}/blog/category/${categoryToSlug(category)}`,
     lastModified: now,
@@ -72,7 +72,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }))
 
-  // Blog category pagination pages
+  // Blog category pagination pages (editorial only)
   const categoryPaginationUrls: MetadataRoute.Sitemap = []
   for (const category of categories) {
     const categoryPosts = allBlogPosts.filter(p => p.category === category)
@@ -80,6 +80,54 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     for (let page = 2; page <= totalPages; page++) {
       categoryPaginationUrls.push({
         url: `${base}/blog/category/${categoryToSlug(category)}/page/${page}`,
+        lastModified: now,
+        changeFrequency: 'weekly',
+        priority: 0.5,
+      })
+    }
+  }
+
+  // Blog service pages
+  const serviceSlugs = getServiceSlugsFromBlog()
+  const serviceBlogUrls: MetadataRoute.Sitemap = serviceSlugs.map(slug => ({
+    url: `${base}/blog/service/${slug}`,
+    lastModified: now,
+    changeFrequency: 'weekly',
+    priority: 0.6,
+  }))
+
+  // Blog service pagination pages
+  const serviceBlogPaginationUrls: MetadataRoute.Sitemap = []
+  for (const slug of serviceSlugs) {
+    const posts = getPostsByService(slug)
+    const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE)
+    for (let page = 2; page <= totalPages; page++) {
+      serviceBlogPaginationUrls.push({
+        url: `${base}/blog/service/${slug}/page/${page}`,
+        lastModified: now,
+        changeFrequency: 'weekly',
+        priority: 0.5,
+      })
+    }
+  }
+
+  // Blog location pages
+  const locationSlugs = getLocationSlugs()
+  const locationBlogUrls: MetadataRoute.Sitemap = locationSlugs.map(slug => ({
+    url: `${base}/blog/location/${slug}`,
+    lastModified: now,
+    changeFrequency: 'weekly',
+    priority: 0.6,
+  }))
+
+  // Blog location pagination pages
+  const locationBlogPaginationUrls: MetadataRoute.Sitemap = []
+  for (const slug of locationSlugs) {
+    const posts = getPostsByLocation(slug)
+    const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE)
+    for (let page = 2; page <= totalPages; page++) {
+      locationBlogPaginationUrls.push({
+        url: `${base}/blog/location/${slug}/page/${page}`,
         lastModified: now,
         changeFrequency: 'weekly',
         priority: 0.5,
@@ -97,6 +145,30 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'weekly',
       priority: 0.5,
     })
+  }
+
+  // Reviews platform pages (e.g., /reviews/google)
+  const reviewPlatforms = Array.from(new Set(reviewsData.reviews.map(r => r.platform)))
+  const reviewsPlatformUrls: MetadataRoute.Sitemap = reviewPlatforms.map(platform => ({
+    url: `${base}/reviews/${platform}`,
+    lastModified: now,
+    changeFrequency: 'weekly',
+    priority: 0.6,
+  }))
+
+  // Reviews platform pagination pages (e.g., /reviews/google/page/2)
+  const reviewsPlatformPaginationUrls: MetadataRoute.Sitemap = []
+  for (const platform of reviewPlatforms) {
+    const platformReviews = reviewsData.reviews.filter(r => r.platform === platform)
+    const totalPages = Math.ceil(platformReviews.length / REVIEWS_PER_PAGE)
+    for (let page = 2; page <= totalPages; page++) {
+      reviewsPlatformPaginationUrls.push({
+        url: `${base}/reviews/${platform}/page/${page}`,
+        lastModified: now,
+        changeFrequency: 'weekly',
+        priority: 0.5,
+      })
+    }
   }
 
   // Services
@@ -240,7 +312,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...blogPaginationUrls,
     ...categoryUrls,
     ...categoryPaginationUrls,
+    ...serviceBlogUrls,
+    ...serviceBlogPaginationUrls,
+    ...locationBlogUrls,
+    ...locationBlogPaginationUrls,
     ...reviewsPaginationUrls,
+    ...reviewsPlatformUrls,
+    ...reviewsPlatformPaginationUrls,
     ...serviceUrls,
     ...servicesLocationUrls,
     ...cityUrls,

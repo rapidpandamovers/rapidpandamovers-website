@@ -31,10 +31,10 @@ export default function LocationsPage() {
       )}
 
       {/* Service Locations */}
-      <LocationSection />
+      <LocationSection hideHeader />
 
       {/* Why Choose Us */}
-      <WhySection />
+      <WhySection variant="left" />
 
       {/* CTA Section */}
       <QuoteSection

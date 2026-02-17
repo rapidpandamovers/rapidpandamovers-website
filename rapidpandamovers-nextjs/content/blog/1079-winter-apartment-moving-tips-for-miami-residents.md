@@ -20,7 +20,7 @@ images:
   - "/images/blog/2031/05/winter-apartment-moving-tips-for-miami-residents/cardboard-box-labeled-with-room-destinat-4.webp"
   - "/images/blog/2031/05/winter-apartment-moving-tips-for-miami-residents/happy-woman-sitting-among-boxes-while-pa-1.webp"
 service_link: "/apartment-moving"
-location_link: "/locations/miami"
+location_link: "/miami-movers"
 status: "pending"
 needs_ai_image: false
 ---

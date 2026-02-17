@@ -9,6 +9,7 @@ import MapSection from './MapSection';
 import OverviewSection from './OverviewSection';
 import Breadcrumbs from './Breadcrumbs';
 import QuoteSection from './QuoteSection';
+import { getPostsByLocation } from '@/lib/blog';
 
 
 interface LocationPageProps {
@@ -78,6 +79,13 @@ export default function LocationPage({ city }: LocationPageProps) {
         { label: city.name },
       ];
 
+  // Check if location has blog posts (for viewMoreLink)
+  const hasLocationPosts = getPostsByLocation(city.slug).length > 0;
+  const hasParentLocationPosts = isNeighborhood ? getPostsByLocation(city.parentCity!.slug).length > 0 : false;
+  const blogViewMoreLink = hasLocationPosts
+    ? `/blog/location/${city.slug}`
+    : (hasParentLocationPosts ? `/blog/location/${city.parentCity!.slug}` : '/blog');
+
   // Build info text for zip codes and population
   const infoText = isNeighborhood
     ? (effectiveZipCodes && effectiveZipCodes.length > 0 ? `ZIP Codes: ${effectiveZipCodes.join(', ')}` : undefined)
@@ -138,28 +146,32 @@ export default function LocationPage({ city }: LocationPageProps) {
       {showNeighborhoods && <LocationSection city={city} />}
 
       {/* Available Services Section */}
-      <ServiceSection location={city} />
+      <ServiceSection
+        variant="left"
+        location={city}
+        title={`Moving Services in ${city.name}`}
+      />
 
       {/* Popular Routes Section */}
-      <RouteSection location={city} />
+      <RouteSection location={city} variant="left" />
 
       {/* Related Blog Posts */}
       <BlogSection
-        variant="compact"
+        variant="left"
         locationFilter={city.slug}
         locationFilterFallback={isNeighborhood ? city.parentCity!.slug : undefined}
+        categoryFilterFallback="Location Guide"
         showFeatured={false}
         showCategories={false}
         title={`Moving Tips for ${city.name}`}
-        subtitle={`Helpful guides for your ${city.name} move`}
-        viewMoreTitle="More Moving Tips"
-        viewMoreSubtitle="Browse our full collection of moving guides and advice"
-        viewMoreButtonText="View All Moving Tips"
-        viewMoreLink="/blog"
+        showViewMore
+        viewMoreButtonText="View All Articles"
+        viewMoreLink={blogViewMoreLink}
+        maxPosts={3}
       />
 
       {/* Why Choose Us */}
-      <WhySection />
+      <WhySection variant="left" />
 
       {/* About Us - Only for Cities */}
       {!isNeighborhood && <AboutSection />}

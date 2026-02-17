@@ -19,7 +19,7 @@ images:
   - "/images/blog/2031/05/full-service-moving-tips-for-spring-cleaning/two-movers-load-a-van-with-furniture-dur-1.webp"
   - "/images/blog/2031/05/full-service-moving-tips-for-spring-cleaning/two-professional-movers-in-an-empty-apar-2.webp"
 service_link: "/full-service-moving"
-location_link: "/locations/miami"
+location_link: "/miami-movers"
 status: "pending"
 needs_ai_image: false
 ---

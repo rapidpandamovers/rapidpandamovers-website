@@ -30,7 +30,7 @@ export const getPageContent = (slug: string) => {
 };
 
 export const getAllActiveCities = () => {
-  const cities: Array<{ name: string; slug: string }> = [];
+  const cities: Array<{ name: string; slug: string; population?: number }> = [];
   for (const state of allCities.states) {
     if (!state.is_active) continue;
     for (const county of state.counties) {
@@ -39,7 +39,8 @@ export const getAllActiveCities = () => {
         if (city.is_active) {
           cities.push({
             name: city.name,
-            slug: city.slug
+            slug: city.slug,
+            population: (city as Record<string, unknown>).population as number | undefined,
           });
         }
       }

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { getPostsSortedByDate, getCategories, categoryToSlug } from '../../lib/blog'
+import { getPostsSortedByDate, getCategories, categoryToSlug, getPostsByLocation, getPostsByService, getLocationSlugs, getLocationNameBySlug } from '../../lib/blog'
 import Hero from '../components/Hero'
 import ResourceSection from '../components/ResourceSection'
 import NewsletterSection from '../components/NewsletterSection'
@@ -13,14 +13,18 @@ const POSTS_PER_PAGE = 12
 interface BlogListPageProps {
   currentPage: number
   category?: string | null
+  locationSlug?: string | null
+  locationName?: string | null
+  serviceSlug?: string | null
+  serviceName?: string | null
 }
 
-export default function BlogListPage({ currentPage, category = null }: BlogListPageProps) {
+export default function BlogListPage({ currentPage, category = null, locationSlug = null, locationName = null, serviceSlug = null, serviceName = null }: BlogListPageProps) {
   // Get posts sorted by date descending (newest first)
   // Handle errors gracefully - if parsing fails, show empty state
   let sortedBlog: ReturnType<typeof getPostsSortedByDate> = []
   let categories: ReturnType<typeof getCategories> = []
-  
+
   try {
     sortedBlog = getPostsSortedByDate()
     categories = getCategories()
@@ -29,16 +33,26 @@ export default function BlogListPage({ currentPage, category = null }: BlogListP
     // sortedBlog and categories remain empty arrays
   }
 
-  // Filter posts by category
-  const filteredPosts = category
-    ? sortedBlog.filter(post => post.category === category)
-    : sortedBlog
+  // Filter posts by category, location, or service
+  const dateSorter = (a: { date: string; id: number }, b: { date: string; id: number }) => {
+    const dateCompare = new Date(b.date).getTime() - new Date(a.date).getTime()
+    if (dateCompare !== 0) return dateCompare
+    return b.id - a.id
+  }
+
+  const filteredPosts = serviceSlug
+    ? getPostsByService(serviceSlug).sort(dateSorter)
+    : locationSlug
+      ? getPostsByLocation(locationSlug).sort(dateSorter)
+      : category
+        ? sortedBlog.filter(post => post.category === category)
+        : sortedBlog
 
   // Get featured post (first post, only on page 1 when showing all)
-  const featuredPost = (!category && currentPage === 1) ? sortedBlog[0] : null
+  const featuredPost = (!category && !locationSlug && !serviceSlug && currentPage === 1) ? sortedBlog[0] : null
 
   // Posts for pagination (exclude featured if showing all on page 1)
-  const postsForPagination = category
+  const postsForPagination = (category || serviceSlug || locationSlug)
     ? filteredPosts
     : filteredPosts.slice(1)
 
@@ -47,8 +61,16 @@ export default function BlogListPage({ currentPage, category = null }: BlogListP
   const startIndex = (currentPage - 1) * POSTS_PER_PAGE
   const paginatedPosts = postsForPagination.slice(startIndex, startIndex + POSTS_PER_PAGE)
 
-  // Generate page URL (include category slug when filtering)
+  // Generate page URL (include category/location/service slug when filtering)
   const getPageUrl = (page: number) => {
+    if (serviceSlug) {
+      if (page === 1) return `/blog/service/${encodeURIComponent(serviceSlug)}`
+      return `/blog/service/${encodeURIComponent(serviceSlug)}/page/${page}`
+    }
+    if (locationSlug) {
+      if (page === 1) return `/blog/location/${encodeURIComponent(locationSlug)}`
+      return `/blog/location/${encodeURIComponent(locationSlug)}/page/${page}`
+    }
     if (category) {
       const slug = categoryToSlug(category)
       if (page === 1) return `/blog/category/${encodeURIComponent(slug)}`
@@ -107,7 +129,13 @@ export default function BlogListPage({ currentPage, category = null }: BlogListP
       <div className="container mx-auto pt-20">
 
         {/* Categories Filter */}
-        <BlogCategoryFilter categories={categories} activeCategory={category} />
+        <BlogCategoryFilter
+          categories={categories}
+          activeCategory={category}
+          locations={getLocationSlugs().map(s => ({ slug: s, name: getLocationNameBySlug(s) || s })).filter(l => l.name !== l.slug).sort((a, b) => a.name.localeCompare(b.name))}
+          activeLocation={locationSlug}
+          activeService={serviceSlug}
+        />
 
         {/* Featured Post (only on page 1 when showing all posts) */}
         {featuredPost && (
@@ -116,14 +144,14 @@ export default function BlogListPage({ currentPage, category = null }: BlogListP
           </div>
         )}
 
-        {/* Category Header (when filtered) */}
-        {category && (
+        {/* Category/Location/Service Header (when filtered) */}
+        {(category || locationName || serviceName) && (
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-800">
-              {category}
+              {serviceName ? `${serviceName} Tips & Guides` : locationName ? `Moving Tips for ${locationName}` : category}
             </h2>
             <p className="text-gray-600 mt-2">
-              {filteredPosts.length} post{filteredPosts.length !== 1 ? 's' : ''} in this category
+              {filteredPosts.length} post{filteredPosts.length !== 1 ? 's' : ''} {serviceName ? `about ${serviceName.toLowerCase()}` : locationName ? `about ${locationName}` : 'in this category'}
             </p>
           </div>
         )}
