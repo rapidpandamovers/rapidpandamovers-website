@@ -6,7 +6,7 @@ excerpt: "Miami Lakes has over 100 parks within 6.5 square miles. Here are seven
 date: "2026-11-25"
 updated: "2026-11-25"
 readTime: "3 min read"
-category: "Lifestyle"
+category: "Military Moving"
 image_folder: "/images/blog/2026/11/7-best-parks-and-outdoor-spaces-in-miami-lakes"
 featured: "/images/blog/2026/11/7-best-parks-and-outdoor-spaces-in-miami-lakes/a-serene-winter-scene-featuring-snow-cov-3.webp"
 image_keywords:
@@ -19,8 +19,7 @@ images:
   - "/images/blog/2026/11/7-best-parks-and-outdoor-spaces-in-miami-lakes/discover-shanghai-s-serene-park-with-lus-4.webp"
   - "/images/blog/2026/11/7-best-parks-and-outdoor-spaces-in-miami-lakes/lush-greenery-and-charming-architecture--2.webp"
   - "/images/blog/2026/11/7-best-parks-and-outdoor-spaces-in-miami-lakes/tranquil-waterfall-cascading-in-a-rocky--1.webp"
-
-service_link: null
+service_link: "/military-moving"
 location_link: "/miami-lakes-movers"
 status: "pending"
 needs_ai_image: false

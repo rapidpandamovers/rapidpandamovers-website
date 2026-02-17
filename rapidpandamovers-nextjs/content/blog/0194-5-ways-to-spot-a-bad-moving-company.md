@@ -17,7 +17,6 @@ images:
   - "/images/blog/2025/07/5-ways-to-spot-a-bad-moving-company/a-moving-truck-parked-outside-a-modern-a-4.webp"
   - "/images/blog/2025/07/5-ways-to-spot-a-bad-moving-company/tow-truck-operator-loading-white-gmc-pic-2.webp"
   - "/images/blog/2025/07/5-ways-to-spot-a-bad-moving-company/vibrant-cargo-truck-cruising-a-scenic-mo-5.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "pending"

@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/09/florida-city-for-new-residents-a-complete-resource/close-up-of-a-majestic-osprey-in-flight--2.webp"
   - "/images/blog/2028/09/florida-city-for-new-residents-a-complete-resource/detailed-close-up-of-an-american-crocodi-4.webp"
   - "/images/blog/2028/09/florida-city-for-new-residents-a-complete-resource/tranquil-view-of-the-everglades-wetlands-3.webp"
-
 service_link: null
 location_link: "/florida-city-movers"
 status: "complete"

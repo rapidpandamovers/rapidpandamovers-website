@@ -17,8 +17,7 @@ images:
   - "/images/blog/2027/05/10-quick-organization-hacks-for-new-residents/people-loading-supplies-onto-a-truck-in--2.webp"
   - "/images/blog/2027/05/10-quick-organization-hacks-for-new-residents/red-truck-with-large-covered-cargo-in-an-1.webp"
   - "/images/blog/2027/05/10-quick-organization-hacks-for-new-residents/three-men-loading-wooden-boxes-on-a-truc-3.webp"
-
-service_link: /local-moving
+service_link: "/local-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

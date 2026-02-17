@@ -20,7 +20,6 @@ images:
   - "/images/blog/2027/06/miami-antique-moving-june-edition/happy-man-carrying-a-moving-box-in-a-bri-4.webp"
   - "/images/blog/2027/06/miami-antique-moving-june-edition/man-sitting-on-a-stool-in-a-room-with-mo-3.webp"
   - "/images/blog/2027/06/miami-antique-moving-june-edition/young-adult-male-smiling-while-handling--2.webp"
-
 service_link: "/antique-moving"
 location_link: null
 status: "completed"

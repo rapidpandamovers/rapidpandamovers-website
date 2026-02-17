@@ -17,8 +17,7 @@ images:
   - "/images/blog/2030/02/9-clever-storage-solutions-for-your-new-home/a-stack-of-storage-boxes-in-a-well-organ-3.webp"
   - "/images/blog/2030/02/9-clever-storage-solutions-for-your-new-home/black-and-white-image-of-vintage-metal-f-2.webp"
   - "/images/blog/2030/02/9-clever-storage-solutions-for-your-new-home/three-blue-shutter-doors-numbered-9-8-an-1.webp"
-
-service_link: null
+service_link: "/storage-solutions"
 location_link: null
 status: "pending"
 needs_ai_image: false

@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/08/college-last-minute-moving-strategies-in-miami/a-top-view-of-wooden-letters-spelling-la-4.webp"
   - "/images/blog/2030/08/college-last-minute-moving-strategies-in-miami/dynamic-capture-of-a-chicago-fire-dept-a-1.webp"
   - "/images/blog/2030/08/college-last-minute-moving-strategies-in-miami/young-frowning-man-in-suit-and-glasses-l-2.webp"
-
 service_link: "/last-minute-moving"
 location_link: null
 status: "completed"

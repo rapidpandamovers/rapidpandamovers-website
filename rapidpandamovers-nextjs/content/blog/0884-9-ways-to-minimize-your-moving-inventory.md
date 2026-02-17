@@ -17,7 +17,6 @@ images:
   - "/images/blog/2029/12/9-ways-to-minimize-your-moving-inventory/a-serene-minimalist-bedroom-scene-featur-2.webp"
   - "/images/blog/2029/12/9-ways-to-minimize-your-moving-inventory/flat-lay-of-cosmetics-and-accessories-ne-1.webp"
   - "/images/blog/2029/12/9-ways-to-minimize-your-moving-inventory/person-s-hands-organizing-a-desk-drawer--3.webp"
-
 service_link: null
 location_link: null
 status: "complete"

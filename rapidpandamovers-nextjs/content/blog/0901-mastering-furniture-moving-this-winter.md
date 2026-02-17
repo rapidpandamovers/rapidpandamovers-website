@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/01/mastering-furniture-moving-this-winter/a-fluffy-cat-sits-on-a-brown-sofa-with-d-3.webp"
   - "/images/blog/2030/01/mastering-furniture-moving-this-winter/stylish-living-room-with-beige-sofa-and--1.webp"
   - "/images/blog/2030/01/mastering-furniture-moving-this-winter/woman-enjoying-a-soft-beige-sofa-in-a-br-2.webp"
-
 service_link: "/furniture-moving"
 location_link: null
 status: "pending"

@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/08/practical-labor-only-moving-advice-for-august/a-man-carries-heavy-rolled-carpets-on-hi-2.webp"
   - "/images/blog/2029/08/practical-labor-only-moving-advice-for-august/dock-workers-securing-ropes-in-a-coastal-1.webp"
   - "/images/blog/2029/08/practical-labor-only-moving-advice-for-august/two-men-load-construction-materials-onto-3.webp"
-
 service_link: "/labor-only-moving"
 location_link: null
 status: "pending"

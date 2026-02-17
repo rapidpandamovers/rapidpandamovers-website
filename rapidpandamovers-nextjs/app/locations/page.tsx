@@ -3,6 +3,7 @@ import Hero from '@/app/components/Hero'
 import QuoteSection from '@/app/components/QuoteSection'
 import OverviewSection from '@/app/components/OverviewSection'
 import LocationSection from '@/app/components/LocationSection'
+import WhySection from '@/app/components/WhySection'
 
 export default function LocationsPage() {
   const content = allContent
@@ -31,6 +32,9 @@ export default function LocationsPage() {
 
       {/* Service Locations */}
       <LocationSection />
+
+      {/* Why Choose Us */}
+      <WhySection />
 
       {/* CTA Section */}
       <QuoteSection

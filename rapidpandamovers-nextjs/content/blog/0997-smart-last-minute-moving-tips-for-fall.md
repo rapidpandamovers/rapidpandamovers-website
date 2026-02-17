@@ -17,7 +17,6 @@ images:
   - "/images/blog/2030/09/smart-last-minute-moving-tips-for-fall/crop-unrecognizable-man-in-casual-clothe-3.webp"
   - "/images/blog/2030/09/smart-last-minute-moving-tips-for-fall/labeled-cardboard-boxes-for-summer-cloth-2.webp"
   - "/images/blog/2030/09/smart-last-minute-moving-tips-for-fall/woman-sealing-boxes-with-tape-for-reloca-1.webp"
-
 service_link: "/last-minute-moving"
 location_link: null
 status: "pending"

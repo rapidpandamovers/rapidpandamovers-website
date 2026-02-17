@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/09/september-moving-safe-moving-fundamentals/assorted-firearms-arranged-on-a-wooden-t-2.webp"
   - "/images/blog/2030/09/september-moving-safe-moving-fundamentals/camouflage-and-orange-toy-gun-on-white-f-4.webp"
   - "/images/blog/2030/09/september-moving-safe-moving-fundamentals/orange-and-black-toy-gun-with-camouflage-3.webp"
-
 service_link: "/safe-moving"
 location_link: null
 status: "pending"

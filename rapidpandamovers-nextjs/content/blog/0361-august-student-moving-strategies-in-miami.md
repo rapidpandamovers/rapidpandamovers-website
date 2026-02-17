@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/08/august-student-moving-strategies-in-miami/loc-captivating-view-of-miami-s-iconic-skyli-2.webp"
   - "/images/blog/2026/08/august-student-moving-strategies-in-miami/svc-a-diverse-group-of-friends-enjoying-leis-2.webp"
   - "/images/blog/2026/08/august-student-moving-strategies-in-miami/svc-a-group-of-friends-enjoying-playful-mome-1.webp"
-
 service_link: "/student-moving"
 location_link: null
 status: "pending"

@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/01/exploring-coral-gables-tips-for-newcomers/a-picturesque-view-of-palm-trees-along-a-3.webp"
   - "/images/blog/2027/01/exploring-coral-gables-tips-for-newcomers/a-scenic-pathway-in-coral-gables-florida-1.webp"
   - "/images/blog/2027/01/exploring-coral-gables-tips-for-newcomers/students-walking-on-the-bright-universit-2.webp"
-
 service_link: "/coral-gables-local-moving"
 location_link: "/coral-gables-movers"
 status: "pending"

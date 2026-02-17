@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/12/7-things-movers-arent-allowed-to-transport/a-blue-volvo-truck-parked-outside-a-ware-1.webp"
   - "/images/blog/2027/12/7-things-movers-arent-allowed-to-transport/a-classic-hong-kong-tram-traverses-moder-3.webp"
   - "/images/blog/2027/12/7-things-movers-arent-allowed-to-transport/pink-moving-trucks-parked-in-a-chicago-a-2.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "pending"

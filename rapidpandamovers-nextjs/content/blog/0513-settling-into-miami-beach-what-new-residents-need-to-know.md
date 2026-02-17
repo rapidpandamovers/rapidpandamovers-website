@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/08/settling-into-miami-beach-what-new-residents-need-to-know/loc-relax-on-blue-beach-chairs-with-umbrella-1.webp"
   - "/images/blog/2027/08/settling-into-miami-beach-what-new-residents-need-to-know/svc-a-pile-of-empty-cardboard-boxes-arranged-1.webp"
   - "/images/blog/2027/08/settling-into-miami-beach-what-new-residents-need-to-know/svc-young-adult-male-smiling-while-handling--2.webp"
-
 service_link: "/miami-beach-local-moving"
 location_link: "/miami-beach-movers"
 status: "complete"

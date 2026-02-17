@@ -20,7 +20,6 @@ images:
   - "/images/blog/2024/02/miami-shopping-guide-best-retail-districts/loc-explore-the-vibrant-miami-skyline-with-a-2.webp"
   - "/images/blog/2024/02/miami-shopping-guide-best-retail-districts/svc-a-classic-hong-kong-tram-traverses-moder-1.webp"
   - "/images/blog/2024/02/miami-shopping-guide-best-retail-districts/svc-high-angle-view-of-an-asda-delivery-truc-2.webp"
-
 service_link: "/local-moving"
 location_link: "/locations/miami"
 status: "pending"

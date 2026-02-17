@@ -18,7 +18,6 @@ images:
   - "/images/blog/2024/11/5-safety-measures-for-new-homeowners/close-up-of-an-old-security-camera-mount-2.webp"
   - "/images/blog/2024/11/5-safety-measures-for-new-homeowners/close-up-of-three-smart-home-security-ca-1.webp"
   - "/images/blog/2024/11/5-safety-measures-for-new-homeowners/close-up-view-of-a-dome-security-camera--3.webp"
-
 service_link: null
 location_link: null
 status: "completed"

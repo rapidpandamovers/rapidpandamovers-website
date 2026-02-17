@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/09/8-items-banned-from-professional-moving-trucks/a-cheerful-man-carries-a-large-couch-acr-1.webp"
   - "/images/blog/2026/09/8-items-banned-from-professional-moving-trucks/an-excavator-working-on-a-sandy-beach-co-2.webp"
   - "/images/blog/2026/09/8-items-banned-from-professional-moving-trucks/two-movers-load-a-van-with-furniture-dur-3.webp"
-
 service_link: "/residential-moving"
 location_link: null
 status: "complete"

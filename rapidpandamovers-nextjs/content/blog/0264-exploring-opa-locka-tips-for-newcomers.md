@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/12/exploring-opa-locka-tips-for-newcomers/multiple-mailboxes-in-a-row-beside-a-hou-2.webp"
   - "/images/blog/2025/12/exploring-opa-locka-tips-for-newcomers/scenic-aerial-shot-of-a-sprawling-reside-4.webp"
   - "/images/blog/2025/12/exploring-opa-locka-tips-for-newcomers/two-cars-parked-outside-a-house-in-gaine-3.webp"
-
 service_link: null
 location_link: "/opa-locka-movers"
 status: "pending"

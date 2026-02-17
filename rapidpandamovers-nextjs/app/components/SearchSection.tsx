@@ -13,7 +13,7 @@ interface SearchResult {
 }
 
 interface BlogPost {
-  id: string;
+  id: number;
   title: string;
   slug: string;
   excerpt: string;
@@ -253,10 +253,10 @@ export default function SearchSection({
   }
 
   return (
-    <section className="py-12">
+    <section className="pt-20">
       <div className="container mx-auto">
         <div className="text-center mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
             Find Your <span className="text-orange-500">Moving Service</span>
           </h2>
           <p className="text-gray-600">

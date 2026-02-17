@@ -2,7 +2,7 @@
 id: 517
 title: "Your August Furniture Moving Checklist"
 slug: "your-august-furniture-moving-checklist"
-excerpt: "A complete furniture moving checklist for August, from preparation and wrapping to Miami-specific heat and humidity considerations."
+excerpt: "August moves in Miami bring two challenges: extreme heat that can damage furniture, and back-to-school rush that fills every moving company's calendar..."
 date: "2027-08-16"
 readTime: "7 min read"
 category: "Furniture Moving"
@@ -17,7 +17,6 @@ images:
   - "/images/blog/2027/08/your-august-furniture-moving-checklist/a-comfortable-green-sofa-with-a-plush-co-2.webp"
   - "/images/blog/2027/08/your-august-furniture-moving-checklist/stylish-living-room-with-beige-sofa-and--1.webp"
   - "/images/blog/2027/08/your-august-furniture-moving-checklist/woman-adjusts-pillow-on-a-beige-sofa-in--3.webp"
-
 service_link: "/furniture-moving"
 location_link: null
 status: "complete"

@@ -20,7 +20,6 @@ images:
   - "/images/blog/2030/10/starting-fresh-in-florida-city-a-newcomers-guide/close-up-of-a-majestic-osprey-in-flight--3.webp"
   - "/images/blog/2030/10/starting-fresh-in-florida-city-a-newcomers-guide/close-up-of-an-alligator-swimming-subtly-1.webp"
   - "/images/blog/2030/10/starting-fresh-in-florida-city-a-newcomers-guide/detailed-close-up-of-an-american-crocodi-4.webp"
-
 service_link: null
 location_link: "/florida-city-movers"
 status: "pending"

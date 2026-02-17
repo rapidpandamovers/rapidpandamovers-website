@@ -6,7 +6,7 @@ excerpt: "Stop living out of boxes. These 8 unpacking strategies get you settled
 date: "2028-01-05"
 updated: "2028-01-05"
 readTime: "2 min read"
-category: "Home & Living"
+category: "Celebrity Moving"
 image_folder: "/images/blog/2028/01/8-ways-to-speed-up-the-unpacking-process"
 featured: "/images/blog/2028/01/8-ways-to-speed-up-the-unpacking-process/a-couple-unpacking-cardboard-boxes-in-th-3.webp"
 image_keywords:
@@ -17,8 +17,7 @@ images:
   - "/images/blog/2028/01/8-ways-to-speed-up-the-unpacking-process/a-couple-unpacking-cardboard-boxes-in-th-3.webp"
   - "/images/blog/2028/01/8-ways-to-speed-up-the-unpacking-process/a-young-couple-unpacks-boxes-in-their-ne-2.webp"
   - "/images/blog/2028/01/8-ways-to-speed-up-the-unpacking-process/couple-sitting-on-the-floor-unpacking-bo-1.webp"
-
-service_link: null
+service_link: "/celebrity-moving"
 location_link: null
 status: "completed"
 needs_ai_image: false

@@ -2,7 +2,7 @@
 id: 146
 title: "5 Box Packing Mistakes That Cost You Money"
 slug: "5-box-packing-mistakes-that-cost-you-money"
-excerpt: "Avoid these 5 costly box packing mistakes that damage belongings during moves. Expert tips for safer packing in Miami."
+excerpt: "Avoid these 5 costly box packing mistakes that damage belongings during moves. Expert tips for safer packing in Miami..."
 date: "2025-03-26"
 updated: "2025-03-26"
 readTime: "2 min read"
@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/03/5-box-packing-mistakes-that-cost-you-money/close-up-of-hands-packing-a-box-labeled--1.webp"
   - "/images/blog/2025/03/5-box-packing-mistakes-that-cost-you-money/crop-unrecognizable-man-in-casual-clothe-4.webp"
   - "/images/blog/2025/03/5-box-packing-mistakes-that-cost-you-money/labeled-cardboard-boxes-for-summer-cloth-2.webp"
-
 service_link: "/miami-packing-services"
 location_link: "/miami-movers"
 status: "pending"

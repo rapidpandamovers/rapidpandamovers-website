@@ -17,7 +17,6 @@ images:
   - "/images/blog/2026/10/5-packing-pitfalls-that-cause-moving-disasters/a-person-handling-a-moving-box-with-a-ca-1.webp"
   - "/images/blog/2026/10/5-packing-pitfalls-that-cause-moving-disasters/confident-young-woman-carrying-cardboard-2.webp"
   - "/images/blog/2026/10/5-packing-pitfalls-that-cause-moving-disasters/crop-anonymous-guy-in-casual-clothes-usi-3.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "pending"

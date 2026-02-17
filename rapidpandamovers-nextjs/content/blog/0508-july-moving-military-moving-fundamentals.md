@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/07/july-moving-military-moving-fundamentals/a-close-up-of-a-soldier-in-uniform-holdi-1.webp"
   - "/images/blog/2027/07/july-moving-military-moving-fundamentals/a-joyful-military-family-reunion-indoors-3.webp"
   - "/images/blog/2027/07/july-moving-military-moving-fundamentals/emotional-family-reunion-with-a-soldier--2.webp"
-
 service_link: "/military-moving"
 location_link: null
 status: "pending"

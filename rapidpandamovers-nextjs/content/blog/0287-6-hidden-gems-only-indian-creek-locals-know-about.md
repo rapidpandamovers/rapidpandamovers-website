@@ -17,7 +17,6 @@ images:
   - "/images/blog/2026/02/6-hidden-gems-only-indian-creek-locals-know-about/discover-upscale-shopping-in-union-squar-3.webp"
   - "/images/blog/2026/02/6-hidden-gems-only-indian-creek-locals-know-about/modern-tiffany-co-storefront-in-the-wood-2.webp"
   - "/images/blog/2026/02/6-hidden-gems-only-indian-creek-locals-know-about/people-enjoying-outdoor-activities-along-1.webp"
-
 service_link: null
 location_link: "/indian-creek-movers"
 status: "pending"

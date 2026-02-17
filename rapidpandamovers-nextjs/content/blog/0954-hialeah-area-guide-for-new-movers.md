@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/05/hialeah-area-guide-for-new-movers/scenic-aerial-shot-of-a-sprawling-reside-1.webp"
   - "/images/blog/2030/05/hialeah-area-guide-for-new-movers/three-cluster-mailboxes-under-trees-in-a-3.webp"
   - "/images/blog/2030/05/hialeah-area-guide-for-new-movers/vibrant-yellow-and-blue-fire-hydrant-in--2.webp"
-
 service_link: null
 location_link: "/hialeah-movers"
 status: "pending"

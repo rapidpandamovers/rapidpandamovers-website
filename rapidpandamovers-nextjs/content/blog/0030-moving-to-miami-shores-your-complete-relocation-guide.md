@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/03/moving-to-miami-shores-your-complete-relocation-guide/loc-explore-this-modern-miami-residence-with-1.webp"
   - "/images/blog/2024/03/moving-to-miami-shores-your-complete-relocation-guide/svc-people-loading-supplies-onto-a-truck-in--1.webp"
   - "/images/blog/2024/03/moving-to-miami-shores-your-complete-relocation-guide/svc-vintage-truck-carrying-heavy-cargo-bags--2.webp"
-
 service_link: "/miami-shores-local-moving"
 location_link: "/miami-shores-movers"
 status: "pending"

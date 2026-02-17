@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/07/cutler-bay-for-new-residents-a-complete-resource/a-family-involved-in-a-creative-activity-3.webp"
   - "/images/blog/2030/07/cutler-bay-for-new-residents-a-complete-resource/a-family-of-three-takes-a-joyful-selfie--4.webp"
   - "/images/blog/2030/07/cutler-bay-for-new-residents-a-complete-resource/smiling-family-sitting-on-a-covered-sofa-2.webp"
-
 service_link: null
 location_link: "/cutler-bay-movers"
 status: "pending"

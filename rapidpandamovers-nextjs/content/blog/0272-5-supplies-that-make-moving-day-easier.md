@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/01/5-supplies-that-make-moving-day-easier/a-charming-portrait-of-a-child-with-curl-1.webp"
   - "/images/blog/2026/01/5-supplies-that-make-moving-day-easier/a-pile-of-empty-cardboard-boxes-arranged-3.webp"
   - "/images/blog/2026/01/5-supplies-that-make-moving-day-easier/cardboard-moving-boxes-in-a-modern-kitch-2.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "complete"

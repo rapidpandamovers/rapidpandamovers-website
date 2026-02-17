@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/11/fall-moving-tips-for-south-miami-newcomers/a-joyful-moment-of-a-mother-and-child-pl-1.webp"
   - "/images/blog/2026/11/fall-moving-tips-for-south-miami-newcomers/a-person-holding-a-cardboard-box-labeled-3.webp"
   - "/images/blog/2026/11/fall-moving-tips-for-south-miami-newcomers/cardboard-box-labeled-with-room-destinat-2.webp"
-
 service_link: null
 location_link: "/south-miami-movers"
 status: "pending"

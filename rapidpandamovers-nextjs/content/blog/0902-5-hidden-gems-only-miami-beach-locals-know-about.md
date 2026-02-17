@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/01/5-hidden-gems-only-miami-beach-locals-know-about/red-truck-with-large-covered-cargo-in-an-4.webp"
   - "/images/blog/2030/01/5-hidden-gems-only-miami-beach-locals-know-about/semi-truck-parked-at-a-loading-dock-with-3.webp"
   - "/images/blog/2030/01/5-hidden-gems-only-miami-beach-locals-know-about/trucks-loaded-with-goods-parked-on-a-dir-1.webp"
-
 service_link: null
 location_link: "/miami-beach-movers"
 status: "pending"

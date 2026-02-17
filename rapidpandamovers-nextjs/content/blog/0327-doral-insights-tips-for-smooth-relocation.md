@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/05/doral-insights-tips-for-smooth-relocation/beautiful-night-view-of-miami-s-skyline--1.webp"
   - "/images/blog/2026/05/doral-insights-tips-for-smooth-relocation/explore-the-vibrant-miami-skyline-at-nig-2.webp"
   - "/images/blog/2026/05/doral-insights-tips-for-smooth-relocation/stylish-bar-interior-with-decorative-lig-3.webp"
-
 service_link: "/doral-local-moving"
 location_link: "/doral-movers"
 status: "pending"

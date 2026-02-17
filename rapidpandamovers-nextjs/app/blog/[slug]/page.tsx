@@ -1,18 +1,17 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Calendar, Clock } from 'lucide-react'
-import QuoteSection from '../../components/QuoteSection'
+import BlogSection from '../../components/BlogSection'
 import Breadcrumbs from '../../components/Breadcrumbs'
 import { ArticleSchema } from '../../components/Schema'
 import { notFound } from 'next/navigation'
-import { getAllPosts, getPostBySlug, getRelatedPosts, categoryToSlug } from '../../../lib/blog'
+import { getPublishedPosts, getPostBySlug, categoryToSlug } from '../../../lib/blog'
 import { generateBlogMetadata } from '../../../lib/metadata'
 import BlogHeroImage from '../BlogHeroImage'
 
 export async function generateStaticParams() {
   try {
-    const posts = getAllPosts()
+    const posts = getPublishedPosts()
     return posts.map((post) => ({
       slug: post.slug,
     }))
@@ -57,15 +56,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   if (!post) {
     notFound()
-  }
-
-  // Get related posts once at component level to prevent re-computation on re-renders
-  let relatedPosts: ReturnType<typeof getRelatedPosts> = []
-  try {
-    relatedPosts = getRelatedPosts(post.slug, 2)
-  } catch (error) {
-    console.error('[BlogPostPage] Error loading related posts:', error)
-    relatedPosts = []
   }
 
   // Parse inline markdown (bold and links) into React elements
@@ -300,7 +290,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       />
 
       {/* Hero Section - Magazine Style with Rounded Box */}
-      <div className="container mx-auto py-5">
+      <div className="container mx-auto pt-5 pb-0">
         <BlogHeroImage
           featured={post.featured}
           title={post.title}
@@ -328,52 +318,23 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <div className="clear-both"></div>
         </div>
 
-        <QuoteSection
-          title="Ready to get started?"
-          subtitle="Let Rapid Panda Movers handle your move with professionalism and care."
-        />
       </article>
 
       {/* Related Posts */}
-      <div className="py-16">
-        <div className="container mx-auto">
-          <h3 className="text-2xl font-bold text-gray-800 mb-8 flex items-center gap-3">
-            <span className="w-1 h-6 bg-orange-500 rounded-full"></span>
-            Related Articles
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {relatedPosts.map((relatedPost) => (
-              <Link
-                key={relatedPost.id}
-                href={`/blog/${relatedPost.slug}`}
-                className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
-              >
-                {relatedPost.featured && (
-                  <div className="relative h-40 overflow-hidden">
-                    <Image
-                      src={relatedPost.featured}
-                      alt={relatedPost.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                )}
-                <div className="p-5">
-                  <div className="text-sm text-orange-600 font-medium mb-2">
-                    {relatedPost.category}
-                  </div>
-                  <h4 className="text-lg font-bold text-gray-800 mb-2 group-hover:text-orange-600 transition-colors">
-                    {relatedPost.title}
-                  </h4>
-                  <p className="text-gray-600 text-sm line-clamp-2">
-                    {relatedPost.excerpt}
-                  </p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
+      <BlogSection
+        variant="compact"
+        title="Related Articles"
+        categoryFilter={post.category}
+        excludeSlug={post.slug}
+        showFeatured={false}
+        showCategories={false}
+        showImages={false}
+        hideHeader={false}
+        viewMoreTitle="Explore More Articles"
+        viewMoreSubtitle="Discover helpful tips and guides for your move"
+        viewMoreButtonText="View All Articles"
+        viewMoreLink={`/blog/category/${categoryToSlug(post.category)}`}
+      />
     </div>
   )
 }

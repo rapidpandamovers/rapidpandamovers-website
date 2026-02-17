@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/02/miami-shores-neighborhood-guide-for-new-residents/explore-this-modern-miami-residence-with-2.webp"
   - "/images/blog/2027/02/miami-shores-neighborhood-guide-for-new-residents/stunning-aerial-shot-of-miami-beach-skyl-1.webp"
   - "/images/blog/2027/02/miami-shores-neighborhood-guide-for-new-residents/vibrant-lifeguard-tower-on-the-sandy-sho-3.webp"
-
 service_link: "/miami-shores-local-moving"
 location_link: "/miami-shores-movers"
 status: "pending"

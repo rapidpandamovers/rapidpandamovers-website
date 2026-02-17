@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/02/9-ideas-to-make-moving-fun-for-the-whole-family/cute-child-with-curly-hair-peeks-from-in-1.webp"
   - "/images/blog/2030/02/9-ideas-to-make-moving-fun-for-the-whole-family/family-enjoying-a-creative-moment-while--4.webp"
   - "/images/blog/2030/02/9-ideas-to-make-moving-fun-for-the-whole-family/kids-enjoying-creative-time-drawing-on-a-2.webp"
-
 service_link: null
 location_link: null
 status: "pending"

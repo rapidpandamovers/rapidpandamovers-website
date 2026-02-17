@@ -2,7 +2,7 @@
 id: 797
 title: "6 First-Time Mover Mistakes Miami Residents Make"
 slug: "6-first-time-mover-mistakes-miami-residents-make"
-excerpt: "First-time mover in Miami? Avoid these 6 costly mistakes that catch newcomers off guard. Local insights from professional movers."
+excerpt: "First-time mover in Miami? Avoid these 6 costly mistakes that catch newcomers off guard."
 date: "2029-05-30"
 readTime: "4 min read"
 category: "Local Moving"
@@ -17,7 +17,6 @@ images:
   - "/images/blog/2029/05/6-first-time-mover-mistakes-miami-residents-make/loc-a-picturesque-view-of-miami-s-skyline-at-2.webp"
   - "/images/blog/2029/05/6-first-time-mover-mistakes-miami-residents-make/svc-movers-loading-boxes-into-a-truck-on-a-s-2.webp"
   - "/images/blog/2029/05/6-first-time-mover-mistakes-miami-residents-make/svc-u-haul-moving-truck-parked-on-roadside-w-1.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "pending"

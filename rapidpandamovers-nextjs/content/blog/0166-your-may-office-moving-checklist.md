@@ -19,7 +19,6 @@ images:
   - "/images/blog/2025/05/your-may-office-moving-checklist/professional-man-organizing-office-belon-2.webp"
   - "/images/blog/2025/05/your-may-office-moving-checklist/side-view-of-attentive-young-woman-with--1.webp"
   - "/images/blog/2025/05/your-may-office-moving-checklist/young-woman-concentrating-while-packing--4.webp"
-
 service_link: "/office-moving"
 location_link: null
 status: "pending"

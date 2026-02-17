@@ -17,7 +17,6 @@ images:
   - "/images/blog/2030/04/10-cost-cutting-strategies-for-your-relocation/a-close-up-of-a-woman-s-hand-putting-rol-2.webp"
   - "/images/blog/2030/04/10-cost-cutting-strategies-for-your-relocation/hand-holding-a-leather-wallet-with-visib-4.webp"
   - "/images/blog/2030/04/10-cost-cutting-strategies-for-your-relocation/miniature-shopping-cart-with-cash-next-t-1.webp"
-
 service_link: null
 location_link: null
 status: "pending"

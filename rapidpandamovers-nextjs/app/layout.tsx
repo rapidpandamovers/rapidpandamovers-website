@@ -84,10 +84,10 @@ const structuredData = {
   email: 'info@rapidpandamovers.com',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '1000 Brickell Ave',
+    streetAddress: '7001 North Waterway Dr #107',
     addressLocality: 'Miami',
     addressRegion: 'FL',
-    postalCode: '33131',
+    postalCode: '33155',
     addressCountry: 'US',
   },
   geo: {
@@ -110,8 +110,8 @@ const structuredData = {
     {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-      opens: '07:00',
-      closes: '21:00',
+      opens: '08:00',
+      closes: '20:00',
     },
   ],
   sameAs: [
@@ -121,8 +121,8 @@ const structuredData = {
   ],
   aggregateRating: {
     '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '9568',
+    ratingValue: '4.7',
+    reviewCount: '56',
     bestRating: '5',
     worstRating: '1',
   },

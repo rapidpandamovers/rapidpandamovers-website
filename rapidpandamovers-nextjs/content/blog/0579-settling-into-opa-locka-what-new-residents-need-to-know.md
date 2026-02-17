@@ -2,7 +2,7 @@
 id: 579
 title: "Settling Into Opa-locka: What New Residents Need to Know"
 slug: "settling-into-opa-locka-what-new-residents-need-to-know"
-excerpt: "Discover Opa-locka's unique Moorish architecture, affordable housing, and rich cultural heritage. Your relocation guide."
+excerpt: "Discover Opa-locka's unique Moorish architecture, affordable housing, and rich cultural heritage."
 date: "2028-01-06"
 updated: "2028-01-06"
 readTime: "5 min read"
@@ -17,7 +17,6 @@ images:
   - "/images/blog/2028/01/settling-into-opa-locka-what-new-residents-need-to-know/captivating-view-of-miami-s-iconic-skyli-4.webp"
   - "/images/blog/2028/01/settling-into-opa-locka-what-new-residents-need-to-know/colorful-miami-mural-featuring-e11even-v-2.webp"
   - "/images/blog/2028/01/settling-into-opa-locka-what-new-residents-need-to-know/ferris-wheel-near-palm-lined-waterfront--5.webp"
-
 service_link: null
 location_link: "/opa-locka-movers"
 status: "completed"

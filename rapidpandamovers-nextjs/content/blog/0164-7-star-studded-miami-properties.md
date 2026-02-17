@@ -2,7 +2,7 @@
 id: 164
 title: "7 Star-Studded Miami Properties"
 slug: "7-star-studded-miami-properties"
-excerpt: "Discover 7 famous celebrity properties in Miami, from Star Island estates to Fisher Island penthouses and historic Coral Gables mansions."
+excerpt: "Whether you're a long-time Miami resident or just making your May move to South Florida, there's always something new to discover."
 date: "2025-05-07"
 updated: "2025-05-07"
 readTime: "2 min read"
@@ -19,7 +19,6 @@ images:
   - "/images/blog/2025/05/7-star-studded-miami-properties/elegant-villa-on-a-spanish-hillside-surr-2.webp"
   - "/images/blog/2025/05/7-star-studded-miami-properties/stunning-aerial-photo-of-a-wedding-event-4.webp"
   - "/images/blog/2025/05/7-star-studded-miami-properties/stunning-wooden-manor-surrounded-by-well-3.webp"
-
 service_link: "/residential-moving"
 location_link: null
 status: "pending"

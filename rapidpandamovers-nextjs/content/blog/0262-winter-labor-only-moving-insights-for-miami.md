@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/12/winter-labor-only-moving-insights-for-miami/black-and-white-photo-of-a-catering-truc-2.webp"
   - "/images/blog/2025/12/winter-labor-only-moving-insights-for-miami/four-movers-carefully-lift-a-large-wrapp-4.webp"
   - "/images/blog/2025/12/winter-labor-only-moving-insights-for-miami/two-movers-smiling-from-their-moving-com-3.webp"
-
 service_link: "/labor-only-moving"
 location_link: null
 status: "pending"

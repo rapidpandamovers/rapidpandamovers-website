@@ -6,7 +6,7 @@ excerpt: "Discover the best cafes for remote workers in South Miami. WiFi-friend
 date: "2028-06-21"
 updated: "2028-06-21"
 readTime: "3 min read"
-category: "Lifestyle"
+category: "Office Moving"
 image_folder: "/images/blog/2028/06/6-top-cafes-for-remote-workers-in-south-miami"
 featured: "/images/blog/2028/06/6-top-cafes-for-remote-workers-in-south-miami/two-women-collaborating-on-a-project-in--4.webp"
 image_keywords:
@@ -18,8 +18,7 @@ images:
   - "/images/blog/2028/06/6-top-cafes-for-remote-workers-in-south-miami/a-barista-making-coffee-using-a-professi-2.webp"
   - "/images/blog/2028/06/6-top-cafes-for-remote-workers-in-south-miami/a-cozy-workspace-featuring-an-iced-coffe-3.webp"
   - "/images/blog/2028/06/6-top-cafes-for-remote-workers-in-south-miami/two-women-collaborating-on-a-project-in--4.webp"
-
-service_link: null
+service_link: "/office-moving"
 location_link: "/south-miami-movers"
 status: "complete"
 needs_ai_image: false

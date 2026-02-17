@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/10/discover-cutler-bay-your-complete-movers-guide/a-family-of-three-takes-a-joyful-selfie--3.webp"
   - "/images/blog/2029/10/discover-cutler-bay-your-complete-movers-guide/a-family-unpacking-boxes-in-their-new-ap-4.webp"
   - "/images/blog/2029/10/discover-cutler-bay-your-complete-movers-guide/family-enjoying-selfie-time-while-surrou-2.webp"
-
 service_link: null
 location_link: "/cutler-bay-movers"
 status: "pending"

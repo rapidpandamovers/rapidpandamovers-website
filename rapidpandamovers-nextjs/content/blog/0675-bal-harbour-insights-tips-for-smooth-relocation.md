@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/08/bal-harbour-insights-tips-for-smooth-relocation/a-young-girl-runs-towards-the-ocean-wave-2.webp"
   - "/images/blog/2028/08/bal-harbour-insights-tips-for-smooth-relocation/still-life-of-byredo-bal-d-afrique-perfu-4.webp"
   - "/images/blog/2028/08/bal-harbour-insights-tips-for-smooth-relocation/tranquil-evening-view-of-modern-architec-1.webp"
-
 service_link: null
 location_link: "/bal-harbour-movers"
 status: "pending"

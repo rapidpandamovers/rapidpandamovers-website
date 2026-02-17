@@ -6,7 +6,7 @@ excerpt: "Save money on your next move with these 9 cost-cutting strategies from
 date: "2030-10-09"
 updated: "2030-10-09"
 readTime: "2 min read"
-category: "Moving Tips"
+category: "Military Moving"
 image_folder: "/images/blog/2030/10/9-ways-to-cut-costs-on-your-next-move"
 featured: "/images/blog/2030/10/9-ways-to-cut-costs-on-your-next-move/a-close-up-of-a-woman-s-hand-putting-rol-2.webp"
 image_keywords:
@@ -18,8 +18,7 @@ images:
   - "/images/blog/2030/10/9-ways-to-cut-costs-on-your-next-move/close-up-of-hands-placing-money-into-a-j-3.webp"
   - "/images/blog/2030/10/9-ways-to-cut-costs-on-your-next-move/from-above-of-black-leather-wallet-with--4.webp"
   - "/images/blog/2030/10/9-ways-to-cut-costs-on-your-next-move/smiling-man-holding-a-piggy-bank-and-ins-1.webp"
-
-service_link: null
+service_link: "/military-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

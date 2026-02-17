@@ -2,7 +2,7 @@
 id: 552
 title: "South Miami Area Guide for New Movers"
 slug: "south-miami-area-guide-for-new-movers"
-excerpt: "Your guide to South Miami: neighborhoods, schools, housing market, and transportation. A charming city minutes from Downtown."
+excerpt: "Your guide to South Miami: neighborhoods, schools, housing market, and transportation."
 date: "2027-11-04"
 updated: "2027-11-04"
 readTime: "4 min read"
@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/11/south-miami-area-guide-for-new-movers/aerial-daytime-view-of-miami-florida-cap-4.webp"
   - "/images/blog/2027/11/south-miami-area-guide-for-new-movers/luxurious-miami-apartments-with-stunning-2.webp"
   - "/images/blog/2027/11/south-miami-area-guide-for-new-movers/vertical-blue-city-sign-with-miami-beach-5.webp"
-
 service_link: null
 location_link: "/south-miami-movers"
 status: "complete"

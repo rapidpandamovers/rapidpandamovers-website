@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/02/relocating-to-westchester-the-essential-guide/a-scenic-aerial-view-of-lake-mary-fl-sho-1.webp"
   - "/images/blog/2025/02/relocating-to-westchester-the-essential-guide/beautiful-modern-suburban-house-in-odess-5.webp"
   - "/images/blog/2025/02/relocating-to-westchester-the-essential-guide/stunning-modern-house-exterior-in-orland-4.webp"
-
 service_link: null
 location_link: "/westchester-movers"
 status: "pending"

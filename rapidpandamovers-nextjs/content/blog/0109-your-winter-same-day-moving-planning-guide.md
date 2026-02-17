@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/12/your-winter-same-day-moving-planning-guide/dynamic-capture-of-a-chicago-fire-dept-a-4.webp"
   - "/images/blog/2024/12/your-winter-same-day-moving-planning-guide/fast-moving-sports-cars-racing-over-a-va-3.webp"
   - "/images/blog/2024/12/your-winter-same-day-moving-planning-guide/high-performance-black-car-driving-fast--1.webp"
-
 service_link: "/same-day-moving"
 location_link: null
 status: "pending"

@@ -17,7 +17,6 @@ images:
   - "/images/blog/2028/04/life-in-sweetwater-what-to-expect-after-moving/a-scenic-aerial-view-of-lake-mary-fl-sho-3.webp"
   - "/images/blog/2028/04/life-in-sweetwater-what-to-expect-after-moving/scenic-aerial-shot-of-a-sprawling-reside-1.webp"
   - "/images/blog/2028/04/life-in-sweetwater-what-to-expect-after-moving/scenic-view-of-lakefront-homes-reflectin-2.webp"
-
 service_link: null
 location_link: "/sweetwater-movers"
 status: "complete"

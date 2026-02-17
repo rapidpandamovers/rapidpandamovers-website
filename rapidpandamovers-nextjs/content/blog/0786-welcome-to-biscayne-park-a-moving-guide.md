@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/05/welcome-to-biscayne-park-a-moving-guide/loc-picturesque-view-of-the-cape-florida-lig-1.webp"
   - "/images/blog/2029/05/welcome-to-biscayne-park-a-moving-guide/svc-a-blue-truck-transporting-livestock-on-a-1.webp"
   - "/images/blog/2029/05/welcome-to-biscayne-park-a-moving-guide/svc-a-delivery-truck-driving-along-a-coastal-2.webp"
-
 service_link: "/biscayne-park-local-moving"
 location_link: "/biscayne-park-movers"
 status: "pending"

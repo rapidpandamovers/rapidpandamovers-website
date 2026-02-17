@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/06/your-summer-apartment-moving-planning-guide/a-contemporary-skyscraper-in-a-cityscape-3.webp"
   - "/images/blog/2028/06/your-summer-apartment-moving-planning-guide/majestic-view-of-tokyo-metropolitan-gove-1.webp"
   - "/images/blog/2028/06/your-summer-apartment-moving-planning-guide/tall-modern-building-with-a-unique-red-r-2.webp"
-
 service_link: "/apartment-moving"
 location_link: null
 status: "complete"

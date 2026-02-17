@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/02/7-strategies-to-help-kids-adjust-to-a-new-home/a-mother-and-child-sealing-a-cardboard-b-3.webp"
   - "/images/blog/2028/02/7-strategies-to-help-kids-adjust-to-a-new-home/a-mother-and-daughter-label-a-cardboard--2.webp"
   - "/images/blog/2028/02/7-strategies-to-help-kids-adjust-to-a-new-home/a-mother-and-daughter-pack-clothes-into--1.webp"
-
 service_link: "/residential-moving"
 location_link: null
 status: "completed"

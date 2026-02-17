@@ -2,7 +2,7 @@
 id: 200
 title: "8 Moving Hacks That Will Save You Hours of Stress"
 slug: "8-moving-hacks-that-will-save-you-hours-of-stress"
-excerpt: "Professional movers have tricks that make relocation easy. Insider techniques to transform your summer move."
+excerpt: "Professional movers have tricks that make relocation easy. Insider techniques to transform your summer move..."
 date: "2025-07-30"
 updated: "2025-07-30"
 readTime: "2 min read"
@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/07/8-moving-hacks-that-will-save-you-hours-of-stress/cardboard-moving-boxes-in-a-modern-kitch-4.webp"
   - "/images/blog/2025/07/8-moving-hacks-that-will-save-you-hours-of-stress/faceless-individual-holding-an-open-card-3.webp"
   - "/images/blog/2025/07/8-moving-hacks-that-will-save-you-hours-of-stress/young-adult-male-smiling-while-handling--1.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "pending"

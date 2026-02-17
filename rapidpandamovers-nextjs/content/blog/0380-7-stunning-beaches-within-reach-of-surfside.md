@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/09/7-stunning-beaches-within-reach-of-surfside/dynamic-shot-of-a-surfer-catching-a-wave-2.webp"
   - "/images/blog/2026/09/7-stunning-beaches-within-reach-of-surfside/sunny-day-at-st-pete-beach-florida-with--1.webp"
   - "/images/blog/2026/09/7-stunning-beaches-within-reach-of-surfside/vibrant-aerial-view-of-surfside-beach-pi-3.webp"
-
 service_link: null
 location_link: "/surfside-movers"
 status: "complete"

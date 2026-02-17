@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/04/top-safe-moving-recommendations-for-spring-moving-season/a-mysterious-dark-doorway-set-in-a-rugge-2.webp"
   - "/images/blog/2030/04/top-safe-moving-recommendations-for-spring-moving-season/a-woman-in-a-headscarf-standing-inside-a-4.webp"
   - "/images/blog/2030/04/top-safe-moving-recommendations-for-spring-moving-season/close-up-of-a-vintage-safe-door-with-a-b-1.webp"
-
 service_link: "/safe-moving"
 location_link: null
 status: "pending"

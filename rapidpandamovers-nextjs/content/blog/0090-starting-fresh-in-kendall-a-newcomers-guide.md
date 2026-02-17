@@ -18,7 +18,6 @@ images:
   - "/images/blog/2024/11/starting-fresh-in-kendall-a-newcomers-guide/gorgeous-night-view-of-miami-s-illuminat-1.webp"
   - "/images/blog/2024/11/starting-fresh-in-kendall-a-newcomers-guide/scenic-aerial-shot-of-a-sprawling-reside-3.webp"
   - "/images/blog/2024/11/starting-fresh-in-kendall-a-newcomers-guide/vibrant-miami-skyline-illuminated-at-nig-2.webp"
-
 service_link: null
 location_link: "/kendall-movers"
 status: "complete"

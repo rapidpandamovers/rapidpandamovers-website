@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/12/moving-to-indian-creek-island-ultimate-guide/drone-shot-of-a-lakeside-mansion-surroun-5.webp"
   - "/images/blog/2028/12/moving-to-indian-creek-island-ultimate-guide/elegant-waterfront-mansion-in-fort-laude-1.webp"
   - "/images/blog/2028/12/moving-to-indian-creek-island-ultimate-guide/elegant-waterfront-mansion-with-palm-tre-2.webp"
-
 service_link: "/residential-moving"
 location_link: "/indian-creek-movers"
 status: "pending"

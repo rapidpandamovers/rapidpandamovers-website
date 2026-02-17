@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/03/10-moving-day-necessities-for-every-relocator/man-packing-kitchenware-into-labeled-box-2.webp"
   - "/images/blog/2030/03/10-moving-day-necessities-for-every-relocator/man-wearing-overalls-and-bandana-prepari-3.webp"
   - "/images/blog/2030/03/10-moving-day-necessities-for-every-relocator/young-adults-signing-documents-on-moving-4.webp"
-
 service_link: null
 location_link: null
 status: "pending"

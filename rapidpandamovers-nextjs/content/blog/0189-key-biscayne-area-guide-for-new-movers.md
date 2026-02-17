@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/07/key-biscayne-area-guide-for-new-movers/fashionable-woman-in-bikini-and-leather--5.webp"
   - "/images/blog/2025/07/key-biscayne-area-guide-for-new-movers/scenic-view-of-cape-florida-lighthouse-s-3.webp"
   - "/images/blog/2025/07/key-biscayne-area-guide-for-new-movers/young-woman-in-summer-wear-lounging-by-p-2.webp"
-
 service_link: null
 location_link: "/key-biscayne-movers"
 status: "pending"

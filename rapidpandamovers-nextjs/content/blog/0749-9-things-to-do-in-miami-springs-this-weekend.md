@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/02/9-things-to-do-in-miami-springs-this-weekend/a-fun-game-stand-at-an-amusement-park-in-3.webp"
   - "/images/blog/2029/02/9-things-to-do-in-miami-springs-this-weekend/brightly-colored-clown-game-machines-at--1.webp"
   - "/images/blog/2029/02/9-things-to-do-in-miami-springs-this-weekend/close-up-of-woman-gaming-with-a-controll-2.webp"
-
 service_link: null
 location_link: "/miami-springs-movers"
 status: "pending"

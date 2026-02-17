@@ -66,7 +66,7 @@ export default function RoutePage({ route }: RoutePageProps) {
 
   // Breadcrumb items
   const breadcrumbItems = [
-    { label: 'Routes', href: '/routes' },
+    { label: 'Routes', href: '/moving-routes' },
     { label: `${fromCityTitle} to ${toCityTitle}` },
   ];
 
@@ -128,17 +128,17 @@ export default function RoutePage({ route }: RoutePageProps) {
 
       {/* Related Blog Posts */}
       <BlogSection
+        variant="compact"
         locationFilter={route.destination_name}
         categoryFilterFallback={categoryFallback}
-        maxPosts={3}
         showFeatured={false}
         showCategories={false}
         title={`Moving Tips for ${fromCityTitle} to ${toCityTitle}`}
         subtitle={`Helpful guides for your ${fromCityTitle} to ${toCityTitle} move`}
-        showViewMore={true}
-        viewMorePosition="bottom"
-        viewMoreLink="/blog"
+        viewMoreTitle="More Moving Tips"
+        viewMoreSubtitle="Browse our full collection of moving guides and advice"
         viewMoreButtonText="View All Moving Tips"
+        viewMoreLink="/blog"
       />
 
       {/* Why Choose Us */}

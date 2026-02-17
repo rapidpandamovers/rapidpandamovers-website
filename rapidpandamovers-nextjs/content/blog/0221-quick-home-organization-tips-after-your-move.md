@@ -17,7 +17,6 @@ images:
   - "/images/blog/2025/09/quick-home-organization-tips-after-your-move/close-up-of-people-sealing-a-cardboard-b-4.webp"
   - "/images/blog/2025/09/quick-home-organization-tips-after-your-move/crop-anonymous-male-in-casual-wear-using-3.webp"
   - "/images/blog/2025/09/quick-home-organization-tips-after-your-move/crop-unrecognizable-man-in-casual-clothe-1.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "pending"

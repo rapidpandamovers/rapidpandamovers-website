@@ -18,8 +18,7 @@ images:
   - "/images/blog/2026/09/10-affordable-moving-hacks-for-any-budget/cardboard-moving-boxes-in-a-modern-kitch-2.webp"
   - "/images/blog/2026/09/10-affordable-moving-hacks-for-any-budget/crop-anonymous-male-in-casual-clothes-pa-3.webp"
   - "/images/blog/2026/09/10-affordable-moving-hacks-for-any-budget/faceless-individual-holding-an-open-card-1.webp"
-
-service_link: /local-moving
+service_link: "/local-moving"
 location_link: null
 status: "complete"
 needs_ai_image: false

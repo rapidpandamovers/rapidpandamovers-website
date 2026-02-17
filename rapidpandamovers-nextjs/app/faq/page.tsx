@@ -31,7 +31,6 @@ export default function FAQPage() {
         title=""
         faqs={content.faq.questions}
         showViewAllLink={false}
-        showContactCTA={true}
       />
 
       {/* Additional Resources */}
@@ -43,8 +42,8 @@ export default function FAQPage() {
 
       {/* CTA Section */}
       <QuoteSection
-        title="Ready to Start Your Move?"
-        subtitle="Get a free, no-obligation quote from Miami's trusted moving professionals."
+        title="Still Have Questions?"
+        subtitle="Our team is here to help! Contact us for personalized assistance with your move."
       />
     </div>
   )

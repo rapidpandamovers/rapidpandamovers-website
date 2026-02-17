@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/08/exploring-kendall-tips-for-newcomers/a-family-of-three-takes-a-joyful-selfie--4.webp"
   - "/images/blog/2030/08/exploring-kendall-tips-for-newcomers/family-enjoys-a-joyful-moment-while-unpa-3.webp"
   - "/images/blog/2030/08/exploring-kendall-tips-for-newcomers/family-moving-into-their-new-home-surrou-2.webp"
-
 service_link: null
 location_link: "/kendall-movers"
 status: "pending"

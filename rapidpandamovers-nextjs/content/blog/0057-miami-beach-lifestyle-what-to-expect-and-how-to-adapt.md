@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/06/miami-beach-lifestyle-what-to-expect-and-how-to-adapt/loc-stunning-view-of-miami-beach-s-skyline-w-2.webp"
   - "/images/blog/2024/06/miami-beach-lifestyle-what-to-expect-and-how-to-adapt/svc-cardboard-moving-boxes-in-a-modern-kitch-2.webp"
   - "/images/blog/2024/06/miami-beach-lifestyle-what-to-expect-and-how-to-adapt/svc-young-adult-male-smiling-while-handling--3.webp"
-
 service_link: "/miami-beach-local-moving"
 location_link: "/miami-beach-movers"
 status: "pending"

@@ -17,7 +17,6 @@ images:
   - "/images/blog/2024/01/what-documents-need-updating-during-a-move/a-multiracial-couple-signing-home-docume-2.webp"
   - "/images/blog/2024/01/what-documents-need-updating-during-a-move/detailed-view-of-a-hand-writing-a-signat-1.webp"
   - "/images/blog/2024/01/what-documents-need-updating-during-a-move/young-couple-signing-a-real-estate-agree-3.webp"
-
 service_link: "/residential-moving"
 location_link: "/locations/miami"
 status: "completed"

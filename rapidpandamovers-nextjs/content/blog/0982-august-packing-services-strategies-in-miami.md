@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/08/august-packing-services-strategies-in-miami/loc-view-of-miami-skyline-from-coral-gables--1.webp"
   - "/images/blog/2030/08/august-packing-services-strategies-in-miami/svc-a-cardboard-box-labeled-with-winter-clot-1.webp"
   - "/images/blog/2030/08/august-packing-services-strategies-in-miami/svc-a-collection-of-large-cardboard-boxes-la-2.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "completed"

@@ -20,7 +20,6 @@ images:
   - "/images/blog/2025/04/5-weekend-activities-to-enjoy-in-biscayne-park/svc-a-classic-hong-kong-tram-traverses-moder-1.webp"
   - "/images/blog/2025/04/5-weekend-activities-to-enjoy-in-biscayne-park/svc-high-angle-view-of-an-asda-delivery-truc-3.webp"
   - "/images/blog/2025/04/5-weekend-activities-to-enjoy-in-biscayne-park/svc-red-ford-f-150-truck-driving-on-a-bridge-2.webp"
-
 service_link: "/biscayne-park-local-moving"
 location_link: "/biscayne-park-movers"
 status: "pending"

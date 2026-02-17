@@ -2,7 +2,7 @@
 id: 151
 title: "Long Distance Moving Planning for Easter Season"
 slug: "long-distance-moving-planning-for-easter-season"
-excerpt: "Planning a long distance move this Easter? Spring brings a surge of relocations in Miami-Dade. Get expert tips for your April move."
+excerpt: "Moving during April? You're not alone. The spring months bring a surge of relocations across Miami-Dade County, making professional long distance..."
 date: "2025-04-07"
 updated: "2025-04-07"
 readTime: "4 min read"
@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/04/long-distance-moving-planning-for-easter-season/drone-view-of-modern-cars-riding-through-1.webp"
   - "/images/blog/2025/04/long-distance-moving-planning-for-easter-season/highway-signs-with-directions-to-los-ang-3.webp"
   - "/images/blog/2025/04/long-distance-moving-planning-for-easter-season/wide-aerial-view-of-traffic-on-paulista--2.webp"
-
 service_link: "/long-distance-moving"
 location_link: null
 status: "pending"

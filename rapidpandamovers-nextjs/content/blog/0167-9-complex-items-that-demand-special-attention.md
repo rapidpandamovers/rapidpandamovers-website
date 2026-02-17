@@ -2,7 +2,7 @@
 id: 167
 title: "9 Complex Items That Demand Special Attention"
 slug: "9-complex-items-that-demand-special-attention"
-excerpt: "From grand pianos to wine collections, learn which items require special handling during your move and why professional movers are essential."
+excerpt: "Some belongings require extra care, specialized equipment, and professional expertise during a move."
 date: "2025-05-14"
 updated: "2025-05-14"
 readTime: "2 min read"
@@ -17,7 +17,6 @@ images:
   - "/images/blog/2025/05/9-complex-items-that-demand-special-attention/a-striking-close-up-of-a-green-pea-pod-w-2.webp"
   - "/images/blog/2025/05/9-complex-items-that-demand-special-attention/a-surprised-woman-applies-makeup-outdoor-3.webp"
   - "/images/blog/2025/05/9-complex-items-that-demand-special-attention/unemotional-ethnic-female-with-bare-shou-1.webp"
-
 service_link: "/full-service-moving"
 location_link: null
 status: "pending"

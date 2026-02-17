@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/07/welcome-to-bay-harbor-islands-a-moving-guide/loc-aerial-view-of-miami-harbor-with-boats-a-2.webp"
   - "/images/blog/2030/07/welcome-to-bay-harbor-islands-a-moving-guide/svc-semi-truck-parked-at-a-loading-dock-with-2.webp"
   - "/images/blog/2030/07/welcome-to-bay-harbor-islands-a-moving-guide/svc-vintage-truck-carrying-heavy-cargo-bags--1.webp"
-
 service_link: "/bay-harbor-islands-local-moving"
 location_link: "/bay-harbor-islands-movers"
 status: "pending"

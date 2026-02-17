@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/01/why-south-miami-is-perfect-for-your-next-move/contemporary-skyscrapers-with-miami-metr-1.webp"
   - "/images/blog/2027/01/why-south-miami-is-perfect-for-your-next-move/explore-the-vibrant-miami-skyline-at-nig-3.webp"
   - "/images/blog/2027/01/why-south-miami-is-perfect-for-your-next-move/vibrant-nightlife-scene-in-miami-s-iconi-4.webp"
-
 service_link: null
 location_link: "/south-miami-movers"
 status: "completed"

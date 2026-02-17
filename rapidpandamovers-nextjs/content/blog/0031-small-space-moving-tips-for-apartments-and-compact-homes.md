@@ -18,7 +18,6 @@ images:
   - "/images/blog/2024/04/small-space-moving-tips-for-apartments-and-compact-homes/a-contemporary-building-showcasing-geome-1.webp"
   - "/images/blog/2024/04/small-space-moving-tips-for-apartments-and-compact-homes/exterior-view-of-a-modern-apartment-buil-3.webp"
   - "/images/blog/2024/04/small-space-moving-tips-for-apartments-and-compact-homes/picturesque-canal-with-autumn-foliage-an-2.webp"
-
 service_link: "/apartment-moving"
 location_link: "/miami-movers"
 status: "pending"

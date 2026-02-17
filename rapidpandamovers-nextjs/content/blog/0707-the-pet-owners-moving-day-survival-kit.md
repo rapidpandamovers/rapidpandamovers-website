@@ -17,8 +17,7 @@ images:
   - "/images/blog/2028/11/the-pet-owners-moving-day-survival-kit/a-truck-loaded-with-sacks-of-potatoes-hi-2.webp"
   - "/images/blog/2028/11/the-pet-owners-moving-day-survival-kit/row-of-stacked-truck-tires-on-chassis-in-5.webp"
   - "/images/blog/2028/11/the-pet-owners-moving-day-survival-kit/vintage-truck-carrying-heavy-cargo-bags--3.webp"
-
-service_link: /local-moving
+service_link: "/local-moving"
 location_link: null
 status: "pending"
 updated: "2028-11-01"

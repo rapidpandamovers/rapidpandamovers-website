@@ -6,7 +6,7 @@ excerpt: "Discover 10 specialty items that require expert moving services, from 
 date: "2030-06-05"
 updated: "2030-06-05"
 readTime: "3 min read"
-category: "Fun Facts"
+category: "Safe Moving"
 image_folder: "/images/blog/2030/06/10-specialty-possessions-for-expert-relocation"
 featured: "/images/blog/2030/06/10-specialty-possessions-for-expert-relocation/artistic-portrait-of-a-woman-with-bread--1.webp"
 image_keywords:
@@ -18,8 +18,7 @@ images:
   - "/images/blog/2030/06/10-specialty-possessions-for-expert-relocation/a-woman-in-a-surreal-horned-costume-and--2.webp"
   - "/images/blog/2030/06/10-specialty-possessions-for-expert-relocation/artistic-portrait-of-a-woman-with-bread--1.webp"
   - "/images/blog/2030/06/10-specialty-possessions-for-expert-relocation/close-up-of-a-gift-wrapped-hamburger-hel-4.webp"
-
-service_link: null
+service_link: "/safe-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

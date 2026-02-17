@@ -2,7 +2,7 @@
 id: 504
 title: "Your Key Biscayne Moving Handbook"
 slug: "your-key-biscayne-moving-handbook"
-excerpt: "Everything you need to know about moving to Key Biscayne, from crossing the Rickenbacker Causeway to settling into island life near Crandon Park."
+excerpt: "You have been searching for something different. A place where your kids can bike to the beach, where traffic noise fades to palm fronds rustling..."
 date: "2027-07-15"
 updated: "2027-07-15"
 readTime: "7 min read"
@@ -20,7 +20,6 @@ images:
   - "/images/blog/2027/07/your-key-biscayne-moving-handbook/svc-aerial-shot-of-a-crowded-urban-parking-l-3.webp"
   - "/images/blog/2027/07/your-key-biscayne-moving-handbook/svc-red-truck-with-large-covered-cargo-in-an-2.webp"
   - "/images/blog/2027/07/your-key-biscayne-moving-handbook/svc-three-men-loading-wooden-boxes-on-a-truc-1.webp"
-
 service_link: "/key-biscayne-local-moving"
 location_link: "/key-biscayne-movers"
 status: "pending"

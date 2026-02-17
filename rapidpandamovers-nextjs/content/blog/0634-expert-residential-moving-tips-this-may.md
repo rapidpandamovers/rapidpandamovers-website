@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/05/expert-residential-moving-tips-this-may/a-family-is-seen-moving-into-a-new-home--3.webp"
   - "/images/blog/2028/05/expert-residential-moving-tips-this-may/a-family-joyfully-unpacking-boxes-in-the-5.webp"
   - "/images/blog/2028/05/expert-residential-moving-tips-this-may/family-enjoying-selfie-time-while-surrou-4.webp"
-
 service_link: "/residential-moving"
 location_link: null
 status: "pending"

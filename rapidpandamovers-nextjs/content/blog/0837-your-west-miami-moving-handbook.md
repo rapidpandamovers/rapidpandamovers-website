@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/08/your-west-miami-moving-handbook/aerial-daytime-view-of-miami-florida-cap-3.webp"
   - "/images/blog/2029/08/your-west-miami-moving-handbook/captivating-view-of-miami-s-iconic-skyli-2.webp"
   - "/images/blog/2029/08/your-west-miami-moving-handbook/empty-streets-with-palm-trees-and-modern-1.webp"
-
 service_link: null
 location_link: "/west-miami-movers"
 status: "pending"

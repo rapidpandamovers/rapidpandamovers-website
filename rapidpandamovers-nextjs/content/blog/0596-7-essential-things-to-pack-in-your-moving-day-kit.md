@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/02/7-essential-things-to-pack-in-your-moving-day-kit/crop-faceless-male-sealing-packed-carton-3.webp"
   - "/images/blog/2028/02/7-essential-things-to-pack-in-your-moving-day-kit/hands-carefully-packing-glassware-into-a-5.webp"
   - "/images/blog/2028/02/7-essential-things-to-pack-in-your-moving-day-kit/labeled-cardboard-boxes-for-summer-cloth-2.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "completed"

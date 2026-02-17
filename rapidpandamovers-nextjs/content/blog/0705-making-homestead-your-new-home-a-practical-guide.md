@@ -18,8 +18,7 @@ images:
   - "/images/blog/2028/10/making-homestead-your-new-home-a-practical-guide/loc-peaceful-riverside-view-with-palm-trees--2.webp"
   - "/images/blog/2028/10/making-homestead-your-new-home-a-practical-guide/svc-excavator-loading-materials-into-a-heavy-2.webp"
   - "/images/blog/2028/10/making-homestead-your-new-home-a-practical-guide/svc-people-loading-supplies-onto-a-truck-in--1.webp"
-
-service_link: /homestead-movers
+service_link: "/homestead-movers"
 location_link: "/homestead-movers"
 status: "pending"
 needs_ai_image: false

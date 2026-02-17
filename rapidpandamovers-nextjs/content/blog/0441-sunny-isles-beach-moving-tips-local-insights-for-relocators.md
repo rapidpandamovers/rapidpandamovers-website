@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/02/sunny-isles-beach-moving-tips-local-insights-for-relocators/high-rise-buildings-along-the-coast-of-s-2.webp"
   - "/images/blog/2027/02/sunny-isles-beach-moving-tips-local-insights-for-relocators/modern-living-room-with-telescope-facing-3.webp"
   - "/images/blog/2027/02/sunny-isles-beach-moving-tips-local-insights-for-relocators/scenic-view-of-a-sandy-path-leading-to-o-4.webp"
-
 service_link: null
 location_link: "/sunny-isles-beach-movers"
 status: "pending"

@@ -6,7 +6,7 @@ excerpt: "Avoid these 9 common packing mistakes that lead to damaged belongings.
 date: "2025-08-13"
 updated: "2025-08-13"
 readTime: "3 min read"
-category: "Moving Tips"
+category: "Packing Services"
 image_folder: "/images/blog/2025/08/9-packing-mistakes-that-could-ruin-your-move"
 featured: "/images/blog/2025/08/9-packing-mistakes-that-could-ruin-your-move/adult-man-using-red-tape-to-seal-a-large-1.webp"
 image_keywords:
@@ -17,7 +17,6 @@ images:
   - "/images/blog/2025/08/9-packing-mistakes-that-could-ruin-your-move/a-couple-unpacking-books-in-their-new-ho-2.webp"
   - "/images/blog/2025/08/9-packing-mistakes-that-could-ruin-your-move/adult-man-using-red-tape-to-seal-a-large-1.webp"
   - "/images/blog/2025/08/9-packing-mistakes-that-could-ruin-your-move/crop-anonymous-male-in-casual-wear-using-3.webp"
-
 service_link: "/packing-services"
 location_link: "/miami-movers"
 status: "pending"

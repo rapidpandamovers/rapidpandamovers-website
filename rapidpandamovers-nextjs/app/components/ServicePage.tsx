@@ -245,7 +245,7 @@ export default function ServicePage({ service, location }: ServicePageProps) {
             </div>
             <div className="text-center mt-12">
               <Link
-                href="/routes?type=long-distance"
+                href="/moving-routes?type=long-distance"
                 className="inline-flex items-center px-8 py-4 bg-orange-500 text-white font-bold rounded-lg hover:bg-orange-600 transition-colors"
               >
                 See All Long Distance Routes
@@ -258,14 +258,18 @@ export default function ServicePage({ service, location }: ServicePageProps) {
 
       {/* Related Blog Posts */}
       <BlogSection
+        variant="compact"
         serviceFilter={service.slug}
         locationFilter={location?.slug}
         locationFilterFallback={isNeighborhood ? location!.parentCity!.slug : undefined}
-        maxPosts={3}
         showFeatured={false}
         showCategories={false}
         title={location ? `${service.name} Tips for ${location.name}` : `${service.name} Tips & Guides`}
         subtitle={location ? `Expert advice for your ${location.name} ${service.name.toLowerCase()}` : `Expert advice for your ${service.name.toLowerCase()}`}
+        viewMoreTitle="More Moving Tips"
+        viewMoreSubtitle="Browse our full collection of moving guides and advice"
+        viewMoreButtonText="View All Tips"
+        viewMoreLink="/blog"
       />
 
       {/* Other Services */}

@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/10/10-best-restaurants-to-try-in-kendall-after-your-move/a-stylish-dining-setup-in-a-tokyo-restau-2.webp"
   - "/images/blog/2029/10/10-best-restaurants-to-try-in-kendall-after-your-move/assorted-gourmet-dishes-elegantly-plated-4.webp"
   - "/images/blog/2029/10/10-best-restaurants-to-try-in-kendall-after-your-move/elegant-evening-dining-at-a-tokyo-restau-5.webp"
-
 service_link: null
 location_link: "/kendall-movers"
 status: "pending"

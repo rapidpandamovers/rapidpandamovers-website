@@ -32,11 +32,13 @@ export default function MovingChecklistPage() {
       />
 
       {/* Resources Section */}
-      <ResourceSection
-        title="More Moving Resources"
-        subtitle="Explore our comprehensive guides and services for a successful move"
-        variant="grid"
-      />
+      <div className="no-print">
+        <ResourceSection
+          title="More Moving Resources"
+          subtitle="Explore our comprehensive guides and services for a successful move"
+          variant="grid"
+        />
+      </div>
 
       <div className="no-print">
         <QuoteSection

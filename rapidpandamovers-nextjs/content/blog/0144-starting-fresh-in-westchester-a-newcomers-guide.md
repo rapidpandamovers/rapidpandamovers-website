@@ -17,7 +17,6 @@ images:
   - "/images/blog/2025/03/starting-fresh-in-westchester-a-newcomers-guide/loc-peaceful-park-scene-with-fall-foliage-ca-2.webp"
   - "/images/blog/2025/03/starting-fresh-in-westchester-a-newcomers-guide/svc-semi-truck-parked-at-a-loading-dock-with-2.webp"
   - "/images/blog/2025/03/starting-fresh-in-westchester-a-newcomers-guide/svc-three-men-loading-wooden-boxes-on-a-truc-1.webp"
-
 service_link: "/westchester-local-moving"
 location_link: "/westchester-movers"
 status: "pending"

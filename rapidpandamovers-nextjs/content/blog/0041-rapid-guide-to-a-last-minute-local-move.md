@@ -20,7 +20,6 @@ images:
   - "/images/blog/2024/05/rapid-guide-to-a-last-minute-local-move/a-classic-hong-kong-tram-traverses-moder-1.webp"
   - "/images/blog/2024/05/rapid-guide-to-a-last-minute-local-move/high-angle-view-of-an-asda-delivery-truc-4.webp"
   - "/images/blog/2024/05/rapid-guide-to-a-last-minute-local-move/tow-truck-operator-loading-white-gmc-pic-2.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "completed"

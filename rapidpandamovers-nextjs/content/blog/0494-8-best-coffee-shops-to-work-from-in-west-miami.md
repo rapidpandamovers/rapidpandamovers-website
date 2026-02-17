@@ -6,7 +6,7 @@ excerpt: "West Miami residents enjoy quick access to Cuban ventanitas and specia
 date: "2027-06-23"
 updated: "2027-06-23"
 readTime: "4 min read"
-category: "Lifestyle"
+category: "Same Day Moving"
 image_folder: "/images/blog/2027/06/8-best-coffee-shops-to-work-from-in-west-miami"
 featured: "/images/blog/2027/06/8-best-coffee-shops-to-work-from-in-west-miami/a-comforting-scene-of-a-warm-coffee-cup--1.webp"
 image_keywords:
@@ -19,8 +19,7 @@ images:
   - "/images/blog/2027/06/8-best-coffee-shops-to-work-from-in-west-miami/laptop-coffee-and-notebook-setup-for-rem-3.webp"
   - "/images/blog/2027/06/8-best-coffee-shops-to-work-from-in-west-miami/professional-man-drinking-coffee-and-wor-4.webp"
   - "/images/blog/2027/06/8-best-coffee-shops-to-work-from-in-west-miami/young-woman-working-on-a-laptop-in-an-ou-2.webp"
-
-service_link: null
+service_link: "/same-day-moving"
 location_link: "/west-miami-movers"
 status: "completed"
 needs_ai_image: false

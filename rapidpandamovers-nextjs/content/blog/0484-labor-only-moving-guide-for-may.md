@@ -2,7 +2,7 @@
 id: 484
 title: "Labor Only Moving Guide for May"
 slug: "labor-only-moving-guide-for-may"
-excerpt: "Moving in May? Spring brings a surge of relocations across Miami-Dade County, making professional labor-only moving services essential."
+excerpt: "Moving during May? You're not alone. The spring months bring a surge of relocations across Miami-Dade County, making professional labor only moving..."
 date: "2027-05-31"
 updated: "2027-05-31"
 readTime: "3 min read"
@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/05/labor-only-moving-guide-for-may/a-forklift-operator-working-outdoors-in--1.webp"
   - "/images/blog/2027/05/labor-only-moving-guide-for-may/male-forklift-operator-wearing-a-blue-be-2.webp"
   - "/images/blog/2027/05/labor-only-moving-guide-for-may/two-men-sitting-on-a-pile-of-cement-bags-3.webp"
-
 service_link: "/labor-only-moving"
 location_link: null
 status: "pending"

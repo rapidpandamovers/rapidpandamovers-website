@@ -17,7 +17,6 @@ images:
   - "/images/blog/2025/09/how-labor-only-moving-saves-miami-families-money/a-shopping-cart-holding-a-stack-of-us-do-1.webp"
   - "/images/blog/2025/09/how-labor-only-moving-saves-miami-families-money/piggy-bank-with-shopping-cart-and-coins--3.webp"
   - "/images/blog/2025/09/how-labor-only-moving-saves-miami-families-money/smiling-man-holding-a-piggy-bank-and-ins-2.webp"
-
 service_link: "/labor-only-moving"
 location_link: null
 status: "pending"

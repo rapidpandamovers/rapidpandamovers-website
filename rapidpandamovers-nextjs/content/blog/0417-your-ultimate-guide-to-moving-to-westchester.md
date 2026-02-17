@@ -2,7 +2,7 @@
 id: 417
 title: "Your Ultimate Guide to Moving to Westchester"
 slug: "your-ultimate-guide-to-moving-to-westchester"
-excerpt: "Moving to Westchester this December? Discover Miami-Dade's premier community with our complete winter relocation guide for families and professionals."
+excerpt: "Thinking about moving to Westchester this December? You're considering one of Miami-Dade County's most desirable communities."
 date: "2026-12-24"
 updated: "2026-12-24"
 readTime: "4 min read"
@@ -17,7 +17,6 @@ images:
   - "/images/blog/2026/12/your-ultimate-guide-to-moving-to-westchester/a-scenic-aerial-view-of-a-river-and-gree-3.webp"
   - "/images/blog/2026/12/your-ultimate-guide-to-moving-to-westchester/charming-suburban-street-with-modern-hou-2.webp"
   - "/images/blog/2026/12/your-ultimate-guide-to-moving-to-westchester/scenic-aerial-shot-of-a-sprawling-reside-1.webp"
-
 service_link: null
 location_link: "/westchester-movers"
 status: "pending"

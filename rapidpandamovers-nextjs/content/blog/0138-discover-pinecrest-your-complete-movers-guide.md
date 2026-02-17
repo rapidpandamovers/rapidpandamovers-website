@@ -19,7 +19,6 @@ images:
   - "/images/blog/2025/03/discover-pinecrest-your-complete-movers-guide/a-sunny-outdoor-enclosed-pool-at-a-flori-3.webp"
   - "/images/blog/2025/03/discover-pinecrest-your-complete-movers-guide/elegant-tropical-villa-in-fort-lauderdal-2.webp"
   - "/images/blog/2025/03/discover-pinecrest-your-complete-movers-guide/stunning-aerial-view-of-waterfront-house-4.webp"
-
 service_link: "/pinecrest-local-moving"
 location_link: "/pinecrest-movers"
 status: "pending"

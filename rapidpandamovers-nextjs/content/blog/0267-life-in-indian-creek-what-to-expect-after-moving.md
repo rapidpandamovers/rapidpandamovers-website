@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/01/life-in-indian-creek-what-to-expect-after-moving/aerial-view-showcasing-a-suburban-home-a-4.webp"
   - "/images/blog/2026/01/life-in-indian-creek-what-to-expect-after-moving/golfer-playing-on-scenic-golf-course-kia-1.webp"
   - "/images/blog/2026/01/life-in-indian-creek-what-to-expect-after-moving/man-sitting-on-a-golf-course-with-a-club-3.webp"
-
 service_link: null
 location_link: "/indian-creek-movers"
 status: "pending"

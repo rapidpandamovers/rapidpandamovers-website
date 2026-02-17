@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/11/7-time-crunch-moving-solutions-that-work/artistic-black-and-white-blur-of-motorcy-5.webp"
   - "/images/blog/2029/11/7-time-crunch-moving-solutions-that-work/black-and-white-image-of-a-wall-clock-wi-4.webp"
   - "/images/blog/2029/11/7-time-crunch-moving-solutions-that-work/black-friday-shopping-setup-with-an-alar-3.webp"
-
 service_link: "/last-minute-moving"
 location_link: null
 status: "pending"

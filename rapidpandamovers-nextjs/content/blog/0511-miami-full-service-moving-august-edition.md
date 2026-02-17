@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/08/miami-full-service-moving-august-edition/a-mover-carries-a-green-sofa-indoors-sho-3.webp"
   - "/images/blog/2027/08/miami-full-service-moving-august-edition/a-professional-mover-packs-a-fragile-ite-4.webp"
   - "/images/blog/2027/08/miami-full-service-moving-august-edition/two-men-sitting-in-a-van-surrounded-by-b-1.webp"
-
 service_link: "/full-service-moving"
 location_link: null
 status: "complete"

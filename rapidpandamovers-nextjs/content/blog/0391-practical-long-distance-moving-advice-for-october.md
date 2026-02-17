@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/10/practical-long-distance-moving-advice-for-october/a-delivery-truck-driving-along-a-coastal-1.webp"
   - "/images/blog/2026/10/practical-long-distance-moving-advice-for-october/aerial-shot-of-a-solitary-car-driving-on-3.webp"
   - "/images/blog/2026/10/practical-long-distance-moving-advice-for-october/red-ford-f-150-truck-driving-on-a-bridge-2.webp"
-
 service_link: "/long-distance-moving"
 location_link: null
 status: "pending"

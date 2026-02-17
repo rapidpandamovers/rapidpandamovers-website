@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/07/coral-gables-insights-tips-for-smooth-relocation/loc-college-of-arts-sciences-building-at-uni-1.webp"
   - "/images/blog/2025/07/coral-gables-insights-tips-for-smooth-relocation/svc-excavator-loading-materials-into-a-heavy-2.webp"
   - "/images/blog/2025/07/coral-gables-insights-tips-for-smooth-relocation/svc-vintage-truck-carrying-heavy-cargo-bags--1.webp"
-
 service_link: "/local-moving"
 location_link: "/coral-gables-movers"
 status: "pending"

@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/08/5-best-beaches-near-el-portal-for-a-day-trip/a-young-woman-in-a-white-dress-carrying--3.webp"
   - "/images/blog/2026/08/5-best-beaches-near-el-portal-for-a-day-trip/hand-holding-a-straw-hat-and-beverage-on-1.webp"
   - "/images/blog/2026/08/5-best-beaches-near-el-portal-for-a-day-trip/woman-in-summer-attire-sitting-on-rocks--4.webp"
-
 service_link: null
 location_link: "/el-portal-movers"
 status: "pending"

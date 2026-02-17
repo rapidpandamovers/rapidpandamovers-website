@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/10/aventura-insights-tips-for-smooth-relocation/captivating-interior-view-of-the-histori-2.webp"
   - "/images/blog/2029/10/aventura-insights-tips-for-smooth-relocation/contemporary-design-of-big-mall-interior-3.webp"
   - "/images/blog/2029/10/aventura-insights-tips-for-smooth-relocation/wide-angle-view-of-shoppers-in-the-luxur-4.webp"
-
 service_link: null
 location_link: "/aventura-movers"
 status: "pending"

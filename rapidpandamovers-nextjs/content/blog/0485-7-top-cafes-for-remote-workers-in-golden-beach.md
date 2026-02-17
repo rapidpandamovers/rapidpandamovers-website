@@ -6,7 +6,7 @@ excerpt: "Golden Beach area offers excellent cafes for remote work. From strong 
 date: "2027-06-02"
 updated: "2027-06-02"
 readTime: "3 min read"
-category: "Lifestyle"
+category: "Office Moving"
 image_folder: "/images/blog/2027/06/7-top-cafes-for-remote-workers-in-golden-beach"
 featured: "/images/blog/2027/06/7-top-cafes-for-remote-workers-in-golden-beach/two-women-collaborating-on-a-project-in--3.webp"
 image_keywords:
@@ -18,8 +18,7 @@ images:
   - "/images/blog/2027/06/7-top-cafes-for-remote-workers-in-golden-beach/a-thoughtful-woman-using-a-laptop-at-an--1.webp"
   - "/images/blog/2027/06/7-top-cafes-for-remote-workers-in-golden-beach/positive-african-american-female-in-casu-2.webp"
   - "/images/blog/2027/06/7-top-cafes-for-remote-workers-in-golden-beach/two-women-collaborating-on-a-project-in--3.webp"
-
-service_link: null
+service_link: "/office-moving"
 location_link: "/golden-beach-movers"
 status: "pending"
 needs_ai_image: false

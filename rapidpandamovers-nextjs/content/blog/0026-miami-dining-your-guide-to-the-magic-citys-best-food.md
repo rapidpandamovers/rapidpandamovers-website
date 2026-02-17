@@ -20,7 +20,6 @@ images:
   - "/images/blog/2024/02/miami-dining-your-guide-to-the-magic-citys-best-food/loc-captivating-view-of-miami-s-iconic-skyli-2.webp"
   - "/images/blog/2024/02/miami-dining-your-guide-to-the-magic-citys-best-food/svc-semi-truck-parked-at-a-loading-dock-with-1.webp"
   - "/images/blog/2024/02/miami-dining-your-guide-to-the-magic-citys-best-food/svc-three-men-loading-wooden-boxes-on-a-truc-2.webp"
-
 service_link: "/miami-local-moving"
 location_link: "/miami-movers"
 status: "pending"

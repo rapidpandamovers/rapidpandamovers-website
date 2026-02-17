@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/10/5-best-gyms-and-fitness-studios-in-coconut-grove/muscular-man-performing-a-lat-pulldown-e-1.webp"
   - "/images/blog/2030/10/5-best-gyms-and-fitness-studios-in-coconut-grove/muscular-man-performing-squats-with-dumb-4.webp"
   - "/images/blog/2030/10/5-best-gyms-and-fitness-studios-in-coconut-grove/spacious-fitness-center-featuring-treadm-3.webp"
-
 service_link: null
 location_link: "/coconut-grove-movers"
 status: "pending"

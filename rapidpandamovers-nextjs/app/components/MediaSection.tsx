@@ -129,7 +129,7 @@ export default function MediaSection({
 
   return (
     <>
-      <section className={`py-16 px-4 md:px-6 lg:px-8 ${className}`}>
+      <section className={`pt-20 px-4 md:px-6 lg:px-8 ${className}`}>
         <div className="container mx-auto">
           {/* Header */}
           {(title || description) && (

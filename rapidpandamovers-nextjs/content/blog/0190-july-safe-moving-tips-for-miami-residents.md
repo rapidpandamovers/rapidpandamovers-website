@@ -20,7 +20,6 @@ images:
   - "/images/blog/2025/07/july-safe-moving-tips-for-miami-residents/svc-close-up-image-of-an-electronic-safe-wit-2.webp"
   - "/images/blog/2025/07/july-safe-moving-tips-for-miami-residents/svc-close-up-of-a-vintage-safe-door-with-a-b-3.webp"
   - "/images/blog/2025/07/july-safe-moving-tips-for-miami-residents/svc-close-up-of-industrial-safes-with-manual-1.webp"
-
 service_link: "/safe-moving"
 location_link: null
 status: "pending"

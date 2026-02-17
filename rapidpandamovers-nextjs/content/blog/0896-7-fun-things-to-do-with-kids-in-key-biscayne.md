@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/01/7-fun-things-to-do-with-kids-in-key-biscayne/a-joyful-child-with-socks-on-feet-playin-3.webp"
   - "/images/blog/2030/01/7-fun-things-to-do-with-kids-in-key-biscayne/a-young-girl-with-curly-hair-peeking-ove-1.webp"
   - "/images/blog/2030/01/7-fun-things-to-do-with-kids-in-key-biscayne/young-girl-engrossed-in-drawing-on-a-car-2.webp"
-
 service_link: null
 location_link: "/key-biscayne-movers"
 status: "pending"

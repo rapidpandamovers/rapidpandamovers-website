@@ -18,8 +18,7 @@ images:
   - "/images/blog/2027/09/the-newcomers-guide-to-palmetto-bay-living/loc-silhouette-of-a-palm-tree-against-a-vibr-2.webp"
   - "/images/blog/2027/09/the-newcomers-guide-to-palmetto-bay-living/loc-young-woman-in-a-white-lace-dress-posing-1.webp"
   - "/images/blog/2027/09/the-newcomers-guide-to-palmetto-bay-living/svc-a-blue-volvo-truck-parked-outside-a-ware-1.webp"
-
-service_link: /palmetto-bay-local-moving
+service_link: "/palmetto-bay-local-moving"
 location_link: "/palmetto-bay-movers"
 status: "pending"
 needs_ai_image: false

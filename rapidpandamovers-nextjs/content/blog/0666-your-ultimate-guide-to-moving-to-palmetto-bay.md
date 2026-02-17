@@ -2,7 +2,7 @@
 id: 666
 title: "Your Ultimate Guide to Moving to Palmetto Bay"
 slug: "your-ultimate-guide-to-moving-to-palmetto-bay"
-excerpt: "Palmetto Bay offers a family-friendly atmosphere with excellent schools. Your ultimate guide to moving here."
+excerpt: "Palmetto Bay offers a family-friendly atmosphere with excellent schools. Your ultimate guide to moving here..."
 date: "2028-07-27"
 updated: "2028-07-27"
 readTime: "3 min read"
@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/07/your-ultimate-guide-to-moving-to-palmetto-bay/a-family-of-three-takes-a-joyful-selfie--1.webp"
   - "/images/blog/2028/07/your-ultimate-guide-to-moving-to-palmetto-bay/a-family-unpacks-moving-boxes-in-their-n-2.webp"
   - "/images/blog/2028/07/your-ultimate-guide-to-moving-to-palmetto-bay/family-enjoying-selfie-time-while-surrou-4.webp"
-
 service_link: null
 location_link: "/palmetto-bay-movers"
 status: "pending"

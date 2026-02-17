@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/08/9-legendary-buildings-that-define-miami/art-deco-architecture-on-lincoln-road-in-4.webp"
   - "/images/blog/2030/08/9-legendary-buildings-that-define-miami/colony-hotel-in-miami-beach-iconic-art-d-3.webp"
   - "/images/blog/2030/08/9-legendary-buildings-that-define-miami/historic-lincoln-theatre-in-miami-beach--2.webp"
-
 service_link: null
 location_link: null
 status: "completed"

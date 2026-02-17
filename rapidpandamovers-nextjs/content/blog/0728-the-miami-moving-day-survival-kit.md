@@ -17,7 +17,6 @@ images:
   - "/images/blog/2028/12/the-miami-moving-day-survival-kit/loc-view-of-miami-skyline-from-coral-gables--1.webp"
   - "/images/blog/2028/12/the-miami-moving-day-survival-kit/svc-aerial-shot-of-a-crowded-urban-parking-l-1.webp"
   - "/images/blog/2028/12/the-miami-moving-day-survival-kit/svc-red-truck-with-large-covered-cargo-in-an-2.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "pending"

@@ -17,7 +17,6 @@ images:
   - "/images/blog/2026/12/finding-your-place-in-kendall-relocation-advice/loc-a-stunning-view-of-miami-s-illuminated-s-1.webp"
   - "/images/blog/2026/12/finding-your-place-in-kendall-relocation-advice/svc-semi-truck-parked-at-a-loading-dock-with-1.webp"
   - "/images/blog/2026/12/finding-your-place-in-kendall-relocation-advice/svc-two-men-load-construction-materials-onto-2.webp"
-
 service_link: "/kendall-local-moving"
 location_link: "/kendall-movers"
 status: "pending"

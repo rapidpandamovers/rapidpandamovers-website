@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/07/your-july-apartment-moving-checklist/a-striking-black-and-white-photo-of-a-mo-3.webp"
   - "/images/blog/2026/07/your-july-apartment-moving-checklist/majestic-view-of-tokyo-metropolitan-gove-2.webp"
   - "/images/blog/2026/07/your-july-apartment-moving-checklist/upward-view-of-modern-skyscrapers-with-b-4.webp"
-
 service_link: "/apartment-moving"
 location_link: null
 status: "pending"

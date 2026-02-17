@@ -20,7 +20,6 @@ images:
   - "/images/blog/2024/06/essential-tips-for-smooth-moves-with-elevator-reservations/high-rise-residential-building-in-izmir--2.webp"
   - "/images/blog/2024/06/essential-tips-for-smooth-moves-with-elevator-reservations/picturesque-canal-with-autumn-foliage-an-1.webp"
   - "/images/blog/2024/06/essential-tips-for-smooth-moves-with-elevator-reservations/upward-view-of-a-tall-modern-building-wi-4.webp"
-
 service_link: "/apartment-moving"
 location_link: null
 status: "pending"

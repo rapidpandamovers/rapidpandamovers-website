@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/12/making-hialeah-your-new-home-a-practical-guide/a-stunning-view-of-miami-s-illuminated-s-3.webp"
   - "/images/blog/2029/12/making-hialeah-your-new-home-a-practical-guide/aerial-view-of-apollo-beach-fl-showcasin-1.webp"
   - "/images/blog/2029/12/making-hialeah-your-new-home-a-practical-guide/three-cluster-mailboxes-under-trees-in-a-2.webp"
-
 service_link: null
 location_link: "/hialeah-movers"
 status: "complete"

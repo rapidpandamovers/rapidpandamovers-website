@@ -18,7 +18,6 @@ images:
   - "/images/blog/2024/12/antique-moving-strategies-for-december-moves/two-movers-smiling-from-their-moving-com-2.webp"
   - "/images/blog/2024/12/antique-moving-strategies-for-december-moves/two-movers-taking-a-break-on-a-green-sof-3.webp"
   - "/images/blog/2024/12/antique-moving-strategies-for-december-moves/woman-kneeling-to-wrap-a-wicker-chair-wi-1.webp"
-
 service_link: "/antique-moving"
 location_link: null
 status: "pending"

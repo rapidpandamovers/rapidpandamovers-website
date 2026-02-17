@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/11/november-moving-packing-services-fundamentals/a-couple-unpacking-books-in-their-new-ho-1.webp"
   - "/images/blog/2030/11/november-moving-packing-services-fundamentals/crop-anonymous-male-in-casual-wear-using-3.webp"
   - "/images/blog/2030/11/november-moving-packing-services-fundamentals/crop-unrecognizable-man-in-casual-clothe-2.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "pending"

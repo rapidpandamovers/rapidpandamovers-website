@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/05/mothers-day-safe-moving-strategies-in-miami/loc-aerial-photo-of-miami-beach-with-skyline-1.webp"
   - "/images/blog/2029/05/mothers-day-safe-moving-strategies-in-miami/svc-a-spacious-bank-interior-showcasing-a-la-1.webp"
   - "/images/blog/2029/05/mothers-day-safe-moving-strategies-in-miami/svc-close-up-of-vintage-safety-deposit-boxes-2.webp"
-
 service_link: "/safe-moving"
 location_link: null
 status: "pending"

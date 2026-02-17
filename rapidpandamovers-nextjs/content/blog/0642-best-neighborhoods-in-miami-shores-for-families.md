@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/06/best-neighborhoods-in-miami-shores-for-families/loc-explore-this-modern-miami-residence-with-1.webp"
   - "/images/blog/2028/06/best-neighborhoods-in-miami-shores-for-families/svc-high-angle-view-of-an-asda-delivery-truc-2.webp"
   - "/images/blog/2028/06/best-neighborhoods-in-miami-shores-for-families/svc-movers-loading-boxes-into-a-truck-on-a-s-1.webp"
-
 service_link: "/miami-shores-local-moving"
 location_link: "/miami-shores-movers"
 status: "complete"

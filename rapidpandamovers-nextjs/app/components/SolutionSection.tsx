@@ -38,8 +38,8 @@ export default function SolutionSection({
   if (!solutions || solutions.length === 0) return null
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+    <section className="pt-20">
+      <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             {title.includes(' ') ? (
@@ -55,9 +55,9 @@ export default function SolutionSection({
             {subtitle}
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto">
           {solutions.map((solution, index) => (
-            <div key={index} className="bg-orange-500 rounded-lg p-6 flex items-start space-x-4">
+            <div key={index} className="bg-orange-500 rounded-4xl p-6 flex items-start space-x-4">
               <CheckCircle className="w-6 h-6 text-white flex-shrink-0 mt-1" />
               <div>
                 <h3 className="text-lg font-bold text-white mb-2">{solution.title}</h3>

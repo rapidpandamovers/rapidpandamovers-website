@@ -2,7 +2,7 @@
 id: 239
 title: "8 Lucky Rituals for Moving Into a New Home"
 slug: "8-lucky-rituals-for-moving-into-a-new-home"
-excerpt: "Bring good fortune to your new home with these moving rituals from cultures around the world. From salt to new brooms, discover traditions."
+excerpt: "Bring good fortune to your new home with these moving rituals from cultures around the world."
 date: "2025-10-29"
 updated: "2025-10-29"
 readTime: "2 min read"
@@ -17,7 +17,6 @@ images:
   - "/images/blog/2025/10/8-lucky-rituals-for-moving-into-a-new-home/close-up-of-a-large-yellow-dump-truck-us-2.webp"
   - "/images/blog/2025/10/8-lucky-rituals-for-moving-into-a-new-home/red-truck-with-large-covered-cargo-in-an-4.webp"
   - "/images/blog/2025/10/8-lucky-rituals-for-moving-into-a-new-home/two-men-load-construction-materials-onto-3.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "pending"

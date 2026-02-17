@@ -17,7 +17,6 @@ images:
   - "/images/blog/2027/09/7-packing-mistakes-that-could-ruin-your-move/confident-young-woman-carrying-cardboard-5.webp"
   - "/images/blog/2027/09/7-packing-mistakes-that-could-ruin-your-move/crop-anonymous-guy-in-casual-clothes-usi-4.webp"
   - "/images/blog/2027/09/7-packing-mistakes-that-could-ruin-your-move/side-view-of-crop-anonymous-man-packing--3.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "pending"

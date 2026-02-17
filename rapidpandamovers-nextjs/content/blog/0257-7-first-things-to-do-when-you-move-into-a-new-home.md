@@ -17,7 +17,6 @@ images:
   - "/images/blog/2025/12/7-first-things-to-do-when-you-move-into-a-new-home/a-collection-of-labeled-cardboard-boxes--5.webp"
   - "/images/blog/2025/12/7-first-things-to-do-when-you-move-into-a-new-home/close-up-of-a-cardboard-box-filled-with--4.webp"
   - "/images/blog/2025/12/7-first-things-to-do-when-you-move-into-a-new-home/crop-anonymous-guy-in-casual-clothes-usi-2.webp"
-
 service_link: null
 location_link: null
 status: "completed"

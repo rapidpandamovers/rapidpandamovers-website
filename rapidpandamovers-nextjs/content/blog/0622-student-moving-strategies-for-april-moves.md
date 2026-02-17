@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/04/student-moving-strategies-for-april-moves/concentrated-young-woman-playing-chess-i-2.webp"
   - "/images/blog/2028/04/student-moving-strategies-for-april-moves/smiling-mover-giving-thumbs-up-from-a-mo-3.webp"
   - "/images/blog/2028/04/student-moving-strategies-for-april-moves/young-woman-moving-boxes-out-of-an-apart-5.webp"
-
 service_link: "/student-moving"
 location_link: null
 status: "complete"

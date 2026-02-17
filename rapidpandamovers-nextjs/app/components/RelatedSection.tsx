@@ -25,28 +25,30 @@ export default function RelatedSection<T>({
   }
 
   return (
-    <section className="py-16">
+    <section className="pt-20">
       <div className="container mx-auto">
-        <h2 className="text-2xl font-bold text-gray-800 mb-8 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-10 text-center">
           {title}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto">
-          {filteredItems.map((item) => {
-            const slug = getSlug(item);
-            return (
-              <Link
-                key={slug}
-                href={`${basePath}/${slug}`}
-                className="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-all group"
-              >
-                {renderItem(item)}
-                <span className="text-orange-500 text-sm flex items-center mt-2">
-                  Compare
-                  <ArrowRight className="w-3 h-3 ml-1" />
-                </span>
-              </Link>
-            );
-          })}
+        <div className="bg-gray-50 rounded-4xl p-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {filteredItems.map((item) => {
+              const slug = getSlug(item);
+              return (
+                <Link
+                  key={slug}
+                  href={`${basePath}/${slug}`}
+                  className="bg-white rounded-2xl p-6 text-center hover:shadow-md transition-all group"
+                >
+                  {renderItem(item)}
+                  <span className="text-orange-500 text-sm font-medium flex items-center justify-center mt-3">
+                    Compare
+                    <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

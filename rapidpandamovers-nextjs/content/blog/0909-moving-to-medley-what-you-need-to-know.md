@@ -20,7 +20,6 @@ images:
   - "/images/blog/2030/02/moving-to-medley-what-you-need-to-know/exterior-view-of-a-modern-building-entra-3.webp"
   - "/images/blog/2030/02/moving-to-medley-what-you-need-to-know/monochrome-image-of-jacksonville-lift-br-5.webp"
   - "/images/blog/2030/02/moving-to-medley-what-you-need-to-know/view-of-a-modern-office-building-behind--2.webp"
-
 service_link: null
 location_link: "/medley-movers"
 status: "pending"

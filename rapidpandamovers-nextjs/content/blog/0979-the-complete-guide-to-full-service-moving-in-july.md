@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/07/the-complete-guide-to-full-service-moving-in-july/a-mover-in-a-coverall-preparing-boxes-fo-1.webp"
   - "/images/blog/2030/07/the-complete-guide-to-full-service-moving-in-july/two-men-carrying-a-green-sofa-on-a-city--3.webp"
   - "/images/blog/2030/07/the-complete-guide-to-full-service-moving-in-july/two-professional-movers-in-an-empty-apar-2.webp"
-
 service_link: "/full-service-moving"
 location_link: null
 status: "pending"

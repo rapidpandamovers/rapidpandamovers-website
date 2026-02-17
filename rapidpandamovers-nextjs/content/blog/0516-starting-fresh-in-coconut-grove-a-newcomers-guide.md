@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/08/starting-fresh-in-coconut-grove-a-newcomers-guide/loc-bright-market-scene-with-fresh-produce-i-1.webp"
   - "/images/blog/2027/08/starting-fresh-in-coconut-grove-a-newcomers-guide/svc-red-truck-with-large-covered-cargo-in-an-1.webp"
   - "/images/blog/2027/08/starting-fresh-in-coconut-grove-a-newcomers-guide/svc-three-men-loading-wooden-boxes-on-a-truc-2.webp"
-
 service_link: "/coconut-grove-local-moving"
 location_link: "/coconut-grove-movers"
 status: "complete"

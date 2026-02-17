@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/11/student-moving-tips-for-fall-semester/a-graduate-in-cap-and-gown-performs-a-sk-4.webp"
   - "/images/blog/2030/11/student-moving-tips-for-fall-semester/concentrated-young-woman-playing-chess-i-1.webp"
   - "/images/blog/2030/11/student-moving-tips-for-fall-semester/smiling-mover-giving-thumbs-up-from-a-mo-2.webp"
-
 service_link: "/student-moving"
 location_link: null
 status: "pending"

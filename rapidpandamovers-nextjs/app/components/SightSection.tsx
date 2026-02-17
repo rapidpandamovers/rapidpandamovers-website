@@ -79,7 +79,7 @@ export default function SightSection({
   }
 
   return (
-    <section className={`py-16 ${className}`}>
+    <section className={`pt-20 ${className}`}>
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-10">

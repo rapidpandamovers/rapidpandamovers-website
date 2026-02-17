@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/10/hourly-moving-essentials-for-halloween/a-vibrant-red-alarm-clock-rests-in-lush--1.webp"
   - "/images/blog/2028/10/hourly-moving-essentials-for-halloween/four-wall-clocks-showing-different-time--2.webp"
   - "/images/blog/2028/10/hourly-moving-essentials-for-halloween/pink-vintage-alarm-clock-on-a-pink-backg-3.webp"
-
 service_link: "/hourly-moving"
 location_link: null
 status: "pending"

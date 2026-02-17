@@ -18,7 +18,6 @@ images:
   - "/images/blog/2024/04/gun-safe-moving-costs/a-cheerful-man-carries-a-large-couch-acr-2.webp"
   - "/images/blog/2024/04/gun-safe-moving-costs/an-excavator-working-on-a-sandy-beach-co-1.webp"
   - "/images/blog/2024/04/gun-safe-moving-costs/two-movers-taking-a-break-on-a-green-sof-4.webp"
-
 service_link: "/safe-moving"
 location_link: null
 status: "pending"

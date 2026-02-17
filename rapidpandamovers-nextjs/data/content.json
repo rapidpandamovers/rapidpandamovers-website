@@ -5,50 +5,21 @@
     "phone": "786-585-4269",
     "email": "info@rapidpandamovers.com",
     "address": "7001 North Waterway Dr #107 Miami, FL 33155",
-    "hours": {
-      "weekday": "Mon-Fri: 8AM - 8PM",
-      "weekend": "Sat-Sun: 9AM - 6PM",
-      "emergency": "Emergency: 24/7",
-      "weekdayLabel": "Monday - Friday",
-      "weekdayTime": "8:00 AM - 8:00 PM",
-      "weekendLabel": "Saturday - Sunday",
-      "weekendTime": "9:00 AM - 6:00 PM",
-      "emergencyLabel": "Emergency",
-      "emergencyTime": "Available 24/7"
+    "hours": [
+      { "label": "Open Daily", "time": "8:00 AM – 8:00 PM" },
+      { "label": "After-Hours & Emergency", "time": "Available by Request" }
+    ],
+    "header": {
+      "phoneSubtext": "Open Daily: 8AM - 8PM",
+      "quoteSubtext": "in 30 minutes or less"
     }
   },
   "home": {
     "hero": {
       "title": "#1 Family-Owned Moving Company in Miami",
       "description": "Low-cost moving & packing services",
-      "cta": "Get Free Quote",
-      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
-    },
-    "services_overview": {
-      "title": "Our Moving Services",
-      "description": "Comprehensive moving solutions for every need",
-      "services": [
-        {
-          "name": "Local Moving",
-          "description": "Same-day and local area moves with quick response",
-          "icon": "Truck"
-        },
-        {
-          "name": "Long Distance Moving", 
-          "description": "Interstate moves with reliable ETAs and tracking",
-          "icon": "Navigation"
-        },
-        {
-          "name": "Packing Services",
-          "description": "Professional packing with high-quality materials",
-          "icon": "Package"
-        },
-        {
-          "name": "Commercial Moving",
-          "description": "Business relocations with minimal downtime",
-          "icon": "Building"
-        }
-      ]
+      "cta": "Get Started with a Free Quote",
+      "image_url": ""
     },
     "why_choose_us": {
       "title": "Why Choose Rapid Panda Movers?",
@@ -93,7 +64,7 @@
     "hero": {
       "title": "Your Trusted Moving Partner in Miami",
       "description": "Professional, reliable, and affordable moving services",
-      "cta": "Get Your Free Quote"
+      "cta": "Get Started with a Free Quote"
     },
     "story": {
       "title": "Our Story",
@@ -139,7 +110,7 @@
     "hero": {
       "title": "Transparent Moving Rates",
       "description": "Fair, upfront pricing with no hidden fees",
-      "cta": "Get Your Free Quote"
+      "cta": "Get Started with a Free Quote"
     },
     "pricing_structure": {
       "local_moving": {
@@ -208,34 +179,40 @@
   "reviews": {
     "title": "What Our Customers Say",
     "description": "Real reviews from satisfied customers",
-    "featured_reviews": [
-      {
-        "name": "Sarah Johnson",
-        "location": "Coral Gables, FL",
-        "rating": 5,
-        "review": "Rapid Panda Movers made our move stress-free and efficient. The team was professional, careful with our belongings, and completed the move ahead of schedule. Highly recommended!",
-        "service": "Local Moving"
-      },
-      {
-        "name": "Michael Rodriguez", 
-        "location": "Miami Beach, FL",
-        "rating": 5,
-        "review": "Excellent service from start to finish. The movers were punctual, professional, and handled our fragile items with great care. The pricing was transparent and fair.",
-        "service": "Packing Services"
-      },
-      {
-        "name": "Jennifer Chen",
-        "location": "Doral, FL", 
-        "rating": 5,
-        "review": "Outstanding moving experience! The team was efficient, respectful, and made sure everything arrived safely. Will definitely use them again for future moves.",
-        "service": "Commercial Moving"
-      }
-    ],
     "stats": {
       "total_moves": "1000+",
       "customer_satisfaction": "98%",
       "years_experience": "5+",
-      "average_rating": "4.9/5"
+      "average_rating": 4.7,
+      "total_reviews": 56,
+      "five_star_count": 53,
+      "four_star_count": 1,
+      "three_star_count": 0,
+      "two_star_count": 0,
+      "one_star_count": 2
+    },
+    "platforms": {
+      "google": {
+        "name": "Google",
+        "icon": "google",
+        "url": "https://www.google.com/maps/place/Rapid+Panda+Movers",
+        "rating": 4.8,
+        "reviewCount": 51
+      },
+      "yelp": {
+        "name": "Yelp",
+        "icon": "yelp",
+        "url": "https://www.yelp.com/biz/rapid-panda-movers-miami",
+        "rating": 4.2,
+        "reviewCount": 5
+      },
+      "bbb": {
+        "name": "BBB",
+        "icon": "bbb",
+        "url": "https://www.bbb.org/us/fl/miami/profile/moving-companies/rapid-panda-movers-llc-0633-92024179",
+        "rating": "A+",
+        "reviewCount": 0
+      }
     }
   },
   "faq": {
@@ -243,36 +220,79 @@
     "description": "Common questions about our moving services",
     "questions": [
       {
-        "question": "How far in advance should I book my move?",
-        "answer": "We recommend booking at least 2-3 weeks in advance, especially during peak moving seasons (summer months). However, we can often accommodate same-day or next-day moves depending on availability."
+        "question": "How much does a local move cost?",
+        "answer": "Our local moves are priced by the hour based on the number of movers and truck size needed. We provide free, no-obligation estimates so you know the cost upfront with no hidden fees.",
+        "link": "/moving-rates"
       },
       {
-        "question": "Do you provide packing materials?",
-        "answer": "Yes! We provide all necessary packing materials including boxes, tape, bubble wrap, and protective padding. The cost of materials is included in our packing service rates."
+        "question": "How far in advance should I book my move?",
+        "answer": "We recommend booking at least 2-3 weeks in advance, especially during peak moving seasons (summer months). However, we can often accommodate same-day or next-day moves depending on availability.",
+        "link": "/reservations"
+      },
+      {
+        "question": "Do you provide packing materials and services?",
+        "answer": "Yes! We offer full packing services and provide all necessary materials including boxes, tape, bubble wrap, and protective padding. The cost of materials is included in our packing service rates.",
+        "link": "/packing-services"
       },
       {
         "question": "Are you licensed and insured?",
-        "answer": "Absolutely. Rapid Panda Movers is fully licensed and insured. We carry comprehensive liability insurance to protect your belongings during the move."
+        "answer": "Absolutely. Rapid Panda Movers is fully licensed and insured. We carry comprehensive liability insurance to protect your belongings during the move.",
+        "link": "/about-us"
       },
       {
         "question": "What if something gets damaged during the move?",
-        "answer": "While we take every precaution to prevent damage, if something does get damaged, we have a clear claims process. We're fully insured and will work with you to resolve any issues quickly and fairly."
+        "answer": "While we take every precaution to prevent damage, if something does get damaged, we have a clear claims process. We're fully insured and will work with you to resolve any issues quickly and fairly.",
+        "link": "/contact-us"
       },
       {
         "question": "Do you offer storage services?",
-        "answer": "Yes, we can coordinate with local storage facilities if you need temporary storage for your belongings. We can help arrange storage and transportation to and from storage units."
+        "answer": "Yes, we offer short-term and long-term storage solutions. We can help arrange secure storage and transportation to and from storage units.",
+        "link": "/storage-solutions"
       },
       {
-        "question": "Can you move specialty items like pianos or artwork?",
-        "answer": "Yes, we have experience moving specialty items including pianos, artwork, antiques, and other valuable possessions. We use specialized equipment and techniques to ensure these items are transported safely."
+        "question": "Can you move specialty items like pianos or gun safes?",
+        "answer": "Yes, we have experience moving specialty items including pianos, gun safes, artwork, antiques, and other valuable possessions. We use specialized equipment and techniques to ensure these items are transported safely.",
+        "link": "/specialty-item-moving"
       },
       {
         "question": "What areas do you serve?",
-        "answer": "We serve all of Miami-Dade County including Miami, Coral Gables, Miami Beach, Hialeah, Doral, Aventura, Kendall, and surrounding areas. We also provide long-distance moving services nationwide."
+        "answer": "We serve all of Miami-Dade County including Miami, Coral Gables, Miami Beach, Hialeah, Doral, Aventura, Kendall, and surrounding areas. We also provide long-distance moving services nationwide.",
+        "link": "/locations"
       },
       {
-        "question": "How do you calculate the cost of my move?",
-        "answer": "Our local moves are priced by the hour based on the number of movers and truck size needed. Long-distance moves are priced based on weight and distance. We provide free, no-obligation estimates for all moves."
+        "question": "Do you handle long-distance moves?",
+        "answer": "Yes, we provide interstate and cross-country moving services with reliable ETAs and tracking. Our long-distance moves are priced based on weight and distance.",
+        "link": "/long-distance"
+      },
+      {
+        "question": "Can you help with apartment and high-rise moves?",
+        "answer": "Absolutely. We specialize in apartment and high-rise moves throughout Miami, handling elevator reservations, tight hallways, and building regulations so you don't have to.",
+        "link": "/apartment-moving"
+      },
+      {
+        "question": "Do you offer commercial and office moving?",
+        "answer": "Yes, we provide commercial moving services designed to minimize downtime for your business. We handle everything from office furniture to IT equipment.",
+        "link": "/commercial-moving"
+      },
+      {
+        "question": "What should I do to prepare for moving day?",
+        "answer": "Start by decluttering, labeling boxes by room, and packing a moving-day essentials bag. We provide a comprehensive moving checklist to help you stay organized.",
+        "link": "/moving-checklist"
+      },
+      {
+        "question": "Do you offer same-day or last-minute moving?",
+        "answer": "Yes! We offer same-day and emergency moving services throughout Miami-Dade County, subject to availability. Give us a call and we'll do our best to accommodate you.",
+        "link": "/last-minute-moving"
+      },
+      {
+        "question": "How do I get a free quote?",
+        "answer": "You can request a free quote online, call us directly, or fill out our quick quote form. We typically respond within 30 minutes during business hours.",
+        "link": "/quote"
+      },
+      {
+        "question": "Why should I choose Rapid Panda Movers?",
+        "answer": "We're a family-owned Miami moving company with transparent pricing, experienced crews, and a 4.7/5 average rating across 56 verified reviews. We treat every move like it's our own.",
+        "link": "/why-choose-us"
       }
     ]
   },
@@ -282,8 +302,8 @@
     "hero": {
       "title": "Moving Professionals Who Care",
       "description": "Low-cost moving & packing services",
-      "cta": "Get Your Free Quote",
-      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+      "cta": "Get Started with a Free Quote",
+      "image_url": ""
     },
     "categories": [
       {
@@ -324,8 +344,8 @@
     "hero": {
       "title": "Your Complete Moving Checklist",
       "description": "Stay organized and stress-free with our comprehensive moving checklist",
-      "cta": "Get Your Free Quote",
-      "image_url": "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+      "cta": "Get Started with a Free Quote",
+      "image_url": ""
     },
     "categories": [
       {
@@ -570,7 +590,7 @@
       },
       {
         "term": "All-encompassing movers",
-        "definition": "Also known as full-service movers. A moving company that offers a wide range of services to match every move. Pure Moving will disassemble furniture, pack up your entire home, and move your boxes into the trucks, along with anything else you might need in the process of moving your belongings cross-country."
+        "definition": "Also known as full-service movers. A moving company that offers a wide range of services to match every move. Rapid Panda Movers will disassemble furniture, pack up your entire home, and move your boxes into the trucks, along with anything else you might need in the process of moving your belongings cross-country."
       },
       {
         "term": "Appliance service",
@@ -610,7 +630,7 @@
       },
       {
         "term": "Cost of move",
-        "definition": "This is how much your move will cost. This does not include add-on services and insurance. Cost estimates are actual charges calculated from the information you provide your movers with at the initial consultation. Pure Moving will ask customers questions to find out all the details about what is to be moved and where it is to be moved to; however, the cost of the move is only an initial estimate and is subject to change if any new information about the move is brought to light during the process. Additional costs may be added for factors such as stairs and distance, so be sure to talk to your moving company about all factors that may affect the price of your move."
+        "definition": "This is how much your move will cost. This does not include add-on services and insurance. Cost estimates are actual charges calculated from the information you provide your movers with at the initial consultation. Rapid Panda Movers will ask customers questions to find out all the details about what is to be moved and where it is to be moved to; however, the cost of the move is only an initial estimate and is subject to change if any new information about the move is brought to light during the process. Additional costs may be added for factors such as stairs and distance, so be sure to talk to your moving company about all factors that may affect the price of your move."
       },
       {
         "term": "Expedited service",
@@ -630,11 +650,11 @@
       },
       {
         "term": "Full service mover",
-        "definition": "A moving company that takes care of every step of the moving process. Pure Moving is a full service mover that will pack, drive, unpack, and reassemble your belongings and furniture in your new home. Full service movers will also wrap breakables and blanket furniture with furniture pads to protect it in the process."
+        "definition": "A moving company that takes care of every step of the moving process. Rapid Panda Movers is a full service mover that will pack, drive, unpack, and reassemble your belongings and furniture in your new home. Full service movers will also wrap breakables and blanket furniture with furniture pads to protect it in the process."
       },
       {
         "term": "High-value article",
-        "definition": "An item that is valued at more than one hundred dollars per pound that must be included on a high-value inventory form. Pure Moving will take the utmost care when handling high-value articles, though because we know how important they are to you, we take the utmost care with all of your belongings anyway!"
+        "definition": "An item that is valued at more than one hundred dollars per pound that must be included on a high-value inventory form. Rapid Panda Movers will take the utmost care when handling high-value articles, though because we know how important they are to you, we take the utmost care with all of your belongings anyway!"
       },
       {
         "term": "Hourly rates",
@@ -670,7 +690,7 @@
       },
       {
         "term": "Local moving",
-        "definition": "Moving around the block, to the other side of the city, or to a new part of your county. Pure Moving has been moving your friends and neighbors for years, so we know exactly how to relocate your belongings in the easiest way possible."
+        "definition": "Moving around the block, to the other side of the city, or to a new part of your county. Rapid Panda Movers has been moving your friends and neighbors for years, so we know exactly how to relocate your belongings in the easiest way possible."
       },
       {
         "term": "Long-distance moving",
@@ -678,7 +698,7 @@
       },
       {
         "term": "Mobile container",
-        "definition": "The vessels that moving companies use to transport your belongings. They will be unloaded onto your new property and will remain there until you have unloaded them and asked for them to be picked up. Pure Moving will unload your items from their trucks and will not leave any containers on your property."
+        "definition": "The vessels that moving companies use to transport your belongings. They will be unloaded onto your new property and will remain there until you have unloaded them and asked for them to be picked up. Rapid Panda Movers will unload your items from their trucks and will not leave any containers on your property."
       },
       {
         "term": "Moving company",
@@ -706,7 +726,7 @@
       },
       {
         "term": "Standard Coverage",
-        "definition": "The minimum amount of free coverage provided by a moving company. This could be as little as 60 cents per pound of damaged goods. If they value their goods, customers should choose to add on full coverage insurance, an option offered by Pure Moving."
+        "definition": "The minimum amount of free coverage provided by a moving company. This could be as little as 60 cents per pound of damaged goods. If they value their goods, customers should choose to add on full coverage insurance, an option offered by Rapid Panda Movers."
       },
       {
         "term": "Surface Transportation Board",
@@ -730,11 +750,11 @@
       },
       {
         "term": "Truck & trailer",
-        "definition": "A moving company may deliver both a truck and a trailer to your new home. The truck and the trailer will sit at your new property until you have unloaded them and asked for a pickup. Pure Moving is a full service moving company that will unload your items from their trucks before driving them off of your property."
+        "definition": "A moving company may deliver both a truck and a trailer to your new home. The truck and the trailer will sit at your new property until you have unloaded them and asked for a pickup. Rapid Panda Movers is a full service moving company that will unload your items from their trucks before driving them off of your property."
       },
       {
         "term": "Unpacking",
-        "definition": "The process of unboxing and unwrapping your belongings. Unpacking is one of the final steps of moving into a new home. It takes place after your items have been unloaded from the truck and into your new space. Pure Moving offers unpacking services and a reassembling service for your convenience."
+        "definition": "The process of unboxing and unwrapping your belongings. Unpacking is one of the final steps of moving into a new home. It takes place after your items have been unloaded from the truck and into your new space. Rapid Panda Movers offers unpacking services and a reassembling service for your convenience."
       },
       {
         "term": "Valuation",
@@ -749,7 +769,7 @@
       "phone": "786-585-4269",
       "email": "info@rapidpandamovers.com",
       "address": "7001 North Waterway Dr #107 Miami, Fl 33155",
-      "hours": "Monday - Sunday: 7:00 AM - 7:00 PM"
+      "hours": "Open Daily: 8:00 AM – 8:00 PM | After-Hours & Emergency: Available by Request"
     },
     "quote_form": {
       "title": "Get Your Free Quote",
@@ -784,14 +804,14 @@
     "description": "Expert advice and insights for your next move",
     "data_source": "blog.json",
     "hero": {
-      "title": "Moving Tips & Resources",
+      "title": "Moving Guides & Resources",
       "description": "Expert advice and insights for your next move",
-      "cta": "Read Our Blog"
+      "cta": "Get Started with a Free Quote"
     }
   },
   "privacy": {
     "title": "Privacy Policy",
-    "last_updated": "2024-01-01",
+    "last_updated": "2025-01-01",
     "sections": [
       {
         "title": "Information We Collect",
@@ -809,7 +829,7 @@
   },
   "terms": {
     "title": "Terms & Conditions",
-    "last_updated": "2024-01-01",
+    "last_updated": "2025-01-01",
     "sections": [
       {
         "title": "Service Agreement",
@@ -828,25 +848,5 @@
   "disclaimer": {
     "title": "Disclaimer",
     "content": "The information on this website is for general informational purposes only. While we strive to provide accurate and up-to-date information, we make no representations or warranties of any kind about the completeness, accuracy, reliability, or suitability of the information."
-  },
-  "sitemap": {
-    "title": "Sitemap",
-    "pages": [
-      { "url": "/", "title": "Home" },
-      { "url": "/about", "title": "About Us" },
-      { "url": "/services", "title": "Services" },
-      { "url": "/local-moving", "title": "Local Moving" },
-      { "url": "/long-distance", "title": "Long Distance Moving" },
-      { "url": "/packing-services", "title": "Packing Services" },
-      { "url": "/commercial-moving", "title": "Commercial Moving" },
-      { "url": "/apartment-moving", "title": "Apartment Moving" },
-      { "url": "/contact", "title": "Contact" },
-      { "url": "/quote", "title": "Get Quote" },
-      { "url": "/blog", "title": "Blog" }
-    ]
-  },
-  "robots": {
-    "title": "Robots.txt",
-    "content": "User-agent: *\nAllow: /\nSitemap: https://www.rapidpandamovers.com/sitemap.xml"
   }
 }

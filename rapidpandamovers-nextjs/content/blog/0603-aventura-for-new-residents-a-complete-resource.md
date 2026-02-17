@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/03/aventura-for-new-residents-a-complete-resource/loc-discover-the-picturesque-urban-streets-o-2.webp"
   - "/images/blog/2028/03/aventura-for-new-residents-a-complete-resource/svc-red-truck-with-large-covered-cargo-in-an-1.webp"
   - "/images/blog/2028/03/aventura-for-new-residents-a-complete-resource/svc-vintage-truck-carrying-heavy-cargo-bags--2.webp"
-
 service_link: "/aventura-local-moving"
 location_link: "/aventura-movers"
 status: "pending"

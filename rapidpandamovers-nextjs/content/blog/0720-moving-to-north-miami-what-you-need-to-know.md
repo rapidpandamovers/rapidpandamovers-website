@@ -2,7 +2,7 @@
 id: 720
 title: "Moving to North Miami: What You Need to Know"
 slug: "moving-to-north-miami-what-you-need-to-know"
-excerpt: "Moving to North Miami? Discover the MOCA District, parks like Oleta River, and local resources for families relocating here."
+excerpt: "Moving to North Miami? Discover the MOCA District, parks like Oleta River, and local resources for families relocating..."
 date: "2028-11-30"
 updated: "2028-11-30"
 readTime: "3 min read"
@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/11/moving-to-north-miami-what-you-need-to-know/empty-streets-with-palm-trees-and-modern-3.webp"
   - "/images/blog/2028/11/moving-to-north-miami-what-you-need-to-know/explore-this-modern-miami-residence-with-5.webp"
   - "/images/blog/2028/11/moving-to-north-miami-what-you-need-to-know/view-of-miami-skyline-from-coral-gables--1.webp"
-
 service_link: null
 location_link: "/north-miami-movers"
 status: "pending"

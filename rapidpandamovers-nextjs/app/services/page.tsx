@@ -1,4 +1,3 @@
-import { Suspense } from 'react'
 import Hero from '../components/Hero'
 import QuoteSection from '../components/QuoteSection'
 import OverviewSection from '../components/OverviewSection'
@@ -34,9 +33,7 @@ export default function ServicesPage() {
       )}
 
       {/* Main Services */}
-      <Suspense fallback={<div className="py-20 text-center">Loading services...</div>}>
-        <ServicesContent />
-      </Suspense>
+      <ServicesContent />
 
       {/* Why Choose Us */}
       <WhySection />

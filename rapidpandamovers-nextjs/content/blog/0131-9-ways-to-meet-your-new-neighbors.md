@@ -17,7 +17,6 @@ images:
   - "/images/blog/2025/02/9-ways-to-meet-your-new-neighbors/a-couple-greeting-a-guest-at-their-doorw-4.webp"
   - "/images/blog/2025/02/9-ways-to-meet-your-new-neighbors/a-happy-moment-capturing-a-man-and-woman-3.webp"
   - "/images/blog/2025/02/9-ways-to-meet-your-new-neighbors/three-men-seated-and-standing-by-a-doorw-2.webp"
-
 service_link: "/local-moving"
 location_link: "/locations/miami"
 status: "pending"

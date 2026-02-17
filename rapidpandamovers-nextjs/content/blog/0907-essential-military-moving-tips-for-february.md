@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/02/essential-military-moving-tips-for-february/close-up-of-russian-soldiers-in-ceremoni-2.webp"
   - "/images/blog/2030/02/essential-military-moving-tips-for-february/detailed-view-of-green-plastic-toy-soldi-1.webp"
   - "/images/blog/2030/02/essential-military-moving-tips-for-february/two-soldiers-in-camouflage-uniforms-prac-3.webp"
-
 service_link: "/military-moving"
 location_link: null
 status: "pending"

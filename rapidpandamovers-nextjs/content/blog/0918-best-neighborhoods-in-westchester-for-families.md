@@ -17,7 +17,6 @@ images:
   - "/images/blog/2030/03/best-neighborhoods-in-westchester-for-families/bright-modern-kitchen-with-wooden-dining-3.webp"
   - "/images/blog/2030/03/best-neighborhoods-in-westchester-for-families/scenic-aerial-shot-of-a-sprawling-reside-4.webp"
   - "/images/blog/2030/03/best-neighborhoods-in-westchester-for-families/three-cluster-mailboxes-under-trees-in-a-2.webp"
-
 service_link: null
 location_link: "/westchester-movers"
 status: "pending"

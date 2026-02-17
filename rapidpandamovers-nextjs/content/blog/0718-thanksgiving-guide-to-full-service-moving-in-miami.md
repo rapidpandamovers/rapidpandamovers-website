@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/11/thanksgiving-guide-to-full-service-moving-in-miami/smiling-mover-giving-thumbs-up-from-a-mo-3.webp"
   - "/images/blog/2028/11/thanksgiving-guide-to-full-service-moving-in-miami/two-movers-in-uniform-carrying-boxes-in--2.webp"
   - "/images/blog/2028/11/thanksgiving-guide-to-full-service-moving-in-miami/two-professional-movers-in-an-empty-apar-1.webp"
-
 service_link: "/full-service-moving"
 location_link: null
 status: "pending"

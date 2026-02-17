@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/03/7-things-to-do-in-el-portal-this-weekend/a-vibrant-view-of-miami-s-skyscrapers-by-1.webp"
   - "/images/blog/2026/03/7-things-to-do-in-el-portal-this-weekend/an-exterior-view-of-parisian-hotel-with--3.webp"
   - "/images/blog/2026/03/7-things-to-do-in-el-portal-this-weekend/captivating-miami-skyline-at-night-featu-2.webp"
-
 service_link: null
 location_link: "/el-portal-movers"
 status: "complete"

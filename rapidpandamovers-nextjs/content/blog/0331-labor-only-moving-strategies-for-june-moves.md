@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/06/labor-only-moving-strategies-for-june-moves/a-group-of-laborers-carrying-sacks-on-a--3.webp"
   - "/images/blog/2026/06/labor-only-moving-strategies-for-june-moves/a-man-carries-heavy-rolled-carpets-on-hi-1.webp"
   - "/images/blog/2026/06/labor-only-moving-strategies-for-june-moves/two-men-load-construction-materials-onto-4.webp"
-
 service_link: "/labor-only-moving"
 location_link: null
 status: "pending"

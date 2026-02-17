@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/07/6-top-cafes-for-remote-workers-in-palmetto-bay/full-length-joyful-african-american-fema-1.webp"
   - "/images/blog/2028/07/6-top-cafes-for-remote-workers-in-palmetto-bay/refreshing-iced-coffee-placed-on-a-woode-2.webp"
   - "/images/blog/2028/07/6-top-cafes-for-remote-workers-in-palmetto-bay/relaxing-caf-scene-in-istanbul-featuring-3.webp"
-
 service_link: null
 location_link: "/palmetto-bay-movers"
 status: "pending"

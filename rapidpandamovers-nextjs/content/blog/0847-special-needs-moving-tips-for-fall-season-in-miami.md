@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/09/special-needs-moving-tips-for-fall-season-in-miami/close-up-of-a-woman-in-a-wheelchair-reac-4.webp"
   - "/images/blog/2029/09/special-needs-moving-tips-for-fall-season-in-miami/female-healthcare-worker-smiles-with-two-1.webp"
   - "/images/blog/2029/09/special-needs-moving-tips-for-fall-season-in-miami/two-paramedics-in-uniforms-conversing-in-2.webp"
-
 service_link: "/special-needs-moving"
 location_link: null
 status: "pending"

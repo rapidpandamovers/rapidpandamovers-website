@@ -5,7 +5,7 @@ slug: "10-global-traditions-for-good-luck-when-moving"
 excerpt: "Discover 10 fascinating moving traditions from around the world. Learn how different cultures use superstitions and rituals to ensure good luck in a new."
 date: "2027-03-31"
 readTime: "3 min read"
-category: "Fun Facts"
+category: "Military Moving"
 image_folder: "/images/blog/2027/03/10-global-traditions-for-good-luck-when-moving"
 featured: "/images/blog/2027/03/10-global-traditions-for-good-luck-when-moving/a-blue-nazar-amulet-hanging-on-a-white-w-2.webp"
 image_keywords:
@@ -16,8 +16,7 @@ images:
   - "/images/blog/2027/03/10-global-traditions-for-good-luck-when-moving/a-blue-nazar-amulet-hanging-on-a-white-w-2.webp"
   - "/images/blog/2027/03/10-global-traditions-for-good-luck-when-moving/close-up-of-chinese-fortune-sticks-in-a--3.webp"
   - "/images/blog/2027/03/10-global-traditions-for-good-luck-when-moving/close-up-of-numerous-blue-evil-eye-charm-1.webp"
-
-service_link: null
+service_link: "/military-moving"
 location_link: null
 status: "pending"
 updated: "2027-03-31"

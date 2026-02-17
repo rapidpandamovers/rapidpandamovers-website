@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/02/moving-to-miami-shores-what-you-need-to-know/loc-view-of-miami-skyline-from-coral-gables--1.webp"
   - "/images/blog/2030/02/moving-to-miami-shores-what-you-need-to-know/svc-pink-moving-trucks-parked-in-a-chicago-a-2.webp"
   - "/images/blog/2030/02/moving-to-miami-shores-what-you-need-to-know/svc-red-ford-f-150-truck-driving-on-a-bridge-1.webp"
-
 service_link: "/miami-shores-local-moving"
 location_link: "/miami-shores-movers"
 status: "pending"

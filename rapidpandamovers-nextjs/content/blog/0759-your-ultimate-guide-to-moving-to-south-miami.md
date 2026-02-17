@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/03/your-ultimate-guide-to-moving-to-south-miami/captivating-night-view-of-miami-skyline--3.webp"
   - "/images/blog/2029/03/your-ultimate-guide-to-moving-to-south-miami/dramatic-black-and-white-photo-of-the-mi-2.webp"
   - "/images/blog/2029/03/your-ultimate-guide-to-moving-to-south-miami/gorgeous-night-view-of-miami-s-illuminat-1.webp"
-
 service_link: null
 location_link: "/south-miami-movers"
 status: "pending"

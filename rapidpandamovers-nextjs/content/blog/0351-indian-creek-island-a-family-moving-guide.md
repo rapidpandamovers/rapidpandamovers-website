@@ -2,7 +2,7 @@
 id: 351
 title: "Indian Creek Island: A Family Moving Guide"
 slug: "indian-creek-island-a-family-moving-guide"
-excerpt: "Your guide to moving to Indian Creek Island, Miami's ultra-exclusive community known for privacy, security, and luxury waterfront living."
+excerpt: "Welcome to your July guide for moving to Indian Creek! Whether you're relocating from within South Florida or making a bigger move this summer..."
 date: "2026-07-23"
 updated: "2026-07-23"
 readTime: "5 min read"
@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/07/indian-creek-island-a-family-moving-guide/a-breathtaking-aerial-view-of-dubai-s-sk-2.webp"
   - "/images/blog/2026/07/indian-creek-island-a-family-moving-guide/a-scenic-aerial-view-of-a-luxury-beachfr-3.webp"
   - "/images/blog/2026/07/indian-creek-island-a-family-moving-guide/aerial-view-of-luxurious-waterfront-mans-1.webp"
-
 service_link: null
 location_link: "/indian-creek-movers"
 status: "pending"

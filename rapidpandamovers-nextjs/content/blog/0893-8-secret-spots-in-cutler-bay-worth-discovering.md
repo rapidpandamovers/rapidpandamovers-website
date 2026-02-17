@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/01/8-secret-spots-in-cutler-bay-worth-discovering/a-man-labels-a-cardboard-box-kitchen-dur-1.webp"
   - "/images/blog/2030/01/8-secret-spots-in-cutler-bay-worth-discovering/cardboard-box-filled-with-clothes-hanger-2.webp"
   - "/images/blog/2030/01/8-secret-spots-in-cutler-bay-worth-discovering/young-adult-male-smiling-while-handling--3.webp"
-
 service_link: null
 location_link: "/cutler-bay-movers"
 status: "pending"

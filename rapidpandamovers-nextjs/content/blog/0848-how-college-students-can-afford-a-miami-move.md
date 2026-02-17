@@ -6,7 +6,7 @@ excerpt: "Smart strategies for FIU, UM, and Miami Dade College students to save 
 date: "2029-09-26"
 updated: "2029-09-26"
 readTime: "5 min read"
-category: "Moving Tips"
+category: "Local Moving"
 image_folder: "/images/blog/2029/09/how-college-students-can-afford-a-miami-move"
 featured: "/images/blog/2029/09/how-college-students-can-afford-a-miami-move/student-moving-boxes-1.webp"
 image_keywords:

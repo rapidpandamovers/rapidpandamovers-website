@@ -2,7 +2,7 @@
 id: 487
 title: "Summer Moving: Local Moving Best Practices"
 slug: "summer-moving-local-moving-best-practices"
-excerpt: "Master summer moving in Miami with tips on beating the heat, protecting belongings from humidity, and handling condo requirements for a smooth local move."
+excerpt: "June is here, and if you're planning a move, you're likely thinking about local moving."
 date: "2027-06-07"
 updated: "2027-06-07"
 readTime: "5 min read"
@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/06/summer-moving-local-moving-best-practices/a-pile-of-empty-cardboard-boxes-arranged-4.webp"
   - "/images/blog/2027/06/summer-moving-local-moving-best-practices/cardboard-moving-boxes-in-a-modern-kitch-1.webp"
   - "/images/blog/2027/06/summer-moving-local-moving-best-practices/crop-anonymous-male-in-casual-clothes-pa-2.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "pending"

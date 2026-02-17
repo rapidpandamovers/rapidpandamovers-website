@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/11/starting-fresh-in-west-miami-a-newcomers-guide/loc-view-of-miami-skyline-from-coral-gables--1.webp"
   - "/images/blog/2030/11/starting-fresh-in-west-miami-a-newcomers-guide/svc-a-classic-hong-kong-tram-traverses-moder-2.webp"
   - "/images/blog/2030/11/starting-fresh-in-west-miami-a-newcomers-guide/svc-high-angle-view-of-an-asda-delivery-truc-1.webp"
-
 service_link: "/west-miami-local-moving"
 location_link: "/west-miami-movers"
 status: "complete"

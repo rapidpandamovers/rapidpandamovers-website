@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/04/spring-military-moving-insights-for-miami/loc-view-of-miami-skyline-from-coral-gables--2.webp"
   - "/images/blog/2029/04/spring-military-moving-insights-for-miami/svc-a-military-mother-embraces-her-son-with--2.webp"
   - "/images/blog/2029/04/spring-military-moving-insights-for-miami/svc-a-soldier-in-a-military-uniform-holds-a--1.webp"
-
 service_link: "/military-moving"
 location_link: null
 status: "pending"

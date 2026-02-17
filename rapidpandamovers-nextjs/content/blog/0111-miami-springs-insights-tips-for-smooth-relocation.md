@@ -19,7 +19,6 @@ images:
   - "/images/blog/2025/01/miami-springs-insights-tips-for-smooth-relocation/colorful-graffiti-of-monopoly-character--3.webp"
   - "/images/blog/2025/01/miami-springs-insights-tips-for-smooth-relocation/colorful-scene-capturing-miami-beach-s-h-4.webp"
   - "/images/blog/2025/01/miami-springs-insights-tips-for-smooth-relocation/empty-streets-with-palm-trees-and-modern-1.webp"
-
 service_link: null
 location_link: "/miami-springs-movers"
 status: "pending"

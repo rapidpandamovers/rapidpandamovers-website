@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/03/your-spring-antique-moving-planning-guide/explore-a-vintage-store-interior-brimmin-2.webp"
   - "/images/blog/2026/03/your-spring-antique-moving-planning-guide/three-people-browsing-vintage-wooden-fur-3.webp"
   - "/images/blog/2026/03/your-spring-antique-moving-planning-guide/two-women-wearing-masks-browse-antique-f-1.webp"
-
 service_link: "/antique-moving"
 location_link: null
 status: "complete"

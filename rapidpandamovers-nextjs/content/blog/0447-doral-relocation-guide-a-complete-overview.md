@@ -2,7 +2,7 @@
 id: 447
 title: "Doral Relocation Guide: A Complete Overview"
 slug: "doral-relocation-guide-a-complete-overview"
-excerpt: "Discover Doral's modern lifestyle, excellent schools, and thriving business district. Your guide to this premier Miami-Dade community."
+excerpt: "Discover Doral's modern lifestyle, excellent schools, and thriving business district."
 date: "2027-03-04"
 updated: "2027-03-04"
 readTime: "5 min read"
@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/03/doral-relocation-guide-a-complete-overview/a-vibrant-red-classic-convertible-car-pa-2.webp"
   - "/images/blog/2027/03/doral-relocation-guide-a-complete-overview/stylish-bar-interior-with-decorative-lig-1.webp"
   - "/images/blog/2027/03/doral-relocation-guide-a-complete-overview/vibrant-miami-skyline-illuminated-at-nig-4.webp"
-
 service_link: null
 location_link: "/doral-movers"
 status: "pending"

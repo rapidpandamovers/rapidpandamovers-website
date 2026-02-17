@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/02/settling-into-el-portal-what-new-residents-need-to-know/loc-view-of-miami-skyline-from-coral-gables--1.webp"
   - "/images/blog/2029/02/settling-into-el-portal-what-new-residents-need-to-know/svc-high-angle-view-of-an-asda-delivery-truc-2.webp"
   - "/images/blog/2029/02/settling-into-el-portal-what-new-residents-need-to-know/svc-u-haul-moving-truck-parked-on-roadside-w-1.webp"
-
 service_link: "/el-portal-local-moving"
 location_link: "/el-portal-movers"
 status: "pending"

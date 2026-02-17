@@ -19,8 +19,7 @@ images:
   - "/images/blog/2029/08/8-supplies-that-make-moving-day-easier/high-angle-view-of-an-asda-delivery-truc-1.webp"
   - "/images/blog/2029/08/8-supplies-that-make-moving-day-easier/u-haul-moving-truck-parked-on-roadside-w-2.webp"
   - "/images/blog/2029/08/8-supplies-that-make-moving-day-easier/vibrant-cargo-truck-cruising-a-scenic-mo-5.webp"
-
-service_link: /local-moving
+service_link: "/local-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

@@ -17,7 +17,6 @@ images:
   - "/images/blog/2027/02/settling-into-virginia-gardens-a-new-resident-guide/a-vibrant-teal-door-set-against-a-coral--2.webp"
   - "/images/blog/2027/02/settling-into-virginia-gardens-a-new-resident-guide/capture-of-a-modern-building-in-miami-sh-3.webp"
   - "/images/blog/2027/02/settling-into-virginia-gardens-a-new-resident-guide/empty-streets-with-palm-trees-and-modern-1.webp"
-
 service_link: null
 location_link: "/virginia-gardens-movers"
 status: "completed"

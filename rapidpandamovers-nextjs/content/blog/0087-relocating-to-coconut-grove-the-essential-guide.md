@@ -18,7 +18,6 @@ images:
   - "/images/blog/2024/11/relocating-to-coconut-grove-the-essential-guide/aerial-shot-of-miami-s-ferris-wheel-and--3.webp"
   - "/images/blog/2024/11/relocating-to-coconut-grove-the-essential-guide/ferris-wheel-near-palm-lined-waterfront--2.webp"
   - "/images/blog/2024/11/relocating-to-coconut-grove-the-essential-guide/front-view-of-miami-city-hall-with-palm--1.webp"
-
 service_link: null
 location_link: "/coconut-grove-movers"
 status: "complete"

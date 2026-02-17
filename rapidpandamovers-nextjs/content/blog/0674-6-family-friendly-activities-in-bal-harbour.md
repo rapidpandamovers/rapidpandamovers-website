@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/08/6-family-friendly-activities-in-bal-harbour/a-family-unpacking-boxes-in-their-new-ap-1.webp"
   - "/images/blog/2028/08/6-family-friendly-activities-in-bal-harbour/a-family-unpacks-moving-boxes-in-their-n-3.webp"
   - "/images/blog/2028/08/6-family-friendly-activities-in-bal-harbour/family-enjoying-selfie-time-while-surrou-2.webp"
-
 service_link: null
 location_link: "/bal-harbour-movers"
 status: "pending"

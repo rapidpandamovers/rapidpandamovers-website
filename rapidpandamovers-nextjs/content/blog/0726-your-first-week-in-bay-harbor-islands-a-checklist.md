@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/12/your-first-week-in-bay-harbor-islands-a-checklist/loc-scenic-view-of-sailboats-docked-in-a-mar-1.webp"
   - "/images/blog/2028/12/your-first-week-in-bay-harbor-islands-a-checklist/svc-a-u-haul-moving-truck-parked-on-gravel-w-1.webp"
   - "/images/blog/2028/12/your-first-week-in-bay-harbor-islands-a-checklist/svc-high-angle-view-of-an-asda-delivery-truc-2.webp"
-
 service_link: "/local-moving"
 location_link: "/bay-harbor-islands-movers"
 status: "pending"

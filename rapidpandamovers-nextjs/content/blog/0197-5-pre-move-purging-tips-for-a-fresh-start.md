@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/07/5-pre-move-purging-tips-for-a-fresh-start/a-collection-of-labeled-cardboard-boxes--3.webp"
   - "/images/blog/2025/07/5-pre-move-purging-tips-for-a-fresh-start/crop-anonymous-guy-in-casual-clothes-usi-2.webp"
   - "/images/blog/2025/07/5-pre-move-purging-tips-for-a-fresh-start/labeled-cardboard-boxes-for-summer-cloth-5.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "pending"

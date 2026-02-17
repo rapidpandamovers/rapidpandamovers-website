@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/04/finding-your-place-in-el-portal-relocation-advice/loc-aerial-view-of-various-industrial-wareho-2.webp"
   - "/images/blog/2027/04/finding-your-place-in-el-portal-relocation-advice/svc-a-joyful-moment-of-a-mother-and-child-pl-2.webp"
   - "/images/blog/2027/04/finding-your-place-in-el-portal-relocation-advice/svc-faceless-individual-holding-an-open-card-1.webp"
-
 service_link: "/el-portal-local-moving"
 location_link: "/el-portal-movers"
 status: "complete"

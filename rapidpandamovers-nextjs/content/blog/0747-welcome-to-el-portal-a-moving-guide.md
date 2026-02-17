@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/02/welcome-to-el-portal-a-moving-guide/an-exterior-view-of-parisian-hotel-with--2.webp"
   - "/images/blog/2029/02/welcome-to-el-portal-a-moving-guide/art-deco-architecture-on-lincoln-road-in-4.webp"
   - "/images/blog/2029/02/welcome-to-el-portal-a-moving-guide/classic-vintage-car-parked-outside-park--3.webp"
-
 service_link: null
 location_link: "/el-portal-movers"
 status: "pending"

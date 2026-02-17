@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/06/relocating-to-cutler-bay-your-complete-moving-guide/loc-a-stunning-aerial-view-of-key-west-showc-1.webp"
   - "/images/blog/2029/06/relocating-to-cutler-bay-your-complete-moving-guide/svc-a-pile-of-empty-cardboard-boxes-ready-fo-2.webp"
   - "/images/blog/2029/06/relocating-to-cutler-bay-your-complete-moving-guide/svc-cardboard-moving-boxes-in-a-modern-kitch-1.webp"
-
 service_link: "/cutler-bay-local-moving"
 location_link: "/cutler-bay-movers"
 status: "pending"

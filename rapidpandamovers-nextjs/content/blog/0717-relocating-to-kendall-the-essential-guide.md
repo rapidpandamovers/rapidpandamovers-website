@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/11/relocating-to-kendall-the-essential-guide/a-mother-and-daughter-pack-clothes-into--4.webp"
   - "/images/blog/2028/11/relocating-to-kendall-the-essential-guide/a-mother-and-daughter-packing-boxes-whil-1.webp"
   - "/images/blog/2028/11/relocating-to-kendall-the-essential-guide/african-american-male-in-eyeglasses-sitt-3.webp"
-
 service_link: null
 location_link: "/kendall-movers"
 status: "pending"

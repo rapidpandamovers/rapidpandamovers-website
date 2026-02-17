@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/10/6-surprising-things-people-pay-movers-to-haul/man-packing-kitchenware-into-labeled-box-2.webp"
   - "/images/blog/2026/10/6-surprising-things-people-pay-movers-to-haul/person-packing-glassware-into-boxes-with-4.webp"
   - "/images/blog/2026/10/6-surprising-things-people-pay-movers-to-haul/woman-writing-kitchen-on-a-cardboard-box-5.webp"
-
 service_link: null
 location_link: null
 status: "pending"

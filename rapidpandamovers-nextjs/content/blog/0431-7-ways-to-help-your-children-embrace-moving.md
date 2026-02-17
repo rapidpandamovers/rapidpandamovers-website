@@ -18,8 +18,7 @@ images:
   - "/images/blog/2027/01/7-ways-to-help-your-children-embrace-moving/a-charming-portrait-of-a-child-with-curl-3.webp"
   - "/images/blog/2027/01/7-ways-to-help-your-children-embrace-moving/a-family-drawing-together-on-cardboard-e-1.webp"
   - "/images/blog/2027/01/7-ways-to-help-your-children-embrace-moving/a-happy-child-plays-inside-a-cardboard-b-2.webp"
-
-service_link: /residential-moving
+service_link: "/residential-moving"
 location_link: null
 status: "completed"
 needs_ai_image: false

@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/04/april-moving-office-moving-fundamentals/contemporary-office-space-with-blue-chai-1.webp"
   - "/images/blog/2029/04/april-moving-office-moving-fundamentals/elegantly-decorated-home-office-with-mod-5.webp"
   - "/images/blog/2029/04/april-moving-office-moving-fundamentals/sleek-office-space-featuring-contemporar-3.webp"
-
 service_link: "/office-moving"
 location_link: null
 status: "pending"

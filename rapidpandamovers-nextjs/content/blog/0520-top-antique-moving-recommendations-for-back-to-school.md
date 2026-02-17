@@ -17,7 +17,6 @@ images:
   - "/images/blog/2027/08/top-antique-moving-recommendations-for-back-to-school/a-woman-carefully-wraps-a-chair-in-bubbl-4.webp"
   - "/images/blog/2027/08/top-antique-moving-recommendations-for-back-to-school/man-sitting-on-a-stool-in-a-room-with-mo-3.webp"
   - "/images/blog/2027/08/top-antique-moving-recommendations-for-back-to-school/two-movers-smiling-from-their-moving-com-1.webp"
-
 service_link: "/antique-moving"
 location_link: null
 status: "complete"

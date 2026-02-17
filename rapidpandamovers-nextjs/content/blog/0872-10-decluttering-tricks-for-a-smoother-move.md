@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/11/10-decluttering-tricks-for-a-smoother-move/person-s-hands-organizing-a-desk-drawer--3.webp"
   - "/images/blog/2029/11/10-decluttering-tricks-for-a-smoother-move/stylish-arrangement-of-makeup-brushes-su-2.webp"
   - "/images/blog/2029/11/10-decluttering-tricks-for-a-smoother-move/well-organized-pantry-with-eco-friendly--4.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "pending"

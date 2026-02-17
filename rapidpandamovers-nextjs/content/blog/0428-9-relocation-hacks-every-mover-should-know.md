@@ -17,7 +17,6 @@ images:
   - "/images/blog/2027/01/9-relocation-hacks-every-mover-should-know/a-woman-is-carefully-packing-a-suitcase--3.webp"
   - "/images/blog/2027/01/9-relocation-hacks-every-mover-should-know/close-up-of-hands-organizing-a-travel-lu-2.webp"
   - "/images/blog/2027/01/9-relocation-hacks-every-mover-should-know/person-with-tattoos-packing-neatly-folde-4.webp"
-
 service_link: null
 location_link: null
 status: "pending"

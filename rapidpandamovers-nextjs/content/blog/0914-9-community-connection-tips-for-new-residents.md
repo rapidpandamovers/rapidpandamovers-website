@@ -6,7 +6,7 @@ excerpt: "Build lasting friendships in your new neighborhood with these 9 proven
 date: "2030-02-27"
 updated: "2030-02-27"
 readTime: "2 min read"
-category: "Home & Living"
+category: "Same Building Moving"
 image_folder: "/images/blog/2030/02/9-community-connection-tips-for-new-residents"
 featured: "/images/blog/2030/02/9-community-connection-tips-for-new-residents/a-happy-moment-capturing-a-man-and-woman-2.webp"
 image_keywords:
@@ -17,8 +17,7 @@ images:
   - "/images/blog/2030/02/9-community-connection-tips-for-new-residents/a-couple-greeting-a-guest-at-their-doorw-4.webp"
   - "/images/blog/2030/02/9-community-connection-tips-for-new-residents/a-happy-moment-capturing-a-man-and-woman-2.webp"
   - "/images/blog/2030/02/9-community-connection-tips-for-new-residents/kids-enjoying-a-playful-day-outdoors-in--3.webp"
-
-service_link: null
+service_link: "/same-building-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

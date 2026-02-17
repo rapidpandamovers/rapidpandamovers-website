@@ -17,7 +17,6 @@ images:
   - "/images/blog/2030/06/relocating-to-indian-creek-the-essential-guide/beautiful-sunset-over-cockspur-island-li-1.webp"
   - "/images/blog/2030/06/relocating-to-indian-creek-the-essential-guide/close-up-of-a-bitcoin-millionaire-mug-he-3.webp"
   - "/images/blog/2030/06/relocating-to-indian-creek-the-essential-guide/stunning-aerial-view-of-a-luxurious-trop-2.webp"
-
 service_link: null
 location_link: "/indian-creek-movers"
 status: "pending"

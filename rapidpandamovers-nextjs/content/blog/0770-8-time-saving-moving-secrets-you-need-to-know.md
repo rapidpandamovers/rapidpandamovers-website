@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/03/8-time-saving-moving-secrets-you-need-to-know/movers-loading-boxes-into-a-truck-on-a-s-4.webp"
   - "/images/blog/2029/03/8-time-saving-moving-secrets-you-need-to-know/red-ford-f-150-truck-driving-on-a-bridge-2.webp"
   - "/images/blog/2029/03/8-time-saving-moving-secrets-you-need-to-know/u-haul-moving-truck-parked-on-roadside-w-3.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "pending"

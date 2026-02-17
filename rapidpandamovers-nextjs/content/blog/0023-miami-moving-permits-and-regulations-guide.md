@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/02/miami-moving-permits-and-regulations-guide/loc-a-picturesque-view-of-miami-s-skyline-at-1.webp"
   - "/images/blog/2024/02/miami-moving-permits-and-regulations-guide/svc-people-loading-supplies-onto-a-truck-in--2.webp"
   - "/images/blog/2024/02/miami-moving-permits-and-regulations-guide/svc-two-men-load-construction-materials-onto-1.webp"
-
 service_link: "/miami-local-moving"
 location_link: "/miami-movers"
 status: "pending"

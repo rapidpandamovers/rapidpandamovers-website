@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/06/essential-senior-moving-tips-for-june/elderly-couple-happily-holding-keys-symb-3.webp"
   - "/images/blog/2027/06/essential-senior-moving-tips-for-june/elderly-couple-sipping-coffee-at-home-by-2.webp"
   - "/images/blog/2027/06/essential-senior-moving-tips-for-june/joyful-elderly-couple-enjoying-a-snowy-w-1.webp"
-
 service_link: "/senior-moving"
 location_link: null
 status: "completed"

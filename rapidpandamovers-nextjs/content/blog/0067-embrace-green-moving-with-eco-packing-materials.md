@@ -20,7 +20,6 @@ images:
   - "/images/blog/2024/08/embrace-green-moving-with-eco-packing-materials/a-collection-of-large-cardboard-boxes-la-1.webp"
   - "/images/blog/2024/08/embrace-green-moving-with-eco-packing-materials/a-person-sealing-a-cardboard-box-with-a--4.webp"
   - "/images/blog/2024/08/embrace-green-moving-with-eco-packing-materials/labeled-cardboard-boxes-for-summer-cloth-2.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "completed"

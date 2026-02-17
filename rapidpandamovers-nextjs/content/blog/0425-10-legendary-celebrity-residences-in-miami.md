@@ -6,7 +6,7 @@ excerpt: "Tour 10 legendary celebrity homes in Miami featuring Gloria Estefan, D
 date: "2027-01-13"
 updated: "2027-01-13"
 readTime: "4 min read"
-category: "Fun Facts"
+category: "Celebrity Moving"
 image_folder: "/images/blog/2027/01/10-legendary-celebrity-residences-in-miami"
 featured: "/images/blog/2027/01/10-legendary-celebrity-residences-in-miami/luxurious-waterfront-mansion-in-istanbul-4.webp"
 image_keywords:
@@ -19,8 +19,7 @@ images:
   - "/images/blog/2027/01/10-legendary-celebrity-residences-in-miami/elegant-waterfront-mansion-in-istanbul-a-1.webp"
   - "/images/blog/2027/01/10-legendary-celebrity-residences-in-miami/luxurious-waterfront-mansion-in-istanbul-4.webp"
   - "/images/blog/2027/01/10-legendary-celebrity-residences-in-miami/stunning-aerial-photo-of-a-wedding-event-2.webp"
-
-service_link: null
+service_link: "/celebrity-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

@@ -6,7 +6,7 @@ excerpt: "From grand pianos to wine collections, discover 9 unusual items that p
 date: "2026-06-03"
 updated: "2026-06-03"
 readTime: "5 min read"
-category: "Fun Facts"
+category: "Senior Moving"
 image_folder: "/images/blog/2026/06/9-peculiar-possessions-weve-helped-relocate"
 featured: "/images/blog/2026/06/9-peculiar-possessions-weve-helped-relocate/enchanting-scene-of-a-grand-piano-amidst-2.webp"
 image_keywords:
@@ -17,8 +17,7 @@ images:
   - "/images/blog/2026/06/9-peculiar-possessions-weve-helped-relocate/a-close-up-of-grand-piano-keys-bathed-in-3.webp"
   - "/images/blog/2026/06/9-peculiar-possessions-weve-helped-relocate/enchanting-scene-of-a-grand-piano-amidst-2.webp"
   - "/images/blog/2026/06/9-peculiar-possessions-weve-helped-relocate/woman-playing-a-grand-piano-on-stage-exu-1.webp"
-
-service_link: null
+service_link: "/senior-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

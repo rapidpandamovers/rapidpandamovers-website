@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/02/miami-moving-guide-your-ultimate-relocation-resource/loc-captivating-view-of-miami-s-modern-skyli-1.webp"
   - "/images/blog/2024/02/miami-moving-guide-your-ultimate-relocation-resource/svc-a-blue-truck-transporting-livestock-on-a-2.webp"
   - "/images/blog/2024/02/miami-moving-guide-your-ultimate-relocation-resource/svc-a-delivery-truck-driving-along-a-coastal-1.webp"
-
 service_link: "/miami-local-moving"
 location_link: "/miami-movers"
 status: "pending"

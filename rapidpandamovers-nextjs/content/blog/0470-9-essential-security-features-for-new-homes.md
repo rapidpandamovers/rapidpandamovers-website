@@ -18,8 +18,7 @@ images:
   - "/images/blog/2027/04/9-essential-security-features-for-new-homes/smiling-woman-holding-a-box-marked-fragi-1.webp"
   - "/images/blog/2027/04/9-essential-security-features-for-new-homes/two-movers-load-a-van-with-furniture-dur-3.webp"
   - "/images/blog/2027/04/9-essential-security-features-for-new-homes/two-young-women-moving-into-a-bright-apa-2.webp"
-
-service_link: /residential-moving
+service_link: "/residential-moving"
 location_link: null
 status: "complete"
 needs_ai_image: false

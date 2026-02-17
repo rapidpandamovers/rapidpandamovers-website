@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/09/6-things-to-do-in-golden-beach-this-weekend/colorful-lifeguard-tower-on-miami-s-sand-1.webp"
   - "/images/blog/2030/09/6-things-to-do-in-golden-beach-this-weekend/colorful-pink-lifeguard-tower-under-brig-3.webp"
   - "/images/blog/2030/09/6-things-to-do-in-golden-beach-this-weekend/vibrant-rainbow-lifeguard-tower-on-miami-2.webp"
-
 service_link: null
 location_link: "/golden-beach-movers"
 status: "pending"

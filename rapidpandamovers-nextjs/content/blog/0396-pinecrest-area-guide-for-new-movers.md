@@ -20,7 +20,6 @@ images:
   - "/images/blog/2026/11/pinecrest-area-guide-for-new-movers/svc-a-u-haul-moving-truck-parked-on-gravel-w-1.webp"
   - "/images/blog/2026/11/pinecrest-area-guide-for-new-movers/svc-high-angle-view-of-an-asda-delivery-truc-2.webp"
   - "/images/blog/2026/11/pinecrest-area-guide-for-new-movers/svc-red-ford-f-150-truck-driving-on-a-bridge-3.webp"
-
 service_link: "/pinecrest-local-moving"
 location_link: "/pinecrest-movers"
 status: "pending"

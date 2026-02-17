@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/04/9-weekend-activities-to-enjoy-in-opa-locka/little-girl-captivated-by-giant-bubble-a-3.webp"
   - "/images/blog/2030/04/9-weekend-activities-to-enjoy-in-opa-locka/two-young-men-gaming-together-in-a-styli-2.webp"
   - "/images/blog/2030/04/9-weekend-activities-to-enjoy-in-opa-locka/wooden-scrabble-tiles-spelling-weekend-o-4.webp"
-
 service_link: null
 location_link: "/opa-locka-movers"
 status: "pending"

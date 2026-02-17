@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/11/8-best-restaurants-to-try-in-homestead-after-your-move/a-cozy-casual-cafeteria-interior-with-ta-1.webp"
   - "/images/blog/2030/11/8-best-restaurants-to-try-in-homestead-after-your-move/beautiful-woman-enjoying-a-gourmet-salmo-3.webp"
   - "/images/blog/2030/11/8-best-restaurants-to-try-in-homestead-after-your-move/stacked-bowls-at-a-street-food-stall-in--2.webp"
-
 service_link: null
 location_link: "/homestead-movers"
 status: "pending"

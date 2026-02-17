@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/10/starting-fresh-in-florida-city-a-summer-guide/close-up-of-an-american-alligator-baskin-2.webp"
   - "/images/blog/2026/10/starting-fresh-in-florida-city-a-summer-guide/close-up-of-an-american-alligator-baskin-4.webp"
   - "/images/blog/2026/10/starting-fresh-in-florida-city-a-summer-guide/close-up-of-an-american-alligator-in-the-1.webp"
-
 service_link: "/florida-city-local-moving"
 location_link: "/florida-city-movers"
 status: "pending"

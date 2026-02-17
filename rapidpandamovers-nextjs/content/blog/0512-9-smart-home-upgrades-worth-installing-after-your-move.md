@@ -17,7 +17,6 @@ images:
   - "/images/blog/2027/08/9-smart-home-upgrades-worth-installing-after-your-move/bluetooth-speaker-and-smartphone-playing-4.webp"
   - "/images/blog/2027/08/9-smart-home-upgrades-worth-installing-after-your-move/close-up-of-three-smart-home-security-ca-1.webp"
   - "/images/blog/2027/08/9-smart-home-upgrades-worth-installing-after-your-move/top-view-of-smart-home-devices-and-table-2.webp"
-
 service_link: null
 location_link: null
 status: "complete"

@@ -6,7 +6,7 @@ excerpt: "Eight delicate possessions requiring moving expertise. From grand pian
 date: "2028-09-13"
 updated: "2028-09-13"
 readTime: "2 min read"
-category: "Fun Facts"
+category: "Antique Moving"
 image_folder: "/images/blog/2028/09/8-delicate-possessions-requiring-moving-expertise"
 featured: "/images/blog/2028/09/8-delicate-possessions-requiring-moving-expertise/classic-wooden-upright-piano-displaying--2.webp"
 image_keywords:
@@ -18,8 +18,7 @@ images:
   - "/images/blog/2028/09/8-delicate-possessions-requiring-moving-expertise/close-up-view-of-a-black-grand-piano-in--1.webp"
   - "/images/blog/2028/09/8-delicate-possessions-requiring-moving-expertise/high-resolution-close-up-of-piano-keys-s-4.webp"
   - "/images/blog/2028/09/8-delicate-possessions-requiring-moving-expertise/woman-playing-a-grand-piano-on-stage-exu-3.webp"
-
-service_link: null
+service_link: "/antique-moving"
 location_link: null
 status: "complete"
 needs_ai_image: false

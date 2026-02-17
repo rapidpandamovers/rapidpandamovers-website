@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/06/discover-medley-your-complete-movers-guide/detailed-view-of-a-large-industrial-ware-4.webp"
   - "/images/blog/2026/06/discover-medley-your-complete-movers-guide/explore-a-vintage-warehouse-interior-wit-1.webp"
   - "/images/blog/2026/06/discover-medley-your-complete-movers-guide/spacious-industrial-warehouse-interior-f-2.webp"
-
 service_link: "/medley-local-moving"
 location_link: "/medley-movers"
 status: "pending"

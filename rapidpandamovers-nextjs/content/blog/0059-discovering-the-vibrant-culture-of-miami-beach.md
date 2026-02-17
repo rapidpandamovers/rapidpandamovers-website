@@ -18,7 +18,6 @@ images:
   - "/images/blog/2024/06/discovering-the-vibrant-culture-of-miami-beach/loc-a-stunning-view-of-miami-s-illuminated-s-2.webp"
   - "/images/blog/2024/06/discovering-the-vibrant-culture-of-miami-beach/svc-a-classic-hong-kong-tram-traverses-moder-1.webp"
   - "/images/blog/2024/06/discovering-the-vibrant-culture-of-miami-beach/svc-a-delivery-truck-driving-along-a-coastal-2.webp"
-
 service_link: "/miami-beach-local-moving"
 location_link: "/miami-beach-movers"
 status: "pending"

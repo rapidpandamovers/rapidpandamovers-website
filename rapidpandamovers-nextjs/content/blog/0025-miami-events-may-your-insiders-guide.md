@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/02/miami-events-may-your-insiders-guide/loc-explore-the-vibrant-miami-skyline-with-a-1.webp"
   - "/images/blog/2024/02/miami-events-may-your-insiders-guide/svc-excavator-loading-materials-into-a-heavy-2.webp"
   - "/images/blog/2024/02/miami-events-may-your-insiders-guide/svc-red-truck-with-large-covered-cargo-in-an-1.webp"
-
 service_link: "/miami-local-moving"
 location_link: "/miami-movers"
 status: "pending"

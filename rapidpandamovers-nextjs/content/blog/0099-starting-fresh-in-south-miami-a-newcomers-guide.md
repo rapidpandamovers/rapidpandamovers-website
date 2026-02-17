@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/12/starting-fresh-in-south-miami-a-newcomers-guide/dramatic-black-and-white-photo-of-the-mi-3.webp"
   - "/images/blog/2024/12/starting-fresh-in-south-miami-a-newcomers-guide/gorgeous-night-view-of-miami-s-illuminat-4.webp"
   - "/images/blog/2024/12/starting-fresh-in-south-miami-a-newcomers-guide/vertical-blue-city-sign-with-miami-beach-5.webp"
-
 service_link: null
 location_link: "/south-miami-movers"
 status: "completed"

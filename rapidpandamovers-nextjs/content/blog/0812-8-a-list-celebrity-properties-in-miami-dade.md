@@ -19,9 +19,8 @@ images:
   - "/images/blog/2029/07/8-a-list-celebrity-properties-in-miami-dade/elegant-white-mansion-surrounded-by-lush-3.webp"
   - "/images/blog/2029/07/8-a-list-celebrity-properties-in-miami-dade/stunning-aerial-photo-of-a-wedding-event-1.webp"
   - "/images/blog/2029/07/8-a-list-celebrity-properties-in-miami-dade/vintage-victorian-interior-with-a-decora-4.webp"
-
-service_link: /celebrity-moving
-location_link: /miami-movers
+service_link: "/celebrity-moving"
+location_link: "/miami-movers"
 status: "pending"
 needs_ai_image: false
 ---

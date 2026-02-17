@@ -6,7 +6,7 @@ excerpt: "Plan your residential move with our step-by-step guide. Timeline, chec
 date: "2024-08-12"
 updated: "2024-08-12"
 readTime: "12 min read"
-category: "Moving Tips"
+category: "Residential Moving"
 image_folder: "/images/blog/2024/08/how-to-plan-your-residential-move-successfully"
 featured: "/images/blog/2024/08/how-to-plan-your-residential-move-successfully/a-couple-sitting-on-a-couch-surrounded-b-2.webp"
 image_keywords:
@@ -20,7 +20,6 @@ images:
   - "/images/blog/2024/08/how-to-plan-your-residential-move-successfully/a-man-labels-a-cardboard-box-kitchen-dur-3.webp"
   - "/images/blog/2024/08/how-to-plan-your-residential-move-successfully/crop-anonymous-male-in-casual-clothes-pa-4.webp"
   - "/images/blog/2024/08/how-to-plan-your-residential-move-successfully/stacked-cardboard-boxes-with-a-potted-pl-1.webp"
-
 service_link: "/residential-moving"
 location_link: null
 status: "completed"

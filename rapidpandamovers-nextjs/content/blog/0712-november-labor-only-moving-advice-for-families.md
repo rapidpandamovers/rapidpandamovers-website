@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/11/november-labor-only-moving-advice-for-families/dock-workers-securing-ropes-in-a-coastal-3.webp"
   - "/images/blog/2028/11/november-labor-only-moving-advice-for-families/male-forklift-operator-wearing-a-blue-be-2.webp"
   - "/images/blog/2028/11/november-labor-only-moving-advice-for-families/two-men-sitting-on-a-pile-of-cement-bags-1.webp"
-
 service_link: "/labor-only-moving"
 location_link: null
 status: "pending"

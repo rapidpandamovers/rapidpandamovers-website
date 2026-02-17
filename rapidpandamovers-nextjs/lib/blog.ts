@@ -143,11 +143,31 @@ export function getPostSummaries(): BlogPostSummary[] {
 }
 
 /**
- * Get a single post by slug
+ * Check if a post is published (date is today or earlier)
+ */
+export function isPublished(post: { date: string }): boolean {
+  const today = new Date()
+  today.setHours(0, 0, 0, 0)
+  const postDate = new Date(post.date)
+  postDate.setHours(0, 0, 0, 0)
+  return postDate <= today
+}
+
+/**
+ * Get all published posts (filters out future-dated posts)
+ */
+export function getPublishedPosts(): BlogPost[] {
+  return getAllPosts().filter(isPublished)
+}
+
+/**
+ * Get a single post by slug (only if published)
  */
 export function getPostBySlug(slug: string): BlogPost | null {
   const posts = getAllPosts()
-  return posts.find(post => post.slug === slug) || null
+  const post = posts.find(post => post.slug === slug) || null
+  if (post && !isPublished(post)) return null
+  return post
 }
 
 /**
@@ -159,11 +179,11 @@ export function getPostById(id: number): BlogPost | null {
 }
 
 /**
- * Get all unique categories
+ * Get all unique categories (from published posts only)
  */
 export function getCategories(): string[] {
   try {
-    const posts = getAllPosts()
+    const posts = getPublishedPosts()
     return Array.from(new Set(posts.map(post => post.category)))
   } catch (error) {
     console.error('[Blog] Failed to get categories:', error instanceof Error ? error.message : String(error))
@@ -194,19 +214,18 @@ export function getCategoryBySlug(slug: string): string | null {
 }
 
 /**
- * Get posts by category
+ * Get published posts by category
  */
 export function getPostsByCategory(category: string): BlogPost[] {
-  const posts = getAllPosts()
-  return posts.filter(post => post.category === category)
+  return getPublishedPosts().filter(post => post.category === category)
 }
 
 /**
- * Get posts sorted by date (newest first), then by ID (highest first) for same dates
+ * Get published posts sorted by date (newest first), then by ID (highest first) for same dates
  */
 export function getPostsSortedByDate(): BlogPost[] {
   try {
-    const posts = getAllPosts()
+    const posts = getPublishedPosts()
     return [...posts].sort((a, b) => {
       const dateCompare = new Date(b.date).getTime() - new Date(a.date).getTime()
       if (dateCompare !== 0) return dateCompare
@@ -236,7 +255,7 @@ export function getRelatedPosts(slug: string, limit: number = 2): BlogPost[] {
     return []
   }
 
-  const posts = getAllPosts()
+  const posts = getPublishedPosts()
   const otherPosts = posts.filter(post => post.slug !== slug)
 
   // Extract keywords from title (words 4+ chars, excluding common words)

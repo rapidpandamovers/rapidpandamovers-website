@@ -17,8 +17,7 @@ images:
   - "/images/blog/2030/05/5-warnings-that-your-mover-is-unprofessional/a-red-danger-flag-waves-on-a-beach-warni-3.webp"
   - "/images/blog/2030/05/5-warnings-that-your-mover-is-unprofessional/a-red-flag-on-a-lifeguard-tower-set-agai-1.webp"
   - "/images/blog/2030/05/5-warnings-that-your-mover-is-unprofessional/a-striking-red-flag-flutters-on-a-pebble-2.webp"
-
-service_link: /residential-moving
+service_link: "/residential-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

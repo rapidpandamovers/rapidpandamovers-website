@@ -17,7 +17,6 @@ images:
   - "/images/blog/2025/10/the-newcomers-guide-to-sweetwater-living/loc-a-scenic-aerial-view-of-lake-mary-fl-sho-1.webp"
   - "/images/blog/2025/10/the-newcomers-guide-to-sweetwater-living/svc-a-u-haul-moving-truck-parked-on-gravel-w-2.webp"
   - "/images/blog/2025/10/the-newcomers-guide-to-sweetwater-living/svc-movers-loading-boxes-into-a-truck-on-a-s-1.webp"
-
 service_link: "/local-moving"
 location_link: "/sweetwater-movers"
 status: "pending"

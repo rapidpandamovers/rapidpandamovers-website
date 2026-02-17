@@ -16,7 +16,6 @@ images:
   - "/images/blog/2027/10/8-moving-day-essentials-you-cant-forget/a-charming-portrait-of-a-child-with-curl-1.webp"
   - "/images/blog/2027/10/8-moving-day-essentials-you-cant-forget/a-joyful-moment-of-a-mother-and-child-pl-2.webp"
   - "/images/blog/2027/10/8-moving-day-essentials-you-cant-forget/young-adult-male-smiling-while-handling--3.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "complete"

@@ -21,7 +21,6 @@ images:
   - "/images/blog/2024/01/creating-a-realistic-moving-budget-a-step-by-step-guide/close-up-of-a-calculator-us-dollar-bill--5.webp"
   - "/images/blog/2024/01/creating-a-realistic-moving-budget-a-step-by-step-guide/close-up-of-hands-counting-cash-and-usin-2.webp"
   - "/images/blog/2024/01/creating-a-realistic-moving-budget-a-step-by-step-guide/flat-lay-of-home-buying-essentials-with--4.webp"
-
 service_link: "/residential-moving"
 location_link: "/locations/miami"
 status: "completed"

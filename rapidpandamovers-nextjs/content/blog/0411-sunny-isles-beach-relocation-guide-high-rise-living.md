@@ -2,7 +2,7 @@
 id: 411
 title: "Sunny Isles Beach Relocation Guide: High-Rise Living"
 slug: "sunny-isles-beach-relocation-guide-high-rise-living"
-excerpt: "Sunny Isles Beach offers luxury high-rise living, pristine beaches, and a vibrant international community. Here's your guide."
+excerpt: "Sunny Isles Beach offers luxury high-rise living, pristine beaches, and a vibrant international community."
 date: "2026-12-10"
 updated: "2026-12-10"
 readTime: "5 min read"
@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/12/sunny-isles-beach-relocation-guide-high-rise-living/aerial-shot-of-a-palm-lined-road-in-sunn-3.webp"
   - "/images/blog/2026/12/sunny-isles-beach-relocation-guide-high-rise-living/drone-shot-of-sunny-isles-beach-fl-skyli-2.webp"
   - "/images/blog/2026/12/sunny-isles-beach-relocation-guide-high-rise-living/stunning-aerial-panorama-of-sunny-isles--1.webp"
-
 service_link: null
 location_link: "/sunny-isles-beach-movers"
 status: "pending"

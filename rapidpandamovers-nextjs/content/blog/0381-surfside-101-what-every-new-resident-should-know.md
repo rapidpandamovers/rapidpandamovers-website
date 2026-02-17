@@ -18,8 +18,7 @@ images:
   - "/images/blog/2026/10/surfside-101-what-every-new-resident-should-know/loc-aerial-photo-showcasing-a-suburban-neigh-1.webp"
   - "/images/blog/2026/10/surfside-101-what-every-new-resident-should-know/svc-a-delivery-truck-driving-along-a-coastal-2.webp"
   - "/images/blog/2026/10/surfside-101-what-every-new-resident-should-know/svc-a-u-haul-moving-truck-parked-on-gravel-w-1.webp"
-
-service_link: /surfside-local-moving
+service_link: "/surfside-local-moving"
 location_link: "/surfside-movers"
 status: "pending"
 needs_ai_image: false

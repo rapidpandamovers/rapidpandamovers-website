@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/02/same-day-moving-strategies-for-february-moves/a-paramedic-in-uniform-opening-the-door--4.webp"
   - "/images/blog/2029/02/same-day-moving-strategies-for-february-moves/action-shot-of-paramedics-quickly-moving-2.webp"
   - "/images/blog/2029/02/same-day-moving-strategies-for-february-moves/top-view-of-delicious-burgers-and-crispy-3.webp"
-
 service_link: "/same-day-moving"
 location_link: null
 status: "pending"

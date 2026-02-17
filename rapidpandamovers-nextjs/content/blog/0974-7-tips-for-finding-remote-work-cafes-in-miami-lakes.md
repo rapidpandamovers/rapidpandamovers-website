@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/07/7-tips-for-finding-remote-work-cafes-in-miami-lakes/a-thoughtful-woman-using-a-laptop-at-an--3.webp"
   - "/images/blog/2030/07/7-tips-for-finding-remote-work-cafes-in-miami-lakes/two-baristas-work-at-a-coffee-shop-count-1.webp"
   - "/images/blog/2030/07/7-tips-for-finding-remote-work-cafes-in-miami-lakes/two-women-collaborating-on-a-project-in--2.webp"
-
 service_link: null
 location_link: "/miami-lakes-movers"
 status: "pending"

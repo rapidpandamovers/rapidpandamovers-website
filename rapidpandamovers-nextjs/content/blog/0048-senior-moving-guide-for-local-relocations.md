@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/05/senior-moving-guide-for-local-relocations/a-couple-carrying-moving-boxes-indoors-s-1.webp"
   - "/images/blog/2024/05/senior-moving-guide-for-local-relocations/a-happy-couple-packing-boxes-inside-thei-3.webp"
   - "/images/blog/2024/05/senior-moving-guide-for-local-relocations/a-joyful-couple-enjoying-the-moving-day--2.webp"
-
 service_link: "/senior-moving"
 location_link: "/miami"
 status: "complete"

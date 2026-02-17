@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/06/finding-your-place-in-pinecrest-relocation-advice/svc-a-pile-of-empty-cardboard-boxes-arranged-1.webp"
   - "/images/blog/2029/06/finding-your-place-in-pinecrest-relocation-advice/svc-a-pile-of-empty-cardboard-boxes-ready-fo-3.webp"
   - "/images/blog/2029/06/finding-your-place-in-pinecrest-relocation-advice/svc-crop-anonymous-male-in-casual-clothes-pa-2.webp"
-
 service_link: "/pinecrest-local-moving"
 location_link: "/pinecrest-movers"
 status: "pending"

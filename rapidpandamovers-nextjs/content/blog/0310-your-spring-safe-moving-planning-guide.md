@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/04/your-spring-safe-moving-planning-guide/a-dimly-lit-room-filled-with-vintage-sec-3.webp"
   - "/images/blog/2026/04/your-spring-safe-moving-planning-guide/a-woman-in-a-headscarf-standing-inside-a-1.webp"
   - "/images/blog/2026/04/your-spring-safe-moving-planning-guide/close-up-of-vintage-safety-deposit-boxes-4.webp"
-
 service_link: "/safe-moving"
 location_link: null
 status: "pending"

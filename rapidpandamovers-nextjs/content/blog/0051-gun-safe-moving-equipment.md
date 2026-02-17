@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/06/gun-safe-moving-equipment/captivating-red-chinese-door-with-artist-2.webp"
   - "/images/blog/2024/06/gun-safe-moving-equipment/vertical-shot-of-metallic-lockboxes-with-3.webp"
   - "/images/blog/2024/06/gun-safe-moving-equipment/wooden-lockboxes-line-the-walls-of-a-mod-4.webp"
-
 service_link: "/safe-moving"
 location_link: null
 status: "pending"

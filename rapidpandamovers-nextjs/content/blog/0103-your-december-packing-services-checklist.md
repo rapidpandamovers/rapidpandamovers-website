@@ -18,7 +18,6 @@ images:
   - "/images/blog/2024/12/your-december-packing-services-checklist/crop-anonymous-guy-in-casual-clothes-usi-2.webp"
   - "/images/blog/2024/12/your-december-packing-services-checklist/packed-cardboard-box-labeled-bedroom-ind-3.webp"
   - "/images/blog/2024/12/your-december-packing-services-checklist/young-woman-surrounded-by-cardboard-boxe-1.webp"
-
 service_link: "/miami-packing-services"
 location_link: null
 status: "pending"

@@ -17,7 +17,6 @@ images:
   - "/images/blog/2027/10/10-methods-to-create-a-homey-atmosphere-fast/people-loading-supplies-onto-a-truck-in--4.webp"
   - "/images/blog/2027/10/10-methods-to-create-a-homey-atmosphere-fast/two-men-load-construction-materials-onto-3.webp"
   - "/images/blog/2027/10/10-methods-to-create-a-homey-atmosphere-fast/vintage-truck-carrying-heavy-cargo-bags--1.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "complete"

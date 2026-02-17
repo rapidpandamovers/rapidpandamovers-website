@@ -18,8 +18,7 @@ images:
   - "/images/blog/2029/04/9-things-to-keep-off-the-moving-truck/red-trailer-truck-at-a-warehouse-loading-1.webp"
   - "/images/blog/2029/04/9-things-to-keep-off-the-moving-truck/two-men-load-construction-materials-onto-3.webp"
   - "/images/blog/2029/04/9-things-to-keep-off-the-moving-truck/vintage-truck-carrying-heavy-cargo-bags--2.webp"
-
-service_link: /local-moving
+service_link: "/local-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

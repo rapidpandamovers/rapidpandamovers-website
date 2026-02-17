@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/09/miami-student-moving-september-edition/loc-a-picturesque-view-of-miami-s-skyline-at-1.webp"
   - "/images/blog/2028/09/miami-student-moving-september-edition/loc-captivating-night-view-of-miami-s-skylin-2.webp"
   - "/images/blog/2028/09/miami-student-moving-september-edition/svc-group-of-young-adults-playing-poker-in-a-2.webp"
-
 service_link: "/student-moving"
 location_link: null
 status: "complete"

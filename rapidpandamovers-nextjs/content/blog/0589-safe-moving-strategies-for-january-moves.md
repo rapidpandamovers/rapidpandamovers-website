@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/01/safe-moving-strategies-for-january-moves/close-up-shot-of-a-black-handgun-secured-3.webp"
   - "/images/blog/2028/01/safe-moving-strategies-for-january-moves/open-handgun-case-with-firearm-and-acces-1.webp"
   - "/images/blog/2028/01/safe-moving-strategies-for-january-moves/orange-and-black-toy-gun-with-camouflage-2.webp"
-
 service_link: "/safe-moving"
 location_link: null
 status: "pending"

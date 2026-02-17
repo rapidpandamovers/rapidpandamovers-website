@@ -6,7 +6,7 @@ excerpt: "Nine top gyms and fitness studios in Pinecrest, from CrossFit to yoga 
 date: "2026-11-04"
 updated: "2026-11-04"
 readTime: "3 min read"
-category: "Lifestyle"
+category: "Full Service Moving"
 image_folder: "/images/blog/2026/11/9-best-gyms-and-fitness-studios-in-pinecrest"
 featured: "/images/blog/2026/11/9-best-gyms-and-fitness-studios-in-pinecrest/bright-gym-space-featuring-pilates-equip-3.webp"
 image_keywords:
@@ -18,8 +18,7 @@ images:
   - "/images/blog/2026/11/9-best-gyms-and-fitness-studios-in-pinecrest/close-up-of-pilates-ultra-fit-circles-ne-1.webp"
   - "/images/blog/2026/11/9-best-gyms-and-fitness-studios-in-pinecrest/detailed-view-of-an-exercise-bike-pedal--2.webp"
   - "/images/blog/2026/11/9-best-gyms-and-fitness-studios-in-pinecrest/modern-gym-with-multiple-exercise-bikes--4.webp"
-
-service_link: null
+service_link: "/full-service-moving"
 location_link: "/pinecrest-movers"
 status: "pending"
 needs_ai_image: false

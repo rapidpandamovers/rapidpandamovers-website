@@ -17,7 +17,6 @@ images:
   - "/images/blog/2025/12/10-fun-things-to-do-with-kids-in-opa-locka/a-mother-and-daughter-label-a-cardboard--3.webp"
   - "/images/blog/2025/12/10-fun-things-to-do-with-kids-in-opa-locka/a-mother-and-her-daughter-pack-boxes-whi-1.webp"
   - "/images/blog/2025/12/10-fun-things-to-do-with-kids-in-opa-locka/mother-and-child-packing-boxes-in-a-brig-2.webp"
-
 service_link: null
 location_link: "/opa-locka-movers"
 status: "pending"

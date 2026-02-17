@@ -17,7 +17,6 @@ images:
   - "/images/blog/2027/10/7-packing-blunders-that-lead-to-damaged-items/a-person-sealing-a-cardboard-box-with-a--2.webp"
   - "/images/blog/2027/10/7-packing-blunders-that-lead-to-damaged-items/close-up-of-a-cardboard-box-filled-with--1.webp"
   - "/images/blog/2027/10/7-packing-blunders-that-lead-to-damaged-items/crop-faceless-male-sealing-packed-carton-4.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "complete"

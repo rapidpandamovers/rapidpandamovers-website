@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/08/coconut-grove-area-guide-for-new-movers/loc-front-view-of-miami-city-hall-with-palm--1.webp"
   - "/images/blog/2028/08/coconut-grove-area-guide-for-new-movers/svc-a-charming-portrait-of-a-child-with-curl-2.webp"
   - "/images/blog/2028/08/coconut-grove-area-guide-for-new-movers/svc-a-pile-of-empty-cardboard-boxes-ready-fo-1.webp"
-
 service_link: "/coconut-grove-local-moving"
 location_link: "/coconut-grove-movers"
 status: "pending"

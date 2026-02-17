@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/04/5-weekend-activities-to-enjoy-in-key-biscayne/brightly-colored-clown-game-machines-at--1.webp"
   - "/images/blog/2025/04/5-weekend-activities-to-enjoy-in-key-biscayne/close-up-of-woman-gaming-with-a-controll-2.webp"
   - "/images/blog/2025/04/5-weekend-activities-to-enjoy-in-key-biscayne/cozy-evening-scene-with-woman-enjoying-p-4.webp"
-
 service_link: null
 location_link: "/key-biscayne-movers"
 status: "pending"

@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/03/the-complete-guide-to-office-moving-in-march/contemporary-home-office-setup-with-a-co-3.webp"
   - "/images/blog/2030/03/the-complete-guide-to-office-moving-in-march/contemporary-office-space-featuring-part-1.webp"
   - "/images/blog/2030/03/the-complete-guide-to-office-moving-in-march/contemporary-office-space-with-blue-chai-2.webp"
-
 service_link: "/office-moving"
 location_link: null
 status: "pending"

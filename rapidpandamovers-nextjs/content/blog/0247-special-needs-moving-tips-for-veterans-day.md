@@ -19,7 +19,6 @@ images:
   - "/images/blog/2025/11/special-needs-moving-tips-for-veterans-day/cheerful-female-doctor-in-orange-attire--4.webp"
   - "/images/blog/2025/11/special-needs-moving-tips-for-veterans-day/close-up-of-a-woman-in-a-wheelchair-reac-3.webp"
   - "/images/blog/2025/11/special-needs-moving-tips-for-veterans-day/female-healthcare-worker-smiles-with-two-2.webp"
-
 service_link: "/special-needs-moving"
 location_link: null
 status: "pending"

@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/02/everything-you-need-to-know-about-living-in-miami-shores/aerial-view-of-apollo-beach-fl-showcasin-3.webp"
   - "/images/blog/2025/02/everything-you-need-to-know-about-living-in-miami-shores/scenic-aerial-shot-of-a-sprawling-reside-2.webp"
   - "/images/blog/2025/02/everything-you-need-to-know-about-living-in-miami-shores/scenic-view-of-luxury-waterfront-homes-w-1.webp"
-
 service_link: "/local-moving"
 location_link: "/miami-shores-movers"
 status: "pending"

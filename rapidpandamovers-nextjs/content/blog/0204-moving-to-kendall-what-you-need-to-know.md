@@ -19,7 +19,6 @@ images:
   - "/images/blog/2025/08/moving-to-kendall-what-you-need-to-know/a-family-unpacks-moving-boxes-in-their-n-5.webp"
   - "/images/blog/2025/08/moving-to-kendall-what-you-need-to-know/a-joyful-family-sitting-together-with-mo-1.webp"
   - "/images/blog/2025/08/moving-to-kendall-what-you-need-to-know/family-carrying-cardboard-boxes-while-mo-3.webp"
-
 service_link: "/kendall-movers"
 location_link: "/kendall-movers"
 status: "pending"

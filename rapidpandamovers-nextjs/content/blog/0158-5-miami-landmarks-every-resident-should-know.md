@@ -6,7 +6,7 @@ excerpt: "Discover 5 iconic Miami landmarks, from Vizcaya Museum to the Art Deco
 date: "2025-04-23"
 updated: "2025-04-23"
 readTime: "2 min read"
-category: "Fun Facts"
+category: "Long Distance Moving"
 image_folder: "/images/blog/2025/04/5-miami-landmarks-every-resident-should-know"
 featured: "/images/blog/2025/04/5-miami-landmarks-every-resident-should-know/stunning-nighttime-view-of-miami-with-co-5.webp"
 image_keywords:
@@ -17,8 +17,7 @@ images:
   - "/images/blog/2025/04/5-miami-landmarks-every-resident-should-know/bright-day-on-ocean-drive-featuring-the--4.webp"
   - "/images/blog/2025/04/5-miami-landmarks-every-resident-should-know/contemporary-hotel-architecture-in-miami-3.webp"
   - "/images/blog/2025/04/5-miami-landmarks-every-resident-should-know/stunning-nighttime-view-of-miami-with-co-5.webp"
-
-service_link: null
+service_link: "/long-distance-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

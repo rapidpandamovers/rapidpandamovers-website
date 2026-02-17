@@ -19,8 +19,7 @@ images:
   - "/images/blog/2026/07/6-organization-systems-for-your-new-home/close-up-of-people-sealing-a-cardboard-b-4.webp"
   - "/images/blog/2026/07/6-organization-systems-for-your-new-home/crop-anonymous-male-in-casual-wear-using-2.webp"
   - "/images/blog/2026/07/6-organization-systems-for-your-new-home/woman-sealing-boxes-with-tape-for-reloca-1.webp"
-
-service_link: /packing-services
+service_link: "/packing-services"
 location_link: null
 status: "pending"
 needs_ai_image: false

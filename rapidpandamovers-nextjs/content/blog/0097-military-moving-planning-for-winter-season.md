@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/12/military-moving-planning-for-winter-season/a-person-handling-a-moving-box-with-a-ca-4.webp"
   - "/images/blog/2024/12/military-moving-planning-for-winter-season/a-person-holding-a-cardboard-box-labeled-1.webp"
   - "/images/blog/2024/12/military-moving-planning-for-winter-season/young-woman-surrounded-by-cardboard-boxe-2.webp"
-
 service_link: "/military-moving"
 location_link: null
 status: "completed"

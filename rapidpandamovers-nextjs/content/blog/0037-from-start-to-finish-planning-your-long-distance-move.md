@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/05/from-start-to-finish-planning-your-long-distance-move/a-delivery-truck-driving-along-a-coastal-1.webp"
   - "/images/blog/2024/05/from-start-to-finish-planning-your-long-distance-move/red-ford-f-150-truck-driving-on-a-bridge-2.webp"
   - "/images/blog/2024/05/from-start-to-finish-planning-your-long-distance-move/vibrant-cargo-truck-cruising-a-scenic-mo-3.webp"
-
 service_link: "/long-distance"
 location_link: null
 status: "pending"

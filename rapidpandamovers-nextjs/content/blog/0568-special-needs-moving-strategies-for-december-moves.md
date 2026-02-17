@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/12/special-needs-moving-strategies-for-december-moves/a-healthcare-worker-vaccinates-a-young-b-2.webp"
   - "/images/blog/2027/12/special-needs-moving-strategies-for-december-moves/close-up-shot-of-an-intravenous-catheter-1.webp"
   - "/images/blog/2027/12/special-needs-moving-strategies-for-december-moves/hospital-corridor-with-wheelchair-reflec-5.webp"
-
 service_link: "/special-needs-moving"
 location_link: null
 status: "pending"

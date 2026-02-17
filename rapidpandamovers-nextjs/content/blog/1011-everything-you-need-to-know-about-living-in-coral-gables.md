@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/10/everything-you-need-to-know-about-living-in-coral-gables/discover-the-luxury-biltmore-hotel-in-mi-1.webp"
   - "/images/blog/2030/10/everything-you-need-to-know-about-living-in-coral-gables/facade-of-an-elegant-building-with-a-pro-4.webp"
   - "/images/blog/2030/10/everything-you-need-to-know-about-living-in-coral-gables/stylish-couple-poses-by-vintage-car-at-i-3.webp"
-
 service_link: null
 location_link: "/coral-gables-movers"
 status: "pending"

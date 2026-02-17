@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/08/why-west-miami-is-perfect-for-your-next-move/captivating-view-of-miami-s-iconic-skyli-4.webp"
   - "/images/blog/2030/08/why-west-miami-is-perfect-for-your-next-move/explore-this-modern-miami-residence-with-3.webp"
   - "/images/blog/2030/08/why-west-miami-is-perfect-for-your-next-move/stunning-view-of-miami-skyline-with-skys-1.webp"
-
 service_link: null
 location_link: "/west-miami-movers"
 status: "completed"

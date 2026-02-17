@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/01/miami-springs-living-essential-relocation-tips/a-tranquil-street-scene-in-orlando-fl-fe-2.webp"
   - "/images/blog/2026/01/miami-springs-living-essential-relocation-tips/detailed-view-of-the-intricate-architect-3.webp"
   - "/images/blog/2026/01/miami-springs-living-essential-relocation-tips/panoramic-view-of-historic-redlands-libr-1.webp"
-
 service_link: null
 location_link: "/miami-springs-movers"
 status: "pending"

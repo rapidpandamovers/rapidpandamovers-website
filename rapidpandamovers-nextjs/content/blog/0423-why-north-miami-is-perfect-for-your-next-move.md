@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/01/why-north-miami-is-perfect-for-your-next-move/captivating-view-of-miami-s-iconic-skyli-2.webp"
   - "/images/blog/2027/01/why-north-miami-is-perfect-for-your-next-move/classic-car-parked-in-front-of-a-vibrant-4.webp"
   - "/images/blog/2027/01/why-north-miami-is-perfect-for-your-next-move/empty-alley-with-art-deco-architecture-i-1.webp"
-
 service_link: "/north-miami-local-moving"
 location_link: "/north-miami-movers"
 status: "pending"

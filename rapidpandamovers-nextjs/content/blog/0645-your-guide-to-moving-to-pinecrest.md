@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/06/your-guide-to-moving-to-pinecrest/a-child-s-feet-in-socks-sticking-out-of--1.webp"
   - "/images/blog/2028/06/your-guide-to-moving-to-pinecrest/a-family-drawing-together-on-cardboard-e-4.webp"
   - "/images/blog/2028/06/your-guide-to-moving-to-pinecrest/a-happy-child-plays-inside-a-cardboard-b-3.webp"
-
 service_link: null
 location_link: "/pinecrest-movers"
 status: "complete"

@@ -17,8 +17,7 @@ images:
   - "/images/blog/2027/08/10-methods-to-get-to-know-your-new-neighbors/a-classic-hong-kong-tram-traverses-moder-2.webp"
   - "/images/blog/2027/08/10-methods-to-get-to-know-your-new-neighbors/movers-loading-boxes-into-a-truck-on-a-s-3.webp"
   - "/images/blog/2027/08/10-methods-to-get-to-know-your-new-neighbors/red-ford-f-150-truck-driving-on-a-bridge-1.webp"
-
-service_link: /local-moving
+service_link: "/local-moving"
 location_link: null
 status: "complete"
 needs_ai_image: false

@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/11/the-newcomers-guide-to-miami-springs-living/loc-colorful-graffiti-of-monopoly-character--2.webp"
   - "/images/blog/2026/11/the-newcomers-guide-to-miami-springs-living/svc-movers-loading-boxes-into-a-truck-on-a-s-2.webp"
   - "/images/blog/2026/11/the-newcomers-guide-to-miami-springs-living/svc-u-haul-moving-truck-parked-on-roadside-w-1.webp"
-
 service_link: "/miami-springs-local-moving"
 location_link: "/miami-springs-movers"
 status: "pending"

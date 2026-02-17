@@ -20,7 +20,6 @@ images:
   - "/images/blog/2024/01/how-to-pick-the-best-moving-date-ultimate-guide/close-up-view-of-a-november-calendar-pag-3.webp"
   - "/images/blog/2024/01/how-to-pick-the-best-moving-date-ultimate-guide/minimalist-november-calendar-page-with-s-5.webp"
   - "/images/blog/2024/01/how-to-pick-the-best-moving-date-ultimate-guide/person-writing-appointments-on-a-calenda-2.webp"
-
 service_link: "/residential-moving"
 location_link: null
 status: "completed"

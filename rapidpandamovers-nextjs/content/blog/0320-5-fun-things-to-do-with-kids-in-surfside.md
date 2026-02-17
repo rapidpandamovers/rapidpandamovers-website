@@ -2,7 +2,7 @@
 id: 320
 title: "5 Fun Things to Do with Kids in Surfside"
 slug: "5-fun-things-to-do-with-kids-in-surfside"
-excerpt: "Just moved to Surfside? Explore the best family activities from Surfside Community Center pool to 96th Street Park, Turtle Walk, and nearby Oleta State."
+excerpt: "Just moved to Surfside with kids? This small oceanfront town packs a surprising amount of family fun into its one-square-mile footprint."
 date: "2026-05-13"
 updated: "2026-05-13"
 readTime: "3 min read"
@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/05/5-fun-things-to-do-with-kids-in-surfside/parents-and-child-playing-with-sand-toys-1.webp"
   - "/images/blog/2026/05/5-fun-things-to-do-with-kids-in-surfside/two-men-playing-beach-rugby-in-sydney-on-4.webp"
   - "/images/blog/2026/05/5-fun-things-to-do-with-kids-in-surfside/vibrant-aerial-view-of-surfside-beach-pi-2.webp"
-
 service_link: null
 location_link: "/surfside-movers"
 status: "pending"

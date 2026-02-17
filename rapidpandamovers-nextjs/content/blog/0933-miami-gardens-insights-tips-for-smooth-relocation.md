@@ -17,7 +17,6 @@ images:
   - "/images/blog/2030/04/miami-gardens-insights-tips-for-smooth-relocation/lush-tropical-garden-featuring-a-strikin-1.webp"
   - "/images/blog/2030/04/miami-gardens-insights-tips-for-smooth-relocation/suburban-house-with-lush-greenery-and-a--3.webp"
   - "/images/blog/2030/04/miami-gardens-insights-tips-for-smooth-relocation/three-cluster-mailboxes-under-trees-in-a-2.webp"
-
 service_link: null
 location_link: "/miami-gardens-movers"
 status: "pending"

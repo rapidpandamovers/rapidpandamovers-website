@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/02/essential-office-moving-tips-for-february/a-focused-male-mover-sits-with-a-clipboa-4.webp"
   - "/images/blog/2028/02/essential-office-moving-tips-for-february/a-man-packs-books-into-boxes-while-reloc-2.webp"
   - "/images/blog/2028/02/essential-office-moving-tips-for-february/an-adult-man-in-workwear-checks-a-clipbo-5.webp"
-
 service_link: "/office-moving"
 location_link: null
 status: "completed"

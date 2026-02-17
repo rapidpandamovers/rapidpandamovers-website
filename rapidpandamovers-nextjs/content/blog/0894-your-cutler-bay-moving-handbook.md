@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/01/your-cutler-bay-moving-handbook/a-charming-portrait-of-a-child-with-curl-2.webp"
   - "/images/blog/2030/01/your-cutler-bay-moving-handbook/a-happy-child-plays-inside-a-cardboard-b-1.webp"
   - "/images/blog/2030/01/your-cutler-bay-moving-handbook/young-girl-engrossed-in-drawing-on-a-car-4.webp"
-
 service_link: null
 location_link: "/cutler-bay-movers"
 status: "pending"

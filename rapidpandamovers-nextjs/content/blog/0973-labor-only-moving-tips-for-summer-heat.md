@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/07/labor-only-moving-tips-for-summer-heat/a-man-carries-heavy-rolled-carpets-on-hi-2.webp"
   - "/images/blog/2030/07/labor-only-moving-tips-for-summer-heat/black-and-white-photo-of-a-rustic-truck--3.webp"
   - "/images/blog/2030/07/labor-only-moving-tips-for-summer-heat/two-male-workers-loading-cardboard-boxes-1.webp"
-
 service_link: "/labor-only-moving"
 location_link: null
 status: "pending"

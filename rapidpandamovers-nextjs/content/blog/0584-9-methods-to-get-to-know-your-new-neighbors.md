@@ -2,7 +2,7 @@
 id: 584
 title: "9 Methods to Get to Know Your New Neighbors"
 slug: "9-methods-to-get-to-know-your-new-neighbors"
-excerpt: "Moving to a new Miami neighborhood? Build real connections with these 9 practical ways to meet your neighbors and feel at home faster."
+excerpt: "You just moved to a new Miami neighborhood. The boxes are unpacked, the furniture is arranged, but the street still feels unfamiliar."
 date: "2028-01-19"
 updated: "2028-01-19"
 readTime: "4 min read"
@@ -17,8 +17,7 @@ images:
   - "/images/blog/2028/01/9-methods-to-get-to-know-your-new-neighbors/a-child-s-feet-in-socks-sticking-out-of--2.webp"
   - "/images/blog/2028/01/9-methods-to-get-to-know-your-new-neighbors/a-pile-of-empty-cardboard-boxes-arranged-3.webp"
   - "/images/blog/2028/01/9-methods-to-get-to-know-your-new-neighbors/crop-unrecognizable-male-packing-staked--5.webp"
-
-service_link: /local-moving
+service_link: "/local-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

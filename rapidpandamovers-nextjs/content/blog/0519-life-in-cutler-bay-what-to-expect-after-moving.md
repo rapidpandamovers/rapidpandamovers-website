@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/08/life-in-cutler-bay-what-to-expect-after-moving/a-family-of-three-takes-a-joyful-selfie--4.webp"
   - "/images/blog/2027/08/life-in-cutler-bay-what-to-expect-after-moving/a-family-of-three-unpacking-boxes-in-the-2.webp"
   - "/images/blog/2027/08/life-in-cutler-bay-what-to-expect-after-moving/family-enjoying-selfie-time-while-surrou-3.webp"
-
 service_link: null
 location_link: "/cutler-bay-movers"
 status: "complete"

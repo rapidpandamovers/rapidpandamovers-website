@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/02/8-hidden-gems-near-el-portal-worth-discovering/pink-moving-trucks-parked-in-a-chicago-a-1.webp"
   - "/images/blog/2029/02/8-hidden-gems-near-el-portal-worth-discovering/tow-truck-operator-loading-white-gmc-pic-2.webp"
   - "/images/blog/2029/02/8-hidden-gems-near-el-portal-worth-discovering/u-haul-moving-truck-parked-on-roadside-w-3.webp"
-
 service_link: null
 location_link: "/el-portal-movers"
 status: "pending"

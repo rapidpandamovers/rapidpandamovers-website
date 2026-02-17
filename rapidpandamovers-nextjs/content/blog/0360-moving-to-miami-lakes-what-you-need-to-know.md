@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/08/moving-to-miami-lakes-what-you-need-to-know/elevated-road-sign-for-downtown-miami-av-1.webp"
   - "/images/blog/2026/08/moving-to-miami-lakes-what-you-need-to-know/group-of-senior-adults-engaged-in-an-out-3.webp"
   - "/images/blog/2026/08/moving-to-miami-lakes-what-you-need-to-know/stunning-view-of-miami-s-modern-skyscrap-2.webp"
-
 service_link: null
 location_link: "/miami-lakes-movers"
 status: "pending"

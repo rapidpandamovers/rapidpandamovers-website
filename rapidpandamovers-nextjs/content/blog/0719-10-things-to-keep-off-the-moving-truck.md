@@ -18,8 +18,7 @@ images:
   - "/images/blog/2028/11/10-things-to-keep-off-the-moving-truck/a-classic-hong-kong-tram-traverses-moder-3.webp"
   - "/images/blog/2028/11/10-things-to-keep-off-the-moving-truck/red-ford-f-150-truck-driving-on-a-bridge-1.webp"
   - "/images/blog/2028/11/10-things-to-keep-off-the-moving-truck/tow-truck-operator-loading-white-gmc-pic-2.webp"
-
-service_link: /local-moving
+service_link: "/local-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

@@ -29,7 +29,6 @@ export default function RatesPage() {
         categories={[
           {
             title: rates.pricing_structure.local_moving.title,
-            description: rates.pricing_structure.local_moving.description,
             rates: rates.pricing_structure.local_moving.rates
           },
           {

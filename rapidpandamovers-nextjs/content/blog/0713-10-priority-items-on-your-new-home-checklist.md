@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/11/10-priority-items-on-your-new-home-checklist/couple-unpacking-boxes-in-their-new-apar-2.webp"
   - "/images/blog/2028/11/10-priority-items-on-your-new-home-checklist/young-adults-signing-documents-on-moving-4.webp"
   - "/images/blog/2028/11/10-priority-items-on-your-new-home-checklist/young-couple-moving-boxes-into-their-new-1.webp"
-
 service_link: null
 location_link: null
 status: "pending"

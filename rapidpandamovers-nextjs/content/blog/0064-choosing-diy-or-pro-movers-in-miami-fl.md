@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/07/choosing-diy-or-pro-movers-in-miami-fl/loc-view-of-miami-skyline-from-coral-gables--2.webp"
   - "/images/blog/2024/07/choosing-diy-or-pro-movers-in-miami-fl/svc-a-delivery-truck-driving-along-a-coastal-2.webp"
   - "/images/blog/2024/07/choosing-diy-or-pro-movers-in-miami-fl/svc-movers-loading-boxes-into-a-truck-on-a-s-1.webp"
-
 service_link: "/miami-local-moving"
 location_link: "/miami-movers"
 status: "completed"

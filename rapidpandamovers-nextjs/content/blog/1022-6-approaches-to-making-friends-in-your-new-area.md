@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/11/6-approaches-to-making-friends-in-your-new-area/people-loading-supplies-onto-a-truck-in--3.webp"
   - "/images/blog/2030/11/6-approaches-to-making-friends-in-your-new-area/row-of-stacked-truck-tires-on-chassis-in-4.webp"
   - "/images/blog/2030/11/6-approaches-to-making-friends-in-your-new-area/vintage-truck-carrying-heavy-cargo-bags--1.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "pending"

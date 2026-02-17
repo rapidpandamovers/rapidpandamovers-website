@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/11/miami-same-building-moving-november-edition/a-modern-skyscraper-with-bold-architectu-4.webp"
   - "/images/blog/2029/11/miami-same-building-moving-november-edition/a-striking-black-and-white-photo-of-a-mo-2.webp"
   - "/images/blog/2029/11/miami-same-building-moving-november-edition/upward-view-of-a-tall-modern-building-wi-1.webp"
-
 service_link: "/same-building-moving"
 location_link: null
 status: "pending"

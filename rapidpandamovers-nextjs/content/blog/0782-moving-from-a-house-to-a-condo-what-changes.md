@@ -17,7 +17,6 @@ images:
   - "/images/blog/2029/04/moving-from-a-house-to-a-condo-what-changes/a-tall-residential-building-with-multipl-3.webp"
   - "/images/blog/2029/04/moving-from-a-house-to-a-condo-what-changes/contemporary-living-room-interior-featur-1.webp"
   - "/images/blog/2029/04/moving-from-a-house-to-a-condo-what-changes/stylish-interior-featuring-modern-metall-3.webp"
-
 service_link: "/apartment-moving"
 location_link: null
 status: "complete"

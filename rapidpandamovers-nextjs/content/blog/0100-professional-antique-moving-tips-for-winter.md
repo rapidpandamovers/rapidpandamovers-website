@@ -18,7 +18,6 @@ images:
   - "/images/blog/2024/12/professional-antique-moving-tips-for-winter/a-rustic-wooden-trunk-and-round-wooden-s-3.webp"
   - "/images/blog/2024/12/professional-antique-moving-tips-for-winter/a-vintage-wooden-radio-with-dials-displa-1.webp"
   - "/images/blog/2024/12/professional-antique-moving-tips-for-winter/vintage-dining-table-featuring-an-elegan-2.webp"
-
 service_link: "/miami-antique-moving"
 location_link: null
 status: "completed"

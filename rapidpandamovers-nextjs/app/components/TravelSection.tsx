@@ -36,7 +36,7 @@ export default function TravelSection({
     : `${minutes} min`
 
   return (
-    <section className={`py-20 ${className}`}>
+    <section className={`pt-20 ${className}`}>
       <div className="container mx-auto">
         <div className="mx-auto">
           {/* Header */}

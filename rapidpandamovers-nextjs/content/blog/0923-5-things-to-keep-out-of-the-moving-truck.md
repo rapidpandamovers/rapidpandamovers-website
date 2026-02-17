@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/03/5-things-to-keep-out-of-the-moving-truck/mover-checking-inventory-list-while-orga-2.webp"
   - "/images/blog/2030/03/5-things-to-keep-out-of-the-moving-truck/pensive-couple-taking-notes-in-bedroom-n-3.webp"
   - "/images/blog/2030/03/5-things-to-keep-out-of-the-moving-truck/pensive-male-and-female-in-casual-clothe-1.webp"
-
 service_link: null
 location_link: null
 status: "pending"

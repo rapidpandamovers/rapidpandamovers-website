@@ -19,7 +19,6 @@ images:
   - "/images/blog/2025/07/biscayne-park-relocation-guide-a-complete-overview/loc-picturesque-view-of-the-cape-florida-lig-2.webp"
   - "/images/blog/2025/07/biscayne-park-relocation-guide-a-complete-overview/svc-semi-truck-parked-at-a-loading-dock-with-1.webp"
   - "/images/blog/2025/07/biscayne-park-relocation-guide-a-complete-overview/svc-three-men-loading-wooden-boxes-on-a-truc-2.webp"
-
 service_link: "/local-moving"
 location_link: "/biscayne-park-movers"
 status: "pending"

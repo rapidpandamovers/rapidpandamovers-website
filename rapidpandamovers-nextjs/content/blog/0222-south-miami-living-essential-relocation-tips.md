@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/09/south-miami-living-essential-relocation-tips/loc-colorful-graffiti-of-monopoly-character--1.webp"
   - "/images/blog/2025/09/south-miami-living-essential-relocation-tips/svc-red-ford-f-150-truck-driving-on-a-bridge-1.webp"
   - "/images/blog/2025/09/south-miami-living-essential-relocation-tips/svc-u-haul-moving-truck-parked-on-roadside-w-2.webp"
-
 service_link: "/local-moving"
 location_link: "/south-miami-movers"
 status: "pending"

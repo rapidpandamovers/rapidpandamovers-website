@@ -2,11 +2,11 @@
 id: 323
 title: "5 Things to Do in Miami Beach This Weekend"
 slug: "5-things-to-do-in-miami-beach-this-weekend"
-excerpt: "New to Miami Beach? Discover 5 weekend activities from farmers markets to brunch spots that will help you settle into your new home."
+excerpt: "Weekends in Miami Beach offer endless possibilities, especially in May. Whether you prefer relaxing brunches, outdoor adventures, or cultural..."
 date: "2026-05-20"
 updated: "2026-05-20"
 readTime: "2 min read"
-category: "Lifestyle"
+category: "Same Building Moving"
 image_folder: "/images/blog/2026/05/5-things-to-do-in-miami-beach-this-weekend"
 featured: "/images/blog/2026/05/5-things-to-do-in-miami-beach-this-weekend/empty-streets-with-palm-trees-and-modern-2.webp"
 image_keywords:
@@ -19,8 +19,7 @@ images:
   - "/images/blog/2026/05/5-things-to-do-in-miami-beach-this-weekend/empty-streets-with-palm-trees-and-modern-2.webp"
   - "/images/blog/2026/05/5-things-to-do-in-miami-beach-this-weekend/ferris-wheel-near-palm-lined-waterfront--1.webp"
   - "/images/blog/2026/05/5-things-to-do-in-miami-beach-this-weekend/view-of-a-distinctive-red-and-white-life-3.webp"
-
-service_link: null
+service_link: "/same-building-moving"
 location_link: "/miami-beach-movers"
 status: "pending"
 needs_ai_image: false

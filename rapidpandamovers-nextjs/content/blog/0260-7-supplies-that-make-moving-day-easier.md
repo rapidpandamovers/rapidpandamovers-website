@@ -6,7 +6,7 @@ excerpt: "Essential supplies to keep with you on moving day. From documents to t
 date: "2025-12-17"
 updated: "2025-12-17"
 readTime: "2 min read"
-category: "Moving Tips"
+category: "Special Needs Moving"
 image_folder: "/images/blog/2025/12/7-supplies-that-make-moving-day-easier"
 featured: "/images/blog/2025/12/7-supplies-that-make-moving-day-easier/hands-carefully-packing-glassware-into-a-2.webp"
 image_keywords:
@@ -18,8 +18,7 @@ images:
   - "/images/blog/2025/12/7-supplies-that-make-moving-day-easier/a-collection-of-large-cardboard-boxes-la-4.webp"
   - "/images/blog/2025/12/7-supplies-that-make-moving-day-easier/hands-carefully-packing-glassware-into-a-2.webp"
   - "/images/blog/2025/12/7-supplies-that-make-moving-day-easier/labeled-cardboard-boxes-for-summer-cloth-1.webp"
-
-service_link: null
+service_link: "/special-needs-moving"
 location_link: null
 status: "completed"
 needs_ai_image: false

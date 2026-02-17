@@ -17,7 +17,6 @@ images:
   - "/images/blog/2027/02/5-houseplants-that-love-miamis-climate/close-up-of-glossy-monstera-leaves-in-a--1.webp"
   - "/images/blog/2027/02/5-houseplants-that-love-miamis-climate/elegant-yellow-freesia-flowers-in-a-blue-5.webp"
   - "/images/blog/2027/02/5-houseplants-that-love-miamis-climate/lush-alocasia-polly-plant-in-a-decorativ-4.webp"
-
 service_link: null
 location_link: null
 status: "completed"

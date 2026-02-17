@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/12/8-first-week-tips-for-families-moving-to-north-miami-beach/cheerful-young-man-and-woman-smiling-whi-4.webp"
   - "/images/blog/2024/12/8-first-week-tips-for-families-moving-to-north-miami-beach/two-senior-women-packing-belongings-in-a-3.webp"
   - "/images/blog/2024/12/8-first-week-tips-for-families-moving-to-north-miami-beach/young-adults-signing-documents-on-moving-2.webp"
-
 service_link: "/north-miami-beach-residential-moving"
 location_link: "/north-miami-beach-movers"
 status: "pending"

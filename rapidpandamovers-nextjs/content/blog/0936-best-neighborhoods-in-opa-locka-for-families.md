@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/04/best-neighborhoods-in-opa-locka-for-families/stunning-architectural-facade-of-flagler-4.webp"
   - "/images/blog/2030/04/best-neighborhoods-in-opa-locka-for-families/stunning-wooden-arch-door-with-ornate-ca-1.webp"
   - "/images/blog/2030/04/best-neighborhoods-in-opa-locka-for-families/the-ca-d-zan-mansion-tower-set-against-a-2.webp"
-
 service_link: null
 location_link: "/opa-locka-movers"
 status: "pending"

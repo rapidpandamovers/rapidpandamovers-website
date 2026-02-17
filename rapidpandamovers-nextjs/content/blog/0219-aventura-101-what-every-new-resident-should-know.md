@@ -19,7 +19,6 @@ images:
   - "/images/blog/2025/09/aventura-101-what-every-new-resident-should-know/explore-the-grandeur-of-the-mall-of-the--1.webp"
   - "/images/blog/2025/09/aventura-101-what-every-new-resident-should-know/explore-the-ornate-archways-and-luxuriou-2.webp"
   - "/images/blog/2025/09/aventura-101-what-every-new-resident-should-know/spacious-mall-interior-featuring-grand-e-4.webp"
-
 service_link: null
 location_link: "/aventura-movers"
 status: "pending"

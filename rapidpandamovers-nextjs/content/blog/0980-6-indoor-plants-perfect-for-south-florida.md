@@ -17,7 +17,6 @@ images:
   - "/images/blog/2030/07/6-indoor-plants-perfect-for-south-florida/dense-foliage-of-monstera-leaves-in-a-tr-2.webp"
   - "/images/blog/2030/07/6-indoor-plants-perfect-for-south-florida/vertical-cacti-reaching-toward-a-greenho-4.webp"
   - "/images/blog/2030/07/6-indoor-plants-perfect-for-south-florida/vibrant-yellow-cymbidium-orchids-in-an-o-1.webp"
-
 service_link: null
 location_link: null
 status: "pending"

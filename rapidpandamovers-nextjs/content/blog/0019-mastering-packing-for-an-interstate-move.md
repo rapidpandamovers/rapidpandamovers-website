@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/02/mastering-packing-for-an-interstate-move/a-man-applying-tape-to-a-cardboard-box-f-4.webp"
   - "/images/blog/2024/02/mastering-packing-for-an-interstate-move/close-up-of-people-sealing-a-cardboard-b-1.webp"
   - "/images/blog/2024/02/mastering-packing-for-an-interstate-move/crop-unrecognizable-man-in-casual-clothe-2.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "completed"

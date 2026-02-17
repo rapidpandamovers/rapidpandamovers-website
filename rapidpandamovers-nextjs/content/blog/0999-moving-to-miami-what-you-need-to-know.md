@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/09/moving-to-miami-what-you-need-to-know/captivating-view-of-miami-s-modern-skyli-1.webp"
   - "/images/blog/2030/09/moving-to-miami-what-you-need-to-know/colorful-scene-capturing-miami-beach-s-h-2.webp"
   - "/images/blog/2030/09/moving-to-miami-what-you-need-to-know/explore-the-elegant-reception-area-of-a--3.webp"
-
 service_link: null
 location_link: "/miami-movers"
 status: "pending"

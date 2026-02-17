@@ -17,7 +17,6 @@ images:
   - "/images/blog/2027/02/5-challenging-items-only-pros-should-move/a-truck-loaded-with-sacks-of-potatoes-hi-3.webp"
   - "/images/blog/2027/02/5-challenging-items-only-pros-should-move/close-up-of-a-large-yellow-dump-truck-us-5.webp"
   - "/images/blog/2027/02/5-challenging-items-only-pros-should-move/people-loading-supplies-onto-a-truck-in--1.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "completed"

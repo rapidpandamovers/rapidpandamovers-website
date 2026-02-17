@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/09/apartment-moving-guide-for-september/a-striking-black-and-white-photo-of-a-mo-4.webp"
   - "/images/blog/2026/09/apartment-moving-guide-for-september/majestic-view-of-tokyo-metropolitan-gove-1.webp"
   - "/images/blog/2026/09/apartment-moving-guide-for-september/tall-modern-building-with-a-unique-red-r-3.webp"
-
 service_link: "/apartment-moving"
 location_link: null
 status: "complete"

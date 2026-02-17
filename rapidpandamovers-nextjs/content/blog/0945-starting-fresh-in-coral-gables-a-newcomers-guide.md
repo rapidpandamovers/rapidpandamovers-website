@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/05/starting-fresh-in-coral-gables-a-newcomers-guide/facade-of-an-elegant-building-with-a-pro-3.webp"
   - "/images/blog/2030/05/starting-fresh-in-coral-gables-a-newcomers-guide/stunning-aerial-shot-of-a-luxury-hotel-i-2.webp"
   - "/images/blog/2030/05/starting-fresh-in-coral-gables-a-newcomers-guide/stunning-aerial-shot-of-the-coral-gables-1.webp"
-
 service_link: null
 location_link: "/coral-gables-movers"
 status: "pending"

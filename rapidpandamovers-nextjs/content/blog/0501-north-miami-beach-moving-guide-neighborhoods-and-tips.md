@@ -2,7 +2,7 @@
 id: 501
 title: "North Miami Beach Moving Guide: Neighborhoods and Tips"
 slug: "north-miami-beach-moving-guide-neighborhoods-and-tips"
-excerpt: "Plan your move to North Miami Beach with local insights on Eastern Shores, Ojus, and more. Get neighborhood tips and expert moving advice."
+excerpt: "Plan your move to North Miami Beach with local insights on Eastern Shores, Ojus, and more."
 date: "2027-07-08"
 updated: "2027-07-08"
 readTime: "7 min read"
@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/07/north-miami-beach-moving-guide-neighborhoods-and-tips/loc-colorful-scene-capturing-miami-beach-s-h-1.webp"
   - "/images/blog/2027/07/north-miami-beach-moving-guide-neighborhoods-and-tips/svc-a-delivery-truck-driving-along-a-coastal-1.webp"
   - "/images/blog/2027/07/north-miami-beach-moving-guide-neighborhoods-and-tips/svc-red-ford-f-150-truck-driving-on-a-bridge-2.webp"
-
 service_link: "/north-miami-beach-local-moving"
 location_link: "/north-miami-beach-movers"
 status: "pending"

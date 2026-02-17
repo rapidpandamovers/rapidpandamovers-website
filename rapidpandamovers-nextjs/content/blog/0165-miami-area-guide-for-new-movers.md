@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/05/miami-area-guide-for-new-movers/loc-a-picturesque-view-of-miami-s-skyline-at-1.webp"
   - "/images/blog/2025/05/miami-area-guide-for-new-movers/svc-people-loading-supplies-onto-a-truck-in--2.webp"
   - "/images/blog/2025/05/miami-area-guide-for-new-movers/svc-vintage-truck-carrying-heavy-cargo-bags--1.webp"
-
 service_link: "/local-moving"
 location_link: "/miami-movers"
 status: "pending"

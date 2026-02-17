@@ -17,7 +17,6 @@ images:
   - "/images/blog/2028/10/8-smart-unpacking-strategies-for-new-movers/crop-anonymous-guy-in-casual-clothes-usi-4.webp"
   - "/images/blog/2028/10/8-smart-unpacking-strategies-for-new-movers/side-view-of-crop-anonymous-man-packing--2.webp"
   - "/images/blog/2028/10/8-smart-unpacking-strategies-for-new-movers/woman-sealing-boxes-with-tape-for-reloca-1.webp"
-
 service_link: null
 location_link: null
 status: "pending"

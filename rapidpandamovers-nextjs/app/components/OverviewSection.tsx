@@ -14,7 +14,7 @@ export default function OverviewSection({
   children,
 }: OverviewSectionProps) {
   return (
-    <section className="py-20">
+    <section className="pt-20">
       <div className="container mx-auto">
         <div className="bg-gray-50 rounded-4xl p-8">
           <div className={`flex items-center ${website ? 'justify-between' : ''} mb-6`}>

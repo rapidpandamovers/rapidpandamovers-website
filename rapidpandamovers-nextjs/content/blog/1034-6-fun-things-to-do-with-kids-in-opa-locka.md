@@ -6,7 +6,7 @@ excerpt: "Help kids settle into Opa-locka with 6 fun activities from library pro
 date: "2030-12-04"
 updated: "2030-12-04"
 readTime: "5 min read"
-category: "Lifestyle"
+category: "Local Moving"
 image_folder: "/images/blog/2030/12/6-fun-things-to-do-with-kids-in-opa-locka"
 featured: "/images/blog/2030/12/6-fun-things-to-do-with-kids-in-opa-locka/a-family-drawing-together-on-cardboard-e-1.webp"
 image_keywords:
@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/12/6-fun-things-to-do-with-kids-in-opa-locka/a-family-drawing-together-on-cardboard-e-1.webp"
   - "/images/blog/2030/12/6-fun-things-to-do-with-kids-in-opa-locka/cute-child-with-curly-hair-peeks-from-in-3.webp"
   - "/images/blog/2030/12/6-fun-things-to-do-with-kids-in-opa-locka/family-enjoying-a-creative-moment-while--4.webp"
-
 service_link: "/local-moving"
 location_link: "/opa-locka-movers"
 status: "complete"

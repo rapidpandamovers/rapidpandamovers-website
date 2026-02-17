@@ -2,7 +2,7 @@
 id: 971
 title: "10 Tips for Beach Days Near Bay Harbor Islands"
 slug: "10-tips-for-beach-days-near-bay-harbor-islands"
-excerpt: "Discover 10 tips for beach days near Bay Harbor Islands. From parking hacks to beach safety essentials."
+excerpt: "Discover 10 tips for beach days near Bay Harbor Islands. From parking hacks to beach safety essentials..."
 date: "2030-07-10"
 updated: "2030-07-10"
 readTime: "3 min read"
@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/07/10-tips-for-beach-days-near-bay-harbor-islands/a-classic-motorcycle-parked-by-the-ocean-3.webp"
   - "/images/blog/2030/07/10-tips-for-beach-days-near-bay-harbor-islands/a-wetsuit-hanging-from-an-open-car-trunk-1.webp"
   - "/images/blog/2030/07/10-tips-for-beach-days-near-bay-harbor-islands/a-young-woman-in-a-white-dress-carrying--2.webp"
-
 service_link: null
 location_link: "/bay-harbor-islands-movers"
 status: "pending"

@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/10/moving-to-hialeah-what-new-residents-should-know/captivating-night-view-of-miami-skyline--5.webp"
   - "/images/blog/2030/10/moving-to-hialeah-what-new-residents-should-know/scenic-aerial-shot-of-a-sprawling-reside-4.webp"
   - "/images/blog/2030/10/moving-to-hialeah-what-new-residents-should-know/vibrant-yellow-and-blue-fire-hydrant-in--3.webp"
-
 service_link: null
 location_link: "/hialeah-movers"
 status: "pending"

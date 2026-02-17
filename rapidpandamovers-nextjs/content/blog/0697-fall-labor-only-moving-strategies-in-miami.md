@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/10/fall-labor-only-moving-strategies-in-miami/dock-workers-securing-ropes-in-a-coastal-3.webp"
   - "/images/blog/2028/10/fall-labor-only-moving-strategies-in-miami/two-men-unloading-cardboard-boxes-from-a-5.webp"
   - "/images/blog/2028/10/fall-labor-only-moving-strategies-in-miami/two-workers-organizing-cargo-inside-a-de-4.webp"
-
 service_link: "/labor-only-moving"
 location_link: null
 status: "pending"

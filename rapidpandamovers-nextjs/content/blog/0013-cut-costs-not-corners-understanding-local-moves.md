@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/01/cut-costs-not-corners-understanding-local-moves/a-blue-truck-transporting-livestock-on-a-3.webp"
   - "/images/blog/2024/01/cut-costs-not-corners-understanding-local-moves/a-delivery-truck-driving-along-a-coastal-2.webp"
   - "/images/blog/2024/01/cut-costs-not-corners-understanding-local-moves/red-ford-f-150-truck-driving-on-a-bridge-1.webp"
-
 service_link: "/miami-local-moving"
 location_link: "/miami-movers"
 status: "completed"

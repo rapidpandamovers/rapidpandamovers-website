@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/10/your-october-residential-moving-checklist-for-miami/a-mother-and-daughter-packing-boxes-whil-2.webp"
   - "/images/blog/2029/10/your-october-residential-moving-checklist-for-miami/a-mother-and-her-daughter-pack-boxes-whi-3.webp"
   - "/images/blog/2029/10/your-october-residential-moving-checklist-for-miami/mother-and-child-packing-boxes-in-a-brig-1.webp"
-
 service_link: "/residential-moving"
 location_link: null
 status: "pending"

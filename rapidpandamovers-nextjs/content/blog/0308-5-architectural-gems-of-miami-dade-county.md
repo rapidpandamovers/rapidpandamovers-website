@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/04/5-architectural-gems-of-miami-dade-county/charming-art-deco-building-in-miami-with-3.webp"
   - "/images/blog/2026/04/5-architectural-gems-of-miami-dade-county/classic-vintage-car-parked-outside-park--5.webp"
   - "/images/blog/2026/04/5-architectural-gems-of-miami-dade-county/colorful-neon-lit-miami-beach-street-at--1.webp"
-
 service_link: null
 location_link: null
 status: "pending"

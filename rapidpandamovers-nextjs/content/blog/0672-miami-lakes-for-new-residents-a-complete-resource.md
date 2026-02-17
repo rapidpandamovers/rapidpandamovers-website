@@ -17,7 +17,6 @@ images:
   - "/images/blog/2028/08/miami-lakes-for-new-residents-a-complete-resource/contemporary-skyscrapers-with-miami-metr-2.webp"
   - "/images/blog/2028/08/miami-lakes-for-new-residents-a-complete-resource/dramatic-black-and-white-photo-of-the-mi-1.webp"
   - "/images/blog/2028/08/miami-lakes-for-new-residents-a-complete-resource/view-of-miami-skyline-from-coral-gables--3.webp"
-
 service_link: null
 location_link: "/miami-lakes-movers"
 status: "pending"

@@ -2,7 +2,7 @@
 id: 446
 title: "8 Clues You Picked the Wrong Moving Service"
 slug: "8-clues-you-picked-the-wrong-moving-service"
-excerpt: "Choosing the wrong moving company can turn your relocation into a nightmare. Scammers give the industry a bad name. Spot these warning signs."
+excerpt: "Choosing the wrong moving company can turn your relocation into a nightmare. In South Florida, where moving scams spike during peak season (May through..."
 date: "2027-03-03"
 updated: "2027-03-03"
 readTime: "4 min read"
@@ -17,8 +17,7 @@ images:
   - "/images/blog/2027/03/8-clues-you-picked-the-wrong-moving-service/a-kangaroo-crossing-sign-against-a-clear-2.webp"
   - "/images/blog/2027/03/8-clues-you-picked-the-wrong-moving-service/red-do-not-enter-sign-on-a-street-in-san-1.webp"
   - "/images/blog/2027/03/8-clues-you-picked-the-wrong-moving-service/triangular-warning-sign-on-a-beach-indic-4.webp"
-
-service_link: /residential-moving
+service_link: "/residential-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

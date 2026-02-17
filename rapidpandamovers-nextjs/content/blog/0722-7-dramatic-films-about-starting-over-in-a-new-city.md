@@ -2,7 +2,7 @@
 id: 722
 title: "7 Dramatic Films About Starting Over in a New City"
 slug: "7-dramatic-films-about-starting-over-in-a-new-city"
-excerpt: "These powerful dramas explore what it means to leave everything behind and build a new life. Perfect inspiration for your Miami relocation."
+excerpt: "These powerful dramas explore what it means to leave everything behind and build a new life."
 date: "2028-12-06"
 updated: "2028-12-06"
 readTime: "3 min read"
@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/12/7-dramatic-films-about-starting-over-in-a-new-city/a-young-woman-in-graduation-attire-holdi-3.webp"
   - "/images/blog/2028/12/7-dramatic-films-about-starting-over-in-a-new-city/colorful-clapper-board-on-a-white-surfac-2.webp"
   - "/images/blog/2028/12/7-dramatic-films-about-starting-over-in-a-new-city/middle-eastern-woman-with-clapperboard-i-1.webp"
-
 service_link: null
 location_link: null
 status: "pending"

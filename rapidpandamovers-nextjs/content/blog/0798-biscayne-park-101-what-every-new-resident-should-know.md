@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/05/biscayne-park-101-what-every-new-resident-should-know/an-iguana-sunbathes-on-a-stone-wall-by-t-5.webp"
   - "/images/blog/2029/05/biscayne-park-101-what-every-new-resident-should-know/iconic-cape-florida-lighthouse-peeks-thr-4.webp"
   - "/images/blog/2029/05/biscayne-park-101-what-every-new-resident-should-know/picturesque-view-of-the-cape-florida-lig-3.webp"
-
 service_link: null
 location_link: "/biscayne-park-movers"
 status: "pending"

@@ -20,7 +20,6 @@ images:
   - "/images/blog/2024/06/how-to-pack-electronics-safely-for-moving/close-up-of-hands-packing-a-box-labeled--3.webp"
   - "/images/blog/2024/06/how-to-pack-electronics-safely-for-moving/crop-anonymous-guy-in-casual-clothes-usi-2.webp"
   - "/images/blog/2024/06/how-to-pack-electronics-safely-for-moving/labeled-cardboard-boxes-for-summer-cloth-4.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "pending"

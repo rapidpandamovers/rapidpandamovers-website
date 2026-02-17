@@ -22,20 +22,28 @@ export default function Home() {
       />
       <RatingSection />
       <MediaSection showArrows={false} showDots={false} enableModal={false} description="" />
-      <ServiceSection />
       {/* Reviews Section */}
       <ReviewSection
+        variant="compact"
         title="What Our Customers Say"
-        subtitle="Real reviews from real customers"
-        limit={3}
+        subtitle=""
       />
-      <WhySection />
+      <ServiceSection />
       <LocationSection />
+      <WhySection />
       <AboutSection />
       <BlogSection
-        showFeatured={true}
+        variant="compact"
+        showFeatured={false}
         showCategories={false}
-        maxPosts={3}
+        showImages={true}
+        showTipsCard={false}
+        showExcerpts={false}
+        showCategoryPill={false}
+        viewMoreTitle="Explore Our Blog"
+        viewMoreSubtitle="Discover helpful tips and guides for your move"
+        viewMoreButtonText="View All Articles"
+        viewMoreLink="/blog"
       />
       <FAQSection variant="compact" />
       <QuoteSection />

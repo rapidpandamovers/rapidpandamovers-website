@@ -17,7 +17,6 @@ images:
   - "/images/blog/2026/01/winter-last-minute-moving-tips-for-miami-residents/adult-man-using-red-tape-to-seal-a-large-1.webp"
   - "/images/blog/2026/01/winter-last-minute-moving-tips-for-miami-residents/labeled-cardboard-boxes-for-summer-cloth-3.webp"
   - "/images/blog/2026/01/winter-last-minute-moving-tips-for-miami-residents/side-view-of-crop-anonymous-man-packing--2.webp"
-
 service_link: "/last-minute-moving"
 location_link: null
 status: "pending"

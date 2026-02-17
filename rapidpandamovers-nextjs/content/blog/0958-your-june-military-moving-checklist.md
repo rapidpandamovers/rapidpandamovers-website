@@ -20,7 +20,6 @@ images:
   - "/images/blog/2030/06/your-june-military-moving-checklist/polish-soldiers-in-military-attire-march-2.webp"
   - "/images/blog/2030/06/your-june-military-moving-checklist/polish-soldiers-in-uniform-during-a-cere-1.webp"
   - "/images/blog/2030/06/your-june-military-moving-checklist/two-soldiers-in-camouflage-uniforms-prac-4.webp"
-
 service_link: "/military-moving"
 location_link: null
 status: "pending"

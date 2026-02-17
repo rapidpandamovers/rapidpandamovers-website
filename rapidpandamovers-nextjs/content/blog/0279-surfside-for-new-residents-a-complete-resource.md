@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/02/surfside-for-new-residents-a-complete-resource/exterior-view-of-a-quaint-seaside-cafe-w-3.webp"
   - "/images/blog/2026/02/surfside-for-new-residents-a-complete-resource/two-men-playing-beach-rugby-in-sydney-on-1.webp"
   - "/images/blog/2026/02/surfside-for-new-residents-a-complete-resource/vibrant-aerial-view-of-surfside-beach-pi-2.webp"
-
 service_link: null
 location_link: "/surfside-movers"
 status: "complete"

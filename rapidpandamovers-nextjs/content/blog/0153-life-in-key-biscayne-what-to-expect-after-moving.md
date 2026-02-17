@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/04/life-in-key-biscayne-what-to-expect-after-moving/a-fashionable-woman-in-a-bikini-enjoys-t-3.webp"
   - "/images/blog/2025/04/life-in-key-biscayne-what-to-expect-after-moving/a-woman-in-a-bikini-stands-in-the-ocean--2.webp"
   - "/images/blog/2025/04/life-in-key-biscayne-what-to-expect-after-moving/fashionable-woman-in-bikini-and-leather--1.webp"
-
 service_link: null
 location_link: "/key-biscayne-movers"
 status: "pending"

@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/10/7-hollywood-takes-on-the-stress-of-relocation/crowded-cinema-theater-with-audience-wat-1.webp"
   - "/images/blog/2030/10/7-hollywood-takes-on-the-stress-of-relocation/people-in-3d-glasses-watching-a-movie-in-2.webp"
   - "/images/blog/2030/10/7-hollywood-takes-on-the-stress-of-relocation/people-in-a-theater-wearing-3d-glasses-w-3.webp"
-
 service_link: null
 location_link: null
 status: "pending"

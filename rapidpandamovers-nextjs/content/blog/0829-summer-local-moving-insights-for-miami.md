@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/08/summer-local-moving-insights-for-miami/loc-captivating-view-of-miami-s-modern-skyli-2.webp"
   - "/images/blog/2029/08/summer-local-moving-insights-for-miami/svc-excavator-loading-materials-into-a-heavy-2.webp"
   - "/images/blog/2029/08/summer-local-moving-insights-for-miami/svc-three-men-loading-wooden-boxes-on-a-truc-3.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "pending"

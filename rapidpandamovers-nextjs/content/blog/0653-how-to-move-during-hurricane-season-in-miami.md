@@ -5,9 +5,9 @@ slug: "how-to-move-during-hurricane-season-in-miami"
 excerpt: "Essential tips for relocating during Miami's hurricane season, from weather monitoring to rescheduling policies."
 date: "2028-06-28"
 updated: "2028-06-28"
-readTime: "4 min read"
+readTime: "5 min read"
 wordcount: 850
-category: "Moving Tips"
+category: "Local Moving"
 image_folder: "/images/blog/2028/06/how-to-move-during-hurricane-season-in-miami"
 featured: "/images/blog/2028/06/how-to-move-during-hurricane-season-in-miami/dark-storm-clouds-1200w.webp"
 image_keywords:
@@ -15,18 +15,10 @@ image_keywords:
   - "miami moving"
   - "storm preparation"
 images:
-  - src: "/images/blog/2028/06/how-to-move-during-hurricane-season-in-miami/dark-storm-clouds"
-    alt: "Dark dramatic storm clouds forming over Miami skyline during hurricane season"
-    sizes: [400, 800, 1200, 1600]
-  - src: "/images/blog/2028/06/how-to-move-during-hurricane-season-in-miami/storm-palm-tree"
-    alt: "Palm tree silhouette against lightning storm sky representing Florida hurricane weather"
-    sizes: [400, 800, 1200, 1600]
-  - src: "/images/blog/2028/06/how-to-move-during-hurricane-season-in-miami/moving-boxes-labeled"
-    alt: "Labeled cardboard moving boxes prepared for hurricane season relocation"
-    sizes: [400, 800, 1200, 1600]
-  - src: "/images/blog/2028/06/how-to-move-during-hurricane-season-in-miami/emergency-supplies-kit"
-    alt: "Emergency supplies kit with canned goods and water for hurricane preparedness"
-    sizes: [400, 800, 1200, 1600]
+  - "/images/blog/2028/06/how-to-move-during-hurricane-season-in-miami/dark-storm-clouds-1200w.webp"
+  - "/images/blog/2028/06/how-to-move-during-hurricane-season-in-miami/storm-palm-tree-1200w.webp"
+  - "/images/blog/2028/06/how-to-move-during-hurricane-season-in-miami/moving-boxes-labeled-1200w.webp"
+  - "/images/blog/2028/06/how-to-move-during-hurricane-season-in-miami/emergency-supplies-kit-1200w.webp"
 service_link: "/local-moving"
 location_link: null
 status: "complete"

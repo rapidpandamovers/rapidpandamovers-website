@@ -16,7 +16,6 @@ images:
   - "/images/blog/2028/08/9-budget-friendly-moving-tips-that-actually-work/hand-holding-a-leather-wallet-with-visib-3.webp"
   - "/images/blog/2028/08/9-budget-friendly-moving-tips-that-actually-work/miniature-shopping-cart-with-cash-next-t-2.webp"
   - "/images/blog/2028/08/9-budget-friendly-moving-tips-that-actually-work/piggy-bank-with-shopping-cart-and-coins--1.webp"
-
 service_link: null
 location_link: null
 status: "pending"

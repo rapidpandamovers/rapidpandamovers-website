@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/01/relocating-to-miami-the-essential-guide/captivating-view-of-miami-s-iconic-skyli-3.webp"
   - "/images/blog/2028/01/relocating-to-miami-the-essential-guide/captivating-view-of-miami-s-modern-skyli-2.webp"
   - "/images/blog/2028/01/relocating-to-miami-the-essential-guide/colorful-scene-capturing-miami-beach-s-h-1.webp"
-
 service_link: null
 location_link: "/miami-movers"
 status: "pending"

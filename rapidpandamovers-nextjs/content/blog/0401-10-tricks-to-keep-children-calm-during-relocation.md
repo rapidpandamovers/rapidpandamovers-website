@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/11/10-tricks-to-keep-children-calm-during-relocation/african-american-male-in-eyeglasses-sitt-3.webp"
   - "/images/blog/2026/11/10-tricks-to-keep-children-calm-during-relocation/close-up-of-hands-packing-a-box-labeled--4.webp"
   - "/images/blog/2026/11/10-tricks-to-keep-children-calm-during-relocation/mother-and-daughter-joyfully-packing-clo-1.webp"
-
 service_link: "/residential-moving"
 location_link: null
 status: "pending"

@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/12/hourly-moving-tips-for-new-year-planning/a-classic-black-and-white-alarm-clock-be-2.webp"
   - "/images/blog/2027/12/hourly-moving-tips-for-new-year-planning/black-and-white-close-up-of-a-wall-clock-3.webp"
   - "/images/blog/2027/12/hourly-moving-tips-for-new-year-planning/flat-lay-of-a-pink-themed-workspace-feat-1.webp"
-
 service_link: "/hourly-moving"
 location_link: null
 status: "completed"

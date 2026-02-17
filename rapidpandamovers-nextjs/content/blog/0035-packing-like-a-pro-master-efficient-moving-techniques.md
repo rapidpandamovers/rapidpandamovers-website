@@ -20,7 +20,6 @@ images:
   - "/images/blog/2024/04/packing-like-a-pro-master-efficient-moving-techniques/close-up-of-people-sealing-a-cardboard-b-4.webp"
   - "/images/blog/2024/04/packing-like-a-pro-master-efficient-moving-techniques/side-view-of-crop-anonymous-man-packing--3.webp"
   - "/images/blog/2024/04/packing-like-a-pro-master-efficient-moving-techniques/woman-sealing-boxes-with-tape-for-reloca-5.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "pending"

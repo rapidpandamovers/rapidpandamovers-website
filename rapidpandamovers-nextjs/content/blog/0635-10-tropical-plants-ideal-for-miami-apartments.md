@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/05/10-tropical-plants-ideal-for-miami-apartments/loc-explore-the-vibrant-miami-skyline-with-a-2.webp"
   - "/images/blog/2028/05/10-tropical-plants-ideal-for-miami-apartments/svc-a-contemporary-skyscraper-in-a-cityscape-1.webp"
   - "/images/blog/2028/05/10-tropical-plants-ideal-for-miami-apartments/svc-upward-view-of-modern-skyscrapers-with-b-2.webp"
-
 service_link: "/apartment-moving"
 location_link: null
 status: "pending"

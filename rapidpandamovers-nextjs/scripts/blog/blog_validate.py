@@ -325,6 +325,10 @@ def validate_post(file_path: Path) -> dict:
 
     # Also check excerpt for AI patterns
     excerpt = fm.get('excerpt', '')
+    if isinstance(excerpt, list):
+        excerpt = ' '.join(str(e) for e in excerpt)
+    elif not isinstance(excerpt, str):
+        excerpt = str(excerpt) if excerpt else ''
     excerpt_patterns = check_ai_patterns(excerpt)
     if excerpt_patterns:
         for pattern_name, count in excerpt_patterns:

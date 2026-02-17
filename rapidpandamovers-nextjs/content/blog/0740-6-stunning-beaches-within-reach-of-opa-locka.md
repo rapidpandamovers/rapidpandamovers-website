@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/01/6-stunning-beaches-within-reach-of-opa-locka/a-woman-taking-a-photo-on-a-sunny-day-by-2.webp"
   - "/images/blog/2029/01/6-stunning-beaches-within-reach-of-opa-locka/a-woman-with-flowing-hair-stands-at-the--4.webp"
   - "/images/blog/2029/01/6-stunning-beaches-within-reach-of-opa-locka/young-woman-photographing-the-ocean-on-a-1.webp"
-
 service_link: null
 location_link: "/opa-locka-movers"
 status: "pending"

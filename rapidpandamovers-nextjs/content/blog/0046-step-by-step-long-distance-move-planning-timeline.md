@@ -21,7 +21,6 @@ images:
   - "/images/blog/2024/05/step-by-step-long-distance-move-planning-timeline/drone-view-of-modern-cars-riding-through-2.webp"
   - "/images/blog/2024/05/step-by-step-long-distance-move-planning-timeline/dynamic-night-shot-of-flowing-traffic-un-5.webp"
   - "/images/blog/2024/05/step-by-step-long-distance-move-planning-timeline/monochrome-image-of-a-rusty-abandoned-tr-4.webp"
-
 service_link: "/long-distance"
 location_link: null
 status: "complete"

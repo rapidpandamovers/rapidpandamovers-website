@@ -17,7 +17,6 @@ images:
   - "/images/blog/2024/10/5-pro-moving-tricks-the-experts-use/a-man-applying-tape-to-a-cardboard-box-f-1.webp"
   - "/images/blog/2024/10/5-pro-moving-tricks-the-experts-use/adult-man-using-red-tape-to-seal-a-large-3.webp"
   - "/images/blog/2024/10/5-pro-moving-tricks-the-experts-use/close-up-of-hands-packing-a-box-labeled--2.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "pending"

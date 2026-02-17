@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/11/8-ideas-to-introduce-yourself-to-neighbors/three-men-seated-and-standing-by-a-doorw-3.webp"
   - "/images/blog/2028/11/8-ideas-to-introduce-yourself-to-neighbors/two-elderly-women-volunteer-at-a-communi-4.webp"
   - "/images/blog/2028/11/8-ideas-to-introduce-yourself-to-neighbors/two-young-children-sit-on-stone-steps-ou-2.webp"
-
 service_link: null
 location_link: null
 status: "pending"

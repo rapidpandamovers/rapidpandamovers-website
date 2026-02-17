@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/05/how-to-handle-military-moving-during-mothers-day/a-soldier-in-uniform-joyfully-embraces-f-3.webp"
   - "/images/blog/2026/05/how-to-handle-military-moving-during-mothers-day/top-view-of-a-camouflage-military-backpa-4.webp"
   - "/images/blog/2026/05/how-to-handle-military-moving-during-mothers-day/uplifting-moment-of-a-military-couple-em-2.webp"
-
 service_link: "/military-moving"
 location_link: null
 status: "pending"

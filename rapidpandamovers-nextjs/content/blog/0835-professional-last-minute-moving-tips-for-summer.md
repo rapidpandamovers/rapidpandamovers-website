@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/08/professional-last-minute-moving-tips-for-summer/a-person-checks-their-wristwatch-in-a-hu-4.webp"
   - "/images/blog/2029/08/professional-last-minute-moving-tips-for-summer/minimalist-clock-with-a-black-friday-sal-1.webp"
   - "/images/blog/2029/08/professional-last-minute-moving-tips-for-summer/young-woman-with-curly-hair-posing-in-an-2.webp"
-
 service_link: "/last-minute-moving"
 location_link: null
 status: "pending"

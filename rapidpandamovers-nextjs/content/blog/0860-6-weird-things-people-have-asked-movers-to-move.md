@@ -17,7 +17,6 @@ images:
   - "/images/blog/2029/10/6-weird-things-people-have-asked-movers-to-move/a-ghostly-figure-wearing-sunglasses-capt-3.webp"
   - "/images/blog/2029/10/6-weird-things-people-have-asked-movers-to-move/close-up-of-a-humorous-ufo-parking-sign--1.webp"
   - "/images/blog/2029/10/6-weird-things-people-have-asked-movers-to-move/creepy-portrait-of-a-young-man-biting-in-2.webp"
-
 service_link: null
 location_link: null
 status: "pending"

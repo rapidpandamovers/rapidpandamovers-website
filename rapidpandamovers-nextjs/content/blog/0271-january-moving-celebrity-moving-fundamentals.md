@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/01/january-moving-celebrity-moving-fundamentals/a-family-is-seen-moving-into-a-new-home--3.webp"
   - "/images/blog/2026/01/january-moving-celebrity-moving-fundamentals/two-movers-load-a-van-with-furniture-dur-1.webp"
   - "/images/blog/2026/01/january-moving-celebrity-moving-fundamentals/young-adult-male-smiling-while-handling--2.webp"
-
 service_link: "/celebrity-moving"
 location_link: null
 status: "complete"

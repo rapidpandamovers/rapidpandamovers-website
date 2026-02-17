@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/11/how-to-handle-celebrity-moving-during-veterans-day/luxury-estate-with-manicured-lawn-and-mo-1.webp"
   - "/images/blog/2026/11/how-to-handle-celebrity-moving-during-veterans-day/stunning-aerial-photo-of-a-wedding-event-3.webp"
   - "/images/blog/2026/11/how-to-handle-celebrity-moving-during-veterans-day/top-view-of-a-secluded-mansion-with-a-po-2.webp"
-
 service_link: "/celebrity-moving"
 location_link: null
 status: "pending"

@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/09/commercial-moving-strategies-for-september-moves/aerial-view-of-liverpool-s-iconic-three--4.webp"
   - "/images/blog/2028/09/commercial-moving-strategies-for-september-moves/exterior-view-of-a-modern-building-with--1.webp"
   - "/images/blog/2028/09/commercial-moving-strategies-for-september-moves/low-angle-view-of-a-modern-urban-buildin-3.webp"
-
 service_link: "/commercial-moving"
 location_link: null
 status: "complete"

@@ -6,7 +6,7 @@ excerpt: "Avoid moving scams. Watch for no physical address, low estimates, cash
 date: "2027-11-24"
 updated: "2027-11-24"
 readTime: "2 min read"
-category: "Moving Tips"
+category: "Commercial Moving"
 image_folder: "/images/blog/2027/11/6-ways-to-spot-a-bad-moving-company"
 featured: "/images/blog/2027/11/6-ways-to-spot-a-bad-moving-company/control-tower-with-a-clear-red-warning-f-2.webp"
 image_keywords:
@@ -18,8 +18,7 @@ images:
   - "/images/blog/2027/11/6-ways-to-spot-a-bad-moving-company/control-tower-with-a-clear-red-warning-f-2.webp"
   - "/images/blog/2027/11/6-ways-to-spot-a-bad-moving-company/red-warning-flag-flying-high-near-igea-m-3.webp"
   - "/images/blog/2027/11/6-ways-to-spot-a-bad-moving-company/smiling-mover-giving-thumbs-up-from-a-mo-1.webp"
-
-service_link: null
+service_link: "/commercial-moving"
 location_link: null
 status: "complete"
 needs_ai_image: false

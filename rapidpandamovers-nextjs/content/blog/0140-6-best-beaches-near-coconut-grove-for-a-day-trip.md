@@ -19,7 +19,6 @@ images:
   - "/images/blog/2025/03/6-best-beaches-near-coconut-grove-for-a-day-trip/palm-trees-sway-against-a-backdrop-of-wh-2.webp"
   - "/images/blog/2025/03/6-best-beaches-near-coconut-grove-for-a-day-trip/scenic-view-of-miami-beach-with-palm-tre-4.webp"
   - "/images/blog/2025/03/6-best-beaches-near-coconut-grove-for-a-day-trip/vibrant-art-deco-building-with-palm-tree-3.webp"
-
 service_link: "/local-moving"
 location_link: "/coconut-grove-movers"
 status: "pending"

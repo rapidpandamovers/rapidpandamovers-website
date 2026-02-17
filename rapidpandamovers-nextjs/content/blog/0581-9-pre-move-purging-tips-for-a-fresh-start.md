@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/01/9-pre-move-purging-tips-for-a-fresh-start/movers-loading-boxes-into-a-truck-on-a-s-2.webp"
   - "/images/blog/2028/01/9-pre-move-purging-tips-for-a-fresh-start/tow-truck-operator-loading-white-gmc-pic-3.webp"
   - "/images/blog/2028/01/9-pre-move-purging-tips-for-a-fresh-start/vibrant-cargo-truck-cruising-a-scenic-mo-5.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "pending"

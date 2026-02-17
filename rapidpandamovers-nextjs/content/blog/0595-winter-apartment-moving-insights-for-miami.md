@@ -17,7 +17,6 @@ images:
   - "/images/blog/2028/02/winter-apartment-moving-insights-for-miami/loc-explore-the-vibrant-miami-skyline-with-a-1.webp"
   - "/images/blog/2028/02/winter-apartment-moving-insights-for-miami/svc-high-rise-residential-building-in-izmir--1.webp"
   - "/images/blog/2028/02/winter-apartment-moving-insights-for-miami/svc-picturesque-canal-with-autumn-foliage-an-2.webp"
-
 service_link: "/apartment-moving"
 location_link: null
 status: "completed"

@@ -6,7 +6,7 @@ excerpt: "Discover 8 legendary Miami mansions that have housed celebrities from 
 date: "2027-06-09"
 updated: "2027-06-09"
 readTime: "2 min read"
-category: "Fun Facts"
+category: "Hourly Moving"
 image_folder: "/images/blog/2027/06/8-famous-miami-mansions-and-their-stories"
 featured: "/images/blog/2027/06/8-famous-miami-mansions-and-their-stories/a-grand-neoclassical-mansion-with-lush-g-4.webp"
 image_keywords:
@@ -19,8 +19,7 @@ images:
   - "/images/blog/2027/06/8-famous-miami-mansions-and-their-stories/a-grand-red-mansion-showcasing-classic-c-2.webp"
   - "/images/blog/2027/06/8-famous-miami-mansions-and-their-stories/charming-victorian-style-mansion-surroun-1.webp"
   - "/images/blog/2027/06/8-famous-miami-mansions-and-their-stories/stunning-aerial-photo-of-a-wedding-event-3.webp"
-
-service_link: null
+service_link: "/hourly-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

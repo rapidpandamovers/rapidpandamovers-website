@@ -20,7 +20,6 @@ images:
   - "/images/blog/2024/01/senior-moving-checklist-for-a-smooth-transition/elderly-woman-packing-suitcase-on-bed-in-1.webp"
   - "/images/blog/2024/01/senior-moving-checklist-for-a-smooth-transition/elderly-woman-sits-on-bed-packing-a-suit-2.webp"
   - "/images/blog/2024/01/senior-moving-checklist-for-a-smooth-transition/senior-woman-carefully-packs-her-rollato-4.webp"
-
 service_link: "/miami-senior-moving"
 location_link: null
 status: "completed"

@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/08/why-miami-gardens-is-perfect-for-your-next-move/scenic-aerial-shot-of-a-sprawling-reside-1.webp"
   - "/images/blog/2025/08/why-miami-gardens-is-perfect-for-your-next-move/suburban-house-with-lush-greenery-and-a--2.webp"
   - "/images/blog/2025/08/why-miami-gardens-is-perfect-for-your-next-move/three-cluster-mailboxes-under-trees-in-a-4.webp"
-
 service_link: "/miami-gardens-movers"
 location_link: "/miami-gardens-movers"
 status: "pending"

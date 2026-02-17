@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/05/miami-lakes-neighborhood-guide-for-new-residents/colorful-scene-capturing-miami-beach-s-h-2.webp"
   - "/images/blog/2027/05/miami-lakes-neighborhood-guide-for-new-residents/dramatic-black-and-white-photo-of-the-mi-5.webp"
   - "/images/blog/2027/05/miami-lakes-neighborhood-guide-for-new-residents/view-of-miami-skyline-from-coral-gables--1.webp"
-
 service_link: null
 location_link: "/miami-lakes-movers"
 status: "pending"

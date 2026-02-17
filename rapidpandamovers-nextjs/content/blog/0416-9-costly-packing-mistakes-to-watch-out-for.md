@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/12/9-costly-packing-mistakes-to-watch-out-for/close-up-of-a-cardboard-box-filled-with--3.webp"
   - "/images/blog/2026/12/9-costly-packing-mistakes-to-watch-out-for/crop-faceless-male-sealing-packed-carton-4.webp"
   - "/images/blog/2026/12/9-costly-packing-mistakes-to-watch-out-for/hands-carefully-packing-glassware-into-a-1.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "pending"

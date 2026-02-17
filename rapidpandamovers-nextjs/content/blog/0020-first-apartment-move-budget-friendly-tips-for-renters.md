@@ -17,7 +17,6 @@ images:
   - "/images/blog/2024/02/first-apartment-move-budget-friendly-tips-for-renters/a-collection-of-labeled-cardboard-boxes--2.webp"
   - "/images/blog/2024/02/first-apartment-move-budget-friendly-tips-for-renters/a-joyful-moment-of-a-mother-and-child-pl-1.webp"
   - "/images/blog/2024/02/first-apartment-move-budget-friendly-tips-for-renters/a-person-handling-a-moving-box-with-a-ca-3.webp"
-
 service_link: "/apartment-moving"
 location_link: null
 status: "completed"

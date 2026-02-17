@@ -17,7 +17,6 @@ images:
   - "/images/blog/2028/12/how-miami-humidity-affects-your-antiques-during-a-move/loc-view-of-miami-skyline-from-coral-gables--1.webp"
   - "/images/blog/2028/12/how-miami-humidity-affects-your-antiques-during-a-move/svc-a-vintage-ornate-mirror-reflecting-a-dol-1.webp"
   - "/images/blog/2028/12/how-miami-humidity-affects-your-antiques-during-a-move/svc-three-people-browsing-vintage-wooden-fur-2.webp"
-
 service_link: "/antique-moving"
 location_link: null
 status: "pending"

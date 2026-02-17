@@ -18,8 +18,7 @@ images:
   - "/images/blog/2027/06/9-effective-ways-to-downsize-before-relocating/clear-containers-filled-with-grains-past-4.webp"
   - "/images/blog/2027/06/9-effective-ways-to-downsize-before-relocating/contemporary-workplace-with-netbook-near-2.webp"
   - "/images/blog/2027/06/9-effective-ways-to-downsize-before-relocating/person-s-hands-organizing-a-desk-drawer--3.webp"
-
-service_link: /local-moving
+service_link: "/local-moving"
 location_link: null
 status: "completed"
 needs_ai_image: false

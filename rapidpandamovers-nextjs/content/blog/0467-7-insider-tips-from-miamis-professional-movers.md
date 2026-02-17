@@ -17,8 +17,7 @@ images:
   - "/images/blog/2027/04/7-insider-tips-from-miamis-professional-movers/loc-captivating-miami-skyline-at-night-featu-2.webp"
   - "/images/blog/2027/04/7-insider-tips-from-miamis-professional-movers/loc-view-of-miami-skyline-from-coral-gables--1.webp"
   - "/images/blog/2027/04/7-insider-tips-from-miamis-professional-movers/svc-a-blue-truck-transporting-livestock-on-a-3.webp"
-
-service_link: /local-moving
+service_link: "/local-moving"
 location_link: null
 status: "complete"
 needs_ai_image: false

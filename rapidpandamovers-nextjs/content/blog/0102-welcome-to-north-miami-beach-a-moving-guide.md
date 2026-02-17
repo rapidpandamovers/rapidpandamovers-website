@@ -2,7 +2,7 @@
 id: 102
 title: "Welcome to North Miami Beach: A Moving Guide"
 slug: "welcome-to-north-miami-beach-a-moving-guide"
-excerpt: "Planning a December move to North Miami Beach? Discover what makes this Miami-Dade community special and get practical tips for your winter relocation."
+excerpt: "Planning a December move to North Miami Beach? This Miami-Dade County community offers a blend of coastal living, cultural diversity, and urban..."
 date: "2024-12-12"
 updated: "2024-12-12"
 readTime: "4 min read"
@@ -18,7 +18,6 @@ images:
   - "/images/blog/2024/12/welcome-to-north-miami-beach-a-moving-guide/colorful-scene-capturing-miami-beach-s-h-3.webp"
   - "/images/blog/2024/12/welcome-to-north-miami-beach-a-moving-guide/empty-streets-with-palm-trees-and-modern-2.webp"
   - "/images/blog/2024/12/welcome-to-north-miami-beach-a-moving-guide/stunning-sunset-over-north-miami-beach-w-4.webp"
-
 service_link: "/north-miami-beach-local-moving"
 location_link: "/north-miami-beach-movers"
 status: "pending"

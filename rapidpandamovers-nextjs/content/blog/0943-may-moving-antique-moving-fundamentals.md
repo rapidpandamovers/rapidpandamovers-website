@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/05/may-moving-antique-moving-fundamentals/cozy-vintage-room-with-antique-furniture-2.webp"
   - "/images/blog/2030/05/may-moving-antique-moving-fundamentals/three-people-browsing-vintage-wooden-fur-3.webp"
   - "/images/blog/2030/05/may-moving-antique-moving-fundamentals/two-women-wearing-masks-browse-antique-f-1.webp"
-
 service_link: "/antique-moving"
 location_link: null
 status: "pending"

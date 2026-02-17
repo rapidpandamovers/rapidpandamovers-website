@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/12/7-weekend-activities-to-enjoy-in-golden-beach/a-fun-game-stand-at-an-amusement-park-in-1.webp"
   - "/images/blog/2028/12/7-weekend-activities-to-enjoy-in-golden-beach/little-girl-captivated-by-giant-bubble-a-3.webp"
   - "/images/blog/2028/12/7-weekend-activities-to-enjoy-in-golden-beach/two-friends-playing-video-games-and-enjo-2.webp"
-
 service_link: null
 location_link: "/golden-beach-movers"
 status: "pending"

@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/01/student-moving-tips-for-back-to-school-season/contemporary-student-housing-with-unique-4.webp"
   - "/images/blog/2027/01/student-moving-tips-for-back-to-school-season/group-of-college-students-collaborating--3.webp"
   - "/images/blog/2027/01/student-moving-tips-for-back-to-school-season/group-of-college-students-enjoying-a-car-2.webp"
-
 service_link: "/student-moving"
 location_link: null
 status: "pending"

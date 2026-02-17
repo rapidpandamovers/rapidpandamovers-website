@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/01/key-biscayne-living-practical-relocation-tips/iconic-cape-florida-lighthouse-on-a-sunn-1.webp"
   - "/images/blog/2030/01/key-biscayne-living-practical-relocation-tips/pathway-leading-to-cape-florida-lighthou-5.webp"
   - "/images/blog/2030/01/key-biscayne-living-practical-relocation-tips/scenic-view-of-cape-florida-lighthouse-s-3.webp"
-
 service_link: null
 location_link: "/key-biscayne-movers"
 status: "pending"

@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/01/10-genius-ways-to-declutter-before-your-move/opened-carton-boxes-and-stacked-books-pl-1.webp"
   - "/images/blog/2029/01/10-genius-ways-to-declutter-before-your-move/person-organizing-office-essentials-into-4.webp"
   - "/images/blog/2029/01/10-genius-ways-to-declutter-before-your-move/well-organized-pantry-with-eco-friendly--2.webp"
-
 service_link: null
 location_link: null
 status: "pending"

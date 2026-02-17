@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/07/july-4th-antique-moving-strategies-in-miami/svc-a-young-man-casually-poses-in-a-vintage--3.webp"
   - "/images/blog/2029/07/july-4th-antique-moving-strategies-in-miami/svc-two-women-wearing-masks-browse-antique-f-1.webp"
   - "/images/blog/2029/07/july-4th-antique-moving-strategies-in-miami/svc-vintage-dining-table-featuring-an-elegan-2.webp"
-
 service_link: "/antique-moving"
 location_link: null
 status: "pending"

@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/05/8-hidden-gems-only-aventura-locals-know-about/red-trailer-truck-at-a-warehouse-loading-4.webp"
   - "/images/blog/2029/05/8-hidden-gems-only-aventura-locals-know-about/semi-truck-parked-at-a-loading-dock-with-1.webp"
   - "/images/blog/2029/05/8-hidden-gems-only-aventura-locals-know-about/two-men-load-construction-materials-onto-2.webp"
-
 service_link: null
 location_link: "/aventura-movers"
 status: "pending"

@@ -2,7 +2,7 @@
 id: 891
 title: "The Newcomers Guide to Doral Living"
 slug: "the-newcomers-guide-to-doral-living"
-excerpt: "Your complete guide to moving to Doral with neighborhood tips, local amenities, and relocation advice from experienced Miami movers."
+excerpt: "You're scrolling through Doral listings, comparing that new-build townhouse in Downtown Doral against the golf course views in The Greens..."
 date: "2030-01-03"
 updated: "2030-01-03"
 readTime: "7 min read"
@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/01/the-newcomers-guide-to-doral-living/loc-vibrant-miami-skyline-illuminated-at-nig-2.webp"
   - "/images/blog/2030/01/the-newcomers-guide-to-doral-living/svc-a-delivery-truck-driving-along-a-coastal-1.webp"
   - "/images/blog/2030/01/the-newcomers-guide-to-doral-living/svc-u-haul-moving-truck-parked-on-roadside-w-2.webp"
-
 service_link: "/doral-local-moving"
 location_link: "/doral-movers"
 status: "pending"

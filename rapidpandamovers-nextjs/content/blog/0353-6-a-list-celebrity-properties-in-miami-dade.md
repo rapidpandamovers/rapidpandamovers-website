@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/07/6-a-list-celebrity-properties-in-miami-dade/a-grand-neoclassical-mansion-with-lush-g-3.webp"
   - "/images/blog/2026/07/6-a-list-celebrity-properties-in-miami-dade/luxurious-pool-area-with-ornate-architec-1.webp"
   - "/images/blog/2026/07/6-a-list-celebrity-properties-in-miami-dade/stunning-traditional-mansion-exterior-wi-2.webp"
-
 service_link: null
 location_link: null
 status: "pending"

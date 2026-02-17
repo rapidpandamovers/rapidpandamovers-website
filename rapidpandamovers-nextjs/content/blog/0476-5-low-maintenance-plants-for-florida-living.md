@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/05/5-low-maintenance-plants-for-florida-living/elegant-yellow-freesia-flowers-in-a-blue-1.webp"
   - "/images/blog/2027/05/5-low-maintenance-plants-for-florida-living/lush-alocasia-polly-plant-in-a-decorativ-2.webp"
   - "/images/blog/2027/05/5-low-maintenance-plants-for-florida-living/vibrant-yellow-cymbidium-orchids-in-an-o-4.webp"
-
 service_link: null
 location_link: null
 status: "pending"

@@ -2,7 +2,7 @@
 id: 489
 title: "Welcome to Kendall: A Moving Guide"
 slug: "welcome-to-kendall-a-moving-guide"
-excerpt: "Moving to Kendall this summer? This complete guide covers neighborhoods, schools, housing, local amenities, and everything you need for a smooth."
+excerpt: "Picture yourself six months from now: backyard barbecues, a 15-minute commute, and kids biking to top-rated schools."
 date: "2027-06-10"
 updated: "2027-06-10"
 readTime: "5 min read"
@@ -20,7 +20,6 @@ images:
   - "/images/blog/2027/06/welcome-to-kendall-a-moving-guide/svc-red-truck-with-large-covered-cargo-in-an-2.webp"
   - "/images/blog/2027/06/welcome-to-kendall-a-moving-guide/svc-semi-truck-parked-at-a-loading-dock-with-1.webp"
   - "/images/blog/2027/06/welcome-to-kendall-a-moving-guide/svc-vintage-truck-carrying-heavy-cargo-bags--3.webp"
-
 service_link: "/kendall-local-moving"
 location_link: "/kendall-movers"
 status: "pending"

@@ -19,7 +19,6 @@ images:
   - "/images/blog/2025/05/your-ultimate-guide-to-moving-to-bal-harbour/loc-scenic-view-of-sydney-harbour-bridge-fro-2.webp"
   - "/images/blog/2025/05/your-ultimate-guide-to-moving-to-bal-harbour/svc-a-pile-of-empty-cardboard-boxes-ready-fo-1.webp"
   - "/images/blog/2025/05/your-ultimate-guide-to-moving-to-bal-harbour/svc-cardboard-moving-boxes-in-a-modern-kitch-2.webp"
-
 service_link: "/local-moving"
 location_link: "/bal-harbour-movers"
 status: "pending"

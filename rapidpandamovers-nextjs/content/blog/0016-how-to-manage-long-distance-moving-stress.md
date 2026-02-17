@@ -2,7 +2,7 @@
 id: 16
 title: "How to Manage Long-Distance Moving Stress"
 slug: "how-to-manage-long-distance-moving-stress"
-excerpt: "Feeling overwhelmed by your upcoming cross-country move? Discover practical stress management tips for every phase of your long-distance relocation."
+excerpt: "Moving across the country ranks among life's most stressful experiences, right up there with divorce and job loss."
 date: "2024-01-31"
 updated: "2024-01-31"
 readTime: "9 min read"
@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/01/how-to-manage-long-distance-moving-stress/a-scenic-highway-under-a-dramatic-cloudy-3.webp"
   - "/images/blog/2024/01/how-to-manage-long-distance-moving-stress/blurred-image-of-a-truck-speeding-on-a-c-1.webp"
   - "/images/blog/2024/01/how-to-manage-long-distance-moving-stress/cargo-trucks-on-a38-highway-mansfield-uk-2.webp"
-
 service_link: "/long-distance"
 location_link: null
 status: "completed"

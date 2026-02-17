@@ -6,7 +6,7 @@ excerpt: "Need to move fast? These 8 emergency moving hacks will help you reloca
 date: "2029-09-12"
 updated: "2029-09-12"
 readTime: "3 min read"
-category: "Moving Tips"
+category: "Labor Only Moving"
 image_folder: "/images/blog/2029/09/8-emergency-moving-hacks-for-rushed-relocations"
 featured: "/images/blog/2029/09/8-emergency-moving-hacks-for-rushed-relocations/artistic-black-and-white-blur-of-motorcy-3.webp"
 image_keywords:
@@ -19,8 +19,7 @@ images:
   - "/images/blog/2029/09/8-emergency-moving-hacks-for-rushed-relocations/crispy-sweet-potato-fries-served-with-cr-1.webp"
   - "/images/blog/2029/09/8-emergency-moving-hacks-for-rushed-relocations/woman-in-black-athletic-outfit-running-o-2.webp"
   - "/images/blog/2029/09/8-emergency-moving-hacks-for-rushed-relocations/young-woman-with-curly-hair-posing-in-an-5.webp"
-
-service_link: null
+service_link: "/labor-only-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

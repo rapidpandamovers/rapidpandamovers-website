@@ -17,7 +17,6 @@ images:
   - "/images/blog/2025/08/7-historic-miami-landmarks-worth-visiting-this-summer/loc-view-of-miami-skyline-from-coral-gables--2.webp"
   - "/images/blog/2025/08/7-historic-miami-landmarks-worth-visiting-this-summer/svc-a-blue-truck-transporting-livestock-on-a-2.webp"
   - "/images/blog/2025/08/7-historic-miami-landmarks-worth-visiting-this-summer/svc-high-angle-view-of-an-asda-delivery-truc-1.webp"
-
 service_link: "/miami-movers"
 location_link: "/miami-movers"
 status: "pending"

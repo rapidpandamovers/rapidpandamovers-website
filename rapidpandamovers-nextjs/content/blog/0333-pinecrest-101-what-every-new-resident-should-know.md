@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/06/pinecrest-101-what-every-new-resident-should-know/experience-a-serene-tropical-villa-with--1.webp"
   - "/images/blog/2026/06/pinecrest-101-what-every-new-resident-should-know/modern-luxury-villa-by-the-waterfront-su-3.webp"
   - "/images/blog/2026/06/pinecrest-101-what-every-new-resident-should-know/palm-trees-sway-against-a-backdrop-of-wh-5.webp"
-
 service_link: null
 location_link: "/pinecrest-movers"
 status: "pending"

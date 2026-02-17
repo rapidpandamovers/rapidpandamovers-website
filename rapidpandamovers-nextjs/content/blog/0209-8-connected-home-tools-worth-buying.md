@@ -6,7 +6,7 @@ excerpt: "Upgrade your new home with these 8 smart home devices. From thermostat
 date: "2025-08-20"
 updated: "2025-08-20"
 readTime: "2 min read"
-category: "Home & Living"
+category: "Residential Moving"
 image_folder: "/images/blog/2025/08/8-connected-home-tools-worth-buying"
 featured: "/images/blog/2025/08/8-connected-home-tools-worth-buying/a-google-home-mini-smart-speaker-on-a-wo-3.webp"
 image_keywords:
@@ -17,7 +17,6 @@ images:
   - "/images/blog/2025/08/8-connected-home-tools-worth-buying/a-google-home-mini-smart-speaker-on-a-wo-3.webp"
   - "/images/blog/2025/08/8-connected-home-tools-worth-buying/a-range-of-smart-home-devices-including--1.webp"
   - "/images/blog/2025/08/8-connected-home-tools-worth-buying/a-sleek-wireless-smart-speaker-on-a-wood-2.webp"
-
 service_link: "/residential-moving"
 location_link: "/miami-movers"
 status: "pending"

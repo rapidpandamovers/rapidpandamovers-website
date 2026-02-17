@@ -17,7 +17,6 @@ images:
   - "/images/blog/2030/03/discover-opa-locka-your-complete-movers-guide/high-angle-view-of-an-asda-delivery-truc-3.webp"
   - "/images/blog/2030/03/discover-opa-locka-your-complete-movers-guide/red-ford-f-150-truck-driving-on-a-bridge-1.webp"
   - "/images/blog/2030/03/discover-opa-locka-your-complete-movers-guide/u-haul-moving-truck-parked-on-roadside-w-2.webp"
-
 service_link: "/opa-locka-local-moving"
 location_link: "/opa-locka-movers"
 status: "pending"

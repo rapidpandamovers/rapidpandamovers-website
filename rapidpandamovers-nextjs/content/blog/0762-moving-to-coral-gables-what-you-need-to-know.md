@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/03/moving-to-coral-gables-what-you-need-to-know/loc-a-modern-university-building-in-coral-ga-1.webp"
   - "/images/blog/2029/03/moving-to-coral-gables-what-you-need-to-know/loc-students-walking-through-a-sunlit-univer-2.webp"
   - "/images/blog/2029/03/moving-to-coral-gables-what-you-need-to-know/svc-red-truck-with-large-covered-cargo-in-an-1.webp"
-
 service_link: "/coral-gables-local-moving"
 location_link: "/coral-gables-movers"
 status: "pending"

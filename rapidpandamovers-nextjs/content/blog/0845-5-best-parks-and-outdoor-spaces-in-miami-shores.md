@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/09/5-best-parks-and-outdoor-spaces-in-miami-shores/curved-modern-footbridge-with-minimalist-1.webp"
   - "/images/blog/2029/09/5-best-parks-and-outdoor-spaces-in-miami-shores/discover-the-serene-harbor-of-chalkida-g-4.webp"
   - "/images/blog/2029/09/5-best-parks-and-outdoor-spaces-in-miami-shores/lush-green-trees-arch-over-a-serene-park-2.webp"
-
 service_link: null
 location_link: "/miami-shores-movers"
 status: "pending"

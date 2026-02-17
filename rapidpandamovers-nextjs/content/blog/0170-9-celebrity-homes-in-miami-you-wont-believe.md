@@ -2,7 +2,7 @@
 id: 170
 title: "9 Celebrity Homes in Miami You Won't Believe"
 slug: "9-celebrity-homes-in-miami-you-wont-believe"
-excerpt: "Explore 9 stunning celebrity homes in Miami, from Star Island estates to Indian Creek's Billionaire Bunker and Fisher Island retreats."
+excerpt: "Miami attracts the rich and famous, and their homes are as impressive as you'd expect."
 date: "2025-05-21"
 updated: "2025-05-21"
 readTime: "3 min read"
@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/05/9-celebrity-homes-in-miami-you-wont-believe/intricate-facade-of-a-historic-ottoman-m-1.webp"
   - "/images/blog/2025/05/9-celebrity-homes-in-miami-you-wont-believe/stunning-traditional-mansion-exterior-wi-2.webp"
   - "/images/blog/2025/05/9-celebrity-homes-in-miami-you-wont-believe/vintage-victorian-interior-with-a-decora-3.webp"
-
 service_link: "/residential-moving"
 location_link: null
 status: "pending"

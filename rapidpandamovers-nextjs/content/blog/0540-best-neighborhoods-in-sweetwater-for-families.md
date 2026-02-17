@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/10/best-neighborhoods-in-sweetwater-for-families/loc-top-down-view-of-a-miami-home-with-solar-1.webp"
   - "/images/blog/2027/10/best-neighborhoods-in-sweetwater-for-families/svc-a-blue-volvo-truck-parked-outside-a-ware-1.webp"
   - "/images/blog/2027/10/best-neighborhoods-in-sweetwater-for-families/svc-red-truck-with-large-covered-cargo-in-an-2.webp"
-
 service_link: "/sweetwater-local-moving"
 location_link: "/sweetwater-movers"
 status: "pending"

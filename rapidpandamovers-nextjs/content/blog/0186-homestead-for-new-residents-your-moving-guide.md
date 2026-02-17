@@ -19,7 +19,6 @@ images:
   - "/images/blog/2025/06/homestead-for-new-residents-your-moving-guide/captivating-sunset-over-the-everglades-w-2.webp"
   - "/images/blog/2025/06/homestead-for-new-residents-your-moving-guide/close-up-of-an-american-alligator-baskin-1.webp"
   - "/images/blog/2025/06/homestead-for-new-residents-your-moving-guide/tranquil-view-of-the-everglades-wetlands-4.webp"
-
 service_link: null
 location_link: "/homestead-movers"
 status: "pending"

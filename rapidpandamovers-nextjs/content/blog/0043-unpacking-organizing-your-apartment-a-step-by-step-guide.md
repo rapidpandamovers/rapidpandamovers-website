@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/05/unpacking-organizing-your-apartment-a-step-by-step-guide/a-contemporary-skyscraper-in-a-cityscape-1.webp"
   - "/images/blog/2024/05/unpacking-organizing-your-apartment-a-step-by-step-guide/a-tall-residential-building-with-multipl-3.webp"
   - "/images/blog/2024/05/unpacking-organizing-your-apartment-a-step-by-step-guide/majestic-view-of-tokyo-metropolitan-gove-2.webp"
-
 service_link: "/apartment-moving"
 location_link: null
 status: "completed"

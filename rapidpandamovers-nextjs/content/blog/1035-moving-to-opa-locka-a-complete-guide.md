@@ -17,7 +17,6 @@ images:
   - "/images/blog/2030/12/moving-to-opa-locka-a-complete-guide/a-pile-of-empty-cardboard-boxes-arranged-2.webp"
   - "/images/blog/2030/12/moving-to-opa-locka-a-complete-guide/cardboard-moving-boxes-in-a-modern-kitch-3.webp"
   - "/images/blog/2030/12/moving-to-opa-locka-a-complete-guide/faceless-individual-holding-an-open-card-1.webp"
-
 service_link: "/opa-locka-local-moving"
 location_link: "/opa-locka-movers"
 status: "complete"

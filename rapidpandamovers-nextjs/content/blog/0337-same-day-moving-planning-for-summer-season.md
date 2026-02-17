@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/06/same-day-moving-planning-for-summer-season/cardboard-box-labeled-with-room-destinat-4.webp"
   - "/images/blog/2026/06/same-day-moving-planning-for-summer-season/from-above-of-unrecognizable-adult-male--2.webp"
   - "/images/blog/2026/06/same-day-moving-planning-for-summer-season/labeled-cardboard-boxes-for-summer-cloth-3.webp"
-
 service_link: "/same-day-moving"
 location_link: null
 status: "pending"

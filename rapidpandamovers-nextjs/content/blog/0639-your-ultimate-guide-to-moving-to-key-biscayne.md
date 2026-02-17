@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/05/your-ultimate-guide-to-moving-to-key-biscayne/a-woman-in-a-bikini-stands-in-the-ocean--4.webp"
   - "/images/blog/2028/05/your-ultimate-guide-to-moving-to-key-biscayne/a-young-child-playfully-hides-behind-a-t-3.webp"
   - "/images/blog/2028/05/your-ultimate-guide-to-moving-to-key-biscayne/discover-the-tropical-paradise-of-key-bi-1.webp"
-
 service_link: null
 location_link: "/key-biscayne-movers"
 status: "pending"

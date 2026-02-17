@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/03/8-bizarre-things-professional-movers-have-seen/creepy-portrait-of-a-young-man-biting-in-3.webp"
   - "/images/blog/2030/03/8-bizarre-things-professional-movers-have-seen/person-in-a-ghost-costume-with-sunglasse-2.webp"
   - "/images/blog/2030/03/8-bizarre-things-professional-movers-have-seen/two-people-in-ghost-costumes-sitting-on--4.webp"
-
 service_link: null
 location_link: null
 status: "pending"

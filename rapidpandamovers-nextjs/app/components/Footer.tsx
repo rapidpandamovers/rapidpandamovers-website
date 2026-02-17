@@ -14,7 +14,7 @@ export default function Footer() {
   const phoneTel = phone.replace(/-/g, '')
 
   return (
-    <footer className="py-5 px-4 md:px-6 lg:px-8 text-white">
+    <footer className="pt-20 pb-6 px-4 md:px-6 lg:px-8 text-white">
       <div className="container mx-auto rounded-4xl border border-gray-700 bg-black p-6 md:p-12">
         {/* Main Footer Content */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
@@ -53,7 +53,7 @@ export default function Footer() {
               <li><Link href="/faq" className="text-gray-400 hover:text-orange-500 transition-colors">FAQ</Link></li>
               <li><Link href="/blog" className="text-gray-400 hover:text-orange-500 transition-colors">Blog</Link></li>
               <li><Link href="/moving-rates" className="text-gray-400 hover:text-orange-500 transition-colors">Moving Rates</Link></li>
-              <li><Link href="/routes" className="text-gray-400 hover:text-orange-500 transition-colors">Moving Routes</Link></li>
+              <li><Link href="/moving-routes" className="text-gray-400 hover:text-orange-500 transition-colors">Moving Routes</Link></li>
               <li><Link href="/moving-tips" className="text-gray-400 hover:text-orange-500 transition-colors">Moving Tips</Link></li>
               <li><Link href="/moving-checklist" className="text-gray-400 hover:text-orange-500 transition-colors">Moving Checklist</Link></li>
               <li><Link href="/moving-glossary" className="text-gray-400 hover:text-orange-500 transition-colors">Moving Glossary</Link></li>
@@ -117,9 +117,9 @@ export default function Footer() {
               <div className="flex items-start space-x-3">
                 <Clock className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
                 <div className="text-gray-400">
-                  <p>{hours.weekday}</p>
-                  <p>{hours.weekend}</p>
-                  <p>{hours.emergency}</p>
+                  {hours.map((entry: { label: string; time: string }, i: number) => (
+                    <p key={i}>{entry.label}: {entry.time}</p>
+                  ))}
                 </div>
               </div>
               {/* Social Media */}

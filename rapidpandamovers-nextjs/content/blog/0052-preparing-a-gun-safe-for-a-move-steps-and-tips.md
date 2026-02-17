@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/06/preparing-a-gun-safe-for-a-move-steps-and-tips/an-aerial-shot-capturing-a-bulldozer-and-1.webp"
   - "/images/blog/2024/06/preparing-a-gun-safe-for-a-move-steps-and-tips/an-excavator-working-on-a-sandy-beach-co-2.webp"
   - "/images/blog/2024/06/preparing-a-gun-safe-for-a-move-steps-and-tips/confident-young-lady-in-casual-wear-carr-4.webp"
-
 service_link: "/safe-moving"
 location_link: null
 status: "pending"

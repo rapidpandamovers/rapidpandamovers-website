@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/04/april-moving-full-service-moving-fundamentals/a-professional-mover-packs-a-fragile-ite-5.webp"
   - "/images/blog/2030/04/april-moving-full-service-moving-fundamentals/man-handling-moving-boxes-in-a-spacious--4.webp"
   - "/images/blog/2030/04/april-moving-full-service-moving-fundamentals/two-men-carrying-a-green-sofa-on-a-city--1.webp"
-
 service_link: "/full-service-moving"
 location_link: null
 status: "pending"

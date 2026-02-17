@@ -17,7 +17,6 @@ images:
   - "/images/blog/2029/01/everything-you-need-to-know-about-living-in-north-miami/captivating-view-of-miami-s-iconic-skyli-4.webp"
   - "/images/blog/2029/01/everything-you-need-to-know-about-living-in-north-miami/contemporary-skyscraper-in-miami-beach-u-3.webp"
   - "/images/blog/2029/01/everything-you-need-to-know-about-living-in-north-miami/empty-alley-with-art-deco-architecture-i-1.webp"
-
 service_link: null
 location_link: "/north-miami-movers"
 status: "pending"

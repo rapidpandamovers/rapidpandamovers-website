@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/02/your-sunny-isles-beach-moving-handbook/aerial-shot-of-a-palm-lined-road-in-sunn-3.webp"
   - "/images/blog/2025/02/your-sunny-isles-beach-moving-handbook/modern-living-room-with-telescope-facing-4.webp"
   - "/images/blog/2025/02/your-sunny-isles-beach-moving-handbook/serene-view-of-miami-beach-skyline-with--2.webp"
-
 service_link: null
 location_link: "/sunny-isles-beach-movers"
 status: "pending"

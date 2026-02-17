@@ -2,11 +2,11 @@
 id: 992
 title: "7 Packing Fails That Damage Your Belongings"
 slug: "7-packing-fails-that-damage-your-belongings"
-excerpt: "Avoid these 7 common packing fails that damage belongings. Learn proper techniques to protect fragile items."
+excerpt: "Avoid these 7 common packing fails that damage belongings. Learn proper techniques to protect fragile items..."
 date: "2030-08-28"
 updated: "2030-08-28"
 readTime: "3 min read"
-category: "Moving Tips"
+category: "Packing Services"
 image_folder: "/images/blog/2030/08/7-packing-fails-that-damage-your-belongings"
 featured: "/images/blog/2030/08/7-packing-fails-that-damage-your-belongings/a-collection-of-labeled-cardboard-boxes--1.webp"
 image_keywords:
@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/08/7-packing-fails-that-damage-your-belongings/a-collection-of-large-cardboard-boxes-la-4.webp"
   - "/images/blog/2030/08/7-packing-fails-that-damage-your-belongings/a-man-labels-cardboard-boxes-for-moving--3.webp"
   - "/images/blog/2030/08/7-packing-fails-that-damage-your-belongings/hands-carefully-packing-glassware-into-a-5.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "pending"

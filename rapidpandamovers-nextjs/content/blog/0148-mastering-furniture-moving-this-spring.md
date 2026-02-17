@@ -2,7 +2,7 @@
 id: 148
 title: "Mastering Furniture Moving This Spring"
 slug: "mastering-furniture-moving-this-spring"
-excerpt: "Master furniture moving this spring with expert tips for protecting large items. Essential strategies for Miami-Dade relocations."
+excerpt: "Master furniture moving this spring with expert tips for protecting large items."
 date: "2025-03-31"
 updated: "2025-03-31"
 readTime: "4 min read"
@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/03/mastering-furniture-moving-this-spring/stylish-blue-sofa-with-cushions-on-patte-2.webp"
   - "/images/blog/2025/03/mastering-furniture-moving-this-spring/woman-enjoying-a-soft-beige-sofa-in-a-br-3.webp"
   - "/images/blog/2025/03/mastering-furniture-moving-this-spring/young-woman-sitting-beside-a-beige-sofa--4.webp"
-
 service_link: "/furniture-moving"
 location_link: null
 status: "pending"

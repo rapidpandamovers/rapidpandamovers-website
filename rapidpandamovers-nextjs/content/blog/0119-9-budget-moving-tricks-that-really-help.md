@@ -6,7 +6,7 @@ excerpt: "Save money on your move with these 9 budget tricks including free boxe
 date: "2025-01-22"
 updated: "2025-01-22"
 readTime: "3 min read"
-category: "Moving Tips"
+category: "Same Day Moving"
 image_folder: "/images/blog/2025/01/9-budget-moving-tricks-that-really-help"
 featured: "/images/blog/2025/01/9-budget-moving-tricks-that-really-help/budget-saving-money-affordable-tips.webp"
 image_keywords:
@@ -17,7 +17,7 @@ images:
   - "/images/blog/2025/01/9-budget-moving-tricks-that-really-help/budget-saving-money-affordable-checklist.webp"
   - "/images/blog/2025/01/9-budget-moving-tricks-that-really-help/budget-saving-money-affordable-steps.webp"
   - "/images/blog/2025/01/9-budget-moving-tricks-that-really-help/budget-saving-money-affordable-tips.webp"
-service_link: null
+service_link: "/same-day-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

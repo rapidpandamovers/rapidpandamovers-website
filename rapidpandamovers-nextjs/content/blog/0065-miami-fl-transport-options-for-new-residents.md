@@ -2,7 +2,7 @@
 id: 65
 title: "Miami FL Transport Options for New Residents"
 slug: "miami-fl-transport-options-for-new-residents"
-excerpt: "Your guide to Miami's Metrorail, buses, bike lanes, and accessibility features. Plan your commute before you move."
+excerpt: "Your guide to Miami's Metrorail, buses, bike lanes, and accessibility features. Plan your commute before you move..."
 date: "2024-07-25"
 updated: "2024-07-25"
 readTime: "9 min read"
@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/07/miami-fl-transport-options-for-new-residents/loc-view-of-miami-skyline-from-coral-gables--1.webp"
   - "/images/blog/2024/07/miami-fl-transport-options-for-new-residents/svc-three-men-loading-wooden-boxes-on-a-truc-3.webp"
   - "/images/blog/2024/07/miami-fl-transport-options-for-new-residents/svc-vintage-truck-carrying-heavy-cargo-bags--1.webp"
-
 service_link: "/miami-local-moving"
 location_link: "/miami-movers"
 status: "completed"

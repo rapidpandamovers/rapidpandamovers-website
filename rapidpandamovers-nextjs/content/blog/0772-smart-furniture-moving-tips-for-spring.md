@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/04/smart-furniture-moving-tips-for-spring/a-cozy-beige-sofa-covered-with-a-soft-th-3.webp"
   - "/images/blog/2029/04/smart-furniture-moving-tips-for-spring/a-woman-sleeping-under-a-patterned-blank-2.webp"
   - "/images/blog/2029/04/smart-furniture-moving-tips-for-spring/woman-in-chic-home-interior-enjoying-cof-1.webp"
-
 service_link: "/furniture-moving"
 location_link: null
 status: "pending"

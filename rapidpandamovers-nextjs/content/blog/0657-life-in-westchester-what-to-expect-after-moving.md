@@ -2,7 +2,7 @@
 id: 657
 title: "Life in Westchester: What to Expect After Moving"
 slug: "life-in-westchester-what-to-expect-after-moving"
-excerpt: "Westchester attracts new residents with its blend of community and convenience. Learn what to expect after moving."
+excerpt: "Westchester attracts new residents with its blend of community and convenience. Learn what to expect after moving..."
 date: "2028-07-06"
 updated: "2028-07-06"
 readTime: "4 min read"
@@ -17,7 +17,6 @@ images:
   - "/images/blog/2028/07/life-in-westchester-what-to-expect-after-moving/a-modern-two-story-home-in-florida-with--3.webp"
   - "/images/blog/2028/07/life-in-westchester-what-to-expect-after-moving/a-scenic-aerial-view-of-a-river-and-gree-1.webp"
   - "/images/blog/2028/07/life-in-westchester-what-to-expect-after-moving/charming-suburban-street-with-modern-hou-4.webp"
-
 service_link: null
 location_link: "/westchester-movers"
 status: "completed"

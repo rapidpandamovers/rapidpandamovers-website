@@ -19,8 +19,7 @@ images:
   - "/images/blog/2027/07/6-moving-day-necessities-for-every-relocator/close-up-of-a-blue-cargo-truck-parked-on-4.webp"
   - "/images/blog/2027/07/6-moving-day-necessities-for-every-relocator/close-up-of-a-large-yellow-dump-truck-us-2.webp"
   - "/images/blog/2027/07/6-moving-day-necessities-for-every-relocator/red-truck-with-large-covered-cargo-in-an-1.webp"
-
-service_link: /local-moving
+service_link: "/local-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

@@ -20,7 +20,6 @@ images:
   - "/images/blog/2024/05/pet-friendly-local-moving/a-pile-of-empty-cardboard-boxes-ready-fo-4.webp"
   - "/images/blog/2024/05/pet-friendly-local-moving/cardboard-box-filled-with-clothes-hanger-3.webp"
   - "/images/blog/2024/05/pet-friendly-local-moving/young-adult-male-smiling-while-handling--1.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "completed"

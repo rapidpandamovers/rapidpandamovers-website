@@ -17,7 +17,6 @@ images:
   - "/images/blog/2030/07/miami-lakes-area-guide-for-new-movers/dramatic-black-and-white-photo-of-the-mi-1.webp"
   - "/images/blog/2030/07/miami-lakes-area-guide-for-new-movers/vibrant-view-of-downtown-miami-featuring-2.webp"
   - "/images/blog/2030/07/miami-lakes-area-guide-for-new-movers/view-of-miami-skyline-from-coral-gables--3.webp"
-
 service_link: null
 location_link: "/miami-lakes-movers"
 status: "pending"

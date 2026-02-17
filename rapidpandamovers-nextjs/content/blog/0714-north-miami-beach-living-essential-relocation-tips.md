@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/11/north-miami-beach-living-essential-relocation-tips/captivating-view-of-miami-s-modern-skyli-1.webp"
   - "/images/blog/2028/11/north-miami-beach-living-essential-relocation-tips/miami-beach-scene-with-lifeguard-tower-a-3.webp"
   - "/images/blog/2028/11/north-miami-beach-living-essential-relocation-tips/vibrant-portrait-of-a-redhead-woman-enjo-4.webp"
-
 service_link: null
 location_link: "/north-miami-beach-movers"
 status: "pending"

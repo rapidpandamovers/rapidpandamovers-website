@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/08/doral-neighborhood-guide-for-new-residents/beautiful-golf-course-surrounded-by-tree-1.webp"
   - "/images/blog/2028/08/doral-neighborhood-guide-for-new-residents/close-up-of-a-golf-ball-near-a-hole-on-a-2.webp"
   - "/images/blog/2028/08/doral-neighborhood-guide-for-new-residents/tranquil-golf-course-in-autumn-featuring-3.webp"
-
 service_link: null
 location_link: "/doral-movers"
 status: "complete"

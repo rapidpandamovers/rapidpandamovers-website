@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/10/essential-residential-moving-tips-for-october/a-joyful-family-taking-a-selfie-amidst-m-2.webp"
   - "/images/blog/2027/10/essential-residential-moving-tips-for-october/family-enjoying-selfie-time-while-surrou-1.webp"
   - "/images/blog/2027/10/essential-residential-moving-tips-for-october/happy-family-playing-with-boxes-while-mo-4.webp"
-
 service_link: "/residential-moving"
 location_link: null
 status: "pending"

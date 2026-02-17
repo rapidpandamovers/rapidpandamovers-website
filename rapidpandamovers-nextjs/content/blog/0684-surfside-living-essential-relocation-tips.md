@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/09/surfside-living-essential-relocation-tips/a-young-woman-in-a-bikini-smiles-while-t-1.webp"
   - "/images/blog/2028/09/surfside-living-essential-relocation-tips/vibrant-beach-scene-at-hermosa-beach-cal-2.webp"
   - "/images/blog/2028/09/surfside-living-essential-relocation-tips/young-adults-enjoying-a-lively-beach-vol-4.webp"
-
 service_link: null
 location_link: "/surfside-movers"
 status: "complete"

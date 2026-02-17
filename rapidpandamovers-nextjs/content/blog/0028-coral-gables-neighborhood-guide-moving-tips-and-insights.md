@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/02/coral-gables-neighborhood-guide-moving-tips-and-insights/loc-college-of-arts-sciences-building-at-uni-1.webp"
   - "/images/blog/2024/02/coral-gables-neighborhood-guide-moving-tips-and-insights/svc-a-blue-volvo-truck-parked-outside-a-ware-2.webp"
   - "/images/blog/2024/02/coral-gables-neighborhood-guide-moving-tips-and-insights/svc-two-men-load-construction-materials-onto-1.webp"
-
 service_link: "/coral-gables-local-moving"
 location_link: "/coral-gables-movers"
 status: "pending"

@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/11/long-distance-moving-strategies-for-november-moves/busy-los-angeles-highway-scene-in-graysc-2.webp"
   - "/images/blog/2030/11/long-distance-moving-strategies-for-november-moves/drone-view-of-modern-cars-riding-through-5.webp"
   - "/images/blog/2030/11/long-distance-moving-strategies-for-november-moves/traffic-flows-on-a-busy-los-angeles-free-1.webp"
-
 service_link: "/long-distance-moving"
 location_link: null
 status: "pending"

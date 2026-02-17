@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/11/veterans-day-student-moving-strategies-in-miami/loc-captivating-miami-skyline-at-night-featu-1.webp"
   - "/images/blog/2030/11/veterans-day-student-moving-strategies-in-miami/svc-a-martial-arts-instructor-teaches-a-youn-2.webp"
   - "/images/blog/2030/11/veterans-day-student-moving-strategies-in-miami/svc-a-person-holding-a-cardboard-box-labeled-1.webp"
-
 service_link: "/student-moving"
 location_link: null
 status: "pending"

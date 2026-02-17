@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/06/professional-same-day-moving-tips-for-summer/a-u-haul-moving-truck-parked-on-gravel-w-1.webp"
   - "/images/blog/2030/06/professional-same-day-moving-tips-for-summer/movers-loading-boxes-into-a-truck-on-a-s-2.webp"
   - "/images/blog/2030/06/professional-same-day-moving-tips-for-summer/u-haul-moving-truck-parked-on-roadside-w-3.webp"
-
 service_link: "/same-day-moving"
 location_link: null
 status: "pending"

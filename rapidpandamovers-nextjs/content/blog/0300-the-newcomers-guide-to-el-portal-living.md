@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/03/the-newcomers-guide-to-el-portal-living/bright-day-on-ocean-drive-featuring-the--2.webp"
   - "/images/blog/2026/03/the-newcomers-guide-to-el-portal-living/classic-miami-beach-art-deco-architectur-3.webp"
   - "/images/blog/2026/03/the-newcomers-guide-to-el-portal-living/empty-alley-with-art-deco-architecture-i-4.webp"
-
 service_link: null
 location_link: "/el-portal-movers"
 status: "complete"

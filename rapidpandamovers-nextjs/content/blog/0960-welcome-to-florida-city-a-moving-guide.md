@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/06/welcome-to-florida-city-a-moving-guide/close-up-of-an-american-alligator-baskin-1.webp"
   - "/images/blog/2030/06/welcome-to-florida-city-a-moving-guide/close-up-of-an-american-alligator-restin-3.webp"
   - "/images/blog/2030/06/welcome-to-florida-city-a-moving-guide/tranquil-view-of-the-everglades-wetlands-4.webp"
-
 service_link: null
 location_link: "/florida-city-movers"
 status: "pending"

@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/10/professional-office-moving-tips-for-fall/a-caucasian-mover-in-coveralls-packing-a-1.webp"
   - "/images/blog/2029/10/professional-office-moving-tips-for-fall/an-adult-man-in-workwear-checks-a-clipbo-4.webp"
   - "/images/blog/2029/10/professional-office-moving-tips-for-fall/smiling-young-man-holding-a-cardboard-bo-3.webp"
-
 service_link: "/office-moving"
 location_link: null
 status: "pending"

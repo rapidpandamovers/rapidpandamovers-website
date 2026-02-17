@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/01/bal-harbour-area-guide-for-new-movers/byredo-bal-d-afrique-perfume-surrounded--4.webp"
   - "/images/blog/2029/01/bal-harbour-area-guide-for-new-movers/close-up-of-byredo-bal-d-afrique-perfume-3.webp"
   - "/images/blog/2029/01/bal-harbour-area-guide-for-new-movers/elegant-bottle-of-byredo-bal-d-afrique-p-2.webp"
-
 service_link: null
 location_link: "/bal-harbour-movers"
 status: "pending"

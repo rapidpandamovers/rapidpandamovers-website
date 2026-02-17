@@ -6,7 +6,7 @@ excerpt: "Explore Miami's historic landmarks. From Vizcaya to the Biltmore, thes
 date: "2025-11-05"
 updated: "2025-11-05"
 readTime: "2 min read"
-category: "Fun Facts"
+category: "Student Moving"
 image_folder: "/images/blog/2025/11/8-storied-structures-in-the-miami-area"
 featured: "/images/blog/2025/11/8-storied-structures-in-the-miami-area/art-deco-architecture-on-lincoln-road-in-1.webp"
 image_keywords:
@@ -17,8 +17,7 @@ images:
   - "/images/blog/2025/11/8-storied-structures-in-the-miami-area/art-deco-architecture-on-lincoln-road-in-1.webp"
   - "/images/blog/2025/11/8-storied-structures-in-the-miami-area/bright-day-on-ocean-drive-featuring-the--3.webp"
   - "/images/blog/2025/11/8-storied-structures-in-the-miami-area/captivating-view-of-miami-s-iconic-skyli-2.webp"
-
-service_link: null
+service_link: "/student-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

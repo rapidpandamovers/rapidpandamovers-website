@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/02/bay-harbor-islands-for-new-residents-a-complete-resource/loc-aerial-view-of-apollo-beach-fl-showcasin-2.webp"
   - "/images/blog/2028/02/bay-harbor-islands-for-new-residents-a-complete-resource/svc-people-loading-supplies-onto-a-truck-in--1.webp"
   - "/images/blog/2028/02/bay-harbor-islands-for-new-residents-a-complete-resource/svc-red-truck-with-large-covered-cargo-in-an-3.webp"
-
 service_link: "/bay-harbor-islands-local-moving"
 location_link: "/bay-harbor-islands-movers"
 status: "completed"

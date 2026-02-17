@@ -2,7 +2,7 @@
 id: 808
 title: "Student Moving Planning for Summer Season"
 slug: "student-moving-planning-for-summer-season"
-excerpt: "Planning a summer move to UM, FIU, or Miami Dade College? Get the timing, packing tips, and scheduling strategies to beat the rush."
+excerpt: "Your dorm assignment just dropped, your parents are already panicking about logistics, and everyone on campus is trying to book movers for the same..."
 date: "2029-06-25"
 updated: "2029-06-25"
 readTime: "6 min read"
@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/06/student-moving-planning-for-summer-season/a-group-of-friends-enjoying-playful-mome-4.webp"
   - "/images/blog/2029/06/student-moving-planning-for-summer-season/a-person-efficiently-packs-clothing-and--1.webp"
   - "/images/blog/2029/06/student-moving-planning-for-summer-season/couple-packing-bags-in-a-bright-cozy-hos-3.webp"
-
 service_link: "/student-moving"
 location_link: null
 status: "pending"

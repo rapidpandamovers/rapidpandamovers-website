@@ -17,7 +17,6 @@ images:
   - "/images/blog/2025/10/10-methods-to-unpack-like-a-pro/close-up-of-hands-packing-a-cardboard-bo-3.webp"
   - "/images/blog/2025/10/10-methods-to-unpack-like-a-pro/crop-faceless-male-sealing-packed-carton-2.webp"
   - "/images/blog/2025/10/10-methods-to-unpack-like-a-pro/hands-carefully-packing-glassware-into-a-4.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "pending"

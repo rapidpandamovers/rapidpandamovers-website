@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/02/relocating-to-key-biscayne-the-essential-guide/loc-a-delightful-black-and-white-image-of-a--1.webp"
   - "/images/blog/2028/02/relocating-to-key-biscayne-the-essential-guide/svc-a-blue-truck-transporting-livestock-on-a-2.webp"
   - "/images/blog/2028/02/relocating-to-key-biscayne-the-essential-guide/svc-u-haul-moving-truck-parked-on-roadside-w-1.webp"
-
 service_link: "/key-biscayne-local-moving"
 location_link: "/key-biscayne-movers"
 status: "completed"

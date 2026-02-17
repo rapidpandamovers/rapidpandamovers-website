@@ -6,7 +6,7 @@ excerpt: "Save money on your winter move in Miami. Budget tips for families relo
 date: "2025-02-05"
 updated: "2025-02-05"
 readTime: "3 min read"
-category: "Moving Tips"
+category: "Military Moving"
 image_folder: "/images/blog/2025/02/8-winter-moving-budget-tips-for-miami-families"
 featured: "/images/blog/2025/02/8-winter-moving-budget-tips-for-miami-families/a-joyful-family-unpacking-boxes-while-mo-2.webp"
 image_keywords:
@@ -18,8 +18,7 @@ images:
   - "/images/blog/2025/02/8-winter-moving-budget-tips-for-miami-families/a-joyful-family-unpacking-boxes-while-mo-2.webp"
   - "/images/blog/2025/02/8-winter-moving-budget-tips-for-miami-families/family-enjoys-a-joyful-moment-while-unpa-3.webp"
   - "/images/blog/2025/02/8-winter-moving-budget-tips-for-miami-families/family-moving-into-their-new-home-surrou-1.webp"
-
-service_link: null
+service_link: "/military-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

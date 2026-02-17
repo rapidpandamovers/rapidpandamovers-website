@@ -20,7 +20,6 @@ images:
   - "/images/blog/2030/07/furniture-moving-planning-for-vacation-season/bright-and-cozy-living-room-with-a-beige-3.webp"
   - "/images/blog/2030/07/furniture-moving-planning-for-vacation-season/elegant-living-room-featuring-a-white-so-2.webp"
   - "/images/blog/2030/07/furniture-moving-planning-for-vacation-season/stylish-living-room-with-beige-sofa-and--5.webp"
-
 service_link: "/furniture-moving"
 location_link: null
 status: "pending"

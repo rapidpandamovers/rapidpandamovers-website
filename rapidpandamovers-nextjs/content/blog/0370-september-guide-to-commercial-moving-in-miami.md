@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/09/september-guide-to-commercial-moving-in-miami/loc-dramatic-black-and-white-photo-of-the-mi-1.webp"
   - "/images/blog/2026/09/september-guide-to-commercial-moving-in-miami/svc-a-modern-commercial-building-with-reflec-1.webp"
   - "/images/blog/2026/09/september-guide-to-commercial-moving-in-miami/svc-high-rise-buildings-and-shopping-malls-i-3.webp"
-
 service_link: "/commercial-moving"
 location_link: null
 status: "pending"

@@ -2,7 +2,7 @@
 id: 582
 title: "Why Sweetwater is Perfect for Your Next Move"
 slug: "why-sweetwater-is-perfect-for-your-next-move"
-excerpt: "Sweetwater offers FIU proximity, Hispanic heritage, and family-oriented community life. Your perfect next move."
+excerpt: "Sweetwater offers FIU proximity, Hispanic heritage, and family-oriented community life."
 date: "2028-01-13"
 updated: "2028-01-13"
 readTime: "4 min read"
@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/01/why-sweetwater-is-perfect-for-your-next-move/aerial-photo-showcasing-a-suburban-neigh-4.webp"
   - "/images/blog/2028/01/why-sweetwater-is-perfect-for-your-next-move/beautiful-white-houses-with-a-tropical-s-2.webp"
   - "/images/blog/2028/01/why-sweetwater-is-perfect-for-your-next-move/bird-s-eye-view-of-a-residential-area-in-1.webp"
-
 service_link: null
 location_link: "/sweetwater-movers"
 status: "pending"

@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/10/7-items-that-cant-go-in-the-moving-van/a-mover-carefully-handles-boxes-in-a-bri-1.webp"
   - "/images/blog/2030/10/7-items-that-cant-go-in-the-moving-van/a-professional-mover-packs-a-fragile-ite-2.webp"
   - "/images/blog/2030/10/7-items-that-cant-go-in-the-moving-van/confident-young-lady-in-casual-wear-carr-4.webp"
-
 service_link: null
 location_link: null
 status: "pending"

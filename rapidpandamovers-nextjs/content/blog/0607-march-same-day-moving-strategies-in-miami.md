@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/03/march-same-day-moving-strategies-in-miami/crop-anonymous-guy-in-casual-clothes-usi-3.webp"
   - "/images/blog/2028/03/march-same-day-moving-strategies-in-miami/hands-carefully-packing-glassware-into-a-2.webp"
   - "/images/blog/2028/03/march-same-day-moving-strategies-in-miami/labeled-cardboard-boxes-for-summer-cloth-1.webp"
-
 service_link: "/same-day-moving"
 location_link: null
 status: "pending"

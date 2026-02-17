@@ -6,7 +6,7 @@ excerpt: "5 smart home upgrades worth installing when you move: thermostats, vid
 date: "2025-01-01"
 updated: "2025-01-01"
 readTime: "2 min read"
-category: "Home & Living"
+category: "Student Moving"
 image_folder: "/images/blog/2025/01/5-smart-technology-upgrades-for-new-homes"
 featured: "/images/blog/2025/01/5-smart-technology-upgrades-for-new-homes/top-view-of-smart-home-devices-and-table-4.webp"
 image_keywords:
@@ -18,8 +18,7 @@ images:
   - "/images/blog/2025/01/5-smart-technology-upgrades-for-new-homes/a-sleek-smart-home-light-switch-installe-2.webp"
   - "/images/blog/2025/01/5-smart-technology-upgrades-for-new-homes/philips-smart-hub-beside-a-leafy-plant-i-3.webp"
   - "/images/blog/2025/01/5-smart-technology-upgrades-for-new-homes/top-view-of-smart-home-devices-and-table-4.webp"
-
-service_link: null
+service_link: "/student-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

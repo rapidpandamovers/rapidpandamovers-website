@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/12/6-essential-security-features-for-new-homes/close-up-shot-of-a-black-handgun-secured-4.webp"
   - "/images/blog/2029/12/6-essential-security-features-for-new-homes/close-up-view-of-warning-label-on-a-fire-1.webp"
   - "/images/blog/2029/12/6-essential-security-features-for-new-homes/detailed-close-up-of-a-gun-barrel-restin-2.webp"
-
 service_link: null
 location_link: null
 status: "complete"

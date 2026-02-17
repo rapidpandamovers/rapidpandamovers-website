@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/09/smart-special-needs-moving-tips-for-fall/close-up-of-a-woman-in-a-wheelchair-reac-2.webp"
   - "/images/blog/2030/09/smart-special-needs-moving-tips-for-fall/female-healthcare-worker-smiles-with-two-4.webp"
   - "/images/blog/2030/09/smart-special-needs-moving-tips-for-fall/sterile-bandage-rolls-neatly-stored-in-a-1.webp"
-
 service_link: "/special-needs-moving"
 location_link: null
 status: "pending"

@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/05/west-miami-insights-tips-for-smooth-relocation/luxurious-miami-apartments-with-stunning-2.webp"
   - "/images/blog/2028/05/west-miami-insights-tips-for-smooth-relocation/stunning-view-of-miami-s-modern-skyscrap-1.webp"
   - "/images/blog/2028/05/west-miami-insights-tips-for-smooth-relocation/view-of-miami-skyline-from-coral-gables--4.webp"
-
 service_link: null
 location_link: "/west-miami-movers"
 status: "pending"

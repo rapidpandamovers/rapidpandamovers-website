@@ -2,7 +2,7 @@
 id: 558
 title: "Cutler Bay Living: Essential Relocation Tips"
 slug: "cutler-bay-living-essential-relocation-tips"
-excerpt: "Explore Cutler Bay's family-friendly neighborhoods, waterfront access, and growing community. Your relocation guide."
+excerpt: "Explore Cutler Bay's family-friendly neighborhoods, waterfront access, and growing community."
 date: "2027-11-18"
 updated: "2027-11-18"
 readTime: "4 min read"
@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/11/cutler-bay-living-essential-relocation-tips/loc-a-vibrant-speedboat-cutting-through-sara-1.webp"
   - "/images/blog/2027/11/cutler-bay-living-essential-relocation-tips/svc-semi-truck-parked-at-a-loading-dock-with-2.webp"
   - "/images/blog/2027/11/cutler-bay-living-essential-relocation-tips/svc-vintage-truck-carrying-heavy-cargo-bags--1.webp"
-
 service_link: "/cutler-bay-local-moving"
 location_link: "/cutler-bay-movers"
 status: "complete"

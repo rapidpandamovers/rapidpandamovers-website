@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/09/10-ideas-to-make-moving-fun-for-the-whole-family/a-family-of-three-takes-a-joyful-selfie--1.webp"
   - "/images/blog/2030/09/10-ideas-to-make-moving-fun-for-the-whole-family/a-family-unpacks-moving-boxes-in-their-n-2.webp"
   - "/images/blog/2030/09/10-ideas-to-make-moving-fun-for-the-whole-family/happy-family-playing-with-boxes-while-mo-3.webp"
-
 service_link: null
 location_link: null
 status: "pending"

@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/10/5-items-that-cant-go-in-the-moving-van/a-collection-of-large-cardboard-boxes-la-1.webp"
   - "/images/blog/2025/10/5-items-that-cant-go-in-the-moving-van/a-man-labels-cardboard-boxes-for-moving--3.webp"
   - "/images/blog/2025/10/5-items-that-cant-go-in-the-moving-van/close-up-of-a-cardboard-box-filled-with--2.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "pending"

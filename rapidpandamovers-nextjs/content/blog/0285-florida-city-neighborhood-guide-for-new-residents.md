@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/02/florida-city-neighborhood-guide-for-new-residents/a-serene-view-of-white-pelicans-gliding--3.webp"
   - "/images/blog/2026/02/florida-city-neighborhood-guide-for-new-residents/close-up-of-an-american-alligator-baskin-1.webp"
   - "/images/blog/2026/02/florida-city-neighborhood-guide-for-new-residents/wild-alligator-in-a-serene-swamp-in-sebr-2.webp"
-
 service_link: null
 location_link: "/florida-city-movers"
 status: "pending"

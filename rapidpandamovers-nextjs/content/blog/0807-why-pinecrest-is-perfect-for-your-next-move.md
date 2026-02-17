@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/06/why-pinecrest-is-perfect-for-your-next-move/loc-beautiful-white-houses-with-a-tropical-s-2.webp"
   - "/images/blog/2029/06/why-pinecrest-is-perfect-for-your-next-move/svc-a-joyful-moment-of-a-mother-and-child-pl-1.webp"
   - "/images/blog/2029/06/why-pinecrest-is-perfect-for-your-next-move/svc-cardboard-moving-boxes-in-a-modern-kitch-2.webp"
-
 service_link: "/pinecrest-local-moving"
 location_link: "/pinecrest-movers"
 status: "pending"

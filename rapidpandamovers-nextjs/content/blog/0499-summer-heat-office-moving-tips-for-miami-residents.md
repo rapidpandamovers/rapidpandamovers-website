@@ -2,7 +2,7 @@
 id: 499
 title: "Summer Heat Office Moving Tips for Miami Residents"
 slug: "summer-heat-office-moving-tips-for-miami-residents"
-excerpt: "Planning an office move this July? Learn tips for relocating your Miami business while minimizing downtime and protecting equipment from heat."
+excerpt: "July is here, and if you're planning a move, you're likely thinking about office moving."
 date: "2027-07-05"
 updated: "2027-07-05"
 readTime: "7 min read"
@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/07/summer-heat-office-moving-tips-for-miami-residents/a-collection-of-large-cardboard-boxes-la-2.webp"
   - "/images/blog/2027/07/summer-heat-office-moving-tips-for-miami-residents/adult-man-carrying-office-box-with-a-pla-1.webp"
   - "/images/blog/2027/07/summer-heat-office-moving-tips-for-miami-residents/professional-man-organizing-office-belon-3.webp"
-
 service_link: "/office-moving"
 location_link: null
 status: "completed"

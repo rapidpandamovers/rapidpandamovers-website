@@ -20,7 +20,6 @@ images:
   - "/images/blog/2028/03/practical-residential-moving-advice-for-march/a-joyful-family-sitting-together-with-mo-1.webp"
   - "/images/blog/2028/03/practical-residential-moving-advice-for-march/family-carrying-cardboard-boxes-while-mo-2.webp"
   - "/images/blog/2028/03/practical-residential-moving-advice-for-march/family-enjoying-selfie-time-while-surrou-5.webp"
-
 service_link: "/residential-moving"
 location_link: null
 status: "pending"

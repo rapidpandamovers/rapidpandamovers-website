@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/02/how-to-handle-packing-services-during-valentine-s-day/a-person-sealing-a-cardboard-box-with-a--2.webp"
   - "/images/blog/2026/02/how-to-handle-packing-services-during-valentine-s-day/crop-anonymous-guy-in-casual-clothes-usi-3.webp"
   - "/images/blog/2026/02/how-to-handle-packing-services-during-valentine-s-day/hands-carefully-packing-glassware-into-a-1.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "complete"

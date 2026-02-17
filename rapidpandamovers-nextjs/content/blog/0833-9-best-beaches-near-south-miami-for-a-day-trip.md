@@ -2,10 +2,10 @@
 id: 833
 title: "9 Best Beaches Near South Miami for a Day Trip"
 slug: "9-best-beaches-near-south-miami-for-a-day-trip"
-excerpt: "Discover 9 beautiful beaches within easy reach of South Miami, from family-friendly shores to quiet retreats, with exact addresses and insider tips."
+excerpt: "Living in South Miami puts you within easy reach of some of Florida's most beautiful beaches."
 date: "2029-08-21"
 updated: "2029-08-21"
-readTime: "4 min read"
+readTime: "5 min read"
 category: "Lifestyle"
 image_folder: "/images/blog/2029/08/9-best-beaches-near-south-miami-for-a-day-trip"
 featured: "/images/blog/2029/08/9-best-beaches-near-south-miami-for-a-day-trip/beach-ocean-day-trip-tips.webp"

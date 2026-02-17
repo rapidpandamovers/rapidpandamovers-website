@@ -19,7 +19,6 @@ images:
   - "/images/blog/2025/10/life-in-north-miami-what-to-expect-after-moving/svc-red-truck-with-large-covered-cargo-in-an-2.webp"
   - "/images/blog/2025/10/life-in-north-miami-what-to-expect-after-moving/svc-semi-truck-parked-at-a-loading-dock-with-1.webp"
   - "/images/blog/2025/10/life-in-north-miami-what-to-expect-after-moving/svc-vintage-truck-carrying-heavy-cargo-bags--3.webp"
-
 service_link: "/local-moving"
 location_link: "/north-miami-movers"
 status: "pending"

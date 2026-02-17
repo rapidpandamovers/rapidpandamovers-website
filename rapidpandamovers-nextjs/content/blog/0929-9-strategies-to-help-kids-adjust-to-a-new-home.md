@@ -2,11 +2,11 @@
 id: 929
 title: "9 Strategies to Help Kids Adjust to a New Home"
 slug: "9-strategies-to-help-kids-adjust-to-a-new-home"
-excerpt: "Moving is tough on kids. Their world is changing and they don't understand why. These strategies help them transition smoothly."
+excerpt: "Moving is tough on kids. Their world is changing and they don't understand why. These strategies help them transition smoothly..."
 date: "2030-04-03"
 updated: "2030-04-03"
 readTime: "2 min read"
-category: "Moving Tips"
+category: "Furniture Moving"
 image_folder: "/images/blog/2030/04/9-strategies-to-help-kids-adjust-to-a-new-home"
 featured: "/images/blog/2030/04/9-strategies-to-help-kids-adjust-to-a-new-home/kids-enjoying-creative-time-drawing-on-a-2.webp"
 image_keywords:
@@ -18,8 +18,7 @@ images:
   - "/images/blog/2030/04/9-strategies-to-help-kids-adjust-to-a-new-home/a-playful-child-peeks-out-of-a-cardboard-1.webp"
   - "/images/blog/2030/04/9-strategies-to-help-kids-adjust-to-a-new-home/family-enjoying-a-creative-moment-while--4.webp"
   - "/images/blog/2030/04/9-strategies-to-help-kids-adjust-to-a-new-home/kids-enjoying-creative-time-drawing-on-a-2.webp"
-
-service_link: null
+service_link: "/furniture-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

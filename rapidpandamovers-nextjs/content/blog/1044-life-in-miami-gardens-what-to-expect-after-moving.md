@@ -17,7 +17,6 @@ images:
   - "/images/blog/2030/12/life-in-miami-gardens-what-to-expect-after-moving/loc-a-miami-monorail-travels-past-modern-hig-1.webp"
   - "/images/blog/2030/12/life-in-miami-gardens-what-to-expect-after-moving/svc-a-joyful-moment-of-a-mother-and-child-pl-1.webp"
   - "/images/blog/2030/12/life-in-miami-gardens-what-to-expect-after-moving/svc-faceless-individual-holding-an-open-card-2.webp"
-
 service_link: "/miami-gardens-local-moving"
 location_link: "/miami-gardens-movers"
 status: "complete"

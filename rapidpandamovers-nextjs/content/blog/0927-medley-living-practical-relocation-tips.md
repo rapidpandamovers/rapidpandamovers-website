@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/03/medley-living-practical-relocation-tips/a-ups-truck-parked-in-an-urban-alleyway--1.webp"
   - "/images/blog/2030/03/medley-living-practical-relocation-tips/a-vibrant-delivery-truck-parked-at-a-war-2.webp"
   - "/images/blog/2030/03/medley-living-practical-relocation-tips/exterior-of-a-brown-industrial-building--3.webp"
-
 service_link: null
 location_link: "/medley-movers"
 status: "pending"

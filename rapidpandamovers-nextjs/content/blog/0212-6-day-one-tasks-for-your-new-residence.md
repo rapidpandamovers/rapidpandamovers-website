@@ -6,7 +6,7 @@ excerpt: "Moving in today? Complete these 6 essential tasks on day one: change l
 date: "2025-08-27"
 updated: "2025-08-27"
 readTime: "3 min read"
-category: "Home & Living"
+category: "Full Service Moving"
 image_folder: "/images/blog/2025/08/6-day-one-tasks-for-your-new-residence"
 featured: "/images/blog/2025/08/6-day-one-tasks-for-your-new-residence/family-unpacking-boxes-in-their-new-kitc-1.webp"
 image_keywords:
@@ -17,8 +17,7 @@ images:
   - "/images/blog/2025/08/6-day-one-tasks-for-your-new-residence/cheerful-young-man-and-woman-smiling-whi-2.webp"
   - "/images/blog/2025/08/6-day-one-tasks-for-your-new-residence/family-unpacking-boxes-in-their-new-kitc-1.webp"
   - "/images/blog/2025/08/6-day-one-tasks-for-your-new-residence/young-adults-signing-documents-on-moving-4.webp"
-
-service_link: null
+service_link: "/full-service-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

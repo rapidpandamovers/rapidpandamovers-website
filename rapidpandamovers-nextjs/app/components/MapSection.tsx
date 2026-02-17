@@ -87,7 +87,7 @@ export default function MapSection({
   );
 
   return (
-    <section className={`py-12 ${className}`}>
+    <section className={`pt-20 ${className}`}>
       <div className="container mx-auto">
         <div className="mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 text-center">

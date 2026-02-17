@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/06/exploring-north-miami-beach-tips-for-newcomers/embrace-the-serenity-of-a-tropical-sunse-1.webp"
   - "/images/blog/2026/06/exploring-north-miami-beach-tips-for-newcomers/lush-coconut-palm-trees-on-a-sunny-day-a-3.webp"
   - "/images/blog/2026/06/exploring-north-miami-beach-tips-for-newcomers/weathered-staircase-next-to-a-damaged-bu-2.webp"
-
 service_link: "/north-miami-beach-local-moving"
 location_link: "/north-miami-beach-movers"
 status: "pending"

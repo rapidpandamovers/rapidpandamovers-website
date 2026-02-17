@@ -100,7 +100,7 @@ export default function ReservationForm() {
 
   if (submitStatus === 'success') {
     return (
-      <div className="text-center py-16">
+      <div className="text-center pb-6">
         <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
           <svg className="w-10 h-10 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -118,10 +118,10 @@ export default function ReservationForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-8">
+    <form onSubmit={handleSubmit} className="space-y-6">
       {/* Section 1: Personal Details */}
-      <div>
-        <h3 className="text-xl font-semibold mb-4 text-orange-600 border-b border-gray-200 pb-2">
+      <div className="bg-white rounded-2xl p-6 md:p-8">
+        <h3 className="text-xl font-bold mb-6 text-gray-800">
           1. Personal Details
         </h3>
         <div className="grid md:grid-cols-2 gap-6">
@@ -180,8 +180,8 @@ export default function ReservationForm() {
       </div>
 
       {/* Section 2: Moving Locations */}
-      <div>
-        <h3 className="text-xl font-semibold mb-4 text-orange-600 border-b border-gray-200 pb-2">
+      <div className="bg-white rounded-2xl p-6 md:p-8">
+        <h3 className="text-xl font-bold mb-6 text-gray-800">
           2. Moving Locations
         </h3>
 
@@ -347,8 +347,8 @@ export default function ReservationForm() {
       </div>
 
       {/* Section 3: Date & Time */}
-      <div>
-        <h3 className="text-xl font-semibold mb-4 text-orange-600 border-b border-gray-200 pb-2">
+      <div className="bg-white rounded-2xl p-6 md:p-8">
+        <h3 className="text-xl font-bold mb-6 text-gray-800">
           3. Moving Date & Time
         </h3>
         <div className="grid md:grid-cols-2 gap-6">
@@ -388,8 +388,8 @@ export default function ReservationForm() {
       </div>
 
       {/* Section 4: Move Size */}
-      <div>
-        <h3 className="text-xl font-semibold mb-4 text-orange-600 border-b border-gray-200 pb-2">
+      <div className="bg-white rounded-2xl p-6 md:p-8">
+        <h3 className="text-xl font-bold mb-6 text-gray-800">
           4. Move Size
         </h3>
         <div>
@@ -424,8 +424,8 @@ export default function ReservationForm() {
       </div>
 
       {/* Section 5: Additional Services */}
-      <div>
-        <h3 className="text-xl font-semibold mb-4 text-orange-600 border-b border-gray-200 pb-2">
+      <div className="bg-white rounded-2xl p-6 md:p-8">
+        <h3 className="text-xl font-bold mb-6 text-gray-800">
           5. Additional Services
         </h3>
 
@@ -487,8 +487,8 @@ export default function ReservationForm() {
       </div>
 
       {/* Section 6: Additional Information */}
-      <div>
-        <h3 className="text-xl font-semibold mb-4 text-orange-600 border-b border-gray-200 pb-2">
+      <div className="bg-white rounded-2xl p-6 md:p-8">
+        <h3 className="text-xl font-bold mb-6 text-gray-800">
           6. Additional Information
         </h3>
 
@@ -537,7 +537,7 @@ export default function ReservationForm() {
       )}
 
       {/* Submit Button */}
-      <div className="text-center pt-6 border-t border-gray-200">
+      <div className="bg-white rounded-2xl p-6 md:p-8 text-center">
         <p className="text-sm text-gray-500 mb-4">
           By submitting this form, you agree to receive SMS and email notifications about your move.
         </p>

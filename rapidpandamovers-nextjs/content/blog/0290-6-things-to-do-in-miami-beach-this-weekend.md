@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/03/6-things-to-do-in-miami-beach-this-weekend/a-sleek-sports-car-cruising-past-the-bou-3.webp"
   - "/images/blog/2026/03/6-things-to-do-in-miami-beach-this-weekend/art-deco-architecture-on-lincoln-road-in-5.webp"
   - "/images/blog/2026/03/6-things-to-do-in-miami-beach-this-weekend/shirtless-man-with-sunglasses-and-tumble-2.webp"
-
 service_link: null
 location_link: "/miami-beach-movers"
 status: "pending"

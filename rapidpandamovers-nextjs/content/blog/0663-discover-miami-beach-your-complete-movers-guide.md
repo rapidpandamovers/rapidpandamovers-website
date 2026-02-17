@@ -2,7 +2,7 @@
 id: 663
 title: "Discover Miami Beach: Your Complete Movers Guide"
 slug: "discover-miami-beach-your-complete-movers-guide"
-excerpt: "Miami Beach attracts new residents with its glamorous lifestyle. Your complete guide to moving here in July."
+excerpt: "Miami Beach attracts new residents with its glamorous lifestyle. Your complete guide to moving here in July..."
 date: "2028-07-20"
 updated: "2028-07-20"
 readTime: "4 min read"
@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/07/discover-miami-beach-your-complete-movers-guide/art-deco-building-illuminated-in-blue-li-3.webp"
   - "/images/blog/2028/07/discover-miami-beach-your-complete-movers-guide/colorful-scene-capturing-miami-beach-s-h-1.webp"
   - "/images/blog/2028/07/discover-miami-beach-your-complete-movers-guide/stylish-vintage-car-parked-near-iconic-c-2.webp"
-
 service_link: null
 location_link: "/miami-beach-movers"
 status: "pending"

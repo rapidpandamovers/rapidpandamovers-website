@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/05/how-to-manage-local-moving-with-kids/a-pile-of-empty-cardboard-boxes-ready-fo-2.webp"
   - "/images/blog/2024/05/how-to-manage-local-moving-with-kids/cardboard-box-filled-with-clothes-hanger-3.webp"
   - "/images/blog/2024/05/how-to-manage-local-moving-with-kids/crop-anonymous-male-in-casual-clothes-pa-1.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "completed"

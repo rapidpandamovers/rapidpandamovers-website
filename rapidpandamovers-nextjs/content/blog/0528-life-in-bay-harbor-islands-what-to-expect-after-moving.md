@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/09/life-in-bay-harbor-islands-what-to-expect-after-moving/loc-vibrant-miami-skyline-with-lush-bougainv-2.webp"
   - "/images/blog/2027/09/life-in-bay-harbor-islands-what-to-expect-after-moving/svc-a-blue-volvo-truck-parked-outside-a-ware-1.webp"
   - "/images/blog/2027/09/life-in-bay-harbor-islands-what-to-expect-after-moving/svc-semi-truck-parked-at-a-loading-dock-with-2.webp"
-
 service_link: "/bay-harbor-islands-local-moving"
 location_link: "/bay-harbor-islands-movers"
 status: "completed"

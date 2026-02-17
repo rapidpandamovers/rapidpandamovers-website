@@ -1,10 +1,13 @@
 import { MetadataRoute } from 'next'
-import { allCities, allLongDistanceRoutes, allLocalRoutes, getServiceSlugs, getAllLocationServiceSlugs } from '@/lib/data'
-import { getAllPosts, getCategories, categoryToSlug } from '@/lib/blog'
+import { allCities, allLongDistanceRoutes, allLocalRoutes, getServiceSlugs, getAllLocationServiceSlugs, getAllActiveCities } from '@/lib/data'
+import { getPublishedPosts, getCategories, categoryToSlug } from '@/lib/blog'
 import comparisons from '@/data/comparisons.json'
 import alternatives from '@/data/alternatives.json'
+import reviewsData from '@/data/reviews.json'
 
 const POSTS_PER_PAGE = 12
+const REVIEWS_PER_PAGE = 9
+const ROUTES_PER_PAGE = 24
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = 'https://www.rapidpandamovers.com'
@@ -26,7 +29,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${base}/moving-checklist`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${base}/moving-tips`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${base}/moving-glossary`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${base}/routes`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/moving-routes`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/compare`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/alternatives`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/why-choose-us`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
@@ -35,7 +38,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ]
 
   // Blog posts from markdown files (the authoritative source)
-  const allBlogPosts = getAllPosts()
+  const allBlogPosts = getPublishedPosts()
   const blogUrls: MetadataRoute.Sitemap = allBlogPosts.map(post => {
     // Convert date string to ISO format for consistency
     const dateStr = post.updated || post.date
@@ -84,10 +87,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
 
-  // Reviews pagination pages (estimate based on review count)
+  // Reviews pagination pages
+  const totalReviewPages = Math.ceil(reviewsData.reviews.length / REVIEWS_PER_PAGE)
   const reviewsPaginationUrls: MetadataRoute.Sitemap = []
-  // Assuming we have about 100 reviews, so 5 pages
-  for (let page = 2; page <= 5; page++) {
+  for (let page = 2; page <= totalReviewPages; page++) {
     reviewsPaginationUrls.push({
       url: `${base}/reviews/page/${page}`,
       lastModified: now,
@@ -103,6 +106,32 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: 'monthly',
     priority: 0.9,
   }))
+
+  // Services by location (e.g., /services/miami, /services/wynwood)
+  const activeCities = getAllActiveCities()
+  const allActiveNeighborhoodSlugs = allCities.states.flatMap(state =>
+    state.counties.flatMap(county =>
+      county.cities.filter(c => c.is_active).flatMap(city =>
+        (city.neighborhoods || [])
+          .filter((n: { is_active?: boolean }) => n.is_active !== false)
+          .map((n: { slug: string }) => n.slug)
+      )
+    )
+  )
+  const servicesLocationUrls: MetadataRoute.Sitemap = [
+    ...activeCities.map(city => ({
+      url: `${base}/services/${city.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    })),
+    ...allActiveNeighborhoodSlugs.map(slug => ({
+      url: `${base}/services/${slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    })),
+  ]
 
   // Cities (active only)
   const allCitiesFlat = allCities.states.flatMap(state =>
@@ -150,6 +179,37 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.6,
     }))
 
+  // Moving routes pagination pages (e.g., /moving-routes/page/2)
+  const totalActiveRoutes =
+    allLongDistanceRoutes.filter(r => r.is_active !== false).length +
+    allLocalRoutes.filter((r: { is_active?: boolean }) => r.is_active !== false).length
+  const totalRoutePages = Math.ceil(totalActiveRoutes / ROUTES_PER_PAGE)
+  const routesPaginationUrls: MetadataRoute.Sitemap = []
+  for (let page = 2; page <= totalRoutePages; page++) {
+    routesPaginationUrls.push({
+      url: `${base}/moving-routes/page/${page}`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.5,
+    })
+  }
+
+  // Moving routes by location (e.g., /moving-routes/miami, /moving-routes/wynwood)
+  const routesLocationUrls: MetadataRoute.Sitemap = [
+    ...activeCities.map(city => ({
+      url: `${base}/moving-routes/${city.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    })),
+    ...allActiveNeighborhoodSlugs.map(slug => ({
+      url: `${base}/moving-routes/${slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.5,
+    })),
+  ]
+
   // Location-service pages (e.g., /miami-local-moving)
   const locationServiceUrls: MetadataRoute.Sitemap = getAllLocationServiceSlugs().map((slug: string) => ({
     url: `${base}/${slug}`,
@@ -182,10 +242,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...categoryPaginationUrls,
     ...reviewsPaginationUrls,
     ...serviceUrls,
+    ...servicesLocationUrls,
     ...cityUrls,
     ...neighborhoodUrls,
     ...longDistanceRouteUrls,
     ...localRouteUrls,
+    ...routesPaginationUrls,
+    ...routesLocationUrls,
     ...locationServiceUrls,
     ...comparisonUrls,
     ...alternativeUrls,

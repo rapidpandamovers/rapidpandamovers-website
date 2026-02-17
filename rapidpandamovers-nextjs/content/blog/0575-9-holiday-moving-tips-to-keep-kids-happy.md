@@ -20,7 +20,6 @@ images:
   - "/images/blog/2027/12/9-holiday-moving-tips-to-keep-kids-happy/a-happy-family-sharing-a-christmas-dinne-1.webp"
   - "/images/blog/2027/12/9-holiday-moving-tips-to-keep-kids-happy/father-dressed-as-santa-claus-with-happy-3.webp"
   - "/images/blog/2027/12/9-holiday-moving-tips-to-keep-kids-happy/santa-claus-posing-with-two-kids-by-a-de-5.webp"
-
 service_link: "/residential-moving"
 location_link: null
 status: "completed"

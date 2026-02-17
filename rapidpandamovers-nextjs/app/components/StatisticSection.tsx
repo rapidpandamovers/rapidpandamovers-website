@@ -4,7 +4,7 @@ export interface StatisticSectionStats {
   total_moves: string
   customer_satisfaction: string
   years_experience: string
-  average_rating: string
+  average_rating: number
 }
 
 interface StatisticSectionProps {
@@ -18,46 +18,62 @@ export default function StatisticSection({
   title = 'Trusted by Miami Families & Businesses',
   subtitle = 'Our commitment to excellence has earned us the trust of thousands of customers throughout Miami-Dade County.',
 }: StatisticSectionProps) {
+  const statCards = [
+    {
+      icon: Users,
+      value: stats.total_moves,
+      label: 'Successful Moves',
+      bg: 'bg-gray-50',
+      iconBg: 'bg-gray-200',
+      iconColor: 'text-gray-600',
+    },
+    {
+      icon: Award,
+      value: stats.customer_satisfaction,
+      label: 'Customer Satisfaction',
+      bg: 'bg-gray-50',
+      iconBg: 'bg-gray-200',
+      iconColor: 'text-gray-600',
+    },
+    {
+      icon: TrendingUp,
+      value: stats.years_experience,
+      label: 'Years Experience',
+      bg: 'bg-gray-50',
+      iconBg: 'bg-gray-200',
+      iconColor: 'text-gray-600',
+    },
+    {
+      icon: Star,
+      value: `${stats.average_rating}/5`,
+      label: 'Average Rating',
+      bg: 'bg-gray-50',
+      iconBg: 'bg-gray-200',
+      iconColor: 'text-gray-600',
+    },
+  ]
+
   return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-4">
+    <section className="pt-20">
+      <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">{title}</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">{title}</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">{subtitle}</p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-          <div className="text-center">
-            <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-              <Users className="w-8 h-8 text-orange-600" />
-            </div>
-            <div className="text-3xl font-bold text-gray-800 mb-2">{stats.total_moves}</div>
-            <div className="text-gray-600">Successful Moves</div>
-          </div>
-
-          <div className="text-center">
-            <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-              <Award className="w-8 h-8 text-orange-600" />
-            </div>
-            <div className="text-3xl font-bold text-gray-800 mb-2">{stats.customer_satisfaction}</div>
-            <div className="text-gray-600">Customer Satisfaction</div>
-          </div>
-
-          <div className="text-center">
-            <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-              <TrendingUp className="w-8 h-8 text-orange-600" />
-            </div>
-            <div className="text-3xl font-bold text-gray-800 mb-2">{stats.years_experience}</div>
-            <div className="text-gray-600">Years Experience</div>
-          </div>
-
-          <div className="text-center">
-            <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-              <Star className="w-8 h-8 text-orange-600" />
-            </div>
-            <div className="text-3xl font-bold text-gray-800 mb-2">{stats.average_rating}</div>
-            <div className="text-gray-600">Average Rating</div>
-          </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mx-auto">
+          {statCards.map((card) => {
+            const IconComponent = card.icon
+            return (
+              <div key={card.label} className={`${card.bg} rounded-4xl p-8 text-center`}>
+                <div className={`${card.iconBg} rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4`}>
+                  <IconComponent className={`w-8 h-8 ${card.iconColor}`} />
+                </div>
+                <div className="text-3xl font-bold text-gray-800 mb-2">{card.value}</div>
+                <div className="text-gray-600">{card.label}</div>
+              </div>
+            )
+          })}
         </div>
       </div>
     </section>

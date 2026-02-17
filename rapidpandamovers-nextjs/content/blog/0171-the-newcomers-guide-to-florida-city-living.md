@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/05/the-newcomers-guide-to-florida-city-living/a-great-egret-wading-in-shallow-waters-s-4.webp"
   - "/images/blog/2025/05/the-newcomers-guide-to-florida-city-living/american-alligator-resting-near-water-in-1.webp"
   - "/images/blog/2025/05/the-newcomers-guide-to-florida-city-living/close-up-of-an-american-alligator-restin-2.webp"
-
 service_link: null
 location_link: "/florida-city-movers"
 status: "pending"

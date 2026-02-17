@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/04/spring-moving-long-distance-moving-best-practices/a-scenic-highway-under-a-dramatic-cloudy-3.webp"
   - "/images/blog/2029/04/spring-moving-long-distance-moving-best-practices/decorative-pakistani-cargo-truck-traveli-4.webp"
   - "/images/blog/2029/04/spring-moving-long-distance-moving-best-practices/high-angle-view-of-an-asda-delivery-truc-2.webp"
-
 service_link: "/long-distance-moving"
 location_link: null
 status: "pending"

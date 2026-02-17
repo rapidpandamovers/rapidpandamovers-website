@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/08/relocating-to-miami-shores-the-essential-guide/a-tall-modern-skyscraper-reflecting-the--2.webp"
   - "/images/blog/2025/08/relocating-to-miami-shores-the-essential-guide/explore-the-beautiful-miami-beach-skylin-4.webp"
   - "/images/blog/2025/08/relocating-to-miami-shores-the-essential-guide/stunning-view-of-miami-s-modern-skyscrap-1.webp"
-
 service_link: null
 location_link: "/miami-shores-movers"
 status: "pending"

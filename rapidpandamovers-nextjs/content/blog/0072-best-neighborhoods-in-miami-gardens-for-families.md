@@ -18,7 +18,6 @@ images:
   - "/images/blog/2024/10/best-neighborhoods-in-miami-gardens-for-families/loc-lush-tropical-garden-featuring-a-strikin-2.webp"
   - "/images/blog/2024/10/best-neighborhoods-in-miami-gardens-for-families/svc-excavator-loading-materials-into-a-heavy-2.webp"
   - "/images/blog/2024/10/best-neighborhoods-in-miami-gardens-for-families/svc-semi-truck-parked-at-a-loading-dock-with-3.webp"
-
 service_link: "/local-moving"
 location_link: "/miami-gardens-movers"
 status: "pending"

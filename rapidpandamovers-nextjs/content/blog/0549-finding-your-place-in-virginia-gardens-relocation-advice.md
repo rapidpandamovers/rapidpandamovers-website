@@ -17,7 +17,6 @@ images:
   - "/images/blog/2027/10/finding-your-place-in-virginia-gardens-relocation-advice/loc-charming-key-west-house-with-american-fl-1.webp"
   - "/images/blog/2027/10/finding-your-place-in-virginia-gardens-relocation-advice/svc-cardboard-box-filled-with-clothes-hanger-1.webp"
   - "/images/blog/2027/10/finding-your-place-in-virginia-gardens-relocation-advice/svc-crop-anonymous-male-in-casual-clothes-pa-2.webp"
-
 service_link: "/virginia-gardens-local-moving"
 location_link: "/virginia-gardens-movers"
 status: "complete"

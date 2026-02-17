@@ -17,7 +17,6 @@ images:
   - "/images/blog/2026/04/9-thrifty-moving-tips-for-cost-conscious-families/close-up-of-hands-packing-a-box-labeled--2.webp"
   - "/images/blog/2026/04/9-thrifty-moving-tips-for-cost-conscious-families/close-up-of-hands-packing-a-cardboard-bo-3.webp"
   - "/images/blog/2026/04/9-thrifty-moving-tips-for-cost-conscious-families/mother-and-child-packing-boxes-in-a-brig-1.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "pending"

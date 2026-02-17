@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/02/north-miami-beach-area-guide-for-new-movers/modern-beachfront-hotel-with-palm-trees--2.webp"
   - "/images/blog/2027/02/north-miami-beach-area-guide-for-new-movers/vertical-blue-city-sign-with-miami-beach-3.webp"
   - "/images/blog/2027/02/north-miami-beach-area-guide-for-new-movers/vibrant-portrait-of-a-redhead-woman-enjo-5.webp"
-
 service_link: null
 location_link: "/north-miami-beach-movers"
 status: "completed"

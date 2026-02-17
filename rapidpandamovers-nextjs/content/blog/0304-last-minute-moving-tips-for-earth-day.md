@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/04/last-minute-moving-tips-for-earth-day/crispy-sweet-potato-fries-served-with-cr-2.webp"
   - "/images/blog/2026/04/last-minute-moving-tips-for-earth-day/vibrant-commercial-airplane-against-a-cl-1.webp"
   - "/images/blog/2026/04/last-minute-moving-tips-for-earth-day/young-woman-with-curly-hair-posing-in-an-3.webp"
-
 service_link: "/last-minute-moving"
 location_link: null
 status: "pending"

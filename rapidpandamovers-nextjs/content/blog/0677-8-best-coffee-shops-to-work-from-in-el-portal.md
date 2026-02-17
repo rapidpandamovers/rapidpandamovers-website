@@ -2,7 +2,7 @@
 id: 677
 title: "8 Best Coffee Shops to Work From in El Portal"
 slug: "8-best-coffee-shops-to-work-from-in-el-portal"
-excerpt: "Eight coffee shops near El Portal with WiFi and workspace. From Panther Coffee to Surry Hills."
+excerpt: "Eight coffee shops near El Portal with WiFi and workspace. From Panther Coffee to Surry Hills..."
 date: "2028-08-23"
 updated: "2028-08-23"
 readTime: "3 min read"
@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/08/8-best-coffee-shops-to-work-from-in-el-portal/full-length-joyful-african-american-fema-4.webp"
   - "/images/blog/2028/08/8-best-coffee-shops-to-work-from-in-el-portal/refreshing-iced-coffee-placed-on-a-woode-1.webp"
   - "/images/blog/2028/08/8-best-coffee-shops-to-work-from-in-el-portal/two-baristas-work-at-a-coffee-shop-count-2.webp"
-
 service_link: null
 location_link: "/el-portal-movers"
 status: "pending"

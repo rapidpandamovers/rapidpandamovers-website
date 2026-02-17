@@ -17,8 +17,7 @@ images:
   - "/images/blog/2026/07/10-ways-to-keep-your-new-home-clutter-free/a-collection-of-large-cardboard-boxes-la-2.webp"
   - "/images/blog/2026/07/10-ways-to-keep-your-new-home-clutter-free/a-person-sealing-a-cardboard-box-with-a--3.webp"
   - "/images/blog/2026/07/10-ways-to-keep-your-new-home-clutter-free/crop-anonymous-guy-in-casual-clothes-usi-4.webp"
-
-service_link: /packing-services
+service_link: "/packing-services"
 location_link: null
 status: "pending"
 needs_ai_image: false

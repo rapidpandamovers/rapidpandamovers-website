@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/01/your-january-office-moving-checklist/a-clean-and-modern-workspace-featuring-a-4.webp"
   - "/images/blog/2027/01/your-january-office-moving-checklist/a-contemporary-office-desk-featuring-a-d-3.webp"
   - "/images/blog/2027/01/your-january-office-moving-checklist/contemporary-coworking-office-space-with-1.webp"
-
 service_link: "/office-moving"
 location_link: null
 status: "pending"

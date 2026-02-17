@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/04/starting-fresh-in-miami-gardens-a-newcomers-guide/beautiful-aerial-view-of-a-residential-n-5.webp"
   - "/images/blog/2026/04/starting-fresh-in-miami-gardens-a-newcomers-guide/beautiful-modern-suburban-house-in-odess-3.webp"
   - "/images/blog/2026/04/starting-fresh-in-miami-gardens-a-newcomers-guide/suburban-house-with-lush-greenery-and-a--2.webp"
-
 service_link: null
 location_link: "/miami-gardens-movers"
 status: "pending"

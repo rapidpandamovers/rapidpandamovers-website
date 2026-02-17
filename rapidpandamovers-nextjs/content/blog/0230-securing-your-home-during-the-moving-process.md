@@ -17,7 +17,6 @@ images:
   - "/images/blog/2025/10/securing-your-home-during-the-moving-process/a-classic-hong-kong-tram-traverses-moder-2.webp"
   - "/images/blog/2025/10/securing-your-home-during-the-moving-process/a-delivery-truck-driving-along-a-coastal-1.webp"
   - "/images/blog/2025/10/securing-your-home-during-the-moving-process/pink-moving-trucks-parked-in-a-chicago-a-3.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "pending"

@@ -16,7 +16,6 @@ images:
   - "/images/blog/2029/04/westchester-relocation-guide-a-complete-overview/loc-discover-the-picturesque-urban-streets-o-1.webp"
   - "/images/blog/2029/04/westchester-relocation-guide-a-complete-overview/svc-a-pile-of-empty-cardboard-boxes-ready-fo-1.webp"
   - "/images/blog/2029/04/westchester-relocation-guide-a-complete-overview/svc-young-adult-male-smiling-while-handling--2.webp"
-
 service_link: "/westchester-local-moving"
 location_link: "/westchester-movers"
 status: "pending"

@@ -18,8 +18,7 @@ images:
   - "/images/blog/2029/08/bal-harbour-living-essential-relocation-tips/loc-vibrant-restroom-with-palm-trees-in-bal--1.webp"
   - "/images/blog/2029/08/bal-harbour-living-essential-relocation-tips/svc-three-men-loading-wooden-boxes-on-a-truc-1.webp"
   - "/images/blog/2029/08/bal-harbour-living-essential-relocation-tips/svc-two-men-load-construction-materials-onto-2.webp"
-
-service_link: /bal-harbour-local-moving
+service_link: "/bal-harbour-local-moving"
 location_link: "/bal-harbour-movers"
 status: "pending"
 needs_ai_image: false

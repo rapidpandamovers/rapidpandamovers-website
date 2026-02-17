@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/04/smart-residential-moving-tips-for-spring/a-family-of-three-takes-a-joyful-selfie--1.webp"
   - "/images/blog/2025/04/smart-residential-moving-tips-for-spring/family-carrying-cardboard-boxes-while-mo-2.webp"
   - "/images/blog/2025/04/smart-residential-moving-tips-for-spring/happy-family-playing-with-boxes-while-mo-3.webp"
-
 service_link: "/residential-moving"
 location_link: null
 status: "pending"

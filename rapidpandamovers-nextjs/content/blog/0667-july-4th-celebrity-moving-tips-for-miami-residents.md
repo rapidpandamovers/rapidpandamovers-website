@@ -2,7 +2,7 @@
 id: 667
 title: "July 4th Celebrity Moving Tips for Miami Residents"
 slug: "july-4th-celebrity-moving-tips-for-miami-residents"
-excerpt: "Celebrity moving during July 4th requires discretion and expertise. Learn tips for high-profile relocations."
+excerpt: "Celebrity moving during July 4th requires discretion and expertise. Learn tips for high-profile relocations..."
 date: "2028-07-31"
 updated: "2028-07-31"
 readTime: "4 min read"
@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/07/july-4th-celebrity-moving-tips-for-miami-residents/a-stunning-modern-mansion-with-a-poolsid-1.webp"
   - "/images/blog/2028/07/july-4th-celebrity-moving-tips-for-miami-residents/elegant-villa-on-a-spanish-hillside-surr-2.webp"
   - "/images/blog/2028/07/july-4th-celebrity-moving-tips-for-miami-residents/top-view-of-a-secluded-mansion-with-a-po-3.webp"
-
 service_link: "/celebrity-moving"
 location_link: null
 status: "pending"

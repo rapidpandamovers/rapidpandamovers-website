@@ -18,8 +18,7 @@ images:
   - "/images/blog/2028/03/discover-el-portal-your-complete-movers-guide/loc-a-man-rides-a-bicycle-down-a-historic-st-1.webp"
   - "/images/blog/2028/03/discover-el-portal-your-complete-movers-guide/svc-a-delivery-truck-driving-along-a-coastal-3.webp"
   - "/images/blog/2028/03/discover-el-portal-your-complete-movers-guide/svc-pink-moving-trucks-parked-in-a-chicago-a-2.webp"
-
-service_link: /el-portal-local-moving
+service_link: "/el-portal-local-moving"
 location_link: "/el-portal-movers"
 status: "pending"
 needs_ai_image: false

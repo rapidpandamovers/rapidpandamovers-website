@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/10/8-family-friendly-activities-in-aventura/a-mother-and-child-sealing-a-cardboard-b-3.webp"
   - "/images/blog/2029/10/8-family-friendly-activities-in-aventura/a-mother-and-daughter-label-a-cardboard--2.webp"
   - "/images/blog/2029/10/8-family-friendly-activities-in-aventura/a-mother-and-daughter-packing-boxes-whil-1.webp"
-
 service_link: null
 location_link: "/aventura-movers"
 status: "pending"

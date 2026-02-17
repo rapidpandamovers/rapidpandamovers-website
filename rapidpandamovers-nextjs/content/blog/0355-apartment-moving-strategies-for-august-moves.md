@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/08/apartment-moving-strategies-for-august-moves/a-high-rise-apartment-building-in-a-city-2.webp"
   - "/images/blog/2026/08/apartment-moving-strategies-for-august-moves/modern-high-rise-apartment-buildings-wit-1.webp"
   - "/images/blog/2026/08/apartment-moving-strategies-for-august-moves/upward-view-of-a-tall-modern-building-wi-4.webp"
-
 service_link: "/apartment-moving"
 location_link: null
 status: "pending"

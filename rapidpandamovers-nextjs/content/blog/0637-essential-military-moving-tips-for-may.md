@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/05/essential-military-moving-tips-for-may/polish-soldiers-in-military-uniforms-at--4.webp"
   - "/images/blog/2028/05/essential-military-moving-tips-for-may/stylish-man-in-brown-shirt-and-bucket-ha-3.webp"
   - "/images/blog/2028/05/essential-military-moving-tips-for-may/two-soldiers-in-camouflage-uniforms-prac-2.webp"
-
 service_link: "/military-moving"
 location_link: null
 status: "pending"

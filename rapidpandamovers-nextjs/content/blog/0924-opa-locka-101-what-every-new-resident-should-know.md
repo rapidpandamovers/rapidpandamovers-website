@@ -17,7 +17,6 @@ images:
   - "/images/blog/2030/03/opa-locka-101-what-every-new-resident-should-know/a-stunning-view-of-moroccan-inspired-arc-2.webp"
   - "/images/blog/2030/03/opa-locka-101-what-every-new-resident-should-know/detailed-facade-of-moorish-architecture--3.webp"
   - "/images/blog/2030/03/opa-locka-101-what-every-new-resident-should-know/stunning-architectural-facade-of-flagler-1.webp"
-
 service_link: null
 location_link: "/opa-locka-movers"
 status: "pending"

@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/06/9-last-minute-moving-tips-for-the-procrastinator/a-woman-stretching-in-black-athletic-wea-2.webp"
   - "/images/blog/2028/06/9-last-minute-moving-tips-for-the-procrastinator/black-and-white-image-of-a-wall-clock-wi-1.webp"
   - "/images/blog/2028/06/9-last-minute-moving-tips-for-the-procrastinator/woman-in-black-athletic-outfit-running-o-4.webp"
-
 service_link: "/last-minute-moving"
 location_link: null
 status: "complete"

@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/06/florida-city-moving-guide/loc-bird-s-eye-view-of-a-residential-area-in-1.webp"
   - "/images/blog/2024/06/florida-city-moving-guide/svc-a-charming-portrait-of-a-child-with-curl-1.webp"
   - "/images/blog/2024/06/florida-city-moving-guide/svc-faceless-individual-holding-an-open-card-2.webp"
-
 service_link: "/florida-city-local-moving"
 location_link: "/florida-city-movers"
 status: "pending"

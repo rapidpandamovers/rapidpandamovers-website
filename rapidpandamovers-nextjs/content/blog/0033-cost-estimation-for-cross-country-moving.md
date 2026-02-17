@@ -2,7 +2,7 @@
 id: 33
 title: "Cost Estimation for Cross-Country Moving"
 slug: "cost-estimation-for-cross-country-moving"
-excerpt: "Understand cross-country moving costs including factors like distance, weight, and services. Get tips for saving money on your move."
+excerpt: "Moving across the country can be an exciting new chapter in your life, but it also comes with its fair share of planning, logistics, and yes expenses..."
 date: "2024-04-29"
 updated: "2024-04-29"
 readTime: "15 min read"
@@ -20,7 +20,6 @@ images:
   - "/images/blog/2024/04/cost-estimation-for-cross-country-moving/a-modified-blue-subaru-sti-speeds-under--2.webp"
   - "/images/blog/2024/04/cost-estimation-for-cross-country-moving/drone-view-of-modern-cars-riding-through-1.webp"
   - "/images/blog/2024/04/cost-estimation-for-cross-country-moving/scenic-aerial-view-of-a-highway-cutting--3.webp"
-
 service_link: "/long-distance"
 location_link: null
 status: "pending"

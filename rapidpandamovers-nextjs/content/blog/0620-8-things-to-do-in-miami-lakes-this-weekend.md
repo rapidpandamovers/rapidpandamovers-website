@@ -6,7 +6,7 @@ excerpt: "Discover the best weekend activities in Miami Lakes, from Amelia Earha
 date: "2028-04-12"
 updated: "2028-04-12"
 readTime: "3 min read"
-category: "Lifestyle"
+category: "Senior Moving"
 image_folder: "/images/blog/2028/04/8-things-to-do-in-miami-lakes-this-weekend"
 featured: "/images/blog/2028/04/8-things-to-do-in-miami-lakes-this-weekend/detailed-photo-of-a-brown-anole-lizard-o-1.webp"
 image_keywords:
@@ -17,8 +17,7 @@ images:
   - "/images/blog/2028/04/8-things-to-do-in-miami-lakes-this-weekend/detailed-photo-of-a-brown-anole-lizard-o-1.webp"
   - "/images/blog/2028/04/8-things-to-do-in-miami-lakes-this-weekend/empty-streets-with-palm-trees-and-modern-2.webp"
   - "/images/blog/2028/04/8-things-to-do-in-miami-lakes-this-weekend/neon-lit-exterior-of-shorty-s-bar-b-q-re-3.webp"
-
-service_link: null
+service_link: "/senior-moving"
 location_link: "/miami-lakes-movers"
 status: "pending"
 needs_ai_image: false

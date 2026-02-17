@@ -2,11 +2,11 @@
 id: 173
 title: "10 Ideas to Introduce Yourself to Neighbors"
 slug: "10-ideas-to-introduce-yourself-to-neighbors"
-excerpt: "Build community connections in your new Miami neighborhood with these 10 practical ways to meet and introduce yourself to neighbors."
+excerpt: "Strong community connections make a house feel like home. But building relationships in a new neighborhood takes intentional effort, especially after a..."
 date: "2025-05-28"
 updated: "2025-05-28"
 readTime: "3 min read"
-category: "Home & Living"
+category: "Commercial Moving"
 image_folder: "/images/blog/2025/05/10-ideas-to-introduce-yourself-to-neighbors"
 featured: "/images/blog/2025/05/10-ideas-to-introduce-yourself-to-neighbors/three-men-seated-and-standing-by-a-doorw-1.webp"
 image_keywords:
@@ -19,8 +19,7 @@ images:
   - "/images/blog/2025/05/10-ideas-to-introduce-yourself-to-neighbors/two-elderly-women-volunteer-at-a-communi-3.webp"
   - "/images/blog/2025/05/10-ideas-to-introduce-yourself-to-neighbors/two-senior-men-enjoying-a-friendly-chat--4.webp"
   - "/images/blog/2025/05/10-ideas-to-introduce-yourself-to-neighbors/two-women-enjoying-a-casual-outdoor-gath-2.webp"
-
-service_link: null
+service_link: "/commercial-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

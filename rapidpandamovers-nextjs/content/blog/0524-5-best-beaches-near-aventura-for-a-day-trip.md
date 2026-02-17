@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/09/5-best-beaches-near-aventura-for-a-day-trip/a-man-walks-along-the-sandy-shore-of-sou-3.webp"
   - "/images/blog/2027/09/5-best-beaches-near-aventura-for-a-day-trip/a-wetsuit-hanging-from-an-open-car-trunk-2.webp"
   - "/images/blog/2027/09/5-best-beaches-near-aventura-for-a-day-trip/car-trunk-loaded-with-surfboards-and-wet-5.webp"
-
 service_link: null
 location_link: "/aventura-movers"
 status: "completed"

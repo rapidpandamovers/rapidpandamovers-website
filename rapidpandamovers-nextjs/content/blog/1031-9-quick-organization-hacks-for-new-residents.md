@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/11/9-quick-organization-hacks-for-new-residents/a-joyful-moment-of-a-mother-and-child-pl-2.webp"
   - "/images/blog/2030/11/9-quick-organization-hacks-for-new-residents/cardboard-moving-boxes-in-a-modern-kitch-4.webp"
   - "/images/blog/2030/11/9-quick-organization-hacks-for-new-residents/crop-anonymous-male-in-casual-clothes-pa-3.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "complete"

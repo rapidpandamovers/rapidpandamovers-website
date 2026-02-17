@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/09/antique-moving-tips-for-football-season/a-cheerful-man-carries-a-large-couch-acr-1.webp"
   - "/images/blog/2029/09/antique-moving-tips-for-football-season/confident-young-woman-carrying-cardboard-2.webp"
   - "/images/blog/2029/09/antique-moving-tips-for-football-season/two-movers-load-a-van-with-furniture-dur-3.webp"
-
 service_link: "/antique-moving"
 location_link: null
 status: "pending"

@@ -17,8 +17,7 @@ images:
   - "/images/blog/2028/10/medley-relocation-guide-what-to-know-before-you-move/loc-charming-urban-skyline-showcasing-histor-1.webp"
   - "/images/blog/2028/10/medley-relocation-guide-what-to-know-before-you-move/svc-a-delivery-truck-driving-along-a-coastal-1.webp"
   - "/images/blog/2028/10/medley-relocation-guide-what-to-know-before-you-move/svc-red-ford-f-150-truck-driving-on-a-bridge-2.webp"
-
-service_link: /medley-movers
+service_link: "/medley-movers"
 location_link: "/medley-movers"
 status: "pending"
 needs_ai_image: false

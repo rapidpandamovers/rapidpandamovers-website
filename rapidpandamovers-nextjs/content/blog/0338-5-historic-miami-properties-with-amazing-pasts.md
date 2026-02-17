@@ -2,11 +2,11 @@
 id: 338
 title: "5 Historic Miami Properties with Amazing Pasts"
 slug: "5-historic-miami-properties-with-amazing-pasts"
-excerpt: "Discover 5 historic Miami properties from Vizcaya to the Biltmore Hotel that have shaped the city through decades of transformation."
+excerpt: "Miami's architecture tells stories that span a century of booms, busts, and reinventions."
 date: "2026-06-24"
 updated: "2026-06-24"
 readTime: "5 min read"
-category: "Fun Facts"
+category: "Antique Moving"
 image_folder: "/images/blog/2026/06/5-historic-miami-properties-with-amazing-pasts"
 featured: "/images/blog/2026/06/5-historic-miami-properties-with-amazing-pasts/classic-miami-beach-art-deco-architectur-2.webp"
 image_keywords:
@@ -18,9 +18,8 @@ images:
   - "/images/blog/2026/06/5-historic-miami-properties-with-amazing-pasts/classic-miami-beach-art-deco-architectur-2.webp"
   - "/images/blog/2026/06/5-historic-miami-properties-with-amazing-pasts/classic-vintage-car-parked-outside-park--4.webp"
   - "/images/blog/2026/06/5-historic-miami-properties-with-amazing-pasts/colorful-neon-lights-and-lively-street-s-3.webp"
-
-service_link: null
-location_link: /miami-movers
+service_link: "/antique-moving"
+location_link: "/miami-movers"
 status: "pending"
 needs_ai_image: false
 ---

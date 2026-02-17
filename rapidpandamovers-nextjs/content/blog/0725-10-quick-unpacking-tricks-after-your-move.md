@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/12/10-quick-unpacking-tricks-after-your-move/adult-man-using-red-tape-to-seal-a-large-4.webp"
   - "/images/blog/2028/12/10-quick-unpacking-tricks-after-your-move/close-up-of-people-sealing-a-cardboard-b-1.webp"
   - "/images/blog/2028/12/10-quick-unpacking-tricks-after-your-move/crop-anonymous-guy-in-casual-clothes-usi-2.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "pending"

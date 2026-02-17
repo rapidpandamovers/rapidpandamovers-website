@@ -17,7 +17,6 @@ images:
   - "/images/blog/2029/12/5-budget-moving-tricks-that-really-help/close-up-of-hands-placing-cash-into-a-le-3.webp"
   - "/images/blog/2029/12/5-budget-moving-tricks-that-really-help/close-up-of-hands-rolling-us-dollars-wit-1.webp"
   - "/images/blog/2029/12/5-budget-moving-tricks-that-really-help/hand-inserting-coin-into-black-piggy-ban-2.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "pending"

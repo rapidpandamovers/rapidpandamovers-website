@@ -20,7 +20,6 @@ images:
   - "/images/blog/2024/07/understanding-miamis-real-estate-market/loc-captivating-night-view-of-miami-s-skylin-1.webp"
   - "/images/blog/2024/07/understanding-miamis-real-estate-market/svc-cardboard-moving-boxes-in-a-modern-kitch-1.webp"
   - "/images/blog/2024/07/understanding-miamis-real-estate-market/svc-crop-anonymous-male-in-casual-clothes-pa-2.webp"
-
 service_link: "/miami-local-moving"
 location_link: "/miami-movers"
 status: "completed"

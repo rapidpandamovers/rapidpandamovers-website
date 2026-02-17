@@ -17,7 +17,6 @@ images:
   - "/images/blog/2029/03/your-north-miami-beach-moving-handbook/loc-a-vibrant-view-of-the-art-deco-marlin-ho-1.webp"
   - "/images/blog/2029/03/your-north-miami-beach-moving-handbook/svc-three-men-loading-wooden-boxes-on-a-truc-1.webp"
   - "/images/blog/2029/03/your-north-miami-beach-moving-handbook/svc-two-men-load-construction-materials-onto-2.webp"
-
 service_link: "/north-miami-beach-local-moving"
 location_link: "/north-miami-beach-movers"
 status: "pending"

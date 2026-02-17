@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/10/halloween-local-moving-strategies-in-miami/svc-a-pile-of-empty-cardboard-boxes-ready-fo-2.webp"
   - "/images/blog/2027/10/halloween-local-moving-strategies-in-miami/svc-cardboard-box-filled-with-clothes-hanger-3.webp"
   - "/images/blog/2027/10/halloween-local-moving-strategies-in-miami/svc-crop-anonymous-male-in-casual-clothes-pa-1.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "complete"

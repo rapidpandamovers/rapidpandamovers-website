@@ -40,6 +40,15 @@ SERVICES = [
     {"slug": "last-minute-moving", "name": "Last Minute Moving", "keywords": ["urgent", "last minute", "rush", "quick"]},
     {"slug": "hourly-moving", "name": "Hourly Moving", "keywords": ["clock", "time", "hourly", "flexible"]},
     {"slug": "special-needs-moving", "name": "Special Needs Moving", "keywords": ["accessibility", "care", "medical", "assistance"]},
+    {"slug": "appliance-moving", "name": "Appliance Moving", "keywords": ["refrigerator", "washer dryer", "appliance dolly", "heavy appliance"]},
+    {"slug": "piano-moving", "name": "Piano Moving", "keywords": ["grand piano", "upright piano", "piano board", "music instrument"]},
+    {"slug": "pool-table-moving", "name": "Pool Table Moving", "keywords": ["pool table", "billiards", "slate", "game room"]},
+    {"slug": "hot-tub-moving", "name": "Hot Tub Moving", "keywords": ["hot tub", "spa", "jacuzzi", "backyard"]},
+    {"slug": "art-moving", "name": "Art Moving", "keywords": ["painting", "sculpture", "gallery", "fine art"]},
+    {"slug": "white-glove-moving", "name": "White Glove Moving", "keywords": ["premium", "luxury", "white glove", "careful handling"]},
+    {"slug": "specialty-item-moving", "name": "Specialty Item Moving", "keywords": ["specialty", "unusual items", "oversized", "custom"]},
+    {"slug": "storage-solutions", "name": "Storage Solutions", "keywords": ["storage unit", "warehouse", "climate controlled", "secure storage"]},
+    {"slug": "junk-removal", "name": "Junk Removal", "keywords": ["junk", "debris", "declutter", "haul away"]},
 ]
 
 # Miami-Dade cities (35 cities)
@@ -788,6 +797,51 @@ def generate_service_content(service, theme, month_data, season):
             "benefit": "patient crews and accommodation for medical equipment",
             "tip": "Communicate specific needs and any medical equipment requirements in advance",
             "related": ["senior-moving", "full-service-moving", "packing-services"]
+        },
+        "appliance-moving": {
+            "benefit": "safe disconnection, transport, and reconnection of all major appliances",
+            "tip": "Defrost your refrigerator 24 hours before moving day to prevent water damage",
+            "related": ["local-moving", "residential-moving", "full-service-moving"]
+        },
+        "piano-moving": {
+            "benefit": "specialized piano boards, padding, and climate-aware transport",
+            "tip": "Wait 2-3 weeks after the move before tuning to let the piano acclimate",
+            "related": ["specialty-item-moving", "white-glove-moving", "full-service-moving"]
+        },
+        "pool-table-moving": {
+            "benefit": "expert disassembly, safe slate transport, and precision reassembly with leveling",
+            "tip": "Protect existing felt during the move—replacement isn't always needed",
+            "related": ["specialty-item-moving", "furniture-moving", "residential-moving"]
+        },
+        "hot-tub-moving": {
+            "benefit": "spa-specific equipment and creative access solutions for tight spaces",
+            "tip": "Drain and dry your hot tub 24-48 hours before the move",
+            "related": ["specialty-item-moving", "appliance-moving", "residential-moving"]
+        },
+        "art-moving": {
+            "benefit": "custom crating, acid-free materials, and climate-monitored transport",
+            "tip": "Get current appraisals and photograph every piece before the move",
+            "related": ["white-glove-moving", "antique-moving", "packing-services"]
+        },
+        "white-glove-moving": {
+            "benefit": "premium padding, dedicated move manager, and full-service packing to unpacking",
+            "tip": "Create a priority list for which rooms to set up first at your new home",
+            "related": ["full-service-moving", "art-moving", "packing-services"]
+        },
+        "specialty-item-moving": {
+            "benefit": "custom assessment and handling plans for unusual, heavy, or fragile items",
+            "tip": "Tell your movers about any unusual items during the estimate so they bring the right equipment",
+            "related": ["piano-moving", "safe-moving", "white-glove-moving"]
+        },
+        "storage-solutions": {
+            "benefit": "climate-controlled facilities with flexible terms and seamless move-to-storage service",
+            "tip": "Choose climate-controlled storage in Miami to protect against heat and humidity damage",
+            "related": ["full-service-moving", "packing-services", "local-moving"]
+        },
+        "junk-removal": {
+            "benefit": "responsible disposal with donation, recycling, and same-day haul-away options",
+            "tip": "Schedule junk removal before your move to avoid paying to transport items you don't want",
+            "related": ["full-service-moving", "storage-solutions", "packing-services"]
         },
     }
 

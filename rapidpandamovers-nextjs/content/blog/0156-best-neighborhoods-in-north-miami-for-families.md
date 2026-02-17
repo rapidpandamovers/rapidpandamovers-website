@@ -17,7 +17,6 @@ images:
   - "/images/blog/2025/04/best-neighborhoods-in-north-miami-for-families/a-vibrant-view-of-miami-s-skyscrapers-by-3.webp"
   - "/images/blog/2025/04/best-neighborhoods-in-north-miami-for-families/colorful-graffiti-of-monopoly-character--4.webp"
   - "/images/blog/2025/04/best-neighborhoods-in-north-miami-for-families/explore-this-modern-miami-residence-with-2.webp"
-
 service_link: null
 location_link: "/north-miami-movers"
 status: "pending"

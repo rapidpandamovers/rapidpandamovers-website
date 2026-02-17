@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/03/why-biscayne-park-is-perfect-for-families/a-mother-and-daughter-label-a-cardboard--4.webp"
   - "/images/blog/2026/03/why-biscayne-park-is-perfect-for-families/a-mother-and-daughter-pack-clothes-into--1.webp"
   - "/images/blog/2026/03/why-biscayne-park-is-perfect-for-families/father-and-children-packing-luggage-toge-3.webp"
-
 service_link: null
 location_link: "/biscayne-park-movers"
 status: "complete"

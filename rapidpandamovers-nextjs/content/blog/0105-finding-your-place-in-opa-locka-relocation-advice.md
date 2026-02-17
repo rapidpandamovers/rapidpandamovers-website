@@ -18,7 +18,6 @@ images:
   - "/images/blog/2024/12/finding-your-place-in-opa-locka-relocation-advice/a-scenic-aerial-view-of-lake-mary-fl-sho-1.webp"
   - "/images/blog/2024/12/finding-your-place-in-opa-locka-relocation-advice/charming-suburban-street-with-modern-hou-3.webp"
   - "/images/blog/2024/12/finding-your-place-in-opa-locka-relocation-advice/scenic-aerial-shot-of-a-sprawling-reside-2.webp"
-
 service_link: "/opa-locka-residential-moving"
 location_link: "/opa-locka-movers"
 status: "pending"

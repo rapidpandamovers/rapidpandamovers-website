@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/09/step-by-step-moving-a-gun-safe-upstairs/a-person-holding-a-cardboard-box-labeled-3.webp"
   - "/images/blog/2024/09/step-by-step-moving-a-gun-safe-upstairs/orange-excavator-moving-earth-at-a-rural-4.webp"
   - "/images/blog/2024/09/step-by-step-moving-a-gun-safe-upstairs/two-movers-load-a-van-with-furniture-dur-1.webp"
-
 service_link: "/safe-moving"
 location_link: null
 status: "completed"

@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/03/starting-fresh-in-miami-shores-a-newcomers-guide/aerial-shot-of-a-modern-apartment-with-s-3.webp"
   - "/images/blog/2027/03/starting-fresh-in-miami-shores-a-newcomers-guide/stunning-view-of-miami-beach-s-skyline-w-5.webp"
   - "/images/blog/2027/03/starting-fresh-in-miami-shores-a-newcomers-guide/stunning-view-of-miami-s-modern-skyscrap-1.webp"
-
 service_link: null
 location_link: "/miami-shores-movers"
 status: "pending"

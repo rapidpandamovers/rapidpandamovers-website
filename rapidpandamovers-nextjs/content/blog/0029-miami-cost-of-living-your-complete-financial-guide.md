@@ -20,7 +20,6 @@ images:
   - "/images/blog/2024/02/miami-cost-of-living-your-complete-financial-guide/loc-explore-the-vibrant-miami-skyline-with-a-2.webp"
   - "/images/blog/2024/02/miami-cost-of-living-your-complete-financial-guide/svc-a-delivery-truck-driving-along-a-coastal-1.webp"
   - "/images/blog/2024/02/miami-cost-of-living-your-complete-financial-guide/svc-high-angle-view-of-an-asda-delivery-truc-2.webp"
-
 service_link: "/miami-local-moving"
 location_link: "/miami-movers"
 status: "pending"

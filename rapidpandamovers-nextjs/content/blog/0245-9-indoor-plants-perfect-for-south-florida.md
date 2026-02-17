@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/11/9-indoor-plants-perfect-for-south-florida/elegant-yellow-freesia-flowers-in-a-blue-3.webp"
   - "/images/blog/2025/11/9-indoor-plants-perfect-for-south-florida/explore-a-lush-greenhouse-filled-with-di-2.webp"
   - "/images/blog/2025/11/9-indoor-plants-perfect-for-south-florida/lush-alocasia-polly-plant-in-a-decorativ-1.webp"
-
 service_link: null
 location_link: null
 status: "pending"

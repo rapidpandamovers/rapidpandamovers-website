@@ -18,8 +18,7 @@ images:
   - "/images/blog/2029/02/8-specialty-possessions-for-expert-relocation/close-up-of-a-gift-wrapped-hamburger-hel-1.webp"
   - "/images/blog/2029/02/8-specialty-possessions-for-expert-relocation/funny-outdoor-haircut-session-by-the-lak-4.webp"
   - "/images/blog/2029/02/8-specialty-possessions-for-expert-relocation/unemotional-ethnic-female-with-bare-shou-2.webp"
-
-service_link: null
+service_link: "/specialty-item-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

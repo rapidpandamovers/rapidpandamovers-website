@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/11/best-neighborhoods-in-florida-city-for-families/loc-aerial-view-showcasing-the-grid-like-pat-1.webp"
   - "/images/blog/2030/11/best-neighborhoods-in-florida-city-for-families/svc-cardboard-moving-boxes-in-a-modern-kitch-1.webp"
   - "/images/blog/2030/11/best-neighborhoods-in-florida-city-for-families/svc-young-adult-male-smiling-while-handling--2.webp"
-
 service_link: "/florida-city-local-moving"
 location_link: "/florida-city-movers"
 status: "pending"

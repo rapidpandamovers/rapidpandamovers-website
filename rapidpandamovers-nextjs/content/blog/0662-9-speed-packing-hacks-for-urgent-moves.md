@@ -17,8 +17,7 @@ images:
   - "/images/blog/2028/07/9-speed-packing-hacks-for-urgent-moves/capture-the-unstoppable-force-of-nature--3.webp"
   - "/images/blog/2028/07/9-speed-packing-hacks-for-urgent-moves/minimalist-clock-with-a-black-friday-sal-2.webp"
   - "/images/blog/2028/07/9-speed-packing-hacks-for-urgent-moves/woman-in-black-athletic-outfit-running-o-1.webp"
-
-service_link: /last-minute-moving
+service_link: "/last-minute-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

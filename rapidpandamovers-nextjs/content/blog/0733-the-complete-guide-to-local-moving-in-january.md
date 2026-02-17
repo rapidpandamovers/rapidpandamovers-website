@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/01/the-complete-guide-to-local-moving-in-january/red-truck-with-large-covered-cargo-in-an-3.webp"
   - "/images/blog/2029/01/the-complete-guide-to-local-moving-in-january/semi-truck-parked-at-a-loading-dock-with-4.webp"
   - "/images/blog/2029/01/the-complete-guide-to-local-moving-in-january/trucks-loaded-with-goods-parked-on-a-dir-1.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "pending"

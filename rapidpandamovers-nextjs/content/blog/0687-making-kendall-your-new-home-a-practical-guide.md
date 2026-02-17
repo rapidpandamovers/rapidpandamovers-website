@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/09/making-kendall-your-new-home-a-practical-guide/a-joyful-child-with-socks-on-feet-playin-3.webp"
   - "/images/blog/2028/09/making-kendall-your-new-home-a-practical-guide/a-playful-child-peeks-out-of-a-cardboard-2.webp"
   - "/images/blog/2028/09/making-kendall-your-new-home-a-practical-guide/kids-enjoying-creative-time-drawing-on-a-1.webp"
-
 service_link: null
 location_link: "/kendall-movers"
 status: "complete"

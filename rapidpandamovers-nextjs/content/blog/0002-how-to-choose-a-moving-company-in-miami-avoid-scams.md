@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/01/how-to-choose-a-moving-company-in-miami-avoid-scams/a-person-holding-a-cardboard-box-labeled-1.webp"
   - "/images/blog/2024/01/how-to-choose-a-moving-company-in-miami-avoid-scams/man-handling-moving-boxes-in-a-spacious--2.webp"
   - "/images/blog/2024/01/how-to-choose-a-moving-company-in-miami-avoid-scams/two-professional-movers-in-an-empty-apar-3.webp"
-
 service_link: "/residential-moving"
 location_link: null
 status: "completed"

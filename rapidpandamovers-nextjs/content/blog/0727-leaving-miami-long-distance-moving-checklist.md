@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/12/leaving-miami-long-distance-moving-checklist/loc-captivating-night-view-of-miami-s-skylin-1.webp"
   - "/images/blog/2028/12/leaving-miami-long-distance-moving-checklist/svc-a-vibrant-city-highway-bustling-with-veh-1.webp"
   - "/images/blog/2028/12/leaving-miami-long-distance-moving-checklist/svc-wide-aerial-view-of-traffic-on-paulista--2.webp"
-
 service_link: "/long-distance-moving"
 location_link: null
 status: "pending"

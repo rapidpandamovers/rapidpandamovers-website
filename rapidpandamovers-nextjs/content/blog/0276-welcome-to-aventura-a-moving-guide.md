@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/01/welcome-to-aventura-a-moving-guide/panoramic-view-of-sarasota-florida-skyli-4.webp"
   - "/images/blog/2026/01/welcome-to-aventura-a-moving-guide/stunning-low-angle-view-of-skyscrapers-r-3.webp"
   - "/images/blog/2026/01/welcome-to-aventura-a-moving-guide/tall-modern-high-rise-building-set-again-1.webp"
-
 service_link: null
 location_link: "/aventura-movers"
 status: "complete"

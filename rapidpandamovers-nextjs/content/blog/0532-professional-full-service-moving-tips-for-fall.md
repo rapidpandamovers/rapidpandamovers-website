@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/09/professional-full-service-moving-tips-for-fall/a-mover-carries-a-green-sofa-indoors-sho-1.webp"
   - "/images/blog/2027/09/professional-full-service-moving-tips-for-fall/two-men-sitting-in-a-van-surrounded-by-b-4.webp"
   - "/images/blog/2027/09/professional-full-service-moving-tips-for-fall/two-movers-in-uniform-carrying-boxes-in--3.webp"
-
 service_link: "/full-service-moving"
 location_link: null
 status: "pending"

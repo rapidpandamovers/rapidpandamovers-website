@@ -17,8 +17,7 @@ images:
   - "/images/blog/2027/02/5-critical-supplies-to-keep-handy-when-moving/a-classic-hong-kong-tram-traverses-moder-2.webp"
   - "/images/blog/2027/02/5-critical-supplies-to-keep-handy-when-moving/movers-loading-boxes-into-a-truck-on-a-s-3.webp"
   - "/images/blog/2027/02/5-critical-supplies-to-keep-handy-when-moving/pink-moving-trucks-parked-in-a-chicago-a-1.webp"
-
-service_link: /local-moving
+service_link: "/local-moving"
 location_link: null
 status: "completed"
 needs_ai_image: false

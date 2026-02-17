@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/06/fathers-day-commercial-moving-strategies-in-miami/loc-captivating-view-of-miami-s-iconic-skyli-2.webp"
   - "/images/blog/2025/06/fathers-day-commercial-moving-strategies-in-miami/svc-low-angle-view-of-a-modern-urban-buildin-2.webp"
   - "/images/blog/2025/06/fathers-day-commercial-moving-strategies-in-miami/svc-majestic-view-of-tokyo-metropolitan-gove-1.webp"
-
 service_link: "/commercial-moving"
 location_link: null
 status: "pending"

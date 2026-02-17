@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/12/10-low-maintenance-plants-for-florida-living/close-up-of-vibrant-monstera-leaves-show-4.webp"
   - "/images/blog/2026/12/10-low-maintenance-plants-for-florida-living/lush-alocasia-polly-plant-in-a-decorativ-3.webp"
   - "/images/blog/2026/12/10-low-maintenance-plants-for-florida-living/vertical-cacti-reaching-toward-a-greenho-2.webp"
-
 service_link: null
 location_link: null
 status: "pending"

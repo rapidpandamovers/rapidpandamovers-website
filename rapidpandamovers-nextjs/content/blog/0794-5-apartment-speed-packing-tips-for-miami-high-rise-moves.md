@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/05/5-apartment-speed-packing-tips-for-miami-high-rise-moves/loc-captivating-miami-skyline-at-night-featu-2.webp"
   - "/images/blog/2029/05/5-apartment-speed-packing-tips-for-miami-high-rise-moves/loc-captivating-view-of-miami-s-iconic-skyli-1.webp"
   - "/images/blog/2029/05/5-apartment-speed-packing-tips-for-miami-high-rise-moves/svc-a-tall-residential-building-showcasing-s-2.webp"
-
 service_link: "/apartment-moving"
 location_link: null
 status: "pending"

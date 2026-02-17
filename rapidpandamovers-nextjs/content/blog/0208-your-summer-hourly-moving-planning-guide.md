@@ -2,7 +2,7 @@
 id: 208
 title: "Your Summer Hourly Moving Planning Guide"
 slug: "your-summer-hourly-moving-planning-guide"
-excerpt: "Need flexible moving help this summer? Learn how hourly moving services save money with transparent billing and pay-as-you-go pricing."
+excerpt: "As we enter August, many Miami residents find themselves preparing for a move. Whether you're taking advantage of the summer season or responding to..."
 date: "2025-08-18"
 updated: "2025-08-18"
 readTime: "4 min read"
@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/08/your-summer-hourly-moving-planning-guide/a-vibrant-red-alarm-clock-rests-in-lush--2.webp"
   - "/images/blog/2025/08/your-summer-hourly-moving-planning-guide/four-wall-clocks-showing-different-time--1.webp"
   - "/images/blog/2025/08/your-summer-hourly-moving-planning-guide/pink-alarm-clock-on-pastel-background-sh-4.webp"
-
 service_link: "/hourly-moving"
 location_link: null
 status: "pending"

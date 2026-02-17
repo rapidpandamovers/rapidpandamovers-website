@@ -17,7 +17,6 @@ images:
   - "/images/blog/2025/12/expert-safe-moving-tips-this-december/an-aerial-shot-capturing-a-bulldozer-and-2.webp"
   - "/images/blog/2025/12/expert-safe-moving-tips-this-december/man-wearing-overalls-and-bandana-prepari-1.webp"
   - "/images/blog/2025/12/expert-safe-moving-tips-this-december/smiling-woman-holding-a-box-marked-fragi-4.webp"
-
 service_link: "/safe-moving"
 location_link: null
 status: "completed"

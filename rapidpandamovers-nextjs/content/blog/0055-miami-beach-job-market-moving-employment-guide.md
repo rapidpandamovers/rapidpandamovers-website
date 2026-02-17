@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/06/miami-beach-job-market-moving-employment-guide/svc-red-truck-with-large-covered-cargo-in-an-2.webp"
   - "/images/blog/2024/06/miami-beach-job-market-moving-employment-guide/svc-semi-truck-parked-at-a-loading-dock-with-1.webp"
   - "/images/blog/2024/06/miami-beach-job-market-moving-employment-guide/svc-two-men-load-construction-materials-onto-3.webp"
-
 service_link: "/miami-beach-local-moving"
 location_link: "/miami-beach-movers"
 status: "pending"

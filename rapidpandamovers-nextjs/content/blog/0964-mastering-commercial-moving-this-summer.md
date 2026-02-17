@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/06/mastering-commercial-moving-this-summer/a-modern-commercial-building-with-reflec-2.webp"
   - "/images/blog/2030/06/mastering-commercial-moving-this-summer/contemporary-office-building-in-redmond--1.webp"
   - "/images/blog/2030/06/mastering-commercial-moving-this-summer/empty-cityscape-featuring-modern-glass-a-3.webp"
-
 service_link: "/commercial-moving"
 location_link: null
 status: "pending"

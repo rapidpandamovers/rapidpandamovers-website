@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/09/bal-harbour-village-exclusive-waterfront-living/loc-luxurious-byredo-bal-d-afrique-eau-de-pa-1.webp"
   - "/images/blog/2027/09/bal-harbour-village-exclusive-waterfront-living/svc-a-blue-truck-transporting-livestock-on-a-2.webp"
   - "/images/blog/2027/09/bal-harbour-village-exclusive-waterfront-living/svc-movers-loading-boxes-into-a-truck-on-a-s-3.webp"
-
 service_link: "/bal-harbour-local-moving"
 location_link: "/bal-harbour-movers"
 status: "pending"

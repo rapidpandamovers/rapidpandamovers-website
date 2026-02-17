@@ -6,7 +6,7 @@ excerpt: "Protect your wine investment during a Miami move with climate-controll
 date: "2030-11-20"
 updated: "2030-11-20"
 readTime: "6 min read"
-category: "Moving Tips"
+category: "Packing Services"
 image_folder: "/images/blog/2030/11/how-to-move-a-wine-collection-in-miamis-heat"
 featured: "/images/blog/2030/11/how-to-move-a-wine-collection-in-miamis-heat/wine-cellar-bottles-1200.webp"
 image_keywords:

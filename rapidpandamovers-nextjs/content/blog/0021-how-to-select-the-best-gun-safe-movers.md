@@ -21,7 +21,6 @@ images:
   - "/images/blog/2024/02/how-to-select-the-best-gun-safe-movers/camouflage-and-orange-toy-gun-on-white-f-2.webp"
   - "/images/blog/2024/02/how-to-select-the-best-gun-safe-movers/open-handgun-case-with-firearm-and-acces-3.webp"
   - "/images/blog/2024/02/how-to-select-the-best-gun-safe-movers/orange-and-black-toy-gun-with-camouflage-4.webp"
-
 service_link: "/safe-moving"
 location_link: null
 status: "pending"

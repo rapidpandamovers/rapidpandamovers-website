@@ -17,7 +17,7 @@ export default function Hero({
   title,
   description,
   cta,
-  image_url
+  image_url,
 }: HeroProps = {}) {
   const [pickupZip, setPickupZip] = useState('')
   const [dropoffZip, setDropoffZip] = useState('')
@@ -25,13 +25,13 @@ export default function Hero({
   // Use provided props with fallback defaults
   const displayTitle = title || "Family-Owned Moving Company in Miami"
   const displayDescription = description || "Low-cost moving & packing services"
-  const displayCta = cta || "Get a free quote"
+  const displayCta = cta || "Get Your Free Quote"
   const displayImage = image_url || "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
 
   // Build quote URL with zip codes
   const quoteUrl = `/quote${pickupZip || dropoffZip ? '?' : ''}${pickupZip ? `pickup=${encodeURIComponent(pickupZip)}` : ''}${pickupZip && dropoffZip ? '&' : ''}${dropoffZip ? `dropoff=${encodeURIComponent(dropoffZip)}` : ''}`
   return (
-    <section className="py-5 px-4 md:px-6 lg:px-8 relative z-10">
+    <section className="pt-2 px-4 md:px-6 lg:px-8 relative">
       <div className="container mx-auto rounded-4xl border border-gray-700 bg-black p-6 md:p-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left side - Image */}
@@ -63,14 +63,14 @@ export default function Hero({
               <div className="grid grid-cols-2 gap-4">
                 <input
                   type="text"
-                  placeholder="Enter Pick up Zip"
+                  placeholder="Moving from Zip Code"
                   value={pickupZip}
                   onChange={(e) => setPickupZip(e.target.value)}
                   className="px-4 py-3 bg-gray-800 border border-gray-600 text-white placeholder-gray-400 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 />
                 <input
                   type="text"
-                  placeholder="Enter Drop off Zip"
+                  placeholder="Moving to Zip Code"
                   value={dropoffZip}
                   onChange={(e) => setDropoffZip(e.target.value)}
                   className="px-4 py-3 bg-gray-800 border border-gray-600 text-white placeholder-gray-400 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"

@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/03/6-packing-blunders-that-lead-to-damaged-items/close-up-of-a-cardboard-box-filled-with--1.webp"
   - "/images/blog/2027/03/6-packing-blunders-that-lead-to-damaged-items/hands-carefully-packing-glassware-into-a-2.webp"
   - "/images/blog/2027/03/6-packing-blunders-that-lead-to-damaged-items/organized-cardboard-boxes-labeled-fragil-3.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "pending"

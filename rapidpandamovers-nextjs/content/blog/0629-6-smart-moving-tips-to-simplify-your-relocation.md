@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/05/6-smart-moving-tips-to-simplify-your-relocation/close-up-of-a-cardboard-box-filled-with--3.webp"
   - "/images/blog/2028/05/6-smart-moving-tips-to-simplify-your-relocation/hands-carefully-packing-glassware-into-a-4.webp"
   - "/images/blog/2028/05/6-smart-moving-tips-to-simplify-your-relocation/unrecognizable-man-sealing-box-with-duck-1.webp"
-
 service_link: null
 location_link: null
 status: "complete"

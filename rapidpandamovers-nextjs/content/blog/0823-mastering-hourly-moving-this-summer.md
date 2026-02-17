@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/07/mastering-hourly-moving-this-summer/a-classic-brass-alarm-clock-featuring-tw-1.webp"
   - "/images/blog/2029/07/mastering-hourly-moving-this-summer/pink-alarm-clock-on-pastel-background-sh-3.webp"
   - "/images/blog/2029/07/mastering-hourly-moving-this-summer/street-clock-against-a-clear-blue-sky-wi-5.webp"
-
 service_link: "/hourly-moving"
 location_link: null
 status: "pending"

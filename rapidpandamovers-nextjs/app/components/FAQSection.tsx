@@ -1,12 +1,13 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import Link from 'next/link'
 import content from '@/data/content.json'
 
 interface FAQ {
   question: string
   answer: string
+  link?: string
 }
 
 interface FAQSectionProps {
@@ -14,46 +15,44 @@ interface FAQSectionProps {
   subtitle?: string
   faqs?: FAQ[]
   showViewAllLink?: boolean
-  showContactCTA?: boolean
   variant?: 'default' | 'compact'
-  phone?: string
-  phoneDisplay?: string
+  compactCount?: number
 }
 
-const sitePhone = content.site.phone
-const defaultPhone = sitePhone.replace(/-/g, '')
-const defaultPhoneDisplay = `(${sitePhone.slice(0,3)}) ${sitePhone.slice(4,7)}-${sitePhone.slice(8)}`
-
-const defaultFaqs: FAQ[] = [
-  { question: 'How much will my move cost?', answer: 'Moving costs depend on several factors including distance, size of move, and services needed. Contact us for a free, accurate quote.' },
-  { question: 'What happens if something gets damaged?', answer: 'We are fully licensed and insured. All moves are covered by our comprehensive insurance policy for your peace of mind.' },
-  { question: 'How can I prepare for my move?', answer: 'Start by decluttering, gather packing supplies, and confirm your moving date. We provide a complete moving checklist to help you prepare.' },
-  { question: 'Do you offer same-day moving services?', answer: 'Yes! We offer same-day and emergency moving services throughout Miami-Dade County, subject to availability.' }
-]
+// Pick evenly spaced items for a deterministic subset
+function pickSpread<T>(array: T[], count: number): T[] {
+  if (array.length <= count) return array
+  const step = array.length / count
+  return Array.from({ length: count }, (_, i) => array[Math.floor(i * step)])
+}
 
 export default function FAQSection({
-  title = 'Have a Question?',
-  subtitle = 'Frequently Asked Questions',
-  faqs = defaultFaqs,
+  title = 'Frequently Asked Questions',
+  subtitle = 'Common questions about our moving services',
+  faqs = content.faq.questions,
   showViewAllLink = true,
-  showContactCTA = false,
   variant = 'default',
-  phone = defaultPhone,
-  phoneDisplay = defaultPhoneDisplay
+  compactCount = 3,
 }: FAQSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
+
+  const displayFaqs = useMemo(() => {
+    if (variant === 'compact') {
+      return pickSpread(faqs, compactCount)
+    }
+    return faqs
+  }, [faqs, variant, compactCount])
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index)
   }
 
-  // FAQ accordion component (reused in both layouts)
   const FAQAccordion = () => (
     <div className="space-y-4">
-      {faqs.map((faq, index) => (
-        <div key={index} className="bg-white border border-gray-200 rounded-lg shadow-sm">
+      {displayFaqs.map((faq, index) => (
+        <div key={index} className="bg-white border border-gray-200 rounded-xl">
           <button
-            className="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
+            className="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 rounded-xl transition-colors"
             onClick={() => toggleFAQ(index)}
           >
             <h3 className="text-lg font-semibold text-gray-800 pr-4">
@@ -84,6 +83,14 @@ export default function FAQSection({
                 <p className="text-gray-600 leading-relaxed">
                   {faq.answer}
                 </p>
+                {faq.link && (
+                  <Link href={faq.link} className="inline-flex items-center text-orange-500 hover:text-orange-600 font-medium mt-3">
+                    Learn more
+                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                )}
               </div>
             </div>
           )}
@@ -95,56 +102,40 @@ export default function FAQSection({
   // Compact 2-column layout
   if (variant === 'compact') {
     return (
-      <section className="py-20">
+      <section className="pt-20">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            {/* Left Column - Title, Description, CTA */}
-            <div className="lg:sticky lg:top-8">
-              {title && (
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                  {title.includes(' ') ? (
-                    <>
-                      {title.split(' ').slice(0, -1).join(' ')}{' '}
-                      <span className="text-orange-500">{title.split(' ').slice(-1)}</span>
-                    </>
-                  ) : (
-                    <span className="text-orange-500">{title}</span>
-                  )}
-                </h2>
-              )}
-              {subtitle && (
-                <p className="text-xl text-gray-600 mb-8">
-                  {subtitle}
-                </p>
-              )}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Left Column - Title & CTA */}
+            <div className="bg-orange-50 rounded-4xl p-8 flex flex-col">
+              <div className="flex-1">
+                {title && (
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    {title}
+                  </h2>
+                )}
+              </div>
 
-              {/* Have more questions CTA */}
-              <div className="bg-gray-100 rounded-xl p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">
+              <div className="bg-white rounded-2xl p-6 mt-2">
+                <h3 className="font-semibold text-gray-800 mb-2">
                   Have more questions?
                 </h3>
-                <p className="text-gray-600 mb-6">
+                <p className="text-sm text-gray-600 mb-4">
                   Our team is ready to help with your move.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Link
-                    href="/contact-us"
-                    className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center"
-                  >
-                    Contact Us
-                  </Link>
-                  <a
-                    href={`tel:${phone}`}
-                    className="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center"
-                  >
-                    Call {phoneDisplay}
-                  </a>
-                </div>
+                <a
+                  href={`tel:${content.site.phone.replace(/[^0-9]/g, '')}`}
+                  className="flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  Call ({content.site.phone.slice(0,3)}) {content.site.phone.slice(4,7)}-{content.site.phone.slice(8)}
+                </a>
               </div>
             </div>
 
             {/* Right Column - FAQ Accordion */}
-            <div>
+            <div className="bg-gray-50 rounded-4xl p-8">
               <FAQAccordion />
             </div>
           </div>
@@ -155,19 +146,12 @@ export default function FAQSection({
 
   // Default full-width layout
   return (
-    <section className="py-20">
+    <section className="pt-20">
       <div className="container mx-auto">
         {title && (
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              {title.includes(' ') ? (
-                <>
-                  {title.split(' ').slice(0, -1).join(' ')}{' '}
-                  <span className="text-orange-500">{title.split(' ').slice(-1)}</span>
-                </>
-              ) : (
-                <span className="text-orange-500">{title}</span>
-              )}
+              {title}
             </h2>
             {subtitle && (
               <p className="text-xl text-gray-600">
@@ -177,57 +161,23 @@ export default function FAQSection({
           </div>
         )}
 
-        <div className="mx-auto">
+        <div className="bg-gray-50 rounded-4xl p-8">
           <FAQAccordion />
-
-          {/* Contact CTA Card */}
-          {showContactCTA && (
-            <div className="text-center mt-16">
-              <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm">
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                  Still Have Questions?
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  Our team is here to help! Contact us for personalized assistance with your move.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link
-                    href="/contact-us"
-                    className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors"
-                  >
-                    Contact Us
-                  </Link>
-                  <Link
-                    href="/quote"
-                    className="border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-semibold py-3 px-8 rounded-lg transition-colors"
-                  >
-                    Get Free Quote
-                  </Link>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Simple CTA Buttons */}
-          {!showContactCTA && (
-            <div className="text-center mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact-us"
-                className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors"
-              >
-                Contact Us
-              </Link>
-              {showViewAllLink && (
-                <Link
-                  href="/faq"
-                  className="border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-semibold py-3 px-8 rounded-lg transition-colors"
-                >
-                  View All FAQs
-                </Link>
-              )}
-            </div>
-          )}
         </div>
+
+        {showViewAllLink && (
+          <div className="text-center mt-8">
+            <Link
+              href="/faq"
+              className="inline-flex items-center text-orange-500 hover:text-orange-600 font-medium"
+            >
+              View All FAQs
+              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   )

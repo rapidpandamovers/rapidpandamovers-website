@@ -20,7 +20,6 @@ images:
   - "/images/blog/2024/07/efficient-miami-fl-packing-unpacking-tips/loc-view-of-miami-skyline-from-coral-gables--2.webp"
   - "/images/blog/2024/07/efficient-miami-fl-packing-unpacking-tips/svc-a-collection-of-labeled-cardboard-boxes--2.webp"
   - "/images/blog/2024/07/efficient-miami-fl-packing-unpacking-tips/svc-close-up-of-a-cardboard-box-filled-with--1.webp"
-
 service_link: "/miami-packing-services"
 location_link: "/miami-movers"
 status: "completed"

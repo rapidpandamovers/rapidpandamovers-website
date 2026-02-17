@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/05/moving-to-el-portal-what-you-need-to-know/loc-scenic-aerial-shot-of-a-sprawling-reside-1.webp"
   - "/images/blog/2029/05/moving-to-el-portal-what-you-need-to-know/svc-a-delivery-truck-driving-along-a-coastal-2.webp"
   - "/images/blog/2029/05/moving-to-el-portal-what-you-need-to-know/svc-high-angle-view-of-an-asda-delivery-truc-1.webp"
-
 service_link: "/el-portal-local-moving"
 location_link: "/el-portal-movers"
 status: "pending"

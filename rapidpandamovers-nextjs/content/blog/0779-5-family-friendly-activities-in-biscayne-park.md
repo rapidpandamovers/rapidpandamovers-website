@@ -2,7 +2,7 @@
 id: 779
 title: "5 Family-Friendly Activities in Biscayne Park"
 slug: "5-family-friendly-activities-in-biscayne-park"
-excerpt: "Discover 5 family-friendly activities near Biscayne Park including parks, playgrounds, nature trails, and community events perfect for kids of all ages."
+excerpt: "Just moved to Biscayne Park with kids? This small village packs more family fun into its tree-lined streets than you might expect."
 date: "2029-04-18"
 updated: "2029-04-18"
 readTime: "5 min read"
@@ -17,7 +17,6 @@ images:
   - "/images/blog/2029/04/5-family-friendly-activities-in-biscayne-park/a-family-joyfully-unpacking-boxes-in-the-2.webp"
   - "/images/blog/2029/04/5-family-friendly-activities-in-biscayne-park/a-family-of-three-takes-a-joyful-selfie--3.webp"
   - "/images/blog/2029/04/5-family-friendly-activities-in-biscayne-park/family-moving-into-their-new-home-surrou-1.webp"
-
 service_link: null
 location_link: "/biscayne-park-movers"
 status: "pending"

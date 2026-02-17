@@ -18,8 +18,7 @@ images:
   - "/images/blog/2028/11/the-newcomers-guide-to-miami-gardens-living/loc-colorful-graffiti-of-monopoly-character--2.webp"
   - "/images/blog/2028/11/the-newcomers-guide-to-miami-gardens-living/svc-a-blue-volvo-truck-parked-outside-a-ware-2.webp"
   - "/images/blog/2028/11/the-newcomers-guide-to-miami-gardens-living/svc-excavator-loading-materials-into-a-heavy-1.webp"
-
-service_link: /local-moving
+service_link: "/local-moving"
 location_link: "/miami-gardens-movers"
 status: "pending"
 needs_ai_image: false

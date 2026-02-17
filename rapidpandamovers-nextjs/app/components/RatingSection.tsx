@@ -1,5 +1,5 @@
 import { Star } from 'lucide-react'
-import reviewsData from '@/data/reviews.json'
+import content from '@/data/content.json'
 
 interface PlatformRating {
   name: string
@@ -39,19 +39,19 @@ const BBBIcon = () => (
 const defaultRatings: PlatformRating[] = [
   {
     name: 'Google',
-    rating: String(reviewsData.platforms.google.rating),
+    rating: String(content.reviews.platforms.google.rating),
     icon: <GoogleIcon />,
     color: '#4285F4'
   },
   {
     name: 'Yelp',
-    rating: String(reviewsData.platforms.yelp.rating),
+    rating: String(content.reviews.platforms.yelp.rating),
     icon: <YelpIcon />,
     color: '#D32323'
   },
   {
     name: 'BBB',
-    rating: String(reviewsData.platforms.bbb.rating),
+    rating: String(content.reviews.platforms.bbb.rating),
     icon: <BBBIcon />,
     color: '#005A78'
   }
@@ -63,9 +63,9 @@ export default function RatingSection({
   className = ''
 }: RatingSectionProps) {
   return (
-    <section className={`-mt-16 pb-8 relative z-0 ${className}`}>
+    <section className={`-mt-8 relative z-[-1] ${className}`}>
       <div className="container mx-auto">
-        <div className="bg-gray-100 rounded-b-4xl px-6 pt-16 pb-6 md:px-8">
+        <div className="bg-gray-100 rounded-b-4xl px-6 pt-14 pb-6 md:px-8">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
           {/* Title */}
           <h2 className="text-xl md:text-2xl font-bold text-gray-900 lg:flex-shrink-0">

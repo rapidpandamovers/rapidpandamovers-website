@@ -19,7 +19,6 @@ images:
   - "/images/blog/2025/02/the-complete-guide-to-student-moving-in-february/group-of-college-students-enjoying-a-car-2.webp"
   - "/images/blog/2025/02/the-complete-guide-to-student-moving-in-february/group-of-college-students-playing-poker--4.webp"
   - "/images/blog/2025/02/the-complete-guide-to-student-moving-in-february/students-hanging-out-in-a-cozy-dorm-room-3.webp"
-
 service_link: "/student-moving"
 location_link: null
 status: "pending"

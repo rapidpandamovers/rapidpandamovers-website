@@ -17,7 +17,6 @@ images:
   - "/images/blog/2028/08/9-iconic-miami-buildings-worth-knowing-about/a-vibrant-view-of-the-art-deco-marlin-ho-3.webp"
   - "/images/blog/2028/08/9-iconic-miami-buildings-worth-knowing-about/an-exterior-view-of-parisian-hotel-with--2.webp"
   - "/images/blog/2028/08/9-iconic-miami-buildings-worth-knowing-about/colony-hotel-in-miami-beach-iconic-art-d-1.webp"
-
 service_link: null
 location_link: null
 status: "pending"

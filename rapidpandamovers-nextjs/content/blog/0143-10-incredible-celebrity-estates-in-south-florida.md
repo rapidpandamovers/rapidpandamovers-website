@@ -2,7 +2,7 @@
 id: 143
 title: "10 Incredible Celebrity Estates in South Florida"
 slug: "10-incredible-celebrity-estates-in-south-florida"
-excerpt: "Discover South Florida's most notable celebrity estates, from Star Island mansions to Miami Beach penthouses and exclusive island communities."
+excerpt: "Miami attracts the rich and famous, and their homes are as impressive as you'd expect."
 date: "2025-03-19"
 updated: "2025-03-19"
 readTime: "5 min read"
@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/03/10-incredible-celebrity-estates-in-south-florida/a-grand-red-mansion-showcasing-classic-c-3.webp"
   - "/images/blog/2025/03/10-incredible-celebrity-estates-in-south-florida/stunning-traditional-mansion-exterior-wi-1.webp"
   - "/images/blog/2025/03/10-incredible-celebrity-estates-in-south-florida/stunning-wooden-manor-surrounded-by-well-2.webp"
-
 service_link: "/miami-full-service-moving"
 location_link: "/miami-movers"
 status: "pending"

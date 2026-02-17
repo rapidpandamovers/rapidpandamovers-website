@@ -257,41 +257,43 @@ export default function ChecklistSection({
 
     return (
       <section className={`py-16 ${className}`}>
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              Moving <span className="text-orange-500">Checklist</span>
+              Moving Checklist
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Stay organized with our comprehensive moving checklist. Never forget a task with our timeline-based approach.
             </p>
           </div>
 
-          {/* Feature Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto mb-10">
-            {features.map((feature, index) => {
-              const IconComponent = feature.icon
-              return (
-                <div key={index} className="text-center">
-                  <div className="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="w-7 h-7 text-orange-500" />
+          <div className="bg-orange-50 rounded-4xl p-8">
+            {/* Feature Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              {features.map((feature, index) => {
+                const IconComponent = feature.icon
+                return (
+                  <div key={index} className="bg-white rounded-2xl p-6 text-center">
+                    <div className="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <IconComponent className="w-7 h-7 text-orange-500" />
+                    </div>
+                    <h3 className="font-bold text-gray-800 mb-1">{feature.title}</h3>
+                    <p className="text-sm text-gray-600">{feature.desc}</p>
                   </div>
-                  <h3 className="font-bold text-gray-800 mb-1">{feature.title}</h3>
-                  <p className="text-sm text-gray-600">{feature.desc}</p>
-                </div>
-              )
-            })}
-          </div>
+                )
+              })}
+            </div>
 
-          {/* CTA */}
-          <div className="text-center">
-            <Link
-              href="/moving-checklist"
-              className="inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-lg transition-colors"
-            >
-              View Full Checklist
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
+            {/* CTA */}
+            <div className="text-center">
+              <Link
+                href="/moving-checklist"
+                className="inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-lg transition-colors"
+              >
+                View Full Checklist
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -302,7 +304,7 @@ export default function ChecklistSection({
   const totalProgress = getTotalProgress()
 
   return (
-    <section className={`py-16 print:py-0 ${className}`}>
+    <section className={`pt-20 print:py-0 ${className}`}>
       <div className="container mx-auto print:max-w-none">
         {/* PDF Content Wrapper */}
         <div ref={pdfContentRef} className="pdf-content">
@@ -335,45 +337,25 @@ export default function ChecklistSection({
         </div>
 
         {/* Screen Header - Hidden when printing */}
-        <div className="text-center mb-12 no-print">
-          <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
-            <ClipboardList className="w-8 h-8 text-orange-500" />
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            {title.includes(' ') ? (
-              <>
-                {title.split(' ').slice(0, -1).join(' ')}{' '}
-                <span className="text-orange-500">{title.split(' ').slice(-1)}</span>
-              </>
-            ) : (
-              <span className="text-orange-500">{title}</span>
-            )}
-          </h2>
-          {subtitle && (
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              {subtitle}
-            </p>
-          )}
+        <div className="no-print mb-12 space-y-6">
 
-          {/* Overall Progress */}
-          <div className="max-w-md mx-auto mb-8">
-            <div className="flex items-center justify-between text-sm text-gray-600 mb-2">
-              <span>Overall Progress</span>
-              <span className="font-semibold">{totalProgress.completed} of {totalProgress.total} tasks</span>
+          {/* Progress + Actions Card */}
+          <div className="bg-gray-50 rounded-4xl p-8 md:p-10">
+            {/* Progress */}
+            <div className="flex items-baseline justify-between mb-3">
+              <span className="text-3xl font-bold text-gray-800">Progress: {totalProgress.percentage}%</span>
+              <span className="text-sm text-gray-500 font-medium">{totalProgress.completed} of {totalProgress.total} tasks</span>
             </div>
-            <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
+            <div className="h-4 bg-white rounded-full overflow-hidden mb-6">
               <div
                 className="h-full bg-gradient-to-r from-orange-400 to-orange-500 rounded-full transition-all duration-500"
                 style={{ width: `${totalProgress.percentage}%` }}
               />
             </div>
-            <p className="text-right text-sm font-medium text-orange-600 mt-1">{totalProgress.percentage}% complete</p>
-          </div>
 
-          {/* Actions */}
-          <div className="flex flex-wrap justify-center gap-4">
+            {/* Actions */}
             {showPrintButton && (
-              <>
+              <div className="flex flex-wrap justify-center gap-3 mb-6">
                 <button
                   onClick={handleDownloadPDF}
                   disabled={isGenerating}
@@ -387,47 +369,44 @@ export default function ChecklistSection({
                   className="inline-flex items-center px-5 py-2.5 border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-semibold rounded-lg transition-colors"
                 >
                   <Printer className="w-5 h-5 mr-2" />
-                  Print Checklist
+                  Print
                 </button>
-              </>
+              </div>
             )}
-          </div>
-        </div>
 
-        {/* Priority Legend - Screen only */}
-        <div className="flex flex-wrap justify-center gap-4 mb-8 no-print">
-          <div className="text-sm text-gray-600">Priority levels:</div>
-          <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-100 text-red-700">
-            <AlertCircle className="w-3 h-3 mr-1" />
-            High - Do first
-          </span>
-          <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-yellow-100 text-yellow-700">
-            <Clock className="w-3 h-3 mr-1" />
-            Medium
-          </span>
-          <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-orange-100 text-orange-700">
-            <Info className="w-3 h-3 mr-1" />
-            Low - Can wait
-          </span>
+            {/* Priority Legend */}
+            <div className="flex flex-wrap justify-center gap-3 pt-6 border-t border-gray-200">
+              <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-100 text-red-700">
+                <AlertCircle className="w-3 h-3 mr-1" />
+                High - Do first
+              </span>
+              <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-yellow-100 text-yellow-700">
+                <Clock className="w-3 h-3 mr-1" />
+                Medium
+              </span>
+              <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-orange-100 text-orange-700">
+                <Info className="w-3 h-3 mr-1" />
+                Low - Can wait
+              </span>
+            </div>
+          </div>
         </div>
 
         {/* Categories Grid */}
         {categories.length > 0 && (
+          <div className="print:bg-transparent print:p-0 print:rounded-none">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 print:gap-4 print:grid-cols-2">
             {categories.map((category, categoryIndex) => {
               const progress = getCategoryProgress(categoryIndex, category.tasks)
               return (
                 <div
                   key={categoryIndex}
-                  className="checklist-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow print:shadow-none print:rounded-lg"
+                  className="checklist-card bg-white rounded-4xl overflow-hidden border border-gray-50 print:shadow-none print:rounded-lg"
                 >
                   {/* Category Header */}
-                  <div className="checklist-header bg-gradient-to-r from-gray-50 to-white p-6 print:p-3 border-b border-gray-100">
+                  <div className="checklist-header bg-gray-50 p-6 print:p-3 border-b border-gray-50">
                     <div className="flex items-start justify-between">
                       <div className="flex items-center">
-                        <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center mr-4 no-print">
-                          <Calendar className="w-5 h-5 text-orange-500" />
-                        </div>
                         <div>
                           <h3 className="text-lg font-bold text-gray-800 print:text-base">
                             {category.title}
@@ -454,7 +433,7 @@ export default function ChecklistSection({
                   </div>
 
                   {/* Tasks List */}
-                  <div className="p-4 print:p-2">
+                  <div className="p-6 print:p-2">
                     <div className="space-y-2 print:space-y-1">
                       {sortTasksByPriority(category.tasks).map((task) => {
                         const isChecked = checkedTasks[`${categoryIndex}-${task.originalIndex}`]
@@ -508,6 +487,7 @@ export default function ChecklistSection({
                 </div>
               )
             })}
+          </div>
           </div>
         )}
 

@@ -2,7 +2,7 @@
 id: 978
 title: "Best Neighborhoods in Miami Springs for Families"
 slug: "best-neighborhoods-in-miami-springs-for-families"
-excerpt: "Best neighborhoods in Miami Springs for families. Discover historic charm and tree-lined streets."
+excerpt: "Best neighborhoods in Miami Springs for families. Discover historic charm and tree-lined streets..."
 date: "2030-07-25"
 updated: "2030-07-25"
 readTime: "4 min read"
@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/07/best-neighborhoods-in-miami-springs-for-families/colorful-scene-capturing-miami-beach-s-h-2.webp"
   - "/images/blog/2030/07/best-neighborhoods-in-miami-springs-for-families/empty-streets-with-palm-trees-and-modern-1.webp"
   - "/images/blog/2030/07/best-neighborhoods-in-miami-springs-for-families/view-of-miami-skyline-from-coral-gables--3.webp"
-
 service_link: null
 location_link: "/miami-springs-movers"
 status: "pending"

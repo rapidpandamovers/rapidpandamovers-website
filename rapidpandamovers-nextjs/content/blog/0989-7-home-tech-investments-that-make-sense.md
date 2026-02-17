@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/08/7-home-tech-investments-that-make-sense/a-sleek-smart-speaker-with-an-integrated-2.webp"
   - "/images/blog/2030/08/7-home-tech-investments-that-make-sense/bluetooth-speaker-and-smartphone-playing-1.webp"
   - "/images/blog/2030/08/7-home-tech-investments-that-make-sense/philips-smart-hub-beside-a-leafy-plant-i-4.webp"
-
 service_link: null
 location_link: null
 status: "completed"

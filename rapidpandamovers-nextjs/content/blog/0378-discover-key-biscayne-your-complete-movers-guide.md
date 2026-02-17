@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/09/discover-key-biscayne-your-complete-movers-guide/a-young-child-playfully-hides-behind-a-t-2.webp"
   - "/images/blog/2026/09/discover-key-biscayne-your-complete-movers-guide/cape-florida-lighthouse-surrounded-by-be-3.webp"
   - "/images/blog/2026/09/discover-key-biscayne-your-complete-movers-guide/fashionable-woman-in-bikini-and-leather--4.webp"
-
 service_link: null
 location_link: "/key-biscayne-movers"
 status: "complete"

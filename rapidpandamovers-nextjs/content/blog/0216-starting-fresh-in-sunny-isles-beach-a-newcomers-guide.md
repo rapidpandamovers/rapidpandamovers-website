@@ -19,7 +19,6 @@ images:
   - "/images/blog/2025/09/starting-fresh-in-sunny-isles-beach-a-newcomers-guide/aerial-view-of-modern-sunny-isles-beach--4.webp"
   - "/images/blog/2025/09/starting-fresh-in-sunny-isles-beach-a-newcomers-guide/contemporary-house-in-brisbane-surrounde-5.webp"
   - "/images/blog/2025/09/starting-fresh-in-sunny-isles-beach-a-newcomers-guide/stunning-aerial-view-of-the-pier-extendi-3.webp"
-
 service_link: null
 location_link: "/sunny-isles-beach-movers"
 status: "pending"

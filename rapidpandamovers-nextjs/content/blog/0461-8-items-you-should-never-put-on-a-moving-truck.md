@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/04/8-items-you-should-never-put-on-a-moving-truck/adult-man-using-red-tape-to-seal-a-large-2.webp"
   - "/images/blog/2027/04/8-items-you-should-never-put-on-a-moving-truck/crop-anonymous-guy-in-casual-clothes-usi-3.webp"
   - "/images/blog/2027/04/8-items-you-should-never-put-on-a-moving-truck/labeled-cardboard-boxes-for-summer-cloth-1.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "complete"

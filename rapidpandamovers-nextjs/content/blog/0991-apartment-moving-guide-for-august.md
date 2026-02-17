@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/08/apartment-moving-guide-for-august/a-contemporary-skyscraper-in-a-cityscape-4.webp"
   - "/images/blog/2030/08/apartment-moving-guide-for-august/a-tall-residential-building-showcasing-s-1.webp"
   - "/images/blog/2030/08/apartment-moving-guide-for-august/high-rise-residential-building-in-izmir--3.webp"
-
 service_link: "/apartment-moving"
 location_link: null
 status: "pending"

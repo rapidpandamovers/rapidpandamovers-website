@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/12/miami-for-new-residents-a-complete-resource/captivating-view-of-miami-s-iconic-skyli-2.webp"
   - "/images/blog/2029/12/miami-for-new-residents-a-complete-resource/gorgeous-night-view-of-miami-s-illuminat-4.webp"
   - "/images/blog/2029/12/miami-for-new-residents-a-complete-resource/luxurious-miami-apartments-with-stunning-1.webp"
-
 service_link: null
 location_link: "/miami-movers"
 status: "pending"

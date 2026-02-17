@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/06/settling-into-hialeah-what-new-residents-need-to-know/loc-scenic-aerial-shot-of-a-sprawling-reside-1.webp"
   - "/images/blog/2030/06/settling-into-hialeah-what-new-residents-need-to-know/svc-a-delivery-truck-driving-along-a-coastal-2.webp"
   - "/images/blog/2030/06/settling-into-hialeah-what-new-residents-need-to-know/svc-a-u-haul-moving-truck-parked-on-gravel-w-1.webp"
-
 service_link: "/hialeah-local-moving"
 location_link: "/hialeah-movers"
 status: "pending"

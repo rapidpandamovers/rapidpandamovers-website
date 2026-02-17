@@ -45,7 +45,7 @@ export default function ServiceSection({ location, variant = 'preview', hideHead
   // Full variant: show all services
   if (variant === 'full') {
     return (
-      <section className="py-0">
+      <section className="pt-20">
         <div className="container mx-auto">
           {!hideHeader && (
             <div className="text-center mb-16">
@@ -110,7 +110,7 @@ export default function ServiceSection({ location, variant = 'preview', hideHead
       : 'We offer a complete range of moving services to meet all your relocation needs';
 
     return (
-      <section className="py-20">
+      <section className="pt-20">
         <div className="container mx-auto">
           {!hideHeader && (
             <div className="text-center mb-16">
@@ -146,8 +146,9 @@ export default function ServiceSection({ location, variant = 'preview', hideHead
             ))}
           </div>
           <div className="text-center mt-12">
-            <Link href={`/services?location=${location.slug}`} className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+            <Link href={`/services/${location.slug}`} className="inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
               View All Services in {location.name}
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </div>
         </div>
@@ -159,10 +160,10 @@ export default function ServiceSection({ location, variant = 'preview', hideHead
   const previewServices = activeServices.slice(0, 6);
 
   return (
-    <section className="py-20">
+    <section className="pt-20">
       <div className="container mx-auto">
         {!hideHeader && (
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
               {title || <>Our Moving <span className="text-orange-500">Services</span></>}
             </h2>
@@ -197,8 +198,9 @@ export default function ServiceSection({ location, variant = 'preview', hideHead
         </div>
 
         <div className="text-center mt-12">
-          <Link href="/services" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+          <Link href="/services" className="inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
             View All Services
+            <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>

@@ -2,7 +2,7 @@
 id: 184
 title: "June Apartment Moving Advice for Families"
 slug: "june-apartment-moving-advice-for-families"
-excerpt: "Planning an apartment move in June? Get essential tips for summer relocations in Miami, from elevator reservations to weather timing."
+excerpt: "June is here, and if you're planning a move, you're likely thinking about apartment moving."
 date: "2025-06-23"
 updated: "2025-06-23"
 readTime: "4 min read"
@@ -19,7 +19,6 @@ images:
   - "/images/blog/2025/06/june-apartment-moving-advice-for-families/a-striking-black-and-white-photo-of-a-mo-1.webp"
   - "/images/blog/2025/06/june-apartment-moving-advice-for-families/majestic-view-of-tokyo-metropolitan-gove-3.webp"
   - "/images/blog/2025/06/june-apartment-moving-advice-for-families/upward-view-of-modern-skyscrapers-with-b-4.webp"
-
 service_link: "/apartment-moving"
 location_link: null
 status: "pending"

@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/07/9-a-list-celebrity-properties-in-miami-dade/elegant-black-and-white-photo-of-a-grand-2.webp"
   - "/images/blog/2029/07/9-a-list-celebrity-properties-in-miami-dade/stunning-mansion-with-ivy-facade-overloo-5.webp"
   - "/images/blog/2029/07/9-a-list-celebrity-properties-in-miami-dade/vintage-victorian-interior-with-a-decora-3.webp"
-
 service_link: null
 location_link: null
 status: "pending"

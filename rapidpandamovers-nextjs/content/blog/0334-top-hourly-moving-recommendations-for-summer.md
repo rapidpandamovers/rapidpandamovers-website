@@ -17,7 +17,6 @@ images:
   - "/images/blog/2026/06/top-hourly-moving-recommendations-for-summer/confident-young-woman-carrying-cardboard-3.webp"
   - "/images/blog/2026/06/top-hourly-moving-recommendations-for-summer/labeled-cardboard-boxes-for-summer-cloth-1.webp"
   - "/images/blog/2026/06/top-hourly-moving-recommendations-for-summer/man-packing-kitchenware-into-labeled-box-4.webp"
-
 service_link: "/hourly-moving"
 location_link: null
 status: "pending"

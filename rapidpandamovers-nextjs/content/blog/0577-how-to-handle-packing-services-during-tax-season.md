@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/01/how-to-handle-packing-services-during-tax-season/a-person-sealing-a-cardboard-box-with-a--1.webp"
   - "/images/blog/2028/01/how-to-handle-packing-services-during-tax-season/crop-faceless-male-sealing-packed-carton-2.webp"
   - "/images/blog/2028/01/how-to-handle-packing-services-during-tax-season/unrecognizable-man-sealing-box-with-duck-4.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "completed"

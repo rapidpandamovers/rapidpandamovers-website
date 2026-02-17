@@ -18,8 +18,7 @@ images:
   - "/images/blog/2030/09/10-clever-storage-solutions-for-your-new-home/outdoor-view-of-a-metal-shipping-contain-3.webp"
   - "/images/blog/2030/09/10-clever-storage-solutions-for-your-new-home/stack-of-internal-hard-disk-drives-for-d-5.webp"
   - "/images/blog/2030/09/10-clever-storage-solutions-for-your-new-home/stylish-wooden-lockers-featuring-heart-s-2.webp"
-
-service_link: null
+service_link: "/storage-solutions"
 location_link: null
 status: "pending"
 needs_ai_image: false

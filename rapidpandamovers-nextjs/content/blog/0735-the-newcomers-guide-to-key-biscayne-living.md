@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/01/the-newcomers-guide-to-key-biscayne-living/a-couple-enjoying-a-serene-moment-on-a-t-3.webp"
   - "/images/blog/2029/01/the-newcomers-guide-to-key-biscayne-living/a-fashionable-woman-in-a-bikini-enjoys-t-2.webp"
   - "/images/blog/2029/01/the-newcomers-guide-to-key-biscayne-living/young-woman-in-summer-wear-lounging-by-p-1.webp"
-
 service_link: null
 location_link: "/key-biscayne-movers"
 status: "pending"

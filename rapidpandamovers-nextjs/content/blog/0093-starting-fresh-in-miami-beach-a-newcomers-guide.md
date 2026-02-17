@@ -18,7 +18,6 @@ images:
   - "/images/blog/2024/11/starting-fresh-in-miami-beach-a-newcomers-guide/beautiful-sunny-day-at-miami-beach-featu-1.webp"
   - "/images/blog/2024/11/starting-fresh-in-miami-beach-a-newcomers-guide/explore-the-lively-miami-beach-with-its--4.webp"
   - "/images/blog/2024/11/starting-fresh-in-miami-beach-a-newcomers-guide/vibrant-rainbow-themed-lifeguard-tower-o-2.webp"
-
 service_link: null
 location_link: "/miami-beach-movers"
 status: "completed"

@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/07/welcome-to-hialeah-a-moving-guide/beautiful-white-houses-with-a-tropical-s-2.webp"
   - "/images/blog/2026/07/welcome-to-hialeah-a-moving-guide/gorgeous-night-view-of-miami-s-illuminat-5.webp"
   - "/images/blog/2026/07/welcome-to-hialeah-a-moving-guide/scenic-aerial-shot-of-a-sprawling-reside-3.webp"
-
 service_link: "/hialeah-local-moving"
 location_link: "/hialeah-movers"
 status: "pending"

@@ -20,7 +20,6 @@ images:
   - "/images/blog/2026/12/5-family-friendly-moving-strategies-that-work/a-family-is-seen-moving-into-a-new-home--2.webp"
   - "/images/blog/2026/12/5-family-friendly-moving-strategies-that-work/a-joyful-family-sitting-together-with-mo-5.webp"
   - "/images/blog/2026/12/5-family-friendly-moving-strategies-that-work/family-moving-into-their-new-home-surrou-4.webp"
-
 service_link: "/residential-moving"
 location_link: null
 status: "pending"

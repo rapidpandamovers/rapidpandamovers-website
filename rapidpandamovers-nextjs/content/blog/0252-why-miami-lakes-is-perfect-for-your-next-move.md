@@ -17,7 +17,6 @@ images:
   - "/images/blog/2025/11/why-miami-lakes-is-perfect-for-your-next-move/beautiful-aerial-view-of-a-residential-n-1.webp"
   - "/images/blog/2025/11/why-miami-lakes-is-perfect-for-your-next-move/scenic-aerial-shot-of-a-sprawling-reside-5.webp"
   - "/images/blog/2025/11/why-miami-lakes-is-perfect-for-your-next-move/tilt-shift-aerial-photo-of-a-suburban-ne-4.webp"
-
 service_link: null
 location_link: "/miami-lakes-movers"
 status: "completed"

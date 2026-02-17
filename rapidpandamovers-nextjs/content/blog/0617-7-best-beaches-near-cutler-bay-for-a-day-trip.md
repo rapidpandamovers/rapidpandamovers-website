@@ -6,7 +6,7 @@ excerpt: "Discover the best beaches near Cutler Bay for a day trip, from Homeste
 date: "2028-04-05"
 updated: "2028-04-05"
 readTime: "4 min read"
-category: "Lifestyle"
+category: "Same Building Moving"
 image_folder: "/images/blog/2028/04/7-best-beaches-near-cutler-bay-for-a-day-trip"
 featured: "/images/blog/2028/04/7-best-beaches-near-cutler-bay-for-a-day-trip/bright-lifeguard-tower-on-miami-beach-wi-3.webp"
 image_keywords:
@@ -18,8 +18,7 @@ images:
   - "/images/blog/2028/04/7-best-beaches-near-cutler-bay-for-a-day-trip/charming-beach-homes-on-belleair-beach-f-1.webp"
   - "/images/blog/2028/04/7-best-beaches-near-cutler-bay-for-a-day-trip/scenic-view-of-cape-florida-lighthouse-s-4.webp"
   - "/images/blog/2028/04/7-best-beaches-near-cutler-bay-for-a-day-trip/vibrant-hotel-facade-with-palm-trees-in--2.webp"
-
-service_link: null
+service_link: "/same-building-moving"
 location_link: "/cutler-bay-movers"
 status: "pending"
 needs_ai_image: false

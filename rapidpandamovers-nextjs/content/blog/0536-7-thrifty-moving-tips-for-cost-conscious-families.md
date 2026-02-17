@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/09/7-thrifty-moving-tips-for-cost-conscious-families/people-loading-supplies-onto-a-truck-in--3.webp"
   - "/images/blog/2027/09/7-thrifty-moving-tips-for-cost-conscious-families/semi-truck-parked-at-a-loading-dock-with-5.webp"
   - "/images/blog/2027/09/7-thrifty-moving-tips-for-cost-conscious-families/trucks-loaded-with-goods-parked-on-a-dir-4.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "pending"

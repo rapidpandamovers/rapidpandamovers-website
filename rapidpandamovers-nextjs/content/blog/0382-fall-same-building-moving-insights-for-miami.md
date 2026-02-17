@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/10/fall-same-building-moving-insights-for-miami/a-couple-carrying-moving-boxes-indoors-s-1.webp"
   - "/images/blog/2026/10/fall-same-building-moving-insights-for-miami/joyful-couple-flexing-muscles-while-unpa-2.webp"
   - "/images/blog/2026/10/fall-same-building-moving-insights-for-miami/two-professional-movers-in-an-empty-apar-4.webp"
-
 service_link: "/same-building-moving"
 location_link: null
 status: "pending"

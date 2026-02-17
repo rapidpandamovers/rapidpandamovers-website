@@ -17,7 +17,6 @@ images:
   - "/images/blog/2028/11/same-building-moves-why-theyre-harder-than-you-think/cityscape-featuring-a-high-rise-building-1.webp"
   - "/images/blog/2028/11/same-building-moves-why-theyre-harder-than-you-think/close-up-of-an-aged-urban-apartment-buil-2.webp"
   - "/images/blog/2028/11/same-building-moves-why-theyre-harder-than-you-think/exterior-view-of-a-modern-apartment-buil-3.webp"
-
 service_link: "/same-building-moving"
 location_link: null
 status: "pending"

@@ -2,7 +2,7 @@
 id: 1042
 title: "Winter Special Needs Moving Strategies in Miami"
 slug: "winter-special-needs-moving-strategies-in-miami"
-excerpt: "Essential winter moving strategies for families with special needs. Learn how to coordinate medical equipment transport, maintain accessibility, and."
+excerpt: "Essential winter moving strategies for families with special needs. Learn how to coordinate medical equipment transport, maintain accessibility..."
 date: "2030-12-23"
 updated: "2030-12-23"
 readTime: "6 min read"
@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/12/winter-special-needs-moving-strategies-in-miami/a-clean-and-modern-hospital-room-equippe-3.webp"
   - "/images/blog/2030/12/winter-special-needs-moving-strategies-in-miami/a-healthcare-worker-vaccinates-a-young-b-2.webp"
   - "/images/blog/2030/12/winter-special-needs-moving-strategies-in-miami/close-up-of-a-woman-in-a-wheelchair-reac-1.webp"
-
 service_link: "/special-needs-moving"
 location_link: null
 status: "complete"

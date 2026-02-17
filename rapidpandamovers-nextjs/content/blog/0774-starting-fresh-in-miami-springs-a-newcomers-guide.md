@@ -20,7 +20,6 @@ images:
   - "/images/blog/2029/04/starting-fresh-in-miami-springs-a-newcomers-guide/svc-aerial-shot-of-a-crowded-urban-parking-l-3.webp"
   - "/images/blog/2029/04/starting-fresh-in-miami-springs-a-newcomers-guide/svc-excavator-loading-materials-into-a-heavy-2.webp"
   - "/images/blog/2029/04/starting-fresh-in-miami-springs-a-newcomers-guide/svc-vintage-truck-carrying-heavy-cargo-bags--1.webp"
-
 service_link: "/miami-springs-local-moving"
 location_link: "/miami-springs-movers"
 status: "pending"

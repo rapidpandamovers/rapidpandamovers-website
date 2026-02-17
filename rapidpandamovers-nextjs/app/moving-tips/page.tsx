@@ -23,15 +23,16 @@ export default function MovingTipsPage() {
 
       {/* Blog Posts */}
       <BlogSection
+        variant="compact"
         categoryFilter="Moving Tips"
         title="Moving Tips Blog Posts"
         subtitle="Read our latest moving tips and advice from the experts"
         showFeatured={false}
         showCategories={false}
-        showViewMore={true}
-        viewMorePosition="bottom"
-        viewMoreLink="/blog/category/moving-tips"
+        viewMoreTitle="More Moving Tips"
+        viewMoreSubtitle="Browse our full collection of moving tips and advice"
         viewMoreButtonText="View All Moving Tips Posts"
+        viewMoreLink="/blog/category/moving-tips"
       />
 
       {/* Resources Section */}

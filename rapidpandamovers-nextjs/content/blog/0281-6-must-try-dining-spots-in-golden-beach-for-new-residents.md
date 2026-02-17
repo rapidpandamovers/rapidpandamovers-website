@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/02/6-must-try-dining-spots-in-golden-beach-for-new-residents/exquisite-seafood-presentation-with-crab-1.webp"
   - "/images/blog/2026/02/6-must-try-dining-spots-in-golden-beach-for-new-residents/luxurious-seafood-platter-featuring-cavi-4.webp"
   - "/images/blog/2026/02/6-must-try-dining-spots-in-golden-beach-for-new-residents/luxurious-seafood-platter-with-lobster-a-3.webp"
-
 service_link: null
 location_link: "/golden-beach-movers"
 status: "pending"

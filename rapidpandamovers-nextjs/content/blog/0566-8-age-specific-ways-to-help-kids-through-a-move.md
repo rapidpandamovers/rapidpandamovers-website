@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/12/8-age-specific-ways-to-help-kids-through-a-move/a-joyful-child-with-socks-on-feet-playin-4.webp"
   - "/images/blog/2027/12/8-age-specific-ways-to-help-kids-through-a-move/kids-enjoying-creative-time-drawing-on-a-2.webp"
   - "/images/blog/2027/12/8-age-specific-ways-to-help-kids-through-a-move/young-girl-engrossed-in-drawing-on-a-car-1.webp"
-
 service_link: "/residential-moving"
 location_link: null
 status: "pending"

@@ -2,7 +2,7 @@
 id: 403
 title: "Summer Commercial Moving Tips for Miami Residents"
 slug: "summer-commercial-moving-tips-for-miami-residents"
-excerpt: "July is here, and if you're planning a business relocation, summer brings unique challenges for Miami business moves. Here's how to prepare."
+excerpt: "July is here, and if you're planning a move, you're likely thinking about commercial moving."
 date: "2026-11-20"
 updated: "2026-11-20"
 readTime: "4 min read"
@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/11/summer-commercial-moving-tips-for-miami-residents/loc-dramatic-black-and-white-photo-of-the-mi-1.webp"
   - "/images/blog/2026/11/summer-commercial-moving-tips-for-miami-residents/svc-a-man-with-afro-hair-moves-a-teal-sofa-t-2.webp"
   - "/images/blog/2026/11/summer-commercial-moving-tips-for-miami-residents/svc-two-movers-load-a-van-with-furniture-dur-1.webp"
-
 service_link: "/commercial-moving"
 location_link: null
 status: "pending"

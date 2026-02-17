@@ -99,7 +99,7 @@ export default function PricingSection({ houseSizes, originCity, originZip, dest
   });
 
   return (
-    <section className="py-20 bg-white">
+    <section className="pt-20 bg-white">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">

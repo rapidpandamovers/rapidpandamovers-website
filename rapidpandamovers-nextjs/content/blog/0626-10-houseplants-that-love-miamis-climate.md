@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/04/10-houseplants-that-love-miamis-climate/vertical-cacti-reaching-toward-a-greenho-5.webp"
   - "/images/blog/2028/04/10-houseplants-that-love-miamis-climate/vibrant-monstera-leaves-in-colombian-jun-1.webp"
   - "/images/blog/2028/04/10-houseplants-that-love-miamis-climate/vibrant-yellow-cymbidium-orchids-in-an-o-3.webp"
-
 service_link: null
 location_link: null
 status: "complete"

@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/05/10-weekend-activities-to-enjoy-in-miami-springs/a-happy-family-having-fun-and-posing-tog-1.webp"
   - "/images/blog/2029/05/10-weekend-activities-to-enjoy-in-miami-springs/diverse-group-of-young-adults-enjoying-a-2.webp"
   - "/images/blog/2029/05/10-weekend-activities-to-enjoy-in-miami-springs/wooden-scrabble-tiles-spelling-weekend-o-3.webp"
-
 service_link: null
 location_link: "/miami-springs-movers"
 status: "pending"

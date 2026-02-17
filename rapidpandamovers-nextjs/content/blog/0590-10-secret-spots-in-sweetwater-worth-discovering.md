@@ -2,7 +2,7 @@
 id: 590
 title: "10 Secret Spots in Sweetwater Worth Discovering"
 slug: "10-secret-spots-in-sweetwater-worth-discovering"
-excerpt: "New to Sweetwater? These 10 local favorites include authentic Nicaraguan restaurants, hidden parks, and FIU-area gems only residents know about."
+excerpt: "Just moved to Sweetwater or planning a relocation? This small city tucked between FIU and the Dolphin Expressway has more character than most newcomers..."
 date: "2028-02-02"
 updated: "2028-02-02"
 readTime: "4 min read"
@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/02/10-secret-spots-in-sweetwater-worth-discovering/colorful-street-festival-in-diriamba-nic-3.webp"
   - "/images/blog/2028/02/10-secret-spots-in-sweetwater-worth-discovering/illuminated-wooden-gazebo-with-fireplace-4.webp"
   - "/images/blog/2028/02/10-secret-spots-in-sweetwater-worth-discovering/portrait-of-a-young-woman-sitting-outdoo-1.webp"
-
 service_link: null
 location_link: "/sweetwater-movers"
 status: "pending"

@@ -2,7 +2,7 @@
 id: 464
 title: "10 Best Restaurants to Try in Miami Gardens After Your Move"
 slug: "10-best-restaurants-to-try-in-miami-gardens-after-your-move"
-excerpt: "Just moved to Miami Gardens or planning your spring relocation? Food is one of the best ways to experience your new community and discover local gems."
+excerpt: "Just moved to Miami Gardens or planning your spring relocation? Food is one of the best ways to experience your new community."
 date: "2027-04-14"
 updated: "2027-04-14"
 readTime: "3 min read"
@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/04/10-best-restaurants-to-try-in-miami-gardens-after-your-move/intimate-dining-experience-at-a-ramen-re-1.webp"
   - "/images/blog/2027/04/10-best-restaurants-to-try-in-miami-gardens-after-your-move/served-table-with-various-delicious-dish-3.webp"
   - "/images/blog/2027/04/10-best-restaurants-to-try-in-miami-gardens-after-your-move/sophisticated-dining-setup-with-gourmet--2.webp"
-
 service_link: null
 location_link: "/miami-gardens-movers"
 status: "complete"

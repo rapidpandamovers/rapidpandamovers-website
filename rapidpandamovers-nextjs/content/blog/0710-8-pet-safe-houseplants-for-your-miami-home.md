@@ -17,8 +17,7 @@ images:
   - "/images/blog/2028/11/8-pet-safe-houseplants-for-your-miami-home/a-vibrant-collection-of-tropical-indoor--1.webp"
   - "/images/blog/2028/11/8-pet-safe-houseplants-for-your-miami-home/close-up-of-a-vibrant-calathea-plant-sho-4.webp"
   - "/images/blog/2028/11/8-pet-safe-houseplants-for-your-miami-home/vibrant-tropical-foliage-with-large-leav-2.webp"
-
-service_link: /local-moving
+service_link: "/local-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

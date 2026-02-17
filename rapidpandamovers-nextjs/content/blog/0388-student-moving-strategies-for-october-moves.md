@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/10/student-moving-strategies-for-october-moves/smiling-young-woman-in-graduation-gown-a-3.webp"
   - "/images/blog/2026/10/student-moving-strategies-for-october-moves/two-college-students-enjoying-a-friendly-2.webp"
   - "/images/blog/2026/10/student-moving-strategies-for-october-moves/woman-standing-by-a-tree-with-a-backpack-4.webp"
-
 service_link: "/student-moving"
 location_link: null
 status: "pending"

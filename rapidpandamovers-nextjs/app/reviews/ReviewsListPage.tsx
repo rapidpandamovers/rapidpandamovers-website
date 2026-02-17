@@ -119,16 +119,7 @@ export default function ReviewsListPage({ currentPage }: ReviewsListPageProps) {
 
       {/* Reviews Section */}
       <section className="py-16 md:py-20">
-        <div className="container mx-auto px-4">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              What Our <span className="text-orange-500">Customers</span> Say
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Real reviews from real customers who trusted Rapid Panda Movers with their most important move.
-            </p>
-          </div>
+        <div className="container mx-auto">
 
           {/* Platform Filter */}
           <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-10">
@@ -159,7 +150,7 @@ export default function ReviewsListPage({ currentPage }: ReviewsListPageProps) {
           </div>
 
           {/* Reviews Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {paginatedReviews.map((review) => (
               <ReviewCard key={review.id} review={review} formatDate={formatDate} />
             ))}
@@ -252,7 +243,7 @@ function ReviewCard({
   const needsTruncation = review.text.length > TRUNCATE_LENGTH
 
   return (
-    <div className="bg-white rounded-2xl p-6 flex flex-col shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+    <div className="bg-gray-50 rounded-4xl p-8 flex flex-col">
       {/* Header */}
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center gap-3">
@@ -269,7 +260,7 @@ function ReviewCard({
             <p className="text-sm text-gray-500">{formatDate(review.date)}</p>
           </div>
         </div>
-        <div className="flex items-center gap-1 bg-gray-50 rounded-lg p-1.5">
+        <div className="flex items-center gap-1 bg-white rounded-lg p-1.5">
           <PlatformIcon platform={review.platform} />
         </div>
       </div>
@@ -288,7 +279,7 @@ function ReviewCard({
 
       {/* Review Text */}
       <div className="flex-1">
-        <Quote className="w-8 h-8 text-orange-100 mb-2" />
+        <Quote className="w-8 h-8 text-gray-300 mb-2" />
         <p className={`text-gray-700 leading-relaxed ${!isExpanded && needsTruncation ? 'line-clamp-4' : ''}`}>
           {review.text}
         </p>
@@ -321,7 +312,7 @@ function ReviewCard({
             </span>
           ))}
           {review.location?.city && (
-            <span className="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-full font-medium">
+            <span className="text-xs bg-white text-gray-600 px-2.5 py-1 rounded-full font-medium">
               {review.location.city.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
             </span>
           )}

@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/08/your-palmetto-bay-moving-handbook/a-family-creatively-makes-unpacking-fun--1.webp"
   - "/images/blog/2030/08/your-palmetto-bay-moving-handbook/a-family-involved-in-a-creative-activity-2.webp"
   - "/images/blog/2030/08/your-palmetto-bay-moving-handbook/happy-family-playing-with-boxes-while-mo-3.webp"
-
 service_link: null
 location_link: "/palmetto-bay-movers"
 status: "completed"

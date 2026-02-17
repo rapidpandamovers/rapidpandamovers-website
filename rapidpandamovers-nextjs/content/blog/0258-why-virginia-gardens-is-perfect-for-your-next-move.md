@@ -17,7 +17,6 @@ images:
   - "/images/blog/2025/12/why-virginia-gardens-is-perfect-for-your-next-move/a-scenic-aerial-view-of-lake-mary-fl-sho-3.webp"
   - "/images/blog/2025/12/why-virginia-gardens-is-perfect-for-your-next-move/aerial-view-showcasing-the-grid-like-pat-1.webp"
   - "/images/blog/2025/12/why-virginia-gardens-is-perfect-for-your-next-move/scenic-aerial-shot-of-a-sprawling-reside-2.webp"
-
 service_link: null
 location_link: "/virginia-gardens-movers"
 status: "completed"

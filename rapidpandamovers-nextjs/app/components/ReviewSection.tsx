@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useMemo, useEffect } from 'react'
-import { Star, Quote, ChevronLeft, ChevronRight, ChevronDown, ChevronUp, BadgeCheck } from 'lucide-react'
+import { Star, Quote, ChevronLeft, ChevronRight, ChevronDown, ChevronUp, BadgeCheck, MessageSquare, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import reviewsData from '@/data/reviews.json'
 
@@ -193,14 +193,91 @@ export default function ReviewSection({
 
   const hasHeader = title || subtitle
 
+  // Compact variant: 3-column grid with 2 reviews + 1 orange CTA box
+  if (variant === 'compact') {
+    const compactReviews = filteredReviews.slice(0, 2)
+    return (
+      <section className={`pt-20 ${className}`}>
+        <div className="container mx-auto">
+          {hasHeader && (
+            <div className="text-center mb-10">
+              {title && (
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                  {title}
+                </h2>
+              )}
+              {subtitle && (
+                <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                  {subtitle}
+                </p>
+              )}
+            </div>
+          )}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {compactReviews.map((review) => (
+              <div key={review.id} className="bg-gray-50 rounded-4xl p-8 flex flex-col">
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-sm">
+                      {review.author.charAt(0)}
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-2">
+                        <h4 className="font-semibold text-gray-900">{review.author}</h4>
+                        {review.verified && <BadgeCheck className="w-4 h-4 text-orange-500" />}
+                      </div>
+                      <p className="text-sm text-gray-500">{formatDate(review.date)}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-1 bg-white rounded-lg p-1.5">
+                    <PlatformIcon platform={review.platform} />
+                  </div>
+                </div>
+                <div className="flex items-center gap-1 mb-3">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className={`w-4 h-4 ${i < review.rating ? 'text-orange-500 fill-current' : 'text-gray-200'}`} />
+                  ))}
+                </div>
+                <div className="flex-1">
+                  <Quote className="w-8 h-8 text-gray-300 mb-2" />
+                  <p className="text-gray-700 leading-relaxed line-clamp-4">{review.text}</p>
+                </div>
+              </div>
+            ))}
+
+            {/* CTA Box */}
+            <div className="bg-orange-50 rounded-4xl p-8 flex flex-col">
+              <div className="flex-1">
+                <MessageSquare className="w-10 h-10 text-orange-500 mb-4" />
+                <h3 className="text-2xl font-bold text-gray-800 mb-3">
+                  See What Others Say
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  Read verified reviews from our customers across Google, Yelp, and more
+                </p>
+              </div>
+              <Link
+                href="/reviews"
+                className="flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+              >
+                View All Reviews
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
   return (
-    <section className={`py-16 md:py-20 ${className}`}>
-      <div className="container mx-auto px-4">
+    <section className={`pt-20 ${className}`}>
+      <div className="container mx-auto">
         {/* Header */}
         {hasHeader && (
           <div className="text-center mb-12">
             {title && (
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                 {title}
               </h2>
             )}
@@ -220,7 +297,7 @@ export default function ReviewSection({
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                 selectedPlatform === null
                   ? 'bg-orange-500 text-white'
-                  : 'bg-white text-gray-700 border border-gray-200 hover:border-orange-500 hover:text-orange-500'
+                  : 'bg-white text-gray-700 hover:bg-orange-50 hover:text-orange-500'
               }`}
             >
               All Reviews
@@ -232,7 +309,7 @@ export default function ReviewSection({
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors flex items-center gap-2 ${
                   selectedPlatform === platform
                     ? 'bg-orange-500 text-white'
-                    : 'bg-white text-gray-700 border border-gray-200 hover:border-orange-500 hover:text-orange-500'
+                    : 'bg-white text-gray-700 hover:bg-orange-50 hover:text-orange-500'
                 }`}
               >
                 <PlatformIcon platform={platform} />
@@ -275,13 +352,9 @@ export default function ReviewSection({
             )}
           </div>
         ) : (
-          <div className={`grid gap-6 ${
-            variant === 'compact'
-              ? 'grid-cols-1 md:grid-cols-2'
-              : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
-          }`}>
+          <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {filteredReviews.map((review) => (
-              <ReviewCard key={review.id} review={review} formatDate={formatDate} compact={variant === 'compact'} />
+              <ReviewCard key={review.id} review={review} formatDate={formatDate} />
             ))}
           </div>
         )}
@@ -395,6 +468,7 @@ export default function ReviewSection({
               className="inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors"
             >
               View All Reviews
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </div>
         )}
@@ -407,17 +481,15 @@ export default function ReviewSection({
 function ReviewCard({
   review,
   formatDate,
-  compact = false
 }: {
   review: typeof reviewsData.reviews[0]
   formatDate: (date: string) => string
-  compact?: boolean
 }) {
   const [isExpanded, setIsExpanded] = useState(false)
   const needsTruncation = review.text.length > TRUNCATE_LENGTH
 
   return (
-    <div className={`bg-white rounded-2xl p-6 flex flex-col shadow-sm border border-gray-100 hover:shadow-md transition-shadow ${compact ? 'p-5' : ''}`}>
+    <div className="bg-gray-50 rounded-4xl p-8 flex flex-col">
       {/* Header */}
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center gap-3">
@@ -434,7 +506,7 @@ function ReviewCard({
             <p className="text-sm text-gray-500">{formatDate(review.date)}</p>
           </div>
         </div>
-        <div className="flex items-center gap-1 bg-gray-50 rounded-lg p-1.5">
+        <div className="flex items-center gap-1 bg-white rounded-lg p-1.5">
           <PlatformIcon platform={review.platform} />
         </div>
       </div>
@@ -453,11 +525,11 @@ function ReviewCard({
 
       {/* Review Text */}
       <div className="flex-1">
-        <Quote className="w-8 h-8 text-orange-100 mb-2" />
-        <p className={`text-gray-700 leading-relaxed ${compact ? 'text-sm line-clamp-3' : ''} ${!compact && !isExpanded && needsTruncation ? 'line-clamp-4' : ''}`}>
+        <Quote className="w-8 h-8 text-gray-300 mb-2" />
+        <p className={`text-gray-700 leading-relaxed ${!isExpanded && needsTruncation ? 'line-clamp-4' : ''}`}>
           {review.text}
         </p>
-        {!compact && needsTruncation && (
+        {needsTruncation && (
           <button
             onClick={() => setIsExpanded(!isExpanded)}
             className="mt-2 text-orange-500 hover:text-orange-600 text-sm font-medium flex items-center gap-1 transition-colors"
@@ -486,7 +558,7 @@ function ReviewCard({
             </span>
           ))}
           {review.location?.city && (
-            <span className="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-full font-medium">
+            <span className="text-xs bg-white text-gray-600 px-2.5 py-1 rounded-full font-medium">
               {review.location.city.replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase())}
             </span>
           )}

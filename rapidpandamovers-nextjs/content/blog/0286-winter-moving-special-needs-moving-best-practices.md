@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/02/winter-moving-special-needs-moving-best-practices/a-person-demonstrating-the-use-of-a-van--2.webp"
   - "/images/blog/2026/02/winter-moving-special-needs-moving-best-practices/a-young-man-pushes-an-elderly-man-in-a-w-3.webp"
   - "/images/blog/2026/02/winter-moving-special-needs-moving-best-practices/sleek-and-modern-wheelchair-design-for-m-4.webp"
-
 service_link: "/special-needs-moving"
 location_link: null
 status: "pending"

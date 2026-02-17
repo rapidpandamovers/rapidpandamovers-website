@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/05/10-odd-items-that-have-been-on-our-moving-trucks/a-ghostly-figure-wearing-sunglasses-capt-1.webp"
   - "/images/blog/2030/05/10-odd-items-that-have-been-on-our-moving-trucks/two-people-in-ghost-costumes-sitting-on--4.webp"
   - "/images/blog/2030/05/10-odd-items-that-have-been-on-our-moving-trucks/two-people-in-ghost-costumes-with-sungla-2.webp"
-
 service_link: null
 location_link: null
 status: "pending"

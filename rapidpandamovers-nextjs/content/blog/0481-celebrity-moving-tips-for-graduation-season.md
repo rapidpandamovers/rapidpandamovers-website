@@ -2,7 +2,7 @@
 id: 481
 title: "Celebrity Moving Tips for Graduation Season"
 slug: "celebrity-moving-tips-for-graduation-season"
-excerpt: "Moving during graduation season? Discover essential celebrity moving tips for May in Miami and South Florida. Learn how professional movers handle your."
+excerpt: "Moving during graduation season? Discover essential celebrity moving tips for May in Miami and South Florida."
 date: "2027-05-24"
 updated: "2027-05-24"
 readTime: "4 min read"
@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/05/celebrity-moving-tips-for-graduation-season/elegant-white-mansion-surrounded-by-lush-4.webp"
   - "/images/blog/2027/05/celebrity-moving-tips-for-graduation-season/luxury-estate-with-manicured-lawn-and-mo-3.webp"
   - "/images/blog/2027/05/celebrity-moving-tips-for-graduation-season/stunning-aerial-photo-of-a-wedding-event-2.webp"
-
 service_link: "/celebrity-moving"
 location_link: null
 status: "pending"

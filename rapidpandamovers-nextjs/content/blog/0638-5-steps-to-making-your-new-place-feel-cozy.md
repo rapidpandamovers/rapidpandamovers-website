@@ -2,7 +2,7 @@
 id: 638
 title: "5 Steps to Making Your New Place Feel Cozy"
 slug: "5-steps-to-making-your-new-place-feel-cozy"
-excerpt: "Make your new place feel like home with these 5 simple steps. From unpacking strategies to settling in quickly."
+excerpt: "Make your new place feel like home with these 5 simple steps. From unpacking strategies to settling in quickly..."
 date: "2028-05-24"
 updated: "2028-05-24"
 readTime: "3 min read"
@@ -17,7 +17,6 @@ images:
   - "/images/blog/2028/05/5-steps-to-making-your-new-place-feel-cozy/a-cozy-workspace-featuring-a-modern-chai-2.webp"
   - "/images/blog/2028/05/5-steps-to-making-your-new-place-feel-cozy/a-festive-indoor-scene-featuring-a-chris-3.webp"
   - "/images/blog/2028/05/5-steps-to-making-your-new-place-feel-cozy/a-peaceful-reading-nook-with-pillows-a-b-1.webp"
-
 service_link: "/residential-moving"
 location_link: null
 status: "pending"

@@ -20,7 +20,6 @@ images:
   - "/images/blog/2024/06/miami-beach-summer-moving-advice/loc-stunning-view-of-miami-beach-s-skyline-w-2.webp"
   - "/images/blog/2024/06/miami-beach-summer-moving-advice/svc-cardboard-box-filled-with-clothes-hanger-1.webp"
   - "/images/blog/2024/06/miami-beach-summer-moving-advice/svc-crop-anonymous-male-in-casual-clothes-pa-2.webp"
-
 service_link: "/miami-beach-local-moving"
 location_link: "/miami-beach-movers"
 status: "pending"

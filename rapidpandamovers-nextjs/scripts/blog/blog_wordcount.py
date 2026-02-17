@@ -68,25 +68,49 @@ def get_excerpt(content: str) -> str:
     return match.group(1).strip() if match else None
 
 
+BAD_ENDING_WORDS = {'a', 'an', 'the', 'and', 'or', 'but', 'of', 'in', 'on', 'at', 'to', 'for',
+    'with', 'from', 'by', 'is', 'are', 'was', 'were', 'be', 'been', 'being', 'that', 'this',
+    'these', 'those', 'its', 'your', 'their', 'our', 'my', 'his', 'her', 'which', 'who', 'whom',
+    'what', 'when', 'where', 'how', 'than', 'as', 'if', 'not', 'no', 'so', 'into', 'about',
+    'between', 'through', 'during', 'before', 'after', 'above', 'below', 'over', 'under'}
+
+
 def truncate_excerpt(excerpt: str, max_length: int = MAX_EXCERPT_LENGTH) -> str:
-    """Truncate excerpt to max length at word boundary, ending with period."""
+    """Truncate excerpt to max length, preferring complete sentences or trailing ellipsis."""
     if len(excerpt) <= max_length:
         return excerpt
 
-    # Find last space before max_length
-    truncated = excerpt[:max_length]
+    # Try to end at the last complete sentence within max_length
+    candidate = excerpt[:max_length]
+    best_end = -1
+    for punct in ['. ', '! ', '? ']:
+        idx = candidate.rfind(punct)
+        if idx > best_end:
+            best_end = idx
+
+    if candidate.rstrip()[-1:] in '.!?':
+        best_end = max(best_end, len(candidate.rstrip()) - 1)
+
+    # Use complete sentence if it's long enough (at least 80 chars)
+    if best_end >= 80:
+        return excerpt[:best_end + 1]
+
+    # Otherwise truncate at word boundary and add ellipsis
+    truncated = excerpt[:max_length - 3]
     last_space = truncated.rfind(' ')
-    if last_space > max_length - 30:  # Don't cut too much
+    if last_space > len(truncated) - 30:
         truncated = truncated[:last_space]
 
-    # Clean up ending
     truncated = truncated.rstrip('.,;:!? ')
 
-    # Add period if it doesn't end with punctuation
-    if not truncated[-1] in '.!?':
-        truncated += '.'
+    # Strip trailing function words that read awkwardly at the end
+    words = truncated.split()
+    while words and words[-1].lower() in BAD_ENDING_WORDS:
+        words.pop()
+    if words:
+        truncated = ' '.join(words).rstrip('.,;:!? ')
 
-    return truncated
+    return truncated + '...'
 
 
 def find_post_file(post_id: str) -> Path:

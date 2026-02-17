@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/09/relocating-to-hialeah-the-essential-guide/a-stunning-view-of-miami-s-illuminated-s-2.webp"
   - "/images/blog/2029/09/relocating-to-hialeah-the-essential-guide/colorful-row-of-beach-houses-under-a-cle-1.webp"
   - "/images/blog/2029/09/relocating-to-hialeah-the-essential-guide/vibrant-yellow-and-blue-fire-hydrant-in--4.webp"
-
 service_link: null
 location_link: "/hialeah-movers"
 status: "pending"

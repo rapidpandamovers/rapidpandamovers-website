@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/01/best-neighborhoods-in-miami-beach-for-families/colorful-neon-lit-miami-beach-street-at--2.webp"
   - "/images/blog/2030/01/best-neighborhoods-in-miami-beach-for-families/colorful-scene-capturing-miami-beach-s-h-3.webp"
   - "/images/blog/2030/01/best-neighborhoods-in-miami-beach-for-families/stylish-vintage-car-parked-near-iconic-c-1.webp"
-
 service_link: null
 location_link: "/miami-beach-movers"
 status: "pending"

@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/10/8-methods-for-smooth-family-moves-with-kids/a-happy-child-plays-inside-a-cardboard-b-2.webp"
   - "/images/blog/2030/10/8-methods-for-smooth-family-moves-with-kids/cute-child-with-curly-hair-peeks-from-in-3.webp"
   - "/images/blog/2030/10/8-methods-for-smooth-family-moves-with-kids/young-girl-engrossed-in-drawing-on-a-car-1.webp"
-
 service_link: null
 location_link: null
 status: "pending"

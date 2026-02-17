@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/03/miami-101-what-every-new-resident-should-know/captivating-view-of-miami-s-iconic-skyli-4.webp"
   - "/images/blog/2028/03/miami-101-what-every-new-resident-should-know/gorgeous-night-view-of-miami-s-illuminat-1.webp"
   - "/images/blog/2028/03/miami-101-what-every-new-resident-should-know/luxurious-miami-apartments-with-stunning-2.webp"
-
 service_link: null
 location_link: "/miami-movers"
 status: "pending"

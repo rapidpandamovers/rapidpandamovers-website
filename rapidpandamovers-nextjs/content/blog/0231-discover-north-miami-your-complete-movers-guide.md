@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/10/discover-north-miami-your-complete-movers-guide/loc-view-of-miami-skyline-from-coral-gables--2.webp"
   - "/images/blog/2025/10/discover-north-miami-your-complete-movers-guide/svc-pink-moving-trucks-parked-in-a-chicago-a-2.webp"
   - "/images/blog/2025/10/discover-north-miami-your-complete-movers-guide/svc-u-haul-moving-truck-parked-on-roadside-w-1.webp"
-
 service_link: "/local-moving"
 location_link: "/north-miami-movers"
 status: "pending"

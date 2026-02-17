@@ -17,8 +17,7 @@ images:
   - "/images/blog/2027/11/10-critical-steps-after-getting-your-new-keys/a-blue-volvo-truck-parked-outside-a-ware-2.webp"
   - "/images/blog/2027/11/10-critical-steps-after-getting-your-new-keys/semi-truck-parked-at-a-loading-dock-with-1.webp"
   - "/images/blog/2027/11/10-critical-steps-after-getting-your-new-keys/three-men-loading-wooden-boxes-on-a-truc-3.webp"
-
-service_link: /local-moving
+service_link: "/local-moving"
 location_link: null
 status: "complete"
 needs_ai_image: false

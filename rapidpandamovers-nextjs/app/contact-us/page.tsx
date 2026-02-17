@@ -2,6 +2,7 @@ import Hero from '../components/Hero'
 import ContactSection from '../components/ContactSection'
 import MapSection from '../components/MapSection'
 import NewsletterSection from '../components/NewsletterSection'
+import QuoteSection from '../components/QuoteSection'
 
 export const metadata = {
   title: 'Contact Us | Rapid Panda Movers Miami',
@@ -27,12 +28,13 @@ export default function ContactPage() {
           state: 'FL',
           zip: '33155'
         }}
-        title="Visit Our Office"
+        title="Our Location"
         height="450px"
       />
 
       <NewsletterSection />
 
+      <QuoteSection />
     </div>
   )
 }

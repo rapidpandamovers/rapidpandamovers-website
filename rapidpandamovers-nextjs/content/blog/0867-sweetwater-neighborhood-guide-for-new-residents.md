@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/11/sweetwater-neighborhood-guide-for-new-residents/black-and-white-photo-of-a-modern-apartm-4.webp"
   - "/images/blog/2029/11/sweetwater-neighborhood-guide-for-new-residents/elegant-pink-mansion-in-fort-lauderdale--2.webp"
   - "/images/blog/2029/11/sweetwater-neighborhood-guide-for-new-residents/scenic-view-of-lakefront-homes-reflectin-3.webp"
-
 service_link: null
 location_link: "/sweetwater-movers"
 status: "pending"

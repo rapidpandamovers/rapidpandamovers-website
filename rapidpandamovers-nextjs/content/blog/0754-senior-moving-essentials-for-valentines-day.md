@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/02/senior-moving-essentials-for-valentines-day/elderly-woman-joyfully-dancing-indoors-n-2.webp"
   - "/images/blog/2029/02/senior-moving-essentials-for-valentines-day/two-senior-women-packing-belongings-in-a-1.webp"
   - "/images/blog/2029/02/senior-moving-essentials-for-valentines-day/two-senior-women-packing-belongings-in-b-4.webp"
-
 service_link: "/senior-moving"
 location_link: null
 status: "pending"

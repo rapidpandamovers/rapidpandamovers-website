@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/10/moving-furniture-with-kids-a-family-safety-guide/a-couple-packing-labeled-boxes-in-a-mini-1.webp"
   - "/images/blog/2028/10/moving-furniture-with-kids-a-family-safety-guide/cardboard-boxes-and-a-backpack-in-a-cozy-3.webp"
   - "/images/blog/2028/10/moving-furniture-with-kids-a-family-safety-guide/happy-family-sitting-together-in-their-n-2.webp"
-
 service_link: "/furniture-moving"
 location_link: null
 status: "pending"

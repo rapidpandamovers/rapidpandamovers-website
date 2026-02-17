@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/07/7-things-to-do-in-coconut-grove-this-weekend/diverse-group-of-young-adults-enjoying-a-4.webp"
   - "/images/blog/2026/07/7-things-to-do-in-coconut-grove-this-weekend/little-girl-captivated-by-giant-bubble-a-3.webp"
   - "/images/blog/2026/07/7-things-to-do-in-coconut-grove-this-weekend/person-sitting-on-a-couch-playing-video--1.webp"
-
 service_link: null
 location_link: "/coconut-grove-movers"
 status: "pending"

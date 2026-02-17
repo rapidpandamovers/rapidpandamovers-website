@@ -17,7 +17,6 @@ images:
   - "/images/blog/2026/02/9-top-cafes-for-remote-workers-in-florida-city/a-young-woman-uses-a-laptop-behind-a-caf-1.webp"
   - "/images/blog/2026/02/9-top-cafes-for-remote-workers-in-florida-city/glass-of-coffee-on-a-wooden-table-with-a-3.webp"
   - "/images/blog/2026/02/9-top-cafes-for-remote-workers-in-florida-city/relaxing-caf-scene-in-istanbul-featuring-2.webp"
-
 service_link: null
 location_link: "/florida-city-movers"
 status: "pending"

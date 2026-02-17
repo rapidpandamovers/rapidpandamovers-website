@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/12/finding-your-place-in-west-miami-relocation-advice/a-tranquil-street-scene-in-orlando-fl-fe-2.webp"
   - "/images/blog/2025/12/finding-your-place-in-west-miami-relocation-advice/charming-suburban-street-with-modern-hou-5.webp"
   - "/images/blog/2025/12/finding-your-place-in-west-miami-relocation-advice/vibrant-yellow-and-blue-fire-hydrant-in--3.webp"
-
 service_link: null
 location_link: "/west-miami-movers"
 status: "completed"

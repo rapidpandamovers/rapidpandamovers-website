@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/09/why-miami-is-perfect-for-your-next-move/captivating-view-of-miami-s-modern-skyli-2.webp"
   - "/images/blog/2026/09/why-miami-is-perfect-for-your-next-move/luxurious-miami-apartments-with-stunning-4.webp"
   - "/images/blog/2026/09/why-miami-is-perfect-for-your-next-move/vibrant-miami-skyline-illuminated-at-nig-3.webp"
-
 service_link: null
 location_link: "/miami-movers"
 status: "complete"

@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/03/9-best-coffee-shops-to-work-from-in-coconut-grove/a-barista-making-coffee-using-a-professi-1.webp"
   - "/images/blog/2028/03/9-best-coffee-shops-to-work-from-in-coconut-grove/relaxing-caf-scene-in-istanbul-featuring-3.webp"
   - "/images/blog/2028/03/9-best-coffee-shops-to-work-from-in-coconut-grove/two-baristas-work-at-a-coffee-shop-count-4.webp"
-
 service_link: null
 location_link: "/coconut-grove-movers"
 status: "pending"

@@ -18,7 +18,6 @@ images:
   - "/images/blog/2024/10/6-strategies-for-building-neighborhood-friendships/back-view-of-unrecognizable-female-in-ca-3.webp"
   - "/images/blog/2024/10/6-strategies-for-building-neighborhood-friendships/cardboard-moving-boxes-in-a-modern-kitch-1.webp"
   - "/images/blog/2024/10/6-strategies-for-building-neighborhood-friendships/crop-anonymous-male-in-casual-clothes-pa-5.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "pending"

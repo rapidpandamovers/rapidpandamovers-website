@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/01/expert-special-needs-moving-tips-this-january/a-young-adult-wearing-a-hospital-gown-si-4.webp"
   - "/images/blog/2027/01/expert-special-needs-moving-tips-this-january/close-up-of-a-mounted-medical-oxygen-sup-3.webp"
   - "/images/blog/2027/01/expert-special-needs-moving-tips-this-january/two-paramedics-in-uniforms-conversing-in-2.webp"
-
 service_link: "/special-needs-moving"
 location_link: null
 status: "pending"

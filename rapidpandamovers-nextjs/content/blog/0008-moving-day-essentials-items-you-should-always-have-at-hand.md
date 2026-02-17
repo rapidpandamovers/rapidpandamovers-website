@@ -2,7 +2,7 @@
 id: 8
 title: "Moving Day Essentials: Items You Should Always Have at Hand"
 slug: "moving-day-essentials-items-you-should-always-have-at-hand"
-excerpt: "Your moving day essentials bag keeps keys, chargers, snacks, and medications within reach. Here's exactly what to pack."
+excerpt: "Your moving day essentials bag keeps keys, chargers, snacks, and medications within reach."
 date: "2024-01-29"
 updated: "2024-01-29"
 readTime: "11 min read"
@@ -20,7 +20,6 @@ images:
   - "/images/blog/2024/01/moving-day-essentials-items-you-should-always-have-at-hand/a-woman-organizing-cardboard-boxes-in-a--2.webp"
   - "/images/blog/2024/01/moving-day-essentials-items-you-should-always-have-at-hand/a-woman-places-a-water-bottle-into-a-sty-4.webp"
   - "/images/blog/2024/01/moving-day-essentials-items-you-should-always-have-at-hand/close-up-of-a-person-placing-a-passport--3.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "completed"

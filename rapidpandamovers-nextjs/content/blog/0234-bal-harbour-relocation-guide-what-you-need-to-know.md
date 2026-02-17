@@ -19,7 +19,6 @@ images:
   - "/images/blog/2025/10/bal-harbour-relocation-guide-what-you-need-to-know/loc-vibrant-restroom-with-palm-trees-in-bal--1.webp"
   - "/images/blog/2025/10/bal-harbour-relocation-guide-what-you-need-to-know/svc-movers-loading-boxes-into-a-truck-on-a-s-2.webp"
   - "/images/blog/2025/10/bal-harbour-relocation-guide-what-you-need-to-know/svc-u-haul-moving-truck-parked-on-roadside-w-1.webp"
-
 service_link: "/local-moving"
 location_link: "/bal-harbour-movers"
 status: "pending"

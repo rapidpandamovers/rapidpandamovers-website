@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/08/essential-special-needs-moving-tips-for-august/female-healthcare-worker-smiles-with-two-4.webp"
   - "/images/blog/2028/08/essential-special-needs-moving-tips-for-august/sterile-bandage-rolls-neatly-stored-in-a-1.webp"
   - "/images/blog/2028/08/essential-special-needs-moving-tips-for-august/two-paramedics-in-uniforms-conversing-in-3.webp"
-
 service_link: "/special-needs-moving"
 location_link: null
 status: "pending"

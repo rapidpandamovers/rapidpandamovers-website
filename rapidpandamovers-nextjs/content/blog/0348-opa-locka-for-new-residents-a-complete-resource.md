@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/07/opa-locka-for-new-residents-a-complete-resource/explore-the-historic-mosque-cathedral-of-2.webp"
   - "/images/blog/2026/07/opa-locka-for-new-residents-a-complete-resource/intricately-designed-moorish-door-on-a-h-5.webp"
   - "/images/blog/2026/07/opa-locka-for-new-residents-a-complete-resource/stunning-moorish-architecture-featuring--4.webp"
-
 service_link: null
 location_link: "/opa-locka-movers"
 status: "pending"

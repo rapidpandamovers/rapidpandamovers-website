@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/11/life-in-aventura-what-to-expect-after-moving/a-vibrant-scene-capturing-a-busy-shoppin-3.webp"
   - "/images/blog/2029/11/life-in-aventura-what-to-expect-after-moving/elegant-two-level-shopping-mall-with-gla-1.webp"
   - "/images/blog/2029/11/life-in-aventura-what-to-expect-after-moving/explore-the-ornate-archways-and-luxuriou-2.webp"
-
 service_link: null
 location_link: "/aventura-movers"
 status: "pending"

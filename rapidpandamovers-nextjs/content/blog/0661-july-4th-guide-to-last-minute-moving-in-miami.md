@@ -20,7 +20,6 @@ images:
   - "/images/blog/2028/07/july-4th-guide-to-last-minute-moving-in-miami/close-up-of-last-call-text-on-a-textured-4.webp"
   - "/images/blog/2028/07/july-4th-guide-to-last-minute-moving-in-miami/experience-breathtaking-views-with-a-hot-3.webp"
   - "/images/blog/2028/07/july-4th-guide-to-last-minute-moving-in-miami/minimalist-clock-with-a-black-friday-sal-5.webp"
-
 service_link: "/last-minute-moving"
 location_link: null
 status: "pending"

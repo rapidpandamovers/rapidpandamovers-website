@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/10/9-ways-to-build-lasting-friendships-after-a-miami-move/a-vibrant-family-gathering-outdoors-shar-3.webp"
   - "/images/blog/2026/10/9-ways-to-build-lasting-friendships-after-a-miami-move/people-looking-out-from-windows-in-a-cit-5.webp"
   - "/images/blog/2026/10/9-ways-to-build-lasting-friendships-after-a-miami-move/three-women-sit-together-in-a-quiet-urba-2.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "pending"

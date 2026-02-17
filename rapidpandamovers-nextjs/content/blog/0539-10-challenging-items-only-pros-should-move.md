@@ -19,8 +19,7 @@ images:
   - "/images/blog/2027/10/10-challenging-items-only-pros-should-move/a-surprised-woman-applies-makeup-outdoor-3.webp"
   - "/images/blog/2027/10/10-challenging-items-only-pros-should-move/a-woman-in-a-surreal-horned-costume-and--1.webp"
   - "/images/blog/2027/10/10-challenging-items-only-pros-should-move/an-outdoor-shaving-scene-featuring-a-per-2.webp"
-
-service_link: /residential-moving
+service_link: "/residential-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

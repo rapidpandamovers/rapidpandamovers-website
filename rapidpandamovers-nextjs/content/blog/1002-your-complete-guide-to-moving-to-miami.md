@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/09/your-complete-guide-to-moving-to-miami/aerial-photo-of-miami-beach-with-skyline-4.webp"
   - "/images/blog/2030/09/your-complete-guide-to-moving-to-miami/captivating-view-of-miami-s-modern-skyli-2.webp"
   - "/images/blog/2030/09/your-complete-guide-to-moving-to-miami/capture-the-serene-and-dramatic-sunset-o-3.webp"
-
 service_link: null
 location_link: "/miami-movers"
 status: "pending"

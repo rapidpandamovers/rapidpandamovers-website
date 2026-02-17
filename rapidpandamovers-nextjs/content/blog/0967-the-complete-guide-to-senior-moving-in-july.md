@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/07/the-complete-guide-to-senior-moving-in-july/close-up-of-a-senior-man-in-a-suit-makin-2.webp"
   - "/images/blog/2030/07/the-complete-guide-to-senior-moving-in-july/senior-woman-packing-a-bag-in-a-cozy-liv-1.webp"
   - "/images/blog/2030/07/the-complete-guide-to-senior-moving-in-july/two-senior-women-packing-belongings-in-a-3.webp"
-
 service_link: "/senior-moving"
 location_link: null
 status: "pending"

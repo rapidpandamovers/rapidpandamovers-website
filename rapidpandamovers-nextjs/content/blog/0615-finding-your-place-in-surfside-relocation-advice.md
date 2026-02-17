@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/03/finding-your-place-in-surfside-relocation-advice/serene-stone-path-along-bondi-beach-clif-1.webp"
   - "/images/blog/2028/03/finding-your-place-in-surfside-relocation-advice/two-men-playing-beach-rugby-in-sydney-on-2.webp"
   - "/images/blog/2028/03/finding-your-place-in-surfside-relocation-advice/vibrant-beach-scene-at-hermosa-beach-cal-3.webp"
-
 service_link: null
 location_link: "/surfside-movers"
 status: "pending"

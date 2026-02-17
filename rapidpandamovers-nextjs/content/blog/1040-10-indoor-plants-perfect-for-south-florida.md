@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/12/10-indoor-plants-perfect-for-south-florida/a-child-enjoying-playtime-with-a-toy-gun-5.webp"
   - "/images/blog/2030/12/10-indoor-plants-perfect-for-south-florida/a-child-s-feet-in-socks-sticking-out-of--3.webp"
   - "/images/blog/2030/12/10-indoor-plants-perfect-for-south-florida/crop-unrecognizable-male-packing-staked--4.webp"
-
 service_link: "/miami-local-moving"
 location_link: "/miami-movers"
 status: "complete"

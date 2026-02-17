@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/11/9-organization-tips-for-a-fresh-start/a-well-organized-warehouse-aisle-filled--1.webp"
   - "/images/blog/2029/11/9-organization-tips-for-a-fresh-start/interior-view-of-a-warehouse-with-stacke-2.webp"
   - "/images/blog/2029/11/9-organization-tips-for-a-fresh-start/long-rows-of-industrial-shelves-stacked--4.webp"
-
 service_link: null
 location_link: null
 status: "pending"

@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/06/9-fun-things-to-do-with-kids-in-cutler-bay/a-family-unpacks-moving-boxes-in-their-n-3.webp"
   - "/images/blog/2029/06/9-fun-things-to-do-with-kids-in-cutler-bay/family-enjoys-a-joyful-moment-while-unpa-2.webp"
   - "/images/blog/2029/06/9-fun-things-to-do-with-kids-in-cutler-bay/happy-family-playing-with-boxes-while-mo-1.webp"
-
 service_link: null
 location_link: "/cutler-bay-movers"
 status: "pending"

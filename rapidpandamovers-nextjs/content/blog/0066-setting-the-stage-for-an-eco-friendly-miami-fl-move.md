@@ -18,7 +18,6 @@ images:
   - "/images/blog/2024/07/setting-the-stage-for-an-eco-friendly-miami-fl-move/loc-captivating-view-of-miami-s-modern-skyli-2.webp"
   - "/images/blog/2024/07/setting-the-stage-for-an-eco-friendly-miami-fl-move/svc-a-joyful-moment-of-a-mother-and-child-pl-2.webp"
   - "/images/blog/2024/07/setting-the-stage-for-an-eco-friendly-miami-fl-move/svc-crop-anonymous-male-in-casual-clothes-pa-3.webp"
-
 service_link: "/miami-local-moving"
 location_link: "/miami-movers"
 status: "completed"

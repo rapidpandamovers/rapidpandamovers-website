@@ -2,7 +2,7 @@
 id: 483
 title: "Miami Shores for New Residents: A Complete Resource"
 slug: "miami-shores-for-new-residents-a-complete-resource"
-excerpt: "New to Miami Shores? This village offers tree-lined streets, beautiful homes, and a close-knit community just north of Downtown Miami."
+excerpt: "Thinking about moving to Miami Shores? This charming, historic village offers tree-lined streets, beautiful homes, and a strong sense of community just..."
 date: "2027-05-27"
 updated: "2027-05-27"
 readTime: "4 min read"
@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/05/miami-shores-for-new-residents-a-complete-resource/aerial-view-of-the-miami-skyline-with-su-5.webp"
   - "/images/blog/2027/05/miami-shores-for-new-residents-a-complete-resource/scenic-view-of-miami-skyline-with-modern-1.webp"
   - "/images/blog/2027/05/miami-shores-for-new-residents-a-complete-resource/stunning-view-of-miami-beach-s-skyline-w-2.webp"
-
 service_link: null
 location_link: "/miami-shores-movers"
 status: "pending"

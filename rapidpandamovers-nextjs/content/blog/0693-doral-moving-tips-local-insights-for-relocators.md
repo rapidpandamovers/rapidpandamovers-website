@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/09/doral-moving-tips-local-insights-for-relocators/close-up-of-a-golf-ball-near-a-hole-on-a-4.webp"
   - "/images/blog/2028/09/doral-moving-tips-local-insights-for-relocators/serene-view-of-a-golf-course-with-lush-g-1.webp"
   - "/images/blog/2028/09/doral-moving-tips-local-insights-for-relocators/woman-in-red-and-khaki-golfing-outfit-st-2.webp"
-
 service_link: null
 location_link: "/doral-movers"
 status: "pending"

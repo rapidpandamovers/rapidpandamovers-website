@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/12/expert-celebrity-moving-tips-this-december/elegant-white-mansion-surrounded-by-lush-1.webp"
   - "/images/blog/2029/12/expert-celebrity-moving-tips-this-december/serene-indoor-pool-area-with-modern-desi-2.webp"
   - "/images/blog/2029/12/expert-celebrity-moving-tips-this-december/stunning-aerial-photo-of-a-wedding-event-3.webp"
-
 service_link: "/celebrity-moving"
 location_link: null
 status: "pending"

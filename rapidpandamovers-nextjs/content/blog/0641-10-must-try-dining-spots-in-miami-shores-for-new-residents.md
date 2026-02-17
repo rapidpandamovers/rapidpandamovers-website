@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/05/10-must-try-dining-spots-in-miami-shores-for-new-residents/elegant-evening-dining-at-a-tokyo-restau-4.webp"
   - "/images/blog/2028/05/10-must-try-dining-spots-in-miami-shores-for-new-residents/luxury-dining-setting-in-dubai-featuring-3.webp"
   - "/images/blog/2028/05/10-must-try-dining-spots-in-miami-shores-for-new-residents/sophisticated-dining-setup-with-gourmet--1.webp"
-
 service_link: null
 location_link: "/miami-shores-movers"
 status: "complete"

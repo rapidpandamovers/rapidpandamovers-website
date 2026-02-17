@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/06/south-miami-for-new-residents-a-complete-resource/aerial-daytime-view-of-miami-florida-cap-4.webp"
   - "/images/blog/2028/06/south-miami-for-new-residents-a-complete-resource/explore-the-vibrant-miami-skyline-at-nig-5.webp"
   - "/images/blog/2028/06/south-miami-for-new-residents-a-complete-resource/luxurious-miami-apartments-with-stunning-3.webp"
-
 service_link: null
 location_link: "/south-miami-movers"
 status: "completed"

@@ -17,7 +17,6 @@ images:
   - "/images/blog/2025/04/9-home-automation-devices-that-pay-off/a-charming-portrait-of-a-child-with-curl-4.webp"
   - "/images/blog/2025/04/9-home-automation-devices-that-pay-off/a-child-s-feet-in-socks-sticking-out-of--3.webp"
   - "/images/blog/2025/04/9-home-automation-devices-that-pay-off/crop-anonymous-male-in-casual-clothes-pa-1.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "pending"

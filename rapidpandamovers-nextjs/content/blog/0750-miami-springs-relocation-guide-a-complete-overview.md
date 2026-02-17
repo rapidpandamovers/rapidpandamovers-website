@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/02/miami-springs-relocation-guide-a-complete-overview/classic-vintage-car-parked-outside-park--3.webp"
   - "/images/blog/2029/02/miami-springs-relocation-guide-a-complete-overview/close-up-of-a-bronze-child-statue-in-a-s-1.webp"
   - "/images/blog/2029/02/miami-springs-relocation-guide-a-complete-overview/view-of-miami-skyline-from-coral-gables--5.webp"
-
 service_link: null
 location_link: "/miami-springs-movers"
 status: "pending"

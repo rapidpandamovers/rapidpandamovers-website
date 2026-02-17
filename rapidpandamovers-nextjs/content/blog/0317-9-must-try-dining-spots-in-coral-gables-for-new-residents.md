@@ -2,7 +2,7 @@
 id: 317
 title: "9 Must-Try Dining Spots in Coral Gables for New Residents"
 slug: "9-must-try-dining-spots-in-coral-gables-for-new-residents"
-excerpt: "New to Coral Gables? Discover 9 must-try restaurants from Thomas Keller's Bouchon Bistro to local favorites like Sra. Martinez and Miss Crispy Rice."
+excerpt: "Just moved to Coral Gables or planning your May relocation? 'The City Beautiful' is known for its Mediterranean architecture and its exceptional dining..."
 date: "2026-05-06"
 updated: "2026-05-06"
 readTime: "3 min read"
@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/05/9-must-try-dining-spots-in-coral-gables-for-new-residents/modern-university-campus-building-by-a-t-1.webp"
   - "/images/blog/2026/05/9-must-try-dining-spots-in-coral-gables-for-new-residents/students-walking-on-a-university-campus--3.webp"
   - "/images/blog/2026/05/9-must-try-dining-spots-in-coral-gables-for-new-residents/tranquil-university-campus-view-with-pal-4.webp"
-
 service_link: null
 location_link: "/coral-gables-movers"
 status: "pending"

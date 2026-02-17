@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/02/winter-guide-to-long-distance-moving-in-miami/loc-dramatic-black-and-white-photo-of-the-mi-1.webp"
   - "/images/blog/2027/02/winter-guide-to-long-distance-moving-in-miami/svc-drone-view-of-modern-cars-riding-through-1.webp"
   - "/images/blog/2027/02/winter-guide-to-long-distance-moving-in-miami/svc-traffic-flows-on-a-busy-los-angeles-free-2.webp"
-
 service_link: "/long-distance-moving"
 location_link: null
 status: "completed"

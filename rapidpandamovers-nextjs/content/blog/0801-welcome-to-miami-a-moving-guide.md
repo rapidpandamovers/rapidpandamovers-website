@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/06/welcome-to-miami-a-moving-guide/a-stunning-view-of-miami-s-illuminated-s-4.webp"
   - "/images/blog/2029/06/welcome-to-miami-a-moving-guide/colorful-scene-capturing-miami-beach-s-h-3.webp"
   - "/images/blog/2029/06/welcome-to-miami-a-moving-guide/gorgeous-night-view-of-miami-s-illuminat-1.webp"
-
 service_link: null
 location_link: "/miami-movers"
 status: "pending"

@@ -17,7 +17,6 @@ images:
   - "/images/blog/2027/08/north-miami-neighborhoods-moca-district-to-arch-creek/loc-explore-this-modern-miami-residence-with-1.webp"
   - "/images/blog/2027/08/north-miami-neighborhoods-moca-district-to-arch-creek/svc-a-pile-of-empty-cardboard-boxes-arranged-2.webp"
   - "/images/blog/2027/08/north-miami-neighborhoods-moca-district-to-arch-creek/svc-cardboard-moving-boxes-in-a-modern-kitch-1.webp"
-
 service_link: "/north-miami-local-moving"
 location_link: "/north-miami-movers"
 status: "completed"

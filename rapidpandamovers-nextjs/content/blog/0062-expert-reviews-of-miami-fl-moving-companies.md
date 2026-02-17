@@ -6,7 +6,7 @@ excerpt: "Learn how to evaluate Miami moving company reviews, identify fake feed
 date: "2024-07-11"
 updated: "2024-07-11"
 readTime: "16 min read"
-category: "Residential Moving"
+category: "Local Moving"
 image_folder: "/images/blog/2024/07/expert-reviews-of-miami-fl-moving-companies"
 featured: "/images/blog/2024/07/expert-reviews-of-miami-fl-moving-companies/happy-woman-sitting-among-boxes-while-pa-2.webp"
 image_keywords:
@@ -20,7 +20,6 @@ images:
   - "/images/blog/2024/07/expert-reviews-of-miami-fl-moving-companies/a-woman-organizing-cardboard-boxes-in-a--4.webp"
   - "/images/blog/2024/07/expert-reviews-of-miami-fl-moving-companies/happy-woman-sitting-among-boxes-while-pa-2.webp"
   - "/images/blog/2024/07/expert-reviews-of-miami-fl-moving-companies/young-woman-surrounded-by-cardboard-boxe-5.webp"
-
 service_link: "/miami-local-moving"
 location_link: "/miami-movers"
 status: "completed"

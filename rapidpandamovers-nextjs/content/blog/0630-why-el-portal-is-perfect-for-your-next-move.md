@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/05/why-el-portal-is-perfect-for-your-next-move/art-deco-architecture-on-lincoln-road-in-5.webp"
   - "/images/blog/2028/05/why-el-portal-is-perfect-for-your-next-move/art-deco-hotel-in-miami-s-south-beach-wi-1.webp"
   - "/images/blog/2028/05/why-el-portal-is-perfect-for-your-next-move/black-and-white-image-of-a-carved-stone--2.webp"
-
 service_link: null
 location_link: "/el-portal-movers"
 status: "complete"

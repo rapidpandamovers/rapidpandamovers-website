@@ -17,8 +17,7 @@ images:
   - "/images/blog/2027/06/7-expert-moving-tips-that-make-a-difference/a-man-packing-items-into-cardboard-boxes-3.webp"
   - "/images/blog/2027/06/7-expert-moving-tips-that-make-a-difference/a-mover-in-coveralls-with-bandana-checks-1.webp"
   - "/images/blog/2027/06/7-expert-moving-tips-that-make-a-difference/a-professional-mover-packs-a-fragile-ite-2.webp"
-
-service_link: /local-moving
+service_link: "/local-moving"
 location_link: null
 status: "completed"
 needs_ai_image: false

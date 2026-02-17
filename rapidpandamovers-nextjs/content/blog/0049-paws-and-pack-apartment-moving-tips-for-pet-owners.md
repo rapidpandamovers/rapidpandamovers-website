@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/06/paws-and-pack-apartment-moving-tips-for-pet-owners/a-contemporary-skyscraper-in-a-cityscape-3.webp"
   - "/images/blog/2024/06/paws-and-pack-apartment-moving-tips-for-pet-owners/exterior-view-of-a-modern-apartment-buil-1.webp"
   - "/images/blog/2024/06/paws-and-pack-apartment-moving-tips-for-pet-owners/high-rise-residential-building-in-izmir--2.webp"
-
 service_link: "/apartment-moving"
 location_link: null
 status: "complete"

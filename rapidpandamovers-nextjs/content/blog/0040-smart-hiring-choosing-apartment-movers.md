@@ -2,7 +2,7 @@
 id: 40
 title: "Smart Hiring: Choosing Apartment Movers"
 slug: "smart-hiring-choosing-apartment-movers"
-excerpt: "Learn how to choose the right apartment movers with tips on evaluating services, understanding quotes, and avoiding common pitfalls."
+excerpt: "Moving into a new apartment can be a time of exhilaration and of daunting tasks. There's the excitement of beginning a new chapter and the stress of..."
 date: "2024-05-07"
 updated: "2024-05-07"
 readTime: "14 min read"
@@ -20,7 +20,6 @@ images:
   - "/images/blog/2024/05/smart-hiring-choosing-apartment-movers/a-tall-residential-building-with-multipl-2.webp"
   - "/images/blog/2024/05/smart-hiring-choosing-apartment-movers/low-angle-view-of-a-modern-skyscraper-in-3.webp"
   - "/images/blog/2024/05/smart-hiring-choosing-apartment-movers/upward-view-of-modern-skyscrapers-with-b-4.webp"
-
 service_link: "/apartment-moving"
 location_link: null
 status: "pending"

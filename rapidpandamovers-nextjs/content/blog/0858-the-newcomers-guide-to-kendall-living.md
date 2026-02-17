@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/10/the-newcomers-guide-to-kendall-living/african-american-male-in-eyeglasses-sitt-3.webp"
   - "/images/blog/2029/10/the-newcomers-guide-to-kendall-living/mother-and-child-packing-boxes-in-a-brig-1.webp"
   - "/images/blog/2029/10/the-newcomers-guide-to-kendall-living/young-child-sitting-on-bed-packing-a-sui-4.webp"
-
 service_link: null
 location_link: "/kendall-movers"
 status: "pending"

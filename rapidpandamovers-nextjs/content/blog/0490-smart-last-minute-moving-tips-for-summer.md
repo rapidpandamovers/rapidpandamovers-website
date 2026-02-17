@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/06/smart-last-minute-moving-tips-for-summer/blurred-motion-capture-of-a-motorcycle-c-4.webp"
   - "/images/blog/2027/06/smart-last-minute-moving-tips-for-summer/crop-anonymous-african-american-business-3.webp"
   - "/images/blog/2027/06/smart-last-minute-moving-tips-for-summer/experience-breathtaking-views-with-a-hot-5.webp"
-
 service_link: "/last-minute-moving"
 location_link: null
 status: "pending"

@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/03/your-coconut-grove-moving-handbook/loc-front-view-of-miami-city-hall-with-palm--1.webp"
   - "/images/blog/2025/03/your-coconut-grove-moving-handbook/svc-cardboard-box-filled-with-clothes-hanger-2.webp"
   - "/images/blog/2025/03/your-coconut-grove-moving-handbook/svc-cardboard-moving-boxes-in-a-modern-kitch-1.webp"
-
 service_link: "/local-moving"
 location_link: "/coconut-grove-movers"
 status: "pending"

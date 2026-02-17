@@ -18,7 +18,6 @@ images:
   - "/images/blog/2024/10/relocating-to-surfside-the-essential-guide/colorful-lifeguard-tower-at-pompano-beac-4.webp"
   - "/images/blog/2024/10/relocating-to-surfside-the-essential-guide/empty-streets-with-palm-trees-and-modern-1.webp"
   - "/images/blog/2024/10/relocating-to-surfside-the-essential-guide/people-enjoying-a-sunny-day-at-a-crowded-2.webp"
-
 service_link: "/surfside-local-moving"
 location_link: "/surfside-movers"
 status: "complete"

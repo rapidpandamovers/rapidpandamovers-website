@@ -47,20 +47,13 @@ export default function RateSection({
   }
 
   return (
-    <section className="py-16">
+    <section className="pt-20">
       <div className="container mx-auto">
         {(title || subtitle) && (
           <div className="text-center mb-12">
             {title && (
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                {title.includes(' ') ? (
-                  <>
-                    {title.split(' ').slice(0, -1).join(' ')}{' '}
-                    <span className="text-orange-500">{title.split(' ').slice(-1)}</span>
-                  </>
-                ) : (
-                  <span className="text-orange-500">{title}</span>
-                )}
+                {title}
               </h2>
             )}
             {subtitle && (
@@ -72,34 +65,37 @@ export default function RateSection({
         )}
 
         {displayCategories.length > 0 && (
-          <div className={`grid gap-12 mx-auto ${displayCategories.length > 1 ? 'md:grid-cols-2' : 'max-w-2xl'}`}>
-            {displayCategories.map((category, catIndex) => (
-              <div key={catIndex} className="bg-white rounded-xl p-8 shadow-sm border border-gray-200">
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                  {category.title}
-                </h3>
-                {category.description && (
-                  <p className="text-gray-600 mb-8">
-                    {category.description}
-                  </p>
-                )}
-                <div className="space-y-6">
-                  {category.rates.map((rate, index) => (
-                    <div key={index} className="border-l-4 border-orange-500 pl-6">
-                      <div className="flex justify-between items-start mb-2">
-                        <h4 className="text-lg font-semibold text-gray-800">
-                          {rate.service}
-                        </h4>
-                        <span className="text-2xl font-bold text-orange-600">
-                          {rate.rate}
-                        </span>
+          <div className={`grid gap-8 ${displayCategories.length > 1 ? 'md:grid-cols-2' : 'max-w-2xl mx-auto'}`}>
+            {displayCategories.map((category, catIndex) => {
+              const bgColors = ['bg-orange-50', 'bg-gray-50', 'bg-green-50', 'bg-blue-50']
+              return (
+                <div key={catIndex} className={`${bgColors[catIndex % bgColors.length]} rounded-4xl p-8`}>
+                  <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                    {category.title}
+                  </h3>
+                  {category.description && (
+                    <p className="text-gray-600 mb-6">
+                      {category.description}
+                    </p>
+                  )}
+                  <div className="space-y-4">
+                    {category.rates.map((rate, index) => (
+                      <div key={index} className="bg-white rounded-2xl p-6">
+                        <div className="flex justify-between items-start mb-2">
+                          <h4 className="text-lg font-semibold text-gray-800">
+                            {rate.service}
+                          </h4>
+                          <span className="text-2xl font-bold text-orange-600">
+                            {rate.rate}
+                          </span>
+                        </div>
+                        <p className="text-gray-600">{rate.description}</p>
                       </div>
-                      <p className="text-gray-600">{rate.description}</p>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         )}
 
@@ -107,7 +103,7 @@ export default function RateSection({
         {additionalServices && additionalServices.services.length > 0 && (
           <div className={displayCategories.length > 0 ? 'mt-16' : ''}>
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                 {additionalServices.title}
               </h2>
               {additionalServices.subtitle && (
@@ -116,18 +112,20 @@ export default function RateSection({
                 </p>
               )}
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              {additionalServices.services.map((service, index) => (
-                <div key={index} className="bg-white rounded-xl p-6 text-center shadow-sm border border-gray-200 hover:border-orange-500 hover:shadow-md transition-all">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                    {service.service}
-                  </h3>
-                  <div className="text-3xl font-bold text-orange-600 mb-4">
-                    {service.rate}
+            <div className="bg-gray-50 rounded-4xl p-8">
+              <div className="grid md:grid-cols-3 gap-6">
+                {additionalServices.services.map((service, index) => (
+                  <div key={index} className="bg-white rounded-2xl p-6 text-center">
+                    <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                      {service.service}
+                    </h3>
+                    <div className="text-3xl font-bold text-orange-600 mb-4">
+                      {service.rate}
+                    </div>
+                    <p className="text-gray-600">{service.description}</p>
                   </div>
-                  <p className="text-gray-600">{service.description}</p>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         )}

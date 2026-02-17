@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/07/discover-homestead-your-complete-movers-guide/loc-a-serene-beach-with-palm-trees-and-blue--1.webp"
   - "/images/blog/2027/07/discover-homestead-your-complete-movers-guide/svc-aerial-shot-of-a-crowded-urban-parking-l-2.webp"
   - "/images/blog/2027/07/discover-homestead-your-complete-movers-guide/svc-two-men-load-construction-materials-onto-1.webp"
-
 service_link: "/homestead-local-moving"
 location_link: "/homestead-movers"
 status: "pending"

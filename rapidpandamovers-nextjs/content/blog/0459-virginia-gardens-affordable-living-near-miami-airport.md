@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/04/virginia-gardens-affordable-living-near-miami-airport/an-aerial-shot-of-a-luxury-home-in-miami-2.webp"
   - "/images/blog/2027/04/virginia-gardens-affordable-living-near-miami-airport/captivating-view-of-miami-s-iconic-skyli-3.webp"
   - "/images/blog/2027/04/virginia-gardens-affordable-living-near-miami-airport/capture-of-a-modern-building-in-miami-sh-4.webp"
-
 service_link: null
 location_link: "/virginia-gardens-movers"
 status: "pending"

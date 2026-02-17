@@ -8,6 +8,7 @@ import BlogSection from './BlogSection';
 import MapSection from './MapSection';
 import OverviewSection from './OverviewSection';
 import Breadcrumbs from './Breadcrumbs';
+import QuoteSection from './QuoteSection';
 
 
 interface LocationPageProps {
@@ -134,7 +135,7 @@ export default function LocationPage({ city }: LocationPageProps) {
       />
 
       {/* Neighborhoods Section - Only for Cities with multiple neighborhoods */}
-      {showNeighborhoods && <LocationSection city={city} showServicesLink />}
+      {showNeighborhoods && <LocationSection city={city} />}
 
       {/* Available Services Section */}
       <ServiceSection location={city} />
@@ -144,17 +145,17 @@ export default function LocationPage({ city }: LocationPageProps) {
 
       {/* Related Blog Posts */}
       <BlogSection
+        variant="compact"
         locationFilter={city.slug}
         locationFilterFallback={isNeighborhood ? city.parentCity!.slug : undefined}
-        maxPosts={3}
         showFeatured={false}
         showCategories={false}
         title={`Moving Tips for ${city.name}`}
         subtitle={`Helpful guides for your ${city.name} move`}
-        showViewMore={true}
-        viewMorePosition="bottom"
-        viewMoreLink="/blog"
+        viewMoreTitle="More Moving Tips"
+        viewMoreSubtitle="Browse our full collection of moving guides and advice"
         viewMoreButtonText="View All Moving Tips"
+        viewMoreLink="/blog"
       />
 
       {/* Why Choose Us */}
@@ -162,6 +163,9 @@ export default function LocationPage({ city }: LocationPageProps) {
 
       {/* About Us - Only for Cities */}
       {!isNeighborhood && <AboutSection />}
+
+      {/* CTA Section */}
+      <QuoteSection />
     </div>
   );
 }

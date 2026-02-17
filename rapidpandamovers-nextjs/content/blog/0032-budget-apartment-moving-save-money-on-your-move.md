@@ -20,7 +20,6 @@ images:
   - "/images/blog/2024/04/budget-apartment-moving-save-money-on-your-move/majestic-view-of-tokyo-metropolitan-gove-5.webp"
   - "/images/blog/2024/04/budget-apartment-moving-save-money-on-your-move/monochrome-view-of-a-modern-building-wit-4.webp"
   - "/images/blog/2024/04/budget-apartment-moving-save-money-on-your-move/upward-view-of-a-tall-modern-building-wi-2.webp"
-
 service_link: "/apartment-moving"
 location_link: null
 status: "pending"

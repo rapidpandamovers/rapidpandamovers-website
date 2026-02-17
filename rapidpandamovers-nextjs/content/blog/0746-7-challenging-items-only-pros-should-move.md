@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/01/7-challenging-items-only-pros-should-move/four-movers-carefully-lift-a-large-wrapp-2.webp"
   - "/images/blog/2029/01/7-challenging-items-only-pros-should-move/two-men-carrying-a-green-sofa-on-a-city--1.webp"
   - "/images/blog/2029/01/7-challenging-items-only-pros-should-move/two-workers-organizing-cargo-inside-a-de-3.webp"
-
 service_link: null
 location_link: null
 status: "pending"

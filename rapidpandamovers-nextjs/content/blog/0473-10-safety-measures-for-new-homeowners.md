@@ -6,7 +6,7 @@ excerpt: "Your family's safety should be a top priority when moving into a new h
 date: "2027-05-05"
 updated: "2027-05-05"
 readTime: "3 min read"
-category: "Home & Living"
+category: "Safe Moving"
 image_folder: "/images/blog/2027/05/10-safety-measures-for-new-homeowners"
 featured: "/images/blog/2027/05/10-safety-measures-for-new-homeowners/a-cheerful-man-carries-a-large-couch-acr-1.webp"
 image_keywords:
@@ -19,8 +19,7 @@ images:
   - "/images/blog/2027/05/10-safety-measures-for-new-homeowners/a-professional-mover-packs-a-fragile-ite-2.webp"
   - "/images/blog/2027/05/10-safety-measures-for-new-homeowners/man-wearing-overalls-and-bandana-prepari-5.webp"
   - "/images/blog/2027/05/10-safety-measures-for-new-homeowners/two-movers-taking-a-break-on-a-green-sof-4.webp"
-
-service_link: null
+service_link: "/safe-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

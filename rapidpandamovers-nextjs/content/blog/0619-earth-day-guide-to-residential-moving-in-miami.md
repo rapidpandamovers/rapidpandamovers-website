@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/04/earth-day-guide-to-residential-moving-in-miami/a-family-creatively-makes-unpacking-fun--2.webp"
   - "/images/blog/2028/04/earth-day-guide-to-residential-moving-in-miami/a-family-involved-in-a-creative-activity-3.webp"
   - "/images/blog/2028/04/earth-day-guide-to-residential-moving-in-miami/happy-family-playing-with-boxes-while-mo-1.webp"
-
 service_link: "/residential-moving"
 location_link: null
 status: "pending"

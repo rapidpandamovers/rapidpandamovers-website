@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/08/sweetwater-living-essential-relocation-tips/loc-scenic-aerial-shot-of-a-sprawling-reside-2.webp"
   - "/images/blog/2029/08/sweetwater-living-essential-relocation-tips/svc-a-blue-truck-transporting-livestock-on-a-1.webp"
   - "/images/blog/2029/08/sweetwater-living-essential-relocation-tips/svc-red-ford-f-150-truck-driving-on-a-bridge-2.webp"
-
 service_link: "/sweetwater-local-moving"
 location_link: "/sweetwater-movers"
 status: "pending"

@@ -17,7 +17,6 @@ images:
   - "/images/blog/2030/05/5-moving-day-necessities-for-every-relocator/a-mover-with-a-clipboard-checking-packag-2.webp"
   - "/images/blog/2030/05/5-moving-day-necessities-for-every-relocator/a-table-with-moving-supplies-including-b-5.webp"
   - "/images/blog/2030/05/5-moving-day-necessities-for-every-relocator/a-woman-labels-cardboard-boxes-while-pre-1.webp"
-
 service_link: null
 location_link: null
 status: "pending"

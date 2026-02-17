@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/01/new-year-packing-services-tips-for-miami-residents/loc-view-of-miami-skyline-from-coral-gables--1.webp"
   - "/images/blog/2026/01/new-year-packing-services-tips-for-miami-residents/svc-close-up-of-hands-packing-a-cardboard-bo-2.webp"
   - "/images/blog/2026/01/new-year-packing-services-tips-for-miami-residents/svc-unrecognizable-man-sealing-box-with-duck-1.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "complete"

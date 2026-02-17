@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/11/why-aventura-is-perfect-for-your-next-move/a-bustling-scene-inside-a-modern-shoppin-4.webp"
   - "/images/blog/2029/11/why-aventura-is-perfect-for-your-next-move/contemporary-design-of-big-mall-interior-5.webp"
   - "/images/blog/2029/11/why-aventura-is-perfect-for-your-next-move/explore-the-grandeur-of-the-mall-of-the--3.webp"
-
 service_link: null
 location_link: "/aventura-movers"
 status: "pending"

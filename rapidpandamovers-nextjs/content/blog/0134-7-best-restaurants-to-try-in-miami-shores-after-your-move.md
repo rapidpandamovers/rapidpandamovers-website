@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/02/7-best-restaurants-to-try-in-miami-shores-after-your-move/a-cozy-casual-cafeteria-interior-with-ta-2.webp"
   - "/images/blog/2025/02/7-best-restaurants-to-try-in-miami-shores-after-your-move/a-sophisticated-dining-setup-featuring-a-4.webp"
   - "/images/blog/2025/02/7-best-restaurants-to-try-in-miami-shores-after-your-move/elegant-evening-dining-at-a-tokyo-restau-1.webp"
-
 service_link: "/local-moving"
 location_link: "/miami-shores-movers"
 status: "pending"

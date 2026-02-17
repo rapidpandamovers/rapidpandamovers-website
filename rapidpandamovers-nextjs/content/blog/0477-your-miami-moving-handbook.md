@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/05/your-miami-moving-handbook/captivating-view-of-miami-s-modern-skyli-4.webp"
   - "/images/blog/2027/05/your-miami-moving-handbook/empty-streets-with-palm-trees-and-modern-1.webp"
   - "/images/blog/2027/05/your-miami-moving-handbook/explore-the-elegant-reception-area-of-a--3.webp"
-
 service_link: null
 location_link: "/miami-movers"
 status: "pending"

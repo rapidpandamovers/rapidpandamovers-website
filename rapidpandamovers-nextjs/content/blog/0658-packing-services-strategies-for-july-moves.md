@@ -20,7 +20,6 @@ images:
   - "/images/blog/2028/07/packing-services-strategies-for-july-moves/close-up-of-hands-packing-a-box-labeled--1.webp"
   - "/images/blog/2028/07/packing-services-strategies-for-july-moves/crop-unrecognizable-man-in-casual-clothe-5.webp"
   - "/images/blog/2028/07/packing-services-strategies-for-july-moves/labeled-cardboard-boxes-for-summer-cloth-3.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "completed"

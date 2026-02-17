@@ -6,7 +6,7 @@ excerpt: "Make the most of Golden Beach weekends with these 10 local activities,
 date: "2029-07-25"
 updated: "2029-07-25"
 readTime: "4 min read"
-category: "Lifestyle"
+category: "Commercial Moving"
 image_folder: "/images/blog/2029/07/10-things-to-do-in-golden-beach-this-weekend"
 featured: "/images/blog/2029/07/10-things-to-do-in-golden-beach-this-weekend/wooden-scrabble-tiles-spelling-weekend-o-3.webp"
 image_keywords:
@@ -19,8 +19,7 @@ images:
   - "/images/blog/2029/07/10-things-to-do-in-golden-beach-this-weekend/brightly-colored-clown-game-machines-at--1.webp"
   - "/images/blog/2029/07/10-things-to-do-in-golden-beach-this-weekend/two-friends-playing-video-games-and-enjo-2.webp"
   - "/images/blog/2029/07/10-things-to-do-in-golden-beach-this-weekend/wooden-scrabble-tiles-spelling-weekend-o-3.webp"
-
-service_link: null
+service_link: "/commercial-moving"
 location_link: "/golden-beach-movers"
 status: "pending"
 needs_ai_image: false

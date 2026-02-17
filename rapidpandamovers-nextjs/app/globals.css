@@ -168,7 +168,7 @@
 }
 
 .generating-pdf .checklist-header {
-  padding: 0.75rem !important; /* print:p-3 */
+  padding: 1rem 1rem 1rem 1.5rem !important; /* extra left padding for PDF */
 }
 
 /* Hide decorative elements */

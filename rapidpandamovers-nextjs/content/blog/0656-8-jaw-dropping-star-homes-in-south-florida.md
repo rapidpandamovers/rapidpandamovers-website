@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/07/8-jaw-dropping-star-homes-in-south-florida/stunning-aerial-photo-of-a-wedding-event-2.webp"
   - "/images/blog/2028/07/8-jaw-dropping-star-homes-in-south-florida/stunning-wooden-manor-surrounded-by-well-3.webp"
   - "/images/blog/2028/07/8-jaw-dropping-star-homes-in-south-florida/vintage-victorian-interior-with-a-decora-1.webp"
-
 service_link: null
 location_link: null
 status: "completed"

@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/01/exploring-bay-harbor-islands-tips-for-newcomers/picturesque-view-of-santorini-s-harbor-w-3.webp"
   - "/images/blog/2027/01/exploring-bay-harbor-islands-tips-for-newcomers/stunning-aerial-photograph-of-los-cristi-5.webp"
   - "/images/blog/2027/01/exploring-bay-harbor-islands-tips-for-newcomers/stunning-aerial-view-of-padang-bai-beach-1.webp"
-
 service_link: "/bay-harbor-islands-local-moving"
 location_link: "/bay-harbor-islands-movers"
 status: "pending"

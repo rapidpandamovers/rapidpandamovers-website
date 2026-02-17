@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/09/your-golden-beach-moving-handbook/a-person-relaxes-on-a-beach-under-a-stra-1.webp"
   - "/images/blog/2030/09/your-golden-beach-moving-handbook/stunning-aerial-photo-of-a-luxurious-bea-2.webp"
   - "/images/blog/2030/09/your-golden-beach-moving-handbook/stunning-aerial-view-of-a-luxurious-beac-3.webp"
-
 service_link: null
 location_link: "/golden-beach-movers"
 status: "pending"

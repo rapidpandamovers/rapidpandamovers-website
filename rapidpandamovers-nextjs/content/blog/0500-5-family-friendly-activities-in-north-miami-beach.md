@@ -2,7 +2,7 @@
 id: 500
 title: "5 Family-Friendly Activities in North Miami Beach"
 slug: "5-family-friendly-activities-in-north-miami-beach"
-excerpt: "Moving with kids? North Miami Beach offers beaches, parks, and museums that keep families busy year-round. Here are five spots your kids will love."
+excerpt: "Moving with kids? North Miami Beach offers beaches, parks, and museums that keep families busy year-round."
 date: "2027-07-07"
 updated: "2027-07-07"
 readTime: "4 min read"
@@ -20,7 +20,6 @@ images:
   - "/images/blog/2027/07/5-family-friendly-activities-in-north-miami-beach/a-mother-and-daughter-enjoy-quality-time-4.webp"
   - "/images/blog/2027/07/5-family-friendly-activities-in-north-miami-beach/a-young-boy-plays-in-the-sand-on-a-sunny-3.webp"
   - "/images/blog/2027/07/5-family-friendly-activities-in-north-miami-beach/a-young-boy-plays-on-the-beach-with-a-to-2.webp"
-
 service_link: null
 location_link: "/north-miami-beach-movers"
 status: "completed"

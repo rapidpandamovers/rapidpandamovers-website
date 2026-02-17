@@ -2,7 +2,7 @@
 id: 407
 title: "7 Day-One Tasks for Your New Florida Home"
 slug: "7-day-one-tasks-for-your-new-florida-home"
-excerpt: "Moving into a new home in South Florida this summer? Start right with these essential first-day tasks that will help you settle in safely and efficiently."
+excerpt: "Moving into a new home in South Florida this summer? Whether you're relocating across Miami-Dade or arriving from out of state, these essential..."
 date: "2026-12-01"
 readTime: "3 min read"
 category: "Local Moving"
@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/12/7-day-one-tasks-for-your-new-florida-home/a-u-haul-truck-parked-on-a-gravel-road-a-3.webp"
   - "/images/blog/2026/12/7-day-one-tasks-for-your-new-florida-home/movers-loading-boxes-into-a-truck-on-a-s-2.webp"
   - "/images/blog/2026/12/7-day-one-tasks-for-your-new-florida-home/red-ford-f-150-truck-driving-on-a-bridge-4.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "pending"

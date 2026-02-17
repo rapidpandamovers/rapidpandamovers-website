@@ -6,7 +6,7 @@ excerpt: "Protect yourself from moving scams. Learn the 10 red flags that indica
 date: "2025-06-04"
 updated: "2025-06-04"
 readTime: "3 min read"
-category: "Moving Tips"
+category: "Long Distance Moving"
 image_folder: "/images/blog/2025/06/10-indicators-your-mover-might-be-a-scam"
 featured: "/images/blog/2025/06/10-indicators-your-mover-might-be-a-scam/two-professional-movers-carrying-cardboa-4.webp"
 image_keywords:
@@ -18,8 +18,7 @@ images:
   - "/images/blog/2025/06/10-indicators-your-mover-might-be-a-scam/smiling-mover-giving-thumbs-up-from-a-mo-2.webp"
   - "/images/blog/2025/06/10-indicators-your-mover-might-be-a-scam/two-professional-movers-carrying-cardboa-4.webp"
   - "/images/blog/2025/06/10-indicators-your-mover-might-be-a-scam/united-states-and-warning-flags-on-displ-5.webp"
-
-service_link: null
+service_link: "/long-distance-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/07/welcome-to-coral-gables-a-moving-guide/facade-of-an-elegant-building-with-a-pro-1.webp"
   - "/images/blog/2026/07/welcome-to-coral-gables-a-moving-guide/stunning-aerial-shot-of-a-luxury-hotel-i-3.webp"
   - "/images/blog/2026/07/welcome-to-coral-gables-a-moving-guide/tranquil-university-campus-view-with-pal-2.webp"
-
 service_link: null
 location_link: "/coral-gables-movers"
 status: "pending"

@@ -1,9 +1,16 @@
-import { CheckCircle } from 'lucide-react'
+import { CheckCircle, LucideIcon } from 'lucide-react'
+
+interface DetailItem {
+  icon?: LucideIcon
+  title: string
+  desc?: string
+}
 
 interface IncludedSectionProps {
-  items?: string[]
+  items?: string[] | DetailItem[]
   title?: string
   subtitle?: string
+  background?: 'gray' | 'orange'
 }
 
 const defaultItems = [
@@ -20,35 +27,46 @@ const defaultItems = [
 export default function IncludedSection({
   items = defaultItems,
   title = "What's Included",
-  subtitle = "Everything you need for a complete moving experience"
+  subtitle,
+  background = 'gray',
 }: IncludedSectionProps) {
   if (!items || items.length === 0) return null
 
+  // Normalize items to DetailItem format
+  const normalizedItems: DetailItem[] = items.map(item =>
+    typeof item === 'string' ? { title: item } : item
+  )
+
+  const bgClass = background === 'orange' ? 'bg-orange-50' : 'bg-gray-50'
+
   return (
-    <section className="py-20">
+    <section className="pt-20">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            {title.includes(' ') ? (
-              <>
-                {title.split(' ').slice(0, -1).join(' ')}{' '}
-                <span className="text-orange-500">{title.split(' ').slice(-1)}</span>
-              </>
-            ) : (
-              <span className="text-orange-500">{title}</span>
-            )}
+            {title}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            {subtitle}
-          </p>
+          {subtitle && (
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              {subtitle}
+            </p>
+          )}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto">
-          {items.map((item, index) => (
-            <div key={index} className="flex items-center space-x-3 bg-white rounded-lg p-4 border border-gray-200">
-              <CheckCircle className="w-5 h-5 text-orange-500 flex-shrink-0" />
-              <span className="text-gray-700 text-sm">{item}</span>
-            </div>
-          ))}
+        <div className={`${bgClass} rounded-4xl p-8`}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {normalizedItems.map((item, index) => {
+              const IconComponent = item.icon || CheckCircle
+              return (
+                <div key={index} className="bg-white rounded-2xl p-6 text-center">
+                  <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <IconComponent className="w-6 h-6 text-orange-500" />
+                  </div>
+                  <h3 className="font-bold text-gray-800 mb-2">{item.title}</h3>
+                  {item.desc && <p className="text-gray-600 text-sm">{item.desc}</p>}
+                </div>
+              )
+            })}
+          </div>
         </div>
       </div>
     </section>

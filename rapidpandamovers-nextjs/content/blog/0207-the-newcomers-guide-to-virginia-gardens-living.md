@@ -17,7 +17,6 @@ images:
   - "/images/blog/2025/08/the-newcomers-guide-to-virginia-gardens-living/capture-of-a-modern-building-in-miami-sh-4.webp"
   - "/images/blog/2025/08/the-newcomers-guide-to-virginia-gardens-living/empty-streets-with-palm-trees-and-modern-5.webp"
   - "/images/blog/2025/08/the-newcomers-guide-to-virginia-gardens-living/explore-this-modern-miami-residence-with-2.webp"
-
 service_link: "/virginia-gardens-movers"
 location_link: "/virginia-gardens-movers"
 status: "pending"

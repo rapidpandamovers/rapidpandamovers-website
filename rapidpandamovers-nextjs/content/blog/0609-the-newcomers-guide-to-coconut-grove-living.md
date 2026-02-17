@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/03/the-newcomers-guide-to-coconut-grove-living/loc-a-serene-landscape-of-a-coconut-grove-wi-2.webp"
   - "/images/blog/2028/03/the-newcomers-guide-to-coconut-grove-living/svc-a-delivery-truck-driving-along-a-coastal-2.webp"
   - "/images/blog/2028/03/the-newcomers-guide-to-coconut-grove-living/svc-u-haul-moving-truck-parked-on-roadside-w-1.webp"
-
 service_link: "/coconut-grove-local-moving"
 location_link: "/coconut-grove-movers"
 status: "pending"

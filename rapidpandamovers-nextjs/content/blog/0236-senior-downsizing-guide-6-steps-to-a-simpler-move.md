@@ -17,7 +17,6 @@ images:
   - "/images/blog/2025/10/senior-downsizing-guide-6-steps-to-a-simpler-move/close-up-of-a-senior-man-in-a-suit-makin-3.webp"
   - "/images/blog/2025/10/senior-downsizing-guide-6-steps-to-a-simpler-move/full-body-of-focused-elderly-man-with-be-2.webp"
   - "/images/blog/2025/10/senior-downsizing-guide-6-steps-to-a-simpler-move/two-senior-women-packing-belongings-in-b-1.webp"
-
 service_link: "/senior-moving"
 location_link: null
 status: "pending"

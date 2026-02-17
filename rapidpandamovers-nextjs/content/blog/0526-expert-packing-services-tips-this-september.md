@@ -20,7 +20,6 @@ images:
   - "/images/blog/2027/09/expert-packing-services-tips-this-september/close-up-of-hands-packing-a-box-labeled--2.webp"
   - "/images/blog/2027/09/expert-packing-services-tips-this-september/from-above-of-crop-unrecognizable-male-w-4.webp"
   - "/images/blog/2027/09/expert-packing-services-tips-this-september/woman-sealing-boxes-with-tape-for-reloca-1.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "completed"

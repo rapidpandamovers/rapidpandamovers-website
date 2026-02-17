@@ -18,8 +18,7 @@ images:
   - "/images/blog/2027/12/9-family-friendly-moving-strategies-that-work/a-joyful-moment-of-a-mother-and-child-pl-3.webp"
   - "/images/blog/2027/12/9-family-friendly-moving-strategies-that-work/crop-anonymous-male-in-casual-clothes-pa-2.webp"
   - "/images/blog/2027/12/9-family-friendly-moving-strategies-that-work/faceless-individual-holding-an-open-card-1.webp"
-
-service_link: /local-moving
+service_link: "/local-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

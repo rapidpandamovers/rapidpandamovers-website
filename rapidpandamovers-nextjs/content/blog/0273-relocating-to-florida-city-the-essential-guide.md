@@ -20,7 +20,6 @@ images:
   - "/images/blog/2026/01/relocating-to-florida-city-the-essential-guide/majestic-american-alligator-gliding-thro-3.webp"
   - "/images/blog/2026/01/relocating-to-florida-city-the-essential-guide/pathway-leading-to-cape-florida-lighthou-2.webp"
   - "/images/blog/2026/01/relocating-to-florida-city-the-essential-guide/wild-alligator-in-a-serene-swamp-in-sebr-4.webp"
-
 service_link: null
 location_link: "/florida-city-movers"
 status: "complete"

@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/08/el-portal-relocation-guide-a-complete-overview/a-man-rides-a-bicycle-down-a-historic-st-1.webp"
   - "/images/blog/2026/08/el-portal-relocation-guide-a-complete-overview/black-and-white-image-of-a-carved-stone--3.webp"
   - "/images/blog/2026/08/el-portal-relocation-guide-a-complete-overview/classic-vintage-car-parked-outside-park--4.webp"
-
 service_link: null
 location_link: "/el-portal-movers"
 status: "pending"

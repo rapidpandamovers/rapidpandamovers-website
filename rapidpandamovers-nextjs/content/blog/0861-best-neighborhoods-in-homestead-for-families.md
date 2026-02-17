@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/10/best-neighborhoods-in-homestead-for-families/a-stunning-aerial-view-of-a-parking-lot--1.webp"
   - "/images/blog/2029/10/best-neighborhoods-in-homestead-for-families/close-up-of-an-american-alligator-baskin-2.webp"
   - "/images/blog/2029/10/best-neighborhoods-in-homestead-for-families/tranquil-view-of-the-everglades-wetlands-4.webp"
-
 service_link: null
 location_link: "/homestead-movers"
 status: "pending"

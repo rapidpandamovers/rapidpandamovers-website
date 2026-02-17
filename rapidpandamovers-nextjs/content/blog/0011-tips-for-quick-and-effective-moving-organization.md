@@ -20,7 +20,6 @@ images:
   - "/images/blog/2024/01/tips-for-quick-and-effective-moving-organization/people-loading-supplies-onto-a-truck-in--3.webp"
   - "/images/blog/2024/01/tips-for-quick-and-effective-moving-organization/red-trailer-truck-at-a-warehouse-loading-2.webp"
   - "/images/blog/2024/01/tips-for-quick-and-effective-moving-organization/two-men-load-construction-materials-onto-4.webp"
-
 service_link: "/miami-local-moving"
 location_link: "/miami-movers"
 status: "completed"

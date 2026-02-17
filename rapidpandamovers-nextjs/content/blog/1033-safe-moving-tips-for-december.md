@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/12/safe-moving-tips-for-december/camouflage-and-orange-toy-gun-on-white-f-3.webp"
   - "/images/blog/2030/12/safe-moving-tips-for-december/close-up-shot-of-a-black-handgun-secured-2.webp"
   - "/images/blog/2030/12/safe-moving-tips-for-december/close-up-view-of-warning-label-on-a-fire-4.webp"
-
 service_link: "/safe-moving"
 location_link: null
 status: "complete"

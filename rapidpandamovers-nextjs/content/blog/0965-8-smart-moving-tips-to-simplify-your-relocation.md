@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/06/8-smart-moving-tips-to-simplify-your-relocation/a-collection-of-large-cardboard-boxes-la-2.webp"
   - "/images/blog/2030/06/8-smart-moving-tips-to-simplify-your-relocation/labeled-cardboard-boxes-for-summer-cloth-4.webp"
   - "/images/blog/2030/06/8-smart-moving-tips-to-simplify-your-relocation/person-opening-a-special-delivery-box-fi-3.webp"
-
 service_link: null
 location_link: null
 status: "pending"

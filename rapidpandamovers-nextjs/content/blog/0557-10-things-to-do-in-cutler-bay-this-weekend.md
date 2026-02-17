@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/11/10-things-to-do-in-cutler-bay-this-weekend/cozy-evening-scene-with-woman-enjoying-p-4.webp"
   - "/images/blog/2027/11/10-things-to-do-in-cutler-bay-this-weekend/diverse-group-of-young-adults-enjoying-a-2.webp"
   - "/images/blog/2027/11/10-things-to-do-in-cutler-bay-this-weekend/little-girl-captivated-by-giant-bubble-a-3.webp"
-
 service_link: null
 location_link: "/cutler-bay-movers"
 status: "complete"

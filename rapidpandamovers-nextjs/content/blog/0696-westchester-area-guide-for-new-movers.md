@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/10/westchester-area-guide-for-new-movers/aerial-photo-showcasing-a-suburban-neigh-3.webp"
   - "/images/blog/2028/10/westchester-area-guide-for-new-movers/multiple-mailboxes-in-a-row-beside-a-hou-2.webp"
   - "/images/blog/2028/10/westchester-area-guide-for-new-movers/three-cluster-mailboxes-under-trees-in-a-4.webp"
-
 service_link: null
 location_link: "/westchester-movers"
 status: "pending"

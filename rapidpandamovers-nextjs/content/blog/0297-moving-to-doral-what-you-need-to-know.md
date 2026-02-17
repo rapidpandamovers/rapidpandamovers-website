@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/03/moving-to-doral-what-you-need-to-know/a-joyful-child-with-socks-on-feet-playin-2.webp"
   - "/images/blog/2026/03/moving-to-doral-what-you-need-to-know/a-young-girl-with-curly-hair-peeking-ove-3.webp"
   - "/images/blog/2026/03/moving-to-doral-what-you-need-to-know/family-enjoying-a-creative-moment-while--4.webp"
-
 service_link: null
 location_link: "/doral-movers"
 status: "complete"

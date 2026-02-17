@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/03/march-commercial-moving-advice-for-families/modern-office-meeting-room-with-designer-4.webp"
   - "/images/blog/2027/03/march-commercial-moving-advice-for-families/spacious-atrium-in-a-contemporary-office-2.webp"
   - "/images/blog/2027/03/march-commercial-moving-advice-for-families/spacious-office-floor-with-rows-of-empty-3.webp"
-
 service_link: "/commercial-moving"
 location_link: null
 status: "pending"

@@ -6,7 +6,7 @@ excerpt: "Explore seven historic Miami properties, from Vizcaya to Art Deco land
 date: "2027-09-08"
 updated: "2027-09-08"
 readTime: "4 min read"
-category: "Fun Facts"
+category: "Student Moving"
 image_folder: "/images/blog/2027/09/7-historic-miami-properties-with-amazing-pasts"
 featured: "/images/blog/2027/09/7-historic-miami-properties-with-amazing-pasts/classic-vintage-car-parked-outside-park--2.webp"
 image_keywords:
@@ -17,8 +17,7 @@ images:
   - "/images/blog/2027/09/7-historic-miami-properties-with-amazing-pasts/a-vibrant-view-of-the-art-deco-marlin-ho-1.webp"
   - "/images/blog/2027/09/7-historic-miami-properties-with-amazing-pasts/bright-day-on-ocean-drive-featuring-the--3.webp"
   - "/images/blog/2027/09/7-historic-miami-properties-with-amazing-pasts/classic-vintage-car-parked-outside-park--2.webp"
-
-service_link: null
+service_link: "/student-moving"
 location_link: null
 status: "completed"
 needs_ai_image: false

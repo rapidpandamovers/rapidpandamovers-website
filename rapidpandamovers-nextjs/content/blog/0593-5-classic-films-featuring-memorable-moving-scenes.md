@@ -2,7 +2,7 @@
 id: 593
 title: "5 Classic Films Featuring Memorable Moving Scenes"
 slug: "5-classic-films-featuring-memorable-moving-scenes"
-excerpt: "From The Money Pit to Up, these 5 films capture moving chaos and emotion. Perfect for a post-move movie night."
+excerpt: "From The Money Pit to Up, these 5 films capture moving chaos and emotion. Perfect for a post-move movie night..."
 date: "2028-02-09"
 updated: "2028-02-09"
 readTime: "2 min read"
@@ -17,7 +17,6 @@ images:
   - "/images/blog/2028/02/5-classic-films-featuring-memorable-moving-scenes/aerial-shot-of-a-crowded-urban-parking-l-2.webp"
   - "/images/blog/2028/02/5-classic-films-featuring-memorable-moving-scenes/three-men-loading-wooden-boxes-on-a-truc-3.webp"
   - "/images/blog/2028/02/5-classic-films-featuring-memorable-moving-scenes/two-men-load-construction-materials-onto-1.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "completed"

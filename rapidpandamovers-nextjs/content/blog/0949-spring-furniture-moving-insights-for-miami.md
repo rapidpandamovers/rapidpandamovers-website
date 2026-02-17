@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/05/spring-furniture-moving-insights-for-miami/modern-living-room-with-a-textured-brown-4.webp"
   - "/images/blog/2030/05/spring-furniture-moving-insights-for-miami/stylish-blue-sofa-with-cushions-on-patte-2.webp"
   - "/images/blog/2030/05/spring-furniture-moving-insights-for-miami/woman-relaxing-in-a-sunlit-living-room-w-1.webp"
-
 service_link: "/furniture-moving"
 location_link: null
 status: "pending"

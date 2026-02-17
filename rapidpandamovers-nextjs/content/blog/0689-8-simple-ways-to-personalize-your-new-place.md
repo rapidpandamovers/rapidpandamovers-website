@@ -6,7 +6,7 @@ excerpt: "Eight simple ways to personalize your new place. Tips for making your 
 date: "2028-09-20"
 updated: "2028-09-20"
 readTime: "2 min read"
-category: "Home & Living"
+category: "Office Moving"
 image_folder: "/images/blog/2028/09/8-simple-ways-to-personalize-your-new-place"
 featured: "/images/blog/2028/09/8-simple-ways-to-personalize-your-new-place/warm-and-inviting-fireplace-with-wooden--4.webp"
 image_keywords:
@@ -17,8 +17,7 @@ images:
   - "/images/blog/2028/09/8-simple-ways-to-personalize-your-new-place/a-cozy-workspace-featuring-a-modern-chai-3.webp"
   - "/images/blog/2028/09/8-simple-ways-to-personalize-your-new-place/cozy-vintage-bedroom-featuring-floral-de-2.webp"
   - "/images/blog/2028/09/8-simple-ways-to-personalize-your-new-place/warm-and-inviting-fireplace-with-wooden--4.webp"
-
-service_link: null
+service_link: "/office-moving"
 location_link: null
 status: "complete"
 needs_ai_image: false

@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/12/making-west-miami-your-new-home-a-practical-guide/loc-empty-streets-with-palm-trees-and-modern-2.webp"
   - "/images/blog/2027/12/making-west-miami-your-new-home-a-practical-guide/svc-cardboard-box-filled-with-clothes-hanger-2.webp"
   - "/images/blog/2027/12/making-west-miami-your-new-home-a-practical-guide/svc-young-adult-male-smiling-while-handling--1.webp"
-
 service_link: "/west-miami-local-moving"
 location_link: "/west-miami-movers"
 status: "pending"

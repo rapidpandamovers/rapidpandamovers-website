@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/01/the-ultimate-local-move-checklist/a-blue-volvo-truck-parked-outside-a-ware-1.webp"
   - "/images/blog/2024/01/the-ultimate-local-move-checklist/excavator-loading-materials-into-a-heavy-2.webp"
   - "/images/blog/2024/01/the-ultimate-local-move-checklist/semi-truck-parked-at-a-loading-dock-with-3.webp"
-
 service_link: "/miami-local-moving"
 location_link: null
 status: "completed"

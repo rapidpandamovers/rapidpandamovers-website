@@ -2,7 +2,7 @@
 id: 422
 title: "8 Unexpected Items From Our Moving History"
 slug: "8-unexpected-items-from-our-moving-history"
-excerpt: "From grand pianos in Coral Gables estates to classic cars in Coconut Grove, here are 8 unusual items our Miami moving crews have transported."
+excerpt: "Over the years at Rapid Panda Movers, we've transported thousands of households across Miami and beyond."
 date: "2027-01-06"
 updated: "2027-01-06"
 readTime: "4 min read"
@@ -17,8 +17,7 @@ images:
   - "/images/blog/2027/01/8-unexpected-items-from-our-moving-history/a-rustic-outdoor-piano-under-a-tree-crea-2.webp"
   - "/images/blog/2027/01/8-unexpected-items-from-our-moving-history/a-woman-plays-a-white-grand-piano-in-a-s-1.webp"
   - "/images/blog/2027/01/8-unexpected-items-from-our-moving-history/colorful-piano-with-artistic-designs-by--4.webp"
-
-service_link: /furniture-moving
+service_link: "/furniture-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

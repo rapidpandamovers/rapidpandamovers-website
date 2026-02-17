@@ -2,7 +2,7 @@
 id: 10
 title: "How to Research and Compare Local Moving Companies"
 slug: "how-to-research-and-compare-local-moving-companies"
-excerpt: "Learn how to evaluate local movers by checking credentials, comparing quotes, understanding insurance options, and spotting red flags before you hire."
+excerpt: "Hiring the wrong moving company can turn an exciting life transition into a nightmare."
 date: "2024-01-30"
 updated: "2024-01-30"
 readTime: "11 min read"
@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/01/how-to-research-and-compare-local-moving-companies/mover-checking-inventory-list-while-orga-2.webp"
   - "/images/blog/2024/01/how-to-research-and-compare-local-moving-companies/movers-loading-boxes-into-a-truck-on-a-s-1.webp"
   - "/images/blog/2024/01/how-to-research-and-compare-local-moving-companies/two-professional-movers-in-an-empty-apar-4.webp"
-
 service_link: "/local-moving"
 location_link: "/miami-movers"
 status: "completed"

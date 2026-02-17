@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/09/discover-westchester-your-complete-movers-guide/svc-aerial-shot-of-a-crowded-urban-parking-l-1.webp"
   - "/images/blog/2026/09/discover-westchester-your-complete-movers-guide/svc-excavator-loading-materials-into-a-heavy-2.webp"
   - "/images/blog/2026/09/discover-westchester-your-complete-movers-guide/svc-three-men-loading-wooden-boxes-on-a-truc-3.webp"
-
 service_link: "/westchester-local-moving"
 location_link: "/westchester-movers"
 status: "complete"

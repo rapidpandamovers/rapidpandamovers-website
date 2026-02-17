@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/09/your-first-month-in-aventura-a-locals-perspective/loc-top-down-view-of-a-miami-home-with-solar-2.webp"
   - "/images/blog/2026/09/your-first-month-in-aventura-a-locals-perspective/svc-excavator-loading-materials-into-a-heavy-1.webp"
   - "/images/blog/2026/09/your-first-month-in-aventura-a-locals-perspective/svc-three-men-loading-wooden-boxes-on-a-truc-2.webp"
-
 service_link: "/aventura-local-moving"
 location_link: "/aventura-movers"
 status: "pending"

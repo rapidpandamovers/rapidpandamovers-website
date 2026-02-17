@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/01/how-to-minimize-downtime-during-an-office-move/contemporary-office-space-featuring-part-1.webp"
   - "/images/blog/2024/01/how-to-minimize-downtime-during-an-office-move/sleek-office-space-featuring-contemporar-4.webp"
   - "/images/blog/2024/01/how-to-minimize-downtime-during-an-office-move/spacious-and-contemporary-office-space-f-3.webp"
-
 service_link: "/miami-office-moving"
 location_link: null
 status: "completed"

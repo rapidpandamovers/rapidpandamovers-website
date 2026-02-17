@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/10/your-fall-labor-only-moving-planning-guide/dock-workers-securing-ropes-in-a-coastal-5.webp"
   - "/images/blog/2030/10/your-fall-labor-only-moving-planning-guide/two-men-load-construction-materials-onto-4.webp"
   - "/images/blog/2030/10/your-fall-labor-only-moving-planning-guide/two-men-sitting-on-a-pile-of-cement-bags-1.webp"
-
 service_link: "/labor-only-moving"
 location_link: null
 status: "pending"

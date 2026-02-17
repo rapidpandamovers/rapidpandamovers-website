@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/04/6-plants-that-flourish-in-miami-humidity/close-up-of-lush-green-variegated-tropic-4.webp"
   - "/images/blog/2026/04/6-plants-that-flourish-in-miami-humidity/close-up-of-lush-monstera-leaves-with-sh-3.webp"
   - "/images/blog/2026/04/6-plants-that-flourish-in-miami-humidity/tropical-plants-indoors-with-vibrant-gre-2.webp"
-
 service_link: null
 location_link: null
 status: "pending"

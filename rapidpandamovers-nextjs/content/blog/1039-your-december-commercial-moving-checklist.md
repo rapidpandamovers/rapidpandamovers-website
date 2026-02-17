@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/12/your-december-commercial-moving-checklist/a-man-with-afro-hair-moves-a-teal-sofa-t-2.webp"
   - "/images/blog/2030/12/your-december-commercial-moving-checklist/a-mover-carries-a-green-sofa-indoors-sho-3.webp"
   - "/images/blog/2030/12/your-december-commercial-moving-checklist/opened-carton-boxes-and-stacked-books-pl-1.webp"
-
 service_link: "/commercial-moving"
 location_link: null
 status: "complete"

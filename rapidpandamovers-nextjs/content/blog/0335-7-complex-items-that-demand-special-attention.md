@@ -17,7 +17,6 @@ images:
   - "/images/blog/2026/06/7-complex-items-that-demand-special-attention/beautiful-wooden-grand-piano-with-open-l-1.webp"
   - "/images/blog/2026/06/7-complex-items-that-demand-special-attention/detailed-view-of-piano-internal-mechanis-4.webp"
   - "/images/blog/2026/06/7-complex-items-that-demand-special-attention/high-resolution-close-up-of-piano-keys-s-3.webp"
-
 service_link: "/special-needs-moving"
 location_link: null
 status: "pending"

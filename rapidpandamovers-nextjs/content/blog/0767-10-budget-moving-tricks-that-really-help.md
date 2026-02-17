@@ -17,8 +17,7 @@ images:
   - "/images/blog/2029/03/10-budget-moving-tricks-that-really-help/excavator-loading-materials-into-a-heavy-2.webp"
   - "/images/blog/2029/03/10-budget-moving-tricks-that-really-help/red-truck-with-large-covered-cargo-in-an-1.webp"
   - "/images/blog/2029/03/10-budget-moving-tricks-that-really-help/three-men-loading-wooden-boxes-on-a-truc-3.webp"
-
-service_link: /local-moving
+service_link: "/local-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

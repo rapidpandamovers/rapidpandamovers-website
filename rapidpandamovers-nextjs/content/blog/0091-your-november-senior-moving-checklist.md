@@ -18,7 +18,6 @@ images:
   - "/images/blog/2024/11/your-november-senior-moving-checklist/a-woman-organizes-cardboard-boxes-while--3.webp"
   - "/images/blog/2024/11/your-november-senior-moving-checklist/focused-male-and-female-in-casual-wear-s-2.webp"
   - "/images/blog/2024/11/your-november-senior-moving-checklist/pensive-male-and-female-in-casual-clothe-1.webp"
-
 service_link: "/senior-moving"
 location_link: null
 status: "completed"

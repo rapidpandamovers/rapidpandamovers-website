@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/08/expert-same-day-moving-tips-this-august/a-mover-carries-a-green-sofa-indoors-sho-3.webp"
   - "/images/blog/2026/08/expert-same-day-moving-tips-this-august/two-movers-load-a-van-with-furniture-dur-2.webp"
   - "/images/blog/2026/08/expert-same-day-moving-tips-this-august/woman-sealing-boxes-with-tape-for-reloca-4.webp"
-
 service_link: "/same-day-moving"
 location_link: null
 status: "pending"

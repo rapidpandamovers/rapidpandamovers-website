@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/10/miami-safe-moving-october-edition/a-woman-in-a-headscarf-standing-inside-a-4.webp"
   - "/images/blog/2026/10/miami-safe-moving-october-edition/close-up-of-a-vintage-safe-door-with-a-b-1.webp"
   - "/images/blog/2026/10/miami-safe-moving-october-edition/close-up-of-industrial-safes-with-manual-2.webp"
-
 service_link: "/safe-moving"
 location_link: null
 status: "pending"

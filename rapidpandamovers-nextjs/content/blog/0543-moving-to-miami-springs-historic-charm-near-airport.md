@@ -2,7 +2,7 @@
 id: 543
 title: "Moving to Miami Springs: Historic Charm Near the Airport"
 slug: "moving-to-miami-springs-historic-charm-near-airport"
-excerpt: "Miami Springs offers tree-lined streets and 1920s architecture minutes from MIA. Here is what you need to know before relocating."
+excerpt: "Miami Springs offers tree-lined streets and 1920s architecture minutes from MIA."
 date: "2027-10-14"
 updated: "2027-10-14"
 readTime: "6 min read"
@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/10/moving-to-miami-springs-historic-charm-near-airport/loc-colorful-scene-capturing-miami-beach-s-h-1.webp"
   - "/images/blog/2027/10/moving-to-miami-springs-historic-charm-near-airport/svc-movers-loading-boxes-into-a-truck-on-a-s-2.webp"
   - "/images/blog/2027/10/moving-to-miami-springs-historic-charm-near-airport/svc-u-haul-moving-truck-parked-on-roadside-w-1.webp"
-
 service_link: "/miami-springs-local-moving"
 location_link: "/miami-springs-movers"
 status: "complete"

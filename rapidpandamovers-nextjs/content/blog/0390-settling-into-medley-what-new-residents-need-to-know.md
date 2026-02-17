@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/10/settling-into-medley-what-new-residents-need-to-know/a-vibrant-water-tower-in-hollywood-flori-2.webp"
   - "/images/blog/2026/10/settling-into-medley-what-new-residents-need-to-know/elegant-bridge-spanning-over-a-serene-ri-1.webp"
   - "/images/blog/2026/10/settling-into-medley-what-new-residents-need-to-know/exterior-of-a-brown-industrial-building--3.webp"
-
 service_link: "/medley-local-moving"
 location_link: "/medley-movers"
 status: "pending"

@@ -18,8 +18,7 @@ images:
   - "/images/blog/2026/11/5-organization-tips-for-a-fresh-start/red-trailer-truck-at-a-warehouse-loading-4.webp"
   - "/images/blog/2026/11/5-organization-tips-for-a-fresh-start/semi-truck-parked-at-a-loading-dock-with-2.webp"
   - "/images/blog/2026/11/5-organization-tips-for-a-fresh-start/trucks-loaded-with-goods-parked-on-a-dir-1.webp"
-
-service_link: /local-moving
+service_link: "/local-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

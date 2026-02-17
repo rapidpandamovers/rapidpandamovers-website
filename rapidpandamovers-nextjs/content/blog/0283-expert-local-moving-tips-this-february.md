@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/02/expert-local-moving-tips-this-february/people-loading-supplies-onto-a-truck-in--3.webp"
   - "/images/blog/2026/02/expert-local-moving-tips-this-february/semi-truck-parked-at-a-loading-dock-with-4.webp"
   - "/images/blog/2026/02/expert-local-moving-tips-this-february/two-men-load-construction-materials-onto-2.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "pending"

@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/07/why-medley-is-perfect-for-your-next-move/loc-beautiful-white-houses-with-a-tropical-s-1.webp"
   - "/images/blog/2025/07/why-medley-is-perfect-for-your-next-move/svc-excavator-loading-materials-into-a-heavy-1.webp"
   - "/images/blog/2025/07/why-medley-is-perfect-for-your-next-move/svc-three-men-loading-wooden-boxes-on-a-truc-2.webp"
-
 service_link: "/local-moving"
 location_link: "/medley-movers"
 status: "pending"

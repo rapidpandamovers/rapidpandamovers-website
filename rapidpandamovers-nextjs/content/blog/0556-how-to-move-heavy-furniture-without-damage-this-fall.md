@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/11/how-to-move-heavy-furniture-without-damage-this-fall/elegant-living-room-featuring-a-white-so-2.webp"
   - "/images/blog/2027/11/how-to-move-heavy-furniture-without-damage-this-fall/woman-adjusts-pillow-on-a-beige-sofa-in--1.webp"
   - "/images/blog/2027/11/how-to-move-heavy-furniture-without-damage-this-fall/woman-enjoying-a-soft-beige-sofa-in-a-br-5.webp"
-
 service_link: "/furniture-moving"
 location_link: null
 status: "complete"

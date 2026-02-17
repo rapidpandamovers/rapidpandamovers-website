@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/04/celebrity-moving-guide-for-april/a-stunning-modern-mansion-with-a-poolsid-4.webp"
   - "/images/blog/2025/04/celebrity-moving-guide-for-april/aerial-view-of-a-luxury-villa-surrounded-1.webp"
   - "/images/blog/2025/04/celebrity-moving-guide-for-april/stunning-aerial-photo-of-a-wedding-event-3.webp"
-
 service_link: "/celebrity-moving"
 location_link: null
 status: "pending"

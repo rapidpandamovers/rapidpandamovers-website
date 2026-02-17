@@ -17,7 +17,6 @@ images:
   - "/images/blog/2030/12/5-time-crunch-moving-solutions-that-work/close-up-of-hands-packing-a-box-labeled--3.webp"
   - "/images/blog/2030/12/5-time-crunch-moving-solutions-that-work/crop-anonymous-guy-in-casual-clothes-usi-2.webp"
   - "/images/blog/2030/12/5-time-crunch-moving-solutions-that-work/labeled-cardboard-boxes-for-summer-cloth-1.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "complete"

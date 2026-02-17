@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/01/starting-fresh-in-indian-creek-a-newcomers-guide/loc-sunny-indoor-greenhouse-with-vibrant-gre-1.webp"
   - "/images/blog/2030/01/starting-fresh-in-indian-creek-a-newcomers-guide/svc-red-truck-with-large-covered-cargo-in-an-2.webp"
   - "/images/blog/2030/01/starting-fresh-in-indian-creek-a-newcomers-guide/svc-semi-truck-parked-at-a-loading-dock-with-1.webp"
-
 service_link: "/indian-creek-local-moving"
 location_link: "/indian-creek-movers"
 status: "pending"

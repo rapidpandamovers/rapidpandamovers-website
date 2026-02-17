@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/12/indian-creek-neighborhood-guide-for-new-residents/loc-scenic-aerial-shot-of-a-sprawling-reside-1.webp"
   - "/images/blog/2026/12/indian-creek-neighborhood-guide-for-new-residents/svc-a-blue-volvo-truck-parked-outside-a-ware-2.webp"
   - "/images/blog/2026/12/indian-creek-neighborhood-guide-for-new-residents/svc-red-truck-with-large-covered-cargo-in-an-1.webp"
-
 service_link: "/indian-creek-local-moving"
 location_link: "/indian-creek-movers"
 status: "pending"

@@ -20,7 +20,6 @@ images:
   - "/images/blog/2024/05/apartment-moving-safety-tips/svc-close-up-image-of-an-electronic-safe-wit-2.webp"
   - "/images/blog/2024/05/apartment-moving-safety-tips/svc-close-up-of-a-vintage-safe-door-with-a-b-1.webp"
   - "/images/blog/2024/05/apartment-moving-safety-tips/svc-close-up-of-vintage-safety-deposit-boxes-3.webp"
-
 service_link: "/apartment-moving"
 location_link: "/miami"
 status: "complete"

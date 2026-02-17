@@ -17,7 +17,6 @@ images:
   - "/images/blog/2029/07/bay-harbor-islands-moving-tips-local-insights-for-relocators/loc-vibrant-miami-skyline-with-lush-bougainv-1.webp"
   - "/images/blog/2029/07/bay-harbor-islands-moving-tips-local-insights-for-relocators/svc-a-blue-truck-transporting-livestock-on-a-1.webp"
   - "/images/blog/2029/07/bay-harbor-islands-moving-tips-local-insights-for-relocators/svc-a-classic-hong-kong-tram-traverses-moder-2.webp"
-
 service_link: "/bay-harbor-islands-local-moving"
 location_link: "/bay-harbor-islands-movers"
 status: "pending"

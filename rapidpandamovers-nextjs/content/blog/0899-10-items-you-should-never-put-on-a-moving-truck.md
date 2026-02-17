@@ -2,7 +2,7 @@
 id: 899
 title: "10 Items You Should Never Put on a Moving Truck"
 slug: "10-items-you-should-never-put-on-a-moving-truck"
-excerpt: "Professional movers explain which items are prohibited on moving trucks for safety and legal reasons, with specific disposal tips for South Florida."
+excerpt: "A moving truck in Miami can reach 140 degrees inside on a summer afternoon. That fact alone explains why certain items are strictly prohibited."
 date: "2030-01-23"
 updated: "2030-01-23"
 readTime: "5 min read"
@@ -17,7 +17,6 @@ images:
   - "/images/blog/2030/01/10-items-you-should-never-put-on-a-moving-truck/a-man-labels-cardboard-boxes-for-moving--1.webp"
   - "/images/blog/2030/01/10-items-you-should-never-put-on-a-moving-truck/crop-faceless-male-sealing-packed-carton-4.webp"
   - "/images/blog/2030/01/10-items-you-should-never-put-on-a-moving-truck/unrecognizable-man-sealing-box-with-duck-2.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "pending"

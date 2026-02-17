@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/05/top-apartment-moving-recommendations-for-memorial-day/a-high-rise-building-with-a-dome-against-4.webp"
   - "/images/blog/2030/05/top-apartment-moving-recommendations-for-memorial-day/close-up-of-a-modern-building-facade-wit-1.webp"
   - "/images/blog/2030/05/top-apartment-moving-recommendations-for-memorial-day/low-angle-view-of-a-modern-skyscraper-in-3.webp"
-
 service_link: "/apartment-moving"
 location_link: null
 status: "pending"

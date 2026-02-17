@@ -6,7 +6,7 @@ excerpt: "Create a productive home office in Miami with tips on lighting, intern
 date: "2029-05-02"
 updated: "2029-05-02"
 readTime: "5 min read"
-category: "Moving Tips"
+category: "Local Moving"
 image_folder: "/images/blog/2029/05/setting-up-your-home-office-after-a-miami-move"
 featured: "/images/blog/2029/05/setting-up-your-home-office-after-a-miami-move/modern-home-office-desk-setup.webp"
 image_keywords:

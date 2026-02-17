@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/05/7-family-friendly-activities-in-indian-creek/a-mother-and-daughter-pack-clothes-into--1.webp"
   - "/images/blog/2028/05/7-family-friendly-activities-in-indian-creek/father-and-children-packing-luggage-toge-2.webp"
   - "/images/blog/2028/05/7-family-friendly-activities-in-indian-creek/young-child-sitting-on-bed-packing-a-sui-3.webp"
-
 service_link: null
 location_link: "/indian-creek-movers"
 status: "pending"

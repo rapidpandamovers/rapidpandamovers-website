@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/10/welcome-to-palmetto-bay-a-moving-guide/loc-silhouette-of-a-palm-tree-against-a-vibr-1.webp"
   - "/images/blog/2025/10/welcome-to-palmetto-bay-a-moving-guide/svc-a-charming-portrait-of-a-child-with-curl-1.webp"
   - "/images/blog/2025/10/welcome-to-palmetto-bay-a-moving-guide/svc-a-pile-of-empty-cardboard-boxes-ready-fo-2.webp"
-
 service_link: "/local-moving"
 location_link: "/palmetto-bay-movers"
 status: "pending"

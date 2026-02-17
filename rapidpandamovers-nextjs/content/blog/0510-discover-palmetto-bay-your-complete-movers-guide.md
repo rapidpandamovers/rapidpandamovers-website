@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/07/discover-palmetto-bay-your-complete-movers-guide/a-family-unpacks-moving-boxes-in-their-n-3.webp"
   - "/images/blog/2027/07/discover-palmetto-bay-your-complete-movers-guide/family-enjoying-selfie-time-while-surrou-2.webp"
   - "/images/blog/2027/07/discover-palmetto-bay-your-complete-movers-guide/family-enjoys-a-joyful-moment-while-unpa-1.webp"
-
 service_link: null
 location_link: "/palmetto-bay-movers"
 status: "pending"

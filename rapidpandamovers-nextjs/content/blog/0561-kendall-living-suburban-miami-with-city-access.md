@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/11/kendall-living-suburban-miami-with-city-access/loc-vibrant-miami-skyline-illuminated-at-nig-1.webp"
   - "/images/blog/2027/11/kendall-living-suburban-miami-with-city-access/svc-a-delivery-truck-driving-along-a-coastal-1.webp"
   - "/images/blog/2027/11/kendall-living-suburban-miami-with-city-access/svc-u-haul-moving-truck-parked-on-roadside-w-2.webp"
-
 service_link: "/kendall-local-moving"
 location_link: "/kendall-movers"
 status: "pending"

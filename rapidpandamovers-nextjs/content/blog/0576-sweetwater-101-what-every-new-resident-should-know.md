@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/12/sweetwater-101-what-every-new-resident-should-know/aerial-view-showcasing-the-grid-like-pat-1.webp"
   - "/images/blog/2027/12/sweetwater-101-what-every-new-resident-should-know/scenic-aerial-shot-of-a-sprawling-reside-4.webp"
   - "/images/blog/2027/12/sweetwater-101-what-every-new-resident-should-know/top-down-view-of-a-miami-home-with-solar-3.webp"
-
 service_link: null
 location_link: "/sweetwater-movers"
 status: "completed"

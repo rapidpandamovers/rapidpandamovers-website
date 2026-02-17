@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/08/august-guide-to-local-moving-in-miami/low-angle-view-of-a-historic-building-an-2.webp"
   - "/images/blog/2026/08/august-guide-to-local-moving-in-miami/u-haul-moving-truck-parked-on-roadside-w-1.webp"
   - "/images/blog/2026/08/august-guide-to-local-moving-in-miami/workers-loading-a-moving-truck-on-a-stre-3.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "pending"

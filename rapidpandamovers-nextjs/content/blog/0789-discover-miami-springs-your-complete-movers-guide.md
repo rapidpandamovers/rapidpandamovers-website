@@ -2,7 +2,7 @@
 id: 789
 title: "Discover Miami Springs: Your Complete Movers Guide"
 slug: "discover-miami-springs-your-complete-movers-guide"
-excerpt: "Discover Miami Springs with this complete movers guide. Tree-lined streets and small-town charm await."
+excerpt: "Discover Miami Springs with this complete movers guide. Tree-lined streets and small-town charm await..."
 date: "2029-05-10"
 readTime: "6 min read"
 category: "Local Moving"
@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/05/discover-miami-springs-your-complete-movers-guide/svc-people-loading-supplies-onto-a-truck-in--2.webp"
   - "/images/blog/2029/05/discover-miami-springs-your-complete-movers-guide/svc-semi-truck-parked-at-a-loading-dock-with-1.webp"
   - "/images/blog/2029/05/discover-miami-springs-your-complete-movers-guide/svc-vintage-truck-carrying-heavy-cargo-bags--3.webp"
-
 service_link: "/miami-springs-local-moving"
 location_link: "/miami-springs-movers"
 status: "pending"

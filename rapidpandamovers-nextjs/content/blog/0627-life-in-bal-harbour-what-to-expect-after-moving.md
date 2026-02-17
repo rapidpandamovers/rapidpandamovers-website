@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/04/life-in-bal-harbour-what-to-expect-after-moving/loc-scenic-view-of-the-ocean-and-jetty-in-bl-1.webp"
   - "/images/blog/2028/04/life-in-bal-harbour-what-to-expect-after-moving/svc-a-blue-truck-transporting-livestock-on-a-1.webp"
   - "/images/blog/2028/04/life-in-bal-harbour-what-to-expect-after-moving/svc-u-haul-moving-truck-parked-on-roadside-w-2.webp"
-
 service_link: "/bal-harbour-local-moving"
 location_link: "/bal-harbour-movers"
 status: "complete"

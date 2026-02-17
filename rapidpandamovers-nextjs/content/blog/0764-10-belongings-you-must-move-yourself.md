@@ -6,7 +6,7 @@ excerpt: "10 belongings you must move yourself: valuables, medications, document
 date: "2029-03-14"
 updated: "2029-03-14"
 readTime: "5 min read"
-category: "Moving Tips"
+category: "Antique Moving"
 image_folder: "/images/blog/2029/03/10-belongings-you-must-move-yourself"
 featured: "/images/blog/2029/03/10-belongings-you-must-move-yourself/an-excavator-working-on-a-sandy-beach-co-2.webp"
 image_keywords:
@@ -17,8 +17,7 @@ images:
   - "/images/blog/2029/03/10-belongings-you-must-move-yourself/a-cheerful-man-carries-a-large-couch-acr-1.webp"
   - "/images/blog/2029/03/10-belongings-you-must-move-yourself/an-excavator-working-on-a-sandy-beach-co-2.webp"
   - "/images/blog/2029/03/10-belongings-you-must-move-yourself/two-movers-load-a-van-with-furniture-dur-3.webp"
-
-service_link: null
+service_link: "/antique-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

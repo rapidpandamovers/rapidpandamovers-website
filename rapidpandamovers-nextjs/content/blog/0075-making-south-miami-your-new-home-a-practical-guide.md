@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/10/making-south-miami-your-new-home-a-practical-guide/loc-colony-hotel-in-miami-beach-iconic-art-d-1.webp"
   - "/images/blog/2024/10/making-south-miami-your-new-home-a-practical-guide/svc-a-blue-truck-transporting-livestock-on-a-2.webp"
   - "/images/blog/2024/10/making-south-miami-your-new-home-a-practical-guide/svc-movers-loading-boxes-into-a-truck-on-a-s-1.webp"
-
 service_link: "/local-moving"
 location_link: "/south-miami-movers"
 status: "pending"

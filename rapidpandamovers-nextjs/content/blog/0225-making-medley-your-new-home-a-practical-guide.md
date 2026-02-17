@@ -19,7 +19,6 @@ images:
   - "/images/blog/2025/09/making-medley-your-new-home-a-practical-guide/loc-charming-urban-skyline-showcasing-histor-1.webp"
   - "/images/blog/2025/09/making-medley-your-new-home-a-practical-guide/svc-a-u-haul-moving-truck-parked-on-gravel-w-1.webp"
   - "/images/blog/2025/09/making-medley-your-new-home-a-practical-guide/svc-pink-moving-trucks-parked-in-a-chicago-a-2.webp"
-
 service_link: "/local-moving"
 location_link: "/medley-movers"
 status: "pending"

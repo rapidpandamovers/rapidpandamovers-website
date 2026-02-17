@@ -6,7 +6,7 @@ excerpt: "Starting fresh in your new home? Use these 6 simple organization tips 
 date: "2025-09-03"
 updated: "2025-09-03"
 readTime: "3 min read"
-category: "Home & Living"
+category: "Same Building Moving"
 image_folder: "/images/blog/2025/09/6-simple-ways-to-organize-your-new-space"
 featured: "/images/blog/2025/09/6-simple-ways-to-organize-your-new-space/steel-storage-units-in-an-industrial-war-3.webp"
 image_keywords:
@@ -18,8 +18,7 @@ images:
   - "/images/blog/2025/09/6-simple-ways-to-organize-your-new-space/a-well-organized-warehouse-aisle-with-st-4.webp"
   - "/images/blog/2025/09/6-simple-ways-to-organize-your-new-space/a-wide-aisle-in-a-large-warehouse-filled-5.webp"
   - "/images/blog/2025/09/6-simple-ways-to-organize-your-new-space/steel-storage-units-in-an-industrial-war-3.webp"
-
-service_link: null
+service_link: "/same-building-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

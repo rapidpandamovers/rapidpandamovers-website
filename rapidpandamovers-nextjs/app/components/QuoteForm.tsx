@@ -273,25 +273,25 @@ export default function QuoteForm({
   )
 
   const sidebar = (
-    <div className="lg:w-80 bg-gray-50 p-6 rounded-lg lg:rounded-none">
+    <div className="lg:w-80 bg-white p-6 rounded-2xl">
       <h3 className="text-xl font-bold mb-4">Contact Information</h3>
       <div className="space-y-4">
         <div className="flex items-center space-x-3">
-          <Phone className="w-5 h-5 text-orange-500" />
+          <Phone className="w-5 h-5 text-orange-500 flex-shrink-0" />
           <div>
             <p className="font-medium">{content.site.phone}</p>
             <p className="text-sm text-gray-600">{content.contact.contact_info.hours}</p>
           </div>
         </div>
         <div className="flex items-center space-x-3">
-          <Mail className="w-5 h-5 text-orange-500" />
+          <Mail className="w-5 h-5 text-orange-500 flex-shrink-0" />
           <div>
             <p className="font-medium">{content.site.email}</p>
             <p className="text-sm text-gray-600">24/7 email support</p>
           </div>
         </div>
         <div className="flex items-center space-x-3">
-          <MapPin className="w-5 h-5 text-orange-500" />
+          <MapPin className="w-5 h-5 text-orange-500 flex-shrink-0" />
           <div>
             <p className="font-medium">Miami, FL</p>
             <p className="text-sm text-gray-600">Serving all of Miami-Dade</p>
@@ -356,8 +356,8 @@ export default function QuoteForm({
 
   // Standalone page mode
   return (
-    <div className="flex flex-col lg:flex-row gap-8">
-      <div className="flex-1">
+    <div className="flex flex-col lg:flex-row gap-6">
+      <div className="flex-1 bg-white rounded-2xl p-6 md:p-8">
         {submitStatus === 'success' ? successContent : formContent}
       </div>
       {sidebar}

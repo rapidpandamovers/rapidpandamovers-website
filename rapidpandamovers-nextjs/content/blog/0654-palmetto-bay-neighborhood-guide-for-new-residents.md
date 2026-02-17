@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/06/palmetto-bay-neighborhood-guide-for-new-residents/a-family-involved-in-a-creative-activity-2.webp"
   - "/images/blog/2028/06/palmetto-bay-neighborhood-guide-for-new-residents/a-family-of-three-unpacking-boxes-in-the-1.webp"
   - "/images/blog/2028/06/palmetto-bay-neighborhood-guide-for-new-residents/a-family-unpacking-boxes-in-their-new-ap-3.webp"
-
 service_link: null
 location_link: "/palmetto-bay-movers"
 status: "completed"

@@ -17,7 +17,6 @@ images:
   - "/images/blog/2025/12/welcome-to-west-miami-a-moving-guide/a-mother-and-daughter-label-a-cardboard--5.webp"
   - "/images/blog/2025/12/welcome-to-west-miami-a-moving-guide/african-american-male-in-eyeglasses-sitt-4.webp"
   - "/images/blog/2025/12/welcome-to-west-miami-a-moving-guide/close-up-of-hands-packing-a-box-labeled--2.webp"
-
 service_link: null
 location_link: "/west-miami-movers"
 status: "pending"

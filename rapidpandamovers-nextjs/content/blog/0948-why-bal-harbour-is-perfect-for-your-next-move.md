@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/05/why-bal-harbour-is-perfect-for-your-next-move/a-young-girl-runs-towards-the-ocean-wave-3.webp"
   - "/images/blog/2030/05/why-bal-harbour-is-perfect-for-your-next-move/luxurious-byredo-bal-d-afrique-eau-de-pa-1.webp"
   - "/images/blog/2030/05/why-bal-harbour-is-perfect-for-your-next-move/vibrant-restroom-with-palm-trees-in-bal--2.webp"
-
 service_link: null
 location_link: "/bal-harbour-movers"
 status: "pending"

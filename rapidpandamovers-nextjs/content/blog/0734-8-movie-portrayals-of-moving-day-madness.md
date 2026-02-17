@@ -2,7 +2,7 @@
 id: 734
 title: "8 Movie Portrayals of Moving Day Madness"
 slug: "8-movie-portrayals-of-moving-day-madness"
-excerpt: "Moving chaos makes for great cinema. From classic comedies to animated favorites, these 8 films capture the stress, humor, and emotion of relocation in."
+excerpt: "Moving chaos makes for great cinema. From classic comedies to animated favorites, these 8 films capture the stress, humor, and emotion of relocation..."
 date: "2029-01-03"
 updated: "2029-01-03"
 readTime: "2 min read"
@@ -17,7 +17,6 @@ images:
   - "/images/blog/2029/01/8-movie-portrayals-of-moving-day-madness/close-up-of-popcorn-and-3d-glasses-on-ci-2.webp"
   - "/images/blog/2029/01/8-movie-portrayals-of-moving-day-madness/crowded-cinema-theater-with-audience-wat-1.webp"
   - "/images/blog/2029/01/8-movie-portrayals-of-moving-day-madness/vertical-stack-of-dvd-movie-cases-featur-3.webp"
-
 service_link: null
 location_link: null
 status: "pending"

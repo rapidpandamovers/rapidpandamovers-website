@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/11/5-best-beaches-near-south-miami-for-a-day-trip/a-man-walks-along-the-sandy-shore-of-sou-1.webp"
   - "/images/blog/2027/11/5-best-beaches-near-south-miami-for-a-day-trip/a-scenic-view-of-ocean-beach-san-francis-3.webp"
   - "/images/blog/2027/11/5-best-beaches-near-south-miami-for-a-day-trip/a-wetsuit-hanging-from-an-open-car-trunk-2.webp"
-
 service_link: null
 location_link: "/south-miami-movers"
 status: "complete"

@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/06/professional-same-building-moving-tips-for-summer/a-tall-residential-building-showcasing-s-3.webp"
   - "/images/blog/2028/06/professional-same-building-moving-tips-for-summer/cityscape-featuring-a-high-rise-building-1.webp"
   - "/images/blog/2028/06/professional-same-building-moving-tips-for-summer/high-rise-residential-building-in-izmir--4.webp"
-
 service_link: "/same-building-moving"
 location_link: null
 status: "complete"

@@ -20,7 +20,6 @@ images:
   - "/images/blog/2024/01/senior-long-distance-moving/captivating-long-exposure-of-urban-stree-1.webp"
   - "/images/blog/2024/01/senior-long-distance-moving/interstate-10-highway-sign-directing-wes-4.webp"
   - "/images/blog/2024/01/senior-long-distance-moving/traffic-flows-on-a-busy-los-angeles-free-2.webp"
-
 service_link: "/long-distance-moving"
 location_link: null
 status: "completed"

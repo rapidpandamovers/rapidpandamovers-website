@@ -17,8 +17,7 @@ images:
   - "/images/blog/2029/07/5-unexpected-items-from-our-moving-history/a-close-up-of-a-grand-piano-keyboard-in--3.webp"
   - "/images/blog/2029/07/5-unexpected-items-from-our-moving-history/beautiful-wooden-grand-piano-with-open-l-1.webp"
   - "/images/blog/2029/07/5-unexpected-items-from-our-moving-history/classic-wooden-upright-piano-displaying--2.webp"
-
-service_link: /furniture-moving
+service_link: "/furniture-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

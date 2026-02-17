@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/09/top-senior-moving-recommendations-for-fall-moving-season/senior-woman-packing-a-rollator-into-a-s-3.webp"
   - "/images/blog/2026/09/top-senior-moving-recommendations-for-fall-moving-season/senior-woman-packing-a-rollator-into-a-s-4.webp"
   - "/images/blog/2026/09/top-senior-moving-recommendations-for-fall-moving-season/two-senior-women-packing-belongings-in-b-2.webp"
-
 service_link: "/senior-moving"
 location_link: null
 status: "complete"

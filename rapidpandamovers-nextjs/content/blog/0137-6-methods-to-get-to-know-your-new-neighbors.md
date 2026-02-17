@@ -2,7 +2,7 @@
 id: 137
 title: "6 Methods to Get to Know Your New Neighbors"
 slug: "6-methods-to-get-to-know-your-new-neighbors"
-excerpt: "Six practical methods to connect with your new neighbors after moving. Build community in your Miami neighborhood."
+excerpt: "Six practical methods to connect with your new neighbors after moving. Build community in your Miami neighborhood..."
 date: "2025-03-05"
 updated: "2025-03-05"
 readTime: "2 min read"
@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/03/6-methods-to-get-to-know-your-new-neighbors/two-elderly-women-volunteer-at-a-communi-3.webp"
   - "/images/blog/2025/03/6-methods-to-get-to-know-your-new-neighbors/two-men-chatting-in-front-of-a-vintage-b-4.webp"
   - "/images/blog/2025/03/6-methods-to-get-to-know-your-new-neighbors/two-senior-men-enjoying-a-friendly-chat--1.webp"
-
 service_link: "/local-moving"
 location_link: "/locations/miami"
 status: "pending"

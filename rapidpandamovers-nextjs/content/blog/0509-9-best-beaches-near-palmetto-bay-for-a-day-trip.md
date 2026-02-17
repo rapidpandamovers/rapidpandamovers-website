@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/07/9-best-beaches-near-palmetto-bay-for-a-day-trip/colorful-lifeguard-tower-on-miami-beach--3.webp"
   - "/images/blog/2027/07/9-best-beaches-near-palmetto-bay-for-a-day-trip/dramatic-sunset-over-miami-beach-showcas-1.webp"
   - "/images/blog/2027/07/9-best-beaches-near-palmetto-bay-for-a-day-trip/empty-streets-with-palm-trees-and-modern-2.webp"
-
 service_link: null
 location_link: "/palmetto-bay-movers"
 status: "pending"

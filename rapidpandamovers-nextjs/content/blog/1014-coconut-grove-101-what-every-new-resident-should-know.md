@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/10/coconut-grove-101-what-every-new-resident-should-know/exterior-view-of-mr-c-coconut-grove-a-mo-1.webp"
   - "/images/blog/2030/10/coconut-grove-101-what-every-new-resident-should-know/serene-view-of-a-coconut-palm-forest-wit-4.webp"
   - "/images/blog/2030/10/coconut-grove-101-what-every-new-resident-should-know/tranquil-view-of-a-coconut-palm-grove-wi-3.webp"
-
 service_link: null
 location_link: "/coconut-grove-movers"
 status: "pending"

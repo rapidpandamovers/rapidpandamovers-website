@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/09/7-things-to-do-in-doral-this-weekend/a-woman-tries-her-luck-at-an-illuminated-1.webp"
   - "/images/blog/2028/09/7-things-to-do-in-doral-this-weekend/little-girl-captivated-by-giant-bubble-a-2.webp"
   - "/images/blog/2028/09/7-things-to-do-in-doral-this-weekend/person-sitting-on-a-couch-playing-video--4.webp"
-
 service_link: null
 location_link: "/doral-movers"
 status: "pending"

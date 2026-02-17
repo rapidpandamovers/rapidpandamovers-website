@@ -17,8 +17,7 @@ images:
   - "/images/blog/2026/08/5-touches-that-turn-a-house-into-your-home/a-cozy-workspace-featuring-a-modern-chai-3.webp"
   - "/images/blog/2026/08/5-touches-that-turn-a-house-into-your-home/a-serene-still-life-featuring-a-glass-of-5.webp"
   - "/images/blog/2026/08/5-touches-that-turn-a-house-into-your-home/comfortable-living-room-with-beige-sofa--1.webp"
-
-service_link: /residential-moving
+service_link: "/residential-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

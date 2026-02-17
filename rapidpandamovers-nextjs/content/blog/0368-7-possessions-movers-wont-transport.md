@@ -17,8 +17,7 @@ images:
   - "/images/blog/2026/09/7-possessions-movers-wont-transport/semi-truck-parked-at-a-loading-dock-with-3.webp"
   - "/images/blog/2026/09/7-possessions-movers-wont-transport/three-men-loading-wooden-boxes-on-a-truc-2.webp"
   - "/images/blog/2026/09/7-possessions-movers-wont-transport/two-men-load-construction-materials-onto-1.webp"
-
-service_link: /local-moving
+service_link: "/local-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

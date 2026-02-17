@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/11/moving-to-homestead-what-you-need-to-know/loc-high-speed-nascar-race-on-a-sunny-day-at-1.webp"
   - "/images/blog/2027/11/moving-to-homestead-what-you-need-to-know/svc-a-joyful-moment-of-a-mother-and-child-pl-1.webp"
   - "/images/blog/2027/11/moving-to-homestead-what-you-need-to-know/svc-crop-anonymous-male-in-casual-clothes-pa-2.webp"
-
 service_link: "/homestead-local-moving"
 location_link: "/homestead-movers"
 status: "complete"

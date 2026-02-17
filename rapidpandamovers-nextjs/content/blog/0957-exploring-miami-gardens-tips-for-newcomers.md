@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/06/exploring-miami-gardens-tips-for-newcomers/aerial-daytime-view-of-miami-florida-cap-1.webp"
   - "/images/blog/2030/06/exploring-miami-gardens-tips-for-newcomers/suburban-house-with-lush-greenery-and-a--3.webp"
   - "/images/blog/2030/06/exploring-miami-gardens-tips-for-newcomers/view-of-miami-skyline-from-coral-gables--2.webp"
-
 service_link: null
 location_link: "/miami-gardens-movers"
 status: "pending"

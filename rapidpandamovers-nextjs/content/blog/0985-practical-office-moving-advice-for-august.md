@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/08/practical-office-moving-advice-for-august/a-joyful-couple-embracing-while-carrying-3.webp"
   - "/images/blog/2030/08/practical-office-moving-advice-for-august/man-moving-box-labeled-office-indoors-du-5.webp"
   - "/images/blog/2030/08/practical-office-moving-advice-for-august/opened-carton-boxes-and-stacked-books-pl-2.webp"
-
 service_link: "/office-moving"
 location_link: null
 status: "completed"

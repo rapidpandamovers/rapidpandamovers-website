@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/08/palmetto-bay-insights-tips-for-smooth-relocation/loc-young-woman-in-a-white-lace-dress-posing-2.webp"
   - "/images/blog/2030/08/palmetto-bay-insights-tips-for-smooth-relocation/svc-crop-anonymous-male-in-casual-clothes-pa-1.webp"
   - "/images/blog/2030/08/palmetto-bay-insights-tips-for-smooth-relocation/svc-young-adult-male-smiling-while-handling--2.webp"
-
 service_link: "/palmetto-bay-local-moving"
 location_link: "/palmetto-bay-movers"
 status: "completed"

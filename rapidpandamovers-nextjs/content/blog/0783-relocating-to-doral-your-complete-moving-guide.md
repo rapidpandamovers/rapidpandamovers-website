@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/04/relocating-to-doral-your-complete-moving-guide/a-modern-building-with-large-windows-vie-2.webp"
   - "/images/blog/2029/04/relocating-to-doral-your-complete-moving-guide/a-young-woman-golfer-prepares-to-swing-i-1.webp"
   - "/images/blog/2029/04/relocating-to-doral-your-complete-moving-guide/close-up-of-a-golf-ball-near-a-hole-on-a-3.webp"
-
 service_link: null
 location_link: "/doral-movers"
 status: "pending"

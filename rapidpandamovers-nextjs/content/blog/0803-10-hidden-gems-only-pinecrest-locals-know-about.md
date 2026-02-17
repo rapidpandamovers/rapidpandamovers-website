@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/06/10-hidden-gems-only-pinecrest-locals-know-about/close-up-of-a-large-yellow-dump-truck-us-1.webp"
   - "/images/blog/2029/06/10-hidden-gems-only-pinecrest-locals-know-about/front-view-of-a-vintage-komatsu-truck-pa-3.webp"
   - "/images/blog/2029/06/10-hidden-gems-only-pinecrest-locals-know-about/red-truck-with-large-covered-cargo-in-an-5.webp"
-
 service_link: null
 location_link: "/pinecrest-movers"
 status: "pending"

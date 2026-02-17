@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/10/hialeah-moving-tips-local-insights-for-relocators/captivating-night-view-of-miami-skyline--2.webp"
   - "/images/blog/2028/10/hialeah-moving-tips-local-insights-for-relocators/scenic-aerial-shot-of-a-sprawling-reside-1.webp"
   - "/images/blog/2028/10/hialeah-moving-tips-local-insights-for-relocators/three-cluster-mailboxes-under-trees-in-a-4.webp"
-
 service_link: null
 location_link: "/hialeah-movers"
 status: "pending"

@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/11/life-in-coral-gables-what-to-expect-after-moving/majestic-aerial-view-of-the-iconic-hotel-1.webp"
   - "/images/blog/2029/11/life-in-coral-gables-what-to-expect-after-moving/stunning-aerial-shot-of-the-coral-gables-4.webp"
   - "/images/blog/2029/11/life-in-coral-gables-what-to-expect-after-moving/stylish-couple-poses-by-vintage-car-at-i-5.webp"
-
 service_link: null
 location_link: "/coral-gables-movers"
 status: "pending"

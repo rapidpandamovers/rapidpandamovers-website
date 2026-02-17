@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/11/practical-military-moving-advice-for-november/polish-soldiers-in-military-attire-march-4.webp"
   - "/images/blog/2026/11/practical-military-moving-advice-for-november/polish-soldiers-in-military-uniforms-at--2.webp"
   - "/images/blog/2026/11/practical-military-moving-advice-for-november/two-soldiers-in-camouflage-uniforms-prac-3.webp"
-
 service_link: "/military-moving"
 location_link: null
 status: "pending"

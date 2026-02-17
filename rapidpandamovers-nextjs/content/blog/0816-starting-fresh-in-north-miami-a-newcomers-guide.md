@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/07/starting-fresh-in-north-miami-a-newcomers-guide/svc-a-pile-of-empty-cardboard-boxes-arranged-2.webp"
   - "/images/blog/2029/07/starting-fresh-in-north-miami-a-newcomers-guide/svc-cardboard-moving-boxes-in-a-modern-kitch-3.webp"
   - "/images/blog/2029/07/starting-fresh-in-north-miami-a-newcomers-guide/svc-crop-anonymous-male-in-casual-clothes-pa-1.webp"
-
 service_link: "/north-miami-local-moving"
 location_link: "/north-miami-movers"
 status: "pending"

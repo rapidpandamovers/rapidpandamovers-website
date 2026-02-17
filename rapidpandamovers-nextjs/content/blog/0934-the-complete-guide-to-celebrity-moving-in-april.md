@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/04/the-complete-guide-to-celebrity-moving-in-april/a-beautifully-lit-mansion-entrance-with--1.webp"
   - "/images/blog/2030/04/the-complete-guide-to-celebrity-moving-in-april/a-stunning-modern-mansion-with-a-poolsid-2.webp"
   - "/images/blog/2030/04/the-complete-guide-to-celebrity-moving-in-april/top-view-of-a-secluded-mansion-with-a-po-3.webp"
-
 service_link: "/celebrity-moving"
 location_link: null
 status: "pending"

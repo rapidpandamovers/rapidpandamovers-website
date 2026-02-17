@@ -17,7 +17,6 @@ images:
   - "/images/blog/2026/01/5-ideas-to-make-moving-fun-for-the-whole-family/crop-anonymous-guy-in-casual-clothes-usi-1.webp"
   - "/images/blog/2026/01/5-ideas-to-make-moving-fun-for-the-whole-family/crop-unrecognizable-man-in-casual-clothe-2.webp"
   - "/images/blog/2026/01/5-ideas-to-make-moving-fun-for-the-whole-family/labeled-cardboard-boxes-for-summer-cloth-3.webp"
-
 service_link: null
 location_link: null
 status: "pending"

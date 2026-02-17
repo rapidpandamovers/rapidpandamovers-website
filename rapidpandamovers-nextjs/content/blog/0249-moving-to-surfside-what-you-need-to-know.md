@@ -20,7 +20,6 @@ images:
   - "/images/blog/2025/11/moving-to-surfside-what-you-need-to-know/drone-shot-of-people-relaxing-on-hunting-1.webp"
   - "/images/blog/2025/11/moving-to-surfside-what-you-need-to-know/serene-stone-path-along-bondi-beach-clif-3.webp"
   - "/images/blog/2025/11/moving-to-surfside-what-you-need-to-know/vibrant-beach-scene-at-hermosa-beach-cal-5.webp"
-
 service_link: null
 location_link: "/surfside-movers"
 status: "pending"

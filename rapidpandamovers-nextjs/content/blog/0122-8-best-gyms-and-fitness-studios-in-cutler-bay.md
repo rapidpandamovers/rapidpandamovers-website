@@ -2,7 +2,7 @@
 id: 122
 title: "8 Best Gyms and Fitness Studios in Cutler Bay"
 slug: "8-best-gyms-and-fitness-studios-in-cutler-bay"
-excerpt: "Top 8 gyms in Cutler Bay including DNA Fitness, Planet Fitness, Orangetheory, and more. Find your perfect fitness home after moving."
+excerpt: "Top 8 gyms in Cutler Bay including DNA Fitness, Planet Fitness, Orangetheory, and more."
 date: "2025-01-29"
 updated: "2025-01-29"
 readTime: "4 min read"
@@ -19,7 +19,6 @@ images:
   - "/images/blog/2025/01/8-best-gyms-and-fitness-studios-in-cutler-bay/from-above-composition-of-dumbbells-and--4.webp"
   - "/images/blog/2025/01/8-best-gyms-and-fitness-studios-in-cutler-bay/spacious-fitness-center-featuring-treadm-2.webp"
   - "/images/blog/2025/01/8-best-gyms-and-fitness-studios-in-cutler-bay/women-lifting-dumbbells-in-front-of-mirr-3.webp"
-
 service_link: null
 location_link: "/cutler-bay-movers"
 status: "completed"

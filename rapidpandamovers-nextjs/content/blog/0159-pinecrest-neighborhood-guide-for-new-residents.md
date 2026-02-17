@@ -19,7 +19,6 @@ images:
   - "/images/blog/2025/04/pinecrest-neighborhood-guide-for-new-residents/a-joyful-moment-of-a-mother-and-child-pl-1.webp"
   - "/images/blog/2025/04/pinecrest-neighborhood-guide-for-new-residents/a-young-girl-with-curly-hair-peeking-ove-4.webp"
   - "/images/blog/2025/04/pinecrest-neighborhood-guide-for-new-residents/cute-child-with-curly-hair-peeks-from-in-3.webp"
-
 service_link: null
 location_link: "/pinecrest-movers"
 status: "pending"

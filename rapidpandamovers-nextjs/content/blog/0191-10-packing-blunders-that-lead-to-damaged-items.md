@@ -2,7 +2,7 @@
 id: 191
 title: "10 Packing Blunders That Lead to Damaged Items"
 slug: "10-packing-blunders-that-lead-to-damaged-items"
-excerpt: "Avoid these common packing mistakes that cause damage during moves. Learn how Miami movers prevent costly breakage."
+excerpt: "Avoid these common packing mistakes that cause damage during moves. Learn how Miami movers prevent costly breakage..."
 date: "2025-07-09"
 updated: "2025-07-09"
 readTime: "3 min read"
@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/07/10-packing-blunders-that-lead-to-damaged-items/adult-man-using-red-tape-to-seal-a-large-2.webp"
   - "/images/blog/2025/07/10-packing-blunders-that-lead-to-damaged-items/crop-anonymous-male-in-casual-wear-using-1.webp"
   - "/images/blog/2025/07/10-packing-blunders-that-lead-to-damaged-items/labeled-cardboard-boxes-for-summer-cloth-4.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "pending"

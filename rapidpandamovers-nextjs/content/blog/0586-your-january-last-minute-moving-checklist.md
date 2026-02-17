@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/01/your-january-last-minute-moving-checklist/close-up-of-last-call-text-on-a-textured-4.webp"
   - "/images/blog/2028/01/your-january-last-minute-moving-checklist/minimalist-clock-with-a-black-friday-sal-1.webp"
   - "/images/blog/2028/01/your-january-last-minute-moving-checklist/vibrant-commercial-airplane-against-a-cl-3.webp"
-
 service_link: "/last-minute-moving"
 location_link: null
 status: "pending"

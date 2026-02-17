@@ -18,8 +18,7 @@ images:
   - "/images/blog/2029/04/9-indicators-your-mover-might-be-a-scam/control-tower-with-a-clear-red-warning-f-2.webp"
   - "/images/blog/2029/04/9-indicators-your-mover-might-be-a-scam/red-flag-on-a-beach-indicating-dangerous-4.webp"
   - "/images/blog/2029/04/9-indicators-your-mover-might-be-a-scam/two-professional-movers-carrying-cardboa-1.webp"
-
-service_link: /residential-moving
+service_link: "/residential-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

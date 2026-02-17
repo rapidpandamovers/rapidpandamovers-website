@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/03/smart-local-moving-tips-for-spring/a-u-haul-moving-truck-parked-on-gravel-w-1.webp"
   - "/images/blog/2030/03/smart-local-moving-tips-for-spring/a-u-haul-truck-parked-on-a-gravel-road-a-2.webp"
   - "/images/blog/2030/03/smart-local-moving-tips-for-spring/red-ford-f-150-truck-driving-on-a-bridge-4.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "pending"

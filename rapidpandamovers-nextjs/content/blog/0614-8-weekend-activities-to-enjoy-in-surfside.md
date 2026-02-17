@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/03/8-weekend-activities-to-enjoy-in-surfside/charming-beach-homes-on-belleair-beach-f-4.webp"
   - "/images/blog/2028/03/8-weekend-activities-to-enjoy-in-surfside/scenic-aerial-photo-of-st-augustine-beac-5.webp"
   - "/images/blog/2028/03/8-weekend-activities-to-enjoy-in-surfside/vibrant-aerial-view-of-surfside-beach-pi-1.webp"
-
 service_link: null
 location_link: "/surfside-movers"
 status: "pending"

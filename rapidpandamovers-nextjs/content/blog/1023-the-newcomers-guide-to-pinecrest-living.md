@@ -20,7 +20,6 @@ images:
   - "/images/blog/2030/11/the-newcomers-guide-to-pinecrest-living/svc-a-charming-portrait-of-a-child-with-curl-2.webp"
   - "/images/blog/2030/11/the-newcomers-guide-to-pinecrest-living/svc-a-pile-of-empty-cardboard-boxes-ready-fo-1.webp"
   - "/images/blog/2030/11/the-newcomers-guide-to-pinecrest-living/svc-cardboard-box-filled-with-clothes-hanger-3.webp"
-
 service_link: "/pinecrest-local-moving"
 location_link: "/pinecrest-movers"
 status: "pending"

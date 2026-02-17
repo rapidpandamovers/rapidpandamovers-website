@@ -6,7 +6,7 @@ excerpt: "Keep these 5 essentials with you on moving day: important documents, m
 date: "2026-03-18"
 updated: "2026-03-18"
 readTime: "2 min read"
-category: "Moving Tips"
+category: "Special Needs Moving"
 image_folder: "/images/blog/2026/03/5-moving-day-essentials-to-keep-within-reach"
 featured: "/images/blog/2026/03/5-moving-day-essentials-to-keep-within-reach/labeled-cardboard-boxes-for-summer-cloth-4.webp"
 image_keywords:
@@ -19,8 +19,7 @@ images:
   - "/images/blog/2026/03/5-moving-day-essentials-to-keep-within-reach/crop-unrecognizable-man-in-casual-clothe-2.webp"
   - "/images/blog/2026/03/5-moving-day-essentials-to-keep-within-reach/labeled-cardboard-boxes-for-summer-cloth-4.webp"
   - "/images/blog/2026/03/5-moving-day-essentials-to-keep-within-reach/woman-sealing-boxes-with-tape-for-reloca-3.webp"
-
-service_link: null
+service_link: "/special-needs-moving"
 location_link: null
 status: "complete"
 needs_ai_image: false

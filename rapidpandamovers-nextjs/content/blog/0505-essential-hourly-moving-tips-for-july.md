@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/07/essential-hourly-moving-tips-for-july/a-classic-brass-alarm-clock-featuring-tw-3.webp"
   - "/images/blog/2027/07/essential-hourly-moving-tips-for-july/an-antique-pocket-watch-displaying-roman-4.webp"
   - "/images/blog/2027/07/essential-hourly-moving-tips-for-july/pink-vintage-alarm-clock-on-a-pink-backg-1.webp"
-
 service_link: "/hourly-moving"
 location_link: null
 status: "pending"

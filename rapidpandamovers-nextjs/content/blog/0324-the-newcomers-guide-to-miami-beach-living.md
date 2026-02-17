@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/05/the-newcomers-guide-to-miami-beach-living/colorful-neon-lit-miami-beach-street-at--1.webp"
   - "/images/blog/2026/05/the-newcomers-guide-to-miami-beach-living/empty-streets-with-palm-trees-and-modern-2.webp"
   - "/images/blog/2026/05/the-newcomers-guide-to-miami-beach-living/vibrant-art-deco-hotel-with-palm-trees-i-4.webp"
-
 service_link: null
 location_link: "/miami-beach-movers"
 status: "pending"

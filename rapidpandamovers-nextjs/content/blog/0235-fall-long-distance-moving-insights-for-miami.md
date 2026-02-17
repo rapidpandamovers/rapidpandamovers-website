@@ -2,7 +2,7 @@
 id: 235
 title: "Fall Long Distance Moving Insights for Miami"
 slug: "fall-long-distance-moving-insights-for-miami"
-excerpt: "Moving during October? The fall months bring a surge of relocations, making professional long distance moving more important than ever."
+excerpt: "Moving during October? You're not alone. The fall months bring a surge of relocations across Miami-Dade County, making professional long distance..."
 date: "2025-10-20"
 updated: "2025-10-20"
 readTime: "3 min read"
@@ -19,7 +19,6 @@ images:
   - "/images/blog/2025/10/fall-long-distance-moving-insights-for-miami/loc-captivating-view-of-miami-s-modern-skyli-2.webp"
   - "/images/blog/2025/10/fall-long-distance-moving-insights-for-miami/svc-a-modified-blue-subaru-sti-speeds-under--1.webp"
   - "/images/blog/2025/10/fall-long-distance-moving-insights-for-miami/svc-drone-shot-of-a-sprawling-highway-inters-2.webp"
-
 service_link: "/long-distance-moving"
 location_link: null
 status: "pending"

@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/09/local-moving-tips-for-labor-day/a-u-haul-truck-parked-on-a-gravel-road-a-3.webp"
   - "/images/blog/2030/09/local-moving-tips-for-labor-day/red-ford-f-150-truck-driving-on-a-bridge-1.webp"
   - "/images/blog/2030/09/local-moving-tips-for-labor-day/tow-truck-operator-loading-white-gmc-pic-2.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "pending"

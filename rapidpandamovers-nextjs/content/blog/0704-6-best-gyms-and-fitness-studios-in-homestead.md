@@ -17,8 +17,7 @@ images:
   - "/images/blog/2028/10/6-best-gyms-and-fitness-studios-in-homestead/loc-a-serene-beach-with-palm-trees-and-blue--1.webp"
   - "/images/blog/2028/10/6-best-gyms-and-fitness-studios-in-homestead/loc-close-up-of-a-military-aircraft-tail-wit-2.webp"
   - "/images/blog/2028/10/6-best-gyms-and-fitness-studios-in-homestead/svc-three-men-loading-wooden-boxes-on-a-truc-1.webp"
-
-service_link: /homestead-movers
+service_link: "/homestead-movers"
 location_link: "/homestead-movers"
 status: "pending"
 needs_ai_image: false

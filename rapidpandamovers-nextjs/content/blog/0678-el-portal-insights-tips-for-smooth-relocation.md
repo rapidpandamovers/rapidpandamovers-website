@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/08/el-portal-insights-tips-for-smooth-relocation/an-exterior-view-of-parisian-hotel-with--2.webp"
   - "/images/blog/2028/08/el-portal-insights-tips-for-smooth-relocation/art-deco-architecture-on-lincoln-road-in-1.webp"
   - "/images/blog/2028/08/el-portal-insights-tips-for-smooth-relocation/black-and-white-image-of-a-carved-stone--3.webp"
-
 service_link: null
 location_link: "/el-portal-movers"
 status: "pending"

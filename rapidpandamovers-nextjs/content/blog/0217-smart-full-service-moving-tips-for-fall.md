@@ -2,7 +2,7 @@
 id: 217
 title: "Smart Full-Service Moving Tips for Fall"
 slug: "smart-full-service-moving-tips-for-fall"
-excerpt: "Planning a fall move? Get smart tips for full-service moving in September with packing, loading, transport, and unpacking included."
+excerpt: "September is here, and if you're planning a move, you're likely thinking about full-service moving."
 date: "2025-09-08"
 updated: "2025-09-08"
 readTime: "4 min read"
@@ -19,7 +19,6 @@ images:
   - "/images/blog/2025/09/smart-full-service-moving-tips-for-fall/a-professional-mover-packs-a-fragile-ite-4.webp"
   - "/images/blog/2025/09/smart-full-service-moving-tips-for-fall/two-men-carrying-a-green-sofa-on-a-city--1.webp"
   - "/images/blog/2025/09/smart-full-service-moving-tips-for-fall/two-men-sitting-in-a-van-surrounded-by-b-2.webp"
-
 service_link: "/full-service-moving"
 location_link: null
 status: "pending"

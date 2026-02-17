@@ -1,20 +1,36 @@
-'use client'
-
-import { useSearchParams } from 'next/navigation'
-import { getAllActiveCities } from '@/lib/data'
+import { getAllActiveCities, getNeighborhoodBySlug } from '@/lib/data'
 import ServiceSection from '../components/ServiceSection'
 
-export default function ServicesContent() {
-  const searchParams = useSearchParams()
-  const locationSlug = searchParams.get('location')
+interface ServicesContentProps {
+  locationSlug?: string
+}
 
-  const cities = getAllActiveCities()
-  const location = locationSlug ? cities.find(c => c.slug === locationSlug) : undefined
+export default function ServicesContent({ locationSlug }: ServicesContentProps) {
+  let location: { name: string; slug: string; parentCity?: { name: string; slug: string } } | undefined
+
+  if (locationSlug) {
+    // Check cities first
+    const cities = getAllActiveCities()
+    const city = cities.find(c => c.slug === locationSlug)
+    if (city) {
+      location = { name: city.name, slug: city.slug }
+    } else {
+      // Check neighborhoods
+      const neighborhood = getNeighborhoodBySlug(locationSlug)
+      if (neighborhood) {
+        location = {
+          name: neighborhood.name,
+          slug: neighborhood.slug,
+          parentCity: neighborhood.parentCity ? { name: neighborhood.parentCity.name, slug: neighborhood.parentCity.slug } : undefined,
+        }
+      }
+    }
+  }
 
   return (
     <ServiceSection
       variant="full"
-      location={location ? { name: location.name, slug: location.slug } : undefined}
+      location={location}
       hideHeader
     />
   )

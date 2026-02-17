@@ -19,7 +19,6 @@ images:
   - "/images/blog/2025/05/bal-harbour-for-new-residents-a-complete-resource/elegant-bottle-of-byredo-bal-d-afrique-p-3.webp"
   - "/images/blog/2025/05/bal-harbour-for-new-residents-a-complete-resource/elegant-byredo-bal-d-afrique-perfume-env-1.webp"
   - "/images/blog/2025/05/bal-harbour-for-new-residents-a-complete-resource/tranquil-evening-view-of-modern-architec-5.webp"
-
 service_link: null
 location_link: "/bal-harbour-movers"
 status: "pending"

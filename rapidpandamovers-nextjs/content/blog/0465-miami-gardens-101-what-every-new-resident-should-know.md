@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/04/miami-gardens-101-what-every-new-resident-should-know/svc-a-u-haul-moving-truck-parked-on-gravel-w-2.webp"
   - "/images/blog/2027/04/miami-gardens-101-what-every-new-resident-should-know/svc-movers-loading-boxes-into-a-truck-on-a-s-1.webp"
   - "/images/blog/2027/04/miami-gardens-101-what-every-new-resident-should-know/svc-u-haul-moving-truck-parked-on-roadside-w-3.webp"
-
 service_link: "/miami-gardens-local-moving"
 location_link: "/miami-gardens-movers"
 status: "complete"

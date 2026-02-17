@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/05/coconut-grove-insights-tips-for-smooth-relocation/loc-front-view-of-miami-city-hall-with-palm--1.webp"
   - "/images/blog/2030/05/coconut-grove-insights-tips-for-smooth-relocation/svc-a-blue-volvo-truck-parked-outside-a-ware-1.webp"
   - "/images/blog/2030/05/coconut-grove-insights-tips-for-smooth-relocation/svc-vintage-truck-carrying-heavy-cargo-bags--2.webp"
-
 service_link: "/coconut-grove-local-moving"
 location_link: "/coconut-grove-movers"
 status: "pending"

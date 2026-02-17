@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/10/long-distance-moving-strategies-for-october-moves/drone-shot-of-a-sprawling-highway-inters-4.webp"
   - "/images/blog/2030/10/long-distance-moving-strategies-for-october-moves/drone-view-of-modern-cars-riding-through-1.webp"
   - "/images/blog/2030/10/long-distance-moving-strategies-for-october-moves/highway-signs-with-directions-to-los-ang-2.webp"
-
 service_link: "/long-distance-moving"
 location_link: null
 status: "pending"

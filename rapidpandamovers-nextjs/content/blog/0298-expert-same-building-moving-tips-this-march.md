@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/03/expert-same-building-moving-tips-this-march/a-striking-black-and-white-photo-of-a-mo-3.webp"
   - "/images/blog/2026/03/expert-same-building-moving-tips-this-march/close-up-of-a-modern-building-facade-wit-2.webp"
   - "/images/blog/2026/03/expert-same-building-moving-tips-this-march/upward-view-of-a-tall-modern-building-wi-4.webp"
-
 service_link: "/same-building-moving"
 location_link: null
 status: "complete"

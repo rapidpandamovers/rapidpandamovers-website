@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/06/mastering-apartment-moving-this-summer/free-stock-photo-of-exterior-2.webp"
   - "/images/blog/2028/06/mastering-apartment-moving-this-summer/high-rise-residential-building-in-izmir--4.webp"
   - "/images/blog/2028/06/mastering-apartment-moving-this-summer/picturesque-canal-with-autumn-foliage-an-3.webp"
-
 service_link: "/apartment-moving"
 location_link: null
 status: "completed"

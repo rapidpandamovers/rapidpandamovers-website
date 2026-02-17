@@ -6,7 +6,7 @@ excerpt: "9 professional moving insights for better moves. Tips from experienced
 date: "2030-07-24"
 updated: "2030-07-24"
 readTime: "2 min read"
-category: "Moving Tips"
+category: "Furniture Moving"
 image_folder: "/images/blog/2030/07/9-professional-moving-insights-for-better-moves"
 featured: "/images/blog/2030/07/9-professional-moving-insights-for-better-moves/two-professional-movers-in-an-empty-apar-2.webp"
 image_keywords:
@@ -18,8 +18,7 @@ images:
   - "/images/blog/2030/07/9-professional-moving-insights-for-better-moves/man-handling-moving-boxes-in-a-spacious--4.webp"
   - "/images/blog/2030/07/9-professional-moving-insights-for-better-moves/two-movers-smiling-from-their-moving-com-1.webp"
   - "/images/blog/2030/07/9-professional-moving-insights-for-better-moves/two-professional-movers-in-an-empty-apar-2.webp"
-
-service_link: null
+service_link: "/furniture-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

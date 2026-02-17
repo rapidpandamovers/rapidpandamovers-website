@@ -20,7 +20,6 @@ images:
   - "/images/blog/2024/05/local-moving-guide/close-up-of-a-blue-cargo-truck-parked-on-2.webp"
   - "/images/blog/2024/05/local-moving-guide/trucks-loaded-with-goods-parked-on-a-dir-4.webp"
   - "/images/blog/2024/05/local-moving-guide/vintage-truck-carrying-heavy-cargo-bags--3.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "completed"

@@ -17,8 +17,7 @@ images:
   - "/images/blog/2030/02/5-methods-to-lighten-your-load-before-moving/crop-anonymous-guy-in-casual-clothes-usi-1.webp"
   - "/images/blog/2030/02/5-methods-to-lighten-your-load-before-moving/crop-unrecognizable-man-in-casual-clothe-2.webp"
   - "/images/blog/2030/02/5-methods-to-lighten-your-load-before-moving/woman-sealing-boxes-with-tape-for-reloca-4.webp"
-
-service_link: /packing-services
+service_link: "/packing-services"
 location_link: null
 status: "pending"
 needs_ai_image: false

@@ -12,19 +12,19 @@ export default function NewsletterSection({
   className = ""
 }: NewsletterSectionProps) {
   return (
-    <section className={`py-16 ${className}`}>
+    <section className={`pt-20 ${className}`}>
       <div className="container mx-auto">
-        <div className="bg-gray-50 rounded-4xl p-8 text-center mx-auto">
-          <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <Mail className="w-6 h-6 text-orange-500" />
-          </div>
-          <h3 className="text-2xl font-bold text-gray-800 mb-4">
+        <div className="bg-gray-50 rounded-4xl p-8 md:p-16 text-center mx-auto">
+          <h3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             {title}
           </h3>
           <p className="text-gray-600 mb-6">
             {description}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
+            <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <Mail className="w-6 h-6 text-orange-500" />
+            </div>
             <input
               type="email"
               placeholder="Enter your email address"

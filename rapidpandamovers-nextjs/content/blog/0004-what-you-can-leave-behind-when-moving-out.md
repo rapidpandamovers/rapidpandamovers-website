@@ -2,7 +2,7 @@
 id: 4
 title: "What You Can Leave Behind When Moving Out"
 slug: "what-you-can-leave-behind-when-moving-out"
-excerpt: "Know exactly what you can leave behind when moving out in Florida, plus how to handle unwanted items without losing your security deposit."
+excerpt: "Moving out of your Miami apartment? Knowing what you can leave behind saves you time, money, and stress on moving day."
 date: "2024-01-26"
 updated: "2024-01-26"
 readTime: "15 min read"
@@ -20,7 +20,6 @@ images:
   - "/images/blog/2024/01/what-you-can-leave-behind-when-moving-out/a-modern-skyscraper-with-bold-architectu-2.webp"
   - "/images/blog/2024/01/what-you-can-leave-behind-when-moving-out/majestic-view-of-tokyo-metropolitan-gove-1.webp"
   - "/images/blog/2024/01/what-you-can-leave-behind-when-moving-out/upward-view-of-modern-skyscrapers-with-b-4.webp"
-
 service_link: "/apartment-moving"
 location_link: null
 status: "completed"

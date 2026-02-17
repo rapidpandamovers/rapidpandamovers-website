@@ -2,7 +2,7 @@
 id: 455
 title: "7 Best Restaurants to Try in Opa-locka After Your Move"
 slug: "7-best-restaurants-to-try-in-opa-locka-after-your-move"
-excerpt: "Just moved to Opa-locka or planning your spring relocation? Food is one of the best ways to experience your new community. Discover culinary gems in this."
+excerpt: "Just moved to Opa-locka or planning your spring relocation? Food is one of the best ways to experience your new community."
 date: "2027-03-24"
 updated: "2027-03-24"
 readTime: "2 min read"
@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/03/7-best-restaurants-to-try-in-opa-locka-after-your-move/beautiful-woman-enjoying-a-gourmet-salmo-4.webp"
   - "/images/blog/2027/03/7-best-restaurants-to-try-in-opa-locka-after-your-move/sophisticated-dining-setup-with-gourmet--2.webp"
   - "/images/blog/2027/03/7-best-restaurants-to-try-in-opa-locka-after-your-move/wooden-table-with-assorted-pizzas-and-se-1.webp"
-
 service_link: null
 location_link: "/opa-locka-movers"
 status: "pending"

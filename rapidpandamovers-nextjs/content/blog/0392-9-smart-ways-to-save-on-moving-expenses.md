@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/10/9-smart-ways-to-save-on-moving-expenses/a-joyful-moment-of-a-mother-and-child-pl-5.webp"
   - "/images/blog/2026/10/9-smart-ways-to-save-on-moving-expenses/crop-anonymous-male-in-casual-clothes-pa-1.webp"
   - "/images/blog/2026/10/9-smart-ways-to-save-on-moving-expenses/faceless-individual-holding-an-open-card-2.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "pending"

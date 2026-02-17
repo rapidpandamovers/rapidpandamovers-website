@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/08/why-hialeah-is-perfect-for-your-next-move/captivating-night-view-of-miami-skyline--5.webp"
   - "/images/blog/2026/08/why-hialeah-is-perfect-for-your-next-move/gorgeous-night-view-of-miami-s-illuminat-3.webp"
   - "/images/blog/2026/08/why-hialeah-is-perfect-for-your-next-move/public-street-evangelism-with-signs-prom-2.webp"
-
 service_link: null
 location_link: "/hialeah-movers"
 status: "pending"

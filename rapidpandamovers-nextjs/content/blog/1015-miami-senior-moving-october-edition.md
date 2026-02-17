@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/10/miami-senior-moving-october-edition/loc-captivating-view-of-miami-s-iconic-skyli-1.webp"
   - "/images/blog/2030/10/miami-senior-moving-october-edition/svc-an-elderly-woman-wearing-a-mask-receives-2.webp"
   - "/images/blog/2030/10/miami-senior-moving-october-edition/svc-family-gathering-around-a-table-enjoying-1.webp"
-
 service_link: "/senior-moving"
 location_link: null
 status: "pending"

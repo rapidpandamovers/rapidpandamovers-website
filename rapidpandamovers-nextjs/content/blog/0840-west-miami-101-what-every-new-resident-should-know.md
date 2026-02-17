@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/09/west-miami-101-what-every-new-resident-should-know/luxurious-miami-apartments-with-stunning-4.webp"
   - "/images/blog/2029/09/west-miami-101-what-every-new-resident-should-know/stunning-view-of-a-modern-hotel-against--5.webp"
   - "/images/blog/2029/09/west-miami-101-what-every-new-resident-should-know/stunning-view-of-miami-s-modern-skyscrap-1.webp"
-
 service_link: null
 location_link: "/west-miami-movers"
 status: "pending"

@@ -20,10 +20,10 @@ export default function ReservationsPage() {
       />
 
       {/* Reservation Form */}
-      <section id="reservation-form" className="py-16">
+      <section id="reservation-form" className="pt-20">
         <div className="container mx-auto">
           <div className="mx-auto">
-            <div className="bg-white rounded-4xl shadow-lg p-8">
+            <div className="bg-gray-50 rounded-4xl p-8">
               <Suspense fallback={<div className="text-center py-8">Loading form...</div>}>
                 <ReservationForm />
               </Suspense>

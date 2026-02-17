@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/03/the-newcomers-guide-to-opa-locka-living/a-u-haul-truck-parked-on-a-gravel-road-a-1.webp"
   - "/images/blog/2029/03/the-newcomers-guide-to-opa-locka-living/tow-truck-operator-loading-white-gmc-pic-4.webp"
   - "/images/blog/2029/03/the-newcomers-guide-to-opa-locka-living/vibrant-cargo-truck-cruising-a-scenic-mo-2.webp"
-
 service_link: "/opa-locka-local-moving"
 location_link: "/opa-locka-movers"
 status: "pending"

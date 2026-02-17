@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/05/starting-fresh-in-el-portal-a-newcomers-guide/loc-aerial-view-of-various-industrial-wareho-1.webp"
   - "/images/blog/2025/05/starting-fresh-in-el-portal-a-newcomers-guide/svc-a-blue-truck-transporting-livestock-on-a-1.webp"
   - "/images/blog/2025/05/starting-fresh-in-el-portal-a-newcomers-guide/svc-a-classic-hong-kong-tram-traverses-moder-2.webp"
-
 service_link: "/local-moving"
 location_link: "/el-portal-movers"
 status: "pending"

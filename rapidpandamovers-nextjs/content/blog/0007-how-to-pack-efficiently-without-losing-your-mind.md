@@ -18,7 +18,6 @@ images:
   - "/images/blog/2024/01/how-to-pack-efficiently-without-losing-your-mind/a-person-sealing-a-cardboard-box-with-a--1.webp"
   - "/images/blog/2024/01/how-to-pack-efficiently-without-losing-your-mind/close-up-of-hands-packing-a-box-labeled--2.webp"
   - "/images/blog/2024/01/how-to-pack-efficiently-without-losing-your-mind/confident-young-woman-carrying-cardboard-3.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "completed"

@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/12/finding-your-place-in-medley-relocation-advice/loc-discover-the-picturesque-urban-streets-o-1.webp"
   - "/images/blog/2030/12/finding-your-place-in-medley-relocation-advice/svc-a-charming-portrait-of-a-child-with-curl-1.webp"
   - "/images/blog/2030/12/finding-your-place-in-medley-relocation-advice/svc-crop-anonymous-male-in-casual-clothes-pa-2.webp"
-
 service_link: "/medley-local-moving"
 location_link: "/medley-movers"
 status: "complete"

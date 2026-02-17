@@ -17,8 +17,7 @@ images:
   - "/images/blog/2029/08/9-difficult-belongings-that-need-pro-movers/people-loading-supplies-onto-a-truck-in--1.webp"
   - "/images/blog/2029/08/9-difficult-belongings-that-need-pro-movers/three-men-loading-wooden-boxes-on-a-truc-2.webp"
   - "/images/blog/2029/08/9-difficult-belongings-that-need-pro-movers/vintage-truck-carrying-heavy-cargo-bags--3.webp"
-
-service_link: /local-moving
+service_link: "/local-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

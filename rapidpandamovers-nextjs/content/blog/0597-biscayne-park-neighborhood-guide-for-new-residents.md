@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/02/biscayne-park-neighborhood-guide-for-new-residents/loc-a-delightful-black-and-white-image-of-a--1.webp"
   - "/images/blog/2028/02/biscayne-park-neighborhood-guide-for-new-residents/svc-a-blue-truck-transporting-livestock-on-a-1.webp"
   - "/images/blog/2028/02/biscayne-park-neighborhood-guide-for-new-residents/svc-u-haul-moving-truck-parked-on-roadside-w-2.webp"
-
 service_link: "/local-moving"
 location_link: "/biscayne-park-movers"
 status: "completed"

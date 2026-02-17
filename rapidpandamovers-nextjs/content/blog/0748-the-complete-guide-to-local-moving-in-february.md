@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/02/the-complete-guide-to-local-moving-in-february/a-joyful-moment-of-a-mother-and-child-pl-1.webp"
   - "/images/blog/2029/02/the-complete-guide-to-local-moving-in-february/a-pile-of-empty-cardboard-boxes-arranged-3.webp"
   - "/images/blog/2029/02/the-complete-guide-to-local-moving-in-february/crop-unrecognizable-male-packing-staked--4.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "pending"

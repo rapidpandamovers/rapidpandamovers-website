@@ -16,7 +16,6 @@ images:
   - "/images/blog/2028/01/7-industry-secrets-from-full-time-movers/people-loading-supplies-onto-a-truck-in--2.webp"
   - "/images/blog/2028/01/7-industry-secrets-from-full-time-movers/three-men-loading-wooden-boxes-on-a-truc-1.webp"
   - "/images/blog/2028/01/7-industry-secrets-from-full-time-movers/vintage-truck-carrying-heavy-cargo-bags--3.webp"
-
 service_link: "/local-moving"
 location_link: null
 status: "pending"

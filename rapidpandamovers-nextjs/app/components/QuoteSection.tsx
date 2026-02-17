@@ -23,7 +23,7 @@ export default function QuoteSection({
   phoneDisplay = defaultPhoneDisplay
 }: QuoteSectionProps) {
   return (
-    <section className="py-5">
+    <section className="pt-20">
       <div className="container mx-auto rounded-4xl bg-orange-500 p-8 md:p-16 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
           {title}
@@ -32,18 +32,18 @@ export default function QuoteSection({
           {subtitle}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Link
-            href={buttonHref}
-            className="bg-white text-orange-500 font-bold py-4 px-8 rounded-lg hover:bg-orange-50 transition-colors text-center"
-          >
-            {buttonText}
-          </Link>
           <a
             href={`tel:${phone}`}
-            className="border-2 border-white text-white font-bold py-4 px-8 rounded-lg hover:bg-orange-600 transition-colors text-center"
+            className="bg-white text-orange-500 font-bold py-4 px-8 rounded-lg hover:bg-orange-50 transition-colors text-center border-2 border-transparent"
           >
             Call {phoneDisplay}
           </a>
+          <Link
+            href={buttonHref}
+            className="border-2 border-white text-white font-bold py-4 px-8 rounded-lg hover:bg-orange-600 transition-colors text-center"
+          >
+            {buttonText}
+          </Link>
         </div>
       </div>
     </section>

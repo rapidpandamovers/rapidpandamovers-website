@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/11/miami-same-day-moving-november-edition/blurred-forklift-operator-driving-outsid-4.webp"
   - "/images/blog/2027/11/miami-same-day-moving-november-edition/red-ford-f-150-truck-driving-on-a-bridge-1.webp"
   - "/images/blog/2027/11/miami-same-day-moving-november-edition/u-haul-moving-truck-parked-on-roadside-w-2.webp"
-
 service_link: "/same-day-moving"
 location_link: null
 status: "complete"

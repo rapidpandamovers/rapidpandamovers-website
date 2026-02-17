@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/01/smart-residential-moving-tips-for-winter/a-family-involved-in-a-creative-activity-4.webp"
   - "/images/blog/2030/01/smart-residential-moving-tips-for-winter/family-enjoying-selfie-time-while-surrou-3.webp"
   - "/images/blog/2030/01/smart-residential-moving-tips-for-winter/family-moving-into-their-new-home-surrou-1.webp"
-
 service_link: "/residential-moving"
 location_link: null
 status: "pending"

@@ -2,7 +2,7 @@
 id: 701
 title: "5 Quick Ways Busy Professionals Meet New Neighbors"
 slug: "5-quick-ways-busy-professionals-meet-new-neighbors"
-excerpt: "Working long hours in Miami? These five time-efficient strategies help busy professionals build neighborhood connections without sacrificing their."
+excerpt: "You moved to a new Miami neighborhood for your career, and now your 60-hour workweek leaves little time for socializing."
 date: "2028-10-18"
 updated: "2028-10-18"
 readTime: "3 min read"
@@ -18,8 +18,7 @@ images:
   - "/images/blog/2028/10/5-quick-ways-busy-professionals-meet-new-neighbors/high-angle-view-of-an-asda-delivery-truc-1.webp"
   - "/images/blog/2028/10/5-quick-ways-busy-professionals-meet-new-neighbors/movers-loading-boxes-into-a-truck-on-a-s-4.webp"
   - "/images/blog/2028/10/5-quick-ways-busy-professionals-meet-new-neighbors/u-haul-moving-truck-parked-on-roadside-w-2.webp"
-
-service_link: /local-moving
+service_link: "/local-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

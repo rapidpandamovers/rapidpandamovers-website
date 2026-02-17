@@ -2,7 +2,7 @@
 id: 530
 title: "9 Ways to Spot a Bad Moving Company"
 slug: "9-ways-to-spot-a-bad-moving-company"
-excerpt: "Nine warning signs of a bad moving company, from missing addresses to unusual payment demands. Protect yourself."
+excerpt: "Nine warning signs of a bad moving company, from missing addresses to unusual payment demands."
 date: "2027-09-15"
 updated: "2027-09-15"
 readTime: "5 min read"
@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/09/9-ways-to-spot-a-bad-moving-company/a-red-flag-signals-dangerous-conditions--3.webp"
   - "/images/blog/2027/09/9-ways-to-spot-a-bad-moving-company/two-professional-movers-carrying-cardboa-4.webp"
   - "/images/blog/2027/09/9-ways-to-spot-a-bad-moving-company/united-states-and-warning-flags-on-displ-1.webp"
-
 service_link: "/residential-moving"
 location_link: null
 status: "completed"

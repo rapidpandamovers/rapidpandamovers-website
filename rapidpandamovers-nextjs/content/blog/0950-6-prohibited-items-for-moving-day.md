@@ -2,7 +2,7 @@
 id: 950
 title: "6 Prohibited Items for Moving Day"
 slug: "6-prohibited-items-for-moving-day"
-excerpt: "These six items cannot travel on moving trucks for safety or legal reasons. Know what to handle separately."
+excerpt: "These six items cannot travel on moving trucks for safety or legal reasons. Know what to handle separately..."
 date: "2030-05-22"
 updated: "2030-05-22"
 readTime: "2 min read"
@@ -18,7 +18,6 @@ images:
   - "/images/blog/2030/05/6-prohibited-items-for-moving-day/a-person-holding-a-cardboard-box-labeled-2.webp"
   - "/images/blog/2030/05/6-prohibited-items-for-moving-day/a-professional-mover-packs-a-fragile-ite-4.webp"
   - "/images/blog/2030/05/6-prohibited-items-for-moving-day/orange-excavator-moving-earth-at-a-rural-3.webp"
-
 service_link: null
 location_link: null
 status: "pending"

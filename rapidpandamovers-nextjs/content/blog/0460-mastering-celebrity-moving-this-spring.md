@@ -2,7 +2,7 @@
 id: 460
 title: "Mastering Celebrity Moving This Spring"
 slug: "mastering-celebrity-moving-this-spring"
-excerpt: "Moving this spring? Discover essential celebrity moving tips for April relocations in Miami-Dade County. Get expert guidance for secure, discreet moves."
+excerpt: "Moving this spring? Discover essential celebrity moving tips for April relocations in Miami-Dade County."
 date: "2027-04-05"
 updated: "2027-04-05"
 readTime: "4 min read"
@@ -19,7 +19,6 @@ images:
   - "/images/blog/2027/04/mastering-celebrity-moving-this-spring/elegant-mansion-surrounded-by-lush-garde-3.webp"
   - "/images/blog/2027/04/mastering-celebrity-moving-this-spring/luxurious-indoor-setting-with-a-hand-hol-4.webp"
   - "/images/blog/2027/04/mastering-celebrity-moving-this-spring/stunning-aerial-photo-of-a-wedding-event-5.webp"
-
 service_link: "/celebrity-moving"
 location_link: null
 status: "pending"

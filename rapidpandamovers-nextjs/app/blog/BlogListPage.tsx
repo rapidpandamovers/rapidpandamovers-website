@@ -1,11 +1,12 @@
 import Link from 'next/link'
-import { Calendar, Clock, Tag, ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { getPostsSortedByDate, getCategories, categoryToSlug } from '../../lib/blog'
 import Hero from '../components/Hero'
 import ResourceSection from '../components/ResourceSection'
 import NewsletterSection from '../components/NewsletterSection'
-import BlogPostLink from './BlogPostLink'
 import BlogPostCard from './BlogPostCard'
+import BlogCategoryFilter from './BlogCategoryFilter'
+import FeaturedPostCard from './FeaturedPostCard'
 
 const POSTS_PER_PAGE = 12
 
@@ -103,69 +104,15 @@ export default function BlogListPage({ currentPage, category = null }: BlogListP
         cta="Get Your Free Quote"
       />
 
-      <div className="container mx-auto py-16">
+      <div className="container mx-auto pt-20">
 
         {/* Categories Filter */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          <Link
-            href="/blog"
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-              !category
-                ? 'bg-orange-500 text-white'
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-            }`}
-          >
-            All Posts
-          </Link>
-          {categories.map((cat) => (
-            <Link
-              key={cat}
-              href={`/blog/category/${encodeURIComponent(categoryToSlug(cat))}`}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                category === cat
-                  ? 'bg-orange-500 text-white'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
-            >
-              {cat}
-            </Link>
-          ))}
-        </div>
+        <BlogCategoryFilter categories={categories} activeCategory={category} />
 
         {/* Featured Post (only on page 1 when showing all posts) */}
         {featuredPost && (
           <div className="mb-16">
-            <article className="bg-gradient-to-r from-orange-500 to-red-500 rounded-xl overflow-hidden text-white">
-              <div className="p-8 md:p-12">
-                <div className="flex items-center text-orange-100 mb-4">
-                  <Tag className="w-4 h-4 mr-2" />
-                  <span className="text-sm font-medium">{featuredPost.category}</span>
-                  <span className="mx-3">•</span>
-                  <Calendar className="w-4 h-4 mr-1" />
-                  <span className="text-sm">{new Date(featuredPost.date).toLocaleDateString()}</span>
-                </div>
-
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                  <BlogPostLink href={`/blog/${featuredPost.slug}`} className="hover:text-orange-100 transition-colors">
-                    {featuredPost.title}
-                  </BlogPostLink>
-                </h2>
-
-                <p className="text-xl text-orange-100 mb-6 leading-relaxed">
-                  {featuredPost.excerpt}
-                </p>
-
-                <BlogPostLink
-                  href={`/blog/${featuredPost.slug}`}
-                  className="inline-flex items-center bg-white text-orange-600 font-semibold px-6 py-3 rounded-lg hover:bg-orange-50 transition-colors"
-                >
-                  Read Full Article
-                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </BlogPostLink>
-              </div>
-            </article>
+            <FeaturedPostCard post={featuredPost} />
           </div>
         )}
 

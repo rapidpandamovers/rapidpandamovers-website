@@ -2,7 +2,7 @@
 id: 363
 title: "Spring Relocation Guide to Westchester Living"
 slug: "spring-relocation-guide-to-westchester-living"
-excerpt: "Planning a spring move to Westchester? You're considering one of Miami-Dade County's most desirable communities. This guide covers everything you need."
+excerpt: "Planning a spring move to Westchester? You're considering one of Miami-Dade County's most desirable communities."
 date: "2026-08-20"
 updated: "2026-08-20"
 readTime: "4 min read"
@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/08/spring-relocation-guide-to-westchester-living/svc-people-loading-supplies-onto-a-truck-in--2.webp"
   - "/images/blog/2026/08/spring-relocation-guide-to-westchester-living/svc-red-truck-with-large-covered-cargo-in-an-3.webp"
   - "/images/blog/2026/08/spring-relocation-guide-to-westchester-living/svc-semi-truck-parked-at-a-loading-dock-with-1.webp"
-
 service_link: "/westchester-local-moving"
 location_link: "/westchester-movers"
 status: "pending"

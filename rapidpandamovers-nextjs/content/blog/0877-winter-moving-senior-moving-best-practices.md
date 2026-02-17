@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/12/winter-moving-senior-moving-best-practices/elderly-man-signs-for-a-parcel-while-a-d-3.webp"
   - "/images/blog/2029/12/winter-moving-senior-moving-best-practices/elderly-woman-enjoying-indoor-activity-c-4.webp"
   - "/images/blog/2029/12/winter-moving-senior-moving-best-practices/senior-woman-with-laptop-smiling-indoors-2.webp"
-
 service_link: "/senior-moving"
 location_link: null
 status: "pending"

@@ -19,7 +19,6 @@ images:
   - "/images/blog/2030/12/your-winter-celebrity-moving-planning-guide/elegant-white-mansion-surrounded-by-lush-1.webp"
   - "/images/blog/2030/12/your-winter-celebrity-moving-planning-guide/serene-indoor-pool-area-with-modern-desi-3.webp"
   - "/images/blog/2030/12/your-winter-celebrity-moving-planning-guide/top-view-of-a-secluded-mansion-with-a-po-2.webp"
-
 service_link: "/celebrity-moving"
 location_link: null
 status: "complete"

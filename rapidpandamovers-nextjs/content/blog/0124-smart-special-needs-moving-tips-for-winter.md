@@ -19,7 +19,6 @@ images:
   - "/images/blog/2025/02/smart-special-needs-moving-tips-for-winter/an-individual-seated-in-a-wheelchair-dre-3.webp"
   - "/images/blog/2025/02/smart-special-needs-moving-tips-for-winter/image-of-a-wheelchair-and-black-boots-in-4.webp"
   - "/images/blog/2025/02/smart-special-needs-moving-tips-for-winter/sleek-electric-wheelchair-design-isolate-1.webp"
-
 service_link: "/special-needs-moving"
 location_link: null
 status: "pending"

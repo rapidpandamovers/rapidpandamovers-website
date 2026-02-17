@@ -20,7 +20,6 @@ images:
   - "/images/blog/2024/02/miami-beach-uncovered-find-your-dream-community/a-person-buried-under-a-pile-of-cardboar-4.webp"
   - "/images/blog/2024/02/miami-beach-uncovered-find-your-dream-community/a-person-holding-a-cardboard-box-labeled-3.webp"
   - "/images/blog/2024/02/miami-beach-uncovered-find-your-dream-community/couple-smiling-while-moving-into-a-new-h-2.webp"
-
 service_link: "/miami-beach-movers"
 location_link: "/locations/miami-beach"
 status: "pending"

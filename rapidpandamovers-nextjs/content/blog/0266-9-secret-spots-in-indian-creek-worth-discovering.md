@@ -6,7 +6,7 @@ excerpt: "Discover hidden gems in Indian Creek. From neighborhood secrets to loc
 date: "2025-12-31"
 updated: "2025-12-31"
 readTime: "3 min read"
-category: "Lifestyle"
+category: "Hourly Moving"
 image_folder: "/images/blog/2025/12/9-secret-spots-in-indian-creek-worth-discovering"
 featured: "/images/blog/2025/12/9-secret-spots-in-indian-creek-worth-discovering/a-picturesque-view-of-miami-skyline-with-1.webp"
 image_keywords:
@@ -18,8 +18,7 @@ images:
   - "/images/blog/2025/12/9-secret-spots-in-indian-creek-worth-discovering/a-stunning-aerial-view-of-the-lush-jumei-4.webp"
   - "/images/blog/2025/12/9-secret-spots-in-indian-creek-worth-discovering/black-and-white-image-of-a-modern-luxury-3.webp"
   - "/images/blog/2025/12/9-secret-spots-in-indian-creek-worth-discovering/experience-a-serene-tropical-villa-with--2.webp"
-
-service_link: null
+service_link: "/hourly-moving"
 location_link: "/indian-creek-movers"
 status: "pending"
 needs_ai_image: false

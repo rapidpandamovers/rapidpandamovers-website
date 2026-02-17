@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/01/full-service-moving-strategies-for-january-moves/a-mover-carries-a-green-sofa-indoors-sho-1.webp"
   - "/images/blog/2029/01/full-service-moving-strategies-for-january-moves/two-men-sitting-in-a-van-surrounded-by-b-3.webp"
   - "/images/blog/2029/01/full-service-moving-strategies-for-january-moves/two-professional-movers-in-an-empty-apar-2.webp"
-
 service_link: "/full-service-moving"
 location_link: null
 status: "pending"

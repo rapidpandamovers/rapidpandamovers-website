@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/09/mastering-full-service-moving-this-fall/a-professional-mover-packs-a-fragile-ite-2.webp"
   - "/images/blog/2029/09/mastering-full-service-moving-this-fall/two-movers-in-uniform-carrying-boxes-in--4.webp"
   - "/images/blog/2029/09/mastering-full-service-moving-this-fall/two-professional-movers-in-an-empty-apar-3.webp"
-
 service_link: "/full-service-moving"
 location_link: null
 status: "pending"

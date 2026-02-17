@@ -18,7 +18,6 @@ images:
   - "/images/blog/2026/09/9-best-parks-and-outdoor-spaces-in-miami/a-picturesque-miami-park-scene-featuring-3.webp"
   - "/images/blog/2026/09/9-best-parks-and-outdoor-spaces-in-miami/a-woman-enjoys-horseback-riding-in-a-sun-2.webp"
   - "/images/blog/2026/09/9-best-parks-and-outdoor-spaces-in-miami/aerial-shot-of-miami-s-ferris-wheel-and--1.webp"
-
 service_link: null
 location_link: "/miami-movers"
 status: "complete"

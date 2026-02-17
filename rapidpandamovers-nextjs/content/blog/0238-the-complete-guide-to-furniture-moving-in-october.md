@@ -18,7 +18,6 @@ images:
   - "/images/blog/2025/10/the-complete-guide-to-furniture-moving-in-october/a-woman-in-a-white-dress-relaxing-on-a-s-3.webp"
   - "/images/blog/2025/10/the-complete-guide-to-furniture-moving-in-october/elegant-brown-l-shaped-sofa-featuring-st-2.webp"
   - "/images/blog/2025/10/the-complete-guide-to-furniture-moving-in-october/stylish-blue-sofa-with-cushions-on-patte-1.webp"
-
 service_link: "/furniture-moving"
 location_link: null
 status: "pending"

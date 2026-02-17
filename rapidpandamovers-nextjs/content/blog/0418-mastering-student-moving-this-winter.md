@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/12/mastering-student-moving-this-winter/charming-brick-facade-with-green-door-at-2.webp"
   - "/images/blog/2026/12/mastering-student-moving-this-winter/couple-packing-bags-in-a-bright-cozy-hos-1.webp"
   - "/images/blog/2026/12/mastering-student-moving-this-winter/light-filled-dorm-room-with-plants-bunk--4.webp"
-
 service_link: "/student-moving"
 location_link: null
 status: "pending"

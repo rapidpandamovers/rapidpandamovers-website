@@ -18,7 +18,6 @@ images:
   - "/images/blog/2029/09/the-newcomers-guide-to-miami-lakes-living/captivating-view-of-miami-s-iconic-skyli-4.webp"
   - "/images/blog/2029/09/the-newcomers-guide-to-miami-lakes-living/empty-streets-with-palm-trees-and-modern-3.webp"
   - "/images/blog/2029/09/the-newcomers-guide-to-miami-lakes-living/view-of-miami-skyline-from-coral-gables--2.webp"
-
 service_link: null
 location_link: "/miami-lakes-movers"
 status: "pending"

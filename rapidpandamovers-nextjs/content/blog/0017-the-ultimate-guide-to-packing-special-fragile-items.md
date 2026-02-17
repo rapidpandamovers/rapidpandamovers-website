@@ -2,7 +2,7 @@
 id: 17
 title: "The Ultimate Guide to Packing Special Fragile Items"
 slug: "the-ultimate-guide-to-packing-special-fragile-items"
-excerpt: "Learn professional techniques to safely pack glassware, artwork, electronics, and antiques. From bubble wrap basics to Miami climate tips."
+excerpt: "Learn professional techniques to safely pack glassware, artwork, electronics, and antiques."
 date: "2024-02-01"
 updated: "2024-02-01"
 readTime: "11 min read"
@@ -17,7 +17,6 @@ images:
   - "/images/blog/2024/02/the-ultimate-guide-to-packing-special-fragile-items/a-cardboard-box-labeled-with-winter-clot-1.webp"
   - "/images/blog/2024/02/the-ultimate-guide-to-packing-special-fragile-items/a-collection-of-large-cardboard-boxes-la-2.webp"
   - "/images/blog/2024/02/the-ultimate-guide-to-packing-special-fragile-items/close-up-of-hands-packing-a-cardboard-bo-3.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "completed"

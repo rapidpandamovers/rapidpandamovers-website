@@ -19,7 +19,6 @@ images:
   - "/images/blog/2025/11/palmetto-bay-relocation-guide-a-complete-overview/family-enjoying-selfie-time-while-surrou-2.webp"
   - "/images/blog/2025/11/palmetto-bay-relocation-guide-a-complete-overview/family-moving-into-their-new-home-surrou-3.webp"
   - "/images/blog/2025/11/palmetto-bay-relocation-guide-a-complete-overview/happy-family-playing-with-boxes-while-mo-4.webp"
-
 service_link: null
 location_link: "/palmetto-bay-movers"
 status: "pending"

@@ -2,7 +2,7 @@
 id: 585
 title: "Why Biscayne Park is Perfect for Your Next Move"
 slug: "why-biscayne-park-is-perfect-for-your-next-move"
-excerpt: "Biscayne Park offers historic village charm and strong community spirit. Discover why it is perfect for your next move."
+excerpt: "Biscayne Park offers historic village charm and strong community spirit. Discover why it is perfect for your next move..."
 date: "2028-01-20"
 updated: "2028-01-20"
 readTime: "4 min read"
@@ -19,7 +19,6 @@ images:
   - "/images/blog/2028/01/why-biscayne-park-is-perfect-for-your-next-move/a-delightful-black-and-white-image-of-a--4.webp"
   - "/images/blog/2028/01/why-biscayne-park-is-perfect-for-your-next-move/cape-florida-lighthouse-surrounded-by-be-1.webp"
   - "/images/blog/2028/01/why-biscayne-park-is-perfect-for-your-next-move/iconic-cape-florida-lighthouse-peeks-thr-3.webp"
-
 service_link: null
 location_link: "/biscayne-park-movers"
 status: "pending"

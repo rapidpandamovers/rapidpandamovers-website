@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/06/miami-beach-school-education-top-learning-opportunities/loc-relax-on-blue-beach-chairs-with-umbrella-1.webp"
   - "/images/blog/2024/06/miami-beach-school-education-top-learning-opportunities/svc-people-loading-supplies-onto-a-truck-in--2.webp"
   - "/images/blog/2024/06/miami-beach-school-education-top-learning-opportunities/svc-red-truck-with-large-covered-cargo-in-an-1.webp"
-
 service_link: "/miami-beach-local-moving"
 location_link: "/miami-beach-movers"
 status: "pending"

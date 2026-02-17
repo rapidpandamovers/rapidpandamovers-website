@@ -18,8 +18,7 @@ images:
   - "/images/blog/2025/06/6-difficult-belongings-that-need-pro-movers/close-up-of-a-gift-wrapped-hamburger-hel-4.webp"
   - "/images/blog/2025/06/6-difficult-belongings-that-need-pro-movers/intense-close-up-image-of-a-woman-with-a-1.webp"
   - "/images/blog/2025/06/6-difficult-belongings-that-need-pro-movers/white-cake-with-cyrillic-text-placed-on--5.webp"
-
-service_link: /residential-moving
+service_link: "/residential-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

@@ -2,7 +2,7 @@
 id: 326
 title: "8 Best Restaurants to Try in Doral After Your Move"
 slug: "8-best-restaurants-to-try-in-doral-after-your-move"
-excerpt: "New to Doral? Discover 8 must-try restaurants from Peruvian ceviche to Italian waterfront dining in this fast-growing Miami suburb."
+excerpt: "Just moved to Doral or planning your relocation? This fast-growing city west of Miami International Airport has become a culinary destination, with..."
 date: "2026-05-27"
 updated: "2026-05-27"
 readTime: "3 min read"
@@ -19,7 +19,6 @@ images:
   - "/images/blog/2026/05/8-best-restaurants-to-try-in-doral-after-your-move/elegant-table-setting-with-glassware-and-5.webp"
   - "/images/blog/2026/05/8-best-restaurants-to-try-in-doral-after-your-move/sophisticated-restaurant-table-setting-w-2.webp"
   - "/images/blog/2026/05/8-best-restaurants-to-try-in-doral-after-your-move/warm-and-inviting-restaurant-interior-wi-3.webp"
-
 service_link: null
 location_link: "/doral-movers"
 status: "pending"

@@ -2,7 +2,7 @@
 id: 18
 title: "Packing Office Equipment for a Stress-Free Move"
 slug: "packing-office-equipment-for-a-stress-free-move"
-excerpt: "Learn how to pack computers, printers, servers, and office furniture for a damage-free move. Expert tips from Miami's commercial movers."
+excerpt: "Learn how to pack computers, printers, servers, and office furniture for a damage-free move."
 date: "2024-02-01"
 updated: "2024-02-01"
 readTime: "8 min read"
@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/02/packing-office-equipment-for-a-stress-free-move/close-up-of-hands-packing-a-cardboard-bo-3.webp"
   - "/images/blog/2024/02/packing-office-equipment-for-a-stress-free-move/labeled-cardboard-boxes-for-summer-cloth-4.webp"
   - "/images/blog/2024/02/packing-office-equipment-for-a-stress-free-move/unrecognizable-man-sealing-box-with-duck-2.webp"
-
 service_link: "/miami-packing-services"
 location_link: null
 status: "completed"

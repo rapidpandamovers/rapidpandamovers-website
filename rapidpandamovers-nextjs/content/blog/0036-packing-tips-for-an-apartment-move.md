@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/04/packing-tips-for-an-apartment-move/a-tall-residential-building-showcasing-s-2.webp"
   - "/images/blog/2024/04/packing-tips-for-an-apartment-move/colorful-high-rise-buildings-in-berlin-s-5.webp"
   - "/images/blog/2024/04/packing-tips-for-an-apartment-move/monochrome-photo-of-high-rise-residentia-1.webp"
-
 service_link: "/miami-apartment-moving"
 location_link: "/miami"
 status: "pending"

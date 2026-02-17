@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/12/your-north-miami-moving-handbook/loc-view-of-miami-skyline-from-coral-gables--2.webp"
   - "/images/blog/2027/12/your-north-miami-moving-handbook/svc-a-pile-of-empty-cardboard-boxes-ready-fo-1.webp"
   - "/images/blog/2027/12/your-north-miami-moving-handbook/svc-cardboard-moving-boxes-in-a-modern-kitch-2.webp"
-
 service_link: "/local-moving"
 location_link: "/north-miami-movers"
 status: "pending"

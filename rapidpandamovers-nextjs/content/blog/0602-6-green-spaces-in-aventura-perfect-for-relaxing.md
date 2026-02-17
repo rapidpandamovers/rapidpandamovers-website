@@ -18,7 +18,6 @@ images:
   - "/images/blog/2028/03/6-green-spaces-in-aventura-perfect-for-relaxing/a-woman-walks-through-a-lush-park-surrou-2.webp"
   - "/images/blog/2028/03/6-green-spaces-in-aventura-perfect-for-relaxing/explore-the-serene-greenery-and-tranquil-1.webp"
   - "/images/blog/2028/03/6-green-spaces-in-aventura-perfect-for-relaxing/scenic-view-of-chalkida-s-promenade-with-3.webp"
-
 service_link: null
 location_link: "/aventura-movers"
 status: "pending"

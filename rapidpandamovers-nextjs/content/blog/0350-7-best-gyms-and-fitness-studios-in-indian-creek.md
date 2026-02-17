@@ -6,7 +6,7 @@ excerpt: "Discover seven top gyms and fitness studios near Indian Creek, from lu
 date: "2026-07-22"
 updated: "2026-07-22"
 readTime: "4 min read"
-category: "Lifestyle"
+category: "Commercial Moving"
 image_folder: "/images/blog/2026/07/7-best-gyms-and-fitness-studios-in-indian-creek"
 featured: "/images/blog/2026/07/7-best-gyms-and-fitness-studios-in-indian-creek/woman-in-a-gym-focused-on-cardio-exercis-5.webp"
 image_keywords:
@@ -19,8 +19,7 @@ images:
   - "/images/blog/2026/07/7-best-gyms-and-fitness-studios-in-indian-creek/spacious-fitness-center-featuring-treadm-4.webp"
   - "/images/blog/2026/07/7-best-gyms-and-fitness-studios-in-indian-creek/woman-in-a-gym-focused-on-cardio-exercis-5.webp"
   - "/images/blog/2026/07/7-best-gyms-and-fitness-studios-in-indian-creek/women-lifting-dumbbells-in-front-of-mirr-1.webp"
-
-service_link: null
+service_link: "/commercial-moving"
 location_link: "/indian-creek-movers"
 status: "pending"
 needs_ai_image: false

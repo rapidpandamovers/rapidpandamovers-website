@@ -19,7 +19,6 @@ images:
   - "/images/blog/2029/07/the-complete-guide-to-same-day-moving-in-july/a-person-buried-under-a-pile-of-cardboar-4.webp"
   - "/images/blog/2029/07/the-complete-guide-to-same-day-moving-in-july/a-person-holding-a-cardboard-box-labeled-3.webp"
   - "/images/blog/2029/07/the-complete-guide-to-same-day-moving-in-july/tired-woman-leaning-on-a-moving-box-whil-1.webp"
-
 service_link: "/same-day-moving"
 location_link: null
 status: "pending"

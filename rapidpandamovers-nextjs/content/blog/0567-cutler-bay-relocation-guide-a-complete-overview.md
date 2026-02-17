@@ -18,7 +18,6 @@ images:
   - "/images/blog/2027/12/cutler-bay-relocation-guide-a-complete-overview/loc-scenic-view-of-saint-pete-pier-surrounde-1.webp"
   - "/images/blog/2027/12/cutler-bay-relocation-guide-a-complete-overview/svc-a-pile-of-empty-cardboard-boxes-ready-fo-2.webp"
   - "/images/blog/2027/12/cutler-bay-relocation-guide-a-complete-overview/svc-cardboard-moving-boxes-in-a-modern-kitch-1.webp"
-
 service_link: "/cutler-bay-local-moving"
 location_link: "/cutler-bay-movers"
 status: "pending"

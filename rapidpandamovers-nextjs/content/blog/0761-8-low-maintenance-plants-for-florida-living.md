@@ -6,7 +6,7 @@ excerpt: "8 low-maintenance plants perfect for Florida living. Varieties that th
 date: "2029-03-07"
 updated: "2029-03-07"
 readTime: "4 min read"
-category: "Home & Living"
+category: "Office Moving"
 image_folder: "/images/blog/2029/03/8-low-maintenance-plants-for-florida-living"
 featured: "/images/blog/2029/03/8-low-maintenance-plants-for-florida-living/close-up-of-vibrant-monstera-leaves-show-2.webp"
 image_keywords:
@@ -17,8 +17,7 @@ images:
   - "/images/blog/2029/03/8-low-maintenance-plants-for-florida-living/close-up-of-vibrant-monstera-leaves-show-2.webp"
   - "/images/blog/2029/03/8-low-maintenance-plants-for-florida-living/vibrant-yellow-cymbidium-orchids-in-an-o-3.webp"
   - "/images/blog/2029/03/8-low-maintenance-plants-for-florida-living/vivid-close-up-of-a-tropical-green-leaf--1.webp"
-
-service_link: null
+service_link: "/office-moving"
 location_link: null
 status: "pending"
 needs_ai_image: false

@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/06/packing-simplified-expert-tips-for-staying-organized/a-cardboard-box-labeled-with-winter-clot-3.webp"
   - "/images/blog/2024/06/packing-simplified-expert-tips-for-staying-organized/a-collection-of-large-cardboard-boxes-la-1.webp"
   - "/images/blog/2024/06/packing-simplified-expert-tips-for-staying-organized/unrecognizable-man-sealing-box-with-duck-2.webp"
-
 service_link: "/packing-services"
 location_link: null
 status: "complete"
