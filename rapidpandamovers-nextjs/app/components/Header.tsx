@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Phone } from 'lucide-react'
 import { getAllActiveCities, getAllActiveServices } from '@/lib/data'
 import content from '@/data/content.json'
+import nav from '@/data/navigation.json'
 
 export default function Header() {
   const cities = getAllActiveCities()
@@ -12,7 +13,7 @@ export default function Header() {
   const phoneTel = phone.replace(/-/g, '')
   return (
     <>
-          
+
       {/* Main Header */}
       <header className="bg-white text-sm font-bold">
         <div className="container mx-auto px-4 py-4">
@@ -27,14 +28,14 @@ export default function Header() {
                 priority
               />
             </Link>
-            
+
             <nav className="hidden lg:flex items-center space-x-6">
               <Link href="/" className="text-gray-700 hover:text-orange-500 transition-colors uppercase">
-                Home
+                {nav.header.home.label}
               </Link>
               <div className="relative group">
                 <button className="text-gray-700 hover:text-orange-500 transition-colors flex items-center uppercase">
-                  Services
+                  {nav.header.services.label}
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
@@ -50,14 +51,14 @@ export default function Header() {
                     </div>
                   </div>
                   <Link href="/services" className="block px-6 pt-4 pb-5 text-white hover:text-white/80 hover:translate-x-1 transition-all duration-200">
-                    <div className="font-medium">All Services &rarr;</div>
-                    <div className="text-sm text-white/70 font-normal">Complete service overview</div>
+                    <div className="font-medium">{nav.header.services.allLink.label} &rarr;</div>
+                    <div className="text-sm text-white/70 font-normal">{nav.header.services.allLink.description}</div>
                   </Link>
                 </div>
               </div>
               <div className="relative group">
                 <button className="text-gray-700 hover:text-orange-500 transition-colors flex items-center uppercase">
-                  Locations
+                  {nav.header.locations.label}
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
@@ -73,104 +74,74 @@ export default function Header() {
                     </div>
                   </div>
                   <Link href="/locations" className="block px-6 pt-4 pb-5 text-white hover:text-white/80 hover:translate-x-1 transition-all duration-200">
-                    <div className="font-medium">All Locations &rarr;</div>
-                    <div className="text-sm text-white/70 font-normal">Complete location overview</div>
+                    <div className="font-medium">{nav.header.locations.allLink.label} &rarr;</div>
+                    <div className="text-sm text-white/70 font-normal">{nav.header.locations.allLink.description}</div>
                   </Link>
                 </div>
               </div>
               <div className="relative group">
                 <button className="text-gray-700 hover:text-orange-500 transition-colors flex items-center uppercase">
-                  Compare
+                  {nav.header.compare.label}
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
                 <div className="absolute left-0 mt-2 w-72 bg-orange-500 rounded-4xl overflow-hidden border-2 border-orange-500 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="bg-white rounded-b-4xl py-2">
-                    <Link href="/compare" className="block px-6 py-3 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200">
-                      <div className="font-medium">Compare Movers</div>
-                      <div className="text-sm text-gray-500 font-normal">See how we stack up</div>
-                    </Link>
-                    <Link href="/alternatives" className="block px-6 py-3 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200">
-                      <div className="font-medium">Alternative Options</div>
-                      <div className="text-sm text-gray-500 font-normal">DIY vs full-service</div>
-                    </Link>
+                    {nav.header.compare.items.map((item) => (
+                      <Link key={item.href} href={item.href} className="block px-6 py-3 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200">
+                        <div className="font-medium">{item.label}</div>
+                        <div className="text-sm text-gray-500 font-normal">{item.description}</div>
+                      </Link>
+                    ))}
                   </div>
-                  <Link href="/why-choose-us" className="block px-6 pt-4 pb-5 text-white hover:text-white/80 hover:translate-x-1 transition-all duration-200">
-                    <div className="font-medium">Why Choose Us &rarr;</div>
-                    <div className="text-sm text-white/70 font-normal">The Rapid Panda difference</div>
+                  <Link href={nav.header.compare.bottomLink.href} className="block px-6 pt-4 pb-5 text-white hover:text-white/80 hover:translate-x-1 transition-all duration-200">
+                    <div className="font-medium">{nav.header.compare.bottomLink.label} &rarr;</div>
+                    <div className="text-sm text-white/70 font-normal">{nav.header.compare.bottomLink.description}</div>
                   </Link>
                 </div>
               </div>
               <div className="relative group">
                 <button className="text-gray-700 hover:text-orange-500 transition-colors flex items-center uppercase">
-                  Resources
+                  {nav.header.resources.label}
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
                 <div className="absolute left-0 mt-2 w-72 bg-orange-500 rounded-4xl overflow-hidden border-2 border-orange-500 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="bg-white rounded-b-4xl py-2">
-                    <Link href="/faq" className="block px-6 py-3 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200">
-                      <div className="font-medium">FAQ</div>
-                      <div className="text-sm text-gray-500 font-normal">Common questions</div>
-                    </Link>
-                    <Link href="/moving-rates" className="block px-6 py-3 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200">
-                      <div className="font-medium">Moving Rates</div>
-                      <div className="text-sm text-gray-500 font-normal">Pricing information</div>
-                    </Link>
-                    <Link href="/moving-routes" className="block px-6 py-3 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200">
-                      <div className="font-medium">Moving Routes</div>
-                      <div className="text-sm text-gray-500 font-normal">Popular moving routes</div>
-                    </Link>
-                    <Link href="/moving-tips" className="block px-6 py-3 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200">
-                      <div className="font-medium">Moving Tips</div>
-                      <div className="text-sm text-gray-500 font-normal">Expert advice</div>
-                    </Link>
-                    <Link href="/moving-checklist" className="block px-6 py-3 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200">
-                      <div className="font-medium">Moving Checklist</div>
-                      <div className="text-sm text-gray-500 font-normal">Essential tasks</div>
-                    </Link>
-                    <Link href="/moving-glossary" className="block px-6 py-3 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200">
-                      <div className="font-medium">Moving Glossary</div>
-                      <div className="text-sm text-gray-500 font-normal">Common moving terms</div>
-                    </Link>
+                    {nav.header.resources.items.map((item) => (
+                      <Link key={item.href} href={item.href} className="block px-6 py-3 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200">
+                        <div className="font-medium">{item.label}</div>
+                        <div className="text-sm text-gray-500 font-normal">{item.description}</div>
+                      </Link>
+                    ))}
                   </div>
-                  <Link href="/blog" className="block px-6 pt-4 pb-5 text-white hover:text-white/80 hover:translate-x-1 transition-all duration-200">
-                    <div className="font-medium">Blog &rarr;</div>
-                    <div className="text-sm text-white/70 font-normal">Moving tips and news</div>
+                  <Link href={nav.header.resources.bottomLink.href} className="block px-6 pt-4 pb-5 text-white hover:text-white/80 hover:translate-x-1 transition-all duration-200">
+                    <div className="font-medium">{nav.header.resources.bottomLink.label} &rarr;</div>
+                    <div className="text-sm text-white/70 font-normal">{nav.header.resources.bottomLink.description}</div>
                   </Link>
                 </div>
               </div>
               <div className="relative group">
                 <button className="text-gray-700 hover:text-orange-500 transition-colors flex items-center uppercase">
-                  Company
+                  {nav.header.company.label}
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
                 <div className="absolute left-0 mt-2 w-72 bg-orange-500 rounded-4xl overflow-hidden border-2 border-orange-500 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="bg-white rounded-b-4xl py-2">
-                    <Link href="/about-us" className="block px-6 py-3 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200">
-                      <div className="font-medium">About Us</div>
-                      <div className="text-sm text-gray-500 font-normal">About Rapid Panda Movers</div>
-                    </Link>
-                    <Link href="/contact-us" className="block px-6 py-3 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200">
-                      <div className="font-medium">Contact Us</div>
-                      <div className="text-sm text-gray-500 font-normal">Get in touch</div>
-                    </Link>
-                    <Link href="/reviews" className="block px-6 py-3 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200">
-                      <div className="font-medium">Reviews</div>
-                      <div className="text-sm text-gray-500 font-normal">Real testimonials</div>
-                    </Link>
-                    <Link href="/reservations" className="block px-6 py-3 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200">
-                      <div className="font-medium">Reservations</div>
-                      <div className="text-sm text-gray-500 font-normal">Book your move</div>
-                    </Link>
+                    {nav.header.company.items.map((item) => (
+                      <Link key={item.href} href={item.href} className="block px-6 py-3 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200">
+                        <div className="font-medium">{item.label}</div>
+                        <div className="text-sm text-gray-500 font-normal">{item.description}</div>
+                      </Link>
+                    ))}
                   </div>
-                  <Link href="/quote" className="block px-6 pt-4 pb-5 text-white hover:text-white/80 hover:translate-x-1 transition-all duration-200">
-                    <div className="font-medium">Free Quote &rarr;</div>
-                    <div className="text-sm text-white/70 font-normal">Get a free estimate</div>
+                  <Link href={nav.header.company.bottomLink.href} className="block px-6 pt-4 pb-5 text-white hover:text-white/80 hover:translate-x-1 transition-all duration-200">
+                    <div className="font-medium">{nav.header.company.bottomLink.label} &rarr;</div>
+                    <div className="text-sm text-white/70 font-normal">{nav.header.company.bottomLink.description}</div>
                   </Link>
                 </div>
               </div>
@@ -185,13 +156,13 @@ export default function Header() {
                 </div>
                 <div className="flex flex-col items-center">
                   <Link href="/quote" className="flex items-center justify-center border border-orange-500 bg-orange-500 hover:bg-orange-600 hover:border-orange-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors w-48">
-                    Get Free Quote
+                    {nav.header.cta.quoteButton}
                   </Link>
                   <span className="text-xs text-gray-500 mt-1">{content.site.header.quoteSubtext}</span>
                 </div>
               </div>
             </nav>
-            
+
             {/* Mobile menu button */}
             <button className="md:hidden p-2">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

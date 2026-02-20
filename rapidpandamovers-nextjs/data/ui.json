@@ -1,0 +1,125 @@
+{
+  "buttons": {
+    "getQuote": "Get Your Free Quote",
+    "getFreeQuote": "Get Free Quote",
+    "learnMore": "Learn More",
+    "viewAll": "View All",
+    "sendMessage": "Send Message",
+    "subscribe": "Subscribe",
+    "print": "Print",
+    "downloadPdf": "Download PDF",
+    "generating": "Generating...",
+    "sending": "Sending...",
+    "viewFullChecklist": "View Full Checklist",
+    "sendAnother": "Send another message",
+    "viewRoute": "View Route",
+    "readMore": "Read more",
+    "showLess": "Show less",
+    "viewAllReviews": "View All Reviews",
+    "callPrefix": "Call"
+  },
+  "forms": {
+    "contact": {
+      "title": "Send Us a Message",
+      "labels": {
+        "name": "Full Name",
+        "email": "Email",
+        "phone": "Phone",
+        "message": "Message"
+      },
+      "placeholders": {
+        "name": "John Doe",
+        "email": "john@example.com",
+        "phone": "(555) 123-4567",
+        "message": "Tell us about your moving needs..."
+      },
+      "required": "*"
+    },
+    "hero": {
+      "pickupPlaceholder": "Moving from Zip Code",
+      "dropoffPlaceholder": "Moving to Zip Code"
+    },
+    "newsletter": {
+      "placeholder": "Enter your email address"
+    }
+  },
+  "messages": {
+    "contactSuccess": {
+      "title": "Message Sent!",
+      "description": "We'll get back to you within 24 hours."
+    },
+    "contactError": "Failed to send message. Please try again or call us directly."
+  },
+  "contact": {
+    "infoTitle": "Contact Information",
+    "items": {
+      "phone": { "title": "Phone", "description": "Please call for immediate assistance" },
+      "email": { "title": "Email", "description": "We reply within 24 hours" },
+      "address": { "title": "Address", "description": "Miami, Florida" }
+    },
+    "hoursTitle": "Business Hours"
+  },
+  "ratings": {
+    "defaultTitle": "Excellent Ratings Across All Platforms",
+    "basedOn": "Based on",
+    "verifiedReviews": "verified reviews"
+  },
+  "checklist": {
+    "previewTitle": "Moving Checklist",
+    "previewSubtitle": "Stay organized with our comprehensive moving checklist. Never forget a task with our timeline-based approach.",
+    "features": [
+      { "icon": "Calendar", "title": "8 Timeline Phases", "desc": "From 8 weeks out to moving day" },
+      { "icon": "CheckCircle", "title": "50+ Tasks", "desc": "Comprehensive coverage" },
+      { "icon": "ClipboardList", "title": "Priority Levels", "desc": "Know what to do first" }
+    ],
+    "priority": {
+      "high": "High",
+      "highLabel": "High - Do first",
+      "medium": "Medium",
+      "low": "Low",
+      "lowLabel": "Low - Can wait"
+    },
+    "progress": "Progress:",
+    "tasks": "tasks",
+    "of": "of",
+    "complete": "complete",
+    "printHeader": { "company": "Rapid Panda Movers", "title": "Moving Checklist" },
+    "printLabels": { "name": "Name:", "movingDate": "Moving Date:" },
+    "printFooter": "Need help with your move? Call us for a free quote!",
+    "priorityLabels": { "high": "High Priority", "medium": "Medium Priority", "low": "Low Priority" }
+  },
+  "location": {
+    "neighborhoodsTitle": "Neighborhoods We Serve in {city}",
+    "neighborhoodsSubtitle": "We provide moving services throughout all neighborhoods in {city}",
+    "defaultTitle": "Locations We Serve",
+    "defaultSubtitle": "Serving {count}+ cities and neighborhoods across Miami-Dade County",
+    "viewAll": "View All Locations",
+    "moreAreas": "Proudly serving every corner of Miami-Dade County & more!"
+  },
+  "quote": {
+    "defaultTitle": "Let Us Handle the Heavy Lifting",
+    "defaultSubtitle": "Skip the DIY stress. Get a free quote from Rapid Panda Movers and discover how affordable full-service moving can be."
+  },
+  "promise": {
+    "defaultTitle": "Our Promise to You",
+    "defaultSubtitle": "When you choose Rapid Panda Movers, you're not just hiring a moving company - you're gaining a partner committed to making your transition as smooth as possible."
+  },
+  "review": {
+    "ctaTitle": "See What Others Say",
+    "ctaSubtitle": "Read verified reviews from our customers across Google, Yelp, and more"
+  },
+  "hero": {
+    "defaultTitle": "Family-Owned Moving Company in Miami",
+    "defaultDescription": "Low-cost moving & packing services",
+    "defaultCta": "Get Your Free Quote",
+    "ratingText": "/5 Based on {count}+ verified reviews"
+  },
+  "newsletter": {
+    "defaultTitle": "Stay Updated with Moving Tips",
+    "defaultDescription": "Subscribe to our newsletter for the latest moving tips, guides, and special offers from Rapid Panda Movers."
+  },
+  "media": {
+    "defaultTitle": "See Us In Action",
+    "defaultDescription": "Watch our professional team handle moves with care and precision"
+  }
+}

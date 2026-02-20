@@ -11,6 +11,11 @@ import FAQSection from './components/FAQSection'
 import QuoteSection from './components/QuoteSection'
 import content from '../data/content.json'
 
+export const metadata = {
+  title: content.home.meta.title,
+  description: content.home.meta.description,
+}
+
 export default function Home() {
   return (
     <>

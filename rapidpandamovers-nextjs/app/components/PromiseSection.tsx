@@ -1,3 +1,5 @@
+import ui from '@/data/ui.json'
+
 interface PromiseCard {
   title: string
   desc: string
@@ -10,8 +12,8 @@ interface PromiseSectionProps {
 }
 
 export default function PromiseSection({
-  title = 'Our Promise to You',
-  subtitle = "When you choose Rapid Panda Movers, you're not just hiring a moving company - you're gaining a partner committed to making your transition as smooth as possible.",
+  title = ui.promise.defaultTitle,
+  subtitle = ui.promise.defaultSubtitle,
   cards,
 }: PromiseSectionProps) {
   if (!cards || cards.length === 0) return null

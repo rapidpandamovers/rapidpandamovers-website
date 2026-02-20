@@ -4,10 +4,11 @@ import OverviewSection from '../components/OverviewSection'
 import WhySection from '../components/WhySection'
 import ServicesContent from './ServicesContent'
 import { allContent } from '@/lib/data'
+import content from '@/data/content.json'
 
 export const metadata = {
-  title: 'Professional Moving Services in Miami',
-  description: 'Local moving, apartment moves, packing, long-distance, commercial, and storage solutions in Miami. Transparent pricing.',
+  title: content.services.meta.title,
+  description: content.services.meta.description,
 }
 
 export default function ServicesPage() {

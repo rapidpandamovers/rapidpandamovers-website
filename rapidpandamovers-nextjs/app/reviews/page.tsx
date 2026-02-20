@@ -1,9 +1,10 @@
 import { Metadata } from 'next'
 import ReviewsListPage from './ReviewsListPage'
+import content from '@/data/content.json'
 
 export const metadata: Metadata = {
-  title: 'Customer Reviews | Rapid Panda Movers',
-  description: 'Read real reviews from our satisfied customers. See why Miami trusts Rapid Panda Movers for their local and long-distance moves.',
+  title: content.reviews.meta.title,
+  description: content.reviews.meta.description,
 }
 
 export default function ReviewsPage() {

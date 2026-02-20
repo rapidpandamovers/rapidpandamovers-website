@@ -1,4 +1,7 @@
 import { CheckCircle } from 'lucide-react'
+import content from '@/data/content.json'
+
+const defaults = content.defaults.solutions
 
 interface Solution {
   title: string
@@ -11,29 +14,10 @@ interface SolutionSectionProps {
   subtitle?: string
 }
 
-const defaultSolutions: Solution[] = [
-  {
-    title: 'We Handle Everything',
-    description: 'From planning to delivery, our experienced team manages every detail of your move.'
-  },
-  {
-    title: 'Professional Care',
-    description: 'Licensed movers with proper equipment and full insurance protect your belongings.'
-  },
-  {
-    title: 'Transparent Pricing',
-    description: 'Get your full quote upfront with no hidden fees or surprise charges.'
-  },
-  {
-    title: 'Reliable Service',
-    description: 'On-time arrivals, professional crews, and guaranteed satisfaction every time.'
-  }
-]
-
 export default function SolutionSection({
-  solutions = defaultSolutions,
-  title = 'How We Solve Them',
-  subtitle = 'Our professional moving services are designed to eliminate stress and deliver results.'
+  solutions = defaults.items,
+  title = defaults.title,
+  subtitle = defaults.subtitle
 }: SolutionSectionProps) {
   if (!solutions || solutions.length === 0) return null
 

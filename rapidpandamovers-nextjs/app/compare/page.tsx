@@ -1,5 +1,6 @@
 import { Scale, Star, Shield } from 'lucide-react';
 import comparisons from '@/data/comparisons.json';
+import content from '@/data/content.json';
 import Hero from '../components/Hero';
 import QuoteSection from '../components/QuoteSection';
 import CompareList from '../components/CompareList';
@@ -7,8 +8,8 @@ import CompareTable from '../components/CompareTable';
 import OverviewSection from '../components/OverviewSection';
 
 export const metadata = {
-  title: 'Compare Movers | Rapid Panda Movers vs Competitors',
-  description: 'Compare Rapid Panda Movers to other Miami moving companies. See side-by-side comparisons of services, pricing, and customer reviews.',
+  title: content.compare.meta.title,
+  description: content.compare.meta.description,
 };
 
 export default function ComparePage() {

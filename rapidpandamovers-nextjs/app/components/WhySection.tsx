@@ -1,8 +1,12 @@
-import { Shield, Users, DollarSign, Clock, Phone, CheckCircle, LucideIcon, ArrowRight } from 'lucide-react'
+import { CheckCircle, LucideIcon, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
+import { resolveIcon } from '@/lib/icons'
+import content from '@/data/content.json'
+
+const jsonDefaults = content.home.why_choose_us.benefits
 
 interface Benefit {
-  icon?: LucideIcon;
+  icon?: LucideIcon | string;
   title: string;
   desc?: string;
   details?: string[];
@@ -17,14 +21,11 @@ interface WhySectionProps {
   variant?: 'default' | 'detail' | 'left';
 }
 
-const defaultBenefits: Benefit[] = [
-  { icon: Shield, title: 'Licensed & Insured', desc: 'Full licensing and comprehensive insurance coverage for your peace of mind.' },
-  { icon: Users, title: 'Experienced Team', desc: 'Professional movers with years of experience in local and long-distance moves.' },
-  { icon: DollarSign, title: 'Transparent Pricing', desc: 'No hidden fees or surprise charges. Get honest, upfront pricing every time.' },
-  { icon: Clock, title: 'Reliable Scheduling', desc: 'On-time service with flexible scheduling options to fit your busy lifestyle.' },
-  { icon: Phone, title: '24/7 Customer Support', desc: 'Round-the-clock customer service to answer questions and provide assistance.' },
-  { icon: CheckCircle, title: 'Satisfaction Guaranteed', desc: '100% satisfaction guarantee with every move. Your happiness is our priority.' }
-];
+const defaultBenefits: Benefit[] = jsonDefaults.map(b => ({
+  icon: resolveIcon(b.icon),
+  title: b.title,
+  desc: b.desc,
+}))
 
 const bgColors = ['bg-orange-50', 'bg-gray-50']
 
@@ -36,9 +37,13 @@ export default function WhySection({
   ctaLink,
   variant = 'default',
 }: WhySectionProps = {}) {
-  // Convert string array to Benefit objects if needed
+  // Convert string array or JSON objects to Benefit objects if needed
   const benefits: Benefit[] = customBenefits
-    ? customBenefits.map(b => typeof b === 'string' ? { icon: CheckCircle, title: b } : b)
+    ? customBenefits.map(b => {
+        if (typeof b === 'string') return { icon: CheckCircle, title: b }
+        if (typeof b.icon === 'string') return { ...b, icon: resolveIcon(b.icon) }
+        return b
+      })
     : defaultBenefits;
 
   const displayCtaText = ctaText || 'See Why We\'re Different';

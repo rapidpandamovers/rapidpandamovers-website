@@ -3,10 +3,11 @@ import ContactSection from '../components/ContactSection'
 import MapSection from '../components/MapSection'
 import NewsletterSection from '../components/NewsletterSection'
 import QuoteSection from '../components/QuoteSection'
+import content from '@/data/content.json'
 
 export const metadata = {
-  title: 'Contact Us | Rapid Panda Movers Miami',
-  description: "Ready to make your move? Contact Rapid Panda Movers for a free quote and consultation. Call (786) 585-4269 or fill out our contact form.",
+  title: content.contact.meta.title,
+  description: content.contact.meta.description,
 }
 
 export default function ContactPage() {

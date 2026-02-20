@@ -5,6 +5,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import reviewsData from '@/data/reviews.json'
+import ui from '@/data/ui.json'
 import { ImageCollage } from './ImageCollage'
 
 interface HeroProps {
@@ -24,9 +25,9 @@ export default function Hero({
   const [dropoffZip, setDropoffZip] = useState('')
 
   // Use provided props with fallback defaults
-  const displayTitle = title || "Family-Owned Moving Company in Miami"
-  const displayDescription = description || "Low-cost moving & packing services"
-  const displayCta = cta || "Get Your Free Quote"
+  const displayTitle = title || ui.hero.defaultTitle
+  const displayDescription = description || ui.hero.defaultDescription
+  const displayCta = cta || ui.hero.defaultCta
   const displayImage = image_url || "https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
 
   // Build quote URL with zip codes
@@ -61,14 +62,14 @@ export default function Hero({
               <div className="grid grid-cols-2 gap-4">
                 <input
                   type="text"
-                  placeholder="Moving from Zip Code"
+                  placeholder={ui.forms.hero.pickupPlaceholder}
                   value={pickupZip}
                   onChange={(e) => setPickupZip(e.target.value)}
                   className="px-4 py-3 bg-gray-800 border border-gray-600 text-white placeholder-gray-400 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 />
                 <input
                   type="text"
-                  placeholder="Moving to Zip Code"
+                  placeholder={ui.forms.hero.dropoffPlaceholder}
                   value={dropoffZip}
                   onChange={(e) => setDropoffZip(e.target.value)}
                   className="px-4 py-3 bg-gray-800 border border-gray-600 text-white placeholder-gray-400 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
@@ -78,7 +79,7 @@ export default function Hero({
                 href={quoteUrl}
                 className="block w-full bg-orange-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-orange-600 transition-colors text-center"
               >
-                Get Free Quote
+                {ui.buttons.getFreeQuote}
               </Link>
             </div>
             
@@ -89,7 +90,7 @@ export default function Hero({
                   <Star key={i} className="w-5 h-5 text-orange-500 fill-current" />
                 ))}
               </div>
-              <span className="text-white">{reviewsData.stats.averageRating}/5 Based on {reviewsData.stats.totalReviews}+ verified reviews</span>
+              <span className="text-white">{reviewsData.stats.averageRating}{ui.hero.ratingText.replace('{count}', String(reviewsData.stats.totalReviews))}</span>
             </div>
           </div>
         </div>

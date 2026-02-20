@@ -4,6 +4,7 @@ import { useState, useMemo, useEffect } from 'react'
 import { Star, Quote, ChevronLeft, ChevronRight, ChevronDown, ChevronUp, BadgeCheck, MessageSquare, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import reviewsData from '@/data/reviews.json'
+import ui from '@/data/ui.json'
 
 const TRUNCATE_LENGTH = 200 // Characters before showing "Read more"
 
@@ -254,17 +255,17 @@ export default function ReviewSection({
               <div className="flex-1">
                 <MessageSquare className="w-10 h-10 text-orange-500 mb-4" />
                 <h3 className="text-2xl font-bold text-gray-800 mb-3">
-                  See What Others Say
+                  {ui.review.ctaTitle}
                 </h3>
                 <p className="text-gray-600 mb-6">
-                  Read verified reviews from our customers across Google, Yelp, and more
+                  {ui.review.ctaSubtitle}
                 </p>
               </div>
               <Link
                 href="/reviews"
                 className="flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
               >
-                View All Reviews
+                {ui.buttons.viewAllReviews}
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -298,7 +299,7 @@ export default function ReviewSection({
                   href="/reviews"
                   className="inline-flex items-center text-orange-500 hover:text-orange-600 font-semibold mt-4 md:mt-0"
                 >
-                  View All Reviews
+                  {ui.buttons.viewAllReviews}
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
               )}
@@ -581,12 +582,12 @@ function ReviewCard({
           >
             {isExpanded ? (
               <>
-                Show less
+                {ui.buttons.showLess}
                 <ChevronUp className="w-4 h-4" />
               </>
             ) : (
               <>
-                Read more
+                {ui.buttons.readMore}
                 <ChevronDown className="w-4 h-4" />
               </>
             )}

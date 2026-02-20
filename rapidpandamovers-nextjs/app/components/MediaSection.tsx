@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import { Play, Pause, X, ChevronLeft, ChevronRight } from 'lucide-react'
+import ui from '@/data/ui.json'
 
 interface MediaItem {
   type: 'image' | 'video'
@@ -59,8 +60,8 @@ const defaultItems: MediaItem[] = [
 ]
 
 export default function MediaSection({
-  title = "See Us In Action",
-  description = "Watch our professional team handle moves with care and precision",
+  title = ui.media.defaultTitle,
+  description = ui.media.defaultDescription,
   items = defaultItems,
   className = "",
   showArrows = true,

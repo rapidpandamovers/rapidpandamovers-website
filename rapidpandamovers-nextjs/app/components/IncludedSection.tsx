@@ -1,7 +1,11 @@
 import { CheckCircle, LucideIcon } from 'lucide-react'
+import { resolveIcon } from '@/lib/icons'
+import content from '@/data/content.json'
+
+const defaults = content.defaults.included
 
 interface DetailItem {
-  icon?: LucideIcon
+  icon?: LucideIcon | string
   title: string
   desc?: string
 }
@@ -13,20 +17,9 @@ interface IncludedSectionProps {
   background?: 'gray' | 'orange'
 }
 
-const defaultItems = [
-  'Professional packing materials',
-  'Careful loading and unloading',
-  'Safe transportation',
-  'Furniture protection',
-  'Licensed and insured movers',
-  'Background-checked staff',
-  'On-time arrival guaranteed',
-  'Transparent pricing'
-]
-
 export default function IncludedSection({
-  items = defaultItems,
-  title = "What's Included",
+  items = defaults.items,
+  title = defaults.title,
   subtitle,
   background = 'gray',
 }: IncludedSectionProps) {
@@ -55,7 +48,7 @@ export default function IncludedSection({
         <div className={`${bgClass} rounded-4xl p-8`}>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {normalizedItems.map((item, index) => {
-              const IconComponent = item.icon || CheckCircle
+              const IconComponent = typeof item.icon === 'string' ? resolveIcon(item.icon) : (item.icon || CheckCircle)
               return (
                 <div key={index} className="bg-white rounded-2xl p-6 text-center">
                   <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">

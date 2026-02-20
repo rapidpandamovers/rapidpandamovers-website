@@ -1,3 +1,7 @@
+import content from '@/data/content.json'
+
+const defaults = content.defaults.process
+
 interface ProcessStep {
   step: string
   title: string
@@ -10,33 +14,10 @@ interface ProcessSectionProps {
   subtitle?: string
 }
 
-const defaultSteps: ProcessStep[] = [
-  {
-    step: '1',
-    title: 'Get a Quote',
-    description: 'Contact us for a free, no-obligation estimate based on your moving needs.'
-  },
-  {
-    step: '2',
-    title: 'Schedule Your Move',
-    description: 'Pick a date and time that works best for you. We offer flexible scheduling.'
-  },
-  {
-    step: '3',
-    title: 'We Pack & Load',
-    description: 'Our professional team carefully packs and loads your belongings.'
-  },
-  {
-    step: '4',
-    title: 'Safe Delivery',
-    description: 'We transport and unload everything at your new location with care.'
-  }
-]
-
 export default function ProcessSection({
-  steps = defaultSteps,
-  title = 'Our Moving Process',
-  subtitle = 'A simple, stress-free process designed to make your move as smooth as possible'
+  steps = defaults.steps,
+  title = defaults.title,
+  subtitle = defaults.subtitle
 }: ProcessSectionProps) {
   if (!steps || steps.length === 0) return null
 

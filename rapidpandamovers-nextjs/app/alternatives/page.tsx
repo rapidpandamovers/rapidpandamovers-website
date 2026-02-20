@@ -1,5 +1,6 @@
 import { Truck, Package, Users, HelpCircle } from 'lucide-react';
 import alternatives from '@/data/alternatives.json';
+import content from '@/data/content.json';
 import Hero from '../components/Hero';
 import QuoteSection from '../components/QuoteSection';
 import CompareTable from '../components/CompareTable';
@@ -7,8 +8,8 @@ import CompareList from '../components/CompareList';
 import OverviewSection from '../components/OverviewSection';
 
 export const metadata = {
-  title: 'DIY Moving Alternatives vs Full-Service Movers',
-  description: 'Compare DIY moving options like PODS, U-Haul, and labor services to full-service movers. Find the best option for your move.',
+  title: content.alternatives.meta.title,
+  description: content.alternatives.meta.description,
 };
 
 const typeIcons: Record<string, React.ReactNode> = {

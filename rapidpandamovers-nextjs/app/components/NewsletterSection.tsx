@@ -1,4 +1,5 @@
 import { Mail } from 'lucide-react';
+import ui from '@/data/ui.json';
 
 interface NewsletterSectionProps {
   title?: string;
@@ -7,8 +8,8 @@ interface NewsletterSectionProps {
 }
 
 export default function NewsletterSection({
-  title = "Stay Updated with Moving Tips",
-  description = "Subscribe to our newsletter for the latest moving tips, guides, and special offers from Rapid Panda Movers.",
+  title = ui.newsletter.defaultTitle,
+  description = ui.newsletter.defaultDescription,
   className = ""
 }: NewsletterSectionProps) {
   return (
@@ -29,11 +30,11 @@ export default function NewsletterSection({
               id="newsletter-email"
               name="email"
               type="email"
-              placeholder="Enter your email address"
+              placeholder={ui.forms.newsletter.placeholder}
               className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
             />
             <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors">
-              Subscribe
+              {ui.buttons.subscribe}
             </button>
           </div>
         </div>

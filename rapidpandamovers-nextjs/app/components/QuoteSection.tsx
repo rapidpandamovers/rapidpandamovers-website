@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import content from '@/data/content.json'
+import ui from '@/data/ui.json'
 
 interface QuoteSectionProps {
   title?: string
@@ -15,9 +16,9 @@ const defaultPhone = sitePhone.replace(/-/g, '')
 const defaultPhoneDisplay = `(${sitePhone.slice(0,3)}) ${sitePhone.slice(4,7)}-${sitePhone.slice(8)}`
 
 export default function QuoteSection({
-  title = 'Let Us Handle the Heavy Lifting',
-  subtitle = "Skip the DIY stress. Get a free quote from Rapid Panda Movers and discover how affordable full-service moving can be.",
-  buttonText = 'Get Your Free Quote',
+  title = ui.quote.defaultTitle,
+  subtitle = ui.quote.defaultSubtitle,
+  buttonText = ui.buttons.getQuote,
   buttonHref = '/quote',
   phone = defaultPhone,
   phoneDisplay = defaultPhoneDisplay
@@ -36,7 +37,7 @@ export default function QuoteSection({
             href={`tel:${phone}`}
             className="bg-white text-orange-500 font-bold py-4 px-8 rounded-lg hover:bg-orange-50 transition-colors text-center border-2 border-transparent"
           >
-            Call {phoneDisplay}
+            {ui.buttons.callPrefix} {phoneDisplay}
           </a>
           <Link
             href={buttonHref}

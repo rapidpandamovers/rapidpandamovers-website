@@ -2,68 +2,25 @@
 
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-import {
-  HelpCircle,
-  BookOpen,
-  Lightbulb,
-  CheckSquare,
-  BookMarked,
-  DollarSign,
-  Star,
-  ArrowRight
-} from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
+import { resolveIcon } from '@/lib/icons'
+import contentData from '@/data/content.json'
+
+const defaults = contentData.defaults.resources
 
 interface Resource {
   title: string
   description: string
   href: string
-  icon: React.ReactNode
+  icon: string
 }
 
-const resources: Resource[] = [
-  {
-    title: 'FAQ',
-    description: 'Answers to common questions about our moving services',
-    href: '/faq',
-    icon: <HelpCircle className="w-6 h-6" />,
-  },
-  {
-    title: 'Blog',
-    description: 'Moving tips, guides, and industry insights',
-    href: '/blog',
-    icon: <BookOpen className="w-6 h-6" />,
-  },
-  {
-    title: 'Moving Tips',
-    description: 'Expert advice for a smooth moving experience',
-    href: '/moving-tips',
-    icon: <Lightbulb className="w-6 h-6" />,
-  },
-  {
-    title: 'Moving Checklist',
-    description: 'Step-by-step guide to organize your move',
-    href: '/moving-checklist',
-    icon: <CheckSquare className="w-6 h-6" />,
-  },
-  {
-    title: 'Moving Glossary',
-    description: 'Definitions of moving industry terms',
-    href: '/moving-glossary',
-    icon: <BookMarked className="w-6 h-6" />,
-  },
-  {
-    title: 'Moving Rates',
-    description: 'Transparent pricing for all our services',
-    href: '/moving-rates',
-    icon: <DollarSign className="w-6 h-6" />,
-  },
-  {
-    title: 'Customer Reviews',
-    description: 'See what our customers say about us',
-    href: '/reviews',
-    icon: <Star className="w-6 h-6" />,
-  },
-]
+const resources: Resource[] = defaults.items
+
+function ResourceIcon({ name }: { name: string }) {
+  const Icon = resolveIcon(name)
+  return <Icon className="w-6 h-6" />
+}
 
 interface ResourceSectionProps {
   title?: string
@@ -74,8 +31,8 @@ interface ResourceSectionProps {
 }
 
 export default function ResourceSection({
-  title = 'Helpful Resources',
-  subtitle = 'Everything you need to plan your move',
+  title = defaults.title,
+  subtitle = defaults.subtitle,
   className = '',
   maxItems,
   variant = 'default',
@@ -83,7 +40,6 @@ export default function ResourceSection({
   const pathname = usePathname()
 
   // Filter out the current page and its sub-pages from the resources list
-  // e.g., hide Blog resource when on /blog/category/moving-tips
   const filteredResources = resources.filter(
     (resource) => resource.href !== pathname && !pathname.startsWith(resource.href + '/')
   )
@@ -109,7 +65,7 @@ export default function ResourceSection({
                 href={resource.href}
                 className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-xl hover:bg-orange-50 transition-colors"
               >
-                <span className="text-orange-500">{resource.icon}</span>
+                <span className="text-orange-500"><ResourceIcon name={resource.icon} /></span>
                 <span className="font-medium text-gray-800">{resource.title}</span>
               </Link>
             ))}
@@ -136,7 +92,7 @@ export default function ResourceSection({
                   className="group flex items-center gap-4 bg-white rounded-2xl p-5 hover:bg-orange-50 transition-colors"
                 >
                   <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-colors">
-                    {resource.icon}
+                    <ResourceIcon name={resource.icon} />
                   </div>
                   <div className="flex-1 min-w-0">
                     <h3 className="font-semibold text-gray-800 group-hover:text-orange-600 transition-colors">
@@ -170,7 +126,7 @@ export default function ResourceSection({
                 className="group flex items-center gap-4 bg-white rounded-2xl p-5 hover:bg-orange-50 transition-colors"
               >
                 <div className="flex-shrink-0 w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-colors">
-                  {resource.icon}
+                  <ResourceIcon name={resource.icon} />
                 </div>
                 <div className="flex-1 min-w-0">
                   <h3 className="font-semibold text-gray-800 group-hover:text-orange-600 transition-colors">

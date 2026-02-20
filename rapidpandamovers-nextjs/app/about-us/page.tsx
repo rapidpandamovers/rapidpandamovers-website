@@ -6,8 +6,8 @@ import LocationSection from '../components/LocationSection'
 import QuoteSection from '../components/QuoteSection'
 
 export const metadata = {
-  title: 'About Us - Miami Moving Company',
-  description: 'Learn about Rapid Panda Movers, a family-owned Miami moving company committed to excellence and serving our community since day one.',
+  title: content.about.meta.title,
+  description: content.about.meta.description,
 }
 
 export default function AboutPage() {

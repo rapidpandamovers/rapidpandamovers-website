@@ -3,6 +3,7 @@
 import { useState, FormEvent } from 'react'
 import { Phone, Mail, MapPin, Clock, Loader2, CheckCircle, ArrowRight } from 'lucide-react'
 import content from '@/data/content.json'
+import ui from '@/data/ui.json'
 
 interface ContactSectionProps {
   title?: string
@@ -56,24 +57,24 @@ export default function ContactSection({
   const contactInfo = [
     {
       icon: Phone,
-      title: 'Phone',
+      title: ui.contact.items.phone.title,
       value: content.site.phone,
       href: `tel:${content.site.phone.replace(/[^0-9]/g, '')}`,
-      description: 'Please call for immediate assistance'
+      description: ui.contact.items.phone.description
     },
     {
       icon: Mail,
-      title: 'Email',
+      title: ui.contact.items.email.title,
       value: content.site.email,
       href: `mailto:${content.site.email}`,
-      description: 'We reply within 24 hours'
+      description: ui.contact.items.email.description
     },
     {
       icon: MapPin,
-      title: 'Address',
+      title: ui.contact.items.address.title,
       value: content.site.address,
       href: `https://maps.google.com/?q=${encodeURIComponent(content.site.address)}`,
-      description: 'Miami, Florida'
+      description: ui.contact.items.address.description
     },
   ]
 
@@ -83,7 +84,7 @@ export default function ContactSection({
         <div className={`grid grid-cols-1 ${showForm ? 'md:grid-cols-2' : ''} gap-8`}>
           {/* Contact Info Side */}
           <div className="bg-orange-50 rounded-4xl p-8 flex flex-col">
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Contact Information</h3>
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">{ui.contact.infoTitle}</h3>
 
             <div className="space-y-6">
               {contactInfo.map((item, index) => {
@@ -114,7 +115,7 @@ export default function ContactSection({
             <div className="bg-orange-500 rounded-2xl p-6 mt-auto pt-6 text-white">
               <div className="flex items-center mb-4">
                 <Clock className="w-6 h-6 mr-3" />
-                <h4 className="text-lg font-semibold">Business Hours</h4>
+                <h4 className="text-lg font-semibold">{ui.contact.hoursTitle}</h4>
               </div>
               <div className="space-y-2 text-orange-100">
                 {content.site.hours.map((entry: { label: string; time: string }, i: number) => (
@@ -130,27 +131,27 @@ export default function ContactSection({
           {/* Contact Form Side */}
           {showForm && (
             <div className="bg-gray-50 rounded-4xl p-8 flex flex-col">
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Send Us a Message</h3>
+              <h3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">{ui.forms.contact.title}</h3>
 
               {submitStatus === 'success' ? (
                 <div className="text-center py-12">
                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="w-8 h-8 text-green-500" />
                   </div>
-                  <h4 className="text-xl font-bold text-gray-800 mb-2">Message Sent!</h4>
-                  <p className="text-gray-600 mb-6">We'll get back to you within 24 hours.</p>
+                  <h4 className="text-xl font-bold text-gray-800 mb-2">{ui.messages.contactSuccess.title}</h4>
+                  <p className="text-gray-600 mb-6">{ui.messages.contactSuccess.description}</p>
                   <button
                     onClick={() => setSubmitStatus('idle')}
                     className="text-orange-500 hover:text-orange-600 font-medium"
                   >
-                    Send another message
+                    {ui.buttons.sendAnother}
                   </button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5 flex-1 flex flex-col">
                   <div>
                     <label htmlFor="contact-name" className="block text-sm font-medium text-gray-700 mb-2">
-                      Full Name <span className="text-red-500">*</span>
+                      {ui.forms.contact.labels.name} <span className="text-red-500">{ui.forms.contact.required}</span>
                     </label>
                     <input
                       type="text"
@@ -158,14 +159,14 @@ export default function ContactSection({
                       name="name"
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
-                      placeholder="John Doe"
+                      placeholder={ui.forms.contact.placeholders.name}
                     />
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="contact-email" className="block text-sm font-medium text-gray-700 mb-2">
-                        Email <span className="text-red-500">*</span>
+                        {ui.forms.contact.labels.email} <span className="text-red-500">{ui.forms.contact.required}</span>
                       </label>
                       <input
                         type="email"
@@ -173,26 +174,26 @@ export default function ContactSection({
                         name="email"
                         required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
-                        placeholder="john@example.com"
+                        placeholder={ui.forms.contact.placeholders.email}
                       />
                     </div>
                     <div>
                       <label htmlFor="contact-phone" className="block text-sm font-medium text-gray-700 mb-2">
-                        Phone
+                        {ui.forms.contact.labels.phone}
                       </label>
                       <input
                         type="tel"
                         id="contact-phone"
                         name="phone"
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors"
-                        placeholder="(555) 123-4567"
+                        placeholder={ui.forms.contact.placeholders.phone}
                       />
                     </div>
                   </div>
 
                   <div className="flex-1 flex flex-col">
                     <label htmlFor="contact-message" className="block text-sm font-medium text-gray-700 mb-2">
-                      Message <span className="text-red-500">*</span>
+                      {ui.forms.contact.labels.message} <span className="text-red-500">{ui.forms.contact.required}</span>
                     </label>
                     <textarea
                       id="contact-message"
@@ -200,13 +201,13 @@ export default function ContactSection({
                       required
                       rows={5}
                       className="w-full flex-1 min-h-[120px] px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors resize-none"
-                      placeholder="Tell us about your moving needs..."
+                      placeholder={ui.forms.contact.placeholders.message}
                     />
                   </div>
 
                   {submitStatus === 'error' && (
                     <div className="bg-red-50 text-red-600 px-4 py-3 rounded-lg text-sm">
-                      Failed to send message. Please try again or call us directly.
+                      {ui.messages.contactError}
                     </div>
                   )}
 
@@ -218,10 +219,10 @@ export default function ContactSection({
                     {isSubmitting ? (
                       <>
                         <Loader2 className="w-5 h-5 mr-2 animate-spin" />
-                        Sending...
+                        {ui.buttons.sending}
                       </>
                     ) : (
-                      'Send Message'
+                      ui.buttons.sendMessage
                     )}
                   </button>
                 </form>

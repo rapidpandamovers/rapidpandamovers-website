@@ -1,5 +1,6 @@
 import { Star } from 'lucide-react'
 import content from '@/data/content.json'
+import ui from '@/data/ui.json'
 
 interface PlatformRating {
   name: string
@@ -63,7 +64,7 @@ const defaultRatings: PlatformRating[] = [
 ]
 
 export default function RatingSection({
-  title = 'Excellent Ratings Across All Platforms',
+  title = ui.ratings.defaultTitle,
   ratings = defaultRatings,
   className = ''
 }: RatingSectionProps) {

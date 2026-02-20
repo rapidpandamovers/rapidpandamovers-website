@@ -4,6 +4,12 @@ import QuoteSection from '@/app/components/QuoteSection'
 import OverviewSection from '@/app/components/OverviewSection'
 import LocationSection from '@/app/components/LocationSection'
 import WhySection from '@/app/components/WhySection'
+import contentData from '@/data/content.json'
+
+export const metadata = {
+  title: contentData.locations.meta.title,
+  description: contentData.locations.meta.description,
+}
 
 export default function LocationsPage() {
   const content = allContent

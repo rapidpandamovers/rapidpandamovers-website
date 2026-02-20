@@ -5,6 +5,11 @@ import ResourceSection from '../components/ResourceSection';
 import content from '../../data/content.json';
 import NewsletterSection from '../components/NewsletterSection';
 
+export const metadata = {
+  title: content.tips.meta.title,
+  description: content.tips.meta.description,
+}
+
 export default function MovingTipsPage() {
   const tipsData = content.tips;
 

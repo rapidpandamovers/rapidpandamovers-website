@@ -1,4 +1,7 @@
 import { AlertCircle } from 'lucide-react'
+import content from '@/data/content.json'
+
+const defaults = content.defaults.problems
 
 interface Problem {
   title: string
@@ -11,29 +14,10 @@ interface ProblemSectionProps {
   subtitle?: string
 }
 
-const defaultProblems: Problem[] = [
-  {
-    title: 'Stressful Planning',
-    description: 'Coordinating logistics, timing, and packing can be overwhelming and time-consuming.'
-  },
-  {
-    title: 'Risk of Damage',
-    description: 'DIY moves often result in damaged furniture, broken items, and costly repairs.'
-  },
-  {
-    title: 'Hidden Costs',
-    description: 'Many movers add surprise fees after the job starts, blowing your budget.'
-  },
-  {
-    title: 'Unreliable Service',
-    description: 'No-shows, late arrivals, and unprofessional crews cause unnecessary headaches.'
-  }
-]
-
 export default function ProblemSection({
-  problems = defaultProblems,
-  title = 'Common Moving Challenges',
-  subtitle = "Moving doesn't have to be stressful. Here are the problems we solve for you."
+  problems = defaults.items,
+  title = defaults.title,
+  subtitle = defaults.subtitle
 }: ProblemSectionProps) {
   if (!problems || problems.length === 0) return null
 

@@ -4,6 +4,8 @@ import { useState, useRef } from 'react'
 import Link from 'next/link'
 import { CheckCircle, Clock, AlertCircle, Info, Printer, ClipboardList, ArrowRight, Calendar, Download } from 'lucide-react'
 import content from '@/data/content.json'
+import ui from '@/data/ui.json'
+import { resolveIcon } from '@/lib/icons'
 
 const phone = content.site.phone
 const phoneFormatted = `(${phone.slice(0,3)}) ${phone.slice(4,7)}-${phone.slice(8)}`
@@ -225,21 +227,21 @@ export default function ChecklistSection({
         return (
           <span className={`${baseClass} ${forPrint ? 'priority-high' : 'bg-red-100 text-red-700'}`}>
             {!forPrint && <AlertCircle className="w-3 h-3 mr-1" />}
-            High
+            {ui.checklist.priority.high}
           </span>
         )
       case 'medium':
         return (
           <span className={`${baseClass} ${forPrint ? 'priority-medium' : 'bg-yellow-100 text-yellow-700'}`}>
             {!forPrint && <Clock className="w-3 h-3 mr-1" />}
-            Medium
+            {ui.checklist.priority.medium}
           </span>
         )
       case 'low':
         return (
           <span className={`${baseClass} ${forPrint ? 'priority-low' : 'bg-orange-100 text-orange-700'}`}>
             {!forPrint && <Info className="w-3 h-3 mr-1" />}
-            Low
+            {ui.checklist.priority.low}
           </span>
         )
       default:
@@ -249,21 +251,21 @@ export default function ChecklistSection({
 
   // Preview variant - shows a simple preview with link to full checklist
   if (variant === 'preview') {
-    const features = [
-      { icon: Calendar, title: '8 Timeline Phases', desc: 'From 8 weeks out to moving day' },
-      { icon: CheckCircle, title: '50+ Tasks', desc: 'Comprehensive coverage' },
-      { icon: ClipboardList, title: 'Priority Levels', desc: 'Know what to do first' },
-    ]
+    const features = ui.checklist.features.map(f => ({
+      icon: resolveIcon(f.icon),
+      title: f.title,
+      desc: f.desc,
+    }))
 
     return (
       <section className={`py-16 ${className}`}>
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              Moving Checklist
+              {ui.checklist.previewTitle}
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Stay organized with our comprehensive moving checklist. Never forget a task with our timeline-based approach.
+              {ui.checklist.previewSubtitle}
             </p>
           </div>
 
@@ -290,7 +292,7 @@ export default function ChecklistSection({
                 href="/moving-checklist"
                 className="inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-lg transition-colors"
               >
-                View Full Checklist
+                {ui.buttons.viewFullChecklist}
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
@@ -312,26 +314,26 @@ export default function ChecklistSection({
           <div className="hidden print:block pdf-header mb-6 pb-4 border-b-2 border-gray-300">
           <div className="flex justify-between items-start">
             <div>
-              <h1 className="text-2xl font-bold text-gray-900">Rapid Panda Movers</h1>
-              <p className="text-sm text-gray-600">Moving Checklist</p>
+              <h1 className="text-2xl font-bold text-gray-900">{ui.checklist.printHeader.company}</h1>
+              <p className="text-sm text-gray-600">{ui.checklist.printHeader.title}</p>
             </div>
             <div className="text-right text-sm text-gray-600">
-              <p>Name: ____________________</p>
-              <p className="mt-1">Moving Date: ____________________</p>
+              <p>{ui.checklist.printLabels.name} ____________________</p>
+              <p className="mt-1">{ui.checklist.printLabels.movingDate} ____________________</p>
             </div>
           </div>
           <div className="mt-4 flex gap-6 text-xs">
             <span className="flex items-center">
               <span className="inline-block w-3 h-3 bg-red-200 border border-red-400 rounded mr-1"></span>
-              High Priority
+              {ui.checklist.priorityLabels.high}
             </span>
             <span className="flex items-center">
               <span className="inline-block w-3 h-3 bg-yellow-200 border border-yellow-400 rounded mr-1"></span>
-              Medium Priority
+              {ui.checklist.priorityLabels.medium}
             </span>
             <span className="flex items-center">
               <span className="inline-block w-3 h-3 bg-orange-200 border border-orange-400 rounded mr-1"></span>
-              Low Priority
+              {ui.checklist.priorityLabels.low}
             </span>
           </div>
         </div>
@@ -343,8 +345,8 @@ export default function ChecklistSection({
           <div className="bg-gray-50 rounded-4xl p-8 md:p-10">
             {/* Progress */}
             <div className="flex items-baseline justify-between mb-3">
-              <span className="text-3xl font-bold text-gray-800">Progress: {totalProgress.percentage}%</span>
-              <span className="text-sm text-gray-500 font-medium">{totalProgress.completed} of {totalProgress.total} tasks</span>
+              <span className="text-3xl font-bold text-gray-800">{ui.checklist.progress} {totalProgress.percentage}%</span>
+              <span className="text-sm text-gray-500 font-medium">{totalProgress.completed} {ui.checklist.of} {totalProgress.total} {ui.checklist.tasks}</span>
             </div>
             <div className="h-4 bg-white rounded-full overflow-hidden mb-6">
               <div
@@ -362,14 +364,14 @@ export default function ChecklistSection({
                   className="inline-flex items-center px-5 py-2.5 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <Download className="w-5 h-5 mr-2" />
-                  {isGenerating ? 'Generating...' : 'Download PDF'}
+                  {isGenerating ? ui.buttons.generating : ui.buttons.downloadPdf}
                 </button>
                 <button
                   onClick={handlePrint}
                   className="inline-flex items-center px-5 py-2.5 border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-semibold rounded-lg transition-colors"
                 >
                   <Printer className="w-5 h-5 mr-2" />
-                  Print
+                  {ui.buttons.print}
                 </button>
               </div>
             )}
@@ -378,15 +380,15 @@ export default function ChecklistSection({
             <div className="flex flex-wrap justify-center gap-3 pt-6 border-t border-gray-200">
               <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-100 text-red-700">
                 <AlertCircle className="w-3 h-3 mr-1" />
-                High - Do first
+                {ui.checklist.priority.highLabel}
               </span>
               <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-yellow-100 text-yellow-700">
                 <Clock className="w-3 h-3 mr-1" />
-                Medium
+                {ui.checklist.priority.medium}
               </span>
               <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-orange-100 text-orange-700">
                 <Info className="w-3 h-3 mr-1" />
-                Low - Can wait
+                {ui.checklist.priority.lowLabel}
               </span>
             </div>
           </div>
@@ -420,7 +422,7 @@ export default function ChecklistSection({
                     {/* Category Progress - Screen only */}
                     <div className="mt-4 no-print">
                       <div className="flex items-center justify-between text-xs text-gray-500 mb-1">
-                        <span>{progress.completed} of {progress.total} complete</span>
+                        <span>{progress.completed} {ui.checklist.of} {progress.total} {ui.checklist.complete}</span>
                         <span className="font-medium text-orange-600">{progress.percentage}%</span>
                       </div>
                       <div className="h-1.5 bg-gray-200 rounded-full overflow-hidden">
@@ -494,7 +496,7 @@ export default function ChecklistSection({
           {/* Print Footer */}
           <div className="hidden print:block pdf-footer mt-6 pt-4 border-t border-gray-300 text-center text-xs text-gray-500">
             <p>Rapid Panda Movers • {phoneFormatted} • www.rapidpandamovers.com</p>
-            <p className="mt-1">Need help with your move? Call us for a free quote!</p>
+            <p className="mt-1">{ui.checklist.printFooter}</p>
           </div>
         </div>
       </div>

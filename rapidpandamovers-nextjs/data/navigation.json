@@ -1,0 +1,87 @@
+{
+  "header": {
+    "home": { "label": "Home" },
+    "services": {
+      "label": "Services",
+      "allLink": { "label": "All Services", "description": "Complete service overview" }
+    },
+    "locations": {
+      "label": "Locations",
+      "allLink": { "label": "All Locations", "description": "Complete location overview" }
+    },
+    "compare": {
+      "label": "Compare",
+      "items": [
+        { "label": "Compare Movers", "description": "See how we stack up", "href": "/compare" },
+        { "label": "Alternative Options", "description": "DIY vs full-service", "href": "/alternatives" }
+      ],
+      "bottomLink": { "label": "Why Choose Us", "description": "The Rapid Panda difference", "href": "/why-choose-us" }
+    },
+    "resources": {
+      "label": "Resources",
+      "items": [
+        { "label": "FAQ", "description": "Common questions", "href": "/faq" },
+        { "label": "Moving Rates", "description": "Pricing information", "href": "/moving-rates" },
+        { "label": "Moving Routes", "description": "Popular moving routes", "href": "/moving-routes" },
+        { "label": "Moving Tips", "description": "Expert advice", "href": "/moving-tips" },
+        { "label": "Moving Checklist", "description": "Essential tasks", "href": "/moving-checklist" },
+        { "label": "Moving Glossary", "description": "Common moving terms", "href": "/moving-glossary" }
+      ],
+      "bottomLink": { "label": "Blog", "description": "Moving tips and news", "href": "/blog" }
+    },
+    "company": {
+      "label": "Company",
+      "items": [
+        { "label": "About Us", "description": "About Rapid Panda Movers", "href": "/about-us" },
+        { "label": "Contact Us", "description": "Get in touch", "href": "/contact-us" },
+        { "label": "Reviews", "description": "Real testimonials", "href": "/reviews" },
+        { "label": "Reservations", "description": "Book your move", "href": "/reservations" }
+      ],
+      "bottomLink": { "label": "Free Quote", "description": "Get a free estimate", "href": "/quote" }
+    },
+    "cta": { "quoteButton": "Get Free Quote" }
+  },
+  "footer": {
+    "sections": {
+      "services": { "title": "Moving Services" },
+      "locations": { "title": "Moving Locations", "suffix": "Movers" },
+      "resources": {
+        "title": "Resources",
+        "items": [
+          { "label": "FAQ", "href": "/faq" },
+          { "label": "Blog", "href": "/blog" },
+          { "label": "Moving Rates", "href": "/moving-rates" },
+          { "label": "Moving Routes", "href": "/moving-routes" },
+          { "label": "Moving Tips", "href": "/moving-tips" },
+          { "label": "Moving Checklist", "href": "/moving-checklist" },
+          { "label": "Moving Glossary", "href": "/moving-glossary" }
+        ]
+      },
+      "company": {
+        "title": "Company",
+        "items": [
+          { "label": "About Us", "href": "/about-us" },
+          { "label": "Contact Us", "href": "/contact-us" },
+          { "label": "Reviews", "href": "/reviews" },
+          { "label": "Reservations", "href": "/reservations" },
+          { "label": "Free Quote", "href": "/quote" }
+        ]
+      },
+      "compare": { "title": "Compare Movers", "allLabel": "All Comparisons", "prefix": "vs" },
+      "alternatives": { "title": "Alternatives", "allLabel": "All Alternatives" }
+    },
+    "copyright": "\u00a9 {year} Rapid Panda Movers. All rights reserved.",
+    "legalLinks": [
+      { "label": "Privacy Policy", "href": "/privacy" },
+      { "label": "Terms & Conditions", "href": "/terms" }
+    ],
+    "social": [
+      { "platform": "facebook", "url": "https://www.facebook.com/raapidpandamovers/", "label": "Facebook" },
+      { "platform": "x", "url": "#", "label": "X" },
+      { "platform": "instagram", "url": "https://www.instagram.com/rapidpandamovers/", "label": "Instagram" },
+      { "platform": "linkedin", "url": "#", "label": "LinkedIn" },
+      { "platform": "tiktok", "url": "#", "label": "TikTok" },
+      { "platform": "youtube", "url": "#", "label": "YouTube" }
+    ]
+  }
+}

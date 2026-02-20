@@ -1,6 +1,7 @@
 import { MapPin, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { getAllActiveCities } from '@/lib/data'
+import ui from '@/data/ui.json'
 
 interface Neighborhood {
   name: string;
@@ -40,10 +41,10 @@ export default function LocationSection({ city, title, description, variant = 'd
           {!hideHeader && (
             <div className="text-center mb-10">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
-                Neighborhoods We Serve in {city.name}
+                {ui.location.neighborhoodsTitle.replace('{city}', city.name)}
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                We provide moving services throughout all neighborhoods in {city.name}
+                {ui.location.neighborhoodsSubtitle.replace('{city}', city.name)}
               </p>
             </div>
           )}
@@ -86,10 +87,10 @@ export default function LocationSection({ city, title, description, variant = 'd
           {!hideHeader && (
             <div className="text-center mb-10">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
-                {title || 'Locations We Serve'}
+                {title || ui.location.defaultTitle}
               </h2>
               <p className="text-lg text-gray-600">
-                {description || `Serving ${cities.length}+ cities and neighborhoods across Miami-Dade County`}
+                {description || ui.location.defaultSubtitle.replace('{count}', String(cities.length))}
               </p>
             </div>
           )}
@@ -114,7 +115,7 @@ export default function LocationSection({ city, title, description, variant = 'd
               href="/locations"
               className="block bg-orange-50 rounded-2xl py-6 mt-4 text-center text-orange-600 hover:bg-orange-100 font-semibold text-lg transition-colors"
             >
-              Proudly serving every corner of Miami-Dade County &amp; more!
+              {ui.location.moreAreas}
             </Link>
           )}
         </div>
@@ -136,7 +137,7 @@ export default function LocationSection({ city, title, description, variant = 'd
             <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
-                  {title || 'Locations We Serve'}
+                  {title || ui.location.defaultTitle}
                 </h2>
                 {description && (
                   <p className="text-lg text-gray-600">
@@ -148,7 +149,7 @@ export default function LocationSection({ city, title, description, variant = 'd
                 href="/locations"
                 className="inline-flex items-center text-orange-500 hover:text-orange-600 font-semibold mt-4 md:mt-0"
               >
-                View All Locations
+                {ui.location.viewAll}
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
@@ -174,7 +175,7 @@ export default function LocationSection({ city, title, description, variant = 'd
               href="/locations"
               className="block bg-orange-50 rounded-2xl py-6 mt-4 text-center text-orange-600 hover:bg-orange-100 font-semibold text-lg transition-colors"
             >
-              Proudly serving every corner of Miami-Dade County &amp; more!
+              {ui.location.moreAreas}
             </Link>
           )}
         </div>
@@ -191,10 +192,10 @@ export default function LocationSection({ city, title, description, variant = 'd
         {!hideHeader && (
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
-              {title || 'Locations We Serve'}
+              {title || ui.location.defaultTitle}
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              {description || `Serving ${cities.length}+ cities and neighborhoods across Miami-Dade County`}
+              {description || ui.location.defaultSubtitle.replace('{count}', String(cities.length))}
             </p>
           </div>
         )}
