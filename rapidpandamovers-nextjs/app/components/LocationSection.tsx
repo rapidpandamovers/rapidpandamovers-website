@@ -19,8 +19,8 @@ interface LocationSectionProps {
   // Optional title and description overrides for default (cities) view
   title?: string;
   description?: string;
-  // Variant: 'default' shows all cities, 'compact' shows top 12 by population
-  variant?: 'default' | 'compact';
+  // Variant: 'default' shows all cities, 'compact' shows top 12 by population, 'left' is compact with left-aligned header and optional subtitle
+  variant?: 'default' | 'compact' | 'left';
   // Hide the section header entirely
   hideHeader?: boolean;
 }
@@ -84,14 +84,65 @@ export default function LocationSection({ city, title, description, variant = 'd
       <section className="pt-20">
         <div className="container mx-auto">
           {!hideHeader && (
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+                {title || 'Locations We Serve'}
+              </h2>
+              <p className="text-lg text-gray-600">
+                {description || `Serving ${cities.length}+ cities and neighborhoods across Miami-Dade County`}
+              </p>
+            </div>
+          )}
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {topCities.map((city) => (
+              <Link
+                key={city.slug}
+                href={`/${city.slug}-movers`}
+                className="bg-gray-50 rounded-2xl p-5 flex items-center gap-3 hover:bg-orange-50 transition-colors group"
+              >
+                <MapPin className="w-5 h-5 text-orange-500 flex-shrink-0" />
+                <span className="font-medium text-gray-800 group-hover:text-orange-500 transition-colors">
+                  {city.name}
+                </span>
+              </Link>
+            ))}
+          </div>
+
+          {remainingCount > 0 && (
+            <Link
+              href="/locations"
+              className="block bg-orange-50 rounded-2xl py-6 mt-4 text-center text-orange-600 hover:bg-orange-100 font-semibold text-lg transition-colors"
+            >
+              Proudly serving every corner of Miami-Dade County &amp; more!
+            </Link>
+          )}
+        </div>
+      </section>
+    )
+  }
+
+  // Left variant: same as compact but with left-aligned header and optional subtitle
+  if (variant === 'left') {
+    const topCities = [...cities]
+      .sort((a, b) => (b.population || 0) - (a.population || 0))
+      .slice(0, 12)
+    const remainingCount = cities.length - topCities.length
+
+    return (
+      <section className="pt-20">
+        <div className="container mx-auto">
+          {!hideHeader && (
             <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
                   {title || 'Locations We Serve'}
                 </h2>
-                <p className="text-lg text-gray-600">
-                  {description || `Serving ${cities.length}+ cities and neighborhoods across Miami-Dade County`}
-                </p>
+                {description && (
+                  <p className="text-lg text-gray-600">
+                    {description}
+                  </p>
+                )}
               </div>
               <Link
                 href="/locations"
@@ -119,14 +170,12 @@ export default function LocationSection({ city, title, description, variant = 'd
           </div>
 
           {remainingCount > 0 && (
-            <div className="text-center mt-8">
-              <Link
-                href="/locations"
-                className="text-gray-500 hover:text-orange-500 transition-colors"
-              >
-                + {remainingCount} more areas served
-              </Link>
-            </div>
+            <Link
+              href="/locations"
+              className="block bg-orange-50 rounded-2xl py-6 mt-4 text-center text-orange-600 hover:bg-orange-100 font-semibold text-lg transition-colors"
+            >
+              Proudly serving every corner of Miami-Dade County &amp; more!
+            </Link>
           )}
         </div>
       </section>

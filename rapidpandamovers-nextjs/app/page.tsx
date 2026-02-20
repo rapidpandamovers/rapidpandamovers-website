@@ -21,21 +21,32 @@ export default function Home() {
         image_url={content.home.hero.image_url}
       />
       <RatingSection />
-      <MediaSection showArrows={false} showDots={false} enableModal={false} description="" />
+      <MediaSection
+        showArrows={false}
+        showDots={false}
+        enableModal={false}
+        description=""
+        items={[
+          { type: 'video', src: '/videos/1.mp4' },
+          { type: 'video', src: '/videos/2.mp4' },
+          { type: 'video', src: '/videos/3.mp4' },
+          { type: 'video', src: '/videos/4.mp4' },
+        ]}
+      />
       {/* Reviews Section */}
       <ReviewSection
         variant="left"
         title="What Our Customers Say"
-        subtitle="Verified reviews from real customers"
+        showPagination={false}
+        showPlatformFilter={false}
+        limit={3}
       />
-      <ServiceSection variant="left" subtitle="Professional moving services tailored to your needs" />
-      <LocationSection variant="compact" />
-      <WhySection variant="left" subtitle="Trusted by thousands of Miami families" />
-      <AboutSection />
+      <ServiceSection variant="left" />
+      <LocationSection variant="left" />
+      <FAQSection variant="compact" />
       <BlogSection
         variant="left"
         title="Moving Tips & Insights"
-        subtitle="Expert advice and practical tips for your move"
         showFeatured={false}
         showCategories={false}
         showExcerpts={false}
@@ -45,7 +56,8 @@ export default function Home() {
         viewMoreLink="/blog"
         maxPosts={3}
       />
-      <FAQSection variant="compact" />
+      <WhySection variant="left" />
+      <AboutSection />
       <QuoteSection />
     </>
   )

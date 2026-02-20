@@ -50,7 +50,7 @@ export default function ServiceSection({ location, variant = 'preview', hideHead
           {!hideHeader && (
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                {title || <>Our Moving <span className="text-orange-500">Services</span></>}
+                {title || <>Our Moving Services</>}
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 {subtitle || 'Professional moving services tailored to meet your specific needs, timeline, and budget.'}
@@ -114,7 +114,7 @@ export default function ServiceSection({ location, variant = 'preview', hideHead
             <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
-                  {title || <>Our Moving <span className="text-orange-500">Services</span></>}
+                  {title || <>Our Moving Services</>}
                 </h2>
                 {subtitle && (
                   <p className="text-lg text-gray-600">
@@ -174,7 +174,7 @@ export default function ServiceSection({ location, variant = 'preview', hideHead
           {!hideHeader && (
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                {title || <>{defaultTitle} <span className="text-orange-500">Services</span> in {location.name}</>}
+                {title || <>{defaultTitle} Services in {location.name}</>}
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 {subtitle || defaultSubtitle}
@@ -224,7 +224,7 @@ export default function ServiceSection({ location, variant = 'preview', hideHead
         {!hideHeader && (
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              {title || <>Our Moving <span className="text-orange-500">Services</span></>}
+              {title || <>Our Moving Services</>}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               {subtitle || 'Professional moving services tailored to meet your specific needs, timeline, and budget.'}

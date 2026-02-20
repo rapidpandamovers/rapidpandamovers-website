@@ -36,7 +36,7 @@ export default function ServicesPage() {
       <ServicesContent />
 
       {/* Why Choose Us */}
-      <WhySection />
+      <WhySection variant='left'/>
 
       {/* CTA Section */}
       <QuoteSection

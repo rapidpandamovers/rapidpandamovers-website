@@ -43,8 +43,8 @@ export default function ServiceIllustration({ service, className = "w-24 h-24" }
     'long-distance-moving': (
       <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
         {/* Road */}
-        <path d="M0 75 Q50 60 100 75" stroke="#1f2937" strokeWidth="20" />
-        <path d="M10 75 Q50 62 90 75" stroke="white" strokeWidth="2" strokeDasharray="8 6" />
+        <path d="M10 75 Q50 60 90 75" stroke="#1f2937" strokeWidth="20" />
+        <path d="M15 73 Q50 61 90 74" stroke="white" strokeWidth="2" strokeDasharray="8 6" />
         {/* Truck */}
         <rect x="35" y="40" width="35" height="22" rx="2" fill="#f97316" />
         <rect x="55" y="45" width="18" height="17" rx="2" fill="#ea580c" />

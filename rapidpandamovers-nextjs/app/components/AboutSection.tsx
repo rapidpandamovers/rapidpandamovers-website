@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { CheckCircle } from 'lucide-react'
+import { ImageCollage } from './ImageCollage'
 
 interface AboutSectionProps {
   className?: string
@@ -99,18 +100,17 @@ export default function AboutSection({ className = "", variant = "default", show
               </Link>
             </div>
 
-            <div className="flex justify-center">
-              <Image
-                src="https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
-                alt="About Us - Rapid Panda Movers"
-                width={500}
-                height={400}
-                className=""
-              />
+            <div className="flex justify-center relative">
+                <ImageCollage
+                  slot1Src="/images/hero/1.jpg"
+                  slot2Src="/images/hero/2.jpg"
+                  slot3Src="/images/hero/3.jpg"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+
     </section>
   )
 }

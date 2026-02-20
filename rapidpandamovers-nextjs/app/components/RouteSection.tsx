@@ -152,8 +152,7 @@ export default function RouteSection({
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </div>
-          <div className="bg-gray-50 rounded-4xl p-8">
-            <div className={`grid ${gridCols} gap-6`}>
+          <div className={`grid ${gridCols} gap-6`}>
               {relevantRoutes.slice(0, maxItems).map((route, index) => {
                 const hours = Math.floor(route.drive_time_min / 60);
                 const mins = route.drive_time_min % 60;
@@ -163,7 +162,7 @@ export default function RouteSection({
                   <Link
                     key={index}
                     href={`/${route.slug}-movers`}
-                    className="bg-white rounded-2xl p-6 hover:bg-orange-50 transition-colors group"
+                    className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-orange-500 transition-colors group"
                   >
                     <div className="flex items-center justify-between mb-4">
                       <Navigation className="w-6 h-6 text-orange-500" />
@@ -186,7 +185,6 @@ export default function RouteSection({
                   </Link>
                 );
               })}
-            </div>
           </div>
         </div>
       </section>
@@ -206,8 +204,7 @@ export default function RouteSection({
             </p>
           )}
         </div>
-        <div className="bg-gray-50 rounded-4xl p-8">
-          <div className={`grid ${gridCols} gap-6`}>
+        <div className={`grid ${gridCols} gap-6`}>
             {displayedRoutes.map((route, index) => {
               const hours = Math.floor(route.drive_time_min / 60);
               const mins = route.drive_time_min % 60;
@@ -217,7 +214,7 @@ export default function RouteSection({
                 <Link
                   key={index}
                   href={`/${route.slug}-movers`}
-                  className="bg-white rounded-2xl p-6 hover:bg-orange-50 transition-colors group"
+                  className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-orange-500 transition-colors group"
                 >
                   <div className="flex items-center justify-between mb-4">
                     <Navigation className="w-6 h-6 text-orange-500" />
@@ -240,7 +237,6 @@ export default function RouteSection({
                 </Link>
               );
             })}
-          </div>
         </div>
         {hasMore && (
           <div className="text-center mt-8">

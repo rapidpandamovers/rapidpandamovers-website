@@ -106,7 +106,7 @@ export default function ReviewsListPage({ currentPage, platform }: ReviewsListPa
       />
 
       {/* Reviews Section */}
-      <section className="py-16 md:py-20">
+      <section className="pt-20">
         <div className="container mx-auto">
 
           {/* Platform Filter */}

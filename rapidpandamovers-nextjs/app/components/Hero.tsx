@@ -5,6 +5,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import reviewsData from '@/data/reviews.json'
+import { ImageCollage } from './ImageCollage'
 
 interface HeroProps {
   title?: string
@@ -36,13 +37,10 @@ export default function Hero({
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left side - Image */}
           <div className="relative aspect-[4/3]">
-            <Image
-              src={displayImage}
-              alt="Professional movers with moving boxes"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-contain rounded-lg"
-              priority
+            <ImageCollage
+              slot1Src="/images/hero/1.jpg"
+              slot2Src="/images/hero/2.jpg"
+              slot3Src="/images/hero/3.jpg"
             />
           </div>
           

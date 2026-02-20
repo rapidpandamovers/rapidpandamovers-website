@@ -140,7 +140,7 @@ export default function RoutesContent({ currentPage, fromLocation }: RoutesConte
     <>
       {/* Filter indicator */}
       {fromLocation && (
-        <div className="py-6">
+        <div className="pt-20">
           <div className="container mx-auto">
             <div className="bg-orange-50 rounded-2xl p-4 flex items-center justify-center gap-2 text-orange-700">
               <MapPin className="w-5 h-5" />
@@ -160,33 +160,33 @@ export default function RoutesContent({ currentPage, fromLocation }: RoutesConte
       {!fromLocation && (
         <div className="pt-20">
           <div className="container mx-auto">
-            <div className="flex justify-center gap-3">
+            <div className="flex justify-center gap-2 md:gap-3">
               <Link
                 href="/moving-routes"
-                className={`px-6 py-2 rounded-full font-medium transition-colors ${
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   !routeType
                     ? 'bg-orange-500 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-orange-50 hover:text-orange-500'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
                 All Routes
               </Link>
               <Link
                 href="/moving-routes?type=long-distance"
-                className={`px-6 py-2 rounded-full font-medium transition-colors ${
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   routeType === 'long-distance'
                     ? 'bg-orange-500 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-orange-50 hover:text-orange-500'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
                 Long Distance
               </Link>
               <Link
                 href="/moving-routes?type=local"
-                className={`px-6 py-2 rounded-full font-medium transition-colors ${
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   routeType === 'local'
                     ? 'bg-orange-500 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-orange-50 hover:text-orange-500'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
                 Local
@@ -198,10 +198,9 @@ export default function RoutesContent({ currentPage, fromLocation }: RoutesConte
 
       {/* Routes Grid */}
       {paginatedRoutes.length > 0 && (
-        <section className="pt-20">
+        <section className="pt-10">
           <div className="container mx-auto">
-            <div className="bg-gray-50 rounded-4xl p-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {paginatedRoutes.map((route, index) => {
                   const hours = Math.floor(route.drive_time_min / 60);
                   const mins = route.drive_time_min % 60;
@@ -211,7 +210,7 @@ export default function RoutesContent({ currentPage, fromLocation }: RoutesConte
                     <Link
                       key={index}
                       href={`/${route.slug}-movers`}
-                      className="bg-white rounded-2xl p-6 hover:bg-orange-50 transition-colors group"
+                      className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-orange-500 transition-colors group"
                     >
                       <div className="flex items-center justify-between mb-4">
                         <Navigation className="w-6 h-6 text-orange-500" />
@@ -234,7 +233,6 @@ export default function RoutesContent({ currentPage, fromLocation }: RoutesConte
                     </Link>
                   );
                 })}
-              </div>
             </div>
 
             {/* Pagination */}

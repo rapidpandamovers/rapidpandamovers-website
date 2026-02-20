@@ -3,6 +3,7 @@ import GlossarySection from '../components/GlossarySection';
 import ResourceSection from '../components/ResourceSection';
 import QuoteSection from '../components/QuoteSection';
 import content from '../../data/content.json';
+import NewsletterSection from '../components/NewsletterSection';
 
 export const metadata = {
   title: content.glossary.title,
@@ -29,6 +30,8 @@ export default function MovingGlossaryPage() {
         subtitle="Explore our comprehensive guides and services for a successful move"
         variant="grid"
       />
+
+      <NewsletterSection />
 
       <QuoteSection
         title="Need Help With Your Move?"

@@ -110,37 +110,28 @@ export default function LocationPage({ city }: LocationPageProps) {
       <OverviewSection
         title={<>Professional Moving Services in <span className="text-orange-500">{city.name}</span></>}
       >
-        {isNeighborhood ? (
-          <p className="text-lg text-gray-700 font-medium mb-4">
-            Serving {city.name} and the greater {city.parentCity!.name} area
-          </p>
-        ) : (
-          <p className="text-gray-600 leading-relaxed mb-4">
-            Rapid Panda Movers provides comprehensive moving services throughout {city.name} and the surrounding areas. Whether you&apos;re moving locally or long-distance, we&apos;re here to make your move stress-free and efficient.
-          </p>
-        )}
 
         {effectiveDescription && (
           <p className="text-gray-600 leading-relaxed mb-4">{effectiveDescription}</p>
         )}
 
+        {/* Map Section */}
+        <MapSection
+          location={{
+            name: city.name,
+            city: isNeighborhood ? city.parentCity!.name : city.name,
+            state: 'FL',
+            zip: effectiveZipCodes?.[0],
+          }}
+          embedded
+        />
+
         {infoText && (
-          <div className="mt-4 pt-4 border-t border-gray-200">
+          <div className="mt-4 pb-4">
             <p className="text-sm text-gray-500 font-medium">{infoText}</p>
           </div>
         )}
       </OverviewSection>
-
-      {/* Map Section */}
-      <MapSection
-        location={{
-          name: city.name,
-          city: isNeighborhood ? city.parentCity!.name : city.name,
-          state: 'FL',
-          zip: effectiveZipCodes?.[0],
-        }}
-        title={`${city.name} Service Area`}
-      />
 
       {/* Neighborhoods Section - Only for Cities with multiple neighborhoods */}
       {showNeighborhoods && <LocationSection city={city} />}
@@ -173,8 +164,8 @@ export default function LocationPage({ city }: LocationPageProps) {
       {/* Why Choose Us */}
       <WhySection variant="left" />
 
-      {/* About Us - Only for Cities */}
-      {!isNeighborhood && <AboutSection />}
+      {/* About Us */}
+      <AboutSection />
 
       {/* CTA Section */}
       <QuoteSection />

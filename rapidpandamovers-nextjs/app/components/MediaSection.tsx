@@ -1,15 +1,21 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, useCallback } from 'react'
 import Image from 'next/image'
-import { Play, X, ChevronLeft, ChevronRight } from 'lucide-react'
+import { Play, Pause, X, ChevronLeft, ChevronRight } from 'lucide-react'
 
 interface MediaItem {
   type: 'image' | 'video'
-  src: string // Image URL or YouTube video ID
+  src: string // Image URL, local video path, or YouTube video ID
   thumbnail?: string // Optional thumbnail for videos
   title?: string
   description?: string
+}
+
+function isLocalVideo(src: string) {
+  return src.startsWith('/') || src.startsWith('./') || src.startsWith('http')
+    ? /\.(mp4|webm|ogg|mov)(\?|$)/i.test(src)
+    : false
 }
 
 interface MediaSectionProps {
@@ -22,6 +28,7 @@ interface MediaSectionProps {
   autoScroll?: boolean
   autoScrollInterval?: number // in milliseconds
   enableModal?: boolean // When false, videos play inline and images do nothing
+  variant?: 'default' | 'left'
 }
 
 const defaultItems: MediaItem[] = [
@@ -60,7 +67,8 @@ export default function MediaSection({
   showDots = true,
   autoScroll = false,
   autoScrollInterval = 4000,
-  enableModal = true
+  enableModal = true,
+  variant = 'default'
 }: MediaSectionProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
   const [playingVideoIndex, setPlayingVideoIndex] = useState<number | null>(null)
@@ -114,11 +122,40 @@ export default function MediaSection({
     }
   }
 
+  // Refs for local video elements
+  const videoRefs = useRef<Map<number, HTMLVideoElement>>(new Map())
+
+  const setVideoRef = useCallback((index: number, el: HTMLVideoElement | null) => {
+    if (el) {
+      videoRefs.current.set(index, el)
+    } else {
+      videoRefs.current.delete(index)
+    }
+  }, [])
+
   const handleCardClick = (index: number, item: MediaItem) => {
     if (enableModal) {
       openModal(index)
     } else if (item.type === 'video') {
-      setPlayingVideoIndex(playingVideoIndex === index ? null : index)
+      if (isLocalVideo(item.src)) {
+        const video = videoRefs.current.get(index)
+        if (video) {
+          if (playingVideoIndex === index) {
+            video.pause()
+            setPlayingVideoIndex(null)
+          } else {
+            // Pause any other playing video
+            if (playingVideoIndex !== null) {
+              const prev = videoRefs.current.get(playingVideoIndex)
+              prev?.pause()
+            }
+            video.play()
+            setPlayingVideoIndex(index)
+          }
+        }
+      } else {
+        setPlayingVideoIndex(playingVideoIndex === index ? null : index)
+      }
     }
     // Images do nothing when modal is disabled
   }
@@ -132,7 +169,22 @@ export default function MediaSection({
       <section className={`pt-20 px-4 md:px-6 lg:px-8 ${className}`}>
         <div className="container mx-auto">
           {/* Header */}
-          {(title || description) && (
+          {(title || description) && variant === 'left' ? (
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10">
+              <div>
+                {title && (
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+                    {title}
+                  </h2>
+                )}
+                {description && (
+                  <p className="text-lg text-gray-600">
+                    {description}
+                  </p>
+                )}
+              </div>
+            </div>
+          ) : (title || description) && (
             <div className="text-center mb-10">
               {title && (
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -186,9 +238,34 @@ export default function MediaSection({
                   className={`group ${isStaticMode ? 'flex-1' : 'flex-shrink-0'} ${showArrows || showDots || autoScroll ? 'snap-start p-1' : ''} ${enableModal || item.type === 'video' ? 'cursor-pointer' : 'cursor-default'}`}
                 >
                   {/* Story Card */}
-                  <div className={`relative rounded-xl overflow-hidden bg-black outline outline-2 outline-transparent group-hover:outline-orange-500 transition-all ${isStaticMode ? 'w-full h-[500px]' : 'w-64 h-96 md:w-[calc(25vw-32px)] md:max-w-[280px] md:h-[400px]'}`}>
-                    {/* Video Player (inline mode) */}
-                    {!enableModal && item.type === 'video' && playingVideoIndex === index ? (
+                  <div className={`relative rounded-4xl overflow-hidden bg-black outline outline-2 outline-transparent group-hover:outline-orange-500 transition-all ${isStaticMode ? 'w-full h-[500px]' : 'w-64 h-96 md:w-[calc(25vw-32px)] md:max-w-[280px] md:h-[400px]'}`}>
+                    {/* Local Video */}
+                    {item.type === 'video' && isLocalVideo(item.src) ? (
+                      <>
+                        <video
+                          ref={(el) => setVideoRef(index, el)}
+                          src={item.src}
+                          muted
+                          playsInline
+                          loop
+                          preload="metadata"
+                          className="absolute inset-0 w-full h-full object-cover"
+                          onEnded={() => setPlayingVideoIndex(null)}
+                        />
+
+                        {/* Play/Pause Button Overlay */}
+                        <div className={`absolute inset-0 flex items-center justify-center z-20 transition-opacity ${playingVideoIndex === index ? 'opacity-0 hover:opacity-100' : 'opacity-100'}`}>
+                          <div className="w-14 h-14 bg-black/40 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                            {playingVideoIndex === index ? (
+                              <Pause className="w-6 h-6 text-white" fill="currentColor" />
+                            ) : (
+                              <Play className="w-6 h-6 text-white ml-1" fill="currentColor" />
+                            )}
+                          </div>
+                        </div>
+                      </>
+                    ) : !enableModal && item.type === 'video' && playingVideoIndex === index ? (
+                      /* YouTube Video Player (inline mode) */
                       <iframe
                         src={`https://www.youtube.com/embed/${item.src}?autoplay=1`}
                         title={item.title || 'Video'}
@@ -209,24 +286,26 @@ export default function MediaSection({
                           className="object-cover group-hover:scale-105 transition-transform duration-300"
                         />
 
-                        {/* Play Button for Videos */}
+                        {/* Play Button for YouTube Videos */}
                         {item.type === 'video' && (
                           <div className="absolute inset-0 flex items-center justify-center z-20">
-                            <div className="w-14 h-14 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                              <Play className="w-6 h-6 text-orange-500 ml-1" fill="currentColor" />
+                            <div className="w-14 h-14 bg-black/40 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                              <Play className="w-6 h-6 text-white ml-1" fill="currentColor" />
                             </div>
                           </div>
                         )}
 
-                        {/* Title & Description */}
-                        <div className="absolute bottom-0 left-0 right-0 p-4 z-20">
-                          {item.title && (
-                            <h3 className="text-white font-semibold text-sm mb-1">{item.title}</h3>
-                          )}
-                          {item.description && (
-                            <p className="text-gray-300 text-xs">{item.description}</p>
-                          )}
-                        </div>
+                        {/* Title & Description — hidden for videos */}
+                        {item.type !== 'video' && (
+                          <div className="absolute bottom-0 left-0 right-0 p-4 z-20">
+                            {item.title && (
+                              <h3 className="text-white font-semibold text-sm mb-1">{item.title}</h3>
+                            )}
+                            {item.description && (
+                              <p className="text-gray-300 text-xs">{item.description}</p>
+                            )}
+                          </div>
+                        )}
                       </>
                     )}
                   </div>
@@ -280,7 +359,16 @@ export default function MediaSection({
 
           {/* Content */}
           <div className="w-full max-w-4xl mx-4">
-            {items[activeIndex].type === 'video' ? (
+            {items[activeIndex].type === 'video' && isLocalVideo(items[activeIndex].src) ? (
+              <div className="relative aspect-video">
+                <video
+                  src={items[activeIndex].src}
+                  controls
+                  autoPlay
+                  className="w-full h-full rounded-lg"
+                />
+              </div>
+            ) : items[activeIndex].type === 'video' ? (
               <div className="relative aspect-video">
                 <iframe
                   src={`https://www.youtube.com/embed/${items[activeIndex].src}?autoplay=1`}

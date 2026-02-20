@@ -3,6 +3,7 @@ import TipSection from '../components/TipSection';
 import BlogSection from '../components/BlogSection';
 import ResourceSection from '../components/ResourceSection';
 import content from '../../data/content.json';
+import NewsletterSection from '../components/NewsletterSection';
 
 export default function MovingTipsPage() {
   const tipsData = content.tips;
@@ -41,6 +42,7 @@ export default function MovingTipsPage() {
         subtitle="Explore our comprehensive guides and services for a successful move"
         variant="grid"
       />
+      <NewsletterSection />
     </div>
   );
 }

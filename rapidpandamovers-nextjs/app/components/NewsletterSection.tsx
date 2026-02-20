@@ -21,11 +21,13 @@ export default function NewsletterSection({
           <p className="text-gray-600 mb-6">
             {description}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
-            <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch max-w-md mx-auto">
+            <div className="bg-orange-100 border border-orange-100 rounded-lg flex items-center justify-center flex-shrink-0 px-3">
               <Mail className="w-6 h-6 text-orange-500" />
             </div>
             <input
+              id="newsletter-email"
+              name="email"
               type="email"
               placeholder="Enter your email address"
               className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
