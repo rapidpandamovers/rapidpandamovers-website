@@ -34,25 +34,44 @@ export interface BlogPostSummary {
   featured?: string | null
 }
 
-const postsDirectory = path.join(process.cwd(), 'content/blog')
+import { defaultLocale } from '@/i18n/config'
 
-// Cache for posts to avoid re-reading files on every request
-let postsCache: BlogPost[] | null = null
-let indexCache: BlogPostSummary[] | null = null
+const blogRoot = path.join(process.cwd(), 'content/blog')
+
+function getPostsDirectory(locale?: string): string {
+  const loc = locale || defaultLocale
+  const localeDir = path.join(blogRoot, loc)
+  // Fall back to English if locale directory doesn't exist
+  if (!fs.existsSync(localeDir)) {
+    return path.join(blogRoot, defaultLocale)
+  }
+  return localeDir
+}
+
+// Cache for posts to avoid re-reading files on every request (keyed by locale)
+const postsCacheMap = new Map<string, BlogPost[]>()
+const indexCacheMap = new Map<string, BlogPostSummary[]>()
 // Cache for related posts to ensure consistency
 const relatedPostsCache = new Map<string, BlogPost[]>()
+
+// Backward compatibility
+const postsDirectory = getPostsDirectory()
 
 /**
  * Get all posts from markdown files
  * Silently skips files that fail to parse to ensure the blog remains accessible
  */
-export function getAllPosts(): BlogPost[] {
-  if (postsCache) {
-    return postsCache
+export function getAllPosts(locale?: string): BlogPost[] {
+  const loc = locale || defaultLocale
+  const cached = postsCacheMap.get(loc)
+  if (cached) {
+    return cached
   }
 
+  const dir = getPostsDirectory(loc)
+
   try {
-    const files = fs.readdirSync(postsDirectory)
+    const files = fs.readdirSync(dir)
       .filter(file => file.endsWith('.md'))
       .sort() // Sort by filename (which includes zero-padded ID)
 
@@ -60,7 +79,7 @@ export function getAllPosts(): BlogPost[] {
 
     for (const filename of files) {
       try {
-        const filePath = path.join(postsDirectory, filename)
+        const filePath = path.join(dir, filename)
         const fileContents = fs.readFileSync(filePath, 'utf8')
         const { data, content } = matter(fileContents)
 
@@ -96,7 +115,7 @@ export function getAllPosts(): BlogPost[] {
       }
     }
 
-    postsCache = posts
+    postsCacheMap.set(loc, posts)
     return posts
   } catch (error) {
     // If directory read fails, return empty array
@@ -108,23 +127,27 @@ export function getAllPosts(): BlogPost[] {
 /**
  * Get post summaries from index.json (lightweight, no content)
  */
-export function getPostSummaries(): BlogPostSummary[] {
-  if (indexCache) {
-    return indexCache
+export function getPostSummaries(locale?: string): BlogPostSummary[] {
+  const loc = locale || defaultLocale
+  const cached = indexCacheMap.get(loc)
+  if (cached) {
+    return cached
   }
 
   try {
-    const indexPath = path.join(postsDirectory, 'index.json')
+    const dir = getPostsDirectory(loc)
+    const indexPath = path.join(dir, 'index.json')
 
     if (fs.existsSync(indexPath)) {
       const indexContents = fs.readFileSync(indexPath, 'utf8')
-      indexCache = JSON.parse(indexContents) as BlogPostSummary[]
-      return indexCache
+      const result = JSON.parse(indexContents) as BlogPostSummary[]
+      indexCacheMap.set(loc, result)
+      return result
     }
 
     // Fallback: build from posts
-    const posts = getAllPosts()
-    indexCache = posts.map(post => ({
+    const posts = getAllPosts(loc)
+    const result = posts.map(post => ({
       id: post.id,
       title: post.title,
       slug: post.slug,
@@ -134,8 +157,9 @@ export function getPostSummaries(): BlogPostSummary[] {
       readTime: post.readTime,
       featured: post.featured,
     }))
+    indexCacheMap.set(loc, result)
 
-    return indexCache
+    return result
   } catch (error) {
     console.error('[Blog] Failed to get post summaries:', error instanceof Error ? error.message : String(error))
     return []
@@ -156,15 +180,15 @@ export function isPublished(post: { date: string }): boolean {
 /**
  * Get all published posts (filters out future-dated posts)
  */
-export function getPublishedPosts(): BlogPost[] {
-  return getAllPosts().filter(isPublished)
+export function getPublishedPosts(locale?: string): BlogPost[] {
+  return getAllPosts(locale).filter(isPublished)
 }
 
 /**
  * Get a single post by slug (only if published)
  */
-export function getPostBySlug(slug: string): BlogPost | null {
-  const posts = getAllPosts()
+export function getPostBySlug(slug: string, locale?: string): BlogPost | null {
+  const posts = getAllPosts(locale)
   const post = posts.find(post => post.slug === slug) || null
   if (post && !isPublished(post)) return null
   return post
@@ -173,17 +197,17 @@ export function getPostBySlug(slug: string): BlogPost | null {
 /**
  * Get a single post by ID
  */
-export function getPostById(id: number): BlogPost | null {
-  const posts = getAllPosts()
+export function getPostById(id: number, locale?: string): BlogPost | null {
+  const posts = getAllPosts(locale)
   return posts.find(post => post.id === id) || null
 }
 
 /**
  * Get all unique categories (from published posts only)
  */
-export function getCategories(): string[] {
+export function getCategories(locale?: string): string[] {
   try {
-    const posts = getPublishedPosts()
+    const posts = getPublishedPosts(locale)
     return Array.from(new Set(posts.map(post => post.category)))
   } catch (error) {
     console.error('[Blog] Failed to get categories:', error instanceof Error ? error.message : String(error))
@@ -216,8 +240,8 @@ export function getCategoryBySlug(slug: string): string | null {
 /**
  * Get published posts by category
  */
-export function getPostsByCategory(category: string): BlogPost[] {
-  return getPublishedPosts().filter(post => post.category === category)
+export function getPostsByCategory(category: string, locale?: string): BlogPost[] {
+  return getPublishedPosts(locale).filter(post => post.category === category)
 }
 
 // Editorial (non-service) categories shown as top-level pills
@@ -244,8 +268,8 @@ function matchesServiceSlug(serviceLink: string, slug: string): boolean {
 /**
  * Get published posts by service slug (matches service_link field)
  */
-export function getPostsByService(serviceSlug: string): BlogPost[] {
-  return getPublishedPosts().filter(post => {
+export function getPostsByService(serviceSlug: string, locale?: string): BlogPost[] {
+  return getPublishedPosts(locale).filter(post => {
     const serviceLink = post.service_link || ''
     return matchesServiceSlug(serviceLink, serviceSlug)
   })
@@ -254,9 +278,9 @@ export function getPostsByService(serviceSlug: string): BlogPost[] {
 /**
  * Get all unique service slugs that have published blog posts
  */
-export function getServiceSlugsFromBlog(): string[] {
+export function getServiceSlugsFromBlog(locale?: string): string[] {
   const { allServices } = require('@/lib/data')
-  const posts = getPublishedPosts()
+  const posts = getPublishedPosts(locale)
   const slugs = new Set<string>()
   for (const service of allServices) {
     const hasPost = posts.some(post => {
@@ -283,8 +307,8 @@ function matchesLocationSlug(locationLink: string, slug: string): boolean {
 /**
  * Get published posts by location slug (matches location_link field)
  */
-export function getPostsByLocation(slug: string): BlogPost[] {
-  return getPublishedPosts().filter(post => {
+export function getPostsByLocation(slug: string, locale?: string): BlogPost[] {
+  return getPublishedPosts(locale).filter(post => {
     const locationLink = post.location_link || ''
     return matchesLocationSlug(locationLink, slug)
   })
@@ -303,8 +327,8 @@ export function locationLinkToSlug(locationLink: string): string {
 /**
  * Get all unique location slugs that have published posts
  */
-export function getLocationSlugs(): string[] {
-  const posts = getPublishedPosts()
+export function getLocationSlugs(locale?: string): string[] {
+  const posts = getPublishedPosts(locale)
   const slugs = new Set<string>()
   for (const post of posts) {
     if (post.location_link) {
@@ -329,9 +353,9 @@ export function getLocationNameBySlug(slug: string): string | null {
 /**
  * Get published posts sorted by date (newest first), then by ID (highest first) for same dates
  */
-export function getPostsSortedByDate(): BlogPost[] {
+export function getPostsSortedByDate(locale?: string): BlogPost[] {
   try {
-    const posts = getPublishedPosts()
+    const posts = getPublishedPosts(locale)
     return [...posts].sort((a, b) => {
       const dateCompare = new Date(b.date).getTime() - new Date(a.date).getTime()
       if (dateCompare !== 0) return dateCompare
@@ -348,20 +372,20 @@ export function getPostsSortedByDate(): BlogPost[] {
  * Get related posts based on category, service link, and keyword similarity
  * Results are cached to prevent re-computation on re-renders
  */
-export function getRelatedPosts(slug: string, limit: number = 2): BlogPost[] {
+export function getRelatedPosts(slug: string, limit: number = 2, locale?: string): BlogPost[] {
   // Check cache first
-  const cacheKey = `${slug}:${limit}`
+  const cacheKey = `${locale || defaultLocale}:${slug}:${limit}`
   if (relatedPostsCache.has(cacheKey)) {
     return relatedPostsCache.get(cacheKey)!
   }
 
-  const currentPost = getPostBySlug(slug)
+  const currentPost = getPostBySlug(slug, locale)
   if (!currentPost) {
     relatedPostsCache.set(cacheKey, [])
     return []
   }
 
-  const posts = getPublishedPosts()
+  const posts = getPublishedPosts(locale)
   const otherPosts = posts.filter(post => post.slug !== slug)
 
   // Extract keywords from title (words 4+ chars, excluding common words)
@@ -444,8 +468,8 @@ export function getRelatedPosts(slug: string, limit: number = 2): BlogPost[] {
  * Clear the cache (useful for development)
  */
 export function clearCache(): void {
-  postsCache = null
-  indexCache = null
+  postsCacheMap.clear()
+  indexCacheMap.clear()
   relatedPostsCache.clear()
 }
 

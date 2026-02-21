@@ -6,6 +6,7 @@ interface ServiceSchemaProps {
   description: string
   url: string
   areaServed?: string
+  locale?: string
 }
 
 /**
@@ -16,12 +17,14 @@ export default function ServiceSchema({
   description,
   url,
   areaServed,
+  locale,
 }: ServiceSchemaProps) {
   const schema = generateServiceSchema({
     name,
     description,
     url,
     areaServed,
+    locale,
   })
 
   return <SchemaScript schema={schema} id="service-schema" />

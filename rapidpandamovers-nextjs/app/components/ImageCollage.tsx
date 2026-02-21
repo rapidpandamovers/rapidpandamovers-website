@@ -17,8 +17,11 @@ type Slot = {
 
 type Props = {
   slot1Src: string;
+  slot1Fallback?: string;
   slot2Src: string;
+  slot2Fallback?: string;
   slot3Src: string;
+  slot3Fallback?: string;
 
   className?: string;
 
@@ -332,8 +335,11 @@ const VARIANTS = {
 
 export function ImageCollage({
   slot1Src,
+  slot1Fallback,
   slot2Src,
+  slot2Fallback,
   slot3Src,
+  slot3Fallback,
   className,
   accentColor = "#F97315",
   alt,
@@ -342,6 +348,15 @@ export function ImageCollage({
   dots,
   variant = 'default',
 }: Props) {
+  // Track per-slot fallback state for WebP → JPG
+  const [src1, setSrc1] = React.useState(slot1Src);
+  const [src2, setSrc2] = React.useState(slot2Src);
+  const [src3, setSrc3] = React.useState(slot3Src);
+
+  // Sync if props change (e.g., responsive resize)
+  React.useEffect(() => { setSrc1(slot1Src) }, [slot1Src]);
+  React.useEffect(() => { setSrc2(slot2Src) }, [slot2Src]);
+  React.useEffect(() => { setSrc3(slot3Src) }, [slot3Src]);
   const uid = React.useId().replace(/:/g, "");
 
   // Native template canvas (adjust if your template PNG uses a different size)
@@ -463,7 +478,6 @@ export function ImageCollage({
       className={className}
       viewBox={`0 0 ${VB_W} ${VB_H}`}
       width="100%"
-      height="auto"
       role="img"
       aria-label="Collage template"
       xmlns="http://www.w3.org/2000/svg"
@@ -503,13 +517,14 @@ export function ImageCollage({
       {!debug && (
         <g clipPath={`url(#${clip.slot1})`}>
           <image
-            href={slot1Src}
-            xlinkHref={slot1Src}
+            href={src1}
+            xlinkHref={src1}
             x={bbox1.x}
             y={bbox1.y}
             width={bbox1.width}
             height={bbox1.height}
             preserveAspectRatio="xMidYMid slice"
+            onError={slot1Fallback ? () => setSrc1(slot1Fallback) : undefined}
           >
             {alt?.slot1 ? <title>{alt.slot1}</title> : null}
           </image>
@@ -520,13 +535,14 @@ export function ImageCollage({
       {!debug && (
         <g clipPath={`url(#${clip.slot2})`}>
           <image
-            href={slot2Src}
-            xlinkHref={slot2Src}
+            href={src2}
+            xlinkHref={src2}
             x={bbox2.x}
             y={bbox2.y}
             width={bbox2.width}
             height={bbox2.height}
             preserveAspectRatio="xMidYMid slice"
+            onError={slot2Fallback ? () => setSrc2(slot2Fallback) : undefined}
           >
             {alt?.slot2 ? <title>{alt.slot2}</title> : null}
           </image>
@@ -537,13 +553,14 @@ export function ImageCollage({
       {!debug && (
         <g clipPath={`url(#${clip.slot3})`}>
           <image
-            href={slot3Src}
-            xlinkHref={slot3Src}
+            href={src3}
+            xlinkHref={src3}
             x={bbox3.x}
             y={bbox3.y}
             width={bbox3.width}
             height={bbox3.height}
             preserveAspectRatio="xMidYMid slice"
+            onError={slot3Fallback ? () => setSrc3(slot3Fallback) : undefined}
           >
             {alt?.slot3 ? <title>{alt.slot3}</title> : null}
           </image>

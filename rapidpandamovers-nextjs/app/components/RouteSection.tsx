@@ -2,8 +2,12 @@
 
 import { useState } from 'react';
 import { Navigation, ArrowRight, ChevronDown } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
+import { useMessages, useLocale } from 'next-intl';
 import { allRoutes, allLocalRoutes, titleCase } from '@/lib/data';
+import { getTranslatedSlug } from '@/i18n/slug-map';
+import type { Locale } from '@/i18n/config';
+import { H2, H3 } from '@/app/components/Heading';
 
 interface Route {
   origin_name: string;
@@ -71,9 +75,11 @@ export default function RouteSection({
   variant = 'default',
 }: RouteSectionProps) {
   const [showAll, setShowAll] = useState(false);
+  const { ui } = useMessages() as any;
+  const locale = useLocale() as Locale;
 
   let relevantRoutes: Route[] = [];
-  let defaultTitle = 'Popular Routes';
+  let defaultTitle = ui.routes.popularRoutes;
   let defaultSubtitle = '';
 
   // If routes are provided directly, use them
@@ -98,14 +104,14 @@ export default function RouteSection({
       );
 
       relevantRoutes = [...neighborhoodRoutes, ...cityRoutes].slice(0, maxItems);
-      defaultTitle = 'Popular Routes';
-      defaultSubtitle = `Moving routes from ${location.name} and ${location.parentCity!.name}`;
+      defaultTitle = ui.routes.popularRoutes;
+      defaultSubtitle = ui.routes.routesFromAndCity.replace('{name}', location.name).replace('{city}', location.parentCity!.name);
     } else {
       relevantRoutes = allRoutes.filter((r: Route) =>
         r.origin_name === location.slug
       ).slice(0, maxItems);
-      defaultTitle = `Popular Routes from ${location.name}`;
-      defaultSubtitle = `Moving from ${location.name}? We provide reliable moving services to these popular destinations`;
+      defaultTitle = ui.routes.popularRoutesFrom.replace('{name}', location.name);
+      defaultSubtitle = ui.routes.routesFromSubtitle.replace('{name}', location.name);
     }
   }
 
@@ -125,19 +131,21 @@ export default function RouteSection({
     ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
     : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3';
 
+  const routesSlug = getTranslatedSlug('moving-routes', locale);
+
   // Left variant: left-aligned header with inline CTA link
   if (variant === 'left') {
-    const ctaText = location ? `View All ${location.name} Routes` : 'View All Routes';
-    const ctaHref = location ? `/moving-routes/${location.slug}` : '/moving-routes';
+    const ctaText = location ? ui.routes.viewAllLocationRoutes.replace('{name}', location.name) : ui.routes.viewAllRoutes;
+    const ctaHref = location ? `/${routesSlug}/${location.slug}` : `/${routesSlug}`;
 
     return (
       <section className="pt-20">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+              <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
                 {displayTitle}
-              </h2>
+              </H2>
               {displaySubtitle && (
                 <p className="text-lg text-gray-600">
                   {displaySubtitle}
@@ -146,7 +154,7 @@ export default function RouteSection({
             </div>
             <Link
               href={ctaHref}
-              className="inline-flex items-center text-orange-500 hover:text-orange-600 font-semibold mt-4 md:mt-0"
+              className="inline-flex items-center text-orange-700 hover:text-orange-800 font-semibold mt-4 md:mt-0"
             >
               {ctaText}
               <ArrowRight className="w-5 h-5 ml-2" />
@@ -161,8 +169,8 @@ export default function RouteSection({
                 return (
                   <Link
                     key={index}
-                    href={`/${route.slug}-movers`}
-                    className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-orange-500 transition-colors group"
+                    href={`/${getTranslatedSlug(`${route.slug}-movers`, locale)}`}
+                    className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-orange-700 transition-colors group"
                   >
                     <div className="flex items-center justify-between mb-4">
                       <Navigation className="w-6 h-6 text-orange-500" />
@@ -170,16 +178,16 @@ export default function RouteSection({
                         {route.distance_mi} mi • {timeDisplay}
                       </span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-orange-500 transition-colors">
-                      {titleCase(route.origin_name)} to {titleCase(route.destination_name)}
-                    </h3>
+                    <H3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-orange-600 transition-colors">
+                      {titleCase(route.origin_name)} {ui.routes.to} {titleCase(route.destination_name)}
+                    </H3>
                     {cost && (
-                      <p className="text-orange-500 font-bold text-lg mb-3">
-                        Starting from ${cost.toLocaleString()}
+                      <p className="text-orange-600 font-bold text-lg mb-3">
+                        {ui.routes.startingFrom.replace('${cost}', '$' + cost.toLocaleString())}
                       </p>
                     )}
-                    <div className="text-orange-600 group-hover:text-orange-700 font-medium flex items-center">
-                      View Route
+                    <div className="text-orange-700 group-hover:text-orange-700 font-medium flex items-center">
+                      {ui.routes.viewRoute}
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </Link>
@@ -195,9 +203,9 @@ export default function RouteSection({
     <section className="pt-20">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             {displayTitle}
-          </h2>
+          </H2>
           {displaySubtitle && (
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               {displaySubtitle}
@@ -213,8 +221,8 @@ export default function RouteSection({
               return (
                 <Link
                   key={index}
-                  href={`/${route.slug}-movers`}
-                  className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-orange-500 transition-colors group"
+                  href={`/${getTranslatedSlug(`${route.slug}-movers`, locale)}`}
+                  className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-orange-700 transition-colors group"
                 >
                   <div className="flex items-center justify-between mb-4">
                     <Navigation className="w-6 h-6 text-orange-500" />
@@ -222,16 +230,16 @@ export default function RouteSection({
                       {route.distance_mi} mi • {timeDisplay}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-orange-500 transition-colors">
-                    {titleCase(route.origin_name)} to {titleCase(route.destination_name)}
-                  </h3>
+                  <H3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-orange-600 transition-colors">
+                    {titleCase(route.origin_name)} {ui.routes.to} {titleCase(route.destination_name)}
+                  </H3>
                   {cost && (
-                    <p className="text-orange-500 font-bold text-lg mb-3">
-                      Starting from ${cost.toLocaleString()}
+                    <p className="text-orange-600 font-bold text-lg mb-3">
+                      {ui.routes.startingFrom.replace('${cost}', '$' + cost.toLocaleString())}
                     </p>
                   )}
-                  <div className="text-orange-600 group-hover:text-orange-700 font-medium flex items-center">
-                    View Route
+                  <div className="text-orange-700 group-hover:text-orange-700 font-medium flex items-center">
+                    {ui.routes.viewRoute}
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </Link>
@@ -242,9 +250,9 @@ export default function RouteSection({
           <div className="text-center mt-8">
             <button
               onClick={() => setShowAll(!showAll)}
-              className="inline-flex items-center px-6 py-3 border-2 border-orange-500 text-orange-500 font-semibold rounded-lg hover:bg-orange-500 hover:text-white transition-colors"
+              className="inline-flex items-center px-6 py-3 border-2 border-orange-700 text-orange-700 font-semibold rounded-lg hover:bg-orange-600 hover:text-white transition-colors"
             >
-              {showAll ? 'Show Less' : `Show All ${relevantRoutes.length} Routes`}
+              {showAll ? ui.routes.showLess : ui.routes.showAllRoutes.replace('{count}', String(relevantRoutes.length))}
               <ChevronDown className={`w-5 h-5 ml-2 transition-transform ${showAll ? 'rotate-180' : ''}`} />
             </button>
           </div>
@@ -252,10 +260,10 @@ export default function RouteSection({
         {location && (
           <div className="text-center mt-8">
             <Link
-              href={`/moving-routes/${location.slug}`}
-              className="inline-flex items-center px-6 py-3 border-2 border-orange-500 text-orange-500 font-semibold rounded-lg hover:bg-orange-500 hover:text-white transition-colors"
+              href={`/${routesSlug}/${location.slug}`}
+              className="inline-flex items-center px-6 py-3 border-2 border-orange-700 text-orange-700 font-semibold rounded-lg hover:bg-orange-600 hover:text-white transition-colors"
             >
-              View All {location.name} Routes
+              {ui.routes.viewAllLocationRoutes.replace('{name}', location.name)}
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
           </div>

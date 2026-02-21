@@ -1,6 +1,10 @@
 import type { Metadata } from 'next'
+import { locales, defaultLocale, type Locale } from '@/i18n/config'
+import { getTranslatedSlug, translatePathname } from '@/i18n/slug-map'
+import metadataEn from '@/data/metadata.json'
+import metadataEs from '@/data/es/metadata.json'
 
-// Site configuration constants
+// Site configuration constants (non-translatable)
 export const SITE_CONFIG = {
   name: 'Rapid Panda Movers',
   domain: 'https://www.rapidpandamovers.com',
@@ -8,11 +12,28 @@ export const SITE_CONFIG = {
   phone: '(786) 585-4269',
   email: 'info@rapidpandamovers.com',
   address: {
-    street: '1000 Brickell Ave',
+    street: '7001 North Waterway Dr #107',
     city: 'Miami',
     state: 'FL',
-    zip: '33131',
+    zip: '33155',
   },
+}
+
+/**
+ * Get locale-specific metadata config
+ */
+function getMetadataConfig(locale?: Locale) {
+  return locale === 'es' ? metadataEs : metadataEn
+}
+
+/**
+ * Interpolate template variables: {varName} → value
+ */
+function interpolate(template: string, vars: Record<string, string>): string {
+  return Object.entries(vars).reduce(
+    (str, [key, val]) => str.replace(new RegExp(`\\{${key}\\}`, 'g'), val),
+    template
+  )
 }
 
 interface MetadataOptions {
@@ -24,6 +45,23 @@ interface MetadataOptions {
   publishedTime?: string
   modifiedTime?: string
   noIndex?: boolean
+  locale?: Locale
+}
+
+/**
+ * Build hreflang alternates for a given English path
+ */
+function buildAlternates(enPath: string): Record<string, string> {
+  const languages: Record<string, string> = {
+    'x-default': `${SITE_CONFIG.domain}${enPath}`,
+    en: `${SITE_CONFIG.domain}${enPath}`,
+  }
+  for (const loc of locales) {
+    if (loc === defaultLocale) continue
+    const translatedPath = translatePathname(enPath, 'en', loc)
+    languages[loc] = `${SITE_CONFIG.domain}/${loc}${translatedPath}`
+  }
+  return languages
 }
 
 /**
@@ -47,28 +85,37 @@ export function generatePageMetadata(options: MetadataOptions): Metadata {
     publishedTime,
     modifiedTime,
     noIndex = false,
+    locale,
   } = options
 
-  const canonicalUrl = getCanonicalUrl(path)
+  // For non-default locale, build the localized canonical URL
+  const enPath = path.startsWith('/') ? path : `/${path}`
+  const canonicalUrl = locale && locale !== defaultLocale
+    ? `${SITE_CONFIG.domain}/${locale}${translatePathname(enPath, 'en', locale)}`
+    : getCanonicalUrl(path)
+
+  const ogLocale = locale === 'es' ? 'es_US' : 'en_US'
 
   const metadata: Metadata = {
     title,
     description,
     alternates: {
       canonical: canonicalUrl,
+      languages: buildAlternates(enPath),
     },
     openGraph: {
       title,
       description,
       url: canonicalUrl,
       siteName: SITE_CONFIG.name,
+      locale: ogLocale,
       type,
       images: [
         {
           url: image,
           width: 1200,
           height: 630,
-          alt: title,
+          alt: typeof title === 'string' ? title : SITE_CONFIG.name,
         },
       ],
       ...(publishedTime && { publishedTime }),
@@ -113,11 +160,12 @@ interface Location {
 /**
  * Generate metadata for service pages
  */
-export function generateServiceMetadata(service: Service, location?: Location): Metadata {
+export function generateServiceMetadata(service: Service, location?: Location, locale?: Locale): Metadata {
+  const config = getMetadataConfig(locale)
+  const templates = config.templates.service
   const locationName = location?.name
   const parentCityName = location?.parentCity?.name
 
-  // Build location string
   const locationStr = locationName
     ? parentCityName
       ? `${locationName}, ${parentCityName}`
@@ -125,12 +173,12 @@ export function generateServiceMetadata(service: Service, location?: Location): 
     : 'Miami'
 
   const title = location
-    ? `${locationName} ${service.name} | ${SITE_CONFIG.name}`
-    : service.meta_title || `${service.name} in Miami | ${SITE_CONFIG.name}`
+    ? interpolate(templates.titleWithLocation, { locationName: locationName!, serviceName: service.name })
+    : service.meta_title || interpolate(templates.title, { serviceName: service.name })
 
   const description = location
-    ? `Professional ${service.name.toLowerCase()} services in ${locationStr}. Experienced crews, transparent pricing, and reliable service. Get your free quote today!`
-    : service.meta_description || `${service.description.slice(0, 150)}...`
+    ? interpolate(templates.description, { serviceName: service.name.toLowerCase(), locationStr })
+    : service.meta_description || interpolate(templates.descriptionDefault, { serviceDescription: service.description.slice(0, 150) + '...' })
 
   const path = location
     ? `/${location.slug}-${service.slug}`
@@ -140,23 +188,34 @@ export function generateServiceMetadata(service: Service, location?: Location): 
     title,
     description,
     path,
+    locale,
   })
 }
 
 /**
  * Generate metadata for location pages (cities and neighborhoods)
  */
-export function generateLocationMetadata(location: Location): Metadata {
+export function generateLocationMetadata(location: Location, locale?: Locale): Metadata {
+  const config = getMetadataConfig(locale)
+  const templates = config.templates.location
   const isNeighborhood = !!location.parentCity
   const locationStr = isNeighborhood
     ? `${location.name}, ${location.parentCity!.name}`
     : location.name
 
-  const title = `${location.name} Movers | Moving Services in ${locationStr} | ${SITE_CONFIG.name}`
+  const title = interpolate(templates.title, {
+    locationName: location.name,
+    locationStr,
+  })
 
   const description = isNeighborhood
-    ? `Professional moving services in ${location.name}, ${location.parentCity!.name}. Local movers you can trust with experienced crews and transparent pricing.`
-    : `Professional moving services in ${location.name}. Expert local and long-distance moving with experienced crews and transparent pricing. Get your free quote!`
+    ? interpolate(templates.descriptionNeighborhood, {
+        locationName: location.name,
+        parentCity: location.parentCity!.name,
+      })
+    : interpolate(templates.descriptionCity, {
+        locationName: location.name,
+      })
 
   const path = `/${location.slug}-movers`
 
@@ -164,6 +223,7 @@ export function generateLocationMetadata(location: Location): Metadata {
     title,
     description,
     path,
+    locale,
   })
 }
 
@@ -194,18 +254,25 @@ function titleCase(s: string): string {
 /**
  * Generate metadata for route pages
  */
-export function generateRouteMetadata(route: Route): Metadata {
+export function generateRouteMetadata(route: Route, locale?: Locale): Metadata {
+  const config = getMetadataConfig(locale)
+  const templates = config.templates.route
   const origin = titleCase(route.origin_name)
   const destination = titleCase(route.destination_name)
 
-  const title = `${origin} to ${destination} Movers | ${SITE_CONFIG.name}`
-  const description = `Professional moving services from ${origin} to ${destination}. ${route.distance_mi} miles, experienced crews, competitive rates. Get your free moving quote today!`
+  const title = interpolate(templates.title, { origin, destination })
+  const description = interpolate(templates.description, {
+    origin,
+    destination,
+    distance: String(route.distance_mi),
+  })
   const path = `/${route.slug}-movers`
 
   return generatePageMetadata({
     title,
     description,
     path,
+    locale,
   })
 }
 
@@ -222,8 +289,9 @@ interface BlogPost {
 /**
  * Generate metadata for blog posts
  */
-export function generateBlogMetadata(post: BlogPost): Metadata {
-  const title = `${post.title} | ${SITE_CONFIG.name} Blog`
+export function generateBlogMetadata(post: BlogPost, locale?: Locale): Metadata {
+  const config = getMetadataConfig(locale)
+  const title = `${post.title}${config.templates.blogPost.titleSuffix}`
   const description = post.excerpt
   const path = `/blog/${post.slug}`
   const image = post.featured || SITE_CONFIG.defaultImage
@@ -236,5 +304,6 @@ export function generateBlogMetadata(post: BlogPost): Metadata {
     type: 'article',
     publishedTime: post.date,
     modifiedTime: post.updated || post.date,
+    locale,
   })
 }

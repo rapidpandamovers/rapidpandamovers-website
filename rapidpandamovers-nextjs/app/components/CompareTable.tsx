@@ -1,3 +1,6 @@
+import { getMessages } from 'next-intl/server';
+import { H2 } from '@/app/components/Heading';
+
 interface CompareTableColumn {
   header: string;
 }
@@ -14,23 +17,24 @@ interface CompareTableProps {
   rows: CompareTableRow[];
 }
 
-export default function CompareTable({
+export default async function CompareTable({
   title = "Quick Comparison",
   columns,
   rows
 }: CompareTableProps) {
+  const { ui } = (await getMessages()) as any;
   return (
     <section className="pt-20">
       <div className="container mx-auto">
         <div className="mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-10 text-center">
+          <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-10 text-center">
             {title}
-          </h2>
+          </H2>
           <div className="overflow-x-auto rounded-4xl border border-black overflow-hidden bg-black">
             <table className="w-full border-separate border-spacing-0">
               <thead>
                 <tr>
-                  <th className="p-5 text-left font-bold text-white text-sm uppercase tracking-wide bg-black">Option</th>
+                  <th className="p-5 text-left font-bold text-white text-sm uppercase tracking-wide bg-black">{ui.compare.optionHeader}</th>
                   {columns.map((column, index) => (
                     <th key={index} className="p-5 text-left font-bold text-white text-sm uppercase tracking-wide bg-black">
                       {column.header}
@@ -50,7 +54,7 @@ export default function CompareTable({
 
                   return (
                     <tr key={rowIndex} className="transition-colors">
-                      <td className={`p-5 ${bgClass} ${row.highlight ? 'font-bold text-orange-600 text-base' : 'font-semibold text-gray-800 text-base'} ${isFirst ? 'rounded-tl-2xl' : ''} ${isLast ? 'rounded-bl-2xl' : ''} ${!isLast ? 'border-b border-gray-200' : ''}`}>
+                      <td className={`p-5 ${bgClass} ${row.highlight ? 'font-bold text-orange-700 text-base' : 'font-semibold text-gray-800 text-base'} ${isFirst ? 'rounded-tl-2xl' : ''} ${isLast ? 'rounded-bl-2xl' : ''} ${!isLast ? 'border-b border-gray-200' : ''}`}>
                         {row.option}
                       </td>
                       {row.cells.map((cell, cellIndex) => {

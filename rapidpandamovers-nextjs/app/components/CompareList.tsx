@@ -1,5 +1,7 @@
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import { ArrowRight } from 'lucide-react';
+import { getMessages } from 'next-intl/server';
+import { H2 } from '@/app/components/Heading';
 
 interface CompareListProps<T> {
   title: React.ReactNode;
@@ -11,22 +13,24 @@ interface CompareListProps<T> {
   renderCard: (item: T) => React.ReactNode;
 }
 
-export default function CompareList<T>({
+export default async function CompareList<T>({
   title,
   subtitle,
   items,
   basePath,
   getSlug,
-  ctaText = 'View Comparison',
+  ctaText: ctaTextProp,
   renderCard,
 }: CompareListProps<T>) {
+  const { ui } = (await getMessages()) as any;
+  const ctaText = ctaTextProp ?? ui.buttons.viewComparison;
   return (
     <section className="pt-20">
       <div className="container mx-auto">
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             {title}
-          </h2>
+          </H2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             {subtitle}
           </p>
@@ -41,7 +45,7 @@ export default function CompareList<T>({
                 className="bg-white rounded-2xl p-6 hover:shadow-md transition-all group"
               >
                 {renderCard(item)}
-                <div className="flex items-center text-orange-500 font-medium">
+                <div className="flex items-center text-orange-700 font-medium">
                   {ctaText}
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>

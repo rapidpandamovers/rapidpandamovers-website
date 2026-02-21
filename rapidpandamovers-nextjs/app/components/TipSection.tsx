@@ -1,4 +1,5 @@
 import React from 'react';
+import { H2, H3 } from '@/app/components/Heading';
 
 interface TipSectionProps {
   title: string;
@@ -16,9 +17,9 @@ const TipSection: React.FC<TipSectionProps> = ({ title, description, categories 
     <section className="pt-20">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             {title}
-          </h2>
+          </H2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             {description}
           </p>
@@ -27,9 +28,9 @@ const TipSection: React.FC<TipSectionProps> = ({ title, description, categories 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {categories.map((category, index) => (
             <div key={index} className={`${bgColors[index % bgColors.length]} rounded-4xl p-8`}>
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">
+              <H3 className="text-2xl font-bold text-gray-800 mb-6">
                 {category.title}
-              </h3>
+              </H3>
               <ul className="space-y-3">
                 {category.tips.map((tip, tipIndex) => (
                   <li key={tipIndex} className="flex items-start bg-white rounded-xl p-3">

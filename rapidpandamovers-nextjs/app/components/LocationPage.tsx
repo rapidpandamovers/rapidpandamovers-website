@@ -10,6 +10,9 @@ import OverviewSection from './OverviewSection';
 import Breadcrumbs from './Breadcrumbs';
 import QuoteSection from './QuoteSection';
 import { getPostsByLocation } from '@/lib/blog';
+import { getMessages, getLocale } from 'next-intl/server';
+import { getTranslatedSlug } from '@/i18n/slug-map';
+import type { Locale } from '@/i18n/config';
 
 
 interface LocationPageProps {
@@ -44,7 +47,9 @@ interface LocationPageProps {
   };
 }
 
-export default function LocationPage({ city }: LocationPageProps) {
+export default async function LocationPage({ city }: LocationPageProps) {
+  const locale = await getLocale() as Locale;
+  const { ui, content } = (await getMessages()) as any;
   // Determine if this is a neighborhood (has parentCity) or a city
   const isNeighborhood = !!city.parentCity;
 
@@ -62,45 +67,50 @@ export default function LocationPage({ city }: LocationPageProps) {
   // Don't show neighborhoods section if there's only one matching neighborhood
   const showNeighborhoods = !isNeighborhood && city.neighborhoods && !singleMatchingNeighborhood;
 
+  // Hero title uses nameTemplate from nav messages
+  const nameTemplate = ui.location.nameTemplate || '{name} Movers';
+  const heroTitle = nameTemplate.replace('{name}', city.name);
+
   // Hero description varies based on type
   const heroDescription = isNeighborhood
-    ? `Professional moving services in ${city.name}, ${city.parentCity!.name}. Local movers you can trust.`
-    : `Professional moving services in ${city.name}. Expert local and long-distance moving with experienced crews and transparent pricing.`;
+    ? ui.location.heroDescriptionNeighborhood.replace('{name}', city.name).replace('{parent}', city.parentCity!.name)
+    : ui.location.heroDescriptionCity.replace('{name}', city.name);
 
-  // Build breadcrumb items
+  // Build breadcrumb items with translated hrefs
+  const locationsSlug = getTranslatedSlug('locations', locale);
   const breadcrumbItems = isNeighborhood
     ? [
-        { label: 'Locations', href: '/locations' },
-        { label: `${city.parentCity!.name}`, href: `/${city.parentCity!.slug}-movers` },
+        { label: ui.location.breadcrumb, href: `/${locationsSlug}` },
+        { label: `${city.parentCity!.name}`, href: `/${getTranslatedSlug(`${city.parentCity!.slug}-movers`, locale)}` },
         { label: city.name },
       ]
     : [
-        { label: 'Locations', href: '/locations' },
+        { label: ui.location.breadcrumb, href: `/${locationsSlug}` },
         { label: city.name },
       ];
 
   // Check if location has blog posts (for viewMoreLink)
   const hasLocationPosts = getPostsByLocation(city.slug).length > 0;
   const hasParentLocationPosts = isNeighborhood ? getPostsByLocation(city.parentCity!.slug).length > 0 : false;
+  const locationSegment = getTranslatedSlug('location', locale);
   const blogViewMoreLink = hasLocationPosts
-    ? `/blog/location/${city.slug}`
-    : (hasParentLocationPosts ? `/blog/location/${city.parentCity!.slug}` : '/blog');
+    ? `/blog/${locationSegment}/${city.slug}`
+    : (hasParentLocationPosts ? `/blog/${locationSegment}/${city.parentCity!.slug}` : '/blog');
 
   // Build info text for zip codes and population
   const infoText = isNeighborhood
-    ? (effectiveZipCodes && effectiveZipCodes.length > 0 ? `ZIP Codes: ${effectiveZipCodes.join(', ')}` : undefined)
+    ? (effectiveZipCodes && effectiveZipCodes.length > 0 ? `${ui.location.zipCodes} ${effectiveZipCodes.join(', ')}` : undefined)
     : (effectiveZipCodes && effectiveZipCodes.length > 0
-        ? `ZIP Codes: ${effectiveZipCodes.join(', ')}${city.population ? ` • Population: ${city.population.toLocaleString()}` : ''}`
-        : (city.population ? `Serving ${city.name} (Population: ${city.population.toLocaleString()})` : undefined));
+        ? `${ui.location.zipCodes} ${effectiveZipCodes.join(', ')}${city.population ? ` • ${ui.location.populationLabel}: ${city.population.toLocaleString()}` : ''}`
+        : (city.population ? ui.location.serving.replace('{name}', city.name).replace('{population}', city.population.toLocaleString()) : undefined));
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <Hero
-        title={`${city.name} Movers`}
+        title={heroTitle}
         description={heroDescription}
-        cta="Get Your Free Quote"
-        image_url="https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+        cta={content.locations.hero.cta}
       />
 
       {/* Breadcrumbs */}
@@ -108,7 +118,7 @@ export default function LocationPage({ city }: LocationPageProps) {
 
       {/* Content Section */}
       <OverviewSection
-        title={<>Professional Moving Services in <span className="text-orange-500">{city.name}</span></>}
+        title={<>{ui.location.professionalServicesIn.split('{name}')[0]}<span className="text-orange-700">{city.name}</span>{ui.location.professionalServicesIn.split('{name}')[1]}</>}
       >
 
         {effectiveDescription && (
@@ -140,7 +150,7 @@ export default function LocationPage({ city }: LocationPageProps) {
       <ServiceSection
         variant="left"
         location={city}
-        title={`Moving Services in ${city.name}`}
+        title={ui.location.movingServicesIn.replace('{name}', city.name)}
       />
 
       {/* Popular Routes Section */}
@@ -151,12 +161,12 @@ export default function LocationPage({ city }: LocationPageProps) {
         variant="left"
         locationFilter={city.slug}
         locationFilterFallback={isNeighborhood ? city.parentCity!.slug : undefined}
-        categoryFilterFallback="Location Guide"
+        categoryFilterFallback={ui.location.locationGuide}
         showFeatured={false}
         showCategories={false}
-        title={`Moving Tips for ${city.name}`}
+        title={ui.location.movingTipsFor.replace('{name}', city.name)}
         showViewMore
-        viewMoreButtonText="View All Articles"
+        viewMoreButtonText={content.blog.relatedArticles.viewMoreButtonText}
         viewMoreLink={blogViewMoreLink}
         maxPosts={3}
       />
@@ -172,4 +182,3 @@ export default function LocationPage({ city }: LocationPageProps) {
     </div>
   );
 }
-

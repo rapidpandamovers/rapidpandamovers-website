@@ -1,16 +1,21 @@
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
 import Image from 'next/image'
 import { Phone } from 'lucide-react'
-import { getAllActiveCities, getAllActiveServices } from '@/lib/data'
-import content from '@/data/content.json'
-import nav from '@/data/navigation.json'
+import { getAllActiveCities, getLocalizedServices } from '@/lib/data'
+import { getMessages, getLocale } from 'next-intl/server'
+import { getTranslatedSlug } from '@/i18n/slug-map'
+import type { Locale } from '@/i18n/config'
+import { LanguageSelectorHeader } from './LanguageSelector'
 
-export default function Header() {
+export default async function Header() {
+  const locale = await getLocale() as Locale
+  const { nav, content } = (await getMessages()) as any
   const cities = getAllActiveCities()
-  const services = getAllActiveServices()
+  const services = getLocalizedServices(locale)
   const phone = content.site.phone
   const phoneFormatted = `(${phone.slice(0,3)}) ${phone.slice(4,7)}-${phone.slice(8)}`
   const phoneTel = phone.replace(/-/g, '')
+  const nameTemplate = nav.header.locations.nameTemplate || '{name} Movers'
   return (
     <>
 
@@ -29,133 +34,135 @@ export default function Header() {
               />
             </Link>
 
-            <nav className="hidden lg:flex items-center space-x-6">
-              <Link href="/" className="text-gray-700 hover:text-orange-500 transition-colors uppercase">
+            <nav className="hidden lg:flex items-center space-x-4">
+              <Link href="/" className="text-gray-700 hover:text-orange-600 transition-colors uppercase">
                 {nav.header.home.label}
               </Link>
               <div className="relative group">
-                <button className="text-gray-700 hover:text-orange-500 transition-colors flex items-center uppercase">
+                <button className="text-gray-700 hover:text-orange-600 transition-colors flex items-center uppercase">
                   {nav.header.services.label}
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                <div className="absolute left-0 mt-2 w-180 bg-orange-500 rounded-4xl overflow-hidden border-2 border-orange-500 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="absolute left-0 mt-2 w-230 bg-orange-600 rounded-4xl overflow-hidden border-2 border-orange-600 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="bg-white rounded-b-4xl py-2">
                     <div className="grid grid-cols-3 gap-0 py-2">
-                      {services.map((service) => (
-                        <Link key={service.slug} href={`/${service.slug}`} className="block px-6 py-2 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200 rounded">
+                      {services.map((service, i) => (
+                        <Link key={service.slug} href={`/${getTranslatedSlug(service.slug, locale)}`} className={`block pl-6 py-2 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200 rounded ${i % 3 === 2 ? 'pr-6' : 'pr-0'}`}>
                           <div className="font-medium text-sm">{service.name}</div>
                         </Link>
                       ))}
                     </div>
                   </div>
-                  <Link href="/services" className="block px-6 pt-4 pb-5 text-white hover:text-white/80 hover:translate-x-1 transition-all duration-200">
+                  <Link href={`/${getTranslatedSlug('services', locale)}`} className="block pl-6 pr-6 pt-4 pb-5 text-white hover:text-white/80 hover:translate-x-1 transition-all duration-200">
                     <div className="font-medium">{nav.header.services.allLink.label} &rarr;</div>
                     <div className="text-sm text-white/70 font-normal">{nav.header.services.allLink.description}</div>
                   </Link>
                 </div>
               </div>
               <div className="relative group">
-                <button className="text-gray-700 hover:text-orange-500 transition-colors flex items-center uppercase">
+                <button className="text-gray-700 hover:text-orange-600 transition-colors flex items-center uppercase">
                   {nav.header.locations.label}
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                <div className="absolute left-0 mt-2 w-180 bg-orange-500 rounded-4xl overflow-hidden border-2 border-orange-500 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="absolute left-0 mt-2 w-200 bg-orange-600 rounded-4xl overflow-hidden border-2 border-orange-600 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="bg-white rounded-b-4xl py-2">
                     <div className="grid grid-cols-3 gap-0 py-2">
-                      {cities.map((city) => (
-                        <Link key={city.slug} href={`/${city.slug}-movers`} className="block px-6 py-2 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200 rounded">
-                          <div className="font-medium text-sm">{city.name} Movers</div>
+                      {cities.map((city, i) => (
+                        <Link key={city.slug} href={`/${getTranslatedSlug(`${city.slug}-movers`, locale)}`} className={`block pl-6 py-2 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200 rounded ${i % 3 === 2 ? 'pr-6' : 'pr-0'}`}>
+                          <div className="font-medium text-sm">{nameTemplate.replace('{name}', city.name)}</div>
                         </Link>
                       ))}
                     </div>
                   </div>
-                  <Link href="/locations" className="block px-6 pt-4 pb-5 text-white hover:text-white/80 hover:translate-x-1 transition-all duration-200">
+                  <Link href={`/${getTranslatedSlug('locations', locale)}`} className="block pl-6 pr-6 pt-4 pb-5 text-white hover:text-white/80 hover:translate-x-1 transition-all duration-200">
                     <div className="font-medium">{nav.header.locations.allLink.label} &rarr;</div>
                     <div className="text-sm text-white/70 font-normal">{nav.header.locations.allLink.description}</div>
                   </Link>
                 </div>
               </div>
               <div className="relative group">
-                <button className="text-gray-700 hover:text-orange-500 transition-colors flex items-center uppercase">
+                <button className="text-gray-700 hover:text-orange-600 transition-colors flex items-center uppercase">
                   {nav.header.compare.label}
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                <div className="absolute left-0 mt-2 w-72 bg-orange-500 rounded-4xl overflow-hidden border-2 border-orange-500 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="absolute left-0 mt-2 w-72 bg-orange-600 rounded-4xl overflow-hidden border-2 border-orange-600 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="bg-white rounded-b-4xl py-2">
-                    {nav.header.compare.items.map((item) => (
-                      <Link key={item.href} href={item.href} className="block px-6 py-3 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200">
+                    {nav.header.compare.items.map((item: any) => (
+                      <Link key={item.href} href={item.href} className="block pl-6 pr-6 py-3 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200">
                         <div className="font-medium">{item.label}</div>
                         <div className="text-sm text-gray-500 font-normal">{item.description}</div>
                       </Link>
                     ))}
                   </div>
-                  <Link href={nav.header.compare.bottomLink.href} className="block px-6 pt-4 pb-5 text-white hover:text-white/80 hover:translate-x-1 transition-all duration-200">
+                  <Link href={nav.header.compare.bottomLink.href} className="block pl-6 pr-6 pt-4 pb-5 text-white hover:text-white/80 hover:translate-x-1 transition-all duration-200">
                     <div className="font-medium">{nav.header.compare.bottomLink.label} &rarr;</div>
                     <div className="text-sm text-white/70 font-normal">{nav.header.compare.bottomLink.description}</div>
                   </Link>
                 </div>
               </div>
               <div className="relative group">
-                <button className="text-gray-700 hover:text-orange-500 transition-colors flex items-center uppercase">
+                <button className="text-gray-700 hover:text-orange-600 transition-colors flex items-center uppercase">
                   {nav.header.resources.label}
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                <div className="absolute left-0 mt-2 w-72 bg-orange-500 rounded-4xl overflow-hidden border-2 border-orange-500 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="absolute left-0 mt-2 w-72 bg-orange-600 rounded-4xl overflow-hidden border-2 border-orange-600 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="bg-white rounded-b-4xl py-2">
-                    {nav.header.resources.items.map((item) => (
-                      <Link key={item.href} href={item.href} className="block px-6 py-3 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200">
+                    {nav.header.resources.items.map((item: any) => (
+                      <Link key={item.href} href={item.href} className="block pl-6 pr-6 py-3 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200">
                         <div className="font-medium">{item.label}</div>
                         <div className="text-sm text-gray-500 font-normal">{item.description}</div>
                       </Link>
                     ))}
                   </div>
-                  <Link href={nav.header.resources.bottomLink.href} className="block px-6 pt-4 pb-5 text-white hover:text-white/80 hover:translate-x-1 transition-all duration-200">
+                  <Link href={nav.header.resources.bottomLink.href} className="block pl-6 pr-6 pt-4 pb-5 text-white hover:text-white/80 hover:translate-x-1 transition-all duration-200">
                     <div className="font-medium">{nav.header.resources.bottomLink.label} &rarr;</div>
                     <div className="text-sm text-white/70 font-normal">{nav.header.resources.bottomLink.description}</div>
                   </Link>
                 </div>
               </div>
               <div className="relative group">
-                <button className="text-gray-700 hover:text-orange-500 transition-colors flex items-center uppercase">
+                <button className="text-gray-700 hover:text-orange-600 transition-colors flex items-center uppercase">
                   {nav.header.company.label}
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                <div className="absolute left-0 mt-2 w-72 bg-orange-500 rounded-4xl overflow-hidden border-2 border-orange-500 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="absolute left-0 mt-2 w-72 bg-orange-600 rounded-4xl overflow-hidden border-2 border-orange-600 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="bg-white rounded-b-4xl py-2">
-                    {nav.header.company.items.map((item) => (
-                      <Link key={item.href} href={item.href} className="block px-6 py-3 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200">
+                    {nav.header.company.items.map((item: any) => (
+                      <Link key={item.href} href={item.href} className="block pl-6 pr-6 py-3 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200">
                         <div className="font-medium">{item.label}</div>
                         <div className="text-sm text-gray-500 font-normal">{item.description}</div>
                       </Link>
                     ))}
                   </div>
-                  <Link href={nav.header.company.bottomLink.href} className="block px-6 pt-4 pb-5 text-white hover:text-white/80 hover:translate-x-1 transition-all duration-200">
+                  <Link href={nav.header.company.bottomLink.href} className="block pl-6 pr-6 pt-4 pb-5 text-white hover:text-white/80 hover:translate-x-1 transition-all duration-200">
                     <div className="font-medium">{nav.header.company.bottomLink.label} &rarr;</div>
                     <div className="text-sm text-white/70 font-normal">{nav.header.company.bottomLink.description}</div>
                   </Link>
                 </div>
               </div>
 
+              <LanguageSelectorHeader />
+
               <div className="flex items-center space-x-3">
                 <div className="flex flex-col items-center">
-                  <a href={`tel:${phoneTel}`} className="flex items-center justify-center space-x-2 border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-semibold py-3 px-6 rounded-lg transition-colors w-48">
+                  <a href={`tel:${phoneTel}`} className="flex items-center justify-center space-x-2 border border-orange-700 text-orange-700 hover:bg-orange-600 hover:text-white font-semibold py-3 px-4 rounded-lg transition-colors w-44">
                     <Phone className="w-4 h-4" />
                     <span>{phoneFormatted}</span>
                   </a>
                   <span className="text-xs text-gray-500 mt-1">{content.site.header.phoneSubtext}</span>
                 </div>
                 <div className="flex flex-col items-center">
-                  <Link href="/quote" className="flex items-center justify-center border border-orange-500 bg-orange-500 hover:bg-orange-600 hover:border-orange-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors w-48">
+                  <Link href={`/${getTranslatedSlug('quote', locale)}`} className="flex items-center justify-center border border-orange-600 bg-orange-600 hover:bg-orange-700 hover:border-orange-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors w-44">
                     {nav.header.cta.quoteButton}
                   </Link>
                   <span className="text-xs text-gray-500 mt-1">{content.site.header.quoteSubtext}</span>

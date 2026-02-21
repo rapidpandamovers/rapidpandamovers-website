@@ -2,9 +2,12 @@
 
 import { useState, useMemo, useEffect } from 'react'
 import { Star, Quote, ChevronLeft, ChevronRight, ChevronDown, ChevronUp, BadgeCheck, MessageSquare, ArrowRight } from 'lucide-react'
-import Link from 'next/link'
+import { H2, H3 } from '@/app/components/Heading'
+import { Link } from '@/i18n/routing'
 import reviewsData from '@/data/reviews.json'
-import ui from '@/data/ui.json'
+import { useMessages, useLocale } from 'next-intl'
+import { getTranslatedSlug } from '@/i18n/slug-map'
+import type { Locale } from '@/i18n/config'
 
 const TRUNCATE_LENGTH = 200 // Characters before showing "Read more"
 
@@ -119,6 +122,10 @@ export default function ReviewSection({
   className = "",
   variant = 'default'
 }: ReviewSectionProps) {
+  const { ui } = useMessages() as any
+  const locale = useLocale()
+  const dateLocale = locale === 'es' ? 'es-US' : 'en-US'
+  const reviewsPath = `/${getTranslatedSlug('reviews', locale as Locale)}`
   const [selectedPlatform, setSelectedPlatform] = useState<string | null>(null)
   const [currentSlide, setCurrentSlide] = useState(0)
   const [currentPage, setCurrentPage] = useState(1)
@@ -181,7 +188,7 @@ export default function ReviewSection({
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString)
-    return date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
+    return date.toLocaleDateString(dateLocale, { month: 'short', year: 'numeric' })
   }
 
   const nextSlide = () => {
@@ -207,9 +214,9 @@ export default function ReviewSection({
           {hasHeader && (
             <div className="text-center mb-10">
               {title && (
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                   {title}
-                </h2>
+                </H2>
               )}
               {subtitle && (
                 <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -223,12 +230,12 @@ export default function ReviewSection({
               <div key={review.id} className="bg-gray-50 rounded-4xl p-8 flex flex-col">
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-sm">
+                    <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center text-white text-shadow-sm font-bold text-lg shadow-sm">
                       {review.author.charAt(0)}
                     </div>
                     <div>
                       <div className="flex items-center gap-2">
-                        <h4 className="font-semibold text-gray-900">{review.author}</h4>
+                        <p className="font-semibold text-gray-900">{review.author}</p>
                         {review.verified && <BadgeCheck className="w-4 h-4 text-orange-500" />}
                       </div>
                       <p className="text-sm text-gray-500">{formatDate(review.date)}</p>
@@ -240,12 +247,12 @@ export default function ReviewSection({
                 </div>
                 <div className="flex items-center gap-1 mb-3">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className={`w-4 h-4 ${i < review.rating ? 'text-orange-500 fill-current' : 'text-gray-200'}`} />
+                    <Star key={i} className={`w-4 h-4 ${i < review.rating ? 'text-orange-600 fill-current' : 'text-gray-200'}`} />
                   ))}
                 </div>
                 <div className="flex-1">
                   <Quote className="w-8 h-8 text-gray-300 mb-2" />
-                  <p className="text-gray-700 leading-relaxed line-clamp-4">{review.text}</p>
+                  <p className="text-gray-700 leading-relaxed line-clamp-4">{getReviewText(review, locale).displayText}</p>
                 </div>
               </div>
             ))}
@@ -254,16 +261,16 @@ export default function ReviewSection({
             <div className="bg-orange-50 rounded-4xl p-8 flex flex-col">
               <div className="flex-1">
                 <MessageSquare className="w-10 h-10 text-orange-500 mb-4" />
-                <h3 className="text-2xl font-bold text-gray-800 mb-3">
+                <H3 className="text-2xl font-bold text-gray-800 mb-3">
                   {ui.review.ctaTitle}
-                </h3>
+                </H3>
                 <p className="text-gray-600 mb-6">
                   {ui.review.ctaSubtitle}
                 </p>
               </div>
               <Link
-                href="/reviews"
-                className="flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                href={reviewsPath}
+                className="flex items-center justify-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
               >
                 {ui.buttons.viewAllReviews}
                 <ArrowRight className="w-4 h-4" />
@@ -284,9 +291,9 @@ export default function ReviewSection({
             <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10">
               <div>
                 {title && (
-                  <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+                  <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
                     {title}
-                  </h2>
+                  </H2>
                 )}
                 {subtitle && (
                   <p className="text-lg text-gray-600">
@@ -296,8 +303,8 @@ export default function ReviewSection({
               </div>
               {showAllLink && (
                 <Link
-                  href="/reviews"
-                  className="inline-flex items-center text-orange-500 hover:text-orange-600 font-semibold mt-4 md:mt-0"
+                  href={reviewsPath}
+                  className="inline-flex items-center text-orange-700 hover:text-orange-800 font-semibold mt-4 md:mt-0"
                 >
                   {ui.buttons.viewAllReviews}
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -323,9 +330,9 @@ export default function ReviewSection({
         {hasHeader && (
           <div className="text-center mb-12">
             {title && (
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+              <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                 {title}
-              </h2>
+              </H2>
             )}
             {subtitle && (
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -342,11 +349,11 @@ export default function ReviewSection({
               onClick={() => setSelectedPlatform(null)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                 selectedPlatform === null
-                  ? 'bg-orange-500 text-white'
-                  : 'bg-white text-gray-700 hover:bg-orange-50 hover:text-orange-500'
+                  ? 'bg-orange-600 text-white'
+                  : 'bg-white text-gray-700 hover:bg-orange-50 hover:text-orange-600'
               }`}
             >
-              All Reviews
+              {ui.review.allReviews}
             </button>
             {availablePlatforms.map((platform) => (
               <button
@@ -354,8 +361,8 @@ export default function ReviewSection({
                 onClick={() => setSelectedPlatform(platform)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors flex items-center gap-2 ${
                   selectedPlatform === platform
-                    ? 'bg-orange-500 text-white'
-                    : 'bg-white text-gray-700 hover:bg-orange-50 hover:text-orange-500'
+                    ? 'bg-orange-600 text-white'
+                    : 'bg-white text-gray-700 hover:bg-orange-50 hover:text-orange-600'
                 }`}
               >
                 <PlatformIcon platform={platform} />
@@ -384,13 +391,13 @@ export default function ReviewSection({
               <>
                 <button
                   onClick={prevSlide}
-                  className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-orange-500 hover:bg-orange-600 text-white p-2 rounded-full shadow-lg transition-colors"
+                  className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-orange-600 hover:bg-orange-700 text-white p-2 rounded-full shadow-lg transition-colors"
                 >
                   <ChevronLeft className="w-6 h-6" />
                 </button>
                 <button
                   onClick={nextSlide}
-                  className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-orange-500 hover:bg-orange-600 text-white p-2 rounded-full shadow-lg transition-colors"
+                  className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-orange-600 hover:bg-orange-700 text-white p-2 rounded-full shadow-lg transition-colors"
                 >
                   <ChevronRight className="w-6 h-6" />
                 </button>
@@ -413,15 +420,15 @@ export default function ReviewSection({
               {currentPage > 1 ? (
                 <button
                   onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
-                  className="flex items-center px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-500 hover:text-orange-500 transition-colors"
+                  className="flex items-center px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600 transition-colors"
                 >
                   <ChevronLeft className="w-4 h-4 mr-1" />
-                  Previous
+                  {ui.pagination.previous}
                 </button>
               ) : (
                 <span className="flex items-center px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-400 cursor-not-allowed opacity-50">
                   <ChevronLeft className="w-4 h-4 mr-1" />
-                  Previous
+                  {ui.pagination.previous}
                 </span>
               )}
 
@@ -471,8 +478,8 @@ export default function ReviewSection({
                         onClick={() => setCurrentPage(page)}
                         className={`w-10 h-10 flex items-center justify-center rounded-lg font-medium transition-colors ${
                           currentPage === page
-                            ? 'bg-orange-500 text-white'
-                            : 'bg-white border border-gray-300 text-gray-700 hover:bg-orange-50 hover:border-orange-500 hover:text-orange-500'
+                            ? 'bg-orange-600 text-white'
+                            : 'bg-white border border-gray-300 text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600'
                         }`}
                       >
                         {page}
@@ -486,14 +493,14 @@ export default function ReviewSection({
               {currentPage < totalPages ? (
                 <button
                   onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
-                  className="flex items-center px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-500 hover:text-orange-500 transition-colors"
+                  className="flex items-center px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600 transition-colors"
                 >
-                  Next
+                  {ui.pagination.next}
                   <ChevronRight className="w-4 h-4 ml-1" />
                 </button>
               ) : (
                 <span className="flex items-center px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-400 cursor-not-allowed opacity-50">
-                  Next
+                  {ui.pagination.next}
                   <ChevronRight className="w-4 h-4 ml-1" />
                 </span>
               )}
@@ -501,7 +508,7 @@ export default function ReviewSection({
 
             {/* Page indicator */}
             <p className="text-center text-gray-500 mt-4">
-              Page {currentPage} of {totalPages} ({allFilteredReviews.length} reviews)
+              {ui.pagination.pageIndicator.replace('{current}', String(currentPage)).replace('{total}', String(totalPages)).replace('{count}', String(allFilteredReviews.length)).replace('{itemType}', ui.review.itemType)}
             </p>
           </>
         )}
@@ -510,10 +517,10 @@ export default function ReviewSection({
         {showAllLink && !showPagination && (
           <div className="text-center mt-12">
             <Link
-              href="/reviews"
-              className="inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors"
+              href={reviewsPath}
+              className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors"
             >
-              View All Reviews
+              {ui.review.viewAllReviews}
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </div>
@@ -521,6 +528,15 @@ export default function ReviewSection({
       </div>
     </section>
   )
+}
+
+// Helper to get display text for a review based on locale
+function getReviewText(review: typeof reviewsData.reviews[0], locale: string) {
+  const translations = (review as any).translations
+  if (locale !== 'en' && translations?.[locale]?.text) {
+    return { displayText: translations[locale].text, isTranslated: true, originalText: review.text }
+  }
+  return { displayText: review.text, isTranslated: false, originalText: review.text }
 }
 
 // Review Card Component with expand/collapse
@@ -531,20 +547,25 @@ function ReviewCard({
   review: typeof reviewsData.reviews[0]
   formatDate: (date: string) => string
 }) {
+  const { ui } = useMessages() as any
+  const locale = useLocale()
   const [isExpanded, setIsExpanded] = useState(false)
-  const needsTruncation = review.text.length > TRUNCATE_LENGTH
+  const [showOriginal, setShowOriginal] = useState(false)
+  const { displayText, isTranslated, originalText } = getReviewText(review, locale)
+  const text = showOriginal ? originalText : displayText
+  const needsTruncation = text.length > TRUNCATE_LENGTH
 
   return (
     <div className="bg-gray-50 rounded-4xl p-8 flex flex-col">
       {/* Header */}
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-sm">
+          <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center text-white text-shadow-sm font-bold text-lg shadow-sm">
             {review.author.charAt(0)}
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <h4 className="font-semibold text-gray-900">{review.author}</h4>
+              <p className="font-semibold text-gray-900">{review.author}</p>
               {review.verified && (
                 <BadgeCheck className="w-4 h-4 text-orange-500" />
               )}
@@ -563,7 +584,7 @@ function ReviewCard({
           <Star
             key={i}
             className={`w-4 h-4 ${
-              i < review.rating ? 'text-orange-500 fill-current' : 'text-gray-200'
+              i < review.rating ? 'text-orange-600 fill-current' : 'text-gray-200'
             }`}
           />
         ))}
@@ -573,33 +594,43 @@ function ReviewCard({
       <div className="flex-1">
         <Quote className="w-8 h-8 text-gray-300 mb-2" />
         <p className={`text-gray-700 leading-relaxed ${!isExpanded && needsTruncation ? 'line-clamp-4' : ''}`}>
-          {review.text}
+          {text}
         </p>
-        {needsTruncation && (
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="mt-2 text-orange-500 hover:text-orange-600 text-sm font-medium flex items-center gap-1 transition-colors"
-          >
-            {isExpanded ? (
-              <>
-                {ui.buttons.showLess}
-                <ChevronUp className="w-4 h-4" />
-              </>
-            ) : (
-              <>
-                {ui.buttons.readMore}
-                <ChevronDown className="w-4 h-4" />
-              </>
-            )}
-          </button>
-        )}
+        <div className="flex items-center gap-3 mt-2">
+          {needsTruncation && (
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="text-orange-700 hover:text-orange-800 text-sm font-medium flex items-center gap-1 transition-colors"
+            >
+              {isExpanded ? (
+                <>
+                  {ui.buttons.showLess}
+                  <ChevronUp className="w-4 h-4" />
+                </>
+              ) : (
+                <>
+                  {ui.buttons.readMore}
+                  <ChevronDown className="w-4 h-4" />
+                </>
+              )}
+            </button>
+          )}
+          {isTranslated && (
+            <button
+              onClick={() => setShowOriginal(!showOriginal)}
+              className="text-gray-500 hover:text-gray-600 text-sm transition-colors"
+            >
+              {showOriginal ? ui.review.hideOriginal : ui.review.seeOriginal}
+            </button>
+          )}
+        </div>
       </div>
 
       {/* Service/Location Tags */}
       {(review.services?.length > 0 || review.location?.city) && (
         <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-gray-100">
           {review.services?.map((svc: string, idx: number) => (
-            <span key={idx} className="text-xs bg-orange-50 text-orange-600 px-2.5 py-1 rounded-full font-medium">
+            <span key={idx} className="text-xs bg-orange-50 text-orange-700 px-2.5 py-1 rounded-full font-medium">
               {svc.replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase())}
             </span>
           ))}

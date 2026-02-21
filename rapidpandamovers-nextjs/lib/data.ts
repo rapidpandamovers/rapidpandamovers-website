@@ -1,5 +1,11 @@
 import cities from '@/data/locations.json';
+import esLocations from '@/data/es/locations.json';
 import services from '@/data/services.json';
+import esServices from '@/data/es/services.json';
+import comparisons from '@/data/comparisons.json';
+import esComparisons from '@/data/es/comparisons.json';
+import alternatives from '@/data/alternatives.json';
+import esAlternatives from '@/data/es/alternatives.json';
 import longDistanceRoutes from '@/data/long_distance_routes.json';
 import localRoutes from '@/data/local_routes.json';
 import pageContent from '@/data/content.json';
@@ -57,6 +63,91 @@ export const getAllActiveServices = () => {
       slug: service.slug,
       description: service.description
     }));
+};
+
+const localizedServicesMap: Record<string, typeof services> = {
+  es: esServices as typeof services,
+};
+
+export const getLocalizedServices = (locale: string) => {
+  const src = localizedServicesMap[locale] || allServices;
+  return src
+    .filter((service: any) => service.is_active !== false)
+    .map((service: any) => ({
+      name: service.name as string,
+      slug: service.slug as string,
+    }));
+};
+
+export const getLocalizedServiceBySlug = (slug: string, locale: string) => {
+  const src = localizedServicesMap[locale] || allServices;
+  return (src as any[]).find((service: any) => service.slug === slug) ?? null;
+};
+
+export const getLocalizedAllActiveServices = (locale: string) => {
+  const src = localizedServicesMap[locale] || allServices;
+  return (src as any[])
+    .filter((service: any) => service.is_active !== false)
+    .map((service: any) => ({
+      name: service.name as string,
+      slug: service.slug as string,
+      description: service.description as string,
+    }));
+};
+
+const localizedComparisonsMap: Record<string, typeof comparisons> = {
+  es: esComparisons as typeof comparisons,
+};
+
+const localizedAlternativesMap: Record<string, typeof alternatives> = {
+  es: esAlternatives as typeof alternatives,
+};
+
+const localizedLocationsMap: Record<string, typeof cities> = {
+  es: esLocations as typeof cities,
+};
+
+export const getLocalizedComparisons = (locale: string) => {
+  return (localizedComparisonsMap[locale] || comparisons).comparisons;
+};
+
+export const getLocalizedAlternatives = (locale: string) => {
+  return (localizedAlternativesMap[locale] || alternatives).alternatives;
+};
+
+export const getLocalizedCityBySlug = (slug: string, locale: string) => {
+  const cleanSlug = slug.endsWith('-movers') ? slug.replace(/-movers$/, '') : slug;
+  const src = localizedLocationsMap[locale] || allCities;
+  for (const state of src.states) {
+    for (const county of state.counties) {
+      const city = county.cities.find((c: any) => c.slug === cleanSlug);
+      if (city) return city;
+    }
+  }
+  return null;
+};
+
+export const getLocalizedNeighborhoodBySlug = (slug: string, locale: string) => {
+  const cleanSlug = slug.endsWith('-movers') ? slug.replace(/-movers$/, '') : slug;
+  const src = localizedLocationsMap[locale] || allCities;
+  for (const state of src.states) {
+    for (const county of state.counties) {
+      for (const city of county.cities) {
+        if (city.neighborhoods) {
+          const neighborhood = city.neighborhoods.find((n: any) => n.slug === cleanSlug);
+          if (neighborhood) {
+            return {
+              ...neighborhood,
+              parentCity: city,
+              county: county,
+              state: state
+            };
+          }
+        }
+      }
+    }
+  }
+  return null;
 };
 
 export const getCityBySlug = (slug: string) => {

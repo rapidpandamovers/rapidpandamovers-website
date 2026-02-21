@@ -1,4 +1,6 @@
 import { ExternalLink } from 'lucide-react';
+import { getMessages } from 'next-intl/server';
+import { H2 } from '@/app/components/Heading';
 
 interface OverviewSectionProps {
   title: React.ReactNode;
@@ -8,13 +10,14 @@ interface OverviewSectionProps {
   children: React.ReactNode;
 }
 
-export default function OverviewSection({
+export default async function OverviewSection({
   title,
   name,
   website,
   icon,
   children,
 }: OverviewSectionProps) {
+  const { ui } = (await getMessages()) as any;
   return (
     <section className="pt-20">
       <div className="container mx-auto">
@@ -22,17 +25,17 @@ export default function OverviewSection({
           <div className={icon ? 'flex items-center gap-12' : ''}>
             <div className="flex-1">
               <div className={`flex items-center ${website ? 'justify-between' : ''} mb-6`}>
-                <h2 className="text-4xl font-bold text-gray-800">
+                <H2 className="text-4xl font-bold text-gray-800">
                   {title}
-                </h2>
+                </H2>
                 {website && (
                   <a
                     href={website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-orange-500 hover:text-orange-600 flex items-center text-sm"
+                    className="text-orange-700 hover:text-orange-800 flex items-center text-sm"
                   >
-                    Visit Website
+                    {ui.buttons.visitWebsite}
                     <ExternalLink className="w-4 h-4 ml-1" />
                   </a>
                 )}

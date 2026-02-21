@@ -1,6 +1,6 @@
 import { Star } from 'lucide-react'
-import content from '@/data/content.json'
-import ui from '@/data/ui.json'
+import { getMessages } from 'next-intl/server'
+import { H2 } from '@/app/components/Heading'
 
 interface PlatformRating {
   name: string
@@ -42,44 +42,47 @@ const BBBIcon = () => (
   </svg>
 )
 
-const defaultRatings: PlatformRating[] = [
-  {
-    name: 'Google',
-    rating: String(content.reviews.platforms.google.rating),
-    icon: <GoogleIcon />,
-    color: '#4285F4'
-  },
-  {
-    name: 'Yelp',
-    rating: String(content.reviews.platforms.yelp.rating),
-    icon: <YelpIcon />,
-    color: '#D32323'
-  },
-  {
-    name: 'BBB',
-    rating: String(content.reviews.platforms.bbb.rating),
-    icon: <BBBIcon />,
-    color: '#005A78'
-  }
-]
-
-export default function RatingSection({
-  title = ui.ratings.defaultTitle,
-  ratings = defaultRatings,
+export default async function RatingSection({
+  title,
+  ratings,
   className = ''
 }: RatingSectionProps) {
+  const { content, ui } = (await getMessages()) as any
+  const defaultRatings: PlatformRating[] = [
+    {
+      name: 'Google',
+      rating: String(content.reviews.platforms.google.rating),
+      icon: <GoogleIcon />,
+      color: '#4285F4'
+    },
+    {
+      name: 'Yelp',
+      rating: String(content.reviews.platforms.yelp.rating),
+      icon: <YelpIcon />,
+      color: '#D32323'
+    },
+    {
+      name: 'BBB',
+      rating: String(content.reviews.platforms.bbb.rating),
+      icon: <BBBIcon />,
+      color: '#005A78'
+    }
+  ]
+  title = title ?? ui.ratings.defaultTitle
+  ratings = ratings ?? defaultRatings
+
   return (
     <section className={`-mt-8 relative z-[-1] ${className}`}>
       <div className="container mx-auto">
         <div className="bg-gray-100 rounded-b-4xl px-6 pt-14 pb-6 md:px-8">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
           {/* Title */}
-          <h2 className="text-xl md:text-2xl font-bold text-gray-900 lg:flex-shrink-0">
+          <H2 className="text-xl md:text-2xl font-bold text-gray-900 lg:flex-shrink-0">
             {title}
-          </h2>
+          </H2>
 
           {/* Ratings */}
-          <div className="flex flex-wrap gap-4 lg:gap-6">
+          <div className="flex flex-wrap gap-4">
             {ratings.map((rating, index) => (
               <div
                 key={index}
@@ -97,7 +100,7 @@ export default function RatingSection({
                     {rating.rating !== 'A+' && (
                       <div className="flex items-center">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-3.5 h-3.5 text-orange-500 fill-current" />
+                          <Star key={i} className="w-3.5 h-3.5 text-orange-600 fill-current" />
                         ))}
                       </div>
                     )}

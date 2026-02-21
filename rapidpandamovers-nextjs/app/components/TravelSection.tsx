@@ -1,5 +1,7 @@
 import { Navigation, MapPin, Clock, DollarSign, ArrowRight } from 'lucide-react'
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
+import { getMessages } from 'next-intl/server'
+import { H2, H3 } from '@/app/components/Heading'
 
 interface TravelSectionProps {
   origin: string
@@ -15,7 +17,7 @@ interface TravelSectionProps {
   className?: string
 }
 
-export default function TravelSection({
+export default async function TravelSection({
   origin,
   destination,
   originSlug,
@@ -28,6 +30,8 @@ export default function TravelSection({
   destinationHasPage = true,
   className = '',
 }: TravelSectionProps) {
+  const { ui } = (await getMessages()) as any
+
   // Format drive time
   const hours = Math.floor(driveTimeMinutes / 60)
   const minutes = driveTimeMinutes % 60
@@ -41,11 +45,11 @@ export default function TravelSection({
         <div className="mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-              Moving from <span className="text-orange-500">{origin}</span> to <span className="text-orange-500">{destination}</span>
-            </h2>
+            <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+              {ui.travel.movingFrom.split('{origin}')[0]}<span className="text-orange-700">{origin}</span>{ui.travel.movingFrom.split('{origin}')[1].split('{destination}')[0]}<span className="text-orange-700">{destination}</span>{ui.travel.movingFrom.split('{destination}')[1] || ''}
+            </H2>
             <p className="text-xl text-gray-600 mb-8">
-              Professional moving services for your relocation from {origin} to {destination}
+              {ui.travel.movingFromDesc.replace('{origin}', origin).replace('{destination}', destination)}
             </p>
           </div>
 
@@ -53,18 +57,18 @@ export default function TravelSection({
           <div className={`grid grid-cols-1 ${startingCost ? 'md:grid-cols-3' : 'md:grid-cols-2'} gap-6 mb-12`}>
             <div className="bg-gray-50 rounded-lg p-6 text-center">
               <Navigation className="w-8 h-8 text-orange-500 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-gray-700 mb-2">Distance</h3>
-              <p className="text-2xl font-bold text-gray-800">{distanceMiles} miles</p>
+              <H3 className="text-lg font-semibold text-gray-700 mb-2">{ui.travel.distance}</H3>
+              <p className="text-2xl font-bold text-gray-800">{ui.travel.miles.replace('{count}', String(distanceMiles))}</p>
             </div>
             <div className="bg-gray-50 rounded-lg p-6 text-center">
               <Clock className="w-8 h-8 text-orange-500 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-gray-700 mb-2">Drive Time</h3>
+              <H3 className="text-lg font-semibold text-gray-700 mb-2">{ui.travel.driveTime}</H3>
               <p className="text-2xl font-bold text-gray-800">{timeDisplay}</p>
             </div>
             {startingCost && (
               <div className="bg-gray-50 rounded-lg p-6 text-center">
                 <DollarSign className="w-8 h-8 text-orange-500 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-700 mb-2">Starting Cost</h3>
+                <H3 className="text-lg font-semibold text-gray-700 mb-2">{ui.travel.startingCost}</H3>
                 <p className="text-2xl font-bold text-gray-800">${startingCost.toLocaleString()}</p>
               </div>
             )}
@@ -73,9 +77,9 @@ export default function TravelSection({
           {/* Origin & Destination Cards */}
           {showLocationLinks && (originSlug || destinationSlug) && (
             <div className="bg-orange-50 rounded-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">
-                Origin & Destination
-              </h3>
+              <H3 className="text-2xl font-bold text-gray-800 mb-6 text-center">
+                {ui.travel.originDestination}
+              </H3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Origin Card */}
                 {originSlug && originHasPage ? (
@@ -86,18 +90,18 @@ export default function TravelSection({
                     <div className="flex items-center space-x-4">
                       <MapPin className="w-6 h-6 text-orange-500" />
                       <div>
-                        <h4 className="font-semibold text-gray-700 mb-1">Origin</h4>
+                        <h4 className="font-semibold text-gray-700 mb-1">{ui.travel.origin}</h4>
                         <p className="text-xl font-bold text-gray-800">{origin}</p>
                       </div>
                     </div>
-                    <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-orange-500 group-hover:translate-x-1 transition-all" />
+                    <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-orange-600 group-hover:translate-x-1 transition-all" />
                   </Link>
                 ) : (
                   <div className="bg-white rounded-lg p-6 shadow-sm flex items-center">
                     <div className="flex items-center space-x-4">
                       <MapPin className="w-6 h-6 text-orange-500" />
                       <div>
-                        <h4 className="font-semibold text-gray-700 mb-1">Origin</h4>
+                        <h4 className="font-semibold text-gray-700 mb-1">{ui.travel.origin}</h4>
                         <p className="text-xl font-bold text-gray-800">{origin}</p>
                       </div>
                     </div>
@@ -112,18 +116,18 @@ export default function TravelSection({
                     <div className="flex items-center space-x-4">
                       <MapPin className="w-6 h-6 text-orange-500" />
                       <div>
-                        <h4 className="font-semibold text-gray-700 mb-1">Destination</h4>
+                        <h4 className="font-semibold text-gray-700 mb-1">{ui.travel.destination}</h4>
                         <p className="text-xl font-bold text-gray-800">{destination}</p>
                       </div>
                     </div>
-                    <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-orange-500 group-hover:translate-x-1 transition-all" />
+                    <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-orange-600 group-hover:translate-x-1 transition-all" />
                   </Link>
                 ) : (
                   <div className="bg-white rounded-lg p-6 shadow-sm flex items-center">
                     <div className="flex items-center space-x-4">
                       <MapPin className="w-6 h-6 text-orange-500" />
                       <div>
-                        <h4 className="font-semibold text-gray-700 mb-1">Destination</h4>
+                        <h4 className="font-semibold text-gray-700 mb-1">{ui.travel.destination}</h4>
                         <p className="text-xl font-bold text-gray-800">{destination}</p>
                       </div>
                     </div>

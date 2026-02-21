@@ -3,6 +3,8 @@
 import { useRef } from 'react'
 import Image from 'next/image'
 import { ChevronLeft, ChevronRight, MapPin, ExternalLink } from 'lucide-react'
+import { useMessages } from 'next-intl'
+import { H2, H3 } from '@/app/components/Heading'
 
 export interface Sight {
   name: string
@@ -33,6 +35,7 @@ export default function SightSection({
   showArrows = true,
   maxItems,
 }: SightSectionProps) {
+  const { ui } = useMessages() as any
   const scrollRef = useRef<HTMLDivElement>(null)
 
   const scroll = (direction: 'left' | 'right') => {
@@ -52,12 +55,12 @@ export default function SightSection({
   }
 
   const defaultTitle = locationName
-    ? `Popular Sights in ${locationName}`
-    : 'Popular Landmarks & Sights'
+    ? ui.sights.popularSightsIn.replace('{name}', locationName)
+    : ui.sights.popularSightsDefault
 
   const defaultSubtitle = locationName
-    ? `Explore the best attractions and landmarks in ${locationName}`
-    : 'Discover popular attractions in the area'
+    ? ui.sights.exploreIn.replace('{name}', locationName)
+    : ui.sights.exploreDefault
 
   const getCategoryColor = (category?: string) => {
     switch (category) {
@@ -83,9 +86,9 @@ export default function SightSection({
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             {title || defaultTitle}
-          </h2>
+          </H2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             {subtitle || defaultSubtitle}
           </p>
@@ -142,9 +145,9 @@ export default function SightSection({
 
                   {/* Content */}
                   <div className="p-5">
-                    <h3 className="text-lg font-bold text-gray-800 mb-2 group-hover:text-orange-500 transition-colors">
+                    <H3 className="text-lg font-bold text-gray-800 mb-2 group-hover:text-orange-600 transition-colors">
                       {sight.name}
-                    </h3>
+                    </H3>
                     <p className="text-gray-600 text-sm mb-3 line-clamp-2">
                       {sight.description}
                     </p>
@@ -163,9 +166,9 @@ export default function SightSection({
                         href={sight.website}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-orange-500 hover:text-orange-600 text-sm font-medium transition-colors"
+                        className="inline-flex items-center text-orange-700 hover:text-orange-800 text-sm font-medium transition-colors"
                       >
-                        Learn More
+                        {ui.buttons.learnMore}
                         <ExternalLink className="w-3 h-3 ml-1" />
                       </a>
                     )}

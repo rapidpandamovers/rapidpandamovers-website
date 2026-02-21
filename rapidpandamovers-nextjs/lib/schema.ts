@@ -37,10 +37,11 @@ interface FAQ {
 /**
  * Generate FAQPage schema
  */
-export function generateFAQSchema(faqs: FAQ[]) {
+export function generateFAQSchema(faqs: FAQ[], locale?: string) {
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
+    inLanguage: locale === 'es' ? 'es' : 'en',
     mainEntity: faqs.map(faq => ({
       '@type': 'Question',
       name: faq.question,
@@ -58,13 +59,14 @@ interface ServiceSchemaOptions {
   url: string
   areaServed?: string
   provider?: string
+  locale?: string
 }
 
 /**
  * Generate Service schema
  */
 export function generateServiceSchema(options: ServiceSchemaOptions) {
-  const { name, description, url, areaServed = 'Miami-Dade County, FL', provider = SITE_CONFIG.name } = options
+  const { name, description, url, areaServed = 'Miami-Dade County, FL', provider = SITE_CONFIG.name, locale } = options
 
   return {
     '@context': 'https://schema.org',
@@ -72,6 +74,7 @@ export function generateServiceSchema(options: ServiceSchemaOptions) {
     name,
     description,
     url: `${SITE_CONFIG.domain}${url}`,
+    inLanguage: locale === 'es' ? 'es' : 'en',
     provider: {
       '@type': 'LocalBusiness',
       name: provider,
@@ -93,6 +96,7 @@ interface ArticleSchemaOptions {
   datePublished: string
   dateModified?: string
   author?: string
+  locale?: string
 }
 
 /**
@@ -107,6 +111,7 @@ export function generateArticleSchema(options: ArticleSchemaOptions) {
     datePublished,
     dateModified,
     author = SITE_CONFIG.name,
+    locale,
   } = options
 
   return {
@@ -116,6 +121,7 @@ export function generateArticleSchema(options: ArticleSchemaOptions) {
     description,
     image,
     url: `${SITE_CONFIG.domain}${url}`,
+    inLanguage: locale === 'es' ? 'es' : 'en',
     datePublished,
     dateModified: dateModified || datePublished,
     author: {
@@ -169,13 +175,14 @@ interface MovingServiceSchemaOptions {
   destinationCity: string
   distance: number
   url: string
+  locale?: string
 }
 
 /**
  * Generate MovingCompany + Route schema for route pages
  */
 export function generateRouteSchema(options: MovingServiceSchemaOptions) {
-  const { originCity, destinationCity, distance, url } = options
+  const { originCity, destinationCity, distance, url, locale } = options
 
   return {
     '@context': 'https://schema.org',
@@ -183,6 +190,7 @@ export function generateRouteSchema(options: MovingServiceSchemaOptions) {
     name: `${originCity} to ${destinationCity} Moving Service`,
     description: `Professional moving services from ${originCity} to ${destinationCity}, ${distance} miles.`,
     url: `${SITE_CONFIG.domain}${url}`,
+    inLanguage: locale === 'es' ? 'es' : 'en',
     provider: {
       '@type': 'MovingCompany',
       name: SITE_CONFIG.name,
@@ -199,5 +207,51 @@ export function generateRouteSchema(options: MovingServiceSchemaOptions) {
       },
     ],
     serviceType: 'Long Distance Moving',
+  }
+}
+
+interface ReviewSchemaOptions {
+  ratingValue: string
+  reviewCount: string
+  locale?: string
+}
+
+/**
+ * Generate AggregateRating schema for reviews page
+ */
+export function generateReviewSchema(options: ReviewSchemaOptions) {
+  const { ratingValue, reviewCount, locale } = options
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    '@id': `${SITE_CONFIG.domain}/#organization`,
+    name: SITE_CONFIG.name,
+    inLanguage: locale === 'es' ? 'es' : 'en',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue,
+      reviewCount,
+      bestRating: '5',
+      worstRating: '1',
+    },
+  }
+}
+
+/**
+ * Generate WebSite schema for homepage
+ */
+export function generateWebSiteSchema(locale?: string) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: SITE_CONFIG.name,
+    url: SITE_CONFIG.domain,
+    inLanguage: locale === 'es' ? 'es' : 'en',
+    publisher: {
+      '@type': 'Organization',
+      '@id': `${SITE_CONFIG.domain}/#organization`,
+      name: SITE_CONFIG.name,
+    },
   }
 }

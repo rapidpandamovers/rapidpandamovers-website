@@ -1,12 +1,11 @@
 'use client';
 
-import { useState, FormEvent } from 'react';
+import { useState, useRef, FormEvent } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Loader2 } from 'lucide-react';
-import content from '@/data/content.json';
-
-const phone = content.site.phone;
-const phoneFormatted = `(${phone.slice(0,3)}) ${phone.slice(4,7)}-${phone.slice(8)}`;
+import { useMessages } from 'next-intl';
+import { H3 } from '@/app/components/Heading';
+import TurnstileWidget, { TurnstileWidgetRef } from '@/app/components/TurnstileWidget';
 
 // Map size query param to select option value
 const sizeMap: Record<string, string> = {
@@ -18,6 +17,9 @@ const sizeMap: Record<string, string> = {
 };
 
 export default function ReservationForm() {
+  const { content, ui } = useMessages() as any
+  const phone = content.site.phone;
+  const phoneFormatted = `(${phone.slice(0,3)}) ${phone.slice(4,7)}-${phone.slice(8)}`;
   const searchParams = useSearchParams();
   const originCity = searchParams.get('originCity') || '';
   const originZip = searchParams.get('originZip') || '';
@@ -28,6 +30,8 @@ export default function ReservationForm() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [turnstileToken, setTurnstileToken] = useState('');
+  const turnstileRef = useRef<TurnstileWidgetRef>(null);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -38,18 +42,11 @@ export default function ReservationForm() {
 
     // Collect additional services
     const additionalServices: string[] = [];
-    const serviceOptions = ['unpacking', 'furniture', 'piano', 'storage', 'specialty', 'cleaning'];
-    serviceOptions.forEach(service => {
+    const serviceKeys = ['unpacking', 'furniture', 'piano', 'storage', 'specialty', 'cleaning'];
+    const serviceLabels = ui.forms.reservation.additionalServiceOptions as string[];
+    serviceKeys.forEach((service, index) => {
       if (formData.get(`service-${service}`)) {
-        const labels: Record<string, string> = {
-          'unpacking': 'Unpacking Services',
-          'furniture': 'Furniture Disassembly/Assembly',
-          'piano': 'Piano Moving',
-          'storage': 'Storage Services',
-          'specialty': 'Specialty Items',
-          'cleaning': 'Cleaning Services',
-        };
-        additionalServices.push(labels[service]);
+        additionalServices.push(serviceLabels[index]);
       }
     });
 
@@ -77,6 +74,7 @@ export default function ReservationForm() {
       additionalServices,
       specialItems: formData.get('special-items'),
       hearAbout: formData.get('hear-about'),
+      turnstileToken,
     };
 
     try {
@@ -95,6 +93,8 @@ export default function ReservationForm() {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
+      setTurnstileToken('');
+      turnstileRef.current?.reset();
     }
   };
 
@@ -106,12 +106,12 @@ export default function ReservationForm() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-2xl font-bold text-gray-800 mb-4">Reservation Request Submitted!</h3>
+        <H3 className="text-2xl font-bold text-gray-800 mb-4">{ui.forms.reservation.successTitle}</H3>
         <p className="text-gray-600 text-lg mb-6">
-          Thank you for choosing Rapid Panda Movers. We'll contact you within 24 hours to confirm your booking.
+          {ui.forms.reservation.successDescription}
         </p>
-        <a href="/" className="inline-block bg-orange-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors">
-          Return Home
+        <a href="/" className="inline-block bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors">
+          {ui.forms.reservation.returnHome}
         </a>
       </div>
     );
@@ -121,13 +121,13 @@ export default function ReservationForm() {
     <form onSubmit={handleSubmit} className="space-y-6">
       {/* Section 1: Personal Details */}
       <div className="bg-white rounded-2xl p-6 md:p-8">
-        <h3 className="text-xl font-bold mb-6 text-gray-800">
-          1. Personal Details
-        </h3>
+        <H3 className="text-xl font-bold mb-6 text-gray-800">
+          {ui.forms.reservation.sections.personal}
+        </H3>
         <div className="grid md:grid-cols-2 gap-6">
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-              Full Name *
+              {ui.forms.reservation.labels.fullName}
             </label>
             <input
               type="text"
@@ -135,12 +135,12 @@ export default function ReservationForm() {
               name="name"
               required
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-              placeholder="Your full name"
+              placeholder={ui.forms.reservation.placeholders.fullName}
             />
           </div>
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-              Email Address *
+              {ui.forms.reservation.labels.email}
             </label>
             <input
               type="email"
@@ -148,12 +148,12 @@ export default function ReservationForm() {
               name="email"
               required
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-              placeholder="your.email@example.com"
+              placeholder={ui.forms.reservation.placeholders.email}
             />
           </div>
           <div>
             <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-              Phone Number *
+              {ui.forms.reservation.labels.phone}
             </label>
             <input
               type="tel"
@@ -161,19 +161,19 @@ export default function ReservationForm() {
               name="phone"
               required
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-              placeholder="(786) 555-1234"
+              placeholder={ui.forms.reservation.placeholders.phone}
             />
           </div>
           <div>
             <label htmlFor="reference" className="block text-sm font-medium text-gray-700 mb-2">
-              Reference Number (if any)
+              {ui.forms.reservation.labels.referenceNumber}
             </label>
             <input
               type="text"
               id="reference"
               name="reference"
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-              placeholder="Quote reference #"
+              placeholder={ui.forms.reservation.placeholders.reference}
             />
           </div>
         </div>
@@ -181,17 +181,17 @@ export default function ReservationForm() {
 
       {/* Section 2: Moving Locations */}
       <div className="bg-white rounded-2xl p-6 md:p-8">
-        <h3 className="text-xl font-bold mb-6 text-gray-800">
-          2. Moving Locations
-        </h3>
+        <H3 className="text-xl font-bold mb-6 text-gray-800">
+          {ui.forms.reservation.sections.locations}
+        </H3>
 
         {/* Pick-up Location */}
         <div className="mb-6">
-          <h4 className="font-medium text-gray-800 mb-3">Pick-up Location</h4>
+          <h4 className="font-medium text-gray-800 mb-3">{ui.forms.reservation.labels.pickupLocation}</h4>
           <div className="grid md:grid-cols-3 gap-4">
             <div className="md:col-span-2">
               <label htmlFor="pickup-address" className="block text-sm font-medium text-gray-700 mb-2">
-                Address *
+                {ui.forms.reservation.labels.address}
               </label>
               <input
                 type="text"
@@ -199,26 +199,26 @@ export default function ReservationForm() {
                 name="pickup-address"
                 required
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                placeholder="Street address"
+                placeholder={ui.forms.reservation.placeholders.address}
               />
             </div>
             <div>
               <label htmlFor="pickup-apt" className="block text-sm font-medium text-gray-700 mb-2">
-                Apt/Unit #
+                {ui.forms.reservation.labels.aptUnit}
               </label>
               <input
                 type="text"
                 id="pickup-apt"
                 name="pickup-apt"
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                placeholder="Apt #"
+                placeholder={ui.forms.reservation.placeholders.apt}
               />
             </div>
           </div>
           <div className="grid md:grid-cols-3 gap-4 mt-4">
             <div>
               <label htmlFor="pickup-city" className="block text-sm font-medium text-gray-700 mb-2">
-                City *
+                {ui.forms.reservation.labels.city}
               </label>
               <input
                 type="text"
@@ -227,12 +227,12 @@ export default function ReservationForm() {
                 required
                 defaultValue={originCity}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                placeholder="City"
+                placeholder={ui.forms.reservation.placeholders.city}
               />
             </div>
             <div>
               <label htmlFor="pickup-state" className="block text-sm font-medium text-gray-700 mb-2">
-                State *
+                {ui.forms.reservation.labels.state}
               </label>
               <input
                 type="text"
@@ -246,7 +246,7 @@ export default function ReservationForm() {
             </div>
             <div>
               <label htmlFor="pickup-zip" className="block text-sm font-medium text-gray-700 mb-2">
-                Zip Code *
+                {ui.forms.reservation.labels.zipCode}
               </label>
               <input
                 type="text"
@@ -261,17 +261,17 @@ export default function ReservationForm() {
           </div>
           <label className="flex items-center mt-3">
             <input type="checkbox" name="pickup-storage" className="mr-3 w-4 h-4 text-orange-500" />
-            <span className="text-sm text-gray-600">Pick-up is from a storage facility</span>
+            <span className="text-sm text-gray-600">{ui.forms.reservation.labels.pickupStorage}</span>
           </label>
         </div>
 
         {/* Drop-off Location */}
         <div>
-          <h4 className="font-medium text-gray-800 mb-3">Drop-off Location</h4>
+          <h4 className="font-medium text-gray-800 mb-3">{ui.forms.reservation.labels.dropoffLocation}</h4>
           <div className="grid md:grid-cols-3 gap-4">
             <div className="md:col-span-2">
               <label htmlFor="dropoff-address" className="block text-sm font-medium text-gray-700 mb-2">
-                Address *
+                {ui.forms.reservation.labels.address}
               </label>
               <input
                 type="text"
@@ -279,26 +279,26 @@ export default function ReservationForm() {
                 name="dropoff-address"
                 required
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                placeholder="Street address"
+                placeholder={ui.forms.reservation.placeholders.address}
               />
             </div>
             <div>
               <label htmlFor="dropoff-apt" className="block text-sm font-medium text-gray-700 mb-2">
-                Apt/Unit #
+                {ui.forms.reservation.labels.aptUnit}
               </label>
               <input
                 type="text"
                 id="dropoff-apt"
                 name="dropoff-apt"
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                placeholder="Apt #"
+                placeholder={ui.forms.reservation.placeholders.apt}
               />
             </div>
           </div>
           <div className="grid md:grid-cols-3 gap-4 mt-4">
             <div>
               <label htmlFor="dropoff-city" className="block text-sm font-medium text-gray-700 mb-2">
-                City *
+                {ui.forms.reservation.labels.city}
               </label>
               <input
                 type="text"
@@ -307,12 +307,12 @@ export default function ReservationForm() {
                 required
                 defaultValue={destinationCity}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                placeholder="City"
+                placeholder={ui.forms.reservation.placeholders.city}
               />
             </div>
             <div>
               <label htmlFor="dropoff-state" className="block text-sm font-medium text-gray-700 mb-2">
-                State *
+                {ui.forms.reservation.labels.state}
               </label>
               <input
                 type="text"
@@ -326,7 +326,7 @@ export default function ReservationForm() {
             </div>
             <div>
               <label htmlFor="dropoff-zip" className="block text-sm font-medium text-gray-700 mb-2">
-                Zip Code *
+                {ui.forms.reservation.labels.zipCode}
               </label>
               <input
                 type="text"
@@ -341,20 +341,20 @@ export default function ReservationForm() {
           </div>
           <label className="flex items-center mt-3">
             <input type="checkbox" name="dropoff-storage" className="mr-3 w-4 h-4 text-orange-500" />
-            <span className="text-sm text-gray-600">Drop-off is to a storage facility</span>
+            <span className="text-sm text-gray-600">{ui.forms.reservation.labels.dropoffStorage}</span>
           </label>
         </div>
       </div>
 
       {/* Section 3: Date & Time */}
       <div className="bg-white rounded-2xl p-6 md:p-8">
-        <h3 className="text-xl font-bold mb-6 text-gray-800">
-          3. Moving Date & Time
-        </h3>
+        <H3 className="text-xl font-bold mb-6 text-gray-800">
+          {ui.forms.reservation.sections.dateTime}
+        </H3>
         <div className="grid md:grid-cols-2 gap-6">
           <div>
             <label htmlFor="move-date" className="block text-sm font-medium text-gray-700 mb-2">
-              Moving Date *
+              {ui.forms.reservation.labels.movingDate}
             </label>
             <input
               type="date"
@@ -366,7 +366,7 @@ export default function ReservationForm() {
           </div>
           <div>
             <label htmlFor="move-time" className="block text-sm font-medium text-gray-700 mb-2">
-              Preferred Start Time *
+              {ui.forms.reservation.labels.startTime}
             </label>
             <select
               id="move-time"
@@ -374,14 +374,15 @@ export default function ReservationForm() {
               required
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
             >
-              <option value="">Select a time</option>
-              <option value="8:00 AM - 9:00 AM">8:00 AM - 9:00 AM</option>
-              <option value="9:00 AM - 10:00 AM">9:00 AM - 10:00 AM</option>
-              <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
-              <option value="11:00 AM - 12:00 PM">11:00 AM - 12:00 PM</option>
-              <option value="12:00 PM - 1:00 PM">12:00 PM - 1:00 PM</option>
-              <option value="1:00 PM - 2:00 PM">1:00 PM - 2:00 PM</option>
-              <option value="2:00 PM - 5:00 PM">2:00 PM - 5:00 PM (Afternoon)</option>
+              <option value="">{ui.forms.reservation.timeSlots.select}</option>
+              <option value={ui.forms.reservation.timeSlots.morning1}>{ui.forms.reservation.timeSlots.morning1}</option>
+              <option value={ui.forms.reservation.timeSlots.morning2}>{ui.forms.reservation.timeSlots.morning2}</option>
+              <option value={ui.forms.reservation.timeSlots.morning3}>{ui.forms.reservation.timeSlots.morning3}</option>
+              <option value={ui.forms.reservation.timeSlots.midday1}>{ui.forms.reservation.timeSlots.midday1}</option>
+              <option value={ui.forms.reservation.timeSlots.midday2}>{ui.forms.reservation.timeSlots.midday2}</option>
+              <option value={ui.forms.reservation.timeSlots.afternoon1}>{ui.forms.reservation.timeSlots.afternoon1}</option>
+              <option value={ui.forms.reservation.timeSlots.afternoon2}>{ui.forms.reservation.timeSlots.afternoon2}</option>
+              <option value={ui.forms.reservation.timeSlots.afternoon3}>{ui.forms.reservation.timeSlots.afternoon3}</option>
             </select>
           </div>
         </div>
@@ -389,12 +390,12 @@ export default function ReservationForm() {
 
       {/* Section 4: Move Size */}
       <div className="bg-white rounded-2xl p-6 md:p-8">
-        <h3 className="text-xl font-bold mb-6 text-gray-800">
-          4. Move Size
-        </h3>
+        <H3 className="text-xl font-bold mb-6 text-gray-800">
+          {ui.forms.reservation.sections.moveSize}
+        </H3>
         <div>
           <label htmlFor="move-size" className="block text-sm font-medium text-gray-700 mb-2">
-            Select Your Move Size *
+            {ui.forms.reservation.labels.moveSize}
           </label>
           <select
             id="move-size"
@@ -403,50 +404,44 @@ export default function ReservationForm() {
             defaultValue={moveSize}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
           >
-            <option value="">Select move size</option>
-            <option value="Studio">Studio</option>
-            <option value="1 Bedroom (Small)">1 Bedroom (Small)</option>
-            <option value="1 Bedroom (Average)">1 Bedroom (Average)</option>
-            <option value="1 Bedroom (Large)">1 Bedroom (Large)</option>
-            <option value="2 Bedroom (Small)">2 Bedroom (Small)</option>
-            <option value="2 Bedroom (Average)">2 Bedroom (Average)</option>
-            <option value="2 Bedroom (Large)">2 Bedroom (Large)</option>
-            <option value="3 Bedroom (Average)">3 Bedroom (Average)</option>
-            <option value="3 Bedroom (Large)">3 Bedroom (Large)</option>
-            <option value="4 Bedroom (Average)">4 Bedroom (Average)</option>
-            <option value="4 Bedroom (Large)">4 Bedroom (Large)</option>
-            <option value="5+ Bedroom">5+ Bedroom</option>
-            <option value="Commercial (Small Office)">Commercial (Small Office)</option>
-            <option value="Commercial (Average Office)">Commercial (Average Office)</option>
-            <option value="Commercial (Large Office)">Commercial (Large Office)</option>
+            <option value="">{ui.forms.reservation.moveSizes.select}</option>
+            <option value={ui.forms.reservation.moveSizes.studio}>{ui.forms.reservation.moveSizes.studio}</option>
+            <option value={ui.forms.reservation.moveSizes.oneBedSmall}>{ui.forms.reservation.moveSizes.oneBedSmall}</option>
+            <option value={ui.forms.reservation.moveSizes.oneBedLarge}>{ui.forms.reservation.moveSizes.oneBedLarge}</option>
+            <option value={ui.forms.reservation.moveSizes.twoBed}>{ui.forms.reservation.moveSizes.twoBed}</option>
+            <option value={ui.forms.reservation.moveSizes.threeBed}>{ui.forms.reservation.moveSizes.threeBed}</option>
+            <option value={ui.forms.reservation.moveSizes.fourBed}>{ui.forms.reservation.moveSizes.fourBed}</option>
+            <option value={ui.forms.reservation.moveSizes.fourPlusBed}>{ui.forms.reservation.moveSizes.fourPlusBed}</option>
+            <option value={ui.forms.reservation.moveSizes.office}>{ui.forms.reservation.moveSizes.office}</option>
+            <option value={ui.forms.reservation.moveSizes.other}>{ui.forms.reservation.moveSizes.other}</option>
           </select>
         </div>
       </div>
 
       {/* Section 5: Additional Services */}
       <div className="bg-white rounded-2xl p-6 md:p-8">
-        <h3 className="text-xl font-bold mb-6 text-gray-800">
-          5. Additional Services
-        </h3>
+        <H3 className="text-xl font-bold mb-6 text-gray-800">
+          {ui.forms.reservation.sections.additional}
+        </H3>
 
         <div className="space-y-6">
           {/* Packing Service */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Do you need packing services?
+              {ui.forms.reservation.labels.packingServices}
             </label>
             <div className="grid md:grid-cols-3 gap-4">
-              <label className="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-orange-500">
-                <input type="radio" name="packing" value="No packing needed" className="mr-3" defaultChecked />
-                <span>No packing needed</span>
+              <label className="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-orange-600">
+                <input type="radio" name="packing" value={ui.forms.reservation.packingOptions.none} className="mr-3" defaultChecked />
+                <span>{ui.forms.reservation.packingOptions.none}</span>
               </label>
-              <label className="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-orange-500">
-                <input type="radio" name="packing" value="Partial packing" className="mr-3" />
-                <span>Partial packing</span>
+              <label className="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-orange-600">
+                <input type="radio" name="packing" value={ui.forms.reservation.packingOptions.partial} className="mr-3" />
+                <span>{ui.forms.reservation.packingOptions.partial}</span>
               </label>
-              <label className="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-orange-500">
-                <input type="radio" name="packing" value="Full packing service" className="mr-3" />
-                <span>Full packing service</span>
+              <label className="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-orange-600">
+                <input type="radio" name="packing" value={ui.forms.reservation.packingOptions.full} className="mr-3" />
+                <span>{ui.forms.reservation.packingOptions.full}</span>
               </label>
             </div>
           </div>
@@ -454,33 +449,15 @@ export default function ReservationForm() {
           {/* Additional Services Checkboxes */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Select any additional services needed:
+              {ui.forms.reservation.labels.additionalServices}
             </label>
             <div className="grid md:grid-cols-2 gap-4">
-              <label className="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer hover:border-orange-500">
-                <input type="checkbox" name="service-unpacking" className="mr-3 w-4 h-4 text-orange-500" />
-                <span>Unpacking Services</span>
-              </label>
-              <label className="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer hover:border-orange-500">
-                <input type="checkbox" name="service-furniture" className="mr-3 w-4 h-4 text-orange-500" />
-                <span>Furniture Disassembly/Assembly</span>
-              </label>
-              <label className="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer hover:border-orange-500">
-                <input type="checkbox" name="service-piano" className="mr-3 w-4 h-4 text-orange-500" />
-                <span>Piano Moving</span>
-              </label>
-              <label className="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer hover:border-orange-500">
-                <input type="checkbox" name="service-storage" className="mr-3 w-4 h-4 text-orange-500" />
-                <span>Storage Services</span>
-              </label>
-              <label className="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer hover:border-orange-500">
-                <input type="checkbox" name="service-specialty" className="mr-3 w-4 h-4 text-orange-500" />
-                <span>Specialty Items (Art, Antiques)</span>
-              </label>
-              <label className="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer hover:border-orange-500">
-                <input type="checkbox" name="service-cleaning" className="mr-3 w-4 h-4 text-orange-500" />
-                <span>Cleaning Services</span>
-              </label>
+              {(['unpacking', 'furniture', 'piano', 'storage', 'specialty', 'cleaning'] as const).map((key, index) => (
+                <label key={key} className="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer hover:border-orange-600">
+                  <input type="checkbox" name={`service-${key}`} className="mr-3 w-4 h-4 text-orange-500" />
+                  <span>{(ui.forms.reservation.additionalServiceOptions as string[])[index]}</span>
+                </label>
+              ))}
             </div>
           </div>
         </div>
@@ -488,42 +465,41 @@ export default function ReservationForm() {
 
       {/* Section 6: Additional Information */}
       <div className="bg-white rounded-2xl p-6 md:p-8">
-        <h3 className="text-xl font-bold mb-6 text-gray-800">
-          6. Additional Information
-        </h3>
+        <H3 className="text-xl font-bold mb-6 text-gray-800">
+          {ui.forms.reservation.sections.info}
+        </H3>
 
         <div className="space-y-6">
           <div>
             <label htmlFor="special-items" className="block text-sm font-medium text-gray-700 mb-2">
-              Special Items or Concerns
+              {ui.forms.reservation.labels.specialItems}
             </label>
             <textarea
               id="special-items"
               name="special-items"
               rows={4}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-              placeholder="Please list any fragile items, heavy furniture, stairs, elevators, parking restrictions, or any other special requirements..."
+              placeholder={ui.forms.reservation.placeholders.specialItems}
             />
           </div>
 
           <div>
             <label htmlFor="hear-about" className="block text-sm font-medium text-gray-700 mb-2">
-              How did you hear about us?
+              {ui.forms.reservation.labels.hearAboutUs}
             </label>
             <select
               id="hear-about"
               name="hear-about"
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
             >
-              <option value="">Select an option</option>
-              <option value="Google Search">Google Search</option>
-              <option value="Yelp">Yelp</option>
-              <option value="Facebook">Facebook</option>
-              <option value="Instagram">Instagram</option>
-              <option value="Friend/Family Referral">Friend/Family Referral</option>
-              <option value="Previous Customer">Previous Customer</option>
-              <option value="BBB">BBB</option>
-              <option value="Other">Other</option>
+              <option value="">{ui.forms.reservation.referralOptions.select}</option>
+              <option value={ui.forms.reservation.referralOptions.google}>{ui.forms.reservation.referralOptions.google}</option>
+              <option value={ui.forms.reservation.referralOptions.yelp}>{ui.forms.reservation.referralOptions.yelp}</option>
+              <option value={ui.forms.reservation.referralOptions.referral}>{ui.forms.reservation.referralOptions.referral}</option>
+              <option value={ui.forms.reservation.referralOptions.social}>{ui.forms.reservation.referralOptions.social}</option>
+              <option value={ui.forms.reservation.referralOptions.repeat}>{ui.forms.reservation.referralOptions.repeat}</option>
+              <option value={ui.forms.reservation.referralOptions.bbb}>{ui.forms.reservation.referralOptions.bbb}</option>
+              <option value={ui.forms.reservation.referralOptions.other}>{ui.forms.reservation.referralOptions.other}</option>
             </select>
           </div>
         </div>
@@ -532,27 +508,34 @@ export default function ReservationForm() {
       {/* Error Message */}
       {submitStatus === 'error' && (
         <div className="bg-red-50 text-red-600 p-4 rounded-lg text-sm">
-          Something went wrong. Please try again or call us directly at {phoneFormatted}.
+          {(ui.forms.reservation.errorMessage as string).replace('{phone}', phoneFormatted)}
         </div>
       )}
 
       {/* Submit Button */}
       <div className="bg-white rounded-2xl p-6 md:p-8 text-center">
         <p className="text-sm text-gray-500 mb-4">
-          By submitting this form, you agree to receive SMS and email notifications about your move.
+          {ui.forms.reservation.disclaimer}
         </p>
+
+        <TurnstileWidget
+          ref={turnstileRef}
+          onVerify={setTurnstileToken}
+          onExpire={() => setTurnstileToken('')}
+        />
+
         <button
           type="submit"
-          disabled={isSubmitting}
-          className="bg-orange-500 hover:bg-orange-600 text-white px-12 py-4 rounded-lg font-semibold text-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center"
+          disabled={isSubmitting || !turnstileToken}
+          className="mt-4 bg-orange-600 hover:bg-orange-700 text-white px-12 py-4 rounded-lg font-semibold text-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center"
         >
           {isSubmitting ? (
             <>
               <Loader2 className="w-5 h-5 mr-2 animate-spin" />
-              Submitting...
+              {ui.forms.reservation.submitting}
             </>
           ) : (
-            'Book My Move'
+            ui.forms.reservation.submitButton
           )}
         </button>
       </div>

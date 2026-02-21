@@ -1,8 +1,7 @@
 import { CheckCircle, LucideIcon } from 'lucide-react'
 import { resolveIcon } from '@/lib/icons'
-import content from '@/data/content.json'
-
-const defaults = content.defaults.included
+import { getMessages } from 'next-intl/server'
+import { H2, H3 } from '@/app/components/Heading'
 
 interface DetailItem {
   icon?: LucideIcon | string
@@ -17,12 +16,16 @@ interface IncludedSectionProps {
   background?: 'gray' | 'orange'
 }
 
-export default function IncludedSection({
-  items = defaults.items,
-  title = defaults.title,
+export default async function IncludedSection({
+  items,
+  title,
   subtitle,
   background = 'gray',
 }: IncludedSectionProps) {
+  const { content } = (await getMessages()) as any
+  const defaults = content.defaults.included
+  items = items ?? defaults.items
+  title = title ?? defaults.title
   if (!items || items.length === 0) return null
 
   // Normalize items to DetailItem format
@@ -36,9 +39,9 @@ export default function IncludedSection({
     <section className="pt-20">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             {title}
-          </h2>
+          </H2>
           {subtitle && (
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               {subtitle}
@@ -54,7 +57,7 @@ export default function IncludedSection({
                   <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="w-6 h-6 text-orange-500" />
                   </div>
-                  <h3 className="font-bold text-gray-800 mb-2">{item.title}</h3>
+                  <H3 className="font-bold text-gray-800 mb-2">{item.title}</H3>
                   {item.desc && <p className="text-gray-600 text-sm">{item.desc}</p>}
                 </div>
               )

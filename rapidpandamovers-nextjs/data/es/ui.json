@@ -1,0 +1,547 @@
+{
+  "buttons": {
+    "getQuote": "Obtenga Su Cotización Gratis",
+    "getFreeQuote": "Cotización Gratis",
+    "learnMore": "Más Información",
+    "viewAll": "Ver Todos",
+    "sendMessage": "Enviar Mensaje",
+    "subscribe": "Suscribirse",
+    "print": "Imprimir",
+    "downloadPdf": "Descargar PDF",
+    "generating": "Generando...",
+    "sending": "Enviando...",
+    "viewFullChecklist": "Ver Lista Completa",
+    "sendAnother": "Enviar otro mensaje",
+    "viewRoute": "Ver Ruta",
+    "readMore": "Leer más",
+    "showLess": "Mostrar menos",
+    "viewAllReviews": "Ver Todas las Reseñas",
+    "callPrefix": "Llamar",
+    "reserveNow": "Reservar Ahora",
+    "visitWebsite": "Visitar Sitio Web",
+    "viewComparison": "Ver Comparación",
+    "compare": "Comparar",
+    "viewFullGlossary": "Ver Glosario Completo"
+  },
+  "forms": {
+    "validation": {
+      "captchaRequired": "Por favor complete la verificacion",
+      "captchaFailed": "La verificacion fallo. Por favor intente de nuevo.",
+      "rateLimited": "Demasiadas solicitudes. Por favor espere unos minutos e intente de nuevo.",
+      "invalidEmail": "Por favor ingrese un correo electronico valido",
+      "requiredField": "Este campo es obligatorio"
+    },
+    "contact": {
+      "title": "Envíenos un Mensaje",
+      "labels": {
+        "name": "Nombre Completo",
+        "email": "Correo Electrónico",
+        "phone": "Teléfono",
+        "message": "Mensaje"
+      },
+      "placeholders": {
+        "name": "Juan Pérez",
+        "email": "juan@ejemplo.com",
+        "phone": "(555) 123-4567",
+        "message": "Cuéntenos sobre sus necesidades de mudanza..."
+      },
+      "required": "*"
+    },
+    "hero": {
+      "pickupPlaceholder": "Código Postal de Origen",
+      "dropoffPlaceholder": "Código Postal de Destino"
+    },
+    "newsletter": {
+      "placeholder": "Ingrese su correo electrónico"
+    },
+    "quote": {
+      "title": "Obtenga Su Cotización de Mudanza Gratis",
+      "successTitle": "¡Solicitud de Cotización Enviada!",
+      "successDescription": "Le responderemos dentro de 24 horas.",
+      "returnHome": "Volver al Inicio",
+      "errorMessage": "Algo salió mal. Por favor intente de nuevo o llámenos directamente.",
+      "submitButton": "Obtener Mi Cotización Gratis",
+      "submitting": "Enviando...",
+      "contactTitle": "Información de Contacto",
+      "emailSupport": "Soporte por correo 24/7",
+      "locationCity": "Miami, FL",
+      "locationArea": "Sirviendo todo Miami-Dade",
+      "whyChooseTitle": "¿Por Qué Elegirnos?",
+      "whyChooseItems": [
+        "Sin cargos ocultos ni sorpresas",
+        "Con licencia y totalmente asegurados",
+        "Equipo profesional y experimentado",
+        "Cotizaciones gratis en 24 horas",
+        "Servicio el mismo día disponible"
+      ],
+      "labels": {
+        "firstName": "Nombre *",
+        "lastName": "Apellido *",
+        "email": "Correo Electrónico *",
+        "phone": "Número de Teléfono *",
+        "movingFrom": "Mudanza Desde *",
+        "movingTo": "Mudanza Hacia *",
+        "movingDate": "Fecha Preferida de Mudanza",
+        "homeSize": "Tamaño del Hogar",
+        "servicesNeeded": "Servicios Necesarios (seleccione todos los que apliquen)",
+        "additionalDetails": "Detalles Adicionales"
+      },
+      "placeholders": {
+        "address": "Dirección o código postal",
+        "details": "Cuéntenos sobre requisitos especiales, artículos frágiles u otros detalles..."
+      },
+      "homeSizes": {
+        "select": "Seleccione tamaño del hogar",
+        "studio": "Estudio",
+        "oneBed": "1 Habitación",
+        "twoBed": "2 Habitaciones",
+        "threeBed": "3 Habitaciones",
+        "fourPlusBed": "4+ Habitaciones"
+      },
+      "serviceOptions": ["Empaque", "Carga/Descarga", "Transporte", "Desempaque", "Ensamblaje de Muebles", "Almacenamiento"]
+    },
+    "reservation": {
+      "successTitle": "¡Solicitud de Reservación Enviada!",
+      "successDescription": "Gracias por elegir Rapid Panda Movers. Le contactaremos dentro de 24 horas para confirmar su reservación.",
+      "returnHome": "Volver al Inicio",
+      "errorMessage": "Algo salió mal. Por favor intente de nuevo o llámenos directamente al {phone}.",
+      "submitButton": "Reservar Mi Mudanza",
+      "submitting": "Enviando...",
+      "disclaimer": "Al enviar este formulario, acepta recibir notificaciones por SMS y correo electrónico sobre su mudanza.",
+      "sections": {
+        "personal": "1. Datos Personales",
+        "locations": "2. Ubicaciones de Mudanza",
+        "dateTime": "3. Fecha y Hora de Mudanza",
+        "moveSize": "4. Tamaño de la Mudanza",
+        "additional": "5. Servicios Adicionales",
+        "info": "6. Información Adicional"
+      },
+      "labels": {
+        "fullName": "Nombre Completo *",
+        "email": "Correo Electrónico *",
+        "phone": "Número de Teléfono *",
+        "referenceNumber": "Número de Referencia (si tiene)",
+        "pickupLocation": "Ubicación de Recogida",
+        "dropoffLocation": "Ubicación de Entrega",
+        "address": "Dirección *",
+        "aptUnit": "Apt/Unidad #",
+        "city": "Ciudad *",
+        "state": "Estado *",
+        "zipCode": "Código Postal *",
+        "pickupStorage": "La recogida es desde un almacén",
+        "dropoffStorage": "La entrega es a un almacén",
+        "movingDate": "Fecha de Mudanza *",
+        "startTime": "Hora de Inicio Preferida *",
+        "moveSize": "Seleccione el Tamaño de su Mudanza *",
+        "packingServices": "¿Necesita servicios de empaque?",
+        "additionalServices": "Seleccione servicios adicionales necesarios:",
+        "specialItems": "Artículos Especiales o Preocupaciones",
+        "hearAboutUs": "¿Cómo supo de nosotros?"
+      },
+      "placeholders": {
+        "fullName": "Su nombre completo",
+        "email": "su.correo@ejemplo.com",
+        "phone": "(786) 555-1234",
+        "reference": "Referencia de cotización #",
+        "address": "Dirección",
+        "apt": "Apt #",
+        "city": "Ciudad",
+        "specialItems": "Por favor liste artículos frágiles, muebles pesados, escaleras, elevadores, restricciones de estacionamiento u otros requisitos especiales..."
+      },
+      "timeSlots": {
+        "select": "Seleccione una hora",
+        "morning1": "8:00 AM - 9:00 AM",
+        "morning2": "9:00 AM - 10:00 AM",
+        "morning3": "10:00 AM - 11:00 AM",
+        "midday1": "11:00 AM - 12:00 PM",
+        "midday2": "12:00 PM - 1:00 PM",
+        "afternoon1": "1:00 PM - 2:00 PM",
+        "afternoon2": "2:00 PM - 3:00 PM",
+        "afternoon3": "3:00 PM - 4:00 PM"
+      },
+      "moveSizes": {
+        "select": "Seleccione tamaño de mudanza",
+        "studio": "Estudio",
+        "oneBedSmall": "1 Habitación (Pequeña)",
+        "oneBedLarge": "1 Habitación (Grande)",
+        "twoBed": "2 Habitaciones",
+        "threeBed": "3 Habitaciones",
+        "fourBed": "4 Habitaciones",
+        "fourPlusBed": "4+ Habitaciones",
+        "office": "Oficina/Comercial",
+        "other": "Otro"
+      },
+      "packingOptions": {
+        "none": "No necesito empaque",
+        "partial": "Empaque parcial",
+        "full": "Servicio de empaque completo"
+      },
+      "additionalServiceOptions": [
+        "Servicios de Desempaque",
+        "Desmontaje/Ensamblaje de Muebles",
+        "Mudanza de Piano",
+        "Servicios de Almacenamiento",
+        "Artículos Especiales (Arte, Antigüedades)",
+        "Servicios de Limpieza"
+      ],
+      "referralOptions": {
+        "select": "Seleccione una opción",
+        "google": "Búsqueda en Google",
+        "yelp": "Yelp",
+        "referral": "Referencia de Amigo/Familiar",
+        "social": "Redes Sociales",
+        "repeat": "Cliente Recurrente",
+        "bbb": "BBB",
+        "other": "Otro"
+      }
+    }
+  },
+  "messages": {
+    "contactSuccess": {
+      "title": "¡Mensaje Enviado!",
+      "description": "Le responderemos dentro de 24 horas."
+    },
+    "contactError": "Error al enviar el mensaje. Por favor intente de nuevo o llámenos directamente.",
+    "newsletterSuccess": {
+      "title": "¡Suscrito!",
+      "description": "Gracias por suscribirse a nuestro boletin."
+    },
+    "newsletterError": "No se pudo suscribir. Por favor intente de nuevo."
+  },
+  "pagination": {
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "pageIndicator": "Página {current} de {total} ({count} {itemType})"
+  },
+  "contact": {
+    "infoTitle": "Información de Contacto",
+    "items": {
+      "phone": { "title": "Teléfono", "description": "Llame para asistencia inmediata" },
+      "email": { "title": "Correo", "description": "Respondemos dentro de 24 horas" },
+      "address": { "title": "Dirección", "description": "Miami, Florida" }
+    },
+    "hoursTitle": "Horario de Atención",
+    "contactUs": "Contáctenos",
+    "getInTouch": "Comuníquese con Nosotros",
+    "getInTouchDesc": "¿Listo para su mudanza? Contáctenos hoy para una cotización gratis o cualquier pregunta sobre nuestros servicios de mudanza."
+  },
+  "ratings": {
+    "defaultTitle": "Excelentes Calificaciones en Todas las Plataformas",
+    "basedOn": "Basado en",
+    "verifiedReviews": "reseñas verificadas"
+  },
+  "checklist": {
+    "previewTitle": "Lista de Mudanza",
+    "previewSubtitle": "Manténgase organizado con nuestra lista completa de mudanza. Nunca olvide una tarea con nuestro enfoque basado en cronograma.",
+    "features": [
+      { "icon": "Calendar", "title": "8 Fases", "desc": "Desde 8 semanas antes hasta el día de la mudanza" },
+      { "icon": "CheckCircle", "title": "50+ Tareas", "desc": "Cobertura completa" },
+      { "icon": "ClipboardList", "title": "Niveles de Prioridad", "desc": "Sepa qué hacer primero" }
+    ],
+    "priority": {
+      "high": "Alta",
+      "highLabel": "Alta - Hacer primero",
+      "medium": "Media",
+      "low": "Baja",
+      "lowLabel": "Baja - Puede esperar"
+    },
+    "progress": "Progreso:",
+    "tasks": "tareas",
+    "of": "de",
+    "complete": "completadas",
+    "printHeader": { "company": "Rapid Panda Movers", "title": "Lista de Mudanza" },
+    "printLabels": { "name": "Nombre:", "movingDate": "Fecha de Mudanza:" },
+    "printFooter": "¿Necesita ayuda con su mudanza? ¡Llámenos para una cotización gratis!",
+    "priorityLabels": { "high": "Prioridad Alta", "medium": "Prioridad Media", "low": "Prioridad Baja" }
+  },
+  "location": {
+    "neighborhoodsTitle": "Vecindarios que Servimos en {city}",
+    "neighborhoodsSubtitle": "Brindamos servicios de mudanza en todos los vecindarios de {city}",
+    "defaultTitle": "Ubicaciones que Servimos",
+    "defaultSubtitle": "Sirviendo {count}+ ciudades y vecindarios en el Condado de Miami-Dade",
+    "viewAll": "Ver Todas las Ubicaciones",
+    "moreAreas": "¡Sirviendo con orgullo cada rincón del Condado de Miami-Dade y más!",
+    "breadcrumb": "Ubicaciones",
+    "zipCodes": "Códigos Postales:",
+    "serving": "Sirviendo {name} (Población: {population})",
+    "movingServicesIn": "Servicios de Mudanza en {name}",
+    "locationGuide": "Guía de Ubicación",
+    "movingTipsFor": "Consejos de Mudanza para {name}",
+    "heroDescriptionCity": "Servicios profesionales de mudanza en {name}. Mudanzas locales y de larga distancia con equipos experimentados y precios transparentes.",
+    "heroDescriptionNeighborhood": "Servicios profesionales de mudanza en {name}, {parent}. Mudanceros locales de confianza.",
+    "professionalServicesIn": "Servicios Profesionales de Mudanza en {name}",
+    "nameTemplate": "Mudanzas de {name}",
+    "populationLabel": "Población"
+  },
+  "quote": {
+    "defaultTitle": "Déjenos Hacer el Trabajo Pesado",
+    "defaultSubtitle": "Evite el estrés del bricolaje. Obtenga una cotización gratis de Rapid Panda Movers y descubra lo económico que puede ser un servicio completo de mudanza."
+  },
+  "promise": {
+    "defaultTitle": "Nuestra Promesa",
+    "defaultSubtitle": "Cuando elige Rapid Panda Movers, no solo está contratando una empresa de mudanzas, está ganando un socio comprometido con hacer su transición lo más fluida posible."
+  },
+  "review": {
+    "ctaTitle": "Vea Lo Que Dicen Otros",
+    "ctaSubtitle": "Lea reseñas verificadas de nuestros clientes en Google, Yelp y más",
+    "seeOriginal": "Ver original",
+    "hideOriginal": "Ocultar original",
+    "allReviews": "Todas las Reseñas",
+    "viewAllReviews": "Ver Todas las Reseñas",
+    "itemType": "reseñas"
+  },
+  "hero": {
+    "defaultTitle": "Empresa de Mudanzas Familiar en Miami",
+    "defaultDescription": "Servicios de mudanza y empaque a bajo costo",
+    "defaultCta": "Obtenga Su Cotización Gratis",
+    "ratingText": "/5 Basado en {count}+ reseñas verificadas"
+  },
+  "newsletter": {
+    "defaultTitle": "Manténgase Actualizado con Consejos de Mudanza",
+    "defaultDescription": "Suscríbase a nuestro boletín para los últimos consejos, guías y ofertas especiales de Rapid Panda Movers."
+  },
+  "media": {
+    "defaultTitle": "Véanos en Acción",
+    "defaultDescription": "Vea cómo nuestro equipo profesional maneja las mudanzas con cuidado y precisión",
+    "defaultItems": [
+      { "title": "Mudanza en Brickell", "description": "Reubicaciones en el centro de Miami" },
+      { "title": "Coconut Grove", "description": "Mudanzas con encanto" },
+      { "title": "Wynwood", "description": "Mudanzas en el distrito de arte" },
+      { "title": "Miami Beach", "description": "Reubicaciones costeras" }
+    ]
+  },
+  "notFound": {
+    "title": "Página No Encontrada",
+    "description": "Lo sentimos, no pudimos encontrar la página que buscas. Es posible que haya sido movida o que ya no exista.",
+    "goHome": "Ir al Inicio",
+    "contactUs": "Contáctenos",
+    "searchPlaceholder": "Buscar ubicaciones, servicios, rutas o artículos del blog...",
+    "relatedArticles": "Artículos Relacionados",
+    "relatedSubtitle": "Consulta algunas de nuestras guías útiles de mudanza",
+    "viewAllArticles": "Ver Todos los Artículos"
+  },
+  "about": {
+    "ourValues": "Nuestros Valores",
+    "knowDifferent": "¿Quiere saber qué nos hace diferentes?",
+    "knowDifferentDesc": "Conozca nuestro compromiso con la excelencia, precios transparentes y garantía de satisfacción.",
+    "whyChoose": "Por Qué Elegir Rapid Panda",
+    "learnMoreAboutUs": "Más Información Sobre Nosotros"
+  },
+  "blog": {
+    "readMore": "Leer Más",
+    "readFullArticle": "Leer Artículo Completo",
+    "backToBlog": "Volver al Blog",
+    "allPosts": "Todos los Artículos",
+    "servicesFilter": "Servicios",
+    "locationsFilter": "Ubicaciones",
+    "noPostsFound": "No se encontraron artículos en esta categoría.",
+    "fallbackTitle": "Consejos e Información de Mudanza",
+    "fallbackSubtitle": "Consejos de expertos y recomendaciones prácticas para hacer su mudanza fácil y económica",
+    "exploreMoreTitle": "Explore Más Artículos",
+    "exploreMoreSubtitle": "Descubra consejos y guías útiles para su mudanza",
+    "viewAllArticles": "Ver Todos los Artículos",
+    "browseAllArticles": "Explorar Todos los Artículos",
+    "moreTips": "Más Consejos",
+    "moreTipsDesc": "Consejos de expertos para que su próxima mudanza sea fácil",
+    "browseMovingTips": "Explorar Consejos de Mudanza",
+    "tipsAndGuides": "Consejos y Guías de {name}",
+    "movingTipsFor": "Consejos de Mudanza para {name}",
+    "postsAbout": "{count} {postWord} sobre {name}",
+    "postsInCategory": "{count} {postWord} en esta categoría",
+    "postSingular": "artículo",
+    "postPlural": "artículos",
+    "itemTypes": "artículos"
+  },
+  "routes": {
+    "breadcrumb": "Rutas",
+    "allRoutes": "Todas las Rutas",
+    "longDistance": "Larga Distancia",
+    "local": "Local",
+    "viewRoute": "Ver Ruta",
+    "viewAllRoutes": "Ver Todas las Rutas",
+    "showingRoutesFrom": "Mostrando rutas desde/hacia {location}",
+    "viewAll": "Ver todas las rutas",
+    "startingFrom": "Desde ${cost}",
+    "noRoutesFound": "No se encontraron rutas para \"{location}\"",
+    "noRoutesOnPage": "No hay rutas en esta página.",
+    "viewPage1": "Ver Página 1",
+    "toMovers": "Mudanzas de {from} a {to}",
+    "routeDescription": "¿Se muda de {from} a {to}? Ofrecemos servicios profesionales de mudanza para esta ruta con equipos experimentados y servicio confiable.",
+    "movingTipsFor": "Consejos de Mudanza de {from} a {to}",
+    "helpfulGuides": "Guías útiles para su mudanza de {from} a {to}",
+    "showLess": "Mostrar Menos",
+    "showAllRoutes": "Mostrar las {count} Rutas",
+    "viewAllLocationRoutes": "Ver Todas las Rutas de {name}",
+    "itemType": "rutas",
+    "popularRoutes": "Rutas Populares",
+    "popularRoutesFrom": "Rutas Populares desde {name}",
+    "routesFromAndCity": "Rutas de mudanza desde {name} y {city}",
+    "routesFromSubtitle": "¿Se muda desde {name}? Ofrecemos servicios de mudanza confiables a estos destinos populares",
+    "to": "a"
+  },
+  "services": {
+    "breadcrumb": "Servicios",
+    "defaultTitle": "Nuestros Servicios de Mudanza",
+    "defaultSubtitle": "Servicios profesionales de mudanza diseñados para sus necesidades, horarios y presupuesto específicos.",
+    "showingIn": "Mostrando servicios disponibles en",
+    "viewAllLocations": "Ver Todas las Ubicaciones →",
+    "learnMore": "Más Información",
+    "viewAllServicesIn": "Ver Todos los Servicios en {name}",
+    "viewAllServices": "Ver Todos los Servicios",
+    "otherServicesIn": "Otros Servicios en {name}",
+    "otherServices": "Otros Servicios que Puede Necesitar",
+    "locationsTitle": "Ubicaciones de {name}",
+    "faqSubtitle": "Preguntas frecuentes sobre nuestros servicios de {name}",
+    "serviceTipsFor": "Consejos de {service} para {location}",
+    "serviceTipsGuides": "Consejos y Guías de {name}",
+    "serviceDescription": "Servicios profesionales de {service} en {location}. Equipos experimentados, precios transparentes y servicio confiable.",
+    "aboutService": "Acerca de {name}"
+  },
+  "why": {
+    "defaultTitle": "¿Por Qué Elegir Rapid Panda Movers?",
+    "differenceTitle": "La Diferencia Rapid Panda",
+    "defaultCta": "Vea Por Qué Somos Diferentes"
+  },
+  "pricing": {
+    "title": "Costos Estimados de Mudanza",
+    "mostPopular": "Más Popular",
+    "categories": {
+      "oneRoom": { "title": "1 Habitación", "size": "100-800 pies²", "desc": "Estudios o apartamentos pequeños a medianos." },
+      "twoRoom": { "title": "2 Habitaciones", "size": "600-1,100 pies²", "desc": "Casas pequeñas y apartamentos grandes." },
+      "threeRoom": { "title": "3 Habitaciones", "size": "1,000-1,800 pies²", "desc": "Casas medianas y condominios." },
+      "fourRoom": { "title": "4 Habitaciones", "size": "1,800-2,600 pies²", "desc": "Casas grandes y condominios de varios pisos." },
+      "fourPlusRoom": { "title": "4+ Habitaciones", "size": "2,600+ pies²", "desc": "Casas grandes, propiedades y oficinas." }
+    },
+    "features": {
+      "truck": "camión",
+      "trucks": "camiones",
+      "mover": "mudancero",
+      "movers": "mudanceros",
+      "loading": "carga",
+      "unloading": "descarga",
+      "hours": "horas",
+      "hour": "hora"
+    }
+  },
+  "travel": {
+    "movingFrom": "Mudanza de {origin} a {destination}",
+    "movingFromDesc": "Servicios profesionales de mudanza para su reubicación de {origin} a {destination}",
+    "distance": "Distancia",
+    "miles": "{count} millas",
+    "driveTime": "Tiempo de Viaje",
+    "startingCost": "Costo Inicial",
+    "originDestination": "Origen y Destino",
+    "origin": "Origen",
+    "destination": "Destino"
+  },
+  "map": {
+    "drivingRoute": "Ruta de Manejo: {origin} a {destination}",
+    "locationArea": "Área de {name}",
+    "serviceArea": "Área de Servicio",
+    "loadingMap": "Cargando mapa...",
+    "viewDirections": "Ver direcciones de {origin} a {destination} en",
+    "googleMaps": "Google Maps"
+  },
+  "search": {
+    "defaultPlaceholder": "Buscar ubicaciones, servicios, rutas o artículos del blog...",
+    "findTitle": "Encuentre Su Servicio de Mudanza",
+    "findSubtitle": "Busque ubicaciones, servicios, rutas o artículos del blog",
+    "movingServicesIn": "Servicios de mudanza en {name}",
+    "milesDistance": "{count} millas"
+  },
+  "faq": {
+    "defaultTitle": "Preguntas Frecuentes",
+    "defaultSubtitle": "Preguntas comunes sobre nuestros servicios de mudanza",
+    "learnMore": "Más información",
+    "haveMoreQuestions": "¿Tiene más preguntas?",
+    "haveMoreQuestionsDesc": "Nuestro equipo está listo para ayudarle con su mudanza.",
+    "viewAllFaqs": "Ver Todas las Preguntas Frecuentes"
+  },
+  "statistics": {
+    "defaultTitle": "La Confianza de las Familias y Negocios de Miami",
+    "defaultSubtitle": "Nuestro compromiso con la excelencia nos ha ganado la confianza de miles de clientes en todo el Condado de Miami-Dade.",
+    "successfulMoves": "Mudanzas Exitosas",
+    "customerSatisfaction": "Satisfacción del Cliente",
+    "yearsExperience": "Años de Experiencia",
+    "averageRating": "Calificación Promedio"
+  },
+  "sights": {
+    "popularSightsIn": "Lugares Populares en {name}",
+    "popularSightsDefault": "Lugares y Puntos de Interés Populares",
+    "exploreIn": "Explore las mejores atracciones y puntos de interés en {name}",
+    "exploreDefault": "Descubra atracciones populares en el área"
+  },
+  "glossary": {
+    "jumpToLetter": "Ir a la Letra",
+    "previewTitle": "Glosario de Mudanza",
+    "previewDescription": "¿Nuevo en mudanzas? Aprenda la terminología utilizada en la industria de mudanzas para comprender mejor su mudanza y comunicarse con sus mudanceros."
+  },
+  "compare": {
+    "bestFor": "{name} Es Mejor Para:",
+    "realCostComparison": "La Comparación Real de Costos",
+    "optionHeader": "Opción",
+    "breadcrumb": "Comparar",
+    "aboutName": "Acerca de {name}",
+    "rating": "Calificación",
+    "reviews": "Reseñas",
+    "servicesOffered": "Servicios ofrecidos:",
+    "whyChooseRapidPandaBefore": "¿Por qué elegir ",
+    "whyChooseRapidPandaHighlight": "Rapid Panda Movers",
+    "whyChooseRapidPandaAfter": "?",
+    "seeWhyDifferent": "Vea por qué somos diferentes",
+    "prosOf": "Ventajas de {name}",
+    "consOf": "Desventajas de {name}"
+  },
+  "alternatives": {
+    "breadcrumb": "Alternativas",
+    "howItWorks": "Cómo funciona {name}",
+    "localMoves": "Mudanzas locales",
+    "longDistance": "Larga distancia",
+    "monthlyStorage": "Almacenamiento mensual",
+    "hourlyRate": "Tarifa por hora",
+    "whyFullServiceBefore": "Por qué ",
+    "whyFullServiceHighlight": "la mudanza de servicio completo",
+    "whyFullServiceAfter": " podría ser mejor",
+    "seeWhyDifferent": "Vea por qué somos diferentes"
+  },
+  "blogCategories": {
+    "Antique Moving": "Mudanza de Antigüedades",
+    "Apartment Moving": "Mudanza de Apartamentos",
+    "Appliance Moving": "Mudanza de Electrodomésticos",
+    "Art Moving": "Mudanza de Arte",
+    "Celebrity Moving": "Mudanza de Celebridades",
+    "Commercial Moving": "Mudanza Comercial",
+    "Full Service Moving": "Mudanza de Servicio Completo",
+    "Fun Facts": "Datos Curiosos",
+    "Furniture Moving": "Mudanza de Muebles",
+    "Home & Living": "Hogar y Vida",
+    "Hot Tub Moving": "Mudanza de Jacuzzis",
+    "Hourly Moving": "Mudanza por Hora",
+    "Junk Removal": "Retiro de Basura",
+    "Labor Only Moving": "Mudanza Solo Mano de Obra",
+    "Last-Minute Moving": "Mudanza de Último Momento",
+    "Lifestyle": "Estilo de Vida",
+    "Local Moving": "Mudanza Local",
+    "Location Guide": "Guía de Ubicación",
+    "Long Distance Moving": "Mudanza de Larga Distancia",
+    "Military Moving": "Mudanza Militar",
+    "Moving Tips": "Consejos de Mudanza",
+    "Office Moving": "Mudanza de Oficinas",
+    "Packing Services": "Servicios de Empaque",
+    "Piano Moving": "Mudanza de Pianos",
+    "Pool Table Moving": "Mudanza de Mesas de Billar",
+    "Residential Moving": "Mudanza Residencial",
+    "Safe Moving": "Mudanza de Cajas Fuertes",
+    "Same Building Moving": "Mudanza Dentro del Mismo Edificio",
+    "Same Day Moving": "Mudanza del Mismo Día",
+    "Senior Moving": "Mudanza para Personas Mayores",
+    "Special Needs Moving": "Mudanza para Necesidades Especiales",
+    "Specialty Item Moving": "Mudanza de Artículos Especiales",
+    "Storage Solutions": "Soluciones de Almacenamiento",
+    "Student Moving": "Mudanza Estudiantil",
+    "White Glove Moving": "Mudanza de Guante Blanco"
+  },
+  "breadcrumbs": {
+    "home": "Inicio"
+  }
+}

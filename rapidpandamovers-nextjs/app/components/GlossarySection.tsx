@@ -1,9 +1,10 @@
 'use client'
 
 import { useState, useRef } from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import { ArrowRight } from 'lucide-react';
-import content from '@/data/content.json';
+import { useMessages } from 'next-intl';
+import { H2, H3 } from '@/app/components/Heading';
 
 interface GlossarySectionProps {
   className?: string;
@@ -11,6 +12,7 @@ interface GlossarySectionProps {
 }
 
 export default function GlossarySection({ className = "", variant = 'preview' }: GlossarySectionProps) {
+  const { content, ui } = useMessages() as any
   const glossaryData = content.glossary;
   const sortedTerms = [...glossaryData.terms].sort((a, b) => a.term.localeCompare(b.term));
   const [activeLetter, setActiveLetter] = useState<string>('');
@@ -49,9 +51,9 @@ export default function GlossarySection({ className = "", variant = 'preview' }:
             {/* Letter Navigation Bar */}
             <div className="mb-12">
               <div className="p-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4 text-center">
-                  Jump to Letter
-                </h3>
+                <H3 className="text-lg font-semibold text-gray-800 mb-4 text-center">
+                  {ui.glossary.jumpToLetter}
+                </H3>
                 <div className="flex flex-wrap justify-center gap-2">
                   {firstLetters.map((letter) => (
                     <button
@@ -59,8 +61,8 @@ export default function GlossarySection({ className = "", variant = 'preview' }:
                       onClick={() => scrollToLetter(letter)}
                       className={`px-3 py-2 rounded-lg font-medium text-sm transition-all ${
                         activeLetter === letter
-                          ? 'bg-orange-500 text-white'
-                          : 'bg-white border border-gray-200 text-gray-700 hover:border-orange-500 hover:text-orange-600'
+                          ? 'bg-orange-600 text-white'
+                          : 'bg-white border border-gray-200 text-gray-700 hover:border-orange-600 hover:text-orange-700'
                       }`}
                     >
                       {letter}
@@ -78,9 +80,9 @@ export default function GlossarySection({ className = "", variant = 'preview' }:
                   className="bg-gray-50 rounded-4xl p-8"
                   data-letter={item.term.charAt(0).toUpperCase()}
                 >
-                  <h3 className="text-xl font-bold mb-3">
+                  <H3 className="text-xl font-bold mb-3">
                     {item.term}
-                  </h3>
+                  </H3>
                   <p className="text-gray-700 leading-relaxed">
                     {item.definition}
                   </p>
@@ -100,11 +102,11 @@ export default function GlossarySection({ className = "", variant = 'preview' }:
     <section className={`py-16 ${className}`}>
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Moving Glossary
-          </h2>
+          <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            {ui.glossary.previewTitle}
+          </H2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            New to moving? Learn the terminology used in the moving industry to better understand your move and communicate with your movers.
+            {ui.glossary.previewDescription}
           </p>
         </div>
 
@@ -112,9 +114,9 @@ export default function GlossarySection({ className = "", variant = 'preview' }:
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {sampleTerms.map((item, index) => (
               <div key={index} className="bg-white rounded-2xl p-6 text-left">
-                <h3 className="text-lg font-bold text-orange-500 mb-2">
+                <H3 className="text-lg font-bold text-orange-700 mb-2">
                   {item.term}
-                </h3>
+                </H3>
                 <p className="text-gray-600 text-sm line-clamp-2">
                   {item.definition}
                 </p>
@@ -125,9 +127,9 @@ export default function GlossarySection({ className = "", variant = 'preview' }:
           <div className="text-center">
             <Link
               href="/moving-glossary"
-              className="inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+              className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
             >
-              View Full Glossary
+              {ui.buttons.viewFullGlossary}
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </div>

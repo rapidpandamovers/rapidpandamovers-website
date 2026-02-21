@@ -15,6 +15,9 @@ import ServiceIllustration from './ServiceIllustration';
 import FAQSection from './FAQSection';
 import Breadcrumbs from './Breadcrumbs';
 import { ServiceSchema, FAQSchema } from './Schema';
+import { getMessages, getLocale } from 'next-intl/server';
+import { getTranslatedSlug } from '@/i18n/slug-map';
+import type { Locale } from '@/i18n/config';
 
 interface ServicePageProps {
   service: {
@@ -26,7 +29,6 @@ interface ServicePageProps {
       title: string;
       description: string;
       cta: string;
-      image_url: string;
     };
     process?: Array<{
       step: string;
@@ -65,7 +67,9 @@ interface ServicePageProps {
   };
 }
 
-export default function ServicePage({ service, location }: ServicePageProps) {
+export default async function ServicePage({ service, location }: ServicePageProps) {
+  const locale = await getLocale() as Locale;
+  const { ui } = (await getMessages()) as any;
   // Determine if this is a neighborhood (has parentCity)
   const isNeighborhood = !!location?.parentCity;
 
@@ -75,21 +79,22 @@ export default function ServicePage({ service, location }: ServicePageProps) {
     : (service.hero?.title || service.title);
 
   const heroDescription = location
-    ? `Professional ${service.name.toLowerCase()} services in ${location.name}${isNeighborhood ? `, ${location.parentCity!.name}` : ''}. Experienced crews, transparent pricing, and reliable service.`
+    ? ui.services.serviceDescription.replace('{service}', service.name.toLowerCase()).replace('{location}', location.name + (isNeighborhood ? ', ' + location.parentCity!.name : ''))
     : (service.hero?.description || service.description);
 
-  // Build breadcrumb items
+  // Build breadcrumb items with translated hrefs
+  const servicesSlug = getTranslatedSlug('services', locale);
   const breadcrumbItems = location
     ? [
-        { label: 'Services', href: '/services' },
-        { label: service.name, href: `/${service.slug}` },
+        { label: ui.services.breadcrumb, href: `/${servicesSlug}` },
+        { label: service.name, href: `/${getTranslatedSlug(service.slug, locale)}` },
         ...(isNeighborhood && location.parentCity
-          ? [{ label: `${location.parentCity.name}`, href: `/${location.parentCity.slug}-movers` }]
+          ? [{ label: `${location.parentCity.name}`, href: `/${getTranslatedSlug(`${location.parentCity.slug}-movers`, locale)}` }]
           : []),
         { label: location.name },
       ]
     : [
-        { label: 'Services', href: '/services' },
+        { label: ui.services.breadcrumb, href: `/${servicesSlug}` },
         { label: service.name },
       ];
 
@@ -120,8 +125,7 @@ export default function ServicePage({ service, location }: ServicePageProps) {
       <Hero
         title={heroTitle}
         description={heroDescription}
-        cta={service.hero?.cta || 'Get Your Free Quote'}
-        image_url={service.hero?.image_url}
+        cta={service.hero?.cta || ui.hero.defaultCta}
       />
 
       {/* Breadcrumbs */}
@@ -129,7 +133,7 @@ export default function ServicePage({ service, location }: ServicePageProps) {
 
       {/* Content Section */}
       <OverviewSection
-        title={<>About <span className="text-orange-500">{location ? `${location.name} ${service.name}` : service.name}</span></>}
+        title={<>{ui.services.aboutService.split('{name}')[0]}<span className="text-orange-700">{location ? `${location.name} ${service.name}` : service.name}</span>{ui.services.aboutService.split('{name}')[1]}</>}
         icon={<ServiceIllustration service={service.slug} className="w-44 h-44" />}
       >
         <p className="text-gray-600 leading-relaxed">{service.description}</p>
@@ -148,7 +152,7 @@ export default function ServicePage({ service, location }: ServicePageProps) {
       <IncludedSection items={service.included} />
 
       {/* Service Areas - Only show when not location-specific */}
-      {!location && <LocationSection variant="left" title={`${service.name} Locations`} />}
+      {!location && <LocationSection variant="left" title={ui.services.locationsTitle.replace('{name}', service.name)} />}
 
       {/* Neighborhoods Section - Only for location-specific city pages */}
       {location && !isNeighborhood && location.neighborhoods && (
@@ -162,7 +166,7 @@ export default function ServicePage({ service, location }: ServicePageProps) {
       {service.faq && service.faq.length > 0 && (
         <FAQSection
           title={`${service.name} FAQ`}
-          subtitle={`Common questions about our ${service.name.toLowerCase()} services`}
+          subtitle={ui.services.faqSubtitle.replace('{name}', service.name.toLowerCase())}
           faqs={service.faq}
           variant="compact"
         />
@@ -175,14 +179,14 @@ export default function ServicePage({ service, location }: ServicePageProps) {
         locationFilter={location?.slug}
         locationFilterFallback={isNeighborhood ? location!.parentCity!.slug : undefined}
         categoryFilterFallback="Moving Tips"
-        title={location ? `${service.name} Tips for ${location.name}` : `${service.name} Tips & Guides`}
+        title={location ? ui.services.serviceTipsFor.replace('{service}', service.name).replace('{location}', location.name) : ui.services.serviceTipsGuides.replace('{name}', service.name)}
         showFeatured={false}
         showCategories={false}
         showExcerpts={false}
         showCategoryPill={false}
         showViewMore
-        viewMoreButtonText="View All Articles"
-        viewMoreLink="/blog/service/${service.slug}"
+        viewMoreButtonText={ui.blog.viewAllArticles}
+        viewMoreLink={`/blog/${getTranslatedSlug('service', locale)}/${service.slug}`}
         maxPosts={3}
       />
 
@@ -192,8 +196,8 @@ export default function ServicePage({ service, location }: ServicePageProps) {
         location={location}
         excludeService={service.slug}
         title={location
-          ? <>Other Services in {location.name}</>
-          : <>Other Services You May Need</>
+          ? ui.services.otherServicesIn.replace('{name}', location.name)
+          : ui.services.otherServices
         }
       />
 
@@ -208,7 +212,3 @@ export default function ServicePage({ service, location }: ServicePageProps) {
     </div>
   );
 }
-
-
-
-

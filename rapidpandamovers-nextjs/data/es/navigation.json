@@ -1,0 +1,88 @@
+{
+  "header": {
+    "home": { "label": "Inicio" },
+    "services": {
+      "label": "Servicios",
+      "allLink": { "label": "Todos los Servicios", "description": "Resumen completo de servicios" }
+    },
+    "locations": {
+      "label": "Ubicaciones",
+      "nameTemplate": "Mudanzas de {name}",
+      "allLink": { "label": "Todas las Ubicaciones", "description": "Resumen completo de ubicaciones" }
+    },
+    "compare": {
+      "label": "Comparar",
+      "items": [
+        { "label": "Comparar Mudanzas", "description": "Vea cómo nos comparamos", "href": "/comparar" },
+        { "label": "Opciones Alternativas", "description": "Bricolaje vs servicio completo", "href": "/alternativas" }
+      ],
+      "bottomLink": { "label": "¿Por Qué Elegirnos?", "description": "La diferencia Rapid Panda", "href": "/por-que-elegirnos" }
+    },
+    "resources": {
+      "label": "Recursos",
+      "items": [
+        { "label": "Preguntas Frecuentes", "description": "Preguntas comunes", "href": "/preguntas-frecuentes" },
+        { "label": "Tarifas de Mudanza", "description": "Información de precios", "href": "/tarifas-de-mudanza" },
+        { "label": "Rutas de Mudanza", "description": "Rutas populares de mudanza", "href": "/rutas-de-mudanza" },
+        { "label": "Consejos de Mudanza", "description": "Consejos de expertos", "href": "/consejos-de-mudanza" },
+        { "label": "Lista de Mudanza", "description": "Tareas esenciales", "href": "/lista-de-mudanza" },
+        { "label": "Glosario de Mudanza", "description": "Términos comunes de mudanza", "href": "/glosario-de-mudanza" }
+      ],
+      "bottomLink": { "label": "Blog", "description": "Consejos y noticias de mudanza", "href": "/blog" }
+    },
+    "company": {
+      "label": "Empresa",
+      "items": [
+        { "label": "Sobre Nosotros", "description": "Sobre Rapid Panda Movers", "href": "/sobre-nosotros" },
+        { "label": "Contáctenos", "description": "Póngase en contacto", "href": "/contacto" },
+        { "label": "Reseñas", "description": "Testimonios reales", "href": "/resenas" },
+        { "label": "Reservaciones", "description": "Reserve su mudanza", "href": "/reservaciones" }
+      ],
+      "bottomLink": { "label": "Cotización Gratis", "description": "Obtenga un presupuesto gratis", "href": "/cotizacion" }
+    },
+    "cta": { "quoteButton": "Cotización Gratis" }
+  },
+  "footer": {
+    "sections": {
+      "services": { "title": "Servicios de Mudanza" },
+      "locations": { "title": "Ubicaciones de Mudanza", "nameTemplate": "Mudanzas de {name}" },
+      "resources": {
+        "title": "Recursos",
+        "items": [
+          { "label": "Preguntas Frecuentes", "href": "/preguntas-frecuentes" },
+          { "label": "Blog", "href": "/blog" },
+          { "label": "Tarifas de Mudanza", "href": "/tarifas-de-mudanza" },
+          { "label": "Rutas de Mudanza", "href": "/rutas-de-mudanza" },
+          { "label": "Consejos de Mudanza", "href": "/consejos-de-mudanza" },
+          { "label": "Lista de Mudanza", "href": "/lista-de-mudanza" },
+          { "label": "Glosario de Mudanza", "href": "/glosario-de-mudanza" }
+        ]
+      },
+      "company": {
+        "title": "Empresa",
+        "items": [
+          { "label": "Sobre Nosotros", "href": "/sobre-nosotros" },
+          { "label": "Contáctenos", "href": "/contacto" },
+          { "label": "Reseñas", "href": "/resenas" },
+          { "label": "Reservaciones", "href": "/reservaciones" },
+          { "label": "Cotización Gratis", "href": "/cotizacion" }
+        ]
+      },
+      "compare": { "title": "Comparar Mudanzas", "allLabel": "Todas las Comparaciones", "prefix": "vs" },
+      "alternatives": { "title": "Alternativas", "allLabel": "Todas las Alternativas" }
+    },
+    "copyright": "© {year} Rapid Panda Movers. Todos los derechos reservados.",
+    "legalLinks": [
+      { "label": "Política de Privacidad", "href": "/privacidad" },
+      { "label": "Términos y Condiciones", "href": "/terminos" }
+    ],
+    "social": [
+      { "platform": "facebook", "url": "https://www.facebook.com/raapidpandamovers/", "label": "Facebook" },
+      { "platform": "x", "url": "#", "label": "X" },
+      { "platform": "instagram", "url": "https://www.instagram.com/rapidpandamovers/", "label": "Instagram" },
+      { "platform": "linkedin", "url": "#", "label": "LinkedIn" },
+      { "platform": "tiktok", "url": "#", "label": "TikTok" },
+      { "platform": "youtube", "url": "#", "label": "YouTube" }
+    ]
+  }
+}

@@ -1,3 +1,5 @@
+import { H2, H3 } from '@/app/components/Heading'
+
 interface Rate {
   service: string
   rate: string
@@ -52,9 +54,9 @@ export default function RateSection({
         {(title || subtitle) && (
           <div className="text-center mb-12">
             {title && (
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+              <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                 {title}
-              </h2>
+              </H2>
             )}
             {subtitle && (
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -70,9 +72,9 @@ export default function RateSection({
               const bgColors = ['bg-orange-50', 'bg-gray-50', 'bg-green-50', 'bg-blue-50']
               return (
                 <div key={catIndex} className={`${bgColors[catIndex % bgColors.length]} rounded-4xl p-8`}>
-                  <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                  <H3 className="text-2xl font-bold text-gray-800 mb-4">
                     {category.title}
-                  </h3>
+                  </H3>
                   {category.description && (
                     <p className="text-gray-600 mb-6">
                       {category.description}
@@ -103,9 +105,9 @@ export default function RateSection({
         {additionalServices && additionalServices.services.length > 0 && (
           <div className={displayCategories.length > 0 ? 'mt-16' : ''}>
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+              <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                 {additionalServices.title}
-              </h2>
+              </H2>
               {additionalServices.subtitle && (
                 <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                   {additionalServices.subtitle}
@@ -116,9 +118,9 @@ export default function RateSection({
               <div className="grid md:grid-cols-3 gap-6">
                 {additionalServices.services.map((service, index) => (
                   <div key={index} className="bg-white rounded-2xl p-6 text-center">
-                    <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                    <H3 className="text-xl font-semibold text-gray-800 mb-2">
                       {service.service}
-                    </h3>
+                    </H3>
                     <div className="text-3xl font-bold text-orange-600 mb-4">
                       {service.rate}
                     </div>

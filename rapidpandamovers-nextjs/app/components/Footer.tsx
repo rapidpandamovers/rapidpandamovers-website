@@ -1,11 +1,14 @@
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
 import Image from 'next/image'
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin } from 'lucide-react'
-import { getAllActiveCities, getAllActiveServices } from '@/lib/data'
+import { getAllActiveCities, getLocalizedServices } from '@/lib/data'
 import comparisons from '@/data/comparisons.json'
 import alternatives from '@/data/alternatives.json'
-import content from '@/data/content.json'
-import nav from '@/data/navigation.json'
+import { getMessages, getLocale } from 'next-intl/server'
+import { getTranslatedSlug } from '@/i18n/slug-map'
+import type { Locale } from '@/i18n/config'
+import { LanguageSelectorFooter } from './LanguageSelector'
+import { H3 } from '@/app/components/Heading'
 
 function SocialIcon({ platform }: { platform: string }) {
   switch (platform) {
@@ -38,15 +41,18 @@ function SocialIcon({ platform }: { platform: string }) {
   }
 }
 
-export default function Footer() {
+export default async function Footer() {
+  const locale = await getLocale() as Locale
+  const { nav, content, ui } = (await getMessages()) as any
   const cities = getAllActiveCities()
-  const services = getAllActiveServices()
+  const services = getLocalizedServices(locale)
   const { phone, email, address, hours } = content.site
   const phoneFormatted = `(${phone.slice(0,3)}) ${phone.slice(4,7)}-${phone.slice(8)}`
   const phoneTel = phone.replace(/-/g, '')
   const addressParts = address.split(/(?= Miami)/)
   const addressLine1 = addressParts[0]
   const addressLine2 = addressParts.slice(1).join('').trim()
+  const nameTemplate = nav.footer.sections.locations.nameTemplate || '{name} Movers'
 
   return (
     <footer className="pt-20 pb-6 px-4 md:px-6 lg:px-8 text-white">
@@ -55,11 +61,11 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           {/* Moving Services */}
           <div>
-            <h3 className="text-lg font-bold mb-4 text-white">{nav.footer.sections.services.title}</h3>
+            <H3 className="text-lg font-bold mb-4 text-white">{nav.footer.sections.services.title}</H3>
             <ul className="space-y-2 text-sm">
               {services.map((service) => (
                 <li key={service.slug}>
-                  <Link href={`/${service.slug}`} className="text-gray-400 hover:text-orange-500 transition-colors">
+                  <Link href={`/${getTranslatedSlug(service.slug, locale)}`} className="text-gray-400 hover:text-orange-500 transition-colors">
                     {service.name}
                   </Link>
                 </li>
@@ -69,12 +75,12 @@ export default function Footer() {
 
           {/* Moving Locations */}
           <div>
-            <h3 className="text-lg font-bold mb-4 text-white">{nav.footer.sections.locations.title}</h3>
+            <H3 className="text-lg font-bold mb-4 text-white">{nav.footer.sections.locations.title}</H3>
             <ul className="space-y-2 text-sm">
               {cities.map((city) => (
                 <li key={city.slug}>
-                  <Link href={`/${city.slug}-movers`} className="text-gray-400 hover:text-orange-500 transition-colors">
-                    {city.name} {nav.footer.sections.locations.suffix}
+                  <Link href={`/${getTranslatedSlug(`${city.slug}-movers`, locale)}`} className="text-gray-400 hover:text-orange-500 transition-colors">
+                    {nameTemplate.replace('{name}', city.name)}
                   </Link>
                 </li>
               ))}
@@ -83,42 +89,42 @@ export default function Footer() {
 
           {/* Resources & Company */}
           <div>
-            <h3 className="text-lg font-bold mb-4 text-white">{nav.footer.sections.resources.title}</h3>
+            <H3 className="text-lg font-bold mb-4 text-white">{nav.footer.sections.resources.title}</H3>
             <ul className="space-y-2 text-sm mb-8">
-              {nav.footer.sections.resources.items.map((item) => (
+              {nav.footer.sections.resources.items.map((item: any) => (
                 <li key={item.href}>
                   <Link href={item.href} className="text-gray-400 hover:text-orange-500 transition-colors">{item.label}</Link>
                 </li>
               ))}
             </ul>
 
-            <h3 className="text-lg font-bold mb-4 text-white">{nav.footer.sections.company.title}</h3>
+            <H3 className="text-lg font-bold mb-4 text-white">{nav.footer.sections.company.title}</H3>
             <ul className="space-y-2 text-sm mb-8">
-              {nav.footer.sections.company.items.map((item) => (
+              {nav.footer.sections.company.items.map((item: any) => (
                 <li key={item.href}>
                   <Link href={item.href} className="text-gray-400 hover:text-orange-500 transition-colors">{item.label}</Link>
                 </li>
               ))}
             </ul>
 
-            <h3 className="text-lg font-bold mb-4 text-white">{nav.footer.sections.compare.title}</h3>
+            <H3 className="text-lg font-bold mb-4 text-white">{nav.footer.sections.compare.title}</H3>
             <ul className="space-y-2 text-sm mb-8">
-              <li><Link href="/compare" className="text-gray-400 hover:text-orange-500 transition-colors">{nav.footer.sections.compare.allLabel}</Link></li>
+              <li><Link href={`/${getTranslatedSlug('compare', locale)}`} className="text-gray-400 hover:text-orange-500 transition-colors">{nav.footer.sections.compare.allLabel}</Link></li>
               {comparisons.comparisons.map((comparison) => (
                 <li key={comparison.slug}>
-                  <Link href={`/compare/${comparison.slug}`} className="text-gray-400 hover:text-orange-500 transition-colors">
+                  <Link href={`/${getTranslatedSlug('compare', locale)}/${comparison.slug}`} className="text-gray-400 hover:text-orange-500 transition-colors">
                     {nav.footer.sections.compare.prefix} {comparison.competitor.name}
                   </Link>
                 </li>
               ))}
             </ul>
 
-            <h3 className="text-lg font-bold mb-4 text-white">{nav.footer.sections.alternatives.title}</h3>
+            <H3 className="text-lg font-bold mb-4 text-white">{nav.footer.sections.alternatives.title}</H3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/alternatives" className="text-gray-400 hover:text-orange-500 transition-colors">{nav.footer.sections.alternatives.allLabel}</Link></li>
+              <li><Link href={`/${getTranslatedSlug('alternatives', locale)}`} className="text-gray-400 hover:text-orange-500 transition-colors">{nav.footer.sections.alternatives.allLabel}</Link></li>
               {alternatives.alternatives.map((alt) => (
                 <li key={alt.slug}>
-                  <Link href={`/alternatives/${alt.slug}`} className="text-gray-400 hover:text-orange-500 transition-colors">
+                  <Link href={`/${getTranslatedSlug('alternatives', locale)}/${alt.slug}`} className="text-gray-400 hover:text-orange-500 transition-colors">
                     {alt.alternative.name}
                   </Link>
                 </li>
@@ -128,7 +134,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-bold mb-4 text-white">Contact Us</h3>
+            <H3 className="text-lg font-bold mb-4 text-white">{ui.contact.contactUs}</H3>
             <div className="space-y-4 text-sm">
               <a href={`tel:${phoneTel}`} className="flex items-start space-x-3 text-gray-400 hover:text-orange-500 transition-colors">
                 <Phone className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
@@ -157,7 +163,7 @@ export default function Footer() {
               </div>
               {/* Social Media */}
               <div className="flex items-center space-x-4 pt-2">
-                {nav.footer.social.map((social) => (
+                {nav.footer.social.map((social: any) => (
                   <a
                     key={social.platform}
                     href={social.url}
@@ -189,10 +195,12 @@ export default function Footer() {
                 {nav.footer.copyright.replace('{year}', String(new Date().getFullYear()))}
               </p>
             </div>
-            <div className="flex space-x-6 text-sm">
-              {nav.footer.legalLinks.map((link) => (
+            <div className="flex items-center space-x-6 text-sm">
+              {nav.footer.legalLinks.map((link: any) => (
                 <Link key={link.href} href={link.href} className="text-gray-400 hover:text-orange-500 transition-colors">{link.label}</Link>
               ))}
+              <span className="text-gray-700">|</span>
+              <LanguageSelectorFooter />
             </div>
           </div>
         </div>

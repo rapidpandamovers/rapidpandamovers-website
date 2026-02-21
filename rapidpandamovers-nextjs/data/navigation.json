@@ -7,6 +7,7 @@
     },
     "locations": {
       "label": "Locations",
+      "nameTemplate": "{name} Movers",
       "allLink": { "label": "All Locations", "description": "Complete location overview" }
     },
     "compare": {
@@ -44,7 +45,7 @@
   "footer": {
     "sections": {
       "services": { "title": "Moving Services" },
-      "locations": { "title": "Moving Locations", "suffix": "Movers" },
+      "locations": { "title": "Moving Locations", "nameTemplate": "{name} Movers" },
       "resources": {
         "title": "Resources",
         "items": [

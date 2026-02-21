@@ -1,9 +1,10 @@
 'use client'
 
-import { useState, FormEvent } from 'react'
+import { useState, useRef, FormEvent } from 'react'
 import { Phone, Mail, MapPin, Clock, Loader2, CheckCircle, ArrowRight } from 'lucide-react'
-import content from '@/data/content.json'
-import ui from '@/data/ui.json'
+import { useMessages } from 'next-intl'
+import { H3 } from '@/app/components/Heading'
+import TurnstileWidget, { TurnstileWidgetRef } from '@/app/components/TurnstileWidget'
 
 interface ContactSectionProps {
   title?: string
@@ -13,13 +14,18 @@ interface ContactSectionProps {
 }
 
 export default function ContactSection({
-  title = "Get In Touch",
-  description = "Ready to make your move? Contact us today for a free quote or any questions about our moving services.",
+  title: titleProp,
+  description: descriptionProp,
   className = "",
   showForm = true
 }: ContactSectionProps) {
+  const { ui, content } = useMessages() as any
+  const title = titleProp ?? ui.contact.getInTouch
+  const description = descriptionProp ?? ui.contact.getInTouchDesc
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [turnstileToken, setTurnstileToken] = useState('')
+  const turnstileRef = useRef<TurnstileWidgetRef>(null)
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -32,6 +38,7 @@ export default function ContactSection({
       email: formData.get('email'),
       phone: formData.get('phone'),
       message: formData.get('message'),
+      turnstileToken,
     }
 
     try {
@@ -51,6 +58,8 @@ export default function ContactSection({
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)
+      setTurnstileToken('')
+      turnstileRef.current?.reset()
     }
   }
 
@@ -84,7 +93,7 @@ export default function ContactSection({
         <div className={`grid grid-cols-1 ${showForm ? 'md:grid-cols-2' : ''} gap-8`}>
           {/* Contact Info Side */}
           <div className="bg-orange-50 rounded-4xl p-8 flex flex-col">
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">{ui.contact.infoTitle}</h3>
+            <H3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">{ui.contact.infoTitle}</H3>
 
             <div className="space-y-6">
               {contactInfo.map((item, index) => {
@@ -105,19 +114,19 @@ export default function ContactSection({
                       <p className="text-gray-700 font-medium break-words">{item.value}</p>
                       <p className="text-sm text-gray-500 mt-1">{item.description}</p>
                     </div>
-                    <ArrowRight className="w-5 h-5 text-gray-300 group-hover:text-orange-500 group-hover:translate-x-1 transition-all mt-4 flex-shrink-0" />
+                    <ArrowRight className="w-5 h-5 text-gray-300 group-hover:text-orange-600 group-hover:translate-x-1 transition-all mt-4 flex-shrink-0" />
                   </a>
                 )
               })}
             </div>
 
             {/* Business Hours */}
-            <div className="bg-orange-500 rounded-2xl p-6 mt-auto pt-6 text-white">
+            <div className="bg-orange-600 rounded-2xl p-6 mt-auto pt-6 text-white text-shadow-sm">
               <div className="flex items-center mb-4">
                 <Clock className="w-6 h-6 mr-3" />
                 <h4 className="text-lg font-semibold">{ui.contact.hoursTitle}</h4>
               </div>
-              <div className="space-y-2 text-orange-100">
+              <div className="space-y-2 text-white/90">
                 {content.site.hours.map((entry: { label: string; time: string }, i: number) => (
                   <div key={i} className="flex justify-between">
                     <span>{entry.label}</span>
@@ -131,7 +140,7 @@ export default function ContactSection({
           {/* Contact Form Side */}
           {showForm && (
             <div className="bg-gray-50 rounded-4xl p-8 flex flex-col">
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">{ui.forms.contact.title}</h3>
+              <H3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">{ui.forms.contact.title}</H3>
 
               {submitStatus === 'success' ? (
                 <div className="text-center py-12">
@@ -142,7 +151,7 @@ export default function ContactSection({
                   <p className="text-gray-600 mb-6">{ui.messages.contactSuccess.description}</p>
                   <button
                     onClick={() => setSubmitStatus('idle')}
-                    className="text-orange-500 hover:text-orange-600 font-medium"
+                    className="text-orange-700 hover:text-orange-800 font-medium"
                   >
                     {ui.buttons.sendAnother}
                   </button>
@@ -211,10 +220,16 @@ export default function ContactSection({
                     </div>
                   )}
 
+                  <TurnstileWidget
+                    ref={turnstileRef}
+                    onVerify={setTurnstileToken}
+                    onExpire={() => setTurnstileToken('')}
+                  />
+
                   <button
                     type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-orange-500 hover:bg-orange-600 disabled:bg-orange-300 text-white font-semibold py-4 px-6 rounded-lg transition-colors flex items-center justify-center"
+                    disabled={isSubmitting || !turnstileToken}
+                    className="w-full bg-orange-600 hover:bg-orange-700 disabled:bg-orange-300 text-white font-semibold py-4 px-6 rounded-lg transition-colors flex items-center justify-center"
                   >
                     {isSubmitting ? (
                       <>

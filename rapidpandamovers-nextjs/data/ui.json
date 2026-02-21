@@ -16,9 +16,21 @@
     "readMore": "Read more",
     "showLess": "Show less",
     "viewAllReviews": "View All Reviews",
-    "callPrefix": "Call"
+    "callPrefix": "Call",
+    "reserveNow": "Reserve Now",
+    "visitWebsite": "Visit Website",
+    "viewComparison": "View Comparison",
+    "compare": "Compare",
+    "viewFullGlossary": "View Full Glossary"
   },
   "forms": {
+    "validation": {
+      "captchaRequired": "Please complete the verification",
+      "captchaFailed": "Verification failed. Please try again.",
+      "rateLimited": "Too many requests. Please wait a few minutes and try again.",
+      "invalidEmail": "Please enter a valid email address",
+      "requiredField": "This field is required"
+    },
     "contact": {
       "title": "Send Us a Message",
       "labels": {
@@ -41,6 +53,147 @@
     },
     "newsletter": {
       "placeholder": "Enter your email address"
+    },
+    "quote": {
+      "title": "Get Your Free Moving Quote",
+      "successTitle": "Quote Request Sent!",
+      "successDescription": "We'll get back to you within 24 hours.",
+      "returnHome": "Return Home",
+      "errorMessage": "Something went wrong. Please try again or call us directly.",
+      "submitButton": "Get My Free Quote",
+      "submitting": "Sending...",
+      "contactTitle": "Contact Information",
+      "emailSupport": "24/7 email support",
+      "locationCity": "Miami, FL",
+      "locationArea": "Serving all of Miami-Dade",
+      "whyChooseTitle": "Why Choose Us?",
+      "whyChooseItems": [
+        "No hidden fees or surprise charges",
+        "Licensed and fully insured",
+        "Professional, experienced team",
+        "Free quotes within 24 hours",
+        "Same-day service available"
+      ],
+      "labels": {
+        "firstName": "First Name *",
+        "lastName": "Last Name *",
+        "email": "Email Address *",
+        "phone": "Phone Number *",
+        "movingFrom": "Moving From *",
+        "movingTo": "Moving To *",
+        "movingDate": "Preferred Moving Date",
+        "homeSize": "Home Size",
+        "servicesNeeded": "Services Needed (check all that apply)",
+        "additionalDetails": "Additional Details"
+      },
+      "placeholders": {
+        "address": "Address or ZIP code",
+        "details": "Tell us about any special requirements, fragile items, or other details..."
+      },
+      "homeSizes": {
+        "select": "Select home size",
+        "studio": "Studio Apartment",
+        "oneBed": "1 Bedroom",
+        "twoBed": "2 Bedroom",
+        "threeBed": "3 Bedroom",
+        "fourPlusBed": "4+ Bedroom"
+      },
+      "serviceOptions": ["Packing", "Loading/Unloading", "Transportation", "Unpacking", "Furniture Assembly", "Storage"]
+    },
+    "reservation": {
+      "successTitle": "Reservation Request Submitted!",
+      "successDescription": "Thank you for choosing Rapid Panda Movers. We'll contact you within 24 hours to confirm your booking.",
+      "returnHome": "Return Home",
+      "errorMessage": "Something went wrong. Please try again or call us directly at {phone}.",
+      "submitButton": "Book My Move",
+      "submitting": "Submitting...",
+      "disclaimer": "By submitting this form, you agree to receive SMS and email notifications about your move.",
+      "sections": {
+        "personal": "1. Personal Details",
+        "locations": "2. Moving Locations",
+        "dateTime": "3. Moving Date & Time",
+        "moveSize": "4. Move Size",
+        "additional": "5. Additional Services",
+        "info": "6. Additional Information"
+      },
+      "labels": {
+        "fullName": "Full Name *",
+        "email": "Email Address *",
+        "phone": "Phone Number *",
+        "referenceNumber": "Reference Number (if any)",
+        "pickupLocation": "Pick-up Location",
+        "dropoffLocation": "Drop-off Location",
+        "address": "Address *",
+        "aptUnit": "Apt/Unit #",
+        "city": "City *",
+        "state": "State *",
+        "zipCode": "Zip Code *",
+        "pickupStorage": "Pick-up is from a storage facility",
+        "dropoffStorage": "Drop-off is to a storage facility",
+        "movingDate": "Moving Date *",
+        "startTime": "Preferred Start Time *",
+        "moveSize": "Select Your Move Size *",
+        "packingServices": "Do you need packing services?",
+        "additionalServices": "Select any additional services needed:",
+        "specialItems": "Special Items or Concerns",
+        "hearAboutUs": "How did you hear about us?"
+      },
+      "placeholders": {
+        "fullName": "Your full name",
+        "email": "your.email@example.com",
+        "phone": "(786) 555-1234",
+        "reference": "Quote reference #",
+        "address": "Street address",
+        "apt": "Apt #",
+        "city": "City",
+        "specialItems": "Please list any fragile items, heavy furniture, stairs, elevators, parking restrictions, or any other special requirements..."
+      },
+      "timeSlots": {
+        "select": "Select a time",
+        "morning1": "8:00 AM - 9:00 AM",
+        "morning2": "9:00 AM - 10:00 AM",
+        "morning3": "10:00 AM - 11:00 AM",
+        "midday1": "11:00 AM - 12:00 PM",
+        "midday2": "12:00 PM - 1:00 PM",
+        "afternoon1": "1:00 PM - 2:00 PM",
+        "afternoon2": "2:00 PM - 3:00 PM",
+        "afternoon3": "3:00 PM - 4:00 PM"
+      },
+      "moveSizes": {
+        "select": "Select move size",
+        "studio": "Studio",
+        "oneBedSmall": "1 Bedroom (Small)",
+        "oneBedLarge": "1 Bedroom (Large)",
+        "twoBed": "2 Bedroom",
+        "threeBed": "3 Bedroom",
+        "fourBed": "4 Bedroom",
+        "fourPlusBed": "4+ Bedroom",
+        "office": "Office/Commercial",
+        "other": "Other"
+      },
+      "packingOptions": {
+        "none": "No packing needed",
+        "partial": "Partial packing",
+        "full": "Full packing service"
+      },
+      "additionalServiceOptions": [
+        "Unpacking Services",
+        "Furniture Disassembly/Assembly",
+        "Piano Moving",
+        "Storage Services",
+        "Specialty Items (Art, Antiques)",
+        "Cleaning Services"
+      ],
+      "referralOptions": {
+        "select": "Select an option",
+        "google": "Google Search",
+        "yelp": "Yelp",
+        "referral": "Friend/Family Referral",
+        "social": "Social Media",
+        "repeat": "Returning Customer",
+        "bbb": "BBB",
+        "other": "Other"
+      }
     }
   },
   "messages": {
@@ -48,7 +201,17 @@
       "title": "Message Sent!",
       "description": "We'll get back to you within 24 hours."
     },
-    "contactError": "Failed to send message. Please try again or call us directly."
+    "contactError": "Failed to send message. Please try again or call us directly.",
+    "newsletterSuccess": {
+      "title": "You're subscribed!",
+      "description": "Thanks for subscribing to our newsletter."
+    },
+    "newsletterError": "Failed to subscribe. Please try again."
+  },
+  "pagination": {
+    "previous": "Previous",
+    "next": "Next",
+    "pageIndicator": "Page {current} of {total} ({count} {itemType})"
   },
   "contact": {
     "infoTitle": "Contact Information",
@@ -57,7 +220,10 @@
       "email": { "title": "Email", "description": "We reply within 24 hours" },
       "address": { "title": "Address", "description": "Miami, Florida" }
     },
-    "hoursTitle": "Business Hours"
+    "hoursTitle": "Business Hours",
+    "contactUs": "Contact Us",
+    "getInTouch": "Get In Touch",
+    "getInTouchDesc": "Ready to make your move? Contact us today for a free quote or any questions about our moving services."
   },
   "ratings": {
     "defaultTitle": "Excellent Ratings Across All Platforms",
@@ -94,7 +260,18 @@
     "defaultTitle": "Locations We Serve",
     "defaultSubtitle": "Serving {count}+ cities and neighborhoods across Miami-Dade County",
     "viewAll": "View All Locations",
-    "moreAreas": "Proudly serving every corner of Miami-Dade County & more!"
+    "moreAreas": "Proudly serving every corner of Miami-Dade County & more!",
+    "breadcrumb": "Locations",
+    "zipCodes": "ZIP Codes:",
+    "serving": "Serving {name} (Population: {population})",
+    "movingServicesIn": "Moving Services in {name}",
+    "locationGuide": "Location Guide",
+    "movingTipsFor": "Moving Tips for {name}",
+    "heroDescriptionCity": "Professional moving services in {name}. Expert local and long-distance moving with experienced crews and transparent pricing.",
+    "heroDescriptionNeighborhood": "Professional moving services in {name}, {parent}. Local movers you can trust.",
+    "professionalServicesIn": "Professional Moving Services in {name}",
+    "nameTemplate": "{name} Movers",
+    "populationLabel": "Population"
   },
   "quote": {
     "defaultTitle": "Let Us Handle the Heavy Lifting",
@@ -106,7 +283,12 @@
   },
   "review": {
     "ctaTitle": "See What Others Say",
-    "ctaSubtitle": "Read verified reviews from our customers across Google, Yelp, and more"
+    "ctaSubtitle": "Read verified reviews from our customers across Google, Yelp, and more",
+    "seeOriginal": "See original",
+    "hideOriginal": "Hide original",
+    "allReviews": "All Reviews",
+    "viewAllReviews": "View All Reviews",
+    "itemType": "reviews"
   },
   "hero": {
     "defaultTitle": "Family-Owned Moving Company in Miami",
@@ -120,6 +302,246 @@
   },
   "media": {
     "defaultTitle": "See Us In Action",
-    "defaultDescription": "Watch our professional team handle moves with care and precision"
+    "defaultDescription": "Watch our professional team handle moves with care and precision",
+    "defaultItems": [
+      { "title": "Brickell Moving", "description": "Downtown Miami relocations" },
+      { "title": "Coconut Grove", "description": "Village charm moves" },
+      { "title": "Wynwood", "description": "Arts district moves" },
+      { "title": "Miami Beach", "description": "Coastal relocations" }
+    ]
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "Sorry, we couldn't find the page you're looking for. It may have been moved or no longer exists.",
+    "goHome": "Go Home",
+    "contactUs": "Contact Us",
+    "searchPlaceholder": "Search for locations, services, routes, or blog posts...",
+    "relatedArticles": "Related Articles",
+    "relatedSubtitle": "Check out some of our helpful moving guides",
+    "viewAllArticles": "View All Articles"
+  },
+  "about": {
+    "ourValues": "Our Values",
+    "knowDifferent": "Want to know what makes us different?",
+    "knowDifferentDesc": "Learn about our commitment to excellence, transparent pricing, and satisfaction guarantee.",
+    "whyChoose": "Why Choose Rapid Panda",
+    "learnMoreAboutUs": "Learn More About Us"
+  },
+  "blog": {
+    "readMore": "Read More",
+    "readFullArticle": "Read Full Article",
+    "backToBlog": "Back to Blog",
+    "allPosts": "All Posts",
+    "servicesFilter": "Services",
+    "locationsFilter": "Locations",
+    "noPostsFound": "No posts found in this category.",
+    "fallbackTitle": "Moving Tips & Insights",
+    "fallbackSubtitle": "Expert advice and practical tips to make your move smooth and affordable",
+    "exploreMoreTitle": "Explore More Articles",
+    "exploreMoreSubtitle": "Discover helpful tips and guides for your move",
+    "viewAllArticles": "View All Articles",
+    "browseAllArticles": "Browse All Articles",
+    "moreTips": "More Tips",
+    "moreTipsDesc": "Expert advice to make your next move smooth",
+    "browseMovingTips": "Browse Moving Tips",
+    "tipsAndGuides": "{name} Tips & Guides",
+    "movingTipsFor": "Moving Tips for {name}",
+    "postsAbout": "{count} {postWord} about {name}",
+    "postsInCategory": "{count} {postWord} in this category",
+    "postSingular": "post",
+    "postPlural": "posts",
+    "itemTypes": "posts"
+  },
+  "routes": {
+    "breadcrumb": "Routes",
+    "allRoutes": "All Routes",
+    "longDistance": "Long Distance",
+    "local": "Local",
+    "viewRoute": "View Route",
+    "viewAllRoutes": "View All Routes",
+    "showingRoutesFrom": "Showing routes from/to {location}",
+    "viewAll": "View all routes",
+    "startingFrom": "Starting from ${cost}",
+    "noRoutesFound": "No routes found for \"{location}\"",
+    "noRoutesOnPage": "No routes on this page.",
+    "viewPage1": "View Page 1",
+    "toMovers": "{from} to {to} Movers",
+    "routeDescription": "Moving from {from} to {to}? We provide professional moving services for this route with experienced crews and reliable service.",
+    "movingTipsFor": "Moving Tips for {from} to {to}",
+    "helpfulGuides": "Helpful guides for your {from} to {to} move",
+    "showLess": "Show Less",
+    "showAllRoutes": "Show All {count} Routes",
+    "viewAllLocationRoutes": "View All {name} Routes",
+    "itemType": "routes",
+    "popularRoutes": "Popular Routes",
+    "popularRoutesFrom": "Popular Routes from {name}",
+    "routesFromAndCity": "Moving routes from {name} and {city}",
+    "routesFromSubtitle": "Moving from {name}? We provide reliable moving services to these popular destinations",
+    "to": "to"
+  },
+  "services": {
+    "breadcrumb": "Services",
+    "defaultTitle": "Our Moving Services",
+    "defaultSubtitle": "Professional moving services tailored to meet your specific needs, timeline, and budget.",
+    "showingIn": "Showing services available in",
+    "viewAllLocations": "View All Locations →",
+    "learnMore": "Learn More",
+    "viewAllServicesIn": "View All Services in {name}",
+    "viewAllServices": "View All Services",
+    "otherServicesIn": "Other Services in {name}",
+    "otherServices": "Other Services You May Need",
+    "locationsTitle": "{name} Locations",
+    "faqSubtitle": "Common questions about our {name} services",
+    "serviceTipsFor": "{service} Tips for {location}",
+    "serviceTipsGuides": "{name} Tips & Guides",
+    "serviceDescription": "Professional {service} services in {location}. Experienced crews, transparent pricing, and reliable service.",
+    "aboutService": "About {name}"
+  },
+  "why": {
+    "defaultTitle": "Why Choose Rapid Panda Movers?",
+    "differenceTitle": "The Rapid Panda Difference",
+    "defaultCta": "See Why We're Different"
+  },
+  "pricing": {
+    "title": "Estimated Moving Costs",
+    "mostPopular": "Most Popular",
+    "categories": {
+      "oneRoom": { "title": "1 Room", "size": "100-800 sq ft", "desc": "Studios or small to medium apartments." },
+      "twoRoom": { "title": "2 Room", "size": "600-1,100 sq ft", "desc": "Small homes and large apartments." },
+      "threeRoom": { "title": "3 Room", "size": "1,000-1,800 sq ft", "desc": "Medium-size houses and condos." },
+      "fourRoom": { "title": "4 Room", "size": "1,800-2,600 sq ft", "desc": "Larger homes and multi-floor condos." },
+      "fourPlusRoom": { "title": "4+ Room", "size": "2,600+ sq ft", "desc": "Large houses, estates, and offices." }
+    },
+    "features": {
+      "truck": "truck",
+      "trucks": "trucks",
+      "mover": "mover",
+      "movers": "movers",
+      "loading": "loading",
+      "unloading": "unloading",
+      "hours": "hours",
+      "hour": "hour"
+    }
+  },
+  "travel": {
+    "movingFrom": "Moving from {origin} to {destination}",
+    "movingFromDesc": "Professional moving services for your relocation from {origin} to {destination}",
+    "distance": "Distance",
+    "miles": "{count} miles",
+    "driveTime": "Drive Time",
+    "startingCost": "Starting Cost",
+    "originDestination": "Origin & Destination",
+    "origin": "Origin",
+    "destination": "Destination"
+  },
+  "map": {
+    "drivingRoute": "Driving Route: {origin} to {destination}",
+    "locationArea": "{name} Area",
+    "serviceArea": "Service Area",
+    "loadingMap": "Loading map...",
+    "viewDirections": "View directions from {origin} to {destination} on",
+    "googleMaps": "Google Maps"
+  },
+  "search": {
+    "defaultPlaceholder": "Search locations, services, routes, or blog posts...",
+    "findTitle": "Find Your Moving Service",
+    "findSubtitle": "Search for locations, services, routes, or blog posts",
+    "movingServicesIn": "Moving services in {name}",
+    "milesDistance": "{count} miles"
+  },
+  "faq": {
+    "defaultTitle": "Frequently Asked Questions",
+    "defaultSubtitle": "Common questions about our moving services",
+    "learnMore": "Learn more",
+    "haveMoreQuestions": "Have more questions?",
+    "haveMoreQuestionsDesc": "Our team is ready to help with your move.",
+    "viewAllFaqs": "View All FAQs"
+  },
+  "statistics": {
+    "defaultTitle": "Trusted by Miami Families & Businesses",
+    "defaultSubtitle": "Our commitment to excellence has earned us the trust of thousands of customers throughout Miami-Dade County.",
+    "successfulMoves": "Successful Moves",
+    "customerSatisfaction": "Customer Satisfaction",
+    "yearsExperience": "Years Experience",
+    "averageRating": "Average Rating"
+  },
+  "sights": {
+    "popularSightsIn": "Popular Sights in {name}",
+    "popularSightsDefault": "Popular Landmarks & Sights",
+    "exploreIn": "Explore the best attractions and landmarks in {name}",
+    "exploreDefault": "Discover popular attractions in the area"
+  },
+  "glossary": {
+    "jumpToLetter": "Jump to Letter",
+    "previewTitle": "Moving Glossary",
+    "previewDescription": "New to moving? Learn the terminology used in the moving industry to better understand your move and communicate with your movers."
+  },
+  "compare": {
+    "bestFor": "{name} Is Best For:",
+    "realCostComparison": "The Real Cost Comparison",
+    "optionHeader": "Option",
+    "breadcrumb": "Compare",
+    "aboutName": "About {name}",
+    "rating": "Rating",
+    "reviews": "Reviews",
+    "servicesOffered": "Services Offered:",
+    "whyChooseRapidPandaBefore": "Why Choose ",
+    "whyChooseRapidPandaHighlight": "Rapid Panda Movers",
+    "whyChooseRapidPandaAfter": " Instead?",
+    "seeWhyDifferent": "See Why We're Different",
+    "prosOf": "Pros of {name}",
+    "consOf": "Cons of {name}"
+  },
+  "alternatives": {
+    "breadcrumb": "Alternatives",
+    "howItWorks": "How {name} Works",
+    "localMoves": "Local Moves",
+    "longDistance": "Long-Distance",
+    "monthlyStorage": "Monthly Storage",
+    "hourlyRate": "Hourly Rate",
+    "whyFullServiceBefore": "Why ",
+    "whyFullServiceHighlight": "Full-Service Moving",
+    "whyFullServiceAfter": " Might Be Better",
+    "seeWhyDifferent": "See Why We're Different"
+  },
+  "blogCategories": {
+    "Antique Moving": "Antique Moving",
+    "Apartment Moving": "Apartment Moving",
+    "Appliance Moving": "Appliance Moving",
+    "Art Moving": "Art Moving",
+    "Celebrity Moving": "Celebrity Moving",
+    "Commercial Moving": "Commercial Moving",
+    "Full Service Moving": "Full Service Moving",
+    "Fun Facts": "Fun Facts",
+    "Furniture Moving": "Furniture Moving",
+    "Home & Living": "Home & Living",
+    "Hot Tub Moving": "Hot Tub Moving",
+    "Hourly Moving": "Hourly Moving",
+    "Junk Removal": "Junk Removal",
+    "Labor Only Moving": "Labor Only Moving",
+    "Last-Minute Moving": "Last-Minute Moving",
+    "Lifestyle": "Lifestyle",
+    "Local Moving": "Local Moving",
+    "Location Guide": "Location Guide",
+    "Long Distance Moving": "Long Distance Moving",
+    "Military Moving": "Military Moving",
+    "Moving Tips": "Moving Tips",
+    "Office Moving": "Office Moving",
+    "Packing Services": "Packing Services",
+    "Piano Moving": "Piano Moving",
+    "Pool Table Moving": "Pool Table Moving",
+    "Residential Moving": "Residential Moving",
+    "Safe Moving": "Safe Moving",
+    "Same Building Moving": "Same Building Moving",
+    "Same Day Moving": "Same Day Moving",
+    "Senior Moving": "Senior Moving",
+    "Special Needs Moving": "Special Needs Moving",
+    "Specialty Item Moving": "Specialty Item Moving",
+    "Storage Solutions": "Storage Solutions",
+    "Student Moving": "Student Moving",
+    "White Glove Moving": "White Glove Moving"
+  },
+  "breadcrumbs": {
+    "home": "Home"
   }
 }

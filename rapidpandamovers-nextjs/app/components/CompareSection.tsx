@@ -1,4 +1,6 @@
 import { CheckCircle, XCircle, DollarSign, Star } from 'lucide-react';
+import { getMessages } from 'next-intl/server';
+import { H3 } from '@/app/components/Heading';
 
 interface CompareSectionProps {
   name: string;
@@ -12,7 +14,7 @@ interface CompareSectionProps {
 
 const bgColors = ['bg-orange-50', 'bg-gray-50']
 
-export default function CompareSection({
+export default async function CompareSection({
   name,
   pros,
   cons,
@@ -21,15 +23,16 @@ export default function CompareSection({
   bestFor,
   costComparison,
 }: CompareSectionProps) {
+  const { ui } = (await getMessages()) as any;
   return (
     <section className="pt-20">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Pros */}
           <div className={`${bgColors[0]} rounded-4xl p-8`}>
-            <h3 className="text-xl font-bold text-gray-800 mb-4">
+            <H3 className="text-xl font-bold text-gray-800 mb-4">
               {proTitle || `${name} Pros`}
-            </h3>
+            </H3>
             <ul className="space-y-3">
               {pros.map((pro, index) => (
                 <li key={index} className="flex items-start">
@@ -42,9 +45,9 @@ export default function CompareSection({
 
           {/* Cons */}
           <div className={`${bgColors[1]} rounded-4xl p-8`}>
-            <h3 className="text-xl font-bold text-gray-800 mb-4">
+            <H3 className="text-xl font-bold text-gray-800 mb-4">
               {conTitle || `${name} Cons`}
-            </h3>
+            </H3>
             <ul className="space-y-3">
               {cons.map((con, index) => (
                 <li key={index} className="flex items-start">
@@ -59,9 +62,9 @@ export default function CompareSection({
         {/* Best For (optional) */}
         {bestFor && bestFor.length > 0 && (
           <div className={`${bgColors[0]} rounded-4xl p-8 mt-8`}>
-            <h3 className="text-xl font-bold text-gray-800 mb-4">
-              {name} Is Best For:
-            </h3>
+            <H3 className="text-xl font-bold text-gray-800 mb-4">
+              {ui.compare.bestFor.replace('{name}', name)}
+            </H3>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {bestFor.map((item, index) => (
                 <li key={index} className="flex items-center text-gray-700">
@@ -76,9 +79,9 @@ export default function CompareSection({
         {/* Cost Comparison (optional) */}
         {costComparison && (
           <div className={`${bgColors[1]} rounded-4xl p-8 mt-8`}>
-            <h3 className="text-xl font-bold text-gray-800 mb-4">
-              The Real Cost Comparison
-            </h3>
+            <H3 className="text-xl font-bold text-gray-800 mb-4">
+              {ui.compare.realCostComparison}
+            </H3>
             <p className="text-gray-700">{costComparison}</p>
           </div>
         )}

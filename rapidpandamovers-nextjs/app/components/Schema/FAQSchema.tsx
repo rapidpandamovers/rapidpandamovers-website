@@ -8,17 +8,18 @@ interface FAQ {
 
 interface FAQSchemaProps {
   faqs: FAQ[]
+  locale?: string
 }
 
 /**
  * FAQ Page schema component
  */
-export default function FAQSchema({ faqs }: FAQSchemaProps) {
+export default function FAQSchema({ faqs, locale }: FAQSchemaProps) {
   if (!faqs || faqs.length === 0) {
     return null
   }
 
-  const schema = generateFAQSchema(faqs)
+  const schema = generateFAQSchema(faqs, locale)
 
   return <SchemaScript schema={schema} id="faq-schema" />
 }

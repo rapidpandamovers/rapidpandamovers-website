@@ -1,0 +1,1956 @@
+{
+  "states": [
+    {
+      "name": "Florida",
+      "abbreviation": "FL",
+      "slug": "florida",
+      "is_active": true,
+      "counties": [
+        {
+          "name": "Miami-Dade",
+          "slug": "miami-dade",
+          "is_active": true,
+          "cities": [
+            {
+              "name": "Miami",
+              "slug": "miami",
+              "population": 442241,
+              "lat": 25.7617,
+              "lng": -80.1918,
+              "is_active": true,
+              "description": "Miami es el vibrante corazón del sur de Florida, conocido por sus impresionantes playas, arquitectura Art Deco y diversa herencia cultural. Como la ciudad más grande del condado Miami-Dade, sirve como un centro importante de finanzas, comercio, cultura y comercio internacional. Desde las bulliciosas calles del centro hasta los modernos vecindarios de Wynwood y Brickell, Miami ofrece una emocionante mezcla de vida urbana y paraíso tropical.",
+              "sights": [
+                {
+                  "name": "Museo y Jardines de Vizcaya",
+                  "slug": "vizcaya-museum",
+                  "description": "Una impresionante villa y jardines de estilo Renacimiento italiano en la Bahía de Biscayne, con antigüedades europeas y 10 acres de jardines formales.",
+                  "image": "/images/sights/vizcaya-museum.jpg",
+                  "address": "3251 S Miami Ave, Miami, FL 33129",
+                  "website": "https://vizcaya.org",
+                  "category": "museum"
+                },
+                {
+                  "name": "Pérez Art Museum Miami",
+                  "slug": "pamm",
+                  "description": "Museo de arte contemporáneo en Museum Park con impresionantes vistas al mar y exhibiciones de clase mundial de arte de los siglos XX y XXI.",
+                  "image": "/images/sights/perez-art-museum.jpg",
+                  "address": "1103 Biscayne Blvd, Miami, FL 33132",
+                  "website": "https://pamm.org",
+                  "category": "museum"
+                },
+                {
+                  "name": "Wynwood Walls",
+                  "slug": "wynwood-walls",
+                  "description": "Museo al aire libre de arte callejero de fama mundial con murales de artistas reconocidos de todo el mundo en el corazón del Distrito de Arte de Wynwood.",
+                  "image": "/images/sights/wynwood-walls.jpg",
+                  "address": "2520 NW 2nd Ave, Miami, FL 33127",
+                  "website": "https://thewynwoodwalls.com",
+                  "category": "landmark"
+                },
+                {
+                  "name": "Bayfront Park",
+                  "slug": "bayfront-park",
+                  "description": "Parque urbano de 32 acres en el centro de Miami con senderos para caminar, esculturas y el Anfiteatro Bayfront Park para conciertos y eventos.",
+                  "image": "/images/sights/bayfront-park.jpg",
+                  "address": "301 Biscayne Blvd, Miami, FL 33132",
+                  "website": "https://bayfrontparkmiami.com",
+                  "category": "park"
+                },
+                {
+                  "name": "Museo Frost de Ciencias",
+                  "slug": "frost-science",
+                  "description": "Museo de ciencias de última generación con planetario, acuario y exhibiciones interactivas que exploran la ciencia, la tecnología y el medio ambiente.",
+                  "image": "/images/sights/frost-science.jpg",
+                  "address": "1101 Biscayne Blvd, Miami, FL 33132",
+                  "website": "https://frostscience.org",
+                  "category": "museum"
+                },
+                {
+                  "name": "La Pequeña Habana",
+                  "slug": "little-havana-calle-ocho",
+                  "description": "Vibrante vecindario cubano centrado en la Calle Ocho, con restaurantes auténticos, tiendas de puros y el famoso Parque Dominó.",
+                  "image": "/images/sights/little-havana.jpg",
+                  "address": "SW 8th Street, Miami, FL 33135",
+                  "category": "landmark"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "Allapattah",
+                  "slug": "allapattah",
+                  "zip_codes": [
+                    "33125",
+                    "33127",
+                    "33142"
+                  ],
+                  "description": "Allapattah es un vecindario diverso y de clase trabajadora en Miami, conocido por su vibrante mercado de productos agrícolas y su creciente escena artística. El área cuenta con viviendas asequibles, restaurantes latinoamericanos y el Museo Rubell, una colección de arte contemporáneo de renombre mundial. Allapattah está en proceso de revitalización mientras mantiene su auténtico carácter multicultural.",
+                  "sights": [
+                    {
+                      "name": "Museo Rubell",
+                      "slug": "rubell-museum",
+                      "description": "Museo de arte contemporáneo de clase mundial con una de las colecciones privadas más grandes de Norteamérica, ubicado en una antigua instalación de la DEA.",
+                      "image": "/images/sights/rubell-museum.jpg",
+                      "address": "1100 NW 23rd St, Miami, FL 33127",
+                      "website": "https://rubellmuseum.org",
+                      "category": "museum"
+                    }
+                  ],
+                  "is_active": true
+                },
+                {
+                  "name": "Arts & Entertainment District",
+                  "slug": "arts-entertainment-district",
+                  "zip_codes": [
+                    "33132"
+                  ],
+                  "description": "El Distrito de Artes y Entretenimiento es un vecindario frente al mar que alberga los principales recintos culturales de Miami, incluyendo el Centro de Artes Escénicas Adrienne Arsht, el Pérez Art Museum Miami y el Museo Frost de Ciencias. Esta área ofrece impresionantes vistas a la bahía, vida moderna en rascacielos y entretenimiento de clase mundial a pocos pasos del centro.",
+                  "sights": [
+                    {
+                      "name": "Centro Adrienne Arsht",
+                      "slug": "arsht-center",
+                      "description": "Centro de artes escénicas de clase mundial que presenta espectáculos de Broadway, ópera, ballet y conciertos con impresionante arquitectura frente al mar.",
+                      "image": "/images/sights/arsht-center.jpg",
+                      "address": "1300 Biscayne Blvd, Miami, FL 33132",
+                      "website": "https://arshtcenter.org",
+                      "category": "entertainment"
+                    }
+                  ],
+                  "is_active": true
+                },
+                {
+                  "name": "Bay Point",
+                  "slug": "bay-point",
+                  "zip_codes": [
+                    "33137"
+                  ],
+                  "description": "Bay Point es una exclusiva comunidad cerrada en la Bahía de Biscayne con lujosas propiedades frente al agua y muelles privados. Este prestigioso vecindario ofrece a sus residentes privacidad, seguridad e impresionantes vistas a la bahía, mientras está convenientemente ubicado cerca del Design District y Midtown Miami.",
+                  "sights": [
+                    {
+                      "name": "Legion Memorial Park",
+                      "slug": "legion-memorial-park",
+                      "description": "Parque de 37 acres frente a la bahía con canchas de tenis, área de juegos, parque para perros, piscina, rampa para botes y mercado de agricultores los sábados.",
+                      "image": "/images/sights/legion-memorial-park.jpg",
+                      "address": "6447 NE 7th Ave, Miami, FL 33138",
+                      "category": "park"
+                    }
+                  ],
+                  "is_active": true
+                },
+                {
+                  "name": "Belle Meade",
+                  "slug": "belle-meade",
+                  "zip_codes": [
+                    "33138"
+                  ],
+                  "description": "Belle Meade es un encantador vecindario histórico con casas de estilo Renacimiento Mediterráneo de la década de 1920 en calles arboladas. Ubicado cerca de Biscayne Boulevard, este tranquilo enclave residencial ofrece proximidad a las boutiques y restaurantes del Upper Eastside mientras mantiene una atmósfera pacífica y familiar.",
+                  "sights": [
+                    {
+                      "name": "The Vagabond Hotel",
+                      "slug": "vagabond-hotel",
+                      "description": "Hotel de estilo MiMo de 1953 bellamente restaurado, incluido en el Registro Nacional de Lugares Históricos, ahora un hotel boutique y restaurante.",
+                      "image": "/images/sights/vagabond-hotel.jpg",
+                      "address": "7301 Biscayne Blvd, Miami, FL 33138",
+                      "website": "https://thevagabondhotel.com",
+                      "category": "landmark"
+                    }
+                  ],
+                  "is_active": true
+                },
+                {
+                  "name": "Brickell",
+                  "slug": "brickell",
+                  "zip_codes": [
+                    "33129",
+                    "33130",
+                    "33131"
+                  ],
+                  "description": "Brickell es el distrito financiero de Miami y uno de los vecindarios urbanos más deseados del sur de Florida. Conocido por sus impresionantes condominios de gran altura, restaurantes exclusivos y vibrante vida nocturna, Brickell ofrece un sofisticado estilo de vida metropolitano. El área cuenta con el popular Brickell City Centre y es sede de muchos bancos y negocios internacionales.",
+                  "sights": [
+                    {
+                      "name": "Brickell City Centre",
+                      "slug": "brickell-city-centre",
+                      "description": "Destino de compras al aire libre de lujo con tiendas exclusivas, restaurantes y la cubierta arquitectónica Climate Ribbon.",
+                      "image": "/images/sights/brickell-city-centre.jpg",
+                      "address": "701 S Miami Ave, Miami, FL 33131",
+                      "website": "https://brickellcitycentre.com",
+                      "category": "shopping"
+                    },
+                    {
+                      "name": "Simpson Park Hammock",
+                      "slug": "simpson-park",
+                      "description": "Bosque tropical de madera dura de 8 acres, uno de los últimos ejemplos restantes del bosque nativo del sur de Florida.",
+                      "image": "/images/sights/simpson-park.jpg",
+                      "address": "55 SW 17th Rd, Miami, FL 33129",
+                      "category": "nature"
+                    }
+                  ],
+                  "is_active": true
+                },
+                {
+                  "name": "Brickell Key",
+                  "slug": "brickell-key",
+                  "zip_codes": [
+                    "33131"
+                  ],
+                  "description": "Brickell Key es una exclusiva isla privada conectada a Brickell por un corto puente, que ofrece vida estilo resort en el corazón de Miami. La isla cuenta con condominios de lujo de gran altura, el hotel Mandarin Oriental, senderos frente al agua e impresionantes vistas de la Bahía de Biscayne y el horizonte de Miami.",
+                  "sights": [
+                    {
+                      "name": "Mandarin Oriental Miami",
+                      "slug": "mandarin-oriental",
+                      "description": "Hotel y spa de lujo cinco estrellas con impresionantes vistas a la bahía, alta gastronomía y amenidades de clase mundial en la isla privada de Brickell Key.",
+                      "image": "/images/sights/mandarin-oriental.jpg",
+                      "address": "500 Brickell Key Dr, Miami, FL 33131",
+                      "website": "https://mandarinoriental.com/miami",
+                      "category": "landmark"
+                    }
+                  ],
+                  "is_active": true
+                },
+                {
+                  "name": "Buena Vista",
+                  "slug": "buena-vista",
+                  "zip_codes": [
+                    "33127"
+                  ],
+                  "description": "Buena Vista es un vecindario histórico adyacente al Design District, con encantadores bungalows y casas de estilo mediterráneo de la década de 1920. El área se ha vuelto cada vez más deseable por su proximidad a tiendas y restaurantes de alta gama, mientras mantiene su carácter residencial y su encanto histórico.",
+                  "sights": [
+                    {
+                      "name": "Upper Buena Vista",
+                      "slug": "upper-buena-vista",
+                      "description": "Complejo de estilo de vida al aire libre construido alrededor de un árbol Bodhi de 120 años con tiendas artesanales, boutiques y restaurantes de la granja a la mesa.",
+                      "image": "/images/sights/upper-buena-vista.jpg",
+                      "address": "5040 NE 2nd Ave, Miami, FL 33137",
+                      "category": "shopping"
+                    }
+                  ],
+                  "is_active": true
+                },
+                {
+                  "name": "Coconut Grove",
+                  "slug": "coconut-grove",
+                  "zip_codes": [
+                    "33133"
+                  ],
+                  "description": "Coconut Grove es el vecindario habitado continuamente más antiguo de Miami, conocido por su atmósfera bohemia, exuberante vegetación tropical y vida frente al mar. The Grove cuenta con encantadores cafés al aire libre, galerías de arte, boutiques y hermosos parques, incluyendo el Museo y Jardines de Vizcaya. Sus calles arboladas y arquitectura histórica crean una sensación relajada y pueblerina.",
+                  "sights": [
+                    {
+                      "name": "CocoWalk",
+                      "slug": "cocowalk",
+                      "description": "Centro de estilo de vida al aire libre con tiendas, restaurantes, cine y entretenimiento en el corazón de Coconut Grove.",
+                      "image": "/images/sights/cocowalk.jpg",
+                      "address": "3015 Grand Ave, Miami, FL 33133",
+                      "website": "https://cocowalk.com",
+                      "category": "shopping"
+                    },
+                    {
+                      "name": "Barnacle Historic State Park",
+                      "slug": "barnacle-park",
+                      "description": "Casa histórica de 1891 y terrenos del pionero Ralph Middleton Munroe, con vistas a la bahía y bosque tropical de madera dura.",
+                      "image": "/images/sights/barnacle-park.jpg",
+                      "address": "3485 Main Hwy, Miami, FL 33133",
+                      "category": "landmark"
+                    },
+                    {
+                      "name": "Peacock Park",
+                      "slug": "peacock-park",
+                      "description": "Parque frente al agua con áreas de juegos, instalaciones deportivas e impresionantes vistas de la Bahía de Biscayne, popular para eventos comunitarios.",
+                      "image": "/images/sights/peacock-park.jpg",
+                      "address": "2820 McFarlane Rd, Miami, FL 33133",
+                      "category": "park"
+                    }
+                  ],
+                  "is_active": true
+                },
+                {
+                  "name": "Coral Way / Shenandoah",
+                  "slug": "coral-way-shenandoah",
+                  "zip_codes": [
+                    "33133",
+                    "33134",
+                    "33145"
+                  ],
+                  "description": "Coral Way y Shenandoah son vecindarios residenciales establecidos a lo largo del histórico corredor Coral Way, bordeado de árboles banyan y casas de estilo mediterráneo. Estas áreas familiares ofrecen excelente acceso a Coral Gables y al centro de Miami, con tiendas locales, restaurantes y el encantador Parque Shenandoah.",
+                  "sights": [
+                    {
+                      "name": "Bulevar Memorial Cubano",
+                      "slug": "cuban-memorial-boulevard",
+                      "description": "Bulevar memorial arbolado con monumentos a la historia cubana, incluyendo la Llama Eterna de Bahía de Cochinos, el memorial a José Martí y la estatua de la Virgen.",
+                      "image": "/images/sights/cuban-memorial-blvd.jpg",
+                      "address": "999 SW 13th Ave, Miami, FL 33135",
+                      "category": "landmark"
+                    }
+                  ],
+                  "is_active": true
+                },
+                {
+                  "name": "Design District",
+                  "slug": "design-district",
+                  "zip_codes": [
+                    "33137"
+                  ],
+                  "description": "El Miami Design District es un vecindario creativo dedicado a la moda innovadora, el diseño, la arquitectura y la gastronomía. Hogar de tiendas insignia de lujo como Louis Vuitton, Dior y Prada, junto con galerías de arte y restaurantes aclamados, el área se ha convertido en un destino de primer nivel para compras de alta gama y arte contemporáneo durante Art Basel y más allá.",
+                  "sights": [
+                    {
+                      "name": "Instituto de Arte Contemporáneo Miami",
+                      "slug": "ica-miami",
+                      "description": "Museo de arte contemporáneo gratuito con exhibiciones de vanguardia y un jardín de esculturas en el corazón del Design District.",
+                      "image": "/images/sights/ica-miami.jpg",
+                      "address": "61 NE 41st St, Miami, FL 33137",
+                      "website": "https://icamiami.org",
+                      "category": "museum"
+                    },
+                    {
+                      "name": "Compras de Lujo del Design District",
+                      "slug": "design-district-shopping",
+                      "description": "Destino de compras de lujo al aire libre con tiendas insignia de Louis Vuitton, Dior, Prada y otras marcas de renombre mundial.",
+                      "image": "/images/sights/design-district.jpg",
+                      "address": "140 NE 39th St, Miami, FL 33137",
+                      "category": "shopping"
+                    }
+                  ],
+                  "is_active": true
+                },
+                {
+                  "name": "Downtown / CBD / Park West",
+                  "slug": "downtown-cbd-park-west",
+                  "zip_codes": [
+                    "33128",
+                    "33130",
+                    "33131",
+                    "33132",
+                    "33136"
+                  ],
+                  "description": "El centro de Miami es el núcleo urbano de la ciudad, con un horizonte de impresionantes rascacielos, museos de clase mundial como el Pérez Art Museum Miami y el parque frente al mar Bayfront Park. El área incluye el Distrito Central de Negocios, el American Airlines Arena, y es un centro de finanzas, comercio y entretenimiento. El centro ofrece vida urbana peatonal con impresionantes vistas a la bahía.",
+                  "sights": [
+                    {
+                      "name": "Kaseya Center",
+                      "slug": "kaseya-center",
+                      "description": "Arena sede del equipo de baloncesto Miami Heat de la NBA, que alberga grandes conciertos y eventos con una impresionante ubicación frente a la bahía.",
+                      "image": "/images/sights/kaseya-center.jpg",
+                      "address": "601 Biscayne Blvd, Miami, FL 33132",
+                      "website": "https://kaseyacenter.com",
+                      "category": "entertainment"
+                    },
+                    {
+                      "name": "Bayside Marketplace",
+                      "slug": "bayside-marketplace",
+                      "description": "Complejo comercial y de entretenimiento frente al agua con restaurantes, tiendas y paseos en bote por la Bahía de Biscayne.",
+                      "image": "/images/sights/bayside-marketplace.jpg",
+                      "address": "401 Biscayne Blvd, Miami, FL 33132",
+                      "category": "shopping"
+                    },
+                    {
+                      "name": "Torre de la Libertad",
+                      "slug": "freedom-tower",
+                      "description": "Histórico edificio de 1925 que procesó refugiados cubanos, ahora museo y centro cultural conocido como la 'Isla Ellis del Sur'.",
+                      "image": "/images/sights/freedom-tower.jpg",
+                      "address": "600 Biscayne Blvd, Miami, FL 33132",
+                      "category": "landmark"
+                    }
+                  ],
+                  "is_active": true
+                },
+                {
+                  "name": "Edgewater",
+                  "slug": "edgewater",
+                  "zip_codes": [
+                    "33137"
+                  ],
+                  "description": "Edgewater es un vecindario frente al mar en rápido desarrollo a lo largo de la Bahía de Biscayne, conocido por sus impresionantes vistas a la bahía y modernos condominios de gran altura. Ubicado entre el centro y el Design District, Edgewater ofrece vida urbana con fácil acceso a museos, Margaret Pace Park y la vibrante área de Midtown. El vecindario atrae tanto a jóvenes profesionales como a familias.",
+                  "sights": [
+                    {
+                      "name": "Margaret Pace Park",
+                      "slug": "margaret-pace-park",
+                      "description": "Parque frente al agua con canchas de tenis, voleibol, parque para perros e impresionantes vistas de la Bahía de Biscayne y el horizonte de Miami.",
+                      "image": "/images/sights/margaret-pace-park.jpg",
+                      "address": "1745 N Bayshore Dr, Miami, FL 33132",
+                      "category": "park"
+                    }
+                  ],
+                  "is_active": true
+                },
+                {
+                  "name": "Flagami",
+                  "slug": "flagami",
+                  "zip_codes": [
+                    "33125",
+                    "33126",
+                    "33135",
+                    "33144"
+                  ],
+                  "description": "Flagami es un vecindario residencial diverso en el centro-oeste de Miami, nombrado por su ubicación entre la calle Flagler y el Tamiami Trail. El área ofrece casas unifamiliares asequibles, una fuerte comunidad hispana, restaurantes locales y acceso conveniente al Aeropuerto Internacional de Miami y las principales autopistas.",
+                  "sights": [
+                    {
+                      "name": "Grapeland Water Park",
+                      "slug": "grapeland-water-park",
+                      "description": "El primer parque acuático propiedad de la ciudad de Miami, diseñado por Romero Britto, con toboganes, río lento, piscinas y 'Cine Acuático'.",
+                      "image": "/images/sights/grapeland-water-park.jpg",
+                      "address": "1550 NW 37th Ave, Miami, FL 33125",
+                      "category": "entertainment"
+                    }
+                  ],
+                  "is_active": true
+                },
+                {
+                  "name": "Grapeland Heights",
+                  "slug": "grapeland-heights",
+                  "zip_codes": [
+                    "33125",
+                    "33142"
+                  ],
+                  "description": "Grapeland Heights es un vecindario residencial cerca del Aeropuerto Internacional de Miami, que ofrece opciones de vivienda asequibles y una comunidad diversa. El área brinda fácil acceso a las principales rutas de transporte y es hogar del Grapeland Water Park, un popular destino familiar durante los meses cálidos de Miami.",
+                  "sights": [
+                    {
+                      "name": "Parque Grapeland Heights",
+                      "slug": "grapeland-heights-park",
+                      "description": "Parque recreativo comunitario con senderos para caminar, espacios verdes, campos de béisbol, áreas de juegos e instalaciones recreativas.",
+                      "image": "/images/sights/grapeland-heights-park.jpg",
+                      "address": "1550 NW 37th Ave, Miami, FL 33125",
+                      "category": "park"
+                    }
+                  ],
+                  "is_active": true
+                },
+                {
+                  "name": "Health District / Civic Center",
+                  "slug": "health-district-civic-center",
+                  "zip_codes": [
+                    "33136"
+                  ],
+                  "description": "El Distrito de Salud, también conocido como Civic Center, alberga las principales instituciones médicas de Miami, incluyendo el Hospital Jackson Memorial, la Escuela de Medicina Miller de la Universidad de Miami y el Centro Médico de Veteranos de Miami. Esta área sirve como un centro de salud crítico para el sur de Florida y cuenta con la estación de Metrorail Civic Center.",
+                  "sights": [
+                    {
+                      "name": "The Alamo (Edificio Histórico del Hospital)",
+                      "slug": "the-alamo-jackson",
+                      "description": "Edificio original del Hospital de la Ciudad de Miami de 1918 en estilo Renacimiento Mediterráneo, ahora museo incluido en el Registro Nacional de Lugares Históricos.",
+                      "image": "/images/sights/the-alamo-jackson.jpg",
+                      "address": "1119 NW 16th Ave, Miami, FL 33136",
+                      "category": "museum"
+                    }
+                  ],
+                  "is_active": true
+                },
+                {
+                  "name": "Little Haiti",
+                  "slug": "little-haiti",
+                  "zip_codes": [
+                    "33138",
+                    "33137",
+                    "33150"
+                  ],
+                  "description": "Little Haiti es un vibrante vecindario caribeño conocido por su rica cultura haitiana, coloridos murales y auténtica cocina criolla. El área cuenta con el Complejo Cultural de Little Haiti, botánicas y una creciente escena artística. Como uno de los vecindarios más culturalmente distintivos de Miami, ofrece viviendas asequibles cerca del Design District.",
+                  "sights": [
+                    {
+                      "name": "Complejo Cultural de Little Haiti",
+                      "slug": "little-haiti-cultural-complex",
+                      "description": "Centro cultural que celebra las artes y la herencia haitiana con galerías, un mercado caribeño y la librería Libreri Mapou.",
+                      "image": "/images/sights/little-haiti-cultural.jpg",
+                      "address": "212 NE 59th Terrace, Miami, FL 33137",
+                      "category": "landmark"
+                    }
+                  ],
+                  "is_active": true
+                },
+                {
+                  "name": "Little Havana",
+                  "slug": "little-havana",
+                  "zip_codes": [
+                    "33125",
+                    "33126",
+                    "33128",
+                    "33130",
+                    "33135"
+                  ],
+                  "description": "La Pequeña Habana es el corazón de la comunidad cubanoamericana de Miami, famosa por la Calle Ocho (SW 8th Street) con sus auténticos restaurantes cubanos, tiendas de puros y jugadores de dominó en el Parque Máximo Gómez. Este vibrante vecindario celebra la cultura latina con coloridos murales, música en vivo y el Festival anual de la Calle Ocho, uno de los festivales hispanos más grandes del país.",
+                  "sights": [
+                    {
+                      "name": "Parque Máximo Gómez (Parque Dominó)",
+                      "slug": "domino-park",
+                      "description": "Icónico punto de reunión donde los locales juegan dominó a diario, simbolizando la herencia cubana y el espíritu comunitario de la Pequeña Habana.",
+                      "image": "/images/sights/domino-park.jpg",
+                      "address": "801 SW 15th Ave, Miami, FL 33135",
+                      "category": "landmark"
+                    },
+                    {
+                      "name": "Tower Theater",
+                      "slug": "tower-theater",
+                      "description": "Histórico cine Art Deco de 1926 que una vez proyectó películas en español para inmigrantes cubanos, ahora un hito cultural.",
+                      "image": "/images/sights/tower-theater.jpg",
+                      "address": "1508 SW 8th St, Miami, FL 33135",
+                      "category": "entertainment"
+                    }
+                  ],
+                  "is_active": true
+                },
+                {
+                  "name": "Liberty City",
+                  "slug": "liberty-city",
+                  "zip_codes": [
+                    "33142",
+                    "33147",
+                    "33150"
+                  ],
+                  "description": "Liberty City es un vecindario afroamericano histórico con profundas raíces culturales en la historia de Miami. La comunidad alberga negocios locales, iglesias y organizaciones comunitarias que trabajan hacia la revitalización. El área ofrece viviendas asequibles y está convenientemente ubicada cerca de las principales rutas de transporte.",
+                  "sights": [
+                    {
+                      "name": "Historic Hampton House",
+                      "slug": "hampton-house",
+                      "description": "El único museo del Libro Verde en el mundo; este motel de las décadas de 1950-60 alojó a Muhammad Ali, Sammy Davis Jr. y Malcolm X durante la segregación.",
+                      "image": "/images/sights/hampton-house.jpg",
+                      "address": "4240 NW 27th Ave, Miami, FL 33142",
+                      "website": "https://historichamptonhouse.org",
+                      "category": "museum"
+                    }
+                  ],
+                  "is_active": true
+                },
+                {
+                  "name": "Midtown",
+                  "slug": "midtown",
+                  "zip_codes": [
+                    "33137"
+                  ],
+                  "description": "Midtown Miami es un desarrollo urbano de uso mixto con modernos condominios, tiendas y restaurantes populares. Ubicado centralmente entre el centro y el Design District, Midtown ofrece un estilo de vida peatonal con Target, Homegoods y numerosas opciones gastronómicas. El vecindario atrae a jóvenes profesionales que buscan una vida urbana conveniente con ambiente de barrio.",
+                  "sights": [
+                    {
+                      "name": "Midtown Miami",
+                      "slug": "midtown-miami",
+                      "description": "Vibrante distrito de uso mixto con tiendas, restaurantes y espacios al aire libre que conecta el centro con el Design District.",
+                      "image": "/images/sights/midtown-miami.jpg",
+                      "address": "3401 N Miami Ave, Miami, FL 33127",
+                      "category": "shopping"
+                    }
+                  ],
+                  "is_active": true
+                },
+                {
+                  "name": "Morningside",
+                  "slug": "morningside",
+                  "zip_codes": [
+                    "33137"
+                  ],
+                  "description": "Morningside es un prestigioso vecindario histórico en la Bahía de Biscayne con grandiosas casas de estilo Renacimiento Mediterráneo y Art Deco de las décadas de 1920 y 1930. Esta comunidad frente al agua ofrece hermosos parques frente a la bahía, amplias calles arboladas y un fuerte sentido de orgullo vecinal, convirtiéndolo en una de las áreas residenciales más codiciadas de Miami.",
+                  "sights": [
+                    {
+                      "name": "Morningside Park",
+                      "slug": "morningside-park",
+                      "description": "Parque de 40 acres frente a la bahía con campos deportivos, canchas de tenis, rampa para botes, alquiler de kayaks e impresionantes vistas de Miami Beach al otro lado de la bahía.",
+                      "image": "/images/sights/morningside-park.jpg",
+                      "address": "750 NE 55th Terrace, Miami, FL 33137",
+                      "category": "park"
+                    }
+                  ],
+                  "is_active": true
+                },
+                {
+                  "name": "Overtown",
+                  "slug": "overtown",
+                  "zip_codes": [
+                    "33136"
+                  ],
+                  "description": "Overtown es uno de los vecindarios más antiguos de Miami con una rica herencia afroamericana, una vez conocido como el 'Harlem del Sur' por su vibrante escena musical. Hoy, el área está experimentando una revitalización con nuevos desarrollos mientras preserva sus hitos culturales. El vecindario ofrece viviendas asequibles cerca del centro de Miami.",
+                  "sights": [
+                    {
+                      "name": "Teatro Lyric",
+                      "slug": "lyric-theater",
+                      "description": "Histórico teatro de 1913 que fue el centro de entretenimiento del Miami afroamericano, recibiendo a Ella Fitzgerald, Aretha Franklin y B.B. King.",
+                      "image": "/images/sights/lyric-theater.jpg",
+                      "address": "819 NW 2nd Ave, Miami, FL 33136",
+                      "category": "entertainment"
+                    }
+                  ],
+                  "is_active": true
+                },
+                {
+                  "name": "Palm Grove",
+                  "slug": "palm-grove",
+                  "zip_codes": [
+                    "33138"
+                  ],
+                  "description": "Palm Grove es un tranquilo vecindario residencial en el Upper Eastside de Miami, con encantadoras casas unifamiliares y calles arboladas. El área ofrece una atmósfera pacífica mientras está cerca de las tiendas y restaurantes de Biscayne Boulevard, haciéndolo popular entre familias que buscan un ambiente pueblerino.",
+                  "sights": [
+                    {
+                      "name": "Ironside Art District",
+                      "slug": "ironside-art-district",
+                      "description": "Distrito urbano de arte y diseño en el Upper Eastside con galerías, estudios de diseño y espacios creativos.",
+                      "image": "/images/sights/ironside-district.jpg",
+                      "address": "7580 NE 4th Ct, Miami, FL 33138",
+                      "category": "landmark"
+                    }
+                  ],
+                  "is_active": true
+                },
+                {
+                  "name": "Spring Garden",
+                  "slug": "spring-garden",
+                  "zip_codes": [
+                    "33136"
+                  ],
+                  "description": "Spring Garden es un pequeño vecindario histórico cerca del centro de Miami, con casas de principios del siglo XX y una atmósfera comunitaria unida. Ubicado cerca del Distrito de Salud y Overtown, el área es conveniente para trabajadores de la salud y ofrece opciones de vivienda asequibles en una ubicación central.",
+                  "sights": [
+                    {
+                      "name": "Parque José Martí",
+                      "slug": "jose-marti-park",
+                      "description": "Parque de 8.9 acres a lo largo del río Miami con canchas de baloncesto, piscina, área de juegos e instalaciones recreativas.",
+                      "image": "/images/sights/jose-marti-park.jpg",
+                      "address": "362 SW 4th St, Miami, FL 33130",
+                      "category": "park"
+                    }
+                  ],
+                  "is_active": true
+                },
+                {
+                  "name": "The Roads",
+                  "slug": "the-roads",
+                  "zip_codes": [
+                    "33129",
+                    "33130"
+                  ],
+                  "description": "The Roads es uno de los vecindarios más antiguos y encantadores de Miami, conocido por sus calles sinuosas, casas históricas y exuberante vegetación tropical. Ubicado entre Brickell y Coconut Grove, esta área familiar ofrece excelentes escuelas, parques locales y un fuerte sentido de comunidad mientras está a minutos del centro.",
+                  "sights": [
+                    {
+                      "name": "Simpson Park Hammock",
+                      "slug": "simpson-park-the-roads",
+                      "description": "Reserva natural urbana de 7.8 acres que protege uno de los últimos bosques tropicales de madera dura en el sur de Florida.",
+                      "image": "/images/sights/simpson-park.jpg",
+                      "address": "55 SW 17th Road, Miami, FL 33129",
+                      "category": "nature"
+                    }
+                  ],
+                  "is_active": true
+                },
+                {
+                  "name": "Upper Eastside / MiMo",
+                  "slug": "upper-eastside-mimo",
+                  "zip_codes": [
+                    "33138",
+                    "33137"
+                  ],
+                  "description": "El Upper Eastside, con el Distrito Histórico MiMo (Miami Modern), exhibe arquitectura moderna de mediados de siglo a lo largo de Biscayne Boulevard. Este moderno vecindario ofrece hoteles boutique, restaurantes eclécticos, tiendas vintage y hermosas casas frente al agua. El área atrae a entusiastas del diseño y a quienes buscan un estilo de vida único en Miami.",
+                  "sights": [
+                    {
+                      "name": "Distrito Histórico MiMo",
+                      "slug": "mimo-district",
+                      "description": "Distrito Histórico del Registro Nacional con icónica arquitectura Miami Modern de las décadas de 1950-60 a lo largo de Biscayne Boulevard.",
+                      "image": "/images/sights/mimo-district.jpg",
+                      "address": "Biscayne Blvd, Miami, FL 33138",
+                      "category": "landmark"
+                    }
+                  ],
+                  "is_active": true
+                },
+                {
+                  "name": "Virginia Key",
+                  "slug": "virginia-key",
+                  "zip_codes": [
+                    "33149"
+                  ],
+                  "description": "Virginia Key es una isla barrera entre Miami y Key Biscayne, hogar del Miami Seaquarium, el Parque Histórico de la Playa de Virginia Key y MAST Academy. La isla ofrece hermosas áreas naturales, senderos para ciclismo de montaña y es un destino popular para windsurf y kayak en la Bahía de Biscayne.",
+                  "sights": [
+                    {
+                      "name": "Miami Seaquarium",
+                      "slug": "miami-seaquarium",
+                      "description": "Oceanario de 38 acres con espectáculos de animales marinos, exhibiciones y encuentros con delfines, leones marinos y manatíes.",
+                      "image": "/images/sights/miami-seaquarium.jpg",
+                      "address": "4400 Rickenbacker Causeway, Miami, FL 33149",
+                      "website": "https://miamiseaquarium.com",
+                      "category": "entertainment"
+                    },
+                    {
+                      "name": "Parque Histórico de la Playa de Virginia Key",
+                      "slug": "virginia-key-beach",
+                      "description": "Playa histórica que sirvió como la única playa para residentes afroamericanos durante la segregación, ahora un parque con acceso a la playa y senderos naturales.",
+                      "image": "/images/sights/virginia-key-beach.jpg",
+                      "address": "4020 Virginia Beach Dr, Miami, FL 33149",
+                      "category": "beach"
+                    }
+                  ],
+                  "is_active": true
+                },
+                {
+                  "name": "Watson Island",
+                  "slug": "watson-island",
+                  "zip_codes": [
+                    "33139"
+                  ],
+                  "description": "Watson Island es una isla artificial en la Bahía de Biscayne entre el centro de Miami y Miami Beach, accesible por el MacArthur Causeway. La isla cuenta con Jungle Island, el Museo de los Niños de Miami e impresionantes vistas del horizonte de Miami. Sirve como puerta de entrada entre el continente y South Beach.",
+                  "sights": [
+                    {
+                      "name": "Jungle Island",
+                      "slug": "jungle-island",
+                      "description": "Parque zoológico interactivo con aves exóticas, animales, tirolesas y experiencias únicas en un entorno tropical.",
+                      "image": "/images/sights/jungle-island.jpg",
+                      "address": "1111 Parrot Jungle Trail, Miami, FL 33132",
+                      "website": "https://jungleisland.com",
+                      "category": "entertainment"
+                    },
+                    {
+                      "name": "Museo de los Niños de Miami",
+                      "slug": "miami-childrens-museum",
+                      "description": "Galardonado museo con exhibiciones interactivas que animan a los niños a aprender jugando en un vibrante entorno frente al agua.",
+                      "image": "/images/sights/childrens-museum.jpg",
+                      "address": "980 MacArthur Causeway, Miami, FL 33132",
+                      "website": "https://miamichildrensmuseum.org",
+                      "category": "museum"
+                    }
+                  ],
+                  "is_active": true
+                },
+                {
+                  "name": "West Flagler",
+                  "slug": "west-flagler",
+                  "zip_codes": [
+                    "33125",
+                    "33135"
+                  ],
+                  "description": "West Flagler es un vecindario residencial a lo largo de la calle Flagler, uno de los principales corredores este-oeste de Miami. El área cuenta con una mezcla de casas unifamiliares y apartamentos, diversos restaurantes latinoamericanos y acceso conveniente al centro de Miami. Es un vecindario de clase trabajadora con fuertes lazos comunitarios.",
+                  "sights": [
+                    {
+                      "name": "Parque del Canal de Coral Gables",
+                      "slug": "coral-gables-waterway-park",
+                      "description": "Parque histórico de 1925 en estilo Renacimiento Mediterráneo con torres decorativas que sirvieron como la gran entrada a un desarrollo planificado.",
+                      "image": "/images/sights/waterway-park.jpg",
+                      "address": "5710 SW 35th St, Miami, FL 33134",
+                      "category": "landmark"
+                    }
+                  ],
+                  "is_active": true
+                },
+                {
+                  "name": "Wynwood",
+                  "slug": "wynwood",
+                  "zip_codes": [
+                    "33127"
+                  ],
+                  "description": "Wynwood es el principal distrito artístico de Miami, famoso por sus coloridos murales, arte callejero y los icónicos Wynwood Walls. Antes un área de almacenes industriales, se ha transformado en uno de los vecindarios más de moda de la ciudad con galerías de arte, restaurantes modernos, cervecerías y boutiques. El área organiza eventos Art Walk y es un centro para la comunidad creativa de Miami.",
+                  "sights": [
+                    {
+                      "name": "Wynwood Walls",
+                      "slug": "wynwood-walls-art",
+                      "description": "Museo al aire libre de arte callejero con murales a gran escala de artistas de renombre mundial en paredes de almacenes.",
+                      "image": "/images/sights/wynwood-walls.jpg",
+                      "address": "2520 NW 2nd Ave, Miami, FL 33127",
+                      "website": "https://thewynwoodwalls.com",
+                      "category": "landmark"
+                    },
+                    {
+                      "name": "Wynwood Marketplace",
+                      "slug": "wynwood-marketplace",
+                      "description": "Espacio al aire libre con vendedores de comida, música en vivo y eventos artísticos en una villa de contenedores de envío.",
+                      "image": "/images/sights/wynwood-marketplace.jpg",
+                      "address": "2250 NW 2nd Ave, Miami, FL 33127",
+                      "category": "entertainment"
+                    },
+                    {
+                      "name": "Colección Margulies en el Almacén",
+                      "slug": "margulies-collection",
+                      "description": "Colección privada de arte contemporáneo con fotografía, video, escultura e instalaciones en un vasto almacén.",
+                      "image": "/images/sights/margulies-collection.jpg",
+                      "address": "591 NW 27th St, Miami, FL 33127",
+                      "category": "museum"
+                    }
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "Coral Gables",
+              "slug": "coral-gables",
+              "population": 49000,
+              "lat": 25.7215,
+              "lng": -80.2684,
+              "is_active": true,
+              "description": "Coral Gables, conocida como 'La Ciudad Hermosa', es una elegante comunidad planificada reconocida por su arquitectura de Renacimiento Mediterráneo, bulevares arbolados y estilo de vida exclusivo. Hogar de la Universidad de Miami, el icónico Hotel Biltmore y la Piscina Veneciana, Coral Gables ofrece excelentes escuelas, alta gastronomía y compras de clase mundial a lo largo de Miracle Mile.",
+              "sights": [
+                {
+                  "name": "Hotel Biltmore",
+                  "slug": "biltmore-hotel",
+                  "description": "Icónico hotel de lujo de 1926 con arquitectura de Renacimiento Mediterráneo, campo de golf de campeonato y la piscina de hotel más grande de los Estados Unidos continental.",
+                  "image": "/images/sights/biltmore-hotel.jpg",
+                  "address": "1200 Anastasia Ave, Coral Gables, FL 33134",
+                  "website": "https://biltmorehotel.com",
+                  "category": "landmark"
+                },
+                {
+                  "name": "Piscina Veneciana",
+                  "slug": "venetian-pool",
+                  "description": "Piscina pública histórica tallada en una cantera de roca coralina en 1924, con cascadas, cuevas y arquitectura de estilo veneciano.",
+                  "image": "/images/sights/venetian-pool.jpg",
+                  "address": "2701 De Soto Blvd, Coral Gables, FL 33134",
+                  "website": "https://coralgables.com/venetian-pool",
+                  "category": "landmark"
+                },
+                {
+                  "name": "Jardín Botánico Tropical Fairchild",
+                  "slug": "fairchild-garden",
+                  "description": "Jardín tropical de 83 acres con raras palmas, cícadas y árboles en flor, además de un conservatorio de mariposas y esculturas al aire libre.",
+                  "image": "/images/sights/fairchild-garden.jpg",
+                  "address": "10901 Old Cutler Rd, Coral Gables, FL 33156",
+                  "website": "https://fairchildgarden.org",
+                  "category": "nature"
+                },
+                {
+                  "name": "Miracle Mile",
+                  "slug": "miracle-mile",
+                  "description": "Histórico distrito comercial y gastronómico del centro con boutiques exclusivas, restaurantes, galerías y hermosa arquitectura mediterránea.",
+                  "image": "/images/sights/miracle-mile.jpg",
+                  "address": "Coral Way, Coral Gables, FL 33134",
+                  "category": "shopping"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "Coral Gables",
+                  "slug": "coral-gables",
+                  "zip_codes": [
+                    "33134",
+                    "33146",
+                    "33143",
+                    "33133"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "Doral",
+              "slug": "doral",
+              "population": 76000,
+              "lat": 25.8195,
+              "lng": -80.3553,
+              "is_active": true,
+              "description": "Doral es una próspera ciudad en el oeste del condado Miami-Dade, conocida por sus comunidades familiares, excelentes campos de golf, incluyendo el famoso Trump National Doral, y su creciente distrito comercial. La ciudad ofrece una mezcla de vecindarios residenciales, centros comerciales como CityPlace Doral y fácil acceso al Aeropuerto Internacional de Miami.",
+              "sights": [
+                {
+                  "name": "Trump National Doral Miami",
+                  "slug": "trump-national-doral",
+                  "description": "Legendario complejo de golf con cuatro campos de campeonato, incluyendo el Blue Monster, alojamiento de lujo y amenidades de clase mundial.",
+                  "image": "/images/sights/trump-doral.jpg",
+                  "address": "4400 NW 87th Ave, Doral, FL 33178",
+                  "category": "entertainment"
+                },
+                {
+                  "name": "CityPlace Doral",
+                  "slug": "cityplace-doral",
+                  "description": "Moderno centro de estilo de vida al aire libre con tiendas, restaurantes, bolera y entretenimiento familiar en el centro de Doral.",
+                  "image": "/images/sights/cityplace-doral.jpg",
+                  "address": "8300 NW 36th St, Doral, FL 33166",
+                  "category": "shopping"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "Doral",
+                  "slug": "doral",
+                  "zip_codes": [
+                    "33122",
+                    "33166",
+                    "33178",
+                    "33172"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "Aventura",
+              "slug": "aventura",
+              "population": 37000,
+              "lat": 25.9565,
+              "lng": -80.139,
+              "is_active": true,
+              "description": "Aventura es una ciudad exclusiva en el noreste del condado Miami-Dade, mejor conocida por el Aventura Mall, uno de los centros comerciales más grandes de los Estados Unidos. La ciudad cuenta con condominios de lujo de gran altura, excelentes escuelas y hermosas propiedades frente al agua a lo largo del Canal Intracostero. Aventura ofrece un sofisticado estilo de vida suburbano con fácil acceso a las playas.",
+              "sights": [
+                {
+                  "name": "Aventura Mall",
+                  "slug": "aventura-mall",
+                  "description": "Uno de los centros comerciales más grandes de EE.UU. con más de 300 tiendas, marcas de lujo, restaurantes y la icónica Torre Deslizante de Aventura.",
+                  "image": "/images/sights/aventura-mall.jpg",
+                  "address": "19501 Biscayne Blvd, Aventura, FL 33180",
+                  "website": "https://aventuramall.com",
+                  "category": "shopping"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "Aventura",
+                  "slug": "aventura",
+                  "zip_codes": [
+                    "33160",
+                    "33180"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "Bal Harbour",
+              "slug": "bal-harbour",
+              "population": 3000,
+              "lat": 25.8904,
+              "lng": -80.1287,
+              "is_active": true,
+              "description": "Bal Harbour es un pueblo exclusivo conocido por las famosas Bal Harbour Shops, con marcas de lujo como Chanel, Gucci y Prada. Esta exclusiva comunidad frente al océano ofrece playas prístinas, elegantes condominios de gran altura y hoteles cinco estrellas, convirtiéndolo en una de las direcciones más prestigiosas del sur de Florida.",
+              "sights": [
+                {
+                  "name": "Bal Harbour Shops",
+                  "slug": "bal-harbour-shops",
+                  "description": "Destino de compras de lujo al aire libre de fama mundial con Chanel, Gucci, Prada y otras marcas prestigiosas en un entorno de jardín tropical.",
+                  "image": "/images/sights/bal-harbour-shops.jpg",
+                  "address": "9700 Collins Ave, Bal Harbour, FL 33154",
+                  "website": "https://balharbourshops.com",
+                  "category": "shopping"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "Bal Harbour",
+                  "slug": "bal-harbour",
+                  "zip_codes": [
+                    "33154"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "Bay Harbor Islands",
+              "slug": "bay-harbor-islands",
+              "population": 6000,
+              "lat": 25.8876,
+              "lng": -80.1312,
+              "is_active": true,
+              "description": "Bay Harbor Islands es una encantadora comunidad de dos islas conectadas por un puente, que ofrece una atmósfera de pueblo pequeño cerca de Bal Harbour. El pueblo cuenta con un centro peatonal con boutiques y restaurantes, excelentes escuelas y propiedades frente al agua a lo largo de Indian Creek y la Bahía de Biscayne.",
+              "sights": [
+                {
+                  "name": "Escultura LOVE de Robert Indiana",
+                  "slug": "love-sculpture",
+                  "description": "Icónica instalación de arte público del reconocido artista Robert Indiana, ubicada en la mediana bellamente ajardinada de Kane Concourse entre palmeras.",
+                  "image": "/images/sights/love-sculpture.jpg",
+                  "address": "Kane Concourse (96th Street), Bay Harbor Islands, FL 33154",
+                  "category": "landmark"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "Bay Harbor Islands",
+                  "slug": "bay-harbor-islands",
+                  "zip_codes": [
+                    "33154"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "Cutler Bay",
+              "slug": "cutler-bay",
+              "population": 45000,
+              "lat": 25.5783,
+              "lng": -80.3377,
+              "is_active": true,
+              "description": "Cutler Bay es un pueblo familiar en el sur de Miami-Dade conocido por su vivienda asequible, buenas escuelas y estilo de vida suburbano. La comunidad ofrece centros comerciales, parques y fácil acceso a Black Point Marina y el Parque Nacional Biscayne, haciéndolo popular entre familias y entusiastas de actividades al aire libre.",
+              "sights": [
+                {
+                  "name": "Black Point Marina",
+                  "slug": "black-point-marina",
+                  "description": "Marina del condado con 270 muelles, rampas para botes y acceso a la Bahía de Biscayne y el Parque Nacional Biscayne para pesca y navegación.",
+                  "image": "/images/sights/black-point-marina.jpg",
+                  "address": "24775 SW 87th Ave, Cutler Bay, FL 33032",
+                  "category": "nature"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "Cutler Bay",
+                  "slug": "cutler-bay",
+                  "zip_codes": [
+                    "33157",
+                    "33189",
+                    "33190"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "El Portal",
+              "slug": "el-portal",
+              "population": 2500,
+              "lat": 25.8565,
+              "lng": -80.1931,
+              "is_active": true,
+              "description": "El Portal es un pequeño y histórico pueblo conocido por su exuberante cubierta arbórea y su compromiso con la preservación ambiental. Esta tranquila comunidad residencial cuenta con encantadoras casas, calles sinuosas y un fuerte sentido de identidad vecinal. Es uno de los municipios más verdes de Miami-Dade.",
+              "sights": [
+                {
+                  "name": "Túmulo Funerario de El Portal",
+                  "slug": "el-portal-burial-mound",
+                  "description": "Un túmulo funerario indígena tequesta que data de aproximadamente el año 600 d.C., el primer sitio arqueológico del condado Miami-Dade.",
+                  "image": "/images/sights/el-portal-mound.jpg",
+                  "address": "NE 86th Street and 2nd Avenue, El Portal, FL 33138",
+                  "category": "landmark"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "El Portal",
+                  "slug": "el-portal",
+                  "zip_codes": [
+                    "33138",
+                    "33150"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "Florida City",
+              "slug": "florida-city",
+              "population": 12000,
+              "lat": 25.4479,
+              "lng": -80.4792,
+              "is_active": true,
+              "description": "Florida City es la puerta de entrada a los Cayos de Florida y al Parque Nacional Everglades, ubicada en el extremo sur de la Florida continental. Esta comunidad agrícola ofrece vivienda asequible y sirve como base para visitantes que exploran las maravillas naturales del sur de Florida, incluyendo el famoso puesto de frutas Robert Is Here.",
+              "sights": [
+                {
+                  "name": "Robert Is Here Fruit Stand",
+                  "slug": "robert-is-here",
+                  "description": "Icónico puesto de frutas al borde de la carretera desde 1959, que ofrece frutas tropicales exóticas, batidos frescos y un zoológico de mascotas para familias.",
+                  "image": "/images/sights/robert-is-here.jpg",
+                  "address": "19200 SW 344th St, Homestead, FL 33034",
+                  "category": "landmark"
+                },
+                {
+                  "name": "Entrada al Parque Nacional Everglades",
+                  "slug": "everglades-entrance",
+                  "description": "Entrada principal al Parque Nacional Everglades, que ofrece paseos en hidrodeslizador, observación de vida silvestre y acceso a los únicos humedales de Florida.",
+                  "image": "/images/sights/everglades-entrance.jpg",
+                  "address": "40001 State Road 9336, Homestead, FL 33034",
+                  "category": "nature"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "Florida City",
+                  "slug": "florida-city",
+                  "zip_codes": [
+                    "33034",
+                    "33035"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "Golden Beach",
+              "slug": "golden-beach",
+              "population": 1000,
+              "lat": 25.9654,
+              "lng": -80.1228,
+              "is_active": true,
+              "description": "Golden Beach es una de las comunidades frente al océano más exclusivas de Florida, con solo casas unifamiliares en grandes lotes con acceso privado a la playa. Este pequeño pueblo cerrado ofrece la máxima privacidad y seguridad, sin desarrollo comercial y estrictos códigos de construcción que preservan su carácter residencial.",
+              "sights": [
+                {
+                  "name": "Loggia Beach Park & Pavilion",
+                  "slug": "loggia-beach-park",
+                  "description": "Logia histórica frente al océano con un pabellón de claustro español, fogatas y amenidades de playa; un lugar emblemático para reuniones junto al mar.",
+                  "image": "/images/sights/loggia-beach-park.jpg",
+                  "address": "399 Ocean Boulevard, Golden Beach, FL 33160",
+                  "category": "beach"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "Golden Beach",
+                  "slug": "golden-beach",
+                  "zip_codes": [
+                    "33160"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "Hialeah",
+              "slug": "hialeah",
+              "population": 220000,
+              "lat": 25.8576,
+              "lng": -80.2781,
+              "is_active": true,
+              "description": "Hialeah es la segunda ciudad más grande del condado Miami-Dade y una de las ciudades más grandes de Florida. Conocida por su fuerte herencia cubanoamericana y vibrante cultura hispana, Hialeah ofrece viviendas asequibles, diversas opciones gastronómicas y una atmósfera comunitaria unida. La ciudad es hogar de Hialeah Park Racing & Casino, un histórico recinto de carreras de caballos.",
+              "sights": [
+                {
+                  "name": "Hialeah Park Racing & Casino",
+                  "slug": "hialeah-park",
+                  "description": "Histórico hipódromo y casino de 1925 con impresionante arquitectura Mediterránea Francesa y una colonia de flamencos.",
+                  "image": "/images/sights/hialeah-park.jpg",
+                  "address": "2200 E 4th Ave, Hialeah, FL 33013",
+                  "website": "https://hialeahparkcasino.com",
+                  "category": "entertainment"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "Hialeah",
+                  "slug": "hialeah",
+                  "zip_codes": [
+                    "33010",
+                    "33012",
+                    "33013",
+                    "33014",
+                    "33015",
+                    "33016"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "Hialeah Gardens",
+              "slug": "hialeah-gardens",
+              "population": 24000,
+              "lat": 25.8651,
+              "lng": -80.3249,
+              "is_active": true,
+              "description": "Hialeah Gardens es una ciudad residencial adyacente a Hialeah, que ofrece una alternativa suburbana más tranquila con nuevos desarrollos habitacionales. La comunidad cuenta con vecindarios familiares, parques locales y fácil acceso a las principales autopistas mientras mantiene fuertes tradiciones culturales hispanas.",
+              "sights": [
+                {
+                  "name": "Jardín Botánico de Hialeah Gardens",
+                  "slug": "hialeah-gardens-botanical",
+                  "description": "Jardín peatonal de cinco acres con más de 500 especies nativas, 45,000 plantas, estanques de peces koi y senderos para caminar, gratuito y abierto diariamente.",
+                  "image": "/images/sights/hialeah-gardens-botanical.jpg",
+                  "address": "13501 NW 107th Avenue, Hialeah, FL 33018",
+                  "category": "nature"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "Hialeah Gardens",
+                  "slug": "hialeah-gardens",
+                  "zip_codes": [
+                    "33018"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "Homestead",
+              "slug": "homestead",
+              "population": 80000,
+              "lat": 25.4687,
+              "lng": -80.4776,
+              "is_active": true,
+              "description": "Homestead es una ciudad en rápido crecimiento en el sur de Miami-Dade, conocida por el Homestead-Miami Speedway y su proximidad a los Parques Nacionales Everglades y Biscayne. El área ofrece viviendas asequibles, herencia agrícola y oportunidades de recreación al aire libre, haciéndola popular entre familias que buscan más espacio.",
+              "sights": [
+                {
+                  "name": "Homestead-Miami Speedway",
+                  "slug": "homestead-speedway",
+                  "description": "Complejo de automovilismo de campeonato que alberga la Serie Cup de NASCAR, IndyCar y otros grandes eventos de carreras con 65,000 asientos.",
+                  "image": "/images/sights/homestead-speedway.jpg",
+                  "address": "1 Speedway Blvd, Homestead, FL 33035",
+                  "website": "https://homesteadmiamispeedway.com",
+                  "category": "entertainment"
+                },
+                {
+                  "name": "Castillo de Coral",
+                  "slug": "coral-castle",
+                  "description": "Misterioso jardín de esculturas tallado a mano en roca coralina por un solo hombre, con piedras masivas y una fascinante historia no contada.",
+                  "image": "/images/sights/coral-castle.jpg",
+                  "address": "28655 S Dixie Hwy, Homestead, FL 33033",
+                  "website": "https://coralcastle.com",
+                  "category": "landmark"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "Homestead",
+                  "slug": "homestead",
+                  "zip_codes": [
+                    "33030",
+                    "33031",
+                    "33032",
+                    "33033"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "Indian Creek",
+              "slug": "indian-creek",
+              "population": 100,
+              "lat": 25.8781,
+              "lng": -80.1312,
+              "is_active": true,
+              "description": "Indian Creek es un pueblo de isla privada ultra exclusivo, a menudo llamado el 'Búnker de los Multimillonarios', hogar de algunas de las personas más ricas del mundo. Con solo unas 40 propiedades, seguridad las 24 horas y su propio cuerpo de policía, es una de las comunidades más seguras y privadas de los Estados Unidos.",
+              "sights": [
+                {
+                  "name": "Indian Creek Country Club",
+                  "slug": "indian-creek-country-club",
+                  "description": "Club de campo privado ultra exclusivo con un campo de golf de 18 hoyos diseñado por William Flynn en 1928 en la isla del 'Búnker de los Multimillonarios'.",
+                  "image": "/images/sights/indian-creek-cc.jpg",
+                  "address": "55 Indian Creek Village, Miami Beach, FL 33154",
+                  "category": "landmark"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "Indian Creek",
+                  "slug": "indian-creek",
+                  "zip_codes": [
+                    "33154"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "Key Biscayne",
+              "slug": "key-biscayne",
+              "population": 13000,
+              "lat": 25.6931,
+              "lng": -80.162,
+              "is_active": true,
+              "description": "Key Biscayne es una exclusiva comunidad isleña ubicada justo al sur de Miami Beach, conectada al continente por el Rickenbacker Causeway. Conocida por sus playas prístinas, Crandon Park y el Parque Estatal Bill Baggs Cape Florida, Key Biscayne ofrece un estilo de vida isleño apartado con impresionantes vistas al océano, excelentes escuelas y una atmósfera de pueblo unido.",
+              "sights": [
+                {
+                  "name": "Parque Estatal Bill Baggs Cape Florida",
+                  "slug": "bill-baggs-park",
+                  "description": "Hermoso parque estatal en el extremo sur de Key Biscayne con el histórico Faro de Cape Florida, playas prístinas y senderos naturales.",
+                  "image": "/images/sights/cape-florida.jpg",
+                  "address": "1200 Crandon Blvd, Key Biscayne, FL 33149",
+                  "website": "https://floridastateparks.org/parks-and-trails/bill-baggs-cape-florida-state-park",
+                  "category": "nature"
+                },
+                {
+                  "name": "Crandon Park",
+                  "slug": "crandon-park",
+                  "description": "Parque de 808 acres con una playa de 2 millas, centro natural, marina, campo de golf y antigua sede del torneo de tenis Miami Open.",
+                  "image": "/images/sights/crandon-park.jpg",
+                  "address": "6747 Crandon Blvd, Key Biscayne, FL 33149",
+                  "category": "park"
+                },
+                {
+                  "name": "Faro de Cape Florida",
+                  "slug": "cape-florida-lighthouse",
+                  "description": "Histórico faro de 1825 que ofrece visitas guiadas y vistas panorámicas, la estructura más antigua en pie del sur de Florida.",
+                  "image": "/images/sights/cape-florida-lighthouse.jpg",
+                  "address": "1200 Crandon Blvd, Key Biscayne, FL 33149",
+                  "category": "landmark"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "Key Biscayne",
+                  "slug": "key-biscayne",
+                  "zip_codes": [
+                    "33149"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "Medley",
+              "slug": "medley",
+              "population": 1100,
+              "lat": 25.8579,
+              "lng": -80.3265,
+              "is_active": true,
+              "description": "Medley es principalmente un pueblo industrial en el noroeste de Miami-Dade, hogar de numerosos almacenes, centros de distribución e instalaciones de manufactura. A pesar de su pequeña población residencial, el pueblo desempeña un papel vital en la economía regional con excelente acceso a autopistas y proximidad al Aeropuerto Internacional de Miami.",
+              "sights": [
+                {
+                  "name": "K1 Speed Carreras de Go-Kart en Interior",
+                  "slug": "k1-speed-medley",
+                  "description": "Instalación premier de carreras de go-kart en interior que ofrece karts eléctricos de alta velocidad para individuos, familias y eventos corporativos.",
+                  "image": "/images/sights/k1-speed.jpg",
+                  "address": "8600 NW South River Drive, Medley, FL 33166",
+                  "website": "https://k1speed.com/miami-location.html",
+                  "category": "entertainment"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "Medley",
+                  "slug": "medley",
+                  "zip_codes": [
+                    "33166",
+                    "33178"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "Miami Beach",
+              "slug": "miami-beach",
+              "population": 92000,
+              "lat": 25.7907,
+              "lng": -80.13,
+              "is_active": true,
+              "description": "Miami Beach es una ciudad turística de fama mundial en una isla barrera conectada a la Miami continental. Conocida por sus hermosas playas, el Distrito Histórico Art Deco en South Beach y su vibrante vida nocturna, Miami Beach atrae visitantes de todo el mundo. La ciudad ofrece hoteles de lujo, condominios frente al océano, restaurantes de chefs famosos y la icónica Ocean Drive.",
+              "sights": [
+                {
+                  "name": "Distrito Histórico Art Deco",
+                  "slug": "art-deco-district",
+                  "description": "La colección más grande de arquitectura Art Deco del mundo, con más de 800 edificios históricos de las décadas de 1930 y 1940 a lo largo de Ocean Drive y Collins Avenue.",
+                  "image": "/images/sights/art-deco-district.jpg",
+                  "address": "Ocean Drive, Miami Beach, FL 33139",
+                  "website": "https://mdpl.org",
+                  "category": "landmark"
+                },
+                {
+                  "name": "South Beach",
+                  "slug": "south-beach",
+                  "description": "Destino playero de fama mundial conocido por su arena blanca, aguas turquesas, coloridas torres de salvavidas y vibrante cultura playera.",
+                  "image": "/images/sights/south-beach.jpg",
+                  "address": "Ocean Drive, Miami Beach, FL 33139",
+                  "category": "beach"
+                },
+                {
+                  "name": "Lincoln Road Mall",
+                  "slug": "lincoln-road",
+                  "description": "Paseo peatonal de compras con restaurantes al aire libre, boutiques, galerías y observación de personas en el corazón de South Beach.",
+                  "image": "/images/sights/lincoln-road.jpg",
+                  "address": "Lincoln Road, Miami Beach, FL 33139",
+                  "category": "shopping"
+                },
+                {
+                  "name": "Museo de Arte The Bass",
+                  "slug": "bass-museum",
+                  "description": "Museo de arte contemporáneo en un edificio Art Deco de la década de 1930, con exhibiciones internacionales y un jardín de esculturas.",
+                  "image": "/images/sights/bass-museum.jpg",
+                  "address": "2100 Collins Ave, Miami Beach, FL 33139",
+                  "website": "https://thebass.org",
+                  "category": "museum"
+                },
+                {
+                  "name": "Paseo Marítimo de Miami Beach",
+                  "slug": "miami-beach-boardwalk",
+                  "description": "Pintoresco sendero frente al océano de 4 millas que se extiende desde South Beach hasta North Beach, perfecto para caminar, trotar y andar en bicicleta.",
+                  "image": "/images/sights/miami-beach-boardwalk.jpg",
+                  "address": "Miami Beach, FL",
+                  "category": "beach"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "Miami Beach",
+                  "slug": "miami-beach",
+                  "zip_codes": [
+                    "33109",
+                    "33139",
+                    "33140",
+                    "33141"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "Miami Gardens",
+              "slug": "miami-gardens",
+              "population": 110000,
+              "lat": 25.942,
+              "lng": -80.2456,
+              "is_active": true,
+              "description": "Miami Gardens es la tercera ciudad más grande del condado Miami-Dade y hogar del Hard Rock Stadium, donde juegan los Miami Dolphins y se celebran grandes conciertos. Esta comunidad predominantemente afroamericana ofrece viviendas asequibles, diversas opciones gastronómicas y un fuerte sentido de orgullo cultural.",
+              "sights": [
+                {
+                  "name": "Hard Rock Stadium",
+                  "slug": "hard-rock-stadium",
+                  "description": "Estadio multiusos de 65,000 asientos, hogar de los Miami Dolphins, que alberga Super Bowls, conciertos y el torneo de tenis Miami Open.",
+                  "image": "/images/sights/hard-rock-stadium.jpg",
+                  "address": "347 Don Shula Dr, Miami Gardens, FL 33056",
+                  "website": "https://hardrockstadium.com",
+                  "category": "entertainment"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "Miami Gardens",
+                  "slug": "miami-gardens",
+                  "zip_codes": [
+                    "33054",
+                    "33055",
+                    "33056"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "Miami Lakes",
+              "slug": "miami-lakes",
+              "population": 30000,
+              "lat": 25.9086,
+              "lng": -80.3089,
+              "is_active": true,
+              "description": "Miami Lakes es una comunidad planificada originalmente desarrollada por la familia Graham, con lagos, parques y calles arboladas. El pueblo ofrece un estilo de vida suburbano con excelentes escuelas, compras en Main Street e instalaciones recreativas, convirtiéndolo en una de las comunidades familiares más deseadas de Miami-Dade.",
+              "sights": [
+                {
+                  "name": "Main Street Miami Lakes",
+                  "slug": "main-street-miami-lakes",
+                  "description": "Encantador distrito del centro con tiendas, restaurantes, cine y eventos comunitarios en un entorno peatonal.",
+                  "image": "/images/sights/main-street-miami-lakes.jpg",
+                  "address": "15400 Main St, Miami Lakes, FL 33014",
+                  "category": "shopping"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "Miami Lakes",
+                  "slug": "miami-lakes",
+                  "zip_codes": [
+                    "33014",
+                    "33016",
+                    "33018"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "Miami Shores",
+              "slug": "miami-shores",
+              "population": 11000,
+              "lat": 25.8631,
+              "lng": -80.1861,
+              "is_active": true,
+              "description": "Miami Shores es un encantador pueblo conocido por sus calles arboladas, casas históricas y fuerte espíritu comunitario. El área cuenta con la Universidad Barry, un excelente campo de golf y un pintoresco centro con tiendas y restaurantes locales. Es popular entre familias que buscan un ambiente de pueblo pequeño cerca de Miami.",
+              "sights": [
+                {
+                  "name": "Miami Shores Country Club",
+                  "slug": "miami-shores-country-club",
+                  "description": "Histórico club de golf de 1926 con un campo de 18 hoyos, canchas de tenis, piscina y casa club en el corazón de Miami Shores.",
+                  "image": "/images/sights/miami-shores-cc.jpg",
+                  "address": "10000 Biscayne Blvd, Miami Shores, FL 33138",
+                  "category": "entertainment"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "Miami Shores",
+                  "slug": "miami-shores",
+                  "zip_codes": [
+                    "33138",
+                    "33150"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "Miami Springs",
+              "slug": "miami-springs",
+              "population": 14000,
+              "lat": 25.8221,
+              "lng": -80.2895,
+              "is_active": true,
+              "description": "Miami Springs es una ciudad histórica adyacente al Aeropuerto Internacional de Miami, con una distintiva arquitectura de estilo Pueblo Revival de la década de 1920. La comunidad ofrece un carácter único de pueblo pequeño con calles arboladas, negocios locales y acceso conveniente al aeropuerto, haciéndola popular entre empleados de aerolíneas y viajeros.",
+              "sights": [
+                {
+                  "name": "Miami Springs Golf & Country Club",
+                  "slug": "miami-springs-golf",
+                  "description": "El campo de golf municipal más antiguo del sur de Florida, abierto en 1923, que fue sede del Miami Open durante treinta años.",
+                  "image": "/images/sights/miami-springs-golf.jpg",
+                  "address": "650 Curtiss Parkway, Miami Springs, FL 33166",
+                  "category": "entertainment"
+                },
+                {
+                  "name": "Mansión Curtiss",
+                  "slug": "curtiss-mansion",
+                  "description": "Casa restaurada de estilo Pueblo Revival del pionero de la aviación Glenn Curtiss, ahora un hito histórico y sede de eventos con visitas los sábados.",
+                  "image": "/images/sights/curtiss-mansion.jpg",
+                  "address": "500 Deer Run, Miami Springs, FL 33166",
+                  "category": "landmark"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "Miami Springs",
+                  "slug": "miami-springs",
+                  "zip_codes": [
+                    "33142",
+                    "33166"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "North Bay Village",
+              "slug": "north-bay-village",
+              "population": 8000,
+              "lat": 25.8468,
+              "lng": -80.1539,
+              "is_active": true,
+              "description": "North Bay Village consiste en tres islas a lo largo del 79th Street Causeway entre Miami y Miami Beach. Esta comunidad frente al agua ofrece impresionantes vistas a la bahía, vida en condominios y una variedad de restaurantes y locales nocturnos. Es una ubicación conveniente para quienes trabajan tanto en Miami como en Miami Beach.",
+              "sights": [
+                {
+                  "name": "Parque Infantil Pirata de Treasure Island",
+                  "slug": "treasure-island-playground",
+                  "description": "Parque familiar con temática pirata en Treasure Island con creativas áreas de juego de barcos piratas para diferentes grupos de edad.",
+                  "image": "/images/sights/treasure-island-playground.jpg",
+                  "address": "1841 Galleon Street, North Bay Village, FL 33141",
+                  "category": "park"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "North Bay Village",
+                  "slug": "north-bay-village",
+                  "zip_codes": [
+                    "33141"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "North Miami",
+              "slug": "north-miami",
+              "population": 62000,
+              "lat": 25.8901,
+              "lng": -80.1865,
+              "is_active": true,
+              "description": "North Miami es una ciudad diversa, hogar del campus de la Bahía de Biscayne de la Universidad Internacional de Florida y el Museo de Arte Contemporáneo. El área ofrece viviendas asequibles, gastronomía multicultural y acceso al Parque Estatal del Río Oleta, el parque urbano más grande de Florida con ciclismo de montaña y kayak.",
+              "sights": [
+                {
+                  "name": "Parque Estatal del Río Oleta",
+                  "slug": "oleta-river-park",
+                  "description": "El parque urbano más grande de Florida con más de 1,000 acres de manglares, playas, senderos para ciclismo de montaña, kayak y alquiler de cabañas.",
+                  "image": "/images/sights/oleta-river-park.jpg",
+                  "address": "3400 NE 163rd St, North Miami Beach, FL 33160",
+                  "website": "https://floridastateparks.org/parks-and-trails/oleta-river-state-park",
+                  "category": "nature"
+                },
+                {
+                  "name": "Museo de Arte Contemporáneo (MOCA)",
+                  "slug": "moca-north-miami",
+                  "description": "Museo de arte contemporáneo con exhibiciones rotativas, colección permanente y jardín de esculturas en el centro de North Miami.",
+                  "image": "/images/sights/moca-north-miami.jpg",
+                  "address": "770 NE 125th St, North Miami, FL 33161",
+                  "website": "https://mocanomi.org",
+                  "category": "museum"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "North Miami",
+                  "slug": "north-miami",
+                  "zip_codes": [
+                    "33161",
+                    "33162",
+                    "33167",
+                    "33168"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "North Miami Beach",
+              "slug": "north-miami-beach",
+              "population": 43000,
+              "lat": 25.9331,
+              "lng": -80.162,
+              "is_active": true,
+              "description": "North Miami Beach, a pesar de su nombre, es una ciudad del interior conocida por su diversa población y viviendas asequibles. El área cuenta con el Antiguo Monasterio Español, varios centros comerciales y fácil acceso a playas cercanas. Es una opción práctica para familias que buscan valor en el noreste de Miami-Dade.",
+              "sights": [
+                {
+                  "name": "Antiguo Monasterio Español",
+                  "slug": "ancient-spanish-monastery",
+                  "description": "Monasterio español de 800 años de antigüedad, desmantelado en España, enviado a EE.UU. por William Randolph Hearst y reconstruido en North Miami Beach.",
+                  "image": "/images/sights/spanish-monastery.jpg",
+                  "address": "16711 W Dixie Hwy, North Miami Beach, FL 33160",
+                  "website": "https://spanishmonastery.com",
+                  "category": "landmark"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "North Miami Beach",
+                  "slug": "north-miami-beach",
+                  "zip_codes": [
+                    "33160",
+                    "33162",
+                    "33169"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "Opa-locka",
+              "slug": "opa-locka",
+              "population": 16000,
+              "lat": 25.9023,
+              "lng": -80.2503,
+              "is_active": true,
+              "description": "Opa-locka es famosa por su única arquitectura de estilo Renacimiento Morisco, con la colección más grande de edificios de estilo morisco en el hemisferio occidental. La ciudad es hogar del Aeropuerto Ejecutivo Opa-locka y está trabajando hacia la revitalización mientras preserva su distintiva herencia arquitectónica.",
+              "sights": [
+                {
+                  "name": "Ayuntamiento de Opa-locka",
+                  "slug": "opa-locka-city-hall",
+                  "description": "Icónico edificio de Renacimiento Morisco de 1926 con minaretes y cúpulas, pieza central de la colección más grande de arquitectura morisca del hemisferio occidental.",
+                  "image": "/images/sights/opa-locka-city-hall.jpg",
+                  "address": "780 Fisherman St, Opa-locka, FL 33054",
+                  "category": "landmark"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "Opa-locka",
+                  "slug": "opa-locka",
+                  "zip_codes": [
+                    "33054",
+                    "33055"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "Palmetto Bay",
+              "slug": "palmetto-bay",
+              "population": 25000,
+              "lat": 25.6212,
+              "lng": -80.3241,
+              "is_active": true,
+              "description": "Palmetto Bay es un pueblo adinerado en el sur de Miami-Dade conocido por sus excelentes escuelas, grandes casas señoriales y comunidad orientada a la familia. El área cuenta con hermosas calles arboladas, Coral Reef Park y Deering Estate, una propiedad histórica frente a la bahía con senderos naturales y eventos culturales.",
+              "sights": [
+                {
+                  "name": "Deering Estate",
+                  "slug": "deering-estate",
+                  "description": "Propiedad histórica de 450 acres en la Bahía de Biscayne con dos casas históricas, senderos naturales, yacimiento de fósiles y programas de educación ambiental.",
+                  "image": "/images/sights/deering-estate.jpg",
+                  "address": "16701 SW 72nd Ave, Palmetto Bay, FL 33157",
+                  "website": "https://deeringestate.org",
+                  "category": "landmark"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "Palmetto Bay",
+                  "slug": "palmetto-bay",
+                  "zip_codes": [
+                    "33157",
+                    "33158",
+                    "33176"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "Pinecrest",
+              "slug": "pinecrest",
+              "population": 19000,
+              "lat": 25.6671,
+              "lng": -80.3081,
+              "is_active": true,
+              "description": "Pinecrest es un pueblo adinerado en el sur de Miami-Dade conocido por sus excelentes escuelas públicas, incluyendo Pinecrest Elementary, una de las mejor calificadas de Florida. La comunidad cuenta con grandes casas señoriales en amplios terrenos, hermosas calles arboladas y Pinecrest Gardens, una antigua atracción turística que ahora sirve como jardín botánico y centro cultural.",
+              "sights": [
+                {
+                  "name": "Pinecrest Gardens",
+                  "slug": "pinecrest-gardens",
+                  "description": "Jardín botánico y centro cultural de 20 acres, anteriormente Parrot Jungle, con plantas tropicales, animales, área de juegos acuáticos y eventos.",
+                  "image": "/images/sights/pinecrest-gardens.jpg",
+                  "address": "11000 Red Rd, Pinecrest, FL 33156",
+                  "website": "https://pinecrestgardens.org",
+                  "category": "nature"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "Pinecrest",
+                  "slug": "pinecrest",
+                  "zip_codes": [
+                    "33156",
+                    "33143",
+                    "33176"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "South Miami",
+              "slug": "south-miami",
+              "population": 12000,
+              "lat": 25.7076,
+              "lng": -80.2934,
+              "is_active": true,
+              "description": "South Miami es una encantadora ciudad centrada en su peatonal distrito del centro de Sunset Drive, con tiendas locales, restaurantes y el histórico Teatro Sunset. La ciudad ofrece una mezcla de vecindarios residenciales, proximidad a la Universidad de Miami y acceso conveniente al Metrorail.",
+              "sights": [
+                {
+                  "name": "Sunset Place",
+                  "slug": "sunset-place",
+                  "description": "Centro comercial y de entretenimiento con tiendas, restaurantes y lugares de entretenimiento en el corazón de South Miami.",
+                  "image": "/images/sights/sunset-place.jpg",
+                  "address": "5701 Sunset Dr, South Miami, FL 33143",
+                  "category": "shopping"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "South Miami",
+                  "slug": "south-miami",
+                  "zip_codes": [
+                    "33143",
+                    "33155"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "Sunny Isles Beach",
+              "slug": "sunny-isles-beach",
+              "population": 22000,
+              "lat": 25.9409,
+              "lng": -80.1228,
+              "is_active": true,
+              "description": "Sunny Isles Beach es una ciudad turística costera conocida como la 'Riviera de Florida', con impresionantes condominios de gran altura frente al océano y hoteles de lujo. Ubicada entre Miami Beach y Fort Lauderdale, esta comunidad de isla barrera ofrece hermosas playas, gastronomía exclusiva y una diversa comunidad internacional. La ciudad es popular tanto entre residentes como turistas que buscan un estilo de vida frente al océano.",
+              "sights": [
+                {
+                  "name": "Muelle de Pesca Newport",
+                  "slug": "newport-pier",
+                  "description": "Histórico muelle de pesca de 1936 que se extiende hacia el Océano Atlántico, perfecto para pescar, ver atardeceres y paseos familiares.",
+                  "image": "/images/sights/newport-pier.jpg",
+                  "address": "16501 Collins Ave, Sunny Isles Beach, FL 33160",
+                  "category": "landmark"
+                },
+                {
+                  "name": "Playa Sunny Isles",
+                  "slug": "sunny-isles-beach-shore",
+                  "description": "Prístina franja de playa de arena dorada con impresionantes vistas al océano, parques de playa y acceso a deportes acuáticos.",
+                  "image": "/images/sights/sunny-isles-beach.jpg",
+                  "address": "Collins Ave, Sunny Isles Beach, FL 33160",
+                  "category": "beach"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "Sunny Isles Beach",
+                  "slug": "sunny-isles-beach",
+                  "zip_codes": [
+                    "33160"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "Surfside",
+              "slug": "surfside",
+              "population": 6000,
+              "lat": 25.8784,
+              "lng": -80.1256,
+              "is_active": true,
+              "description": "Surfside es un pequeño pueblo frente al océano entre Miami Beach y Bal Harbour, conocido por sus hermosas playas, atmósfera familiar y distrito comercial peatonal de Harding Avenue. La comunidad ofrece una alternativa más tranquila a Miami Beach con excelentes restaurantes kosher y un fuerte sentido de comunidad.",
+              "sights": [
+                {
+                  "name": "Playa de Surfside",
+                  "slug": "surfside-beach",
+                  "description": "Playa tranquila y familiar con arena suave, aguas calmas y una atmósfera relajada lejos de las multitudes de South Beach.",
+                  "image": "/images/sights/surfside-beach.jpg",
+                  "address": "9301 Collins Ave, Surfside, FL 33154",
+                  "category": "beach"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "Surfside",
+                  "slug": "surfside",
+                  "zip_codes": [
+                    "33154"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "Sweetwater",
+              "slug": "sweetwater",
+              "population": 20000,
+              "lat": 25.7634,
+              "lng": -80.3731,
+              "is_active": true,
+              "description": "Sweetwater es una ciudad predominantemente hispana adyacente al campus principal de la Universidad Internacional de Florida, conocida por su vivienda asequible y fuertes lazos comunitarios. La ciudad cuenta con el cercano Dolphin Mall y ofrece un ambiente práctico y orientado a la familia en el oeste de Miami-Dade.",
+              "sights": [
+                {
+                  "name": "Dolphin Mall",
+                  "slug": "dolphin-mall",
+                  "description": "El centro comercial de outlets y venta al por menor más grande del sur de Florida con más de 240 tiendas, restaurantes y opciones de entretenimiento.",
+                  "image": "/images/sights/dolphin-mall.jpg",
+                  "address": "11401 NW 12th St, Miami, FL 33172",
+                  "website": "https://shopdolphinmall.com",
+                  "category": "shopping"
+                },
+                {
+                  "name": "Universidad Internacional de Florida",
+                  "slug": "fiu-campus",
+                  "description": "Importante universidad pública de investigación con un hermoso campus, instalaciones deportivas y el icónico estadio de fútbol de FIU.",
+                  "image": "/images/sights/fiu-campus.jpg",
+                  "address": "11200 SW 8th St, Miami, FL 33199",
+                  "website": "https://fiu.edu",
+                  "category": "landmark"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "Sweetwater",
+                  "slug": "sweetwater",
+                  "zip_codes": [
+                    "33172",
+                    "33174"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "Virginia Gardens",
+              "slug": "virginia-gardens",
+              "population": 2500,
+              "lat": 25.8106,
+              "lng": -80.3028,
+              "is_active": true,
+              "description": "Virginia Gardens es un pequeño pueblo residencial cerca del Aeropuerto Internacional de Miami, que ofrece casas unifamiliares asequibles y una tranquila atmósfera de vecindario. A pesar de su proximidad al aeropuerto, la comunidad mantiene un carácter pacífico con calles arboladas y parques locales.",
+              "sights": [
+                {
+                  "name": "Parque Virginia Gardens",
+                  "slug": "virginia-gardens-park",
+                  "description": "Parque comunitario con instalaciones recreativas, equipos de juegos y espacios verdes para familias en este tranquilo pueblo.",
+                  "image": "/images/sights/virginia-gardens-park.jpg",
+                  "address": "6498 NW 38th Terrace, Virginia Gardens, FL 33166",
+                  "category": "park"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "Virginia Gardens",
+                  "slug": "virginia-gardens",
+                  "zip_codes": [
+                    "33166"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "West Miami",
+              "slug": "west-miami",
+              "population": 8000,
+              "lat": 25.7634,
+              "lng": -80.2962,
+              "is_active": true,
+              "description": "West Miami es una pequeña ciudad predominantemente hispana que ofrece viviendas asequibles y una comunidad orientada a la familia. Ubicada cerca de Coral Gables y la Universidad de Miami, la ciudad brinda acceso conveniente a empleo y educación mientras mantiene costos de vida asequibles.",
+              "sights": [
+                {
+                  "name": "Centro Comunitario de West Miami",
+                  "slug": "west-miami-community-center",
+                  "description": "Corazón de la comunidad desde 1953, con instalaciones recreativas, espacios para eventos y áreas al aire libre para actividades y celebraciones.",
+                  "image": "/images/sights/west-miami-community.jpg",
+                  "address": "901 SW 62nd Avenue, West Miami, FL 33144",
+                  "category": "park"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "West Miami",
+                  "slug": "west-miami",
+                  "zip_codes": [
+                    "33144",
+                    "33155"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "Westchester",
+              "slug": "westchester",
+              "population": 30000,
+              "lat": 25.7481,
+              "lng": -80.3275,
+              "is_active": true,
+              "description": "Westchester es una grande y establecida comunidad en el centro-oeste de Miami-Dade, conocida por su vivienda asequible, fuerte cultura hispana y vecindarios familiares. El área ofrece numerosos centros comerciales, restaurantes y fácil acceso a autopistas, haciéndola popular entre familias trabajadoras.",
+              "sights": [
+                {
+                  "name": "Tropical Park",
+                  "slug": "tropical-park",
+                  "description": "Oasis urbano de 275 acres con centro ecuestre, lagos para navegar y pescar, parque para perros, reuniones de food trucks y centro de artes culturales.",
+                  "image": "/images/sights/tropical-park.jpg",
+                  "address": "7900 SW 40th Street, Miami, FL 33155",
+                  "category": "park"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "Westchester",
+                  "slug": "westchester",
+                  "zip_codes": [
+                    "33144",
+                    "33165",
+                    "33175",
+                    "33174"
+                  ],
+                  "is_active": true
+                }
+              ]
+            },
+            {
+              "name": "Kendall",
+              "slug": "kendall",
+              "population": 75000,
+              "lat": 25.6795,
+              "lng": -80.3173,
+              "is_active": true,
+              "description": "Kendall es una gran comunidad suburbana en el sur del condado Miami-Dade, popular entre familias por su vivienda asequible, buenas escuelas y numerosos centros comerciales, incluyendo Dadeland Mall. El área ofrece una mezcla de casas unifamiliares y condominios, con fácil acceso a las principales autopistas y al Metrorail para desplazarse al centro de Miami.",
+              "sights": [
+                {
+                  "name": "Dadeland Mall",
+                  "slug": "dadeland-mall",
+                  "description": "Destino de compras de primera con 185 tiendas incluyendo Macy's, Nordstrom y Saks Fifth Avenue, además de restaurantes y entretenimiento.",
+                  "image": "/images/sights/dadeland-mall.jpg",
+                  "address": "7535 N Kendall Dr, Miami, FL 33156",
+                  "website": "https://simon.com/mall/dadeland-mall",
+                  "category": "shopping"
+                },
+                {
+                  "name": "Zoo Miami",
+                  "slug": "zoo-miami",
+                  "description": "El zoológico más grande de Florida con más de 3,000 animales en 750 acres, con exhibiciones sin jaulas y el único zoológico tropical de los Estados Unidos continental.",
+                  "image": "/images/sights/zoo-miami.jpg",
+                  "address": "12400 SW 152nd St, Miami, FL 33177",
+                  "website": "https://zoomiami.org",
+                  "category": "entertainment"
+                }
+              ],
+              "neighborhoods": [
+                {
+                  "name": "Kendall",
+                  "slug": "kendall",
+                  "zip_codes": [
+                    "33156",
+                    "33176",
+                    "33183",
+                    "33186",
+                    "33193",
+                    "33196"
+                  ],
+                  "is_active": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

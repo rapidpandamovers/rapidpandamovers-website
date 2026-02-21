@@ -1,4 +1,6 @@
 import { Users, Award, TrendingUp, Star } from 'lucide-react'
+import { getMessages } from 'next-intl/server'
+import { H2 } from '@/app/components/Heading'
 
 export interface StatisticSectionStats {
   total_moves: string
@@ -13,16 +15,19 @@ interface StatisticSectionProps {
   subtitle?: string
 }
 
-export default function StatisticSection({
+export default async function StatisticSection({
   stats,
-  title = 'Trusted by Miami Families & Businesses',
-  subtitle = 'Our commitment to excellence has earned us the trust of thousands of customers throughout Miami-Dade County.',
+  title: titleProp,
+  subtitle: subtitleProp,
 }: StatisticSectionProps) {
+  const { ui } = (await getMessages()) as any
+  const title = titleProp ?? ui.statistics.defaultTitle
+  const subtitle = subtitleProp ?? ui.statistics.defaultSubtitle
   const statCards = [
     {
       icon: Users,
       value: stats.total_moves,
-      label: 'Successful Moves',
+      label: ui.statistics.successfulMoves,
       bg: 'bg-gray-50',
       iconBg: 'bg-gray-200',
       iconColor: 'text-gray-600',
@@ -30,7 +35,7 @@ export default function StatisticSection({
     {
       icon: Award,
       value: stats.customer_satisfaction,
-      label: 'Customer Satisfaction',
+      label: ui.statistics.customerSatisfaction,
       bg: 'bg-gray-50',
       iconBg: 'bg-gray-200',
       iconColor: 'text-gray-600',
@@ -38,7 +43,7 @@ export default function StatisticSection({
     {
       icon: TrendingUp,
       value: stats.years_experience,
-      label: 'Years Experience',
+      label: ui.statistics.yearsExperience,
       bg: 'bg-gray-50',
       iconBg: 'bg-gray-200',
       iconColor: 'text-gray-600',
@@ -46,7 +51,7 @@ export default function StatisticSection({
     {
       icon: Star,
       value: `${stats.average_rating}/5`,
-      label: 'Average Rating',
+      label: ui.statistics.averageRating,
       bg: 'bg-gray-50',
       iconBg: 'bg-gray-200',
       iconColor: 'text-gray-600',
@@ -57,7 +62,7 @@ export default function StatisticSection({
     <section className="pt-20">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">{title}</h2>
+          <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">{title}</H2>
           <p className="text-gray-600 max-w-2xl mx-auto">{subtitle}</p>
         </div>
 

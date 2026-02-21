@@ -6,6 +6,7 @@ interface RouteSchemaProps {
   destinationCity: string
   distance: number
   url: string
+  locale?: string
 }
 
 /**
@@ -16,12 +17,14 @@ export default function RouteSchema({
   destinationCity,
   distance,
   url,
+  locale,
 }: RouteSchemaProps) {
   const schema = generateRouteSchema({
     originCity,
     destinationCity,
     distance,
     url,
+    locale,
   })
 
   return <SchemaScript schema={schema} id="route-schema" />

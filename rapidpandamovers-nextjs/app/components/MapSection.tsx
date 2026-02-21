@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import { useMessages } from 'next-intl';
+import { H2, H3 } from '@/app/components/Heading';
 
 interface MapSectionProps {
   // For location maps
@@ -35,6 +37,7 @@ export default function MapSection({
   className = '',
   embedded = false,
 }: MapSectionProps) {
+  const { ui } = useMessages() as any;
   const [isLoaded, setIsLoaded] = useState(false);
 
   // Build the embed URL based on mode
@@ -85,10 +88,10 @@ export default function MapSection({
     : embedded
       ? ''
       : (route
-          ? `Driving Route: ${route.origin} to ${route.destination}`
+          ? ui.map.drivingRoute.replace('{origin}', route.origin).replace('{destination}', route.destination)
           : location
-            ? `${location.name} Area`
-            : 'Service Area');
+            ? ui.map.locationArea.replace('{name}', location.name)
+            : ui.map.serviceArea);
 
   const mapContent = (
     <>
@@ -100,7 +103,7 @@ export default function MapSection({
           <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
             <div className="text-center">
               <div className="w-10 h-10 border-4 border-orange-500 border-t-transparent rounded-full animate-spin mx-auto mb-3"></div>
-              <p className="text-gray-500">Loading map...</p>
+              <p className="text-gray-500">{ui.map.loadingMap}</p>
             </div>
           </div>
         )}
@@ -121,14 +124,14 @@ export default function MapSection({
       {route && (
         <div className="mt-4 text-center text-gray-600">
           <p className="text-sm">
-            View directions from {route.origin} to {route.destination} on{' '}
+            {ui.map.viewDirections.replace('{origin}', route.origin).replace('{destination}', route.destination)}{' '}
             <a
               href={`https://www.google.com/maps/dir/${encodeURIComponent(route.originZip || `${route.origin}, ${route.originState || 'FL'}`)}/${encodeURIComponent(route.destinationZip || `${route.destination}, ${route.destinationState || 'FL'}`)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-orange-500 hover:text-orange-600 underline"
+              className="text-orange-700 hover:text-orange-800 underline"
             >
-              Google Maps
+              {ui.map.googleMaps}
             </a>
           </p>
         </div>
@@ -139,7 +142,7 @@ export default function MapSection({
   if (embedded) {
     return (
       <div className={`my-6 ${className}`}>
-        {displayTitle && <h3 className="text-xl font-bold text-gray-800 mb-4">{displayTitle}</h3>}
+        {displayTitle && <H3 className="text-xl font-bold text-gray-800 mb-4">{displayTitle}</H3>}
         {mapContent}
       </div>
     );
@@ -150,9 +153,9 @@ export default function MapSection({
       <div className="container mx-auto">
         <div className="mx-auto">
           {displayTitle && (
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 text-center">
+            <H2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 text-center">
               {displayTitle}
-            </h2>
+            </H2>
           )}
           {mapContent}
         </div>

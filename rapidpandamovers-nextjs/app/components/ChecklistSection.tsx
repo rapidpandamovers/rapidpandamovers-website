@@ -1,14 +1,11 @@
 'use client'
 
 import { useState, useRef } from 'react'
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
 import { CheckCircle, Clock, AlertCircle, Info, Printer, ClipboardList, ArrowRight, Calendar, Download } from 'lucide-react'
-import content from '@/data/content.json'
-import ui from '@/data/ui.json'
+import { useMessages } from 'next-intl'
 import { resolveIcon } from '@/lib/icons'
-
-const phone = content.site.phone
-const phoneFormatted = `(${phone.slice(0,3)}) ${phone.slice(4,7)}-${phone.slice(8)}`
+import { H1, H2, H3 } from '@/app/components/Heading'
 
 interface Task {
   task: string
@@ -39,6 +36,9 @@ export default function ChecklistSection({
   variant = 'preview',
   className = ''
 }: ChecklistSectionProps) {
+  const { ui, content } = useMessages() as any
+  const phone = content.site.phone
+  const phoneFormatted = `(${phone.slice(0,3)}) ${phone.slice(4,7)}-${phone.slice(8)}`
   // Track checked state for each task
   const [checkedTasks, setCheckedTasks] = useState<Record<string, boolean>>(() => {
     const initial: Record<string, boolean> = {}
@@ -251,7 +251,7 @@ export default function ChecklistSection({
 
   // Preview variant - shows a simple preview with link to full checklist
   if (variant === 'preview') {
-    const features = ui.checklist.features.map(f => ({
+    const features = ui.checklist.features.map((f: any) => ({
       icon: resolveIcon(f.icon),
       title: f.title,
       desc: f.desc,
@@ -261,9 +261,9 @@ export default function ChecklistSection({
       <section className={`py-16 ${className}`}>
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
               {ui.checklist.previewTitle}
-            </h2>
+            </H2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               {ui.checklist.previewSubtitle}
             </p>
@@ -272,14 +272,14 @@ export default function ChecklistSection({
           <div className="bg-orange-50 rounded-4xl p-8">
             {/* Feature Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              {features.map((feature, index) => {
+              {features.map((feature: any, index: number) => {
                 const IconComponent = feature.icon
                 return (
                   <div key={index} className="bg-white rounded-2xl p-6 text-center">
                     <div className="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <IconComponent className="w-7 h-7 text-orange-500" />
                     </div>
-                    <h3 className="font-bold text-gray-800 mb-1">{feature.title}</h3>
+                    <H3 className="font-bold text-gray-800 mb-1">{feature.title}</H3>
                     <p className="text-sm text-gray-600">{feature.desc}</p>
                   </div>
                 )
@@ -290,7 +290,7 @@ export default function ChecklistSection({
             <div className="text-center">
               <Link
                 href="/moving-checklist"
-                className="inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-lg transition-colors"
+                className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white font-semibold px-8 py-4 rounded-lg transition-colors"
               >
                 {ui.buttons.viewFullChecklist}
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -314,7 +314,7 @@ export default function ChecklistSection({
           <div className="hidden print:block pdf-header mb-6 pb-4 border-b-2 border-gray-300">
           <div className="flex justify-between items-start">
             <div>
-              <h1 className="text-2xl font-bold text-gray-900">{ui.checklist.printHeader.company}</h1>
+              <H1 className="text-2xl font-bold text-gray-900">{ui.checklist.printHeader.company}</H1>
               <p className="text-sm text-gray-600">{ui.checklist.printHeader.title}</p>
             </div>
             <div className="text-right text-sm text-gray-600">
@@ -361,14 +361,14 @@ export default function ChecklistSection({
                 <button
                   onClick={handleDownloadPDF}
                   disabled={isGenerating}
-                  className="inline-flex items-center px-5 py-2.5 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="inline-flex items-center px-5 py-2.5 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <Download className="w-5 h-5 mr-2" />
                   {isGenerating ? ui.buttons.generating : ui.buttons.downloadPdf}
                 </button>
                 <button
                   onClick={handlePrint}
-                  className="inline-flex items-center px-5 py-2.5 border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-semibold rounded-lg transition-colors"
+                  className="inline-flex items-center px-5 py-2.5 border-2 border-orange-700 text-orange-700 hover:bg-orange-600 hover:text-white font-semibold rounded-lg transition-colors"
                 >
                   <Printer className="w-5 h-5 mr-2" />
                   {ui.buttons.print}
@@ -410,9 +410,9 @@ export default function ChecklistSection({
                     <div className="flex items-start justify-between">
                       <div className="flex items-center">
                         <div>
-                          <h3 className="text-lg font-bold text-gray-800 print:text-base">
+                          <H3 className="text-lg font-bold text-gray-800 print:text-base">
                             {category.title}
-                          </h3>
+                          </H3>
                           <p className="text-sm text-gray-500 print:text-xs">
                             {category.description}
                           </p>
@@ -423,7 +423,7 @@ export default function ChecklistSection({
                     <div className="mt-4 no-print">
                       <div className="flex items-center justify-between text-xs text-gray-500 mb-1">
                         <span>{progress.completed} {ui.checklist.of} {progress.total} {ui.checklist.complete}</span>
-                        <span className="font-medium text-orange-600">{progress.percentage}%</span>
+                        <span className="font-medium text-orange-700">{progress.percentage}%</span>
                       </div>
                       <div className="h-1.5 bg-gray-200 rounded-full overflow-hidden">
                         <div
@@ -469,7 +469,7 @@ export default function ChecklistSection({
                             {/* Print Checkbox */}
                             <span className={`hidden print:inline-block print-checkbox ${isChecked ? 'print-checkbox-checked' : ''}`}></span>
                             <span className={`flex-1 text-sm print:text-xs ${
-                              isChecked ? 'text-gray-400 line-through print:text-gray-700 print:no-underline' : 'text-gray-700'
+                              isChecked ? 'text-gray-500 line-through print:text-gray-700 print:no-underline' : 'text-gray-700'
                             }`}>
                               {task.task}
                             </span>

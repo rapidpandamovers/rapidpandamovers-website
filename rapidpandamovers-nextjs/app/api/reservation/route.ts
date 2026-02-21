@@ -1,33 +1,49 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { sendEmail, formatReservationEmail } from '@/lib/email';
+import { reservationSchema } from '@/lib/validation';
+import { verifyTurnstile } from '@/lib/turnstile';
+import { reservationRateLimit } from '@/lib/rate-limit';
+import { sanitizeObject } from '@/lib/sanitize';
+import { sendReservationNotification } from '@/lib/email';
 
 export async function POST(request: NextRequest) {
   try {
-    const data = await request.json();
-
-    // Validate required fields
-    const requiredFields = [
-      'name', 'email', 'phone',
-      'pickupAddress', 'pickupCity', 'pickupState', 'pickupZip',
-      'dropoffAddress', 'dropoffCity', 'dropoffState', 'dropoffZip',
-      'moveDate', 'moveTime', 'moveSize', 'packing'
-    ];
-
-    for (const field of requiredFields) {
-      if (!data[field]) {
-        return NextResponse.json(
-          { error: `Missing required field: ${field}` },
-          { status: 400 }
-        );
-      }
+    // 1. Rate limit
+    const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
+      || request.headers.get('x-real-ip')
+      || 'unknown';
+    const rateLimitResult = reservationRateLimit.check(ip);
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { error: 'Too many requests. Please wait a few minutes and try again.' },
+        { status: 429, headers: { 'Retry-After': '900' } }
+      );
     }
 
-    // Send email
-    await sendEmail({
-      subject: `New Reservation Request from ${data.name}`,
-      html: formatReservationEmail(data),
-      replyTo: data.email,
-    });
+    // 2. Validate
+    const body = await request.json();
+    const parsed = reservationSchema.safeParse(body);
+    if (!parsed.success) {
+      return NextResponse.json(
+        { error: 'Validation failed', details: parsed.error.flatten().fieldErrors },
+        { status: 400 }
+      );
+    }
+
+    // 3. Verify Turnstile
+    const { turnstileToken, ...formData } = parsed.data;
+    const turnstileResult = await verifyTurnstile(turnstileToken, ip);
+    if (!turnstileResult.success) {
+      return NextResponse.json(
+        { error: 'CAPTCHA verification failed' },
+        { status: 403 }
+      );
+    }
+
+    // 4. Sanitize
+    const sanitized = sanitizeObject(formData);
+
+    // 5. Send email
+    await sendReservationNotification(sanitized);
 
     return NextResponse.json({ success: true });
   } catch (error) {

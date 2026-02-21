@@ -1,24 +1,49 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { sendEmail, formatQuoteEmail } from '@/lib/email';
+import { quoteSchema } from '@/lib/validation';
+import { verifyTurnstile } from '@/lib/turnstile';
+import { quoteRateLimit } from '@/lib/rate-limit';
+import { sanitizeObject } from '@/lib/sanitize';
+import { sendQuoteNotification } from '@/lib/email';
 
 export async function POST(request: NextRequest) {
   try {
-    const data = await request.json();
-
-    // Validate required fields
-    if (!data.firstName || !data.lastName || !data.email || !data.phone || !data.movingFrom || !data.movingTo) {
+    // 1. Rate limit
+    const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
+      || request.headers.get('x-real-ip')
+      || 'unknown';
+    const rateLimitResult = quoteRateLimit.check(ip);
+    if (!rateLimitResult.success) {
       return NextResponse.json(
-        { error: 'Missing required fields' },
+        { error: 'Too many requests. Please wait a few minutes and try again.' },
+        { status: 429, headers: { 'Retry-After': '900' } }
+      );
+    }
+
+    // 2. Validate
+    const body = await request.json();
+    const parsed = quoteSchema.safeParse(body);
+    if (!parsed.success) {
+      return NextResponse.json(
+        { error: 'Validation failed', details: parsed.error.flatten().fieldErrors },
         { status: 400 }
       );
     }
 
-    // Send email
-    await sendEmail({
-      subject: `New Quote Request from ${data.firstName} ${data.lastName}`,
-      html: formatQuoteEmail(data),
-      replyTo: data.email,
-    });
+    // 3. Verify Turnstile
+    const { turnstileToken, ...formData } = parsed.data;
+    const turnstileResult = await verifyTurnstile(turnstileToken, ip);
+    if (!turnstileResult.success) {
+      return NextResponse.json(
+        { error: 'CAPTCHA verification failed' },
+        { status: 403 }
+      );
+    }
+
+    // 4. Sanitize
+    const sanitized = sanitizeObject(formData);
+
+    // 5. Send email
+    await sendQuoteNotification(sanitized);
 
     return NextResponse.json({ success: true });
   } catch (error) {

@@ -1,32 +1,49 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { sendEmail, formatNewsletterEmail } from '@/lib/email';
+import { newsletterSchema } from '@/lib/validation';
+import { verifyTurnstile } from '@/lib/turnstile';
+import { newsletterRateLimit } from '@/lib/rate-limit';
+import { sanitizeObject } from '@/lib/sanitize';
+import { sendNewsletterNotification } from '@/lib/email';
 
 export async function POST(request: NextRequest) {
   try {
-    const data = await request.json();
-
-    // Validate required fields
-    if (!data.email) {
+    // 1. Rate limit
+    const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
+      || request.headers.get('x-real-ip')
+      || 'unknown';
+    const rateLimitResult = newsletterRateLimit.check(ip);
+    if (!rateLimitResult.success) {
       return NextResponse.json(
-        { error: 'Email is required' },
+        { error: 'Too many requests. Please wait a few minutes and try again.' },
+        { status: 429, headers: { 'Retry-After': '900' } }
+      );
+    }
+
+    // 2. Validate
+    const body = await request.json();
+    const parsed = newsletterSchema.safeParse(body);
+    if (!parsed.success) {
+      return NextResponse.json(
+        { error: 'Validation failed', details: parsed.error.flatten().fieldErrors },
         { status: 400 }
       );
     }
 
-    // Basic email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(data.email)) {
+    // 3. Verify Turnstile
+    const { turnstileToken, ...formData } = parsed.data;
+    const turnstileResult = await verifyTurnstile(turnstileToken, ip);
+    if (!turnstileResult.success) {
       return NextResponse.json(
-        { error: 'Invalid email format' },
-        { status: 400 }
+        { error: 'CAPTCHA verification failed' },
+        { status: 403 }
       );
     }
 
-    // Send email notification
-    await sendEmail({
-      subject: 'New Newsletter Subscription',
-      html: formatNewsletterEmail(data),
-    });
+    // 4. Sanitize
+    const sanitized = sanitizeObject(formData);
+
+    // 5. Send email
+    await sendNewsletterNotification(sanitized);
 
     return NextResponse.json({ success: true });
   } catch (error) {

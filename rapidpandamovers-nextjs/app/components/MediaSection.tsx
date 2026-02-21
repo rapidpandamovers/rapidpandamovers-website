@@ -3,7 +3,8 @@
 import { useState, useRef, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import { Play, Pause, X, ChevronLeft, ChevronRight } from 'lucide-react'
-import ui from '@/data/ui.json'
+import { useMessages } from 'next-intl'
+import { H2, H3 } from '@/app/components/Heading'
 
 interface MediaItem {
   type: 'image' | 'video'
@@ -19,6 +20,11 @@ function isLocalVideo(src: string) {
     : false
 }
 
+/** Derive a WebM URL from an MP4 path, e.g. /videos/1.mp4 → /videos/1.webm */
+function toWebm(src: string): string {
+  return src.replace(/\.mp4$/i, '.webm')
+}
+
 interface MediaSectionProps {
   title?: string
   description?: string
@@ -32,37 +38,17 @@ interface MediaSectionProps {
   variant?: 'default' | 'left'
 }
 
-const defaultItems: MediaItem[] = [
-  {
-    type: 'image',
-    src: '/images/sights/brickell-city-centre.jpg',
-    title: 'Brickell Moving',
-    description: 'Downtown Miami relocations'
-  },
-  {
-    type: 'image',
-    src: '/images/sights/cocowalk.jpg',
-    title: 'Coconut Grove',
-    description: 'Village charm moves'
-  },
-  {
-    type: 'image',
-    src: '/images/sights/wynwood-walls.jpg',
-    title: 'Wynwood',
-    description: 'Arts district moves'
-  },
-  {
-    type: 'image',
-    src: '/images/sights/miami-beach-boardwalk.jpg',
-    title: 'Miami Beach',
-    description: 'Coastal relocations'
-  },
+const defaultImageSrcs = [
+  '/images/sights/brickell-city-centre.jpg',
+  '/images/sights/cocowalk.jpg',
+  '/images/sights/wynwood-walls.jpg',
+  '/images/sights/miami-beach-boardwalk.jpg',
 ]
 
 export default function MediaSection({
-  title = ui.media.defaultTitle,
-  description = ui.media.defaultDescription,
-  items = defaultItems,
+  title,
+  description,
+  items: itemsProp,
   className = "",
   showArrows = true,
   showDots = true,
@@ -71,6 +57,15 @@ export default function MediaSection({
   enableModal = true,
   variant = 'default'
 }: MediaSectionProps) {
+  const { ui } = useMessages() as any
+  const displayTitle = title ?? ui.media.defaultTitle
+  const displayDescription = description ?? ui.media.defaultDescription
+  const items: MediaItem[] = itemsProp ?? ui.media.defaultItems.map((item: any, index: number) => ({
+    type: 'image' as const,
+    src: defaultImageSrcs[index] || defaultImageSrcs[0],
+    title: item.title,
+    description: item.description,
+  }))
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
   const [playingVideoIndex, setPlayingVideoIndex] = useState<number | null>(null)
   const scrollRef = useRef<HTMLDivElement>(null)
@@ -170,31 +165,31 @@ export default function MediaSection({
       <section className={`pt-20 px-4 md:px-6 lg:px-8 ${className}`}>
         <div className="container mx-auto">
           {/* Header */}
-          {(title || description) && variant === 'left' ? (
+          {(displayTitle || displayDescription) && variant === 'left' ? (
             <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10">
               <div>
-                {title && (
-                  <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
-                    {title}
-                  </h2>
+                {displayTitle && (
+                  <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+                    {displayTitle}
+                  </H2>
                 )}
-                {description && (
+                {displayDescription && (
                   <p className="text-lg text-gray-600">
-                    {description}
+                    {displayDescription}
                   </p>
                 )}
               </div>
             </div>
-          ) : (title || description) && (
+          ) : (displayTitle || displayDescription) && (
             <div className="text-center mb-10">
-              {title && (
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                  {title}
-                </h2>
+              {displayTitle && (
+                <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                  {displayTitle}
+                </H2>
               )}
-              {description && (
+              {displayDescription && (
                 <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                  {description}
+                  {displayDescription}
                 </p>
               )}
             </div>
@@ -245,14 +240,16 @@ export default function MediaSection({
                       <>
                         <video
                           ref={(el) => setVideoRef(index, el)}
-                          src={item.src}
                           muted
                           playsInline
                           loop
                           preload="metadata"
                           className="absolute inset-0 w-full h-full object-cover"
                           onEnded={() => setPlayingVideoIndex(null)}
-                        />
+                        >
+                          <source src={toWebm(item.src)} type="video/webm" />
+                          <source src={item.src} type="video/mp4" />
+                        </video>
 
                         {/* Play/Pause Button Overlay */}
                         <div className={`absolute inset-0 flex items-center justify-center z-20 transition-opacity ${playingVideoIndex === index ? 'opacity-0 hover:opacity-100' : 'opacity-100'}`}>
@@ -300,7 +297,7 @@ export default function MediaSection({
                         {item.type !== 'video' && (
                           <div className="absolute bottom-0 left-0 right-0 p-4 z-20">
                             {item.title && (
-                              <h3 className="text-white font-semibold text-sm mb-1">{item.title}</h3>
+                              <H3 className="text-white font-semibold text-sm mb-1">{item.title}</H3>
                             )}
                             {item.description && (
                               <p className="text-gray-300 text-xs">{item.description}</p>
@@ -363,11 +360,13 @@ export default function MediaSection({
             {items[activeIndex].type === 'video' && isLocalVideo(items[activeIndex].src) ? (
               <div className="relative aspect-video">
                 <video
-                  src={items[activeIndex].src}
                   controls
                   autoPlay
                   className="w-full h-full rounded-lg"
-                />
+                >
+                  <source src={toWebm(items[activeIndex].src)} type="video/webm" />
+                  <source src={items[activeIndex].src} type="video/mp4" />
+                </video>
               </div>
             ) : items[activeIndex].type === 'video' ? (
               <div className="relative aspect-video">
@@ -393,7 +392,7 @@ export default function MediaSection({
             {/* Caption */}
             <div className="text-center mt-4">
               {items[activeIndex].title && (
-                <h3 className="text-white font-semibold text-lg">{items[activeIndex].title}</h3>
+                <H3 className="text-white font-semibold text-lg">{items[activeIndex].title}</H3>
               )}
               {items[activeIndex].description && (
                 <p className="text-gray-400 mt-1">{items[activeIndex].description}</p>

@@ -14,7 +14,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "Empresa excepcional. Puntuales, amables, eficientes y lo mejor de todo, confiables. Son versátiles y tienen soluciones para la mayoría de mis desafíos de mudanza.\n¡Totalmente recomendados!"
+        }
+      }
     },
     {
       "id": "2",
@@ -30,7 +36,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "¡Hicieron que la mudanza fuera muy fácil para mí, llegaron a tiempo y me ayudaron a armar mis muebles! Fueron súper profesionales y los recomendaría a cualquiera."
+        }
+      }
     },
     {
       "id": "3",
@@ -46,7 +58,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "Esta fue, sin duda, la mejor empresa de mudanzas que he utilizado. Y me he mudado 6 veces con varias empresas grandes y pequeñas anteriormente. Andy, el dueño, es un verdadero profesional con precios extremadamente justos. Sus trabajadores tenían una calidad y experiencia que rara vez se encuentra en la industria de mudanzas, y pudieron mover un spa muy grande a través de un terreno irregular y difícil, haciéndolo de manera muy cuidadosa. Los recomiendo a cualquiera que valore sus pertenencias personales, porque Andy y su equipo tratarán sus muebles con el mayor cuidado. Fácilmente la mejor experiencia de mudanza que he tenido.\nMike"
+        }
+      }
     },
     {
       "id": "4",
@@ -62,7 +80,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "Ni siquiera sé por dónde empezar. Encontramos esta empresa a último momento para nuestra mudanza reciente. Fueron muy flexibles con los cambios de reserva de última hora, ya que nuestro nuevo edificio tenía reglas muy estrictas. Kara fue súper útil al atender mis llamadas y se mantuvo muy amable y profesional a pesar de mis necesidades cambiantes. Andy y otro joven llegaron a nuestra casa puntuales y listos para la mudanza. Cuidaron excepcionalmente bien nuestros muebles, desarmando piezas para asegurarse de que se mantuvieran intactos durante el transporte. Nos encontramos con un obstáculo cuando mi nuevo edificio no nos permitió mudarnos debido a nuestra hora de llegada. ¿Qué se suponía que hiciera con mis muebles? Andy encontró una solución rápida y segura que no afectó mi bolsillo, ya que tendríamos que pagar almacenamiento durante la noche para mis cosas. Al día siguiente llegaron al nuevo apartamento para descargar los muebles y fueron muy rápidos y eficientes. Durante todo el proceso fueron muy profesionales y amables. Me hicieron olvidar que estaba estresada el día anterior. Definitivamente usaría esta empresa y los recomiendo ampliamente."
+        }
+      }
     },
     {
       "id": "5",
@@ -78,7 +102,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "es",
+      "translations": {
+        "en": {
+          "text": "100% Satisfied"
+        }
+      }
     },
     {
       "id": "6",
@@ -94,7 +124,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "Estos chicos hicieron un trabajo excepcional hoy. Llegaron 15 minutos antes y se pusieron a trabajar, todas mis cosas fueron envueltas en cobijas azules y manejadas con cuidado. Solo les dije dónde quería cada cosa y ahí lo pusieron. Desarmaron todos mis muebles y los volvieron a armar. Precios justos por todo el trabajo que hicieron... así que Rapid Panda es altamente recomendado."
+        }
+      }
     },
     {
       "id": "7",
@@ -110,7 +146,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "Andy y su equipo son profesionales. Recibí inmediatamente un presupuesto preciso con precios justos. Llegaron a tiempo y se pusieron a trabajar de inmediato. Fueron muy delicados y cuidadosos con mis pertenencias, envolviendo las cosas para que no se rayaran ni dañaran durante la mudanza. Los recomendaría ampliamente a cualquier familiar o amigo. ¡No puedo expresar lo suficiente lo complacido que estoy de haberlos elegido!"
+        }
+      }
     },
     {
       "id": "8",
@@ -126,7 +168,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "El equipo de Rapid Panda Movers fue altamente recomendado por la administración de mi nuevo apartamento. Andy fue muy amable y transparente con los precios durante el presupuesto.\n\nEl día de la mudanza, el equipo llegó puntualmente a las 9am. Su camión y equipo estaban limpios y organizados. Envolvieron y aseguraron todo muy bien y siguieron todas las instrucciones cuando descargaron el camión en mi nuevo apartamento.\n\nMudarse es un proceso estresante y usar Rapid Panda Movers hizo que la experiencia del día de mudanza fuera más tranquila. Recomiendo ampliamente a Rapid Panda Movers y definitivamente los usaré de nuevo."
+        }
+      }
     },
     {
       "id": "9",
@@ -142,7 +190,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "¡Estos chicos fueron increíbles! Fueron rápidos pero cuidadosos, y movieron una gran cantidad de mis pertenencias en poco tiempo. Andy me dio un presupuesto exacto, y sus hombres incluso nos ayudaron a cargar algunos artículos en un remolque separado que iba al almacén. Estos chicos fueron más allá de lo esperado y definitivamente los usaría de nuevo en el futuro."
+        }
+      }
     },
     {
       "id": "10",
@@ -158,7 +212,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "Rapid Panda fue excelente. Profesionales, precios competitivos (mejores, de hecho), receptivos a llamadas y mensajes de texto, y realmente agradables para tratar. No podríamos estar más contentos y recomendamos ampliamente la empresa."
+        }
+      }
     },
     {
       "id": "11",
@@ -174,7 +234,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "¡Chicos increíbles! ¡Realmente me salvaron en una mudanza difícil!"
+        }
+      }
     },
     {
       "id": "12",
@@ -190,7 +256,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "Andy fue súper receptivo cuando necesité una mudanza de larga distancia de último momento. El equipo fue increíblemente rápido en todo: empacar los artículos que yo no había podido empacar, sacar mis pertenencias de mi apartamento, conducir hasta mi nueva ubicación y dejar mis pertenencias en mi nueva casa. El costo de la mudanza también fue muy transparente desde el principio."
+        }
+      }
     },
     {
       "id": "13",
@@ -206,7 +278,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "¡No puedo decir suficientes cosas buenas sobre esta empresa de mudanzas! Íbamos a alquilar un camión Uhaul para ir a Palm Coast, FL (aproximadamente 4 horas en auto desde Miami) solo para descubrir al recogerlo que Uhaul no nos permitiría salir de la ciudad de Miami con el camión que habíamos reservado. Tuvimos que encontrar una solución rápidamente. Llamamos a Rapid Panda Movers y hablamos con Andy, el dueño, quien no solo fue profesional y cortés, sino que también estuvo dispuesto a acomodarnos a último momento para el día siguiente. Nos cotizó una excelente tarifa por las 12 horas que necesitábamos. Todavía estábamos un poco indecisos y finalmente pudimos coordinar el alquiler de un camión Penske de larga distancia, pero a más del doble del costo de RPM, y con RPM nos ahorraríamos 12 horas y no necesitaríamos hacer ningún levantamiento pesado, así que finalmente decidimos ir con RPM. ¡LA MEJOR DECISIÓN! Andy y su equipo fueron extremadamente puntuales, meticulosos y cuidadosos con todas nuestras cosas, y muy agradables. ¡Fueron fantásticos en general! Llevaron todos los muebles a la casa de mi tía en Palm Coast, y mi tía tuvo una excelente experiencia con ellos. Andy y su equipo la ayudaron a acomodar las cosas en su casa y armaron todos los muebles por ella. Les encantaron tanto que preguntó si podían llevar algunos de sus muebles a la casa de mi primo que vive cerca por solo $130. Ahí mismo Andy aceptó y su equipo se puso a trabajar en el segundo trabajo. En general, Rapid Panda Movers impresionó a toda la familia. Los recomiendo muchísimo y los usaré en el futuro. Si estás indeciso sobre quién usar para tu mudanza, ¡tu búsqueda termina aquí!"
+        }
+      }
     },
     {
       "id": "14",
@@ -222,7 +300,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "es",
+      "translations": {
+        "en": {
+          "text": "Panda Moving has been an excellent experience. Very professional, hardworking, respectful, detail-oriented, and everything within the agreed service and timeframe. From their arrival at the site where they picked up my furniture and boxes in Miami all the way to Pompano Beach, where they delivered my things. I recommend them wholeheartedly without any doubts.\nArturo C Guevara."
+        }
+      }
     },
     {
       "id": "15",
@@ -238,7 +322,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "es",
+      "translations": {
+        "en": {
+          "text": "Thank you so much for your great service, customer care, and responsibility.\nAndy is always making sure the job gets done right. They take great care of your things, are fast with the transport, and always with an excellent smile.\n\nP.S.: Their prices are great! And the work they do is amazing."
+        }
+      }
     },
     {
       "id": "16",
@@ -254,7 +344,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "¡Andy y su equipo son increíbles y unos salvavidas! Muy rápidos, receptivos y profesionales. Muy complacida con cómo resultó el servicio, ¡no puedo agradecerles lo suficiente por un trabajo bien hecho!"
+        }
+      }
     },
     {
       "id": "17",
@@ -270,7 +366,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "¡Fue genial trabajar con ellos! Desde la llamada inicial donde fue tan tranquilizador hasta la llegada y el servicio puntual. Ya estaba abrumada con una mudanza tan exigente, pero me hicieron sentir muy cómoda al reservar sus servicios. Recomiendo ampliamente esta empresa. Cuidaron mis pertenencias y fueron considerados en dónde y cómo colocarlas. Sin mencionar que esta mudanza fue en un tercer piso con temperaturas abrasadoras. ¡No te equivocarás con esta empresa!"
+        }
+      }
     },
     {
       "id": "18",
@@ -286,7 +388,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "¡Rapid Panda Movers son increíbles! El mejor y más eficiente servicio de mudanza que he usado. Fueron receptivos, profesionales, y movieron todos mis muebles increíblemente rápido, sanos y salvos. Accidentalmente dejé caer mis gafas de sol y se rompieron, y uno de los mudanceros incluso me las arregló. En serio el mejor servicio, ¡recomiendo mucho a estos chicos!"
+        }
+      }
     },
     {
       "id": "19",
@@ -302,7 +410,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "Déjame decirte, necesitaba una mudanza EL MISMO DÍA, lo antes posible, contacté a Andy y su equipo llegó justo a tiempo. En 2 horas llegó y movió TODO 5 horas al norte con una sonrisa. El precio superó a todos los competidores. Muy rápidos y profesionales, definitivamente contraten a estos chicos, es lo mejor que pueden conseguir. ¡Gracias equipo!"
+        }
+      }
     },
     {
       "id": "20",
@@ -318,7 +432,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "Recientemente me mudé de Chicago al sur de Florida. Vi el anuncio de Rapid Panda Movers y leí algunas de las reseñas. Los comentarios me hicieron sentir lo suficientemente cómodo para reservar sus servicios. Cuando llegué al sur de Florida, tuve problemas con la empresa de mudanzas que transportaba mis cosas desde Chicago. Esto causó que mi mudanza se retrasara una semana. Rapid Panda Movers fue muy flexible y rápido en comunicarse y reprogramar varias veces mientras yo definía una nueva fecha de llegada de mis cosas. El día de la mudanza, Andy y su equipo llegaron a tiempo como prometieron y descargaron el camión rápidamente. El equipo fue profesional y manejó mis artículos con cuidado. Definitivamente los usaré para futuras mudanzas. Los recomiendo ampliamente."
+        }
+      }
     },
     {
       "id": "21",
@@ -334,7 +454,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "Recientemente me mudé de Ft. Lauderdale a Orlando. He tenido malas experiencias con mudanceros anteriores. Un amigo me recomendó Rapid Panda Movers ya que él también acababa de usar sus servicios. ¡Andy y su equipo son geniales! Son profesionales y muy eficientes. Andy siempre contestó su teléfono y respondió cualquier pregunta o inquietud que tuve. Los recomiendo totalmente y los usaré de nuevo para cualquier mudanza futura. ¡Ahora puedo decir que tuve una gran experiencia con mi mudanza!"
+        }
+      }
     },
     {
       "id": "22",
@@ -350,7 +476,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "Rapid Panda Movers coordinó mi mudanza en 2 días. Fueron confiables, respondieron rápidamente y fueron muy profesionales. ¡Recomiendo ampliamente a su equipo!"
+        }
+      }
     },
     {
       "id": "23",
@@ -366,7 +498,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "¡El servicio de Andy fue increíble!"
+        }
+      }
     },
     {
       "id": "24",
@@ -382,7 +520,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "Empresa honesta y confiable que hace un gran trabajo a un precio razonable. Altamente recomendada."
+        }
+      }
     },
     {
       "id": "25",
@@ -398,7 +542,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "Profesionales y confiables. Discutieron las necesidades y expectativas de la mudanza de nuestra familia. Todo se hizo bien."
+        }
+      }
     },
     {
       "id": "26",
@@ -414,7 +564,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "¡En serio los MEJORES mudanceros de TODOS los tiempos! Andy, Gonzalo y Jorge son increíbles. Fueron puntuales, profesionales, entraron y salieron súper rápido, muy cuidadosos con todas nuestras cosas, ¡y los chicos MÁS AMABLES además de todo! ¡Sus precios también son muy razonables! No busques más, ¡contrata a estos chicos hoy!"
+        }
+      }
     },
     {
       "id": "27",
@@ -430,7 +586,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "es",
+      "translations": {
+        "en": {
+          "text": "Great job by Andy and his 2 colleagues. Very grateful for their help. My house wasn't easy since it's on a small hill, but they provided the best service and a great attitude at all times. I recommend them 100%."
+        }
+      }
     },
     {
       "id": "28",
@@ -446,7 +608,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "¡Desearía poder dar más estrellas! Llegaron temprano, listos, corteses, con una hospitalidad sureña increíble, amables, y terminaron el trabajo. No sé si podría haber tenido una experiencia más fluida. Trataron mis pertenencias con mucho cuidado. Realmente aprecio que hayan llegado y dado lo mejor de sí. Reservé la noche anterior y después de recibir 8 No de otras empresas por estar llenas, ¡ustedes fueron mi primer Sí! Muy contenta de conocer su trabajo ahora."
+        }
+      }
     },
     {
       "id": "29",
@@ -462,7 +630,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "Agradezco enormemente toda la ayuda, estos chicos fueron maravillosos. Recomiendo esta empresa a todos los que necesiten buenos mudanceros."
+        }
+      }
     },
     {
       "id": "30",
@@ -478,7 +652,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "es",
+      "translations": {
+        "en": {
+          "text": "Excellent, the best"
+        }
+      }
     },
     {
       "id": "31",
@@ -494,7 +674,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "¡Gran servicio desde el momento en que llegan! Andy y su equipo hicieron un excelente trabajo encargándose de mi mudanza. Me mudé de un apartamento en un 3er piso y manejaron todo con cuidado. ¡Los recomiendo ampliamente si están buscando un servicio de mudanza confiable!\n\n** reseña honesta **"
+        }
+      }
     },
     {
       "id": "32",
@@ -510,7 +696,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "¡Gran servicio! ¡Andy y su equipo son muy buenos!"
+        }
+      }
     },
     {
       "id": "33",
@@ -526,7 +718,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "Nuestra mudanza fue más larga de lo usual, del sur de Florida al norte de Georgia, pero fue genial con Rapid Panda Movers. Nada se rompió ni se perdió, llegaron bien antes de tiempo tanto el día de carga como de descarga y esperaron pacientemente afuera hasta que estuvimos listos para dejarlos entrar. Fueron rápidos pero sin apurar las cosas. En general fue un gran servicio liderado por Andy."
+        }
+      }
     },
     {
       "id": "34",
@@ -542,7 +740,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "Rapid Panda Movers es sin duda la mejor empresa de mudanzas en Miami. De principio a fin, el equipo de Rapid Panda fue honesto, rápido y extremadamente cuidadoso con todas nuestras pertenencias. Nos ayudaron a mudarnos de nuestro apartamento a nuestro nuevo hogar y también nos asistieron con almacenar el resto de nuestras cosas. Recomiendo ampliamente a Rapid Panda Movers para cualquiera que necesite una empresa de mudanzas confiable y eficiente. ¡5 estrellas! ¡Habla con Andy!"
+        }
+      }
     },
     {
       "id": "35",
@@ -558,7 +762,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "¡La mudanza fue increíblemente fácil y económica! Un mudancero anterior me canceló un día antes de mi mudanza y cuando programé con Rapid Panda, vinieron al día siguiente y manejaron todo rápidamente. Verdaderamente una gran experiencia. ¡Gracias!"
+        }
+      }
     },
     {
       "id": "36",
@@ -574,7 +784,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "Increíble equipo de profesionales. Altamente recomendados."
+        }
+      }
     },
     {
       "id": "37",
@@ -590,7 +806,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "Llamé un viernes por la tarde y pudieron incluirme el sábado. Llegaron a tiempo y buen servicio al cliente."
+        }
+      }
     },
     {
       "id": "38",
@@ -606,7 +828,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "¡Quiero compartir con todos lo increíble que es este equipo! Es una publicación un poco tardía ya que quise tomarme el tiempo para compartir esta experiencia y escribirla. Planeamos nuestra mudanza con 2 meses de anticipación y reservamos una empresa de mudanzas que se suponía llegaría el día de mi mudanza a las 8am. Todas las cosas pequeñas estaban empacadas esperando a que los mudanceros empacaran y movieran las cosas grandes. Mi esposo se comunicó con la empresa que habíamos reservado, dijeron que iban en camino y esperamos, cada 30 minutos llamábamos y verificábamos, pero nunca llegaron hasta las 11. Rápidamente busqué en Google mudanceros disponibles en el código postal 33155 y apareció Rapid Panda. Andy contestó y escuchó pacientemente mi conversación como expliqué arriba. No esperaba que pudieran aceptar una solicitud de último momento, pero sorprendentemente Andy dijo: ¿Puede decirme qué cosas tiene en su lugar? Estamos aquí para ayudarle. Solo necesito 2 horas para coordinar al equipo y estarán en su ubicación a las 12. Debido a mi amarga experiencia esa mañana con el otro equipo, seguí verificando con Andy a intervalos y él fue tan amable de mantenerme informada. A la 1 llegaron los 2 hombres completamente funcionales. Esos dos son tan increíbles, fueron muy rápidos, muy detallistas y cumplieron todo lo que les pedí. ¡Finalmente salvaron mi día! ¡Ese día sentí que Andy era un ángel! Los mejores mudanceros que recomendaría, en quienes se puede confiar y que ayudan a los que lo necesitan."
+        }
+      }
     },
     {
       "id": "39",
@@ -622,7 +850,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "Si hubiera más estrellas se las daría a Andy y su equipo.\n¡Los mejores!"
+        }
+      }
     },
     {
       "id": "40",
@@ -638,7 +872,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "¡Acabo de tener una mudanza el miércoles, los chicos llegaron a tiempo y fueron muy eficientes!"
+        }
+      }
     },
     {
       "id": "41",
@@ -654,7 +894,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "Esta empresa fue, sin duda, los chicos MÁS HONESTOS que he conocido. Les envié el pago por Zelle dos veces sin darme cuenta y seguí con mi día. Más tarde ese día recibí una llamada de Andy para avisarme que había pagado doble y procedió a devolver el dinero extra. Ya no se ve este nivel de honestidad. ¡Definitivamente RAPID PANDA RECOMENDADO!"
+        }
+      }
     },
     {
       "id": "42",
@@ -670,7 +916,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "Recomiendo ampliamente a Rapid Panda para cualquiera que busque una experiencia de mudanza de calidad. Andy es un profesional y dirige un negocio muy organizado. He usado esta empresa más de una vez, y siempre son puntuales, ofrecen el servicio de la más alta calidad y son muy justos con sus precios. Los trabajadores de Andy tienen una calidad y experiencia que rara vez se encuentra en la industria de mudanzas. Andy y su equipo tratarán tu propiedad como si fuera la suya propia. ¡Absolutamente la mejor experiencia de mudanza!\nMike"
+        }
+      }
     },
     {
       "id": "43",
@@ -686,7 +938,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "Los dos mudanceros que me ayudaron fueron fenomenales. Ambos tomaron su trabajo muy en serio y manejaron todos mis artículos con cuidado, lo cual fue muy apreciado. Incluso después de todos los problemas con mi edificio de apartamentos, los mudanceros manejaron todo perfectamente y de manera oportuna. Verdaderamente agradecida por el trabajo y profesionalismo demostrado por el equipo. ¡Altamente recomendados!"
+        }
+      }
     },
     {
       "id": "44",
@@ -702,7 +960,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "¡Trabajo excepcional por el equipo de Rapid Panda! Andy, quien lidera el equipo, estuvo al tanto de la programación, fue muy servicial e informativo. Su equipo llegó temprano, todos fueron muy complacientes y educados. Seguiré usando Rapid Panda para cualquier mudanza futura, sin duda. ¡Gracias Andy y el equipo de Rapid Panda!"
+        }
+      }
     },
     {
       "id": "45",
@@ -718,7 +982,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "Mudanceros muy detallistas. Altamente recomendados."
+        }
+      }
     },
     {
       "id": "46",
@@ -734,7 +1004,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "Servicio rápido y eficiente y comunicación extremadamente genial. Totalmente confiables, ¡los recomiendo ampliamente!"
+        }
+      }
     },
     {
       "id": "47",
@@ -750,7 +1026,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "Tuve el placer de conocer a los amables caballeros de Rapid Panda para asistir con mi mudanza. ¡Fueron profesionales, organizados y ordenados! Andy y su equipo se aseguraron de que estuviera cómoda, me quedó poco por hacer para instalarme en mi nuevo lugar. Recomiendo ampliamente a RAPID PANDA para tu mudanza."
+        }
+      }
     },
     {
       "id": "48",
@@ -766,7 +1048,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "Estos chicos fueron fantásticos. Muy amables y serviciales. Su precio fue justo por la calidad del servicio. No te arrepentirás de contratarlos. Los recomiendo completamente."
+        }
+      }
     },
     {
       "id": "49",
@@ -782,7 +1070,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "Excelente servicio y equipo amable."
+        }
+      }
     },
     {
       "id": "50",
@@ -798,7 +1092,13 @@
         "zip": null
       },
       "services": [],
-      "route": null
+      "route": null,
+      "original_language": "en",
+      "translations": {
+        "es": {
+          "text": "Excelente servicio. Grandes chicos. Los usaré de nuevo. Recomiendo esta empresa."
+        }
+      }
     }
   ],
   "platforms": {

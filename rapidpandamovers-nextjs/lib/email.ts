@@ -1,4 +1,9 @@
 import nodemailer from 'nodemailer';
+import { render } from '@react-email/components';
+import QuoteRequestEmail from '@/emails/QuoteRequestEmail';
+import ReservationRequestEmail from '@/emails/ReservationRequestEmail';
+import ContactFormEmail from '@/emails/ContactFormEmail';
+import NewsletterSignupEmail from '@/emails/NewsletterSignupEmail';
 
 // Create reusable transporter
 const createTransporter = () => {
@@ -33,8 +38,9 @@ export async function sendEmail({ subject, html, replyTo }: EmailOptions) {
   return transporter.sendMail(mailOptions);
 }
 
-// Email templates
-export function formatQuoteEmail(data: {
+// Typed email sending functions using react-email templates
+
+export async function sendQuoteNotification(data: {
   firstName: string;
   lastName: string;
   email: string;
@@ -46,58 +52,15 @@ export function formatQuoteEmail(data: {
   services?: string[];
   details?: string;
 }) {
-  return `
-    <h2>New Quote Request</h2>
-    <table style="border-collapse: collapse; width: 100%; max-width: 600px;">
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Name</td>
-        <td style="padding: 8px; border: 1px solid #ddd;">${data.firstName} ${data.lastName}</td>
-      </tr>
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Email</td>
-        <td style="padding: 8px; border: 1px solid #ddd;"><a href="mailto:${data.email}">${data.email}</a></td>
-      </tr>
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Phone</td>
-        <td style="padding: 8px; border: 1px solid #ddd;"><a href="tel:${data.phone}">${data.phone}</a></td>
-      </tr>
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Moving From</td>
-        <td style="padding: 8px; border: 1px solid #ddd;">${data.movingFrom}</td>
-      </tr>
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Moving To</td>
-        <td style="padding: 8px; border: 1px solid #ddd;">${data.movingTo}</td>
-      </tr>
-      ${data.moveDate ? `
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Move Date</td>
-        <td style="padding: 8px; border: 1px solid #ddd;">${data.moveDate}</td>
-      </tr>
-      ` : ''}
-      ${data.homeSize ? `
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Home Size</td>
-        <td style="padding: 8px; border: 1px solid #ddd;">${data.homeSize}</td>
-      </tr>
-      ` : ''}
-      ${data.services && data.services.length > 0 ? `
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Services</td>
-        <td style="padding: 8px; border: 1px solid #ddd;">${data.services.join(', ')}</td>
-      </tr>
-      ` : ''}
-      ${data.details ? `
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Additional Details</td>
-        <td style="padding: 8px; border: 1px solid #ddd;">${data.details}</td>
-      </tr>
-      ` : ''}
-    </table>
-  `;
+  const html = await render(QuoteRequestEmail(data));
+  await sendEmail({
+    subject: `New Quote Request from ${data.firstName} ${data.lastName}`,
+    html,
+    replyTo: data.email,
+  });
 }
 
-export function formatReservationEmail(data: {
+export async function sendReservationNotification(data: {
   name: string;
   email: string;
   phone: string;
@@ -122,117 +85,32 @@ export function formatReservationEmail(data: {
   specialItems?: string;
   hearAbout?: string;
 }) {
-  const pickupFull = `${data.pickupAddress}${data.pickupApt ? ` ${data.pickupApt}` : ''}, ${data.pickupCity}, ${data.pickupState} ${data.pickupZip}`;
-  const dropoffFull = `${data.dropoffAddress}${data.dropoffApt ? ` ${data.dropoffApt}` : ''}, ${data.dropoffCity}, ${data.dropoffState} ${data.dropoffZip}`;
-
-  return `
-    <h2>New Reservation Request</h2>
-
-    <h3>Contact Information</h3>
-    <table style="border-collapse: collapse; width: 100%; max-width: 600px;">
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Name</td>
-        <td style="padding: 8px; border: 1px solid #ddd;">${data.name}</td>
-      </tr>
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Email</td>
-        <td style="padding: 8px; border: 1px solid #ddd;"><a href="mailto:${data.email}">${data.email}</a></td>
-      </tr>
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Phone</td>
-        <td style="padding: 8px; border: 1px solid #ddd;"><a href="tel:${data.phone}">${data.phone}</a></td>
-      </tr>
-      ${data.reference ? `
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Reference #</td>
-        <td style="padding: 8px; border: 1px solid #ddd;">${data.reference}</td>
-      </tr>
-      ` : ''}
-    </table>
-
-    <h3>Moving Details</h3>
-    <table style="border-collapse: collapse; width: 100%; max-width: 600px;">
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Pick-up Address</td>
-        <td style="padding: 8px; border: 1px solid #ddd;">${pickupFull}${data.pickupStorage ? ' (Storage Facility)' : ''}</td>
-      </tr>
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Drop-off Address</td>
-        <td style="padding: 8px; border: 1px solid #ddd;">${dropoffFull}${data.dropoffStorage ? ' (Storage Facility)' : ''}</td>
-      </tr>
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Move Date</td>
-        <td style="padding: 8px; border: 1px solid #ddd;">${data.moveDate}</td>
-      </tr>
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Preferred Time</td>
-        <td style="padding: 8px; border: 1px solid #ddd;">${data.moveTime}</td>
-      </tr>
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Move Size</td>
-        <td style="padding: 8px; border: 1px solid #ddd;">${data.moveSize}</td>
-      </tr>
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Packing Service</td>
-        <td style="padding: 8px; border: 1px solid #ddd;">${data.packing}</td>
-      </tr>
-      ${data.additionalServices && data.additionalServices.length > 0 ? `
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Additional Services</td>
-        <td style="padding: 8px; border: 1px solid #ddd;">${data.additionalServices.join(', ')}</td>
-      </tr>
-      ` : ''}
-      ${data.specialItems ? `
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Special Items/Notes</td>
-        <td style="padding: 8px; border: 1px solid #ddd;">${data.specialItems}</td>
-      </tr>
-      ` : ''}
-      ${data.hearAbout ? `
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">How They Found Us</td>
-        <td style="padding: 8px; border: 1px solid #ddd;">${data.hearAbout}</td>
-      </tr>
-      ` : ''}
-    </table>
-  `;
+  const html = await render(ReservationRequestEmail(data));
+  await sendEmail({
+    subject: `New Reservation: ${data.name} on ${data.moveDate}`,
+    html,
+    replyTo: data.email,
+  });
 }
 
-export function formatNewsletterEmail(data: { email: string }) {
-  return `
-    <h2>New Newsletter Subscription</h2>
-    <p>A new user has subscribed to the newsletter:</p>
-    <p><strong>Email:</strong> <a href="mailto:${data.email}">${data.email}</a></p>
-  `;
-}
-
-export function formatContactEmail(data: {
+export async function sendContactNotification(data: {
   name: string;
   email: string;
   phone?: string;
   message: string;
 }) {
-  return `
-    <h2>New Contact Form Submission</h2>
-    <table style="border-collapse: collapse; width: 100%; max-width: 600px;">
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Name</td>
-        <td style="padding: 8px; border: 1px solid #ddd;">${data.name}</td>
-      </tr>
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Email</td>
-        <td style="padding: 8px; border: 1px solid #ddd;"><a href="mailto:${data.email}">${data.email}</a></td>
-      </tr>
-      ${data.phone ? `
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Phone</td>
-        <td style="padding: 8px; border: 1px solid #ddd;"><a href="tel:${data.phone}">${data.phone}</a></td>
-      </tr>
-      ` : ''}
-      <tr>
-        <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Message</td>
-        <td style="padding: 8px; border: 1px solid #ddd;">${data.message.replace(/\n/g, '<br>')}</td>
-      </tr>
-    </table>
-  `;
+  const html = await render(ContactFormEmail(data));
+  await sendEmail({
+    subject: `Contact Form: ${data.name}`,
+    html,
+    replyTo: data.email,
+  });
+}
+
+export async function sendNewsletterNotification(data: { email: string }) {
+  const html = await render(NewsletterSignupEmail(data));
+  await sendEmail({
+    subject: 'New Newsletter Subscription',
+    html,
+  });
 }

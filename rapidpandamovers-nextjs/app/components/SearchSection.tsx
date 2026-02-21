@@ -2,7 +2,9 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { Search, MapPin, Truck, Navigation, X, FileText } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
+import { useMessages } from 'next-intl';
+import { H2 } from '@/app/components/Heading';
 import { getAllActiveCities, getAllActiveServices, allRoutes, allLocalRoutes, titleCase } from '@/lib/data';
 
 interface SearchResult {
@@ -27,10 +29,12 @@ interface SearchSectionProps {
 }
 
 export default function SearchSection({
-  placeholder = 'Search locations, services, routes, or blog posts...',
+  placeholder: placeholderProp,
   showBackground = true,
   posts = []
 }: SearchSectionProps) {
+  const { ui } = useMessages() as any;
+  const placeholder = placeholderProp ?? ui.search.defaultPlaceholder;
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isOpen, setIsOpen] = useState(false);
@@ -61,7 +65,7 @@ export default function SearchSection({
           type: 'city',
           name: `${city.name} Movers`,
           slug: `/${city.slug}-movers`,
-          description: `Moving services in ${city.name}`
+          description: ui.search.movingServicesIn.replace('{name}', city.name)
         });
       }
     });
@@ -92,7 +96,7 @@ export default function SearchSection({
           type: 'route',
           name: routeName,
           slug: `/${route.slug}-movers`,
-          description: `${route.distance_mi} miles`
+          description: ui.search.milesDistance.replace('{count}', String(route.distance_mi))
         });
       }
     });
@@ -239,7 +243,7 @@ export default function SearchSection({
                 )}
               </div>
               <div className="flex-shrink-0 ml-3">
-                <span className="text-xs text-gray-400 uppercase">{result.type}</span>
+                <span className="text-xs text-gray-500 uppercase">{result.type}</span>
               </div>
             </Link>
           ))}
@@ -256,11 +260,11 @@ export default function SearchSection({
     <section className="pt-20">
       <div className="container mx-auto">
         <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
-            Find Your <span className="text-orange-500">Moving Service</span>
-          </h2>
+          <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+            {ui.search.findTitle}
+          </H2>
           <p className="text-gray-600">
-            Search for locations, services, routes, or blog posts
+            {ui.search.findSubtitle}
           </p>
         </div>
         {content}

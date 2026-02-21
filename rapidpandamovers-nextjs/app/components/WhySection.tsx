@@ -1,9 +1,10 @@
 import { CheckCircle, LucideIcon, ArrowRight } from 'lucide-react'
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
 import { resolveIcon } from '@/lib/icons'
-import content from '@/data/content.json'
-
-const jsonDefaults = content.home.why_choose_us.benefits
+import { getMessages, getLocale } from 'next-intl/server'
+import { getTranslatedSlug } from '@/i18n/slug-map'
+import type { Locale } from '@/i18n/config'
+import { H2, H3 } from '@/app/components/Heading'
 
 interface Benefit {
   icon?: LucideIcon | string;
@@ -21,15 +22,9 @@ interface WhySectionProps {
   variant?: 'default' | 'detail' | 'left';
 }
 
-const defaultBenefits: Benefit[] = jsonDefaults.map(b => ({
-  icon: resolveIcon(b.icon),
-  title: b.title,
-  desc: b.desc,
-}))
-
 const bgColors = ['bg-orange-50', 'bg-gray-50']
 
-export default function WhySection({
+export default async function WhySection({
   title,
   subtitle,
   benefits: customBenefits,
@@ -37,6 +32,15 @@ export default function WhySection({
   ctaLink,
   variant = 'default',
 }: WhySectionProps = {}) {
+  const { content, ui } = (await getMessages()) as any
+  const locale = await getLocale() as Locale
+  const jsonDefaults = content.home.why_choose_us.benefits
+  const defaultBenefits: Benefit[] = jsonDefaults.map((b: any) => ({
+    icon: resolveIcon(b.icon),
+    title: b.title,
+    desc: b.desc,
+  }))
+
   // Convert string array or JSON objects to Benefit objects if needed
   const benefits: Benefit[] = customBenefits
     ? customBenefits.map(b => {
@@ -46,8 +50,8 @@ export default function WhySection({
       })
     : defaultBenefits;
 
-  const displayCtaText = ctaText || 'See Why We\'re Different';
-  const displayCtaLink = ctaLink ?? '/why-choose-us';
+  const displayCtaText = ctaText || ui.why.defaultCta;
+  const displayCtaLink = ctaLink ?? `/${getTranslatedSlug('why-choose-us', locale)}`;
 
   // Detail variant — colorful cards with icon, description, and checklist
   if (variant === 'detail') {
@@ -55,9 +59,9 @@ export default function WhySection({
       <section className="pt-20">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              {title ? title : 'The Rapid Panda Difference'}
-            </h2>
+            <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+              {title ? title : ui.why.differenceTitle}
+            </H2>
             {subtitle && (
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 {subtitle}
@@ -73,7 +77,7 @@ export default function WhySection({
                   <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6">
                     <IconComponent className="w-8 h-8 text-orange-500" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-3">{benefit.title}</h3>
+                  <H3 className="text-xl font-bold text-gray-800 mb-3">{benefit.title}</H3>
                   {benefit.desc && <p className="text-gray-600 mb-4">{benefit.desc}</p>}
                   {benefit.details && benefit.details.length > 0 && (
                     <ul className="space-y-2">
@@ -101,9 +105,9 @@ export default function WhySection({
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
-                {title ? title : 'Why Choose Rapid Panda Movers?'}
-              </h2>
+              <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+                {title ? title : ui.why.defaultTitle}
+              </H2>
               {subtitle && (
                 <p className="text-lg text-gray-600">
                   {subtitle}
@@ -113,7 +117,7 @@ export default function WhySection({
             {displayCtaLink && (
               <Link
                 href={displayCtaLink}
-                className="inline-flex items-center text-orange-500 hover:text-orange-600 font-semibold mt-4 md:mt-0"
+                className="inline-flex items-center text-orange-700 hover:text-orange-800 font-semibold mt-4 md:mt-0"
               >
                 {displayCtaText}
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -129,7 +133,7 @@ export default function WhySection({
                   <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6">
                     <IconComponent className="w-8 h-8 text-orange-500" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-3">{benefit.title}</h3>
+                  <H3 className="text-xl font-bold text-gray-800 mb-3">{benefit.title}</H3>
                   {benefit.desc && <p className="text-gray-600">{benefit.desc}</p>}
                 </div>
               )
@@ -145,9 +149,9 @@ export default function WhySection({
     <section className="pt-20">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            {title ? title : 'Why Choose Rapid Panda Movers?'}
-          </h2>
+          <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            {title ? title : ui.why.defaultTitle}
+          </H2>
           {subtitle && (
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               {subtitle}
@@ -163,7 +167,7 @@ export default function WhySection({
                 <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6">
                   <IconComponent className="w-8 h-8 text-orange-500" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-3">{benefit.title}</h3>
+                <H3 className="text-xl font-bold text-gray-800 mb-3">{benefit.title}</H3>
                 {benefit.desc && <p className="text-gray-600">{benefit.desc}</p>}
               </div>
             )
@@ -172,7 +176,7 @@ export default function WhySection({
 
         {displayCtaLink && (
           <div className="text-center mt-10">
-            <Link href={displayCtaLink} className="inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+            <Link href={displayCtaLink} className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
               {displayCtaText}
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>

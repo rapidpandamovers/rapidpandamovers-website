@@ -7,13 +7,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "email:dev": "email dev --dir emails"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@react-email/components": "^1.0.8",
     "@tailwindcss/postcss": "^4.1.12",
     "@types/node": "^24.3.0",
     "@types/react": "^19.1.10",
@@ -24,12 +26,15 @@
     "jspdf": "^4.1.0",
     "lucide-react": "^0.540.0",
     "next": "^15.5.0",
+    "next-intl": "^4.8.3",
     "nodemailer": "^7.0.13",
     "playwright": "^1.58.1",
     "postcss": "^8.5.6",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "typescript": "^5.9.2"
+    "react-email": "^5.2.8",
+    "typescript": "^5.9.2",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@types/nodemailer": "^7.0.9"

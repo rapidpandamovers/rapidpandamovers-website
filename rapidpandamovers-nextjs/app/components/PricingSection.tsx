@@ -1,5 +1,9 @@
 import { CheckCircle } from 'lucide-react'
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
+import { getMessages, getLocale } from 'next-intl/server'
+import { H2, H3 } from '@/app/components/Heading'
+import { getTranslatedSlug } from '@/i18n/slug-map'
+import type { Locale } from '@/i18n/config'
 
 interface HouseSize {
   min_cost: number;
@@ -25,38 +29,42 @@ interface PricingSectionProps {
   destinationZip?: string;
 }
 
-export default function PricingSection({ houseSizes, originCity, originZip, destinationCity, destinationZip }: PricingSectionProps) {
+export default async function PricingSection({ houseSizes, originCity, originZip, destinationCity, destinationZip }: PricingSectionProps) {
+  const { ui } = (await getMessages()) as any
+  const locale = await getLocale() as Locale
+  const reservationsSlug = getTranslatedSlug('reservations', locale)
+  const cats = ui.pricing.categories
   const baseCategories = [
-    { 
+    {
       key: '1_bedroom',
-      title: '1 Room', 
-      sqft: '100-800 sq ft',
-      description: 'Studios or small to medium apartments.'
+      title: cats.oneRoom.title,
+      sqft: cats.oneRoom.size,
+      description: cats.oneRoom.desc
     },
-    { 
+    {
       key: '2_bedroom',
-      title: '2 Room', 
-      sqft: '800-1200 sq ft',
-      description: 'Small homes and large apartments.',
+      title: cats.twoRoom.title,
+      sqft: cats.twoRoom.size,
+      description: cats.twoRoom.desc,
       popular: true
     },
-    { 
+    {
       key: '3_bedroom',
-      title: '3 Room', 
-      sqft: '1000-1500 sq ft',
-      description: 'Medium homes and small offices.'
+      title: cats.threeRoom.title,
+      sqft: cats.threeRoom.size,
+      description: cats.threeRoom.desc
     },
-    { 
+    {
       key: '4_bedroom',
-      title: '4 Room', 
-      sqft: '1500-2000 sq ft',
-      description: 'Large homes and medium offices.'
+      title: cats.fourRoom.title,
+      sqft: cats.fourRoom.size,
+      description: cats.fourRoom.desc
     },
-    { 
+    {
       key: '4plus_bedroom',
-      title: '4+ Room', 
-      sqft: '2000+ sq ft',
-      description: 'Extra large homes or large offices.'
+      title: cats.fourPlusRoom.title,
+      sqft: cats.fourPlusRoom.size,
+      description: cats.fourPlusRoom.desc
     }
   ];
 
@@ -64,9 +72,9 @@ export default function PricingSection({ houseSizes, originCity, originZip, dest
     const sizeData = houseSizes?.[category.key as keyof typeof houseSizes];
     
     if (sizeData) {
-      const hoursDisplay = sizeData.min_hours === sizeData.max_hours 
-        ? `${sizeData.min_hours} hours`
-        : `${sizeData.min_hours}-${sizeData.max_hours} hours`;
+      const hoursDisplay = sizeData.min_hours === sizeData.max_hours
+        ? `${sizeData.min_hours} ${sizeData.min_hours === 1 ? ui.pricing.features.hour : ui.pricing.features.hours}`
+        : `${sizeData.min_hours}-${sizeData.max_hours} ${ui.pricing.features.hours}`;
       
       return {
         ...category,
@@ -75,9 +83,9 @@ export default function PricingSection({ houseSizes, originCity, originZip, dest
         maxCost: sizeData.max_cost,
         time: hoursDisplay,
         features: [
-          `${sizeData.trucks} ${sizeData.trucks === 1 ? 'truck' : 'trucks'}`,
-          `${sizeData.movers} ${sizeData.movers === 1 ? 'mover' : 'movers'}`,
-          `${sizeData.min_hours}-${sizeData.max_hours} hours`
+          `${sizeData.trucks} ${sizeData.trucks === 1 ? ui.pricing.features.truck : ui.pricing.features.trucks}`,
+          `${sizeData.movers} ${sizeData.movers === 1 ? ui.pricing.features.mover : ui.pricing.features.movers}`,
+          `${sizeData.min_hours}-${sizeData.max_hours} ${ui.pricing.features.hours}`
         ]
       };
     }
@@ -86,15 +94,15 @@ export default function PricingSection({ houseSizes, originCity, originZip, dest
     return {
       ...category,
       cost: undefined,
-      time: category.title === '1 Room' ? '2-4 hours' : 
-            category.title === '2 Room' ? '3-5 hours' :
-            category.title === '3 Room' ? '5-7 hours' :
-            category.title === '4 Room' ? '4-5 hours' : '5+ hours',
-      features: category.title === '1 Room' ? ['1 truck', '2 movers', '1-2 loading', '1-2 unloading'] :
-                category.title === '2 Room' ? ['1 truck', '2 movers', '2-3 loading', '1-2 unloading'] :
-                category.title === '3 Room' ? ['1 truck', '3 movers', '3-4 loading', '2-3 unloading'] :
-                category.title === '4 Room' ? ['1 truck', '4 movers', '3-4 loading', '2-3 unloading'] :
-                ['1+ truck', '4+ movers', '5+ loading', '4+ unloading']
+      time: category.key === '1_bedroom' ? '2-4 hours' :
+            category.key === '2_bedroom' ? '3-5 hours' :
+            category.key === '3_bedroom' ? '5-7 hours' :
+            category.key === '4_bedroom' ? '4-5 hours' : '5+ hours',
+      features: category.key === '1_bedroom' ? [`1 ${ui.pricing.features.truck}`, `2 ${ui.pricing.features.movers}`, `1-2 ${ui.pricing.features.loading}`, `1-2 ${ui.pricing.features.unloading}`] :
+                category.key === '2_bedroom' ? [`1 ${ui.pricing.features.truck}`, `2 ${ui.pricing.features.movers}`, `2-3 ${ui.pricing.features.loading}`, `1-2 ${ui.pricing.features.unloading}`] :
+                category.key === '3_bedroom' ? [`1 ${ui.pricing.features.truck}`, `3 ${ui.pricing.features.movers}`, `3-4 ${ui.pricing.features.loading}`, `2-3 ${ui.pricing.features.unloading}`] :
+                category.key === '4_bedroom' ? [`1 ${ui.pricing.features.truck}`, `4 ${ui.pricing.features.movers}`, `3-4 ${ui.pricing.features.loading}`, `2-3 ${ui.pricing.features.unloading}`] :
+                [`1+ ${ui.pricing.features.truck}`, `4+ ${ui.pricing.features.movers}`, `5+ ${ui.pricing.features.loading}`, `4+ ${ui.pricing.features.unloading}`]
     };
   });
 
@@ -102,9 +110,9 @@ export default function PricingSection({ houseSizes, originCity, originZip, dest
     <section className="pt-20 bg-white">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Estimated Moving Costs
-          </h2>
+          <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            {ui.pricing.title}
+          </H2>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
@@ -112,20 +120,28 @@ export default function PricingSection({ houseSizes, originCity, originZip, dest
             <div key={index} className={`bg-white border rounded-lg p-6 text-center hover:shadow-lg transition-shadow relative ${category.popular ? 'border-orange-500 shadow-lg' : 'border-gray-200'}`}>
               {category.popular && (
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">Most Popular</span>
+                  <span className="bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-medium">{ui.pricing.mostPopular}</span>
                 </div>
               )}
-              <h3 className="text-2xl font-bold text-gray-800 mb-2">{category.title}</h3>
+              <H3 className="text-2xl font-bold text-gray-800 mb-2">
+                {(() => {
+                  const parts = category.title.split(' ');
+                  return <>
+                    <span className="block text-3xl">{parts[0]}</span>
+                    {parts.slice(1).join(' ')}
+                  </>;
+                })()}
+              </H3>
               <p className="text-gray-500 text-sm mb-2">{category.sqft}</p>
               {category.cost && (
                 <div className="mb-3">
-                  <p className="text-2xl font-bold text-orange-500">${category.cost.toLocaleString(undefined, { maximumFractionDigits: 2 })}</p>
+                  <p className="text-2xl font-bold text-orange-600">${category.cost.toLocaleString(undefined, { maximumFractionDigits: 2 })}</p>
                   {category.minCost !== category.maxCost && (
                     <p className="text-xs text-gray-500 mt-1">${category.minCost.toLocaleString(undefined, { maximumFractionDigits: 2 })} - ${category.maxCost.toLocaleString(undefined, { maximumFractionDigits: 2 })}</p>
                   )}
                 </div>
               )}
-              <p className="text-orange-500 font-semibold mb-3">{category.time}</p>
+              <p className="text-orange-700 font-semibold mb-3">{category.time}</p>
               <p className="text-gray-600 mb-4 text-sm">{category.description}</p>
               <ul className="space-y-2 mb-6">
                 {category.features.map((feature, i) => (
@@ -136,16 +152,16 @@ export default function PricingSection({ houseSizes, originCity, originZip, dest
                 ))}
               </ul>
               <Link
-                href={`/reservations?${new URLSearchParams({
+                href={`/${reservationsSlug}?${new URLSearchParams({
                   ...(originCity && { originCity }),
                   ...(originZip && { originZip }),
                   ...(destinationCity && { destinationCity }),
                   ...(destinationZip && { destinationZip }),
                   size: category.key
                 }).toString()}`}
-                className={`block w-full py-3 px-4 rounded-lg font-semibold transition-colors text-center ${category.popular ? 'bg-orange-500 hover:bg-orange-600 text-white' : 'bg-gray-100 hover:bg-gray-200 text-gray-800'}`}
+                className={`block w-full py-3 px-4 rounded-lg font-semibold transition-colors text-center ${category.popular ? 'bg-orange-600 hover:bg-orange-700 text-white' : 'bg-gray-100 hover:bg-gray-200 text-gray-800'}`}
               >
-                Reserve Now
+                {ui.buttons.reserveNow}
               </Link>
             </div>
           ))}

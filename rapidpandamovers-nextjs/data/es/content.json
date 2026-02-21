@@ -1,0 +1,1590 @@
+{
+  "site": {
+    "title": "Rapid Panda Movers",
+    "description": "Servicios profesionales de mudanza en Miami - Soluciones de mudanza economicas, confiables y eficientes",
+    "phone": "786-585-4269",
+    "email": "info@rapidpandamovers.com",
+    "address": "7001 North Waterway Dr #107 Miami, FL 33155",
+    "hours": [
+      {
+        "label": "Abierto todos los dias",
+        "time": "8:00 AM – 8:00 PM"
+      },
+      {
+        "label": "Fuera de horario y emergencias",
+        "time": "Disponible bajo solicitud"
+      }
+    ],
+    "header": {
+      "phoneSubtext": "Todos los dias: 8AM - 8PM",
+      "quoteSubtext": "en 30 minutos o menos"
+    }
+  },
+  "defaults": {
+    "process": {
+      "title": "Nuestro proceso de mudanza",
+      "subtitle": "Un proceso simple y sin estres disenado para hacer su mudanza lo mas facil posible",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Solicite una cotizacion",
+          "description": "Contactenos para una estimacion gratuita y sin compromiso basada en sus necesidades de mudanza."
+        },
+        {
+          "step": "2",
+          "title": "Programe su mudanza",
+          "description": "Elija la fecha y hora que mejor le convenga. Ofrecemos horarios flexibles."
+        },
+        {
+          "step": "3",
+          "title": "Empacamos y cargamos",
+          "description": "Nuestro equipo profesional empaca y carga cuidadosamente sus pertenencias."
+        },
+        {
+          "step": "4",
+          "title": "Entrega segura",
+          "description": "Transportamos y descargamos todo en su nueva ubicacion con cuidado."
+        }
+      ]
+    },
+    "problems": {
+      "title": "Desafios comunes de mudanza",
+      "subtitle": "Mudarse no tiene que ser estresante. Estos son los problemas que resolvemos por usted.",
+      "items": [
+        {
+          "title": "Planificacion estresante",
+          "description": "Coordinar la logistica, los tiempos y el empaque puede ser abrumador y consumir mucho tiempo."
+        },
+        {
+          "title": "Riesgo de danos",
+          "description": "Las mudanzas por cuenta propia frecuentemente resultan en muebles danados, articulos rotos y reparaciones costosas."
+        },
+        {
+          "title": "Costos ocultos",
+          "description": "Muchas empresas de mudanza agregan cargos sorpresa despues de comenzar el trabajo, arruinando su presupuesto."
+        },
+        {
+          "title": "Servicio poco confiable",
+          "description": "Ausencias, llegadas tardes y equipos poco profesionales causan dolores de cabeza innecesarios."
+        }
+      ]
+    },
+    "solutions": {
+      "title": "Como los resolvemos",
+      "subtitle": "Nuestros servicios profesionales de mudanza estan disenados para eliminar el estres y entregar resultados.",
+      "items": [
+        {
+          "title": "Nos encargamos de todo",
+          "description": "Desde la planificacion hasta la entrega, nuestro equipo experimentado gestiona cada detalle de su mudanza."
+        },
+        {
+          "title": "Cuidado profesional",
+          "description": "Mudanceros con licencia, equipo adecuado y seguro completo protegen sus pertenencias."
+        },
+        {
+          "title": "Precios transparentes",
+          "description": "Obtenga su cotizacion completa por adelantado sin cargos ocultos ni sorpresas."
+        },
+        {
+          "title": "Servicio confiable",
+          "description": "Llegadas puntuales, equipos profesionales y satisfaccion garantizada en todo momento."
+        }
+      ]
+    },
+    "included": {
+      "title": "Que esta incluido",
+      "items": [
+        "Materiales de empaque profesionales",
+        "Carga y descarga cuidadosa",
+        "Transporte seguro",
+        "Proteccion de muebles",
+        "Mudanceros con licencia y seguro",
+        "Personal con verificacion de antecedentes",
+        "Llegada puntual garantizada",
+        "Precios transparentes"
+      ]
+    },
+    "resources": {
+      "title": "Recursos utiles",
+      "subtitle": "Todo lo que necesita para planificar su mudanza",
+      "items": [
+        {
+          "title": "Preguntas frecuentes",
+          "description": "Respuestas a preguntas comunes sobre nuestros servicios de mudanza",
+          "href": "/faq",
+          "icon": "HelpCircle"
+        },
+        {
+          "title": "Blog",
+          "description": "Consejos de mudanza, guias e informacion del sector",
+          "href": "/blog",
+          "icon": "BookOpen"
+        },
+        {
+          "title": "Consejos de mudanza",
+          "description": "Consejos de expertos para una experiencia de mudanza sin problemas",
+          "href": "/moving-tips",
+          "icon": "Lightbulb"
+        },
+        {
+          "title": "Lista de verificacion",
+          "description": "Guia paso a paso para organizar su mudanza",
+          "href": "/moving-checklist",
+          "icon": "CheckSquare"
+        },
+        {
+          "title": "Glosario de mudanza",
+          "description": "Definiciones de terminos de la industria de mudanzas",
+          "href": "/moving-glossary",
+          "icon": "BookMarked"
+        },
+        {
+          "title": "Tarifas de mudanza",
+          "description": "Precios transparentes para todos nuestros servicios",
+          "href": "/moving-rates",
+          "icon": "DollarSign"
+        },
+        {
+          "title": "Resenas de clientes",
+          "description": "Vea lo que nuestros clientes dicen de nosotros",
+          "href": "/reviews",
+          "icon": "Star"
+        }
+      ]
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Empresa de mudanzas familiar #1 en Miami",
+      "description": "Servicios de mudanza y empaque a bajo costo",
+      "cta": "Comience con una cotizacion gratuita",
+      "image_url": ""
+    },
+    "why_choose_us": {
+      "title": "Por que elegir Rapid Panda Movers?",
+      "benefits": [
+        {
+          "icon": "Shield",
+          "title": "Con licencia y seguro",
+          "desc": "Licencia completa y cobertura de seguro integral para su tranquilidad."
+        },
+        {
+          "icon": "Users",
+          "title": "Equipo experimentado",
+          "desc": "Mudanceros profesionales con anos de experiencia en mudanzas locales y de larga distancia."
+        },
+        {
+          "icon": "DollarSign",
+          "title": "Precios transparentes",
+          "desc": "Sin cargos ocultos ni sorpresas. Precios honestos y por adelantado siempre."
+        },
+        {
+          "icon": "Clock",
+          "title": "Horarios confiables",
+          "desc": "Servicio puntual con opciones de horarios flexibles para adaptarse a su estilo de vida."
+        },
+        {
+          "icon": "Phone",
+          "title": "Atencion al cliente 24/7",
+          "desc": "Servicio al cliente las 24 horas para responder preguntas y brindar asistencia."
+        },
+        {
+          "icon": "CheckCircle",
+          "title": "Satisfaccion garantizada",
+          "desc": "Garantia de satisfaccion del 100% en cada mudanza. Su felicidad es nuestra prioridad."
+        }
+      ]
+    },
+    "service_areas": {
+      "title": "Servimos al condado de Miami-Dade County",
+      "description": "Servicios profesionales de mudanza en todo Miami y areas circundantes",
+      "areas": [
+        "Miami",
+        "Coral Gables",
+        "Miami Beach",
+        "Hialeah",
+        "Doral",
+        "Aventura",
+        "Kendall",
+        "Homestead",
+        "Palmetto Bay",
+        "Pinecrest",
+        "South Beach",
+        "Little Havana"
+      ]
+    },
+    "reviewSection": {
+      "title": "Lo que dicen nuestros clientes"
+    },
+    "blogSection": {
+      "title": "Consejos e informacion de mudanza",
+      "viewMoreButtonText": "Ver todos los articulos"
+    }
+  },
+  "services": {
+    "title": "Nuestros servicios de mudanza",
+    "description": "Soluciones de mudanza integrales para cada necesidad",
+    "content": "En Rapid Panda Movers, entendemos que cada mudanza es unica. Ya sea que se mude al otro lado de la ciudad o al otro lado del pais, nuestra gama completa de servicios de mudanza esta disenada para satisfacer sus necesidades especificas. Nuestro equipo experimentado se encarga de todo, desde el empaque y carga cuidadosos hasta el transporte seguro y desempaque, asegurando que sus pertenencias lleguen a su nuevo hogar en perfectas condiciones.",
+    "data_source": "services.json",
+    "hero": {
+      "title": "Servicios completos de mudanza en Miami",
+      "description": "Desde mudanzas locales hasta reubicaciones de larga distancia, empaque y almacenamiento - ofrecemos servicios integrales de mudanza disenados para hacer su reubicacion sin estres y asequible.",
+      "cta": "Obtenga su cotizacion gratuita"
+    },
+    "quote": {
+      "title": "Listo para comenzar?",
+      "subtitle": "Contactenos hoy para una cotizacion gratuita y descubra lo asequible que puede ser una mudanza profesional."
+    },
+    "locationQuote": {
+      "title": "Listo para comenzar?",
+      "subtitle": "Contactenos hoy para una cotizacion gratuita para su mudanza en {name}."
+    }
+  },
+  "locations": {
+    "title": "Nuestras areas de servicio",
+    "description": "Servicios profesionales de mudanza en todo el condado de Miami-Dade County",
+    "content": "Rapid Panda Movers sirve con orgullo a toda el area del condado de Miami-Dade County, desde las vibrantes calles del centro de Miami hasta los suburbios familiares de Kendall y Homestead. Nuestra experiencia local significa que conocemos las mejores rutas, regulaciones de edificios y situaciones de estacionamiento en toda la region, asegurando que su mudanza sea fluida sin importar a donde se dirija.",
+    "hero": {
+      "cta": "Obtenga su cotizacion gratuita"
+    },
+    "overviewSection": {
+      "title": "Nuestras areas de servicio"
+    },
+    "quote": {
+      "title": "Listo para mudarse en Miami-Dade?",
+      "subtitle": "Contactenos hoy para su cotizacion de mudanza gratuita. Servimos todas las areas del condado de Miami-Dade County."
+    }
+  },
+  "about": {
+    "title": "Acerca de Rapid Panda Movers",
+    "description": "Su socio de mudanza de confianza en Miami",
+    "hero": {
+      "title": "Acerca de Rapid Panda Moving",
+      "description": "Bienvenido a Rapid Panda Movers, donde cada mudanza que realizamos esta guiada por un compromiso con la excelencia y una dedicacion a servir a nuestra comunidad.",
+      "cta": "Obtenga su cotizacion gratuita"
+    },
+    "locationSection": {
+      "title": "Areas que servimos",
+      "description": "Rapid Panda Movers sirve con orgullo a todo el condado de Miami-Dade County y mas alla"
+    },
+    "quote": {
+      "title": "Listo para experimentar la diferencia Rapid Panda?",
+      "subtitle": "Contactenos hoy para conocer mas sobre como podemos hacer su proxima mudanza facil y sin estres."
+    },
+    "story": {
+      "title": "Nuestra historia",
+      "paragraphs": [
+        "Rapid Panda Movers comenzo como un sueno familiar de crear una empresa de mudanzas que realmente ponga a los clientes primero. Lo que empezo como una pequena operacion ha crecido hasta convertirse en uno de los servicios de mudanza mas confiables de Miami.",
+        "Hoy, estamos orgullosos de haber ayudado a miles de familias y empresas a realizar sus mudanzas con facilidad. Nuestro equipo ha crecido, pero nuestro compromiso con el servicio personalizado sigue siendo el mismo."
+      ]
+    },
+    "mission": {
+      "title": "Nuestra mision",
+      "content": "Proporcionar servicios de mudanza excepcionales que superen las expectativas de nuestros clientes mientras mantenemos los mas altos estandares de profesionalismo, confiabilidad y cuidado."
+    },
+    "summary": [
+      "En Rapid Panda Movers, entendemos que mudarse es mas que solo transportar pertenencias de un lugar a otro. Se trata de ayudar a familias y empresas a hacer la transicion a nuevos capitulos de sus vidas con confianza y tranquilidad.",
+      "Con anos de experiencia sirviendo a la comunidad de Miami-Dade, hemos construido nuestra reputacion sobre la confiabilidad, el profesionalismo y un servicio al cliente excepcional."
+    ],
+    "values": [
+      {
+        "title": "Integridad",
+        "description": "Integridad en cada interaccion"
+      },
+      {
+        "title": "Compromiso",
+        "description": "Compromiso con la excelencia"
+      },
+      {
+        "title": "Respeto",
+        "description": "Respeto por sus pertenencias"
+      },
+      {
+        "title": "Transparencia",
+        "description": "Transparencia en los precios"
+      }
+    ],
+    "team": {
+      "title": "Nuestro equipo",
+      "description": "Profesionales experimentados dedicados a su mudanza",
+      "qualities": [
+        "Mudanceros con licencia y seguro",
+        "Empleados con verificacion de antecedentes",
+        "Capacitacion extensa en tecnicas de mudanza",
+        "Enfocados en el servicio al cliente",
+        "Experiencia local en Miami"
+      ]
+    }
+  },
+  "rates": {
+    "title": "Tarifas de mudanza transparentes",
+    "description": "Precios justos y por adelantado sin cargos ocultos",
+    "hero": {
+      "title": "Tarifas de mudanza transparentes",
+      "description": "Precios justos y por adelantado sin cargos ocultos",
+      "cta": "Comience con una cotizacion gratuita"
+    },
+    "pricing_structure": {
+      "local_moving": {
+        "title": "Tarifas de mudanza local",
+        "description": "Tarifas por hora para mudanzas locales dentro del condado de Miami-Dade County",
+        "rates": [
+          {
+            "service": "2 mudanceros + camion",
+            "rate": "$95/hora",
+            "description": "Perfecto para mudanzas de estudios y apartamentos de 1 habitacion"
+          },
+          {
+            "service": "3 mudanceros + camion",
+            "rate": "$125/hora",
+            "description": "Ideal para casas de 2-3 habitaciones"
+          },
+          {
+            "service": "4 mudanceros + camion",
+            "rate": "$155/hora",
+            "description": "Mejor para casas grandes y oficinas"
+          }
+        ]
+      },
+      "packing_services": {
+        "title": "Servicios de empaque",
+        "rates": [
+          {
+            "service": "Mano de obra de empaque",
+            "rate": "$35/hora",
+            "description": "Empaque profesional por nuestro equipo experimentado"
+          },
+          {
+            "service": "Materiales de empaque",
+            "rate": "Incluidos",
+            "description": "Cajas de alta calidad, cinta y materiales de proteccion"
+          }
+        ]
+      }
+    },
+    "whats_included": [
+      "Mudanceros profesionales y equipo",
+      "Desarmado y armado de muebles",
+      "Carga y descarga",
+      "Transporte y combustible",
+      "Cobertura basica de responsabilidad",
+      "Sin cargos ocultos ni sorpresas"
+    ],
+    "additional_services": [
+      {
+        "service": "Carga por escaleras",
+        "rate": "$25 por tramo",
+        "description": "Para mudanzas que involucran escaleras"
+      },
+      {
+        "service": "Acarreo largo",
+        "rate": "$25 por cada 75 pies",
+        "description": "Cuando el camion no puede estacionarse cerca del edificio"
+      },
+      {
+        "service": "Cargo por ascensor",
+        "rate": "$25 por ascensor",
+        "description": "Para edificios de gran altura"
+      }
+    ],
+    "additionalServicesSection": {
+      "title": "Servicios adicionales",
+      "subtitle": "Servicios opcionales disponibles para sus necesidades especificas de mudanza"
+    },
+    "includedSection": {
+      "title": "Que incluye su mudanza",
+      "subtitle": "Todo lo que necesita para una mudanza exitosa, incluido en nuestros precios transparentes"
+    },
+    "resourceSection": {
+      "title": "Mas recursos de mudanza",
+      "subtitle": "Explore nuestras guias y servicios completos para una mudanza exitosa"
+    },
+    "quote": {
+      "title": "Listo para obtener su cotizacion gratuita?",
+      "subtitle": "Contactenos hoy para una estimacion detallada y sin compromiso para su mudanza."
+    }
+  },
+  "reviews": {
+    "title": "Lo que dicen nuestros clientes",
+    "description": "Resenas reales de clientes satisfechos",
+    "stats": {
+      "total_moves": "1000+",
+      "customer_satisfaction": "98%",
+      "years_experience": "5+",
+      "average_rating": 4.7,
+      "total_reviews": 56,
+      "five_star_count": 53,
+      "four_star_count": 1,
+      "three_star_count": 0,
+      "two_star_count": 0,
+      "one_star_count": 2
+    },
+    "platforms": {
+      "google": {
+        "name": "Google",
+        "icon": "google",
+        "url": "https://www.google.com/maps/place/Rapid+Panda+Movers",
+        "rating": 4.8,
+        "reviewCount": 51
+      },
+      "yelp": {
+        "name": "Yelp",
+        "icon": "yelp",
+        "url": "https://www.yelp.com/biz/rapid-panda-movers-miami",
+        "rating": 4.2,
+        "reviewCount": 5
+      },
+      "bbb": {
+        "name": "BBB",
+        "icon": "bbb",
+        "url": "https://www.bbb.org/us/fl/miami/profile/moving-companies/rapid-panda-movers-llc-0633-92024179",
+        "rating": "A+",
+        "reviewCount": 0
+      }
+    },
+    "hero": {
+      "cta": "Obtenga su cotizacion gratuita"
+    },
+    "quote": {
+      "title": "Unase a nuestros clientes satisfechos",
+      "subtitle": "Experimente la diferencia Rapid Panda. Obtenga su cotizacion gratuita hoy y descubra por que Miami nos confia sus mudanzas."
+    }
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "description": "Preguntas comunes sobre nuestros servicios de mudanza",
+    "questions": [
+      {
+        "question": "Cuanto cuesta una mudanza local?",
+        "answer": "Nuestras mudanzas locales se cobran por hora segun la cantidad de mudanceros y el tamano del camion necesario. Proporcionamos estimaciones gratuitas y sin compromiso para que conozca el costo por adelantado sin cargos ocultos.",
+        "link": "/moving-rates"
+      },
+      {
+        "question": "Con cuanta anticipacion debo reservar mi mudanza?",
+        "answer": "Recomendamos reservar con al menos 2-3 semanas de anticipacion, especialmente durante las temporadas altas de mudanza (meses de verano). Sin embargo, a menudo podemos acomodar mudanzas del mismo dia o del dia siguiente segun la disponibilidad.",
+        "link": "/reservations"
+      },
+      {
+        "question": "Ofrecen materiales y servicios de empaque?",
+        "answer": "Si! Ofrecemos servicios completos de empaque y proporcionamos todos los materiales necesarios, incluyendo cajas, cinta, plastico de burbujas y acolchado protector. El costo de los materiales esta incluido en nuestras tarifas de servicio de empaque.",
+        "link": "/packing-services"
+      },
+      {
+        "question": "Tienen licencia y seguro?",
+        "answer": "Absolutamente. Rapid Panda Movers tiene licencia completa y seguro. Contamos con seguro de responsabilidad integral para proteger sus pertenencias durante la mudanza.",
+        "link": "/about-us"
+      },
+      {
+        "question": "Que pasa si algo se dana durante la mudanza?",
+        "answer": "Aunque tomamos todas las precauciones para prevenir danos, si algo se dana, tenemos un proceso de reclamos claro. Estamos completamente asegurados y trabajaremos con usted para resolver cualquier problema de manera rapida y justa.",
+        "link": "/contact-us"
+      },
+      {
+        "question": "Ofrecen servicios de almacenamiento?",
+        "answer": "Si, ofrecemos soluciones de almacenamiento a corto y largo plazo. Podemos ayudar a organizar almacenamiento seguro y transporte hacia y desde unidades de almacenamiento.",
+        "link": "/storage-solutions"
+      },
+      {
+        "question": "Pueden mover articulos especiales como pianos o cajas fuertes?",
+        "answer": "Si, tenemos experiencia moviendo articulos especiales incluyendo pianos, cajas fuertes para armas, obras de arte, antiguedades y otras posesiones valiosas. Usamos equipo y tecnicas especializadas para asegurar que estos articulos se transporten de manera segura.",
+        "link": "/specialty-item-moving"
+      },
+      {
+        "question": "Que areas atienden?",
+        "answer": "Servimos a todo el condado de Miami-Dade County incluyendo Miami, Coral Gables, Miami Beach, Hialeah, Doral, Aventura, Kendall y areas circundantes. Tambien proporcionamos servicios de mudanza de larga distancia a nivel nacional.",
+        "link": "/locations"
+      },
+      {
+        "question": "Realizan mudanzas de larga distancia?",
+        "answer": "Si, proporcionamos servicios de mudanza interestatal y a traves del pais con tiempos de entrega confiables y seguimiento. Nuestras mudanzas de larga distancia se cotizan segun el peso y la distancia.",
+        "link": "/long-distance"
+      },
+      {
+        "question": "Pueden ayudar con mudanzas de apartamentos y edificios altos?",
+        "answer": "Absolutamente. Nos especializamos en mudanzas de apartamentos y edificios altos en todo Miami, manejando reservas de ascensores, pasillos estrechos y regulaciones de edificios para que usted no tenga que hacerlo.",
+        "link": "/apartment-moving"
+      },
+      {
+        "question": "Ofrecen mudanzas comerciales y de oficinas?",
+        "answer": "Si, proporcionamos servicios de mudanza comercial disenados para minimizar el tiempo de inactividad de su negocio. Nos encargamos de todo, desde muebles de oficina hasta equipos de TI.",
+        "link": "/commercial-moving"
+      },
+      {
+        "question": "Que debo hacer para prepararme para el dia de la mudanza?",
+        "answer": "Comience por deshacerse de lo innecesario, etiquetar las cajas por habitacion y empacar una bolsa con articulos esenciales para el dia de la mudanza. Proporcionamos una lista de verificacion completa para ayudarle a mantenerse organizado.",
+        "link": "/moving-checklist"
+      },
+      {
+        "question": "Ofrecen mudanzas del mismo dia o de ultimo momento?",
+        "answer": "Si! Ofrecemos servicios de mudanza del mismo dia y de emergencia en todo el condado de Miami-Dade County, sujeto a disponibilidad. Llamenos y haremos lo posible por acomodarlo.",
+        "link": "/last-minute-moving"
+      },
+      {
+        "question": "Como obtengo una cotizacion gratuita?",
+        "answer": "Puede solicitar una cotizacion gratuita en linea, llamarnos directamente o completar nuestro formulario de cotizacion rapida. Normalmente respondemos dentro de 30 minutos durante el horario comercial.",
+        "link": "/quote"
+      },
+      {
+        "question": "Por que deberia elegir Rapid Panda Movers?",
+        "answer": "Somos una empresa de mudanzas familiar en Miami con precios transparentes, equipos experimentados y una calificacion promedio de 4.7/5 en 56 resenas verificadas. Tratamos cada mudanza como si fuera la nuestra.",
+        "link": "/why-choose-us"
+      }
+    ],
+    "hero": {
+      "cta": "Obtenga su cotizacion gratuita"
+    },
+    "resourceSection": {
+      "title": "Mas recursos de mudanza",
+      "subtitle": "Explore nuestras guias y consejos completos para una mudanza exitosa"
+    },
+    "quote": {
+      "title": "Aun tiene preguntas?",
+      "subtitle": "Nuestro equipo esta aqui para ayudarle. Contactenos para asistencia personalizada con su mudanza."
+    }
+  },
+  "tips": {
+    "title": "Consejos y recursos de mudanza",
+    "description": "Consejos de expertos para hacer su mudanza mas facil",
+    "hero": {
+      "title": "Profesionales de mudanza que se preocupan",
+      "description": "Servicios de mudanza y empaque a bajo costo",
+      "cta": "Comience con una cotizacion gratuita",
+      "image_url": ""
+    },
+    "categories": [
+      {
+        "title": "Consejos de empaque",
+        "tips": [
+          "Comience a empacar temprano - empiece con los articulos que usa con menos frecuencia",
+          "Use cajas y materiales de empaque de calidad",
+          "Etiquete las cajas claramente con el contenido y la habitacion de destino",
+          "Empaque articulos pesados en cajas pequenas, articulos ligeros en cajas grandes",
+          "Envuelva los articulos fragiles individualmente en plastico de burbujas o papel de empaque"
+        ]
+      },
+      {
+        "title": "Preparacion para el dia de la mudanza",
+        "tips": [
+          "Empaque una caja de esenciales con articulos que necesitara de inmediato",
+          "Tome fotos de los muebles antes de desarmarlos",
+          "Mantenga los documentos importantes con usted durante la mudanza",
+          "Organice el cuidado de ninos y mascotas para el dia de la mudanza",
+          "Haga un recorrido final antes de dejar su antigua casa"
+        ]
+      },
+      {
+        "title": "Instalandose",
+        "tips": [
+          "Desempaque lo esencial primero - cocina, bano, dormitorio",
+          "Complete una habitacion antes de pasar a la siguiente",
+          "Actualice su direccion con todos los servicios necesarios",
+          "Tomese tiempo para explorar su nuevo vecindario",
+          "No apresure el proceso de desempaque - tomese su tiempo"
+        ]
+      }
+    ],
+    "blogSection": {
+      "title": "Articulos del blog sobre consejos de mudanza",
+      "subtitle": "Lea nuestros ultimos consejos y recomendaciones de los expertos",
+      "viewMoreTitle": "Mas consejos de mudanza",
+      "viewMoreSubtitle": "Explore nuestra coleccion completa de consejos y recomendaciones de mudanza",
+      "viewMoreButtonText": "Ver todos los articulos de consejos de mudanza",
+      "viewMoreLink": "/blog/category/moving-tips"
+    },
+    "resourceSection": {
+      "title": "Mas recursos de mudanza",
+      "subtitle": "Explore nuestras guias y servicios completos para una mudanza exitosa"
+    }
+  },
+  "checklist": {
+    "title": "Lista de verificacion completa para mudanza",
+    "description": "Su guia integral para una mudanza exitosa",
+    "hero": {
+      "title": "Su lista de verificacion completa para mudanza",
+      "description": "Mantengase organizado y sin estres con nuestra lista de verificacion integral para mudanza",
+      "cta": "Comience con una cotizacion gratuita",
+      "image_url": ""
+    },
+    "categories": [
+      {
+        "title": "8 semanas antes de la mudanza",
+        "description": "Planificacion y preparacion temprana",
+        "tasks": [
+          {
+            "task": "Investigar y contratar una empresa de mudanzas",
+            "completed": false,
+            "priority": "high"
+          },
+          {
+            "task": "Obtener cotizaciones de mudanza de al menos 3 empresas",
+            "completed": false,
+            "priority": "high"
+          },
+          {
+            "task": "Crear un presupuesto de mudanza",
+            "completed": false,
+            "priority": "medium"
+          },
+          {
+            "task": "Comenzar a deshacerse de lo innecesario y organizar",
+            "completed": false,
+            "priority": "medium"
+          },
+          {
+            "task": "Investigar su nueva area (escuelas, servicios, etc.)",
+            "completed": false,
+            "priority": "low"
+          }
+        ]
+      },
+      {
+        "title": "6 semanas antes de la mudanza",
+        "description": "Fase de reserva y planificacion",
+        "tasks": [
+          {
+            "task": "Reservar su empresa de mudanzas",
+            "completed": false,
+            "priority": "high"
+          },
+          {
+            "task": "Programar tiempo libre del trabajo para el dia de la mudanza",
+            "completed": false,
+            "priority": "high"
+          },
+          {
+            "task": "Comenzar a recolectar materiales de mudanza (cajas, cinta, etc.)",
+            "completed": false,
+            "priority": "medium"
+          },
+          {
+            "task": "Comenzar a empacar articulos no esenciales",
+            "completed": false,
+            "priority": "medium"
+          },
+          {
+            "task": "Notificar al propietario actual la fecha de desocupacion",
+            "completed": false,
+            "priority": "high"
+          }
+        ]
+      },
+      {
+        "title": "4 semanas antes de la mudanza",
+        "description": "Transferencia de servicios y empaque",
+        "tasks": [
+          {
+            "task": "Transferir o cancelar servicios publicos en la vivienda actual",
+            "completed": false,
+            "priority": "high"
+          },
+          {
+            "task": "Configurar servicios publicos en la nueva vivienda",
+            "completed": false,
+            "priority": "high"
+          },
+          {
+            "task": "Cambiar direccion con USPS",
+            "completed": false,
+            "priority": "high"
+          },
+          {
+            "task": "Actualizar direccion con bancos y tarjetas de credito",
+            "completed": false,
+            "priority": "high"
+          },
+          {
+            "task": "Empacar la mayoria de sus pertenencias",
+            "completed": false,
+            "priority": "medium"
+          }
+        ]
+      },
+      {
+        "title": "2 semanas antes de la mudanza",
+        "description": "Preparativos finales",
+        "tasks": [
+          {
+            "task": "Confirmar detalles del dia de la mudanza con los mudanceros",
+            "completed": false,
+            "priority": "high"
+          },
+          {
+            "task": "Empacar una caja de esenciales para los primeros dias",
+            "completed": false,
+            "priority": "high"
+          },
+          {
+            "task": "Tomar fotos de los muebles antes de desarmarlos",
+            "completed": false,
+            "priority": "medium"
+          },
+          {
+            "task": "Organizar el cuidado de ninos/mascotas para el dia de la mudanza",
+            "completed": false,
+            "priority": "medium"
+          },
+          {
+            "task": "Limpiar el refrigerador y el congelador",
+            "completed": false,
+            "priority": "low"
+          }
+        ]
+      },
+      {
+        "title": "1 semana antes de la mudanza",
+        "description": "Ultimos detalles",
+        "tasks": [
+          {
+            "task": "Confirmar todas las transferencias de servicios",
+            "completed": false,
+            "priority": "high"
+          },
+          {
+            "task": "Empacar los esenciales diarios restantes",
+            "completed": false,
+            "priority": "medium"
+          },
+          {
+            "task": "Preparar efectivo para propinas y gastos inesperados",
+            "completed": false,
+            "priority": "medium"
+          },
+          {
+            "task": "Planificar comidas para la semana de la mudanza",
+            "completed": false,
+            "priority": "low"
+          },
+          {
+            "task": "Cargar todos los electronicos y dispositivos",
+            "completed": false,
+            "priority": "low"
+          }
+        ]
+      },
+      {
+        "title": "Dia de la mudanza",
+        "description": "El gran dia",
+        "tasks": [
+          {
+            "task": "Levantarse temprano y tomar un buen desayuno",
+            "completed": false,
+            "priority": "high"
+          },
+          {
+            "task": "Hacer un recorrido final de la antigua casa",
+            "completed": false,
+            "priority": "high"
+          },
+          {
+            "task": "Estar presente cuando lleguen los mudanceros",
+            "completed": false,
+            "priority": "high"
+          },
+          {
+            "task": "Mantener los documentos importantes con usted",
+            "completed": false,
+            "priority": "high"
+          },
+          {
+            "task": "Tomar las lecturas de los medidores en ambas viviendas",
+            "completed": false,
+            "priority": "medium"
+          }
+        ]
+      },
+      {
+        "title": "Despues de la mudanza",
+        "description": "Instalandose en su nuevo hogar",
+        "tasks": [
+          {
+            "task": "Desempacar lo esencial primero (dormitorio, bano, cocina)",
+            "completed": false,
+            "priority": "high"
+          },
+          {
+            "task": "Actualizar la direccion con todos los servicios restantes",
+            "completed": false,
+            "priority": "high"
+          },
+          {
+            "task": "Registrarse para votar en la nueva ubicacion",
+            "completed": false,
+            "priority": "medium"
+          },
+          {
+            "task": "Encontrar nuevos medicos, dentistas, etc.",
+            "completed": false,
+            "priority": "medium"
+          },
+          {
+            "task": "Explorar su nuevo vecindario",
+            "completed": false,
+            "priority": "low"
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Comience a empacar temprano - empiece con los articulos que usa con menos frecuencia",
+      "Etiquete las cajas claramente con el contenido y la habitacion de destino",
+      "Empaque articulos pesados en cajas pequenas, articulos ligeros en cajas grandes",
+      "Mantenga un inventario de articulos valiosos",
+      "Tome fotos de los electronicos antes de desconectarlos",
+      "Empaque una caja de esenciales para los primeros dias",
+      "Mantenga los documentos importantes con usted durante la mudanza"
+    ],
+    "resourceSection": {
+      "title": "Mas recursos de mudanza",
+      "subtitle": "Explore nuestras guias y servicios completos para una mudanza exitosa"
+    },
+    "quote": {
+      "title": "Listo para tachar 'Contratar mudanceros' de su lista?",
+      "subtitle": "Deje que Rapid Panda Movers se encargue del trabajo pesado mientras usted se concentra en todo lo demas."
+    }
+  },
+  "glossary": {
+    "title": "Glosario de terminos de mudanza",
+    "description": "Terminos y definiciones comunes de mudanza",
+    "terms": [
+      {
+        "term": "Servicios accesorios",
+        "definition": "Cualquier servicio adicional que acompana el proceso de mudanza en si. Esto incluye empaque, desempaque, desarmado y rearmado de sus pertenencias y muebles. Los servicios accesorios son servicios adicionales con cargos accesorios que no siempre estan incluidos en la cotizacion de mudanza. Preguntenos sobre los muchos servicios accesorios que proporcionamos, los cuales pueden tener un costo adicional."
+      },
+      {
+        "term": "Agente",
+        "definition": "Un agente afiliado es una empresa de mudanzas local que realiza servicios en nombre de una empresa nacional."
+      },
+      {
+        "term": "Mudanceros de servicio completo",
+        "definition": "Tambien conocidos como mudanceros de servicio integral. Una empresa de mudanzas que ofrece una amplia gama de servicios para adaptarse a cada mudanza. Rapid Panda Movers desarmara muebles, empacara toda su casa y movera sus cajas a los camiones, junto con cualquier otra cosa que pueda necesitar en el proceso de mudar sus pertenencias a traves del pais."
+      },
+      {
+        "term": "Servicio de electrodomesticos",
+        "definition": "El servicio de desconectar sus electrodomesticos en su antigua residencia y reconectarlos en su nueva residencia. Esto incluye lavadoras, lavavajillas y refrigeradores. Este tipo particular de servicio puede considerarse un complemento o ya estar incluido en su tarifa de mudanza. Pregunte a su empresa de mudanzas si el servicio de electrodomesticos tendra un cargo adicional incluido en su costo final."
+      },
+      {
+        "term": "Carretilla para electrodomesticos",
+        "definition": "Un equipo invaluable con ruedas que se usa para cargar y descargar articulos grandes. Su especialista en mudanzas usara una carretilla para mover electrodomesticos, cajas pesadas y muebles dentro y fuera del camion de mudanza."
+      },
+      {
+        "term": "Cobertura de valor tasado",
+        "definition": "La cantidad que pagara por cada mil dolares del valor tasado de sus pertenencias para asegurar que esten cubiertas por el seguro. El seguro es un servicio complementario que protege sus pertenencias en caso de que se danen en cualquier momento durante su mudanza. La cobertura de valor de reemplazo cubre toda la carga de sus articulos, no articulos especificos."
+      },
+      {
+        "term": "Conocimiento de embarque",
+        "definition": "El contrato entre usted y su mudancero. Vera su conocimiento de embarque completo antes de mudarse para que haya total transparencia sobre lo que aparecera en su factura final. Necesitara firmar el conocimiento de embarque antes de que comencemos la mudanza."
+      },
+      {
+        "term": "Estimacion vinculante/no vinculante",
+        "definition": "Una estimacion vinculante es un precio de tarifa fija dado para mover sus pertenencias. Incluso si el trabajo toma mas tiempo del que la empresa de mudanzas penso inicialmente, no pueden cobrarle mas de lo que le cotizaron en su acuerdo vinculante. Los acuerdos no vinculantes estan sujetos a cambios y variaran dependiendo de la cantidad de tiempo que tome realizar el trabajo y cuantos camiones y hombres se requieran para hacerlo."
+      },
+      {
+        "term": "Transportista",
+        "definition": "El mudancero certificado que ha elegido para trabajar."
+      },
+      {
+        "term": "C.O.D.",
+        "definition": "Pago contra entrega. Cuando el pago de los cargos de mudanza se requiere al momento de la entrega de sus articulos. Se puede pagar con efectivo, credito o cheque, asi que asegurese de preguntar cual se requiere antes de su mudanza."
+      },
+      {
+        "term": "Mudanza comercial",
+        "definition": "El proceso de mover las pertenencias de su oficina de un lugar de negocio a otro."
+      },
+      {
+        "term": "Planificacion integral",
+        "definition": "Pensamos en todo lo que necesita hacerse en el proceso de mudanza, desde el empaque de servicio completo y el armado hasta proteger sus pertenencias con seguro y rearmar articulos si es necesario. Le guiaremos a traves de todo el proceso para que haya total transparencia en el proceso de mudanza."
+      },
+      {
+        "term": "Costo de la mudanza",
+        "definition": "Esto es cuanto costara su mudanza. Esto no incluye servicios complementarios ni seguro. Las estimaciones de costo son cargos reales calculados a partir de la informacion que proporciona a sus mudanceros en la consulta inicial. Rapid Panda Movers hara preguntas a los clientes para conocer todos los detalles sobre lo que se va a mover y a donde se va a mover; sin embargo, el costo de la mudanza es solo una estimacion inicial y esta sujeto a cambios si surge nueva informacion sobre la mudanza durante el proceso. Se pueden agregar costos adicionales por factores como escaleras y distancia, asi que asegurese de hablar con su empresa de mudanzas sobre todos los factores que puedan afectar el precio de su mudanza."
+      },
+      {
+        "term": "Servicio acelerado",
+        "definition": "El acuerdo entre usted y una empresa de mudanzas para realizar el servicio de entrega a una tasa mas rapida o en una fecha especificada. Los servicios acelerados a menudo cuestan mas que los servicios regulares."
+      },
+      {
+        "term": "Cargo por tramo de escaleras",
+        "definition": "El costo de mover sus pertenencias por un tramo de escaleras. Esto puede considerarse un servicio complementario con muchas empresas de mudanzas, aunque algunos tipos de escaleras incluyen el cargo en su costo de servicio. Si la propiedad a la que se muda tiene un ascensor en servicio, no habra cargos por escaleras, ya que los mudanceros no necesitaran subir sus pertenencias por tramos de escaleras."
+      },
+      {
+        "term": "Servicio de carga",
+        "definition": "Un modo de transporte de menor costo comparado con las mudanzas de servicio completo. Los mudanceros de servicio de carga transportaran sus pertenencias de su antigua propiedad a la nueva. Sin embargo, necesitara empacarlas en cajas y encargarse de envolver cualquier mueble en materiales de empaque apropiados. El servicio de carga tambien puede llamarse mudanza de autoservicio."
+      },
+      {
+        "term": "Seguro de cobertura completa",
+        "definition": "El seguro a 60 centavos por libra por cualquier articulo danado ya esta incluido con cada mudanza. El seguro de cobertura completa, que cubre totalmente la perdida y dano de sus pertenencias, se puede comprar antes de la mudanza en movinginsurance.com"
+      },
+      {
+        "term": "Mudancero de servicio completo",
+        "definition": "Una empresa de mudanzas que se encarga de cada paso del proceso de mudanza. Rapid Panda Movers es un mudancero de servicio completo que empacara, conducira, desempacara y rearmara sus pertenencias y muebles en su nuevo hogar. Los mudanceros de servicio completo tambien envolveran los articulos fragiles y protegeran los muebles con almohadillas para muebles durante el proceso."
+      },
+      {
+        "term": "Articulo de alto valor",
+        "definition": "Un articulo que esta valorado en mas de cien dolares por libra que debe incluirse en un formulario de inventario de alto valor. Rapid Panda Movers tendra el mayor cuidado al manejar articulos de alto valor, aunque como sabemos lo importantes que son para usted, tenemos el mayor cuidado con todas sus pertenencias de todos modos!"
+      },
+      {
+        "term": "Tarifas por hora",
+        "definition": "Cuando se cobra a los clientes por hora, por persona y por camion. Las tarifas por hora pueden variar de una empresa a otra, por lo que es importante preguntar cuales son las de sus mudanceros preferidos antes de comenzar o acordar cualquier servicio con ellos."
+      },
+      {
+        "term": "Bienes del hogar",
+        "definition": "Los articulos que se usan dentro o fuera de su hogar. Son lo que se transporta durante el proceso de mudanza."
+      },
+      {
+        "term": "Operaciones impracticables",
+        "definition": "Servicios que se requieren cuando las condiciones operativas actuales hacen fisicamente imposible que su empresa de transporte recoja o entregue sus bienes del hogar. Las operaciones impracticables pueden requerir el uso de equipo mas pequeno o horas o trabajadores adicionales. Estas operaciones pueden requerir costos adicionales."
+      },
+      {
+        "term": "Expedidor individual",
+        "definition": "Una persona que es el expedidor, consignador o consignatario de un envio. Es el nombre en el conocimiento de embarque y es el dueno de los bienes que se van a transportar. El expedidor individual pagara todos los cargos de transporte de tarifa."
+      },
+      {
+        "term": "Mudanza interestatal",
+        "definition": "Una mudanza que cruza el limite estatal. Los envios interestatales no se distinguen por la cantidad de millas recorridas, solo por el hecho de que se cruza un limite estatal."
+      },
+      {
+        "term": "Mudanza intraestatal",
+        "definition": "Una mudanza que no cruza un limite estatal. Estas usualmente son de menos de 100 millas de distancia. Tambien se le llama mudanza local."
+      },
+      {
+        "term": "Inventario",
+        "definition": "Una lista descriptiva de sus pertenencias que muestra la cantidad y condicion de cada articulo. Esta lista detallada de articulos es util si alguna de sus propiedades personales ha sido danada o extraviada. Si es asi, se debe hacer una declaracion de perdida."
+      },
+      {
+        "term": "Licencia",
+        "definition": "Por ley, los mudanceros deben adquirir certificaciones para mover bienes del hogar dentro o a traves de los limites estatales. Estas identificaran el estado de la autoridad y el seguro del mudancero. Algunos estados pueden requerir licencias adicionales."
+      },
+      {
+        "term": "Mudanza local",
+        "definition": "Mudarse alrededor de la cuadra, al otro lado de la ciudad o a una nueva parte de su condado. Rapid Panda Movers ha estado mudando a sus amigos y vecinos durante anos, asi que sabemos exactamente como reubicar sus pertenencias de la manera mas facil posible."
+      },
+      {
+        "term": "Mudanza de larga distancia",
+        "definition": "Mudarse fuera del condado o a un nuevo estado dentro del mismo pais. Hacemos que su mudanza de larga distancia sea muy facil, ofreciendo total transparencia durante todo el proceso de mudanza. Empacaremos sus articulos del hogar, envolveremos sus muebles y los moveremos a su nuevo hogar en todo el pais. Tenga la seguridad de que todo lo que posee sera debidamente cuidado y respaldado por un seguro de cobertura completa durante su mudanza."
+      },
+      {
+        "term": "Contenedor movil",
+        "definition": "Los recipientes que las empresas de mudanzas usan para transportar sus pertenencias. Se descargaran en su nueva propiedad y permaneceran alli hasta que los haya descargado y solicitado que los recojan. Rapid Panda Movers descargara sus articulos de sus camiones y no dejara contenedores en su propiedad."
+      },
+      {
+        "term": "Empresa de mudanzas",
+        "definition": "Cualquier empresa cuyo negocio es ofrecerle servicios de mudanza a cambio de una tarifa. Transportaran sus pertenencias de una ubicacion a otra. Este termino general se aplica a empresas locales y nacionales, asi como a aquellas que ofrecen opciones de mudanza de autoservicio y servicio completo."
+      },
+      {
+        "term": "Gastos de mudanza",
+        "definition": "Cualquier costo asociado con mover sus pertenencias de un lugar a otro. Estos incluyen cargos estandar y adicionales y cubren todos los recursos de mudanza como mano de obra y combustible."
+      },
+      {
+        "term": "Mudanza a un nuevo apartamento",
+        "definition": "Cuando se muda de una vivienda a otra, podemos reubicar todo el contenido de su apartamento a uno nuevo. Manejamos expertamente mudanzas de todos los tamanos, y nuestro equipo confiable se asegurara de que sus pertenencias esten protegidas mientras maniobran articulos voluminosos por escaleras sinuosas y pasillos estrechos."
+      },
+      {
+        "term": "Servicio de empaque",
+        "definition": "El proceso de organizar y poner todas sus pertenencias en cajas o contenedores para ser facilmente transportadas durante su mudanza. El empaque puede consistir en envolver y almacenar de forma segura articulos fragiles hasta envolver muebles grandes o de gran tamano y pegarlos con cinta. Desde libros hasta electronicos, ayudaremos a que sus objetos de valor lleguen en una sola pieza."
+      },
+      {
+        "term": "Depuracion",
+        "definition": "Eliminar todo lo que no desea o necesita de su hogar actual. La depuracion puede incluir tirar o donar cualquier articulo que no desee mover a su nuevo hogar por un costo adicional."
+      },
+      {
+        "term": "Mudanza residencial",
+        "definition": "El proceso de mover sus pertenencias de una vivienda residencial a otra."
+      },
+      {
+        "term": "Cobertura estandar",
+        "definition": "La cantidad minima de cobertura gratuita proporcionada por una empresa de mudanzas. Esto podria ser tan poco como 60 centavos por libra de bienes danados. Si valoran sus bienes, los clientes deben optar por agregar un seguro de cobertura completa, una opcion ofrecida por Rapid Panda Movers."
+      },
+      {
+        "term": "Surface Transportation Board",
+        "definition": "Una agencia federal del Departamento de Transporte de los Estados Unidos que regula los cargos de los transportistas para el transporte de bienes del hogar."
+      },
+      {
+        "term": "Tarifa",
+        "definition": "La lista publicada de terminos y precios de mudanza de una empresa de mudanzas con respecto a reglas, cargos y regulaciones al realizar todos los servicios relacionados con mudanzas interestatales."
+      },
+      {
+        "term": "Tipo de transporte",
+        "definition": "El tipo de transporte utilizado para mover sus pertenencias de un lugar a otro. Tipicamente visto con un mudancero de autoservicio, el tipo de transporte puede variar desde carga hasta una linea de furgonetas de mudanza dependiendo del tamano y la cantidad de sus pertenencias."
+      },
+      {
+        "term": "Camion",
+        "definition": "El vehiculo utilizado para transportar sus pertenencias de su antigua casa a la nueva. Algunas empresas de autoservicio dejaran su camion en su casa para ser descargado a su propio ritmo. Estas empresas no descargan sus bienes personales al momento de la entrega, pero los conduciran de una ubicacion a otra nueva."
+      },
+      {
+        "term": "Remolque",
+        "definition": "La parte trasera de un camion que se puede desenganchar y dejar en su nueva propiedad. Es responsabilidad del cliente descargar los articulos del remolque y llevarlos a sus nuevos hogares. Necesitaran llamar a la empresa de mudanzas para que recojan el remolque cuando hayan terminado de descargarlo."
+      },
+      {
+        "term": "Camion y remolque",
+        "definition": "Una empresa de mudanzas puede entregar tanto un camion como un remolque a su nuevo hogar. El camion y el remolque permaneceran en su nueva propiedad hasta que los haya descargado y solicitado una recogida. Rapid Panda Movers es una empresa de mudanzas de servicio completo que descargara sus articulos de sus camiones antes de sacarlos de su propiedad."
+      },
+      {
+        "term": "Desempaque",
+        "definition": "El proceso de desempacar y desenvolver sus pertenencias. El desempaque es uno de los pasos finales de mudarse a un nuevo hogar. Tiene lugar despues de que sus articulos han sido descargados del camion y llevados a su nuevo espacio. Rapid Panda Movers ofrece servicios de desempaque y un servicio de rearmado para su conveniencia."
+      },
+      {
+        "term": "Valuacion",
+        "definition": "El nivel tarifario de responsabilidad del transportista que se basa en el peso real de sus pertenencias. La valuacion no debe considerarse lo mismo que su poliza de seguro. La valuacion de sus pertenencias, en su valor, cubre sus bienes por dano o perdida si hay alguna negligencia por parte del transportista. Sin embargo, no cubre perdida o dano debido a actos de Dios, como condiciones climaticas extremas, disturbios, huelgas o conmocion civil. Los cargos de valuacion compensaran al mudancero por asumir mas responsabilidad por perdida que el cliente durante el proceso de mudanza."
+      }
+    ],
+    "hero": {
+      "cta": "Obtenga su cotizacion gratuita"
+    },
+    "resourceSection": {
+      "title": "Mas recursos de mudanza",
+      "subtitle": "Explore nuestras guias y servicios completos para una mudanza exitosa"
+    },
+    "quote": {
+      "title": "Necesita ayuda con su mudanza?",
+      "subtitle": "Ahora que conoce la terminologia, dejenos manejar la logistica. Obtenga una cotizacion gratuita hoy."
+    }
+  },
+  "contact": {
+    "title": "Contacte a Rapid Panda Movers",
+    "description": "Comuniquese para obtener su cotizacion de mudanza gratuita",
+    "hero": {
+      "title": "Contacte a Rapid Panda Movers",
+      "description": "Listo para hacer su mudanza? Comuniquese con los profesionales de mudanza de confianza de Miami para una cotizacion y consulta gratuita.",
+      "cta": "Llame al (786) 585-4269"
+    },
+    "mapSection": {
+      "title": "Nuestra ubicacion"
+    },
+    "contact_info": {
+      "phone": "786-585-4269",
+      "email": "info@rapidpandamovers.com",
+      "address": "7001 North Waterway Dr #107 Miami, Fl 33155",
+      "hours": "Abierto todos los dias: 8:00 AM – 8:00 PM | Fuera de horario y emergencias: Disponible bajo solicitud"
+    },
+    "quote_form": {
+      "title": "Obtenga su cotizacion gratuita",
+      "description": "Complete el formulario a continuacion y nos comunicaremos con usted dentro de 24 horas con una estimacion detallada.",
+      "fields": [
+        "Nombre",
+        "Numero de telefono",
+        "Correo electronico",
+        "Fecha de mudanza",
+        "Direccion de origen",
+        "Direccion de destino",
+        "Tipo de mudanza",
+        "Servicios adicionales necesarios",
+        "Instrucciones especiales"
+      ]
+    },
+    "service_areas": {
+      "title": "Areas que servimos",
+      "description": "Servicios profesionales de mudanza en todo el condado de Miami-Dade County",
+      "primary_areas": [
+        "Miami",
+        "Coral Gables",
+        "Miami Beach",
+        "Hialeah",
+        "Doral",
+        "Aventura",
+        "Kendall",
+        "Homestead"
+      ],
+      "additional_areas": [
+        "Palmetto Bay",
+        "Pinecrest",
+        "South Beach",
+        "Little Havana",
+        "Brickell",
+        "Downtown Miami",
+        "Wynwood",
+        "Design District"
+      ]
+    }
+  },
+  "blog": {
+    "title": "Consejos y recursos de mudanza",
+    "description": "Consejos de expertos e informacion para su proxima mudanza",
+    "data_source": "blog.json",
+    "hero": {
+      "title": "Guias e informacion de mudanza",
+      "description": "Consejos de expertos y recomendaciones practicas para hacer su mudanza facil y asequible",
+      "cta": "Obtenga su cotizacion gratuita"
+    },
+    "resourceSection": {
+      "title": "Mas recursos de mudanza",
+      "subtitle": "Explore nuestras guias y servicios completos para una mudanza exitosa"
+    },
+    "relatedArticles": {
+      "title": "Articulos relacionados",
+      "subtitle": "Mas consejos utiles de esta categoria",
+      "viewMoreButtonText": "Ver todos los articulos"
+    }
+  },
+  "why_choose_us": {
+    "hero": {
+      "title": "Por que elegir Rapid Panda Movers?",
+      "description": "La empresa de mudanzas mas confiable de Miami. Con licencia, asegurados y comprometidos a hacer su mudanza sin estres.",
+      "cta": "Obtenga su cotizacion gratuita"
+    },
+    "main_benefits": [
+      {
+        "icon": "Shield",
+        "title": "Con licencia y seguro",
+        "desc": "Licencia completa y cobertura de seguro integral para su tranquilidad. Contamos con seguro de responsabilidad general y compensacion laboral para protegerlo a usted y a sus pertenencias.",
+        "details": [
+          "Mudancero con licencia de Florida",
+          "Cobertura de responsabilidad completa",
+          "Compensacion laboral",
+          "Seguro de carga disponible"
+        ]
+      },
+      {
+        "icon": "Users",
+        "title": "Equipo experimentado",
+        "desc": "Mudanceros profesionales con anos de experiencia en mudanzas locales y de larga distancia. Cada miembro del equipo tiene verificacion de antecedentes, prueba de drogas y capacitacion profesional.",
+        "details": [
+          "Personal con verificacion de antecedentes",
+          "Programas de capacitacion continua",
+          "Promedio de 5+ anos de experiencia",
+          "Uniformes profesionales"
+        ]
+      },
+      {
+        "icon": "DollarSign",
+        "title": "Precios transparentes",
+        "desc": "Sin cargos ocultos ni sorpresas. Precios honestos y por adelantado siempre. Proporcionamos estimaciones escritas detalladas para que sepa exactamente que esperar.",
+        "details": [
+          "Estimaciones a domicilio gratuitas",
+          "Sin cargos ocultos",
+          "Garantia de igualar precios",
+          "Cotizaciones escritas proporcionadas"
+        ]
+      },
+      {
+        "icon": "Clock",
+        "title": "Horarios confiables",
+        "desc": "Servicio puntual con opciones de horarios flexibles para adaptarse a su estilo de vida. Llegamos cuando decimos que lo haremos y lo mantenemos informado en todo momento.",
+        "details": [
+          "Garantia de llegada puntual",
+          "Horarios flexibles",
+          "Disponibilidad el mismo dia",
+          "Mudanzas los fines de semana disponibles"
+        ]
+      },
+      {
+        "icon": "Phone",
+        "title": "Atencion al cliente 24/7",
+        "desc": "Servicio al cliente las 24 horas para responder preguntas y brindar asistencia. Desde su primera llamada hasta la finalizacion de la mudanza, estamos aqui para usted.",
+        "details": [
+          "Soporte telefonico 24/7",
+          "Coordinador de mudanza dedicado",
+          "Actualizaciones en tiempo real",
+          "Seguimiento posterior a la mudanza"
+        ]
+      },
+      {
+        "icon": "CheckCircle",
+        "title": "Satisfaccion garantizada",
+        "desc": "Garantia de satisfaccion del 100% en cada mudanza. Su felicidad es nuestra prioridad. Si algo no esta bien, lo corregiremos.",
+        "details": [
+          "Promesa de satisfaccion del 100%",
+          "Garantia de resolucion de problemas",
+          "Controles de aseguramiento de calidad",
+          "Garantia de devolucion de dinero"
+        ]
+      }
+    ],
+    "promise_cards": [
+      {
+        "title": "Antes de su mudanza",
+        "desc": "Consulta gratuita, cotizacion detallada, asistencia en la planificacion de la mudanza y consejos de empaque para ayudarle a prepararse."
+      },
+      {
+        "title": "Durante su mudanza",
+        "desc": "Equipos profesionales, manejo cuidadoso, actualizaciones en tiempo real y supervision en el lugar para control de calidad."
+      },
+      {
+        "title": "Despues de su mudanza",
+        "desc": "Llamada de seguimiento, encuesta de satisfaccion y resolucion rapida de cualquier inquietud. Estamos aqui hasta que este instalado."
+      }
+    ],
+    "additional_reasons": [
+      {
+        "icon": "Award",
+        "title": "Servicio premiado",
+        "desc": "Reconocidos por la excelencia en servicio al cliente y calidad de mudanza."
+      },
+      {
+        "icon": "Heart",
+        "title": "Negocio familiar",
+        "desc": "Tratamos su mudanza como tratariamos la mudanza de nuestra propia familia."
+      },
+      {
+        "icon": "Truck",
+        "title": "Equipo moderno",
+        "desc": "Camiones bien mantenidos y equipo profesional de mudanza."
+      },
+      {
+        "icon": "Package",
+        "title": "Manejo cuidadoso",
+        "desc": "Cuidado especial para articulos fragiles, antiguedades y objetos de valor."
+      },
+      {
+        "icon": "MapPin",
+        "title": "Experiencia local",
+        "desc": "Conocemos Miami por dentro y por fuera - cada vecindario y edificio."
+      },
+      {
+        "icon": "Calendar",
+        "title": "Opciones flexibles",
+        "desc": "Servicio completo, solo mano de obra, servicios de empaque y mas."
+      },
+      {
+        "icon": "Headphones",
+        "title": "Atencion personal",
+        "desc": "Coordinador dedicado asignado a su mudanza de principio a fin."
+      },
+      {
+        "icon": "FileCheck",
+        "title": "Inventario detallado",
+        "desc": "Documentacion completa de inventario para su tranquilidad."
+      }
+    ],
+    "comparison": {
+      "title": "Como nos comparamos",
+      "columns": [
+        {
+          "header": "Rapid Panda"
+        },
+        {
+          "header": "Otros mudanceros"
+        }
+      ],
+      "rows": [
+        {
+          "option": "Precios transparentes",
+          "cells": [
+            "Siempre incluido",
+            "A veces"
+          ],
+          "highlight": true
+        },
+        {
+          "option": "Equipos con verificacion de antecedentes",
+          "cells": [
+            "Todo el personal verificado",
+            "Varia"
+          ]
+        },
+        {
+          "option": "Garantia de puntualidad",
+          "cells": [
+            "Garantizado",
+            "Raramente ofrecido"
+          ],
+          "highlight": true
+        },
+        {
+          "option": "Soporte 24/7",
+          "cells": [
+            "Siempre disponible",
+            "Horario limitado"
+          ]
+        },
+        {
+          "option": "Sin cargos ocultos",
+          "cells": [
+            "Garantia escrita",
+            "A menudo se agregan cargos"
+          ],
+          "highlight": true
+        },
+        {
+          "option": "Garantia de satisfaccion",
+          "cells": [
+            "100% garantizado",
+            "Limitada o ninguna"
+          ]
+        }
+      ]
+    },
+    "whySection": {
+      "title": "La diferencia Rapid Panda",
+      "subtitle": "No somos solo otra empresa de mudanzas. Esto es lo que nos distingue y por que miles de residentes de Miami nos confian sus mudanzas."
+    },
+    "reviewSection": {
+      "title": "Lo que dicen nuestros clientes",
+      "subtitle": "Resenas reales de clientes reales"
+    },
+    "includedSection": {
+      "title": "Mas razones para confiar en nosotros"
+    },
+    "quote": {
+      "title": "Listo para experimentar la diferencia?",
+      "subtitle": "Unase a miles de clientes satisfechos que eligieron Rapid Panda Movers para su mudanza en Miami."
+    },
+    "compareLink": "Vea comparaciones detalladas con competidores especificos →"
+  },
+  "privacy": {
+    "title": "Politica de privacidad",
+    "hero": {
+      "description": "En Rapid Panda Movers, nos tomamos su privacidad en serio. Esta Politica de Privacidad explica como recopilamos, usamos, divulgamos y protegemos su informacion cuando visita nuestro sitio web o utiliza nuestros servicios.",
+      "cta": "Obtenga su cotizacion gratuita"
+    },
+    "last_updated": "2025-01-01",
+    "sections": [
+      {
+        "title": "Informacion que recopilamos",
+        "content": "Recopilamos la informacion que usted nos proporciona directamente, como cuando solicita una cotizacion, nos contacta o utiliza nuestros servicios."
+      },
+      {
+        "title": "Como usamos su informacion",
+        "content": "Usamos la informacion que recopilamos para proporcionar, mantener y mejorar nuestros servicios, comunicarnos con usted y procesar transacciones."
+      },
+      {
+        "title": "Compartir informacion",
+        "content": "No vendemos, intercambiamos ni transferimos su informacion personal a terceros sin su consentimiento, excepto como se describe en esta politica."
+      },
+      {
+        "title": "Cookies y seguimiento",
+        "content": "Podemos usar cookies y tecnologias de seguimiento similares para rastrear la actividad en nuestro sitio web y almacenar cierta informacion. Las cookies son archivos con una pequena cantidad de datos que pueden incluir un identificador unico anonimo. Puede configurar su navegador para rechazar todas las cookies o para indicar cuando se esta enviando una cookie."
+      },
+      {
+        "title": "Seguridad de datos",
+        "content": "Implementamos medidas de seguridad tecnicas y organizativas apropiadas para proteger su informacion personal contra el acceso no autorizado, la alteracion, la divulgacion o la destruccion. Sin embargo, ningun metodo de transmision por Internet o almacenamiento electronico es 100% seguro."
+      },
+      {
+        "title": "Sus derechos",
+        "content": "Usted tiene derecho a acceder, actualizar o eliminar su informacion personal en cualquier momento. Tambien puede optar por no recibir comunicaciones promocionales de nuestra parte siguiendo las instrucciones de cancelacion de suscripcion en esos mensajes."
+      },
+      {
+        "title": "Contactenos",
+        "content": "Si tiene alguna pregunta sobre esta Politica de Privacidad, contactenos a info@rapidpandamovers.com o llamenos al (786) 585-4269.",
+        "hasContactLinks": true
+      },
+      {
+        "title": "Cambios a esta politica",
+        "content": "Podemos actualizar nuestra Politica de Privacidad de vez en cuando. Le notificaremos de cualquier cambio publicando la nueva Politica de Privacidad en esta pagina y actualizando la fecha de \"Ultima actualizacion\"."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Terminos y condiciones",
+    "hero": {
+      "description": "Bienvenido a Rapid Panda Movers. Al acceder a nuestro sitio web o utilizar nuestros servicios, usted acepta estar sujeto a estos Terminos y Condiciones. Por favor, lealos cuidadosamente antes de utilizar nuestros servicios.",
+      "cta": "Obtenga su cotizacion gratuita"
+    },
+    "last_updated": "2025-01-01",
+    "sections": [
+      {
+        "title": "Acuerdo de servicio",
+        "content": "Al usar nuestros servicios, usted acepta estos terminos y condiciones. Por favor, lealos cuidadosamente."
+      },
+      {
+        "title": "Terminos de pago",
+        "content": "El pago se debe al completar los servicios a menos que se hayan hecho otros arreglos por adelantado."
+      },
+      {
+        "title": "Responsabilidad",
+        "content": "Nuestra responsabilidad esta limitada como se describe en nuestro acuerdo de servicio. Recomendamos un seguro adicional para articulos valiosos."
+      },
+      {
+        "title": "Reservas y cancelaciones",
+        "content": "Todas las reservas estan sujetas a disponibilidad. Recomendamos reservar con al menos 2 semanas de anticipacion para mudanzas locales y 4 semanas para mudanzas de larga distancia. Las cancelaciones realizadas con menos de 48 horas antes de la mudanza programada pueden estar sujetas a una tarifa de cancelacion."
+      },
+      {
+        "title": "Responsabilidades del cliente",
+        "content": "Los clientes son responsables de asegurar que todos los articulos a mover esten debidamente empacados a menos que se hayan contratado servicios de empaque. Los clientes deben revelar cualquier articulo que requiera manejo especial, incluyendo pero no limitado a articulos fragiles, antiguedades o articulos de valor excepcional."
+      },
+      {
+        "title": "Seguro y reclamos",
+        "content": "La cobertura basica esta incluida con todas las mudanzas. Opciones de seguro adicional estan disponibles para compra. Cualquier reclamo por dano debe reportarse dentro de las 24 horas posteriores a la entrega. No somos responsables por danos a articulos que fueron empacados inadecuadamente por el cliente."
+      },
+      {
+        "title": "Articulos prohibidos",
+        "content": "No transportamos materiales peligrosos, alimentos perecederos, plantas, mascotas ni sustancias ilegales. Las armas de fuego y municiones deben ser transportadas por el cliente. Nos reservamos el derecho de negarnos a transportar cualquier articulo que consideremos inseguro o inapropiado."
+      },
+      {
+        "title": "Resolucion de disputas",
+        "content": "Cualquier disputa que surja de nuestros servicios se abordara primero a traves de comunicacion directa con nuestro equipo de servicio al cliente. Si no se puede llegar a una resolucion, las disputas pueden estar sujetas a mediacion o arbitraje de acuerdo con la ley del estado de Florida."
+      },
+      {
+        "title": "Contactenos",
+        "content": "Si tiene alguna pregunta sobre estos Terminos y Condiciones, contactenos a info@rapidpandamovers.com o llamenos al (786) 585-4269.",
+        "hasContactLinks": true
+      },
+      {
+        "title": "Cambios a los terminos",
+        "content": "Nos reservamos el derecho de modificar estos Terminos y Condiciones en cualquier momento. Los cambios entraran en vigencia inmediatamente al publicarse en nuestro sitio web. Su uso continuado de nuestros servicios despues de cualquier cambio indica su aceptacion de los nuevos terminos."
+      }
+    ]
+  },
+  "compare": {
+    "hero": {
+      "title": "Compare mudanceros en Miami",
+      "description": "Vea como Rapid Panda Movers se compara con la competencia",
+      "cta": "Obtenga su cotizacion gratuita"
+    },
+    "overview": {
+      "titleBefore": "Por que comparar ",
+      "titleHighlight": "empresas de mudanzas",
+      "titleAfter": "?",
+      "description": "Elegir la empresa de mudanzas correcta es crucial para una reubicacion sin estres. Creemos en la transparencia, por eso hemos creado comparaciones honestas entre Rapid Panda Movers y otras empresas de mudanzas populares de Miami.",
+      "features": [
+        {
+          "title": "Comparaciones justas",
+          "description": "Analisis honesto lado a lado de servicios y precios"
+        },
+        {
+          "title": "Resenas reales",
+          "description": "Basadas en comentarios y calificaciones reales de clientes"
+        },
+        {
+          "title": "Decisiones informadas",
+          "description": "Toda la informacion que necesita para elegir con confianza"
+        }
+      ]
+    },
+    "compareList": {
+      "titleBefore": "Rapid Panda vs ",
+      "titleHighlight": "La Competencia",
+      "subtitle": "Haga clic en cualquier comparacion a continuacion para ver un analisis detallado",
+      "ctaText": "Ver comparacion"
+    },
+    "compareTable": {
+      "title": "Comparacion rapida",
+      "columns": [
+        "Calificacion",
+        "Precios transparentes",
+        "Con licencia y seguro"
+      ],
+      "rapidPandaRow": [
+        "4.9/5 (Verificado)",
+        "Si - sin cargos ocultos",
+        "Totalmente licenciado y asegurado"
+      ],
+      "reportsOfHiddenFees": "Reportes de cargos ocultos",
+      "varies": "Varia",
+      "checkCredentials": "Verificar credenciales",
+      "yes": "Si"
+    },
+    "quote": {
+      "title": "Listo para experimentar la diferencia Rapid Panda?",
+      "subtitle": "Obtenga una cotizacion gratuita y sin compromiso y descubra por que los residentes de Miami nos eligen sobre la competencia."
+    },
+    "verdict": {
+      "title": "Nuestro veredicto"
+    },
+    "relatedSection": {
+      "title": "Mas comparaciones"
+    }
+  },
+  "alternatives": {
+    "hero": {
+      "title": "Alternativas de mudanza",
+      "description": "Compare opciones de mudanza por cuenta propia con el servicio completo de mudanza y encuentre lo que es mejor para usted",
+      "cta": "Obtenga su cotizacion gratuita"
+    },
+    "overview": {
+      "titleBefore": "Rapid Panda Movers vs ",
+      "titleHighlight": "mudanza por cuenta propia",
+      "description": "Hay muchas formas de mover sus pertenencias. Desde alquilar un camion hasta contratar servicios de solo mano de obra o usar contenedores portatiles, cada opcion tiene ventajas y desventajas. Hemos analizado las alternativas mas populares para ayudarle a tomar una decision informada.",
+      "tipTitle": "La pregunta real que debe hacerse",
+      "tipContent": "Al comparar costos, considere el <strong>total real</strong>: tarifas de alquiler, kilometraje, combustible, seguro, materiales de empaque, su tiempo, esfuerzo fisico y estres. Las opciones DIY a menudo parecen mas baratas en papel pero pueden costar mas cuando considera todo."
+    },
+    "compareList": {
+      "titleBefore": "Alternativas populares de ",
+      "titleHighlight": "mudanza",
+      "subtitle": "Haga clic en cualquier opcion a continuacion para ver una comparacion detallada con el servicio completo de mudanza",
+      "ctaText": "Comparar con servicio completo",
+      "startingAt": "Desde:"
+    },
+    "compareTable": {
+      "title": "Comparacion rapida",
+      "columns": [
+        "Usted maneja",
+        "Mejor para",
+        "Rango de precios"
+      ],
+      "rows": [
+        {
+          "option": "Rapid Panda Movers",
+          "cells": [
+            "Nada - nosotros hacemos todo",
+            "La mayoria de personas, horarios ocupados",
+            "Tarifas competitivas"
+          ],
+          "highlight": true
+        },
+        {
+          "option": "PODS / 1-800-PACK-RAT",
+          "cells": [
+            "Empaque, carga, descarga",
+            "Plazos flexibles, necesidades de almacenamiento",
+            "$300 - $8,000"
+          ]
+        },
+        {
+          "option": "U-Haul Truck Rental",
+          "cells": [
+            "Todo + conducir",
+            "Presupuestos muy ajustados, mudanzas pequenas",
+            "$50 - $2,000+"
+          ]
+        },
+        {
+          "option": "HireAHelper",
+          "cells": [
+            "Transporte, empaque",
+            "Combinar con camion/contenedor",
+            "$339 - $705"
+          ]
+        },
+        {
+          "option": "U-Pack",
+          "cells": [
+            "Empaque, carga, descarga",
+            "Mudanzas de larga distancia 100+ millas",
+            "$700 - $6,600"
+          ]
+        }
+      ]
+    },
+    "verdict": {
+      "title": "Nuestro veredicto"
+    },
+    "relatedSection": {
+      "title": "Explore otras alternativas"
+    }
+  },
+  "quote": {
+    "hero": {
+      "title": "Obtenga su cotizacion de mudanza gratuita",
+      "description": "Complete el formulario a continuacion y le proporcionaremos una cotizacion detallada dentro de 24 horas",
+      "cta": "Ingrese sus codigos postales para comenzar"
+    }
+  },
+  "reservations": {
+    "hero": {
+      "title": "Reserve su mudanza hoy",
+      "description": "Servicios profesionales de mudanza con precios transparentes y horarios flexibles",
+      "cta": "Obtenga su cotizacion gratuita"
+    }
+  },
+  "moving_routes": {
+    "hero": {
+      "title": "Rutas de mudanza",
+      "description": "Explore nuestras rutas de mudanza populares con precios transparentes. Ya sea que se mude localmente dentro de Miami o se reubique a traves del pais, lo tenemos cubierto.",
+      "cta": "Obtenga su cotizacion gratuita"
+    },
+    "quote": {
+      "title": "No ve su ruta?",
+      "subtitle": "Servimos muchas mas ubicaciones. Contactenos para una cotizacion personalizada para su mudanza.",
+      "buttonText": "Obtenga una cotizacion personalizada"
+    },
+    "blogSection": {
+      "viewMoreTitle": "Mas consejos de mudanza",
+      "viewMoreSubtitle": "Explore nuestra coleccion completa de guias y consejos de mudanza",
+      "viewMoreButtonText": "Ver todos los consejos de mudanza"
+    }
+  },
+  "disclaimer": {
+    "title": "Aviso legal",
+    "content": "La informacion en este sitio web es solo para fines informativos generales. Aunque nos esforzamos por proporcionar informacion precisa y actualizada, no hacemos representaciones ni garantias de ningun tipo sobre la integridad, exactitud, confiabilidad o idoneidad de la informacion."
+  }
+}

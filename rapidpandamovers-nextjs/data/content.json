@@ -6,8 +6,14 @@
     "email": "info@rapidpandamovers.com",
     "address": "7001 North Waterway Dr #107 Miami, FL 33155",
     "hours": [
-      { "label": "Open Daily", "time": "8:00 AM – 8:00 PM" },
-      { "label": "After-Hours & Emergency", "time": "Available by Request" }
+      {
+        "label": "Open Daily",
+        "time": "8:00 AM – 8:00 PM"
+      },
+      {
+        "label": "After-Hours & Emergency",
+        "time": "Available by Request"
+      }
     ],
     "header": {
       "phoneSubtext": "Open Daily: 8AM - 8PM",
@@ -19,30 +25,70 @@
       "title": "Our Moving Process",
       "subtitle": "A simple, stress-free process designed to make your move as smooth as possible",
       "steps": [
-        { "step": "1", "title": "Get a Quote", "description": "Contact us for a free, no-obligation estimate based on your moving needs." },
-        { "step": "2", "title": "Schedule Your Move", "description": "Pick a date and time that works best for you. We offer flexible scheduling." },
-        { "step": "3", "title": "We Pack & Load", "description": "Our professional team carefully packs and loads your belongings." },
-        { "step": "4", "title": "Safe Delivery", "description": "We transport and unload everything at your new location with care." }
+        {
+          "step": "1",
+          "title": "Get a Quote",
+          "description": "Contact us for a free, no-obligation estimate based on your moving needs."
+        },
+        {
+          "step": "2",
+          "title": "Schedule Your Move",
+          "description": "Pick a date and time that works best for you. We offer flexible scheduling."
+        },
+        {
+          "step": "3",
+          "title": "We Pack & Load",
+          "description": "Our professional team carefully packs and loads your belongings."
+        },
+        {
+          "step": "4",
+          "title": "Safe Delivery",
+          "description": "We transport and unload everything at your new location with care."
+        }
       ]
     },
     "problems": {
       "title": "Common Moving Challenges",
       "subtitle": "Moving doesn't have to be stressful. Here are the problems we solve for you.",
       "items": [
-        { "title": "Stressful Planning", "description": "Coordinating logistics, timing, and packing can be overwhelming and time-consuming." },
-        { "title": "Risk of Damage", "description": "DIY moves often result in damaged furniture, broken items, and costly repairs." },
-        { "title": "Hidden Costs", "description": "Many movers add surprise fees after the job starts, blowing your budget." },
-        { "title": "Unreliable Service", "description": "No-shows, late arrivals, and unprofessional crews cause unnecessary headaches." }
+        {
+          "title": "Stressful Planning",
+          "description": "Coordinating logistics, timing, and packing can be overwhelming and time-consuming."
+        },
+        {
+          "title": "Risk of Damage",
+          "description": "DIY moves often result in damaged furniture, broken items, and costly repairs."
+        },
+        {
+          "title": "Hidden Costs",
+          "description": "Many movers add surprise fees after the job starts, blowing your budget."
+        },
+        {
+          "title": "Unreliable Service",
+          "description": "No-shows, late arrivals, and unprofessional crews cause unnecessary headaches."
+        }
       ]
     },
     "solutions": {
       "title": "How We Solve Them",
       "subtitle": "Our professional moving services are designed to eliminate stress and deliver results.",
       "items": [
-        { "title": "We Handle Everything", "description": "From planning to delivery, our experienced team manages every detail of your move." },
-        { "title": "Professional Care", "description": "Licensed movers with proper equipment and full insurance protect your belongings." },
-        { "title": "Transparent Pricing", "description": "Get your full quote upfront with no hidden fees or surprise charges." },
-        { "title": "Reliable Service", "description": "On-time arrivals, professional crews, and guaranteed satisfaction every time." }
+        {
+          "title": "We Handle Everything",
+          "description": "From planning to delivery, our experienced team manages every detail of your move."
+        },
+        {
+          "title": "Professional Care",
+          "description": "Licensed movers with proper equipment and full insurance protect your belongings."
+        },
+        {
+          "title": "Transparent Pricing",
+          "description": "Get your full quote upfront with no hidden fees or surprise charges."
+        },
+        {
+          "title": "Reliable Service",
+          "description": "On-time arrivals, professional crews, and guaranteed satisfaction every time."
+        }
       ]
     },
     "included": {
@@ -62,21 +108,52 @@
       "title": "Helpful Resources",
       "subtitle": "Everything you need to plan your move",
       "items": [
-        { "title": "FAQ", "description": "Answers to common questions about our moving services", "href": "/faq", "icon": "HelpCircle" },
-        { "title": "Blog", "description": "Moving tips, guides, and industry insights", "href": "/blog", "icon": "BookOpen" },
-        { "title": "Moving Tips", "description": "Expert advice for a smooth moving experience", "href": "/moving-tips", "icon": "Lightbulb" },
-        { "title": "Moving Checklist", "description": "Step-by-step guide to organize your move", "href": "/moving-checklist", "icon": "CheckSquare" },
-        { "title": "Moving Glossary", "description": "Definitions of moving industry terms", "href": "/moving-glossary", "icon": "BookMarked" },
-        { "title": "Moving Rates", "description": "Transparent pricing for all our services", "href": "/moving-rates", "icon": "DollarSign" },
-        { "title": "Customer Reviews", "description": "See what our customers say about us", "href": "/reviews", "icon": "Star" }
+        {
+          "title": "FAQ",
+          "description": "Answers to common questions about our moving services",
+          "href": "/faq",
+          "icon": "HelpCircle"
+        },
+        {
+          "title": "Blog",
+          "description": "Moving tips, guides, and industry insights",
+          "href": "/blog",
+          "icon": "BookOpen"
+        },
+        {
+          "title": "Moving Tips",
+          "description": "Expert advice for a smooth moving experience",
+          "href": "/moving-tips",
+          "icon": "Lightbulb"
+        },
+        {
+          "title": "Moving Checklist",
+          "description": "Step-by-step guide to organize your move",
+          "href": "/moving-checklist",
+          "icon": "CheckSquare"
+        },
+        {
+          "title": "Moving Glossary",
+          "description": "Definitions of moving industry terms",
+          "href": "/moving-glossary",
+          "icon": "BookMarked"
+        },
+        {
+          "title": "Moving Rates",
+          "description": "Transparent pricing for all our services",
+          "href": "/moving-rates",
+          "icon": "DollarSign"
+        },
+        {
+          "title": "Customer Reviews",
+          "description": "See what our customers say about us",
+          "href": "/reviews",
+          "icon": "Star"
+        }
       ]
     }
   },
   "home": {
-    "meta": {
-      "title": "Rapid Panda Movers | Miami Moving Company",
-      "description": "Professional moving services in Miami. Budget-friendly, reliable, and efficient local & long-distance moving, packing, and storage solutions."
-    },
     "hero": {
       "title": "#1 Family-Owned Moving Company in Miami",
       "description": "Low-cost moving & packing services",
@@ -86,59 +163,113 @@
     "why_choose_us": {
       "title": "Why Choose Rapid Panda Movers?",
       "benefits": [
-        { "icon": "Shield", "title": "Licensed & Insured", "desc": "Full licensing and comprehensive insurance coverage for your peace of mind." },
-        { "icon": "Users", "title": "Experienced Team", "desc": "Professional movers with years of experience in local and long-distance moves." },
-        { "icon": "DollarSign", "title": "Transparent Pricing", "desc": "No hidden fees or surprise charges. Get honest, upfront pricing every time." },
-        { "icon": "Clock", "title": "Reliable Scheduling", "desc": "On-time service with flexible scheduling options to fit your busy lifestyle." },
-        { "icon": "Phone", "title": "24/7 Customer Support", "desc": "Round-the-clock customer service to answer questions and provide assistance." },
-        { "icon": "CheckCircle", "title": "Satisfaction Guaranteed", "desc": "100% satisfaction guarantee with every move. Your happiness is our priority." }
+        {
+          "icon": "Shield",
+          "title": "Licensed & Insured",
+          "desc": "Full licensing and comprehensive insurance coverage for your peace of mind."
+        },
+        {
+          "icon": "Users",
+          "title": "Experienced Team",
+          "desc": "Professional movers with years of experience in local and long-distance moves."
+        },
+        {
+          "icon": "DollarSign",
+          "title": "Transparent Pricing",
+          "desc": "No hidden fees or surprise charges. Get honest, upfront pricing every time."
+        },
+        {
+          "icon": "Clock",
+          "title": "Reliable Scheduling",
+          "desc": "On-time service with flexible scheduling options to fit your busy lifestyle."
+        },
+        {
+          "icon": "Phone",
+          "title": "24/7 Customer Support",
+          "desc": "Round-the-clock customer service to answer questions and provide assistance."
+        },
+        {
+          "icon": "CheckCircle",
+          "title": "Satisfaction Guaranteed",
+          "desc": "100% satisfaction guarantee with every move. Your happiness is our priority."
+        }
       ]
     },
     "service_areas": {
       "title": "We Serve Miami-Dade County",
       "description": "Professional moving services throughout Miami and surrounding areas",
       "areas": [
-        "Miami", "Coral Gables", "Miami Beach", "Hialeah",
-        "Doral", "Aventura", "Kendall", "Homestead",
-        "Palmetto Bay", "Pinecrest", "South Beach", "Little Havana"
+        "Miami",
+        "Coral Gables",
+        "Miami Beach",
+        "Hialeah",
+        "Doral",
+        "Aventura",
+        "Kendall",
+        "Homestead",
+        "Palmetto Bay",
+        "Pinecrest",
+        "South Beach",
+        "Little Havana"
       ]
+    },
+    "reviewSection": {
+      "title": "What Our Customers Say"
+    },
+    "blogSection": {
+      "title": "Moving Tips & Insights",
+      "viewMoreButtonText": "View All Articles"
     }
   },
   "services": {
     "title": "Our Moving Services",
     "description": "Comprehensive moving solutions for every need",
-    "meta": {
-      "title": "Professional Moving Services in Miami | Rapid Panda Movers",
-      "description": "Local moving, apartment moves, packing, long-distance, commercial, and storage solutions in Miami. Transparent pricing."
-    },
     "content": "At Rapid Panda Movers, we understand that every move is unique. Whether you're relocating across town or across the country, our comprehensive range of moving services is designed to meet your specific needs. Our experienced team handles everything from careful packing and loading to safe transportation and unpacking, ensuring your belongings arrive at your new home in perfect condition.",
     "data_source": "services.json",
     "hero": {
-      "title": "Professional Moving Services in Miami",
-      "description": "From local moves to interstate relocations, we've got you covered",
+      "title": "Complete Moving Services in Miami",
+      "description": "From local moves to long-distance relocations, packing to storage - we provide comprehensive moving services designed to make your relocation stress-free and affordable.",
       "cta": "Get Your Free Quote"
+    },
+    "quote": {
+      "title": "Ready to Get Started?",
+      "subtitle": "Contact us today for a free quote and discover how affordable professional moving can be."
+    },
+    "locationQuote": {
+      "title": "Ready to Get Started?",
+      "subtitle": "Contact us today for a free quote for your {name} move."
     }
   },
   "locations": {
     "title": "Our Service Areas",
     "description": "Professional moving services throughout Miami-Dade County",
-    "meta": {
-      "title": "Service Areas | Rapid Panda Movers Miami",
-      "description": "Rapid Panda Movers serves all of Miami-Dade County including Miami, Hialeah, Coral Gables, Doral, Homestead, and more."
+    "content": "Rapid Panda Movers proudly serves the entire Miami-Dade County area, from the vibrant streets of Downtown Miami to the family-friendly suburbs of Kendall and Homestead. Our local expertise means we know the best routes, building regulations, and parking situations throughout the region, ensuring your move goes smoothly no matter where you're headed.",
+    "hero": {
+      "cta": "Get Your Free Quote"
     },
-    "content": "Rapid Panda Movers proudly serves the entire Miami-Dade County area, from the vibrant streets of Downtown Miami to the family-friendly suburbs of Kendall and Homestead. Our local expertise means we know the best routes, building regulations, and parking situations throughout the region, ensuring your move goes smoothly no matter where you're headed."
+    "overviewSection": {
+      "title": "Our Service Areas"
+    },
+    "quote": {
+      "title": "Ready to Move in Miami-Dade?",
+      "subtitle": "Contact us today for your free moving quote. We serve all areas of Miami-Dade County."
+    }
   },
   "about": {
     "title": "About Rapid Panda Movers",
     "description": "Your trusted moving partner in Miami",
-    "meta": {
-      "title": "About Us - Miami Moving Company | Rapid Panda Movers",
-      "description": "Learn about Rapid Panda Movers, a family-owned Miami moving company committed to excellence and serving our community since day one."
-    },
     "hero": {
-      "title": "Your Trusted Moving Partner in Miami",
-      "description": "Professional, reliable, and affordable moving services",
-      "cta": "Get Started with a Free Quote"
+      "title": "About Rapid Panda Moving",
+      "description": "Welcome to Rapid Panda Movers, where every move we make is guided by a commitment to excellence and a dedication to serving our community.",
+      "cta": "Get Your Free Quote"
+    },
+    "locationSection": {
+      "title": "Areas We Serve",
+      "description": "Rapid Panda Movers proudly serves all of Miami-Dade County and beyond"
+    },
+    "quote": {
+      "title": "Ready to Experience the Rapid Panda Difference?",
+      "subtitle": "Contact us today to learn more about how we can make your next move smooth and stress-free."
     },
     "story": {
       "title": "Our Story",
@@ -178,7 +309,7 @@
       "description": "Experienced professionals dedicated to your move",
       "qualities": [
         "Licensed and insured movers",
-        "Background-checked employees", 
+        "Background-checked employees",
         "Extensive training in moving techniques",
         "Customer service focused",
         "Local Miami expertise"
@@ -204,13 +335,13 @@
             "description": "Perfect for studio and 1-bedroom moves"
           },
           {
-            "service": "3 Movers + Truck", 
+            "service": "3 Movers + Truck",
             "rate": "$125/hour",
             "description": "Ideal for 2-3 bedroom homes"
           },
           {
             "service": "4 Movers + Truck",
-            "rate": "$155/hour", 
+            "rate": "$155/hour",
             "description": "Best for large homes and offices"
           }
         ]
@@ -255,15 +386,27 @@
         "rate": "$25 per elevator",
         "description": "For high-rise buildings"
       }
-    ]
+    ],
+    "additionalServicesSection": {
+      "title": "Additional Services",
+      "subtitle": "Optional services available for your specific moving needs"
+    },
+    "includedSection": {
+      "title": "What's Included in Your Move",
+      "subtitle": "Everything you need for a successful move, included in our transparent pricing"
+    },
+    "resourceSection": {
+      "title": "More Moving Resources",
+      "subtitle": "Explore our comprehensive guides and services for a successful move"
+    },
+    "quote": {
+      "title": "Ready to Get Your Free Quote?",
+      "subtitle": "Contact us today for a detailed, no-obligation estimate for your move."
+    }
   },
   "reviews": {
     "title": "What Our Customers Say",
     "description": "Real reviews from satisfied customers",
-    "meta": {
-      "title": "Customer Reviews | Rapid Panda Movers",
-      "description": "Read real reviews from our satisfied customers. See why Miami trusts Rapid Panda Movers for their local and long-distance moves."
-    },
     "stats": {
       "total_moves": "1000+",
       "customer_satisfaction": "98%",
@@ -298,15 +441,18 @@
         "rating": "A+",
         "reviewCount": 0
       }
+    },
+    "hero": {
+      "cta": "Get Your Free Quote"
+    },
+    "quote": {
+      "title": "Join Our Satisfied Customers",
+      "subtitle": "Experience the Rapid Panda difference. Get your free quote today and see why Miami trusts us with their moves."
     }
   },
   "faq": {
     "title": "Frequently Asked Questions",
     "description": "Common questions about our moving services",
-    "meta": {
-      "title": "Frequently Asked Questions | Rapid Panda Movers",
-      "description": "Find answers to common questions about our moving services, pricing, insurance, and more. Get the information you need for a stress-free move."
-    },
     "questions": [
       {
         "question": "How much does a local move cost?",
@@ -383,15 +529,22 @@
         "answer": "We're a family-owned Miami moving company with transparent pricing, experienced crews, and a 4.7/5 average rating across 56 verified reviews. We treat every move like it's our own.",
         "link": "/why-choose-us"
       }
-    ]
+    ],
+    "hero": {
+      "cta": "Get Your Free Quote"
+    },
+    "resourceSection": {
+      "title": "More Moving Resources",
+      "subtitle": "Explore our comprehensive guides and tips for a successful move"
+    },
+    "quote": {
+      "title": "Still Have Questions?",
+      "subtitle": "Our team is here to help! Contact us for personalized assistance with your move."
+    }
   },
   "tips": {
     "title": "Moving Tips & Resources",
     "description": "Expert advice to make your move easier",
-    "meta": {
-      "title": "Moving Tips & Resources | Rapid Panda Movers",
-      "description": "Expert moving tips, guides, and resources from Miami's trusted moving company. Everything you need for a smooth, stress-free move."
-    },
     "hero": {
       "title": "Moving Professionals Who Care",
       "description": "Low-cost moving & packing services",
@@ -429,7 +582,19 @@
           "Don't rush the unpacking process - take your time"
         ]
       }
-    ]
+    ],
+    "blogSection": {
+      "title": "Moving Tips Blog Posts",
+      "subtitle": "Read our latest moving tips and advice from the experts",
+      "viewMoreTitle": "More Moving Tips",
+      "viewMoreSubtitle": "Browse our full collection of moving tips and advice",
+      "viewMoreButtonText": "View All Moving Tips Posts",
+      "viewMoreLink": "/blog/category/moving-tips"
+    },
+    "resourceSection": {
+      "title": "More Moving Resources",
+      "subtitle": "Explore our comprehensive guides and services for a successful move"
+    }
   },
   "checklist": {
     "title": "Complete Moving Checklist",
@@ -667,7 +832,15 @@
       "Take photos of electronics before unplugging",
       "Pack an essentials box for the first few days",
       "Keep important documents with you during the move"
-    ]
+    ],
+    "resourceSection": {
+      "title": "More Moving Resources",
+      "subtitle": "Explore our comprehensive guides and services for a successful move"
+    },
+    "quote": {
+      "title": "Ready to Check 'Hire Movers' Off Your List?",
+      "subtitle": "Let Rapid Panda Movers handle the heavy lifting while you focus on everything else."
+    }
   },
   "glossary": {
     "title": "Moving Terms Glossary",
@@ -853,14 +1026,29 @@
         "term": "Valuation",
         "definition": "The tariff level of carrier liability that is based on the actual weight of your belongings. Valuation should not be considered the same thing as your insurance policy. The valuation of your belongings, in their worth, covers your goods for damage or loss if any negligence is taken on the carrier's part. However, it does not cover loss or damage due to Acts of God, such as extreme weather conditions, riots, strikes, or civil commotion. Valuation charges will compensate the mover for taking more liability for loss than the customer during the moving process."
       }
-    ]
+    ],
+    "hero": {
+      "cta": "Get Your Free Quote"
+    },
+    "resourceSection": {
+      "title": "More Moving Resources",
+      "subtitle": "Explore our comprehensive guides and services for a successful move"
+    },
+    "quote": {
+      "title": "Need Help With Your Move?",
+      "subtitle": "Now that you know the terminology, let us handle the logistics. Get a free quote today."
+    }
   },
   "contact": {
     "title": "Contact Rapid Panda Movers",
     "description": "Get in touch for your free moving quote",
-    "meta": {
-      "title": "Contact Us | Rapid Panda Movers",
-      "description": "Contact Rapid Panda Movers for a free moving quote. Call (786) 585-4269 or fill out our form."
+    "hero": {
+      "title": "Contact Rapid Panda Movers",
+      "description": "Ready to make your move? Get in touch with Miami's trusted moving professionals for a free quote and consultation.",
+      "cta": "Call (786) 585-4269"
+    },
+    "mapSection": {
+      "title": "Our Location"
     },
     "contact_info": {
       "phone": "786-585-4269",
@@ -873,7 +1061,7 @@
       "description": "Fill out the form below and we'll contact you within 24 hours with a detailed estimate.",
       "fields": [
         "Name",
-        "Phone Number", 
+        "Phone Number",
         "Email Address",
         "Move Date",
         "Origin Address",
@@ -887,34 +1075,47 @@
       "title": "Areas We Serve",
       "description": "Professional moving services throughout Miami-Dade County",
       "primary_areas": [
-        "Miami", "Coral Gables", "Miami Beach", "Hialeah",
-        "Doral", "Aventura", "Kendall", "Homestead"
+        "Miami",
+        "Coral Gables",
+        "Miami Beach",
+        "Hialeah",
+        "Doral",
+        "Aventura",
+        "Kendall",
+        "Homestead"
       ],
       "additional_areas": [
-        "Palmetto Bay", "Pinecrest", "South Beach", "Little Havana",
-        "Brickell", "Downtown Miami", "Wynwood", "Design District"
+        "Palmetto Bay",
+        "Pinecrest",
+        "South Beach",
+        "Little Havana",
+        "Brickell",
+        "Downtown Miami",
+        "Wynwood",
+        "Design District"
       ]
     }
   },
   "blog": {
     "title": "Moving Tips & Resources",
     "description": "Expert advice and insights for your next move",
-    "meta": {
-      "title": "Blog | Rapid Panda Movers",
-      "description": "Moving tips, guides, and insights from Miami's trusted moving company. Expert advice for your next move."
-    },
     "data_source": "blog.json",
     "hero": {
-      "title": "Moving Guides & Resources",
-      "description": "Expert advice and insights for your next move",
-      "cta": "Get Started with a Free Quote"
+      "title": "Moving Guides & Insights",
+      "description": "Expert advice and practical tips to make your move smooth and affordable",
+      "cta": "Get Your Free Quote"
+    },
+    "resourceSection": {
+      "title": "More Moving Resources",
+      "subtitle": "Explore our comprehensive guides and services for a successful move"
+    },
+    "relatedArticles": {
+      "title": "Related Articles",
+      "subtitle": "More helpful tips from this category",
+      "viewMoreButtonText": "View All Articles"
     }
   },
   "why_choose_us": {
-    "meta": {
-      "title": "Why Choose Rapid Panda Movers | Miami Moving Company",
-      "description": "Discover why Miami residents trust Rapid Panda Movers. Licensed, insured, transparent pricing, experienced crews, and 100% satisfaction guaranteed."
-    },
     "hero": {
       "title": "Why Choose Rapid Panda Movers?",
       "description": "Miami's most trusted moving company. Licensed, insured, and committed to making your move stress-free.",
@@ -925,75 +1126,205 @@
         "icon": "Shield",
         "title": "Licensed & Insured",
         "desc": "Full licensing and comprehensive insurance coverage for your peace of mind. We carry general liability and workers compensation insurance to protect you and your belongings.",
-        "details": ["Florida licensed mover", "Full liability coverage", "Workers compensation", "Cargo insurance available"]
+        "details": [
+          "Florida licensed mover",
+          "Full liability coverage",
+          "Workers compensation",
+          "Cargo insurance available"
+        ]
       },
       {
         "icon": "Users",
         "title": "Experienced Team",
         "desc": "Professional movers with years of experience in local and long-distance moves. Every team member is background-checked, drug-tested, and professionally trained.",
-        "details": ["Background-checked staff", "Ongoing training programs", "Average 5+ years experience", "Professional uniforms"]
+        "details": [
+          "Background-checked staff",
+          "Ongoing training programs",
+          "Average 5+ years experience",
+          "Professional uniforms"
+        ]
       },
       {
         "icon": "DollarSign",
         "title": "Transparent Pricing",
         "desc": "No hidden fees or surprise charges. Get honest, upfront pricing every time. We provide detailed written estimates so you know exactly what to expect.",
-        "details": ["Free in-home estimates", "No hidden fees", "Price match guarantee", "Written quotes provided"]
+        "details": [
+          "Free in-home estimates",
+          "No hidden fees",
+          "Price match guarantee",
+          "Written quotes provided"
+        ]
       },
       {
         "icon": "Clock",
         "title": "Reliable Scheduling",
         "desc": "On-time service with flexible scheduling options to fit your busy lifestyle. We show up when we say we will and keep you informed throughout.",
-        "details": ["On-time arrival guarantee", "Flexible scheduling", "Same-day availability", "Weekend moves available"]
+        "details": [
+          "On-time arrival guarantee",
+          "Flexible scheduling",
+          "Same-day availability",
+          "Weekend moves available"
+        ]
       },
       {
         "icon": "Phone",
         "title": "24/7 Customer Support",
         "desc": "Round-the-clock customer service to answer questions and provide assistance. From your first call to move completion, we're here for you.",
-        "details": ["24/7 phone support", "Dedicated move coordinator", "Real-time updates", "Post-move follow-up"]
+        "details": [
+          "24/7 phone support",
+          "Dedicated move coordinator",
+          "Real-time updates",
+          "Post-move follow-up"
+        ]
       },
       {
         "icon": "CheckCircle",
         "title": "Satisfaction Guaranteed",
         "desc": "100% satisfaction guarantee with every move. Your happiness is our priority. If something isn't right, we'll make it right.",
-        "details": ["100% satisfaction promise", "Issue resolution guarantee", "Quality assurance checks", "Money-back guarantee"]
+        "details": [
+          "100% satisfaction promise",
+          "Issue resolution guarantee",
+          "Quality assurance checks",
+          "Money-back guarantee"
+        ]
       }
     ],
     "promise_cards": [
-      { "title": "Before Your Move", "desc": "Free consultation, detailed quote, move planning assistance, and packing tips to help you prepare." },
-      { "title": "During Your Move", "desc": "Professional crews, careful handling, real-time updates, and on-site supervision for quality control." },
-      { "title": "After Your Move", "desc": "Follow-up call, satisfaction survey, and quick resolution of any concerns. We're here until you're settled." }
+      {
+        "title": "Before Your Move",
+        "desc": "Free consultation, detailed quote, move planning assistance, and packing tips to help you prepare."
+      },
+      {
+        "title": "During Your Move",
+        "desc": "Professional crews, careful handling, real-time updates, and on-site supervision for quality control."
+      },
+      {
+        "title": "After Your Move",
+        "desc": "Follow-up call, satisfaction survey, and quick resolution of any concerns. We're here until you're settled."
+      }
     ],
     "additional_reasons": [
-      { "icon": "Award", "title": "Award-Winning Service", "desc": "Recognized for excellence in customer service and moving quality." },
-      { "icon": "Heart", "title": "Family-Owned Business", "desc": "We treat your move like we'd treat our own family's move." },
-      { "icon": "Truck", "title": "Modern Equipment", "desc": "Well-maintained trucks and professional moving equipment." },
-      { "icon": "Package", "title": "Careful Handling", "desc": "Special care for fragile items, antiques, and valuables." },
-      { "icon": "MapPin", "title": "Local Expertise", "desc": "We know Miami inside and out - every neighborhood and building." },
-      { "icon": "Calendar", "title": "Flexible Options", "desc": "Full-service, labor-only, packing services, and more." },
-      { "icon": "Headphones", "title": "Personal Attention", "desc": "Dedicated coordinator assigned to your move from start to finish." },
-      { "icon": "FileCheck", "title": "Detailed Inventory", "desc": "Complete inventory documentation for your peace of mind." }
+      {
+        "icon": "Award",
+        "title": "Award-Winning Service",
+        "desc": "Recognized for excellence in customer service and moving quality."
+      },
+      {
+        "icon": "Heart",
+        "title": "Family-Owned Business",
+        "desc": "We treat your move like we'd treat our own family's move."
+      },
+      {
+        "icon": "Truck",
+        "title": "Modern Equipment",
+        "desc": "Well-maintained trucks and professional moving equipment."
+      },
+      {
+        "icon": "Package",
+        "title": "Careful Handling",
+        "desc": "Special care for fragile items, antiques, and valuables."
+      },
+      {
+        "icon": "MapPin",
+        "title": "Local Expertise",
+        "desc": "We know Miami inside and out - every neighborhood and building."
+      },
+      {
+        "icon": "Calendar",
+        "title": "Flexible Options",
+        "desc": "Full-service, labor-only, packing services, and more."
+      },
+      {
+        "icon": "Headphones",
+        "title": "Personal Attention",
+        "desc": "Dedicated coordinator assigned to your move from start to finish."
+      },
+      {
+        "icon": "FileCheck",
+        "title": "Detailed Inventory",
+        "desc": "Complete inventory documentation for your peace of mind."
+      }
     ],
     "comparison": {
       "title": "How We Compare",
       "columns": [
-        { "header": "Rapid Panda" },
-        { "header": "Other Movers" }
+        {
+          "header": "Rapid Panda"
+        },
+        {
+          "header": "Other Movers"
+        }
       ],
       "rows": [
-        { "option": "Transparent Pricing", "cells": ["Always included", "Sometimes"], "highlight": true },
-        { "option": "Background-Checked Crews", "cells": ["All staff verified", "Varies"] },
-        { "option": "On-Time Guarantee", "cells": ["Guaranteed", "Rarely offered"], "highlight": true },
-        { "option": "24/7 Support", "cells": ["Always available", "Limited hours"] },
-        { "option": "No Hidden Fees", "cells": ["Written guarantee", "Often fees added"], "highlight": true },
-        { "option": "Satisfaction Guarantee", "cells": ["100% guaranteed", "Limited or none"] }
+        {
+          "option": "Transparent Pricing",
+          "cells": [
+            "Always included",
+            "Sometimes"
+          ],
+          "highlight": true
+        },
+        {
+          "option": "Background-Checked Crews",
+          "cells": [
+            "All staff verified",
+            "Varies"
+          ]
+        },
+        {
+          "option": "On-Time Guarantee",
+          "cells": [
+            "Guaranteed",
+            "Rarely offered"
+          ],
+          "highlight": true
+        },
+        {
+          "option": "24/7 Support",
+          "cells": [
+            "Always available",
+            "Limited hours"
+          ]
+        },
+        {
+          "option": "No Hidden Fees",
+          "cells": [
+            "Written guarantee",
+            "Often fees added"
+          ],
+          "highlight": true
+        },
+        {
+          "option": "Satisfaction Guarantee",
+          "cells": [
+            "100% guaranteed",
+            "Limited or none"
+          ]
+        }
       ]
-    }
+    },
+    "whySection": {
+      "title": "The Rapid Panda Difference",
+      "subtitle": "We're not just another moving company. Here's what sets us apart and why thousands of Miami residents trust us with their moves."
+    },
+    "reviewSection": {
+      "title": "What Our Customers Say",
+      "subtitle": "Real reviews from real customers"
+    },
+    "includedSection": {
+      "title": "More Reasons to Trust Us"
+    },
+    "quote": {
+      "title": "Ready to Experience the Difference?",
+      "subtitle": "Join thousands of satisfied customers who chose Rapid Panda Movers for their Miami move."
+    },
+    "compareLink": "See detailed comparisons with specific competitors →"
   },
   "privacy": {
     "title": "Privacy Policy",
-    "meta": {
-      "title": "Privacy Policy | Rapid Panda Movers",
-      "description": "Privacy policy for Rapid Panda Movers. Learn how we collect, use, and protect your personal information."
+    "hero": {
+      "description": "At Rapid Panda Movers, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.",
+      "cta": "Get Your Free Quote"
     },
     "last_updated": "2025-01-01",
     "sections": [
@@ -1034,9 +1365,9 @@
   },
   "terms": {
     "title": "Terms & Conditions",
-    "meta": {
-      "title": "Terms & Conditions | Rapid Panda Movers",
-      "description": "Terms and conditions for Rapid Panda Movers. Read our terms and conditions for using our moving services."
+    "hero": {
+      "description": "Welcome to Rapid Panda Movers. By accessing our website or using our services, you agree to be bound by these Terms & Conditions. Please read them carefully before using our services.",
+      "cta": "Get Your Free Quote"
     },
     "last_updated": "2025-01-01",
     "sections": [
@@ -1084,21 +1415,172 @@
     ]
   },
   "compare": {
-    "meta": {
-      "title": "Compare Movers | Rapid Panda Movers vs Competitors",
-      "description": "Compare Rapid Panda Movers to other Miami moving companies. See side-by-side comparisons of services, pricing, and customer reviews."
+    "hero": {
+      "title": "Compare Miami Movers",
+      "description": "See how Rapid Panda Movers stacks up against the competition",
+      "cta": "Get Your Free Quote"
+    },
+    "overview": {
+      "titleBefore": "Why Compare ",
+      "titleHighlight": "Moving Companies",
+      "titleAfter": "?",
+      "description": "Choosing the right moving company is crucial for a stress-free relocation. We believe in transparency, so we've created honest comparisons between Rapid Panda Movers and other popular Miami moving companies.",
+      "features": [
+        {
+          "title": "Fair Comparisons",
+          "description": "Honest side-by-side analysis of services and pricing"
+        },
+        {
+          "title": "Real Reviews",
+          "description": "Based on actual customer feedback and ratings"
+        },
+        {
+          "title": "Informed Decisions",
+          "description": "All the info you need to choose confidently"
+        }
+      ]
+    },
+    "compareList": {
+      "titleBefore": "Rapid Panda vs ",
+      "titleHighlight": "The Competition",
+      "subtitle": "Click on any comparison below to see a detailed analysis",
+      "ctaText": "View Comparison"
+    },
+    "compareTable": {
+      "title": "Quick Comparison",
+      "columns": [
+        "Rating",
+        "Transparent Pricing",
+        "Licensed & Insured"
+      ],
+      "rapidPandaRow": [
+        "4.9/5 (Verified)",
+        "Yes - no hidden fees",
+        "Fully licensed & insured"
+      ],
+      "reportsOfHiddenFees": "Reports of hidden fees",
+      "varies": "Varies",
+      "checkCredentials": "Check credentials",
+      "yes": "Yes"
+    },
+    "quote": {
+      "title": "Ready to Experience the Rapid Panda Difference?",
+      "subtitle": "Get a free, no-obligation quote and see why Miami residents choose us over the competition."
+    },
+    "verdict": {
+      "title": "Our Verdict"
+    },
+    "relatedSection": {
+      "title": "More Comparisons"
     }
   },
   "alternatives": {
-    "meta": {
-      "title": "DIY Moving Alternatives vs Full-Service Movers",
-      "description": "Compare DIY moving options like PODS, U-Haul, and labor services to full-service movers. Find the best option for your move."
+    "hero": {
+      "title": "Moving Alternatives",
+      "description": "Compare DIY options to full-service moving and find what's right for you",
+      "cta": "Get Your Free Quote"
+    },
+    "overview": {
+      "titleBefore": "Rapid Panda Movers vs ",
+      "titleHighlight": "DIY Moving",
+      "description": "There are many ways to move your belongings. From renting a truck to hiring labor-only services to using portable containers, each option has trade-offs. We've analyzed the most popular alternatives to help you make an informed decision.",
+      "tipTitle": "The Real Question to Ask",
+      "tipContent": "When comparing costs, consider the <strong>true total</strong>: rental fees, mileage, fuel, insurance, packing supplies, your time, physical effort, and stress. DIY options often look cheaper on paper but can cost more when you factor in everything."
+    },
+    "compareList": {
+      "titleBefore": "Popular Moving ",
+      "titleHighlight": "Alternatives",
+      "subtitle": "Click on any option below to see a detailed comparison with full-service moving",
+      "ctaText": "Compare to Full-Service",
+      "startingAt": "Starting at:"
+    },
+    "compareTable": {
+      "title": "Quick Comparison",
+      "columns": [
+        "You Handle",
+        "Best For",
+        "Price Range"
+      ],
+      "rows": [
+        {
+          "option": "Rapid Panda Movers",
+          "cells": [
+            "Nothing - we do it all",
+            "Most people, busy schedules",
+            "Competitive rates"
+          ],
+          "highlight": true
+        },
+        {
+          "option": "PODS / 1-800-PACK-RAT",
+          "cells": [
+            "Packing, loading, unloading",
+            "Flexible timelines, storage needs",
+            "$300 - $8,000"
+          ]
+        },
+        {
+          "option": "U-Haul Truck Rental",
+          "cells": [
+            "Everything + driving",
+            "Very tight budgets, small moves",
+            "$50 - $2,000+"
+          ]
+        },
+        {
+          "option": "HireAHelper",
+          "cells": [
+            "Transportation, packing",
+            "Pairing with truck/container",
+            "$339 - $705"
+          ]
+        },
+        {
+          "option": "U-Pack",
+          "cells": [
+            "Packing, loading, unloading",
+            "Long-distance moves 100+ miles",
+            "$700 - $6,600"
+          ]
+        }
+      ]
+    },
+    "verdict": {
+      "title": "Our Verdict"
+    },
+    "relatedSection": {
+      "title": "Explore Other Alternatives"
     }
   },
   "quote": {
-    "meta": {
-      "title": "Get a Free Moving Quote | Rapid Panda Movers",
-      "description": "Request a free, no-obligation moving quote from Rapid Panda Movers. Get transparent pricing for your Miami move."
+    "hero": {
+      "title": "Get Your Free Moving Quote",
+      "description": "Fill out the form below and we'll provide you with a detailed quote within 24 hours",
+      "cta": "Enter your zip codes to get started"
+    }
+  },
+  "reservations": {
+    "hero": {
+      "title": "Book Your Move Today",
+      "description": "Professional moving services with transparent pricing and flexible scheduling",
+      "cta": "Get Your Free Quote"
+    }
+  },
+  "moving_routes": {
+    "hero": {
+      "title": "Moving Routes",
+      "description": "Browse our popular moving routes with transparent pricing. Whether you're moving locally within Miami or relocating across the country, we've got you covered.",
+      "cta": "Get Your Free Quote"
+    },
+    "quote": {
+      "title": "Don't See Your Route?",
+      "subtitle": "We serve many more locations. Contact us for a custom quote for your move.",
+      "buttonText": "Get a Custom Quote"
+    },
+    "blogSection": {
+      "viewMoreTitle": "More Moving Tips",
+      "viewMoreSubtitle": "Browse our full collection of moving guides and advice",
+      "viewMoreButtonText": "View All Moving Tips"
     }
   },
   "disclaimer": {

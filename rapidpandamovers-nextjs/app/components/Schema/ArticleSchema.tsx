@@ -9,6 +9,7 @@ interface ArticleSchemaProps {
   datePublished: string
   dateModified?: string
   author?: string
+  locale?: string
 }
 
 /**
@@ -22,6 +23,7 @@ export default function ArticleSchema({
   datePublished,
   dateModified,
   author,
+  locale,
 }: ArticleSchemaProps) {
   const schema = generateArticleSchema({
     title,
@@ -31,6 +33,7 @@ export default function ArticleSchema({
     datePublished,
     dateModified,
     author,
+    locale,
   })
 
   return <SchemaScript schema={schema} id="article-schema" />

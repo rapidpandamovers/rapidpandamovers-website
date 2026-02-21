@@ -8,6 +8,9 @@ import BlogSection from './BlogSection';
 import Breadcrumbs from './Breadcrumbs';
 import { RouteSchema } from './Schema';
 import { titleCase, getCityNameBySlug } from '@/lib/data';
+import { getMessages, getLocale } from 'next-intl/server';
+import { getTranslatedSlug } from '@/i18n/slug-map';
+import type { Locale } from '@/i18n/config';
 
 interface HouseSize {
   min_cost: number;
@@ -52,7 +55,9 @@ function getStateFromName(name: string): string {
   return 'FL';
 }
 
-export default function RoutePage({ route }: RoutePageProps) {
+export default async function RoutePage({ route }: RoutePageProps) {
+  const { ui, content } = (await getMessages()) as any;
+  const locale = await getLocale() as Locale;
   const fromCityTitle = titleCase(route.origin_name);
   const toCityTitle = titleCase(route.destination_name);
 
@@ -66,8 +71,8 @@ export default function RoutePage({ route }: RoutePageProps) {
 
   // Breadcrumb items
   const breadcrumbItems = [
-    { label: 'Routes', href: '/moving-routes' },
-    { label: `${fromCityTitle} to ${toCityTitle}` },
+    { label: ui.routes.breadcrumb, href: `/${getTranslatedSlug('moving-routes', locale)}` },
+    { label: `${fromCityTitle} ${ui.routes.to} ${toCityTitle}` },
   ];
 
   return (
@@ -82,10 +87,9 @@ export default function RoutePage({ route }: RoutePageProps) {
 
       {/* Hero Section */}
       <Hero
-        title={`${fromCityTitle} to ${toCityTitle} Movers`}
-        description={`Moving from ${fromCityTitle} to ${toCityTitle}? We provide professional moving services for this route with experienced crews and reliable service.`}
-        cta="Get Your Free Quote"
-        image_url="https://www.rapidpandamovers.com/wp-content/uploads/2024/11/about-us-rapid-panda.png"
+        title={ui.routes.toMovers.replace('{from}', fromCityTitle).replace('{to}', toCityTitle)}
+        description={ui.routes.routeDescription.replace('{from}', fromCityTitle).replace('{to}', toCityTitle)}
+        cta={content.moving_routes.hero.cta}
       />
 
       {/* Breadcrumbs */}
@@ -133,11 +137,11 @@ export default function RoutePage({ route }: RoutePageProps) {
         categoryFilterFallback={categoryFallback}
         showFeatured={false}
         showCategories={false}
-        title={`Moving Tips for ${fromCityTitle} to ${toCityTitle}`}
-        subtitle={`Helpful guides for your ${fromCityTitle} to ${toCityTitle} move`}
-        viewMoreTitle="More Moving Tips"
-        viewMoreSubtitle="Browse our full collection of moving guides and advice"
-        viewMoreButtonText="View All Moving Tips"
+        title={ui.routes.movingTipsFor.replace('{from}', fromCityTitle).replace('{to}', toCityTitle)}
+        subtitle={ui.routes.helpfulGuides.replace('{from}', fromCityTitle).replace('{to}', toCityTitle)}
+        viewMoreTitle={content.moving_routes.blogSection.viewMoreTitle}
+        viewMoreSubtitle={content.moving_routes.blogSection.viewMoreSubtitle}
+        viewMoreButtonText={content.moving_routes.blogSection.viewMoreButtonText}
         viewMoreLink="/blog"
       />
 

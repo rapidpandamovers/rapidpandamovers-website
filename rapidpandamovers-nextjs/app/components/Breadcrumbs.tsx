@@ -1,6 +1,7 @@
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
 import { ChevronRight, Home } from 'lucide-react'
 import { BreadcrumbSchema } from './Schema'
+import { getMessages } from 'next-intl/server'
 
 interface BreadcrumbItem {
   label: string
@@ -18,7 +19,7 @@ interface BreadcrumbsProps {
 /**
  * Breadcrumbs component with visual display and JSON-LD schema
  */
-export default function Breadcrumbs({
+export default async function Breadcrumbs({
   items,
   includeHome = true,
   includeSchema = true,
@@ -29,9 +30,11 @@ export default function Breadcrumbs({
     return null
   }
 
+  const { ui } = (await getMessages()) as any
+
   // Build full breadcrumb list
   const breadcrumbItems = includeHome
-    ? [{ label: 'Home', href: '/' }, ...items]
+    ? [{ label: ui.breadcrumbs.home, href: '/' }, ...items]
     : items
 
   const containerClasses = {
@@ -64,7 +67,7 @@ export default function Breadcrumbs({
                   // Linked item
                   <Link
                     href={item.href}
-                    className="text-orange-600 hover:text-orange-700 hover:underline flex items-center gap-1 truncate max-w-[200px]"
+                    className="text-orange-700 hover:text-orange-800 hover:underline flex items-center gap-1 truncate max-w-[200px]"
                   >
                     {isHome && <Home className="w-4 h-4 flex-shrink-0" />}
                     {!isHome && item.label}
