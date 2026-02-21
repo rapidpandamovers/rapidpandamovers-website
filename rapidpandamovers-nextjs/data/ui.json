@@ -308,6 +308,12 @@
       { "title": "Coconut Grove", "description": "Village charm moves" },
       { "title": "Wynwood", "description": "Arts district moves" },
       { "title": "Miami Beach", "description": "Coastal relocations" }
+    ],
+    "videoTitles": [
+      "Professional movers wrapping furniture",
+      "Rapid Panda Movers truck in Miami",
+      "Moving team carrying items into new home",
+      "Movers organizing boxes in customer's home"
     ]
   },
   "notFound": {
@@ -326,6 +332,18 @@
     "knowDifferentDesc": "Learn about our commitment to excellence, transparent pricing, and satisfaction guarantee.",
     "whyChoose": "Why Choose Rapid Panda",
     "learnMoreAboutUs": "Learn More About Us"
+  },
+  "images": {
+    "heroCollage": {
+      "slot1": "Professional movers carefully wrapping items for safe transport",
+      "slot2": "Rapid Panda Movers providing service to a customer",
+      "slot3": "Rapid Panda Movers team standing next to a moving truck"
+    },
+    "aboutCollage": {
+      "slot1": "Rapid Panda Movers team loading furniture into moving truck",
+      "slot2": "Professional movers carefully wrapping items for safe transport",
+      "slot3": "Rapid Panda Movers truck parked outside Miami residence"
+    }
   },
   "blog": {
     "readMore": "Read More",

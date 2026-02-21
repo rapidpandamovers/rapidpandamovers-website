@@ -85,7 +85,7 @@ export default async function AboutSection({ className = "", variant = "default"
               ))}
               <Link
                 href={`/${getTranslatedSlug('about-us', locale)}`}
-                className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+                className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white text-shadow-sm font-semibold px-6 py-3 rounded-lg transition-colors"
               >
                 {ui.about.learnMoreAboutUs}
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -99,6 +99,11 @@ export default async function AboutSection({ className = "", variant = "default"
                   slot1Src="/images/hero/1.jpg"
                   slot2Src="/images/hero/2.jpg"
                   slot3Src="/images/hero/3.jpg"
+                  alt={{
+                    slot1: ui.images?.aboutCollage?.slot1 ?? "Rapid Panda Movers team loading furniture into moving truck",
+                    slot2: ui.images?.aboutCollage?.slot2 ?? "Professional movers carefully wrapping items for safe transport",
+                    slot3: ui.images?.aboutCollage?.slot3 ?? "Rapid Panda Movers truck parked outside Miami residence",
+                  }}
                 />
               </div>
             </div>

@@ -34,7 +34,7 @@ export default async function Header() {
               />
             </Link>
 
-            <nav className="hidden lg:flex items-center space-x-4">
+            <nav className="hidden xl:flex items-center space-x-4">
               <Link href="/" className="text-gray-700 hover:text-orange-600 transition-colors uppercase">
                 {nav.header.home.label}
               </Link>
@@ -162,7 +162,7 @@ export default async function Header() {
                   <span className="text-xs text-gray-500 mt-1">{content.site.header.phoneSubtext}</span>
                 </div>
                 <div className="flex flex-col items-center">
-                  <Link href={`/${getTranslatedSlug('quote', locale)}`} className="flex items-center justify-center border border-orange-600 bg-orange-600 hover:bg-orange-700 hover:border-orange-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors w-44">
+                  <Link href={`/${getTranslatedSlug('quote', locale)}`} className="flex items-center justify-center border border-orange-600 bg-orange-600 hover:bg-orange-700 hover:border-orange-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors w-44 text-shadow-sm">
                     {nav.header.cta.quoteButton}
                   </Link>
                   <span className="text-xs text-gray-500 mt-1">{content.site.header.quoteSubtext}</span>
@@ -170,12 +170,21 @@ export default async function Header() {
               </div>
             </nav>
 
-            {/* Mobile menu button */}
-            <button className="md:hidden p-2">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
+            {/* Mobile/tablet: buttons + hamburger */}
+            <div className="flex xl:hidden items-center space-x-3">
+              <a href={`tel:${phoneTel}`} className="flex items-center justify-center space-x-2 border border-orange-700 text-orange-700 hover:bg-orange-600 hover:text-white font-semibold py-3 px-4 rounded-lg transition-colors">
+                <Phone className="w-4 h-4" />
+                <span>{phoneFormatted}</span>
+              </a>
+              <Link href={`/${getTranslatedSlug('quote', locale)}`} className="hidden md:flex items-center justify-center border border-orange-600 bg-orange-600 hover:bg-orange-700 hover:border-orange-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors text-shadow-sm">
+                {nav.header.cta.quoteButton}
+              </Link>
+              <button className="p-2">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </header>

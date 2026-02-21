@@ -120,7 +120,7 @@ export default async function PricingSection({ houseSizes, originCity, originZip
             <div key={index} className={`bg-white border rounded-lg p-6 text-center hover:shadow-lg transition-shadow relative ${category.popular ? 'border-orange-500 shadow-lg' : 'border-gray-200'}`}>
               {category.popular && (
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-medium">{ui.pricing.mostPopular}</span>
+                  <span className="bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-medium text-shadow-sm">{ui.pricing.mostPopular}</span>
                 </div>
               )}
               <H3 className="text-2xl font-bold text-gray-800 mb-2">
@@ -159,7 +159,7 @@ export default async function PricingSection({ houseSizes, originCity, originZip
                   ...(destinationZip && { destinationZip }),
                   size: category.key
                 }).toString()}`}
-                className={`block w-full py-3 px-4 rounded-lg font-semibold transition-colors text-center ${category.popular ? 'bg-orange-600 hover:bg-orange-700 text-white' : 'bg-gray-100 hover:bg-gray-200 text-gray-800'}`}
+                className={`block w-full py-3 px-4 rounded-lg font-semibold transition-colors text-center ${category.popular ? 'bg-orange-600 hover:bg-orange-700 text-white text-shadow-sm' : 'bg-gray-100 hover:bg-gray-200 text-gray-800'}`}
               >
                 {ui.buttons.reserveNow}
               </Link>

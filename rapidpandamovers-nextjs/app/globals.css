@@ -33,7 +33,7 @@
   }
 
   .btn-primary {
-    @apply bg-orange-600 hover:bg-orange-700 text-white font-medium py-3 px-6 rounded-lg transition-colors;
+    @apply bg-orange-600 hover:bg-orange-700 text-white font-medium py-3 px-6 rounded-lg transition-colors text-shadow-sm;
   }
 
   .btn-secondary {
@@ -54,8 +54,13 @@
   }
 
   .text-shadow-sm {
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
   }
+}
+
+/* Hide native video captions — rendered as custom React overlay instead */
+video::cue {
+  opacity: 0;
 }
 
 /* Prose styles for blog content */

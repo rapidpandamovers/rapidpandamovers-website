@@ -20,6 +20,14 @@ export const SITE_CONFIG = {
 }
 
 /**
+ * Get the site URL, using NEXT_PUBLIC_SITE_URL env var if set,
+ * falling back to SITE_CONFIG.domain for production.
+ */
+export function getSiteUrl(): string {
+  return process.env.NEXT_PUBLIC_SITE_URL || SITE_CONFIG.domain
+}
+
+/**
  * Get locale-specific metadata config
  */
 function getMetadataConfig(locale?: Locale) {
@@ -52,14 +60,15 @@ interface MetadataOptions {
  * Build hreflang alternates for a given English path
  */
 function buildAlternates(enPath: string): Record<string, string> {
+  const siteUrl = getSiteUrl()
   const languages: Record<string, string> = {
-    'x-default': `${SITE_CONFIG.domain}${enPath}`,
-    en: `${SITE_CONFIG.domain}${enPath}`,
+    'x-default': `${siteUrl}${enPath}`,
+    en: `${siteUrl}${enPath}`,
   }
   for (const loc of locales) {
     if (loc === defaultLocale) continue
     const translatedPath = translatePathname(enPath, 'en', loc)
-    languages[loc] = `${SITE_CONFIG.domain}/${loc}${translatedPath}`
+    languages[loc] = `${siteUrl}/${loc}${translatedPath}`
   }
   return languages
 }
@@ -69,7 +78,7 @@ function buildAlternates(enPath: string): Record<string, string> {
  */
 export function getCanonicalUrl(path: string): string {
   const cleanPath = path.startsWith('/') ? path : `/${path}`
-  return `${SITE_CONFIG.domain}${cleanPath}`
+  return `${getSiteUrl()}${cleanPath}`
 }
 
 /**
@@ -90,8 +99,9 @@ export function generatePageMetadata(options: MetadataOptions): Metadata {
 
   // For non-default locale, build the localized canonical URL
   const enPath = path.startsWith('/') ? path : `/${path}`
+  const siteUrl = getSiteUrl()
   const canonicalUrl = locale && locale !== defaultLocale
-    ? `${SITE_CONFIG.domain}/${locale}${translatePathname(enPath, 'en', locale)}`
+    ? `${siteUrl}/${locale}${translatePathname(enPath, 'en', locale)}`
     : getCanonicalUrl(path)
 
   const ogLocale = locale === 'es' ? 'es_US' : 'en_US'

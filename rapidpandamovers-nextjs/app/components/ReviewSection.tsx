@@ -270,7 +270,7 @@ export default function ReviewSection({
               </div>
               <Link
                 href={reviewsPath}
-                className="flex items-center justify-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                className="flex items-center justify-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-shadow-sm"
               >
                 {ui.buttons.viewAllReviews}
                 <ArrowRight className="w-4 h-4" />
@@ -349,7 +349,7 @@ export default function ReviewSection({
               onClick={() => setSelectedPlatform(null)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                 selectedPlatform === null
-                  ? 'bg-orange-600 text-white'
+                  ? 'bg-orange-600 text-white text-shadow-sm'
                   : 'bg-white text-gray-700 hover:bg-orange-50 hover:text-orange-600'
               }`}
             >
@@ -361,7 +361,7 @@ export default function ReviewSection({
                 onClick={() => setSelectedPlatform(platform)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors flex items-center gap-2 ${
                   selectedPlatform === platform
-                    ? 'bg-orange-600 text-white'
+                    ? 'bg-orange-600 text-white text-shadow-sm'
                     : 'bg-white text-gray-700 hover:bg-orange-50 hover:text-orange-600'
                 }`}
               >
@@ -391,13 +391,13 @@ export default function ReviewSection({
               <>
                 <button
                   onClick={prevSlide}
-                  className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-orange-600 hover:bg-orange-700 text-white p-2 rounded-full shadow-lg transition-colors"
+                  className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-orange-600 hover:bg-orange-700 text-white p-2 rounded-full shadow-lg transition-colors text-shadow-sm"
                 >
                   <ChevronLeft className="w-6 h-6" />
                 </button>
                 <button
                   onClick={nextSlide}
-                  className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-orange-600 hover:bg-orange-700 text-white p-2 rounded-full shadow-lg transition-colors"
+                  className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-orange-600 hover:bg-orange-700 text-white p-2 rounded-full shadow-lg transition-colors text-shadow-sm"
                 >
                   <ChevronRight className="w-6 h-6" />
                 </button>
@@ -478,7 +478,7 @@ export default function ReviewSection({
                         onClick={() => setCurrentPage(page)}
                         className={`w-10 h-10 flex items-center justify-center rounded-lg font-medium transition-colors ${
                           currentPage === page
-                            ? 'bg-orange-600 text-white'
+                            ? 'bg-orange-600 text-white text-shadow-sm'
                             : 'bg-white border border-gray-300 text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600'
                         }`}
                       >
@@ -518,7 +518,7 @@ export default function ReviewSection({
           <div className="text-center mt-12">
             <Link
               href={reviewsPath}
-              className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors"
+              className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors text-shadow-sm"
             >
               {ui.review.viewAllReviews}
               <ArrowRight className="w-5 h-5 ml-2" />

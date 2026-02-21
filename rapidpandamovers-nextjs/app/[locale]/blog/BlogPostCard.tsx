@@ -105,9 +105,9 @@ export default function BlogPostCard({ post, showExcerpt = true, showCategoryPil
         <BlogPostLink
           href={`/blog/${post.slug}`}
           className="text-orange-700 hover:text-orange-800 font-medium inline-flex items-center mt-auto"
-          aria-label={`${ui?.blog?.readMore || 'Read More'}: ${post.title}`}
+          aria-label={`${ui?.blog?.readFullArticle || 'Read Full Article'}: ${post.title}`}
         >
-          {ui?.blog?.readMore || 'Read More'}
+          {ui?.blog?.readFullArticle || 'Read Full Article'}
           <ArrowRight className="w-4 h-4 ml-1" />
         </BlogPostLink>
       </div>

@@ -61,7 +61,7 @@ export default function GlossarySection({ className = "", variant = 'preview' }:
                       onClick={() => scrollToLetter(letter)}
                       className={`px-3 py-2 rounded-lg font-medium text-sm transition-all ${
                         activeLetter === letter
-                          ? 'bg-orange-600 text-white'
+                          ? 'bg-orange-600 text-white text-shadow-sm'
                           : 'bg-white border border-gray-200 text-gray-700 hover:border-orange-600 hover:text-orange-700'
                       }`}
                     >
@@ -127,7 +127,7 @@ export default function GlossarySection({ className = "", variant = 'preview' }:
           <div className="text-center">
             <Link
               href="/moving-glossary"
-              className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+              className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors text-shadow-sm"
             >
               {ui.buttons.viewFullGlossary}
               <ArrowRight className="w-5 h-5 ml-2" />

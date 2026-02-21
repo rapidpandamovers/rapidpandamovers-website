@@ -50,7 +50,7 @@ export default async function QuoteSection({
           </a>
           <Link
             href={buttonHref}
-            className="border-2 border-white text-white font-bold py-4 px-8 rounded-lg hover:bg-orange-700 transition-colors text-center"
+            className="border-2 border-white text-white text-shadow-sm font-bold py-4 px-8 rounded-lg hover:bg-orange-700 transition-colors text-center"
           >
             {buttonText}
           </Link>

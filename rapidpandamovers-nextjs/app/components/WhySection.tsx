@@ -176,7 +176,7 @@ export default async function WhySection({
 
         {displayCtaLink && (
           <div className="text-center mt-10">
-            <Link href={displayCtaLink} className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+            <Link href={displayCtaLink} className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors text-shadow-sm">
               {displayCtaText}
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>

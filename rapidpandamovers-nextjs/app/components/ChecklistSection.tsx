@@ -290,7 +290,7 @@ export default function ChecklistSection({
             <div className="text-center">
               <Link
                 href="/moving-checklist"
-                className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white font-semibold px-8 py-4 rounded-lg transition-colors"
+                className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white font-semibold px-8 py-4 rounded-lg transition-colors text-shadow-sm"
               >
                 {ui.buttons.viewFullChecklist}
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -361,7 +361,7 @@ export default function ChecklistSection({
                 <button
                   onClick={handleDownloadPDF}
                   disabled={isGenerating}
-                  className="inline-flex items-center px-5 py-2.5 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="inline-flex items-center px-5 py-2.5 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-shadow-sm"
                 >
                   <Download className="w-5 h-5 mr-2" />
                   {isGenerating ? ui.buttons.generating : ui.buttons.downloadPdf}

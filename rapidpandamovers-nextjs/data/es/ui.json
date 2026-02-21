@@ -308,6 +308,12 @@
       { "title": "Coconut Grove", "description": "Mudanzas con encanto" },
       { "title": "Wynwood", "description": "Mudanzas en el distrito de arte" },
       { "title": "Miami Beach", "description": "Reubicaciones costeras" }
+    ],
+    "videoTitles": [
+      "Mudadores profesionales envolviendo muebles",
+      "Camión de mudanzas de Rapid Panda Movers en Miami",
+      "Equipo de mudanzas llevando artículos a un nuevo hogar",
+      "Mudadores organizando cajas en la casa del cliente"
     ]
   },
   "notFound": {
@@ -326,6 +332,18 @@
     "knowDifferentDesc": "Conozca nuestro compromiso con la excelencia, precios transparentes y garantía de satisfacción.",
     "whyChoose": "Por Qué Elegir Rapid Panda",
     "learnMoreAboutUs": "Más Información Sobre Nosotros"
+  },
+  "images": {
+    "heroCollage": {
+      "slot1": "Mudadores profesionales envolviendo artículos cuidadosamente para un transporte seguro",
+      "slot2": "Rapid Panda Movers brindando servicio a un cliente",
+      "slot3": "Equipo de Rapid Panda Movers junto a un camión de mudanzas"
+    },
+    "aboutCollage": {
+      "slot1": "Equipo de Rapid Panda Movers cargando muebles en el camión de mudanzas",
+      "slot2": "Mudadores profesionales envolviendo artículos cuidadosamente para un transporte seguro",
+      "slot3": "Camión de Rapid Panda Movers estacionado frente a una residencia de Miami"
+    }
   },
   "blog": {
     "readMore": "Leer Más",

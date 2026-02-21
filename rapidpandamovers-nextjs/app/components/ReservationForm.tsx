@@ -110,7 +110,7 @@ export default function ReservationForm() {
         <p className="text-gray-600 text-lg mb-6">
           {ui.forms.reservation.successDescription}
         </p>
-        <a href="/" className="inline-block bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors">
+        <a href="/" className="inline-block bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors text-shadow-sm">
           {ui.forms.reservation.returnHome}
         </a>
       </div>
@@ -527,7 +527,7 @@ export default function ReservationForm() {
         <button
           type="submit"
           disabled={isSubmitting || !turnstileToken}
-          className="mt-4 bg-orange-600 hover:bg-orange-700 text-white px-12 py-4 rounded-lg font-semibold text-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center"
+          className="mt-4 bg-orange-600 hover:bg-orange-700 text-white px-12 py-4 rounded-lg font-semibold text-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center text-shadow-sm"
         >
           {isSubmitting ? (
             <>

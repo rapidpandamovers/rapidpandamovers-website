@@ -24,7 +24,7 @@ export default function FeaturedPostCard({ post }: FeaturedPostCardProps) {
   const hasValidImage = post.featured && typeof post.featured === 'string' && post.featured.startsWith('/')
 
   return (
-    <article className="bg-orange-600 rounded-4xl overflow-hidden text-white group">
+    <article className="bg-orange-600 rounded-4xl overflow-hidden text-white group text-shadow-sm">
       <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-8">
       {/* Image - left */}
       <div className="p-8 pb-0 lg:pb-8 lg:pr-0">

@@ -6,7 +6,7 @@ import { routing } from '@/i18n/routing'
 import { getaiGrotesk } from '@/app/fonts'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
-import { SITE_CONFIG } from '@/lib/metadata'
+import { SITE_CONFIG, getSiteUrl } from '@/lib/metadata'
 import { translatePathname } from '@/i18n/slug-map'
 import { defaultLocale, type Locale } from '@/i18n/config'
 
@@ -21,12 +21,13 @@ export async function generateMetadata({
 
   const site = meta.site
   const ogLocale = locale === 'es' ? 'es_US' : 'en_US'
+  const siteUrl = getSiteUrl()
   const canonicalUrl = locale === defaultLocale
-    ? SITE_CONFIG.domain
-    : `${SITE_CONFIG.domain}/${locale}`
+    ? siteUrl
+    : `${siteUrl}/${locale}`
 
   return {
-    metadataBase: new URL(SITE_CONFIG.domain),
+    metadataBase: new URL(siteUrl),
     title: {
       default: site.defaultTitle,
       template: site.titleTemplate,
@@ -54,9 +55,9 @@ export async function generateMetadata({
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        'x-default': SITE_CONFIG.domain,
-        en: SITE_CONFIG.domain,
-        es: `${SITE_CONFIG.domain}/es`,
+        'x-default': siteUrl,
+        en: siteUrl,
+        es: `${siteUrl}/es`,
       },
     },
     openGraph: {

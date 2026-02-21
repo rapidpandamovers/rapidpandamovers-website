@@ -81,7 +81,7 @@ export default function QuoteForm({
       </div>
       <H3 className="text-xl font-bold text-gray-800 mb-2">{ui.forms.quote.successTitle}</H3>
       <p className="text-gray-600 mb-6">{ui.forms.quote.successDescription}</p>
-      <a href="/" className="inline-block bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors">
+      <a href="/" className="inline-block bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors text-shadow-sm">
         {ui.forms.quote.returnHome}
       </a>
     </div>
@@ -238,7 +238,7 @@ export default function QuoteForm({
       <button
         type="submit"
         disabled={isSubmitting || !turnstileToken}
-        className="w-full bg-orange-600 text-white font-bold py-4 text-lg rounded-lg hover:bg-orange-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+        className="w-full bg-orange-600 text-white font-bold py-4 text-lg rounded-lg hover:bg-orange-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center text-shadow-sm"
       >
         {isSubmitting ? (
           <>
@@ -279,7 +279,7 @@ export default function QuoteForm({
         </div>
       </div>
 
-      <div className="mt-8 bg-orange-600 text-white rounded-lg p-6">
+      <div className="mt-8 bg-orange-600 text-white text-shadow-sm rounded-lg p-6">
         <H3 className="text-xl font-bold mb-4">{ui.forms.quote.whyChooseTitle}</H3>
         <ul className="space-y-2 text-sm">
           {(ui.forms.quote.whyChooseItems as string[]).map((item: string, index: number) => (

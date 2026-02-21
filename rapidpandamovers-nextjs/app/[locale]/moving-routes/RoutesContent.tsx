@@ -173,7 +173,7 @@ export default function RoutesContent({ currentPage, fromLocation }: RoutesConte
                 href={`/${movingRoutesSlug}`}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   !routeType
-                    ? 'bg-orange-600 text-white'
+                    ? 'bg-orange-600 text-white text-shadow-sm'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -183,7 +183,7 @@ export default function RoutesContent({ currentPage, fromLocation }: RoutesConte
                 href={`/${movingRoutesSlug}?type=long-distance`}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   routeType === 'long-distance'
-                    ? 'bg-orange-600 text-white'
+                    ? 'bg-orange-600 text-white text-shadow-sm'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -193,7 +193,7 @@ export default function RoutesContent({ currentPage, fromLocation }: RoutesConte
                 href={`/${movingRoutesSlug}?type=local`}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   routeType === 'local'
-                    ? 'bg-orange-600 text-white'
+                    ? 'bg-orange-600 text-white text-shadow-sm'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -274,7 +274,7 @@ export default function RoutesContent({ currentPage, fromLocation }: RoutesConte
                           href={getPageUrl(page)}
                           className={`w-10 h-10 flex items-center justify-center rounded-lg font-medium transition-colors ${
                             currentPage === page
-                              ? 'bg-orange-600 text-white'
+                              ? 'bg-orange-600 text-white text-shadow-sm'
                               : 'bg-white border border-gray-300 text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600'
                           }`}
                         >
@@ -318,7 +318,7 @@ export default function RoutesContent({ currentPage, fromLocation }: RoutesConte
             </p>
             <Link
               href={`/${movingRoutesSlug}`}
-              className="inline-flex items-center px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors"
+              className="inline-flex items-center px-6 py-3 bg-orange-600 text-white text-shadow-sm font-semibold rounded-lg hover:bg-orange-700 transition-colors"
             >
               {ui.routes.viewAllRoutes}
             </Link>
@@ -335,7 +335,7 @@ export default function RoutesContent({ currentPage, fromLocation }: RoutesConte
             </p>
             <Link
               href={getPageUrl(1)}
-              className="inline-flex items-center px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors"
+              className="inline-flex items-center px-6 py-3 bg-orange-600 text-white text-shadow-sm font-semibold rounded-lg hover:bg-orange-700 transition-colors"
             >
               {ui.routes.viewPage1}
             </Link>

@@ -95,7 +95,7 @@ export default function NewsletterSection({
                 <button
                   type="submit"
                   disabled={isSubmitting || !turnstileToken}
-                  className="bg-orange-600 hover:bg-orange-700 disabled:bg-orange-300 text-white font-semibold px-6 py-3 rounded-lg transition-colors flex items-center justify-center"
+                  className="bg-orange-600 hover:bg-orange-700 disabled:bg-orange-300 text-white font-semibold px-6 py-3 rounded-lg transition-colors flex items-center justify-center text-shadow-sm"
                 >
                   {isSubmitting ? (
                     <Loader2 className="w-5 h-5 animate-spin" />

@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import { Play, Pause, X, ChevronLeft, ChevronRight } from 'lucide-react'
-import { useMessages } from 'next-intl'
+import { useMessages, useLocale } from 'next-intl'
 import { H2, H3 } from '@/app/components/Heading'
 
 interface MediaItem {
@@ -58,6 +58,7 @@ export default function MediaSection({
   variant = 'default'
 }: MediaSectionProps) {
   const { ui } = useMessages() as any
+  const locale = useLocale()
   const displayTitle = title ?? ui.media.defaultTitle
   const displayDescription = description ?? ui.media.defaultDescription
   const items: MediaItem[] = itemsProp ?? ui.media.defaultItems.map((item: any, index: number) => ({
@@ -68,7 +69,20 @@ export default function MediaSection({
   }))
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
   const [playingVideoIndex, setPlayingVideoIndex] = useState<number | null>(null)
+  const [captionsEnabled, setCaptionsEnabled] = useState<Set<number>>(new Set())
   const scrollRef = useRef<HTMLDivElement>(null)
+
+  const toggleCaptions = useCallback((index: number) => {
+    setCaptionsEnabled(prev => {
+      const next = new Set(prev)
+      if (next.has(index)) {
+        next.delete(index)
+      } else {
+        next.add(index)
+      }
+      return next
+    })
+  }, [])
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
@@ -138,12 +152,16 @@ export default function MediaSection({
         if (video) {
           if (playingVideoIndex === index) {
             video.pause()
+            if (video.textTracks?.[0]) video.textTracks[0].mode = 'hidden'
+            setCaptionsEnabled(prev => { const next = new Set(prev); next.delete(index); return next })
             setPlayingVideoIndex(null)
           } else {
-            // Pause any other playing video
+            // Pause any other playing video and hide its captions
             if (playingVideoIndex !== null) {
               const prev = videoRefs.current.get(playingVideoIndex)
               prev?.pause()
+              if (prev?.textTracks?.[0]) prev.textTracks[0].mode = 'hidden'
+              setCaptionsEnabled(prev2 => { const next = new Set(prev2); next.delete(playingVideoIndex); return next })
             }
             video.play()
             setPlayingVideoIndex(index)
@@ -244,11 +262,24 @@ export default function MediaSection({
                           playsInline
                           loop
                           preload="metadata"
+                          aria-label={item.title || `Video ${index + 1}`}
                           className="absolute inset-0 w-full h-full object-cover"
                           onEnded={() => setPlayingVideoIndex(null)}
                         >
                           <source src={toWebm(item.src)} type="video/webm" />
                           <source src={item.src} type="video/mp4" />
+                          {(() => {
+                            const match = item.src.match(/\/(\d+)\.mp4$/)
+                            if (!match) return null
+                            return (
+                              <track
+                                kind="captions"
+                                src={`/videos/captions/${match[1]}-${locale}.vtt`}
+                                srcLang={locale}
+                                label={locale === 'es' ? 'Español' : 'English'}
+                              />
+                            )
+                          })()}
                         </video>
 
                         {/* Play/Pause Button Overlay */}
@@ -261,6 +292,30 @@ export default function MediaSection({
                             )}
                           </div>
                         </div>
+
+                        {/* CC Toggle — only visible while playing */}
+                        {playingVideoIndex === index && (
+                          <>
+                            <button
+                              onClick={(e) => { e.stopPropagation(); toggleCaptions(index) }}
+                              className={`absolute bottom-3 right-3 z-30 px-1.5 py-0.5 rounded text-xs font-bold border transition-colors ${
+                                captionsEnabled.has(index)
+                                  ? 'bg-white text-black border-white'
+                                  : 'bg-black/40 text-white/70 border-white/40 hover:text-white hover:border-white'
+                              }`}
+                              aria-label={captionsEnabled.has(index) ? 'Disable captions' : 'Enable captions'}
+                            >
+                              CC
+                            </button>
+                            {captionsEnabled.has(index) && item.title && (
+                              <div className="absolute bottom-10 left-3 right-3 z-30 text-center pointer-events-none">
+                                <span className="inline-block bg-black/70 text-white text-xs px-2 py-1 rounded">
+                                  [{item.title}]
+                                </span>
+                              </div>
+                            )}
+                          </>
+                        )}
                       </>
                     ) : !enableModal && item.type === 'video' && playingVideoIndex === index ? (
                       /* YouTube Video Player (inline mode) */
@@ -362,10 +417,23 @@ export default function MediaSection({
                 <video
                   controls
                   autoPlay
+                  aria-label={items[activeIndex].title || `Video ${activeIndex + 1}`}
                   className="w-full h-full rounded-lg"
                 >
                   <source src={toWebm(items[activeIndex].src)} type="video/webm" />
                   <source src={items[activeIndex].src} type="video/mp4" />
+                  {(() => {
+                    const match = items[activeIndex].src.match(/\/(\d+)\.mp4$/)
+                    if (!match) return null
+                    return (
+                      <track
+                        kind="captions"
+                        src={`/videos/captions/${match[1]}-${locale}.vtt`}
+                        srcLang={locale}
+                        label={locale === 'es' ? 'Español' : 'English'}
+                      />
+                    )
+                  })()}
                 </video>
               </div>
             ) : items[activeIndex].type === 'video' ? (

@@ -121,7 +121,7 @@ export default function ReviewsListPage({ currentPage, platform }: ReviewsListPa
               href={`/${reviewsSlug}`}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                 !platform
-                  ? 'bg-orange-600 text-white'
+                  ? 'bg-orange-600 text-white text-shadow-sm'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -133,7 +133,7 @@ export default function ReviewsListPage({ currentPage, platform }: ReviewsListPa
                 href={`/${reviewsSlug}/${p}`}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors flex items-center gap-2 ${
                   platform === p
-                    ? 'bg-orange-600 text-white'
+                    ? 'bg-orange-600 text-white text-shadow-sm'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -181,7 +181,7 @@ export default function ReviewsListPage({ currentPage, platform }: ReviewsListPa
                         href={getPageUrl(page)}
                         className={`w-10 h-10 flex items-center justify-center rounded-lg font-medium transition-colors ${
                           currentPage === page
-                            ? 'bg-orange-600 text-white'
+                            ? 'bg-orange-600 text-white text-shadow-sm'
                             : 'bg-white border border-gray-300 text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600'
                         }`}
                       >

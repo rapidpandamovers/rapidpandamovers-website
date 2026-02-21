@@ -78,7 +78,7 @@ export default function BlogHeroImage({ featured, title, category, date, readTim
         <a
           href={backUrl}
           onClick={handleBackClick}
-          className="absolute top-6 left-6 md:top-8 md:left-8 inline-flex items-center bg-orange-600 text-white text-sm font-medium px-4 py-1.5 rounded-full hover:bg-orange-700 transition-colors cursor-pointer z-10"
+          className="absolute top-6 left-6 md:top-8 md:left-8 inline-flex items-center bg-orange-600 text-white text-sm font-medium px-4 py-1.5 rounded-full hover:bg-orange-700 transition-colors cursor-pointer z-10 text-shadow-sm"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
           {ui?.blog?.backToBlog || 'Back to Blog'}

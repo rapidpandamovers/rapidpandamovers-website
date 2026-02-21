@@ -217,7 +217,7 @@ export default async function BlogListPage({ currentPage, category = null, locat
                     href={getPageUrl(page as number)}
                     className={`w-10 h-10 flex items-center justify-center rounded-lg font-medium transition-colors ${
                       currentPage === page
-                        ? 'bg-orange-600 text-white'
+                        ? 'bg-orange-600 text-white text-shadow-sm'
                         : 'bg-white border border-gray-300 text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600'
                     }`}
                   >

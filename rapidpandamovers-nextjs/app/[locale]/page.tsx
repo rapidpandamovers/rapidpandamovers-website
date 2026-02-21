@@ -27,7 +27,7 @@ export async function generateMetadata() {
 
 export default async function Home() {
   const locale = await getLocale() as Locale
-  const { content } = (await getMessages()) as any
+  const { content, ui } = (await getMessages()) as any
 
   return (
     <>
@@ -44,10 +44,10 @@ export default async function Home() {
         enableModal={false}
         description=""
         items={[
-          { type: 'video', src: '/videos/1.mp4' },
-          { type: 'video', src: '/videos/2.mp4' },
-          { type: 'video', src: '/videos/3.mp4' },
-          { type: 'video', src: '/videos/4.mp4' },
+          { type: 'video', src: '/videos/1.mp4', title: ui.media?.videoTitles?.[0] ?? 'Professional movers wrapping furniture' },
+          { type: 'video', src: '/videos/2.mp4', title: ui.media?.videoTitles?.[1] ?? 'Rapid Panda Movers truck in Miami' },
+          { type: 'video', src: '/videos/3.mp4', title: ui.media?.videoTitles?.[2] ?? 'Moving team carrying items into new home' },
+          { type: 'video', src: '/videos/4.mp4', title: ui.media?.videoTitles?.[3] ?? 'Movers organizing boxes in customer\'s home' },
         ]}
       />
       {/* Reviews Section */}

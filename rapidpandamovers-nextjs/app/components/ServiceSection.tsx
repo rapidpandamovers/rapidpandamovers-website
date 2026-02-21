@@ -96,7 +96,7 @@ export default async function ServiceSection({ location, variant = 'preview', hi
                   </H3>
                   <p className="text-gray-600 text-center">{service.description}</p>
                 </div>
-                <div className="text-white font-medium flex items-center justify-center py-3">
+                <div className="text-white text-shadow-sm font-medium flex items-center justify-center py-3">
                   {ui.services.learnMore}
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -155,7 +155,7 @@ export default async function ServiceSection({ location, variant = 'preview', hi
                   </H3>
                   <p className="text-gray-600 text-center">{service.description}</p>
                 </div>
-                <div className="text-white font-medium flex items-center justify-center py-3">
+                <div className="text-white text-shadow-sm font-medium flex items-center justify-center py-3">
                   {ui.services.learnMore}
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -200,7 +200,7 @@ export default async function ServiceSection({ location, variant = 'preview', hi
                   </H3>
                   <p className="text-gray-600 text-center">{service.description}</p>
                 </div>
-                <div className="text-white font-medium flex items-center justify-center py-3">
+                <div className="text-white text-shadow-sm font-medium flex items-center justify-center py-3">
                   {ui.services.learnMore}
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -208,7 +208,7 @@ export default async function ServiceSection({ location, variant = 'preview', hi
             ))}
           </div>
           <div className="text-center mt-12">
-            <Link href={`/${servicesSlug}/${location.slug}`} className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+            <Link href={`/${servicesSlug}/${location.slug}`} className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white text-shadow-sm font-semibold py-3 px-8 rounded-lg transition-colors">
               {ui.services.viewAllServicesIn.replace('{name}', location.name)}
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
@@ -260,7 +260,7 @@ export default async function ServiceSection({ location, variant = 'preview', hi
         </div>
 
         <div className="text-center mt-12">
-          <Link href={`/${servicesSlug}`} className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+          <Link href={`/${servicesSlug}`} className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white text-shadow-sm font-semibold py-3 px-8 rounded-lg transition-colors">
             {ui.services.viewAllServices}
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>

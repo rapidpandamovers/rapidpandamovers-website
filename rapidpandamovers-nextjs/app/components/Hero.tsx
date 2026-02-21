@@ -84,6 +84,11 @@ export default function Hero({
               slot3Src={resolved[2].webp}
               slot3Fallback={resolved[2].jpg}
               variant={collageVariant}
+              alt={{
+                slot1: ui.images?.heroCollage?.slot1 ?? "Professional movers carefully wrapping items for safe transport",
+                slot2: ui.images?.heroCollage?.slot2 ?? "Rapid Panda Movers providing service to a customer",
+                slot3: ui.images?.heroCollage?.slot3 ?? "Rapid Panda Movers team standing next to a moving truck",
+              }}
             />
           </div>
           
@@ -119,7 +124,7 @@ export default function Hero({
               </div>
               <Link
                 href={quoteUrl}
-                className="block w-full bg-orange-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-orange-700 transition-colors text-center"
+                className="block w-full bg-orange-600 text-white text-shadow-sm font-bold py-3 px-6 rounded-lg hover:bg-orange-700 transition-colors text-center"
               >
                 {ui.buttons.getFreeQuote}
               </Link>
