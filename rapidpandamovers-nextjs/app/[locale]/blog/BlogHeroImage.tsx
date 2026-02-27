@@ -86,7 +86,7 @@ export default function BlogHeroImage({ featured, title, category, date, readTim
 
         {/* Title Overlay */}
         <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-white">
-          <span className="inline-block bg-white text-orange-700 text-sm font-medium px-4 py-1.5 rounded-full mb-4">
+          <span className="inline-block bg-white text-orange-600 text-sm font-medium px-4 py-1.5 rounded-full mb-4">
             {category}
           </span>
 
@@ -120,12 +120,12 @@ export default function BlogHeroImage({ featured, title, category, date, readTim
         <a
           href={backUrl}
           onClick={handleBackClick}
-          className="inline-flex items-center text-orange-700 hover:text-orange-800 mb-4 transition-colors cursor-pointer"
+          className="inline-flex items-center text-orange-600 hover:text-orange-800 mb-4 transition-colors cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
           {ui?.blog?.backToBlog || 'Back to Blog'}
         </a>
-        <span className="inline-block bg-white text-orange-700 text-sm font-medium px-4 py-1.5 rounded-full mb-4 border border-orange-700">
+        <span className="inline-block bg-white text-orange-600 text-sm font-medium px-4 py-1.5 rounded-full mb-4 border border-orange-600">
           {category}
         </span>
         <H1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 leading-tight text-gray-900">

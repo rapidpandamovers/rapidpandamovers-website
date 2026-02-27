@@ -180,11 +180,11 @@ export default function MediaSection({
 
   return (
     <>
-      <section className={`pt-20 px-4 md:px-6 lg:px-8 ${className}`}>
+      <section className={`pt-20 ${className}`}>
         <div className="container mx-auto">
           {/* Header */}
           {(displayTitle || displayDescription) && variant === 'left' ? (
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10 px-6 md:px-0">
               <div>
                 {displayTitle && (
                   <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
@@ -199,7 +199,7 @@ export default function MediaSection({
               </div>
             </div>
           ) : (displayTitle || displayDescription) && (
-            <div className="text-center mb-10">
+            <div className="text-left md:text-center mb-10 px-6 md:px-0">
               {displayTitle && (
                 <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                   {displayTitle}
@@ -238,8 +238,8 @@ export default function MediaSection({
               ref={scrollRef}
               className={`flex gap-4 pb-4 ${
                 showArrows || showDots || autoScroll
-                  ? 'overflow-x-auto scrollbar-hide snap-x snap-mandatory px-1 pt-1'
-                  : 'overflow-visible p-1'
+                  ? 'overflow-x-auto scrollbar-hide snap-x snap-mandatory px-6 scroll-pl-6 pt-1 md:px-1 md:scroll-pl-0'
+                  : 'overflow-x-auto scrollbar-hide snap-x snap-mandatory px-6 scroll-pl-6 pt-1 md:grid md:grid-cols-4 md:overflow-visible md:snap-none md:p-0 md:scroll-pl-0'
               }`}
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
@@ -249,10 +249,10 @@ export default function MediaSection({
                 <div
                   key={index}
                   onClick={() => handleCardClick(index, item)}
-                  className={`group ${isStaticMode ? 'flex-1' : 'flex-shrink-0'} ${showArrows || showDots || autoScroll ? 'snap-start p-1' : ''} ${enableModal || item.type === 'video' ? 'cursor-pointer' : 'cursor-default'}`}
+                  className={`group ${isStaticMode ? 'flex-shrink-0 md:flex-1 snap-start p-1 md:p-0' : 'flex-shrink-0 snap-start p-1'} ${enableModal || item.type === 'video' ? 'cursor-pointer' : 'cursor-default'}`}
                 >
                   {/* Story Card */}
-                  <div className={`relative rounded-4xl overflow-hidden bg-black outline outline-2 outline-transparent group-hover:outline-orange-500 transition-all ${isStaticMode ? 'w-full h-[500px]' : 'w-64 h-96 md:w-[calc(25vw-32px)] md:max-w-[280px] md:h-[400px]'}`}>
+                  <div className={`relative rounded-4xl overflow-hidden bg-black outline outline-2 outline-transparent group-hover:outline-orange-500 transition-all ${isStaticMode ? 'w-[56vw] h-96 md:w-full md:min-w-0 md:h-[500px]' : 'w-[56vw] h-96 md:w-[calc(25vw-32px)] md:max-w-[280px] md:h-[400px]'}`}>
                     {/* Local Video */}
                     {item.type === 'video' && isLocalVideo(item.src) ? (
                       <>
@@ -266,8 +266,8 @@ export default function MediaSection({
                           className="absolute inset-0 w-full h-full object-cover"
                           onEnded={() => setPlayingVideoIndex(null)}
                         >
-                          <source src={toWebm(item.src)} type="video/webm" />
-                          <source src={item.src} type="video/mp4" />
+                          <source src={`${toWebm(item.src)}#t=0.1`} type="video/webm" />
+                          <source src={`${item.src}#t=0.1`} type="video/mp4" />
                           {(() => {
                             const match = item.src.match(/\/(\d+)\.mp4$/)
                             if (!match) return null

@@ -17,7 +17,6 @@ images:
   - "/images/blog/2024/10/pool-table-moving-disassembly-transport-and-setup/close-up-of-billiard-balls-and-cue-stick-1.webp"
   - "/images/blog/2024/10/pool-table-moving-disassembly-transport-and-setup/competitive-billiards-game-in-a-modern-p-2.webp"
   - "/images/blog/2024/10/pool-table-moving-disassembly-transport-and-setup/vibrant-billiard-balls-neatly-arranged-o-3.webp"
-
 service_link: "/pool-table-moving"
 location_link: null
 status: "pending"

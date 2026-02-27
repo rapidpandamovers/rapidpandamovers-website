@@ -82,11 +82,11 @@ export default async function RatingSection({
           </H2>
 
           {/* Ratings */}
-          <div className="flex flex-wrap gap-4">
+          <div className="grid grid-cols-3 gap-2 md:flex md:flex-wrap md:gap-4">
             {ratings.map((rating, index) => (
               <div
                 key={index}
-                className="flex items-center gap-3 bg-white border border-gray-200 rounded-xl px-4 py-3"
+                className="flex items-center justify-center gap-2 md:gap-3 bg-white border border-gray-200 rounded-xl px-2 py-2 md:px-4 md:py-3"
               >
                 {/* Platform Icon */}
                 <div className="flex-shrink-0">
@@ -96,9 +96,9 @@ export default async function RatingSection({
                 {/* Rating Info */}
                 <div className="flex flex-col">
                   <div className="flex items-center gap-2">
-                    <span className="text-2xl font-bold text-gray-900">{rating.rating}</span>
+                    <span className="text-lg md:text-2xl font-bold text-gray-900">{rating.rating}</span>
                     {rating.rating !== 'A+' && (
-                      <div className="flex items-center">
+                      <div className="hidden md:flex items-center">
                         {[...Array(5)].map((_, i) => (
                           <Star key={i} className="w-3.5 h-3.5 text-orange-600 fill-current" />
                         ))}

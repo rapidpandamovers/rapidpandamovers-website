@@ -66,7 +66,7 @@ export default function ResourceSection({
                 href={resource.href}
                 className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-xl hover:bg-orange-50 transition-colors"
               >
-                <span className="text-orange-700"><ResourceIcon name={resource.icon} /></span>
+                <span className="text-orange-600"><ResourceIcon name={resource.icon} /></span>
                 <span className="font-medium text-gray-800">{resource.title}</span>
               </Link>
             ))}
@@ -80,11 +80,11 @@ export default function ResourceSection({
     return (
       <section className={`pt-20 ${className}`}>
         <div className="container mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 px-6 md:px-0">
             <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">{displayTitle}</H2>
             <p className="text-lg text-gray-600">{displaySubtitle}</p>
           </div>
-          <div className="bg-gray-50 rounded-4xl p-8">
+          <div className="bg-gray-50 rounded-4xl p-6 md:p-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {displayResources.map((resource) => (
                 <Link
@@ -92,7 +92,7 @@ export default function ResourceSection({
                   href={resource.href}
                   className="group flex items-center gap-4 bg-white rounded-2xl p-5 hover:bg-orange-50 transition-colors"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center text-orange-700 group-hover:bg-orange-700 group-hover:text-white transition-colors">
+                  <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center text-orange-600 group-hover:bg-orange-700 group-hover:text-white transition-colors">
                     <ResourceIcon name={resource.icon} />
                   </div>
                   <div className="flex-1 min-w-0">
@@ -114,11 +114,11 @@ export default function ResourceSection({
   return (
     <section className={`pt-20 ${className}`}>
       <div className="container mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 px-6 md:px-0">
           <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">{displayTitle}</H2>
           <p className="text-lg text-gray-600">{displaySubtitle}</p>
         </div>
-        <div className="bg-gray-50 rounded-4xl p-8">
+        <div className="bg-gray-50 rounded-4xl p-6 md:p-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {displayResources.map((resource) => (
               <Link
@@ -126,7 +126,7 @@ export default function ResourceSection({
                 href={resource.href}
                 className="group flex items-center gap-4 bg-white rounded-2xl p-5 hover:bg-orange-50 transition-colors"
               >
-                <div className="flex-shrink-0 w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center text-orange-700 group-hover:bg-orange-700 group-hover:text-white transition-colors">
+                <div className="flex-shrink-0 w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center text-orange-600 group-hover:bg-orange-700 group-hover:text-white transition-colors">
                   <ResourceIcon name={resource.icon} />
                 </div>
                 <div className="flex-1 min-w-0">

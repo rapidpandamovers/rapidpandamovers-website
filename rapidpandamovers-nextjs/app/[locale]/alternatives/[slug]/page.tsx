@@ -127,11 +127,12 @@ export default async function AlternativePage({ params }: PageProps) {
         conTitle={ui.compare.consOf.replace('{name}', alternative.alternative.name)}
         bestFor={alternative.best_for}
         costComparison={alternative.cost_comparison}
+        className="!pt-8"
       />
 
       {/* Why Full-Service is Better */}
       <WhySection
-        title={<>{ui.alternatives.whyFullServiceBefore}<span className="text-orange-700">{ui.alternatives.whyFullServiceHighlight}</span>{ui.alternatives.whyFullServiceAfter}</>}
+        title={<>{ui.alternatives.whyFullServiceBefore}<span className="text-orange-600">{ui.alternatives.whyFullServiceHighlight}</span>{ui.alternatives.whyFullServiceAfter}</>}
         benefits={alternative.why_full_service_better}
         ctaText={ui.alternatives.seeWhyDifferent}
       />

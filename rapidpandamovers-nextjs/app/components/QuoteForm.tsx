@@ -229,12 +229,6 @@ export default function QuoteForm({
         </div>
       )}
 
-      <TurnstileWidget
-        ref={turnstileRef}
-        onVerify={setTurnstileToken}
-        onExpire={() => setTurnstileToken('')}
-      />
-
       <button
         type="submit"
         disabled={isSubmitting || !turnstileToken}
@@ -249,6 +243,12 @@ export default function QuoteForm({
           ui.forms.quote.submitButton
         )}
       </button>
+
+      <TurnstileWidget
+        ref={turnstileRef}
+        onVerify={setTurnstileToken}
+        onExpire={() => setTurnstileToken('')}
+      />
     </form>
   )
 

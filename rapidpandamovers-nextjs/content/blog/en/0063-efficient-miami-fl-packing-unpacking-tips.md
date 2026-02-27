@@ -468,7 +468,7 @@ Depending on your needs, you might also consider:
 
 - [**Miami Packing Services**](/miami-packing-services) - Full-service packing for Miami residents
 - [**Local Moving**](/miami-local-moving) - Same-city relocations in Miami-Dade
-- [**Storage Solutions**](/storage-solutions) - Short and long-term storage options
+- [**Storage Solutions**](/miami-storage-solutions) - Short and long-term storage options
 
 ## Get Your Free Quote
 

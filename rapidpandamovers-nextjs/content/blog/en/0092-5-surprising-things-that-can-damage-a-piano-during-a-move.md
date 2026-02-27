@@ -18,7 +18,6 @@ images:
   - "/images/blog/2024/11/5-surprising-things-that-can-damage-a-piano-during-a-move/close-up-of-piano-keys-with-an-open-shee-2.webp"
   - "/images/blog/2024/11/5-surprising-things-that-can-damage-a-piano-during-a-move/high-resolution-close-up-of-piano-keys-s-1.webp"
   - "/images/blog/2024/11/5-surprising-things-that-can-damage-a-piano-during-a-move/musician-s-hands-playing-wooden-piano-ke-5.webp"
-
 service_link: "/piano-moving"
 location_link: null
 status: "pending"

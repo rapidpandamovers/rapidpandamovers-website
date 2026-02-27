@@ -115,7 +115,7 @@ export default function RoutesContent({ currentPage, fromLocation }: RoutesConte
   // Pagination numbers (same logic as reviews/blog)
   const getPaginationNumbers = (): (number | string)[] => {
     const pages: (number | string)[] = [];
-    const edgeCount = 2;
+    const edgeCount = 1;
     const surroundCount = 1;
 
     const showEllipsisStart = currentPage > edgeCount + surroundCount + 1;
@@ -150,7 +150,7 @@ export default function RoutesContent({ currentPage, fromLocation }: RoutesConte
       {fromLocation && (
         <div className="pt-20">
           <div className="container mx-auto">
-            <div className="bg-orange-50 rounded-2xl p-4 flex items-center justify-center gap-2 text-orange-700">
+            <div className="bg-orange-50 rounded-2xl p-4 flex items-center justify-center gap-2 text-orange-600">
               <MapPin className="w-5 h-5" />
               <span>{ui.routes.showingRoutesFrom.split('{location}')[0]}<strong>{titleCase(fromLocation)}</strong>{ui.routes.showingRoutesFrom.split('{location}')[1]}</span>
               <Link
@@ -234,7 +234,7 @@ export default function RoutesContent({ currentPage, fromLocation }: RoutesConte
                           {ui.routes.startingFrom.replace('{cost}', cost.toLocaleString())}
                         </p>
                       )}
-                      <div className="text-orange-700 group-hover:text-orange-700 font-medium flex items-center">
+                      <div className="text-orange-600 group-hover:text-orange-600 font-medium flex items-center">
                         {ui.routes.viewRoute}
                         <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                       </div>
@@ -246,33 +246,33 @@ export default function RoutesContent({ currentPage, fromLocation }: RoutesConte
             {/* Pagination */}
             {totalPages > 1 && (
               <>
-                <div className="flex items-center justify-center gap-2 mt-12">
+                <div className="flex items-center justify-center gap-1 md:gap-2 mt-12">
                   {currentPage > 1 ? (
                     <Link
                       href={getPageUrl(currentPage - 1)}
-                      className="flex items-center px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600 transition-colors"
+                      className="flex items-center px-2 py-2 md:px-4 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600 transition-colors"
                     >
-                      <ChevronLeft className="w-4 h-4 mr-1" />
-                      {ui.pagination.previous}
+                      <ChevronLeft className="w-4 h-4 md:mr-1" />
+                      <span className="hidden md:inline">{ui.pagination.previous}</span>
                     </Link>
                   ) : (
-                    <span className="flex items-center px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-400 cursor-not-allowed opacity-50">
-                      <ChevronLeft className="w-4 h-4 mr-1" />
-                      {ui.pagination.previous}
+                    <span className="flex items-center px-2 py-2 md:px-4 rounded-lg border border-gray-300 bg-white text-gray-400 cursor-not-allowed opacity-50">
+                      <ChevronLeft className="w-4 h-4 md:mr-1" />
+                      <span className="hidden md:inline">{ui.pagination.previous}</span>
                     </span>
                   )}
 
                   <div className="flex items-center gap-1">
                     {getPaginationNumbers().map((page, idx) => (
                       typeof page === 'string' ? (
-                        <span key={`ellipsis-${idx}`} className="w-10 h-10 flex items-center justify-center text-gray-500">
+                        <span key={`ellipsis-${idx}`} className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center text-gray-500 text-sm md:text-base">
                           ...
                         </span>
                       ) : (
                         <Link
                           key={page}
                           href={getPageUrl(page)}
-                          className={`w-10 h-10 flex items-center justify-center rounded-lg font-medium transition-colors ${
+                          className={`w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-lg font-medium text-sm md:text-base transition-colors ${
                             currentPage === page
                               ? 'bg-orange-600 text-white text-shadow-sm'
                               : 'bg-white border border-gray-300 text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600'
@@ -287,15 +287,15 @@ export default function RoutesContent({ currentPage, fromLocation }: RoutesConte
                   {currentPage < totalPages ? (
                     <Link
                       href={getPageUrl(currentPage + 1)}
-                      className="flex items-center px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600 transition-colors"
+                      className="flex items-center px-2 py-2 md:px-4 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600 transition-colors"
                     >
-                      {ui.pagination.next}
-                      <ChevronRight className="w-4 h-4 ml-1" />
+                      <span className="hidden md:inline">{ui.pagination.next}</span>
+                      <ChevronRight className="w-4 h-4 md:ml-1" />
                     </Link>
                   ) : (
-                    <span className="flex items-center px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-400 cursor-not-allowed opacity-50">
-                      {ui.pagination.next}
-                      <ChevronRight className="w-4 h-4 ml-1" />
+                    <span className="flex items-center px-2 py-2 md:px-4 rounded-lg border border-gray-300 bg-white text-gray-400 cursor-not-allowed opacity-50">
+                      <span className="hidden md:inline">{ui.pagination.next}</span>
+                      <ChevronRight className="w-4 h-4 md:ml-1" />
                     </span>
                   )}
                 </div>

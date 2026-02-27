@@ -19,7 +19,6 @@ images:
   - "/images/blog/2024/10/7-appliance-moving-mistakes-that-damage-your-home/high-tech-washing-machines-in-a-los-ange-2.webp"
   - "/images/blog/2024/10/7-appliance-moving-mistakes-that-damage-your-home/man-pouring-liquid-detergent-into-a-stac-3.webp"
   - "/images/blog/2024/10/7-appliance-moving-mistakes-that-damage-your-home/stylish-commercial-washing-machines-in-a-4.webp"
-
 service_link: "/appliance-moving"
 location_link: null
 status: "pending"

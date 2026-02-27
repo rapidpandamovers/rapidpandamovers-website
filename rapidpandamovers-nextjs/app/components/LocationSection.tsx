@@ -46,7 +46,7 @@ export default async function LocationSection({ city, title, description, varian
       <section className="pt-20">
         <div className="container mx-auto">
           {!hideHeader && (
-            <div className="text-center mb-10">
+            <div className="text-center mb-10 px-6 md:px-0">
               <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
                 {ui.location.neighborhoodsTitle.replace('{city}', city.name)}
               </H2>
@@ -92,7 +92,7 @@ export default async function LocationSection({ city, title, description, varian
       <section className="pt-20">
         <div className="container mx-auto">
           {!hideHeader && (
-            <div className="text-center mb-10">
+            <div className="text-center mb-10 px-6 md:px-0">
               <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
                 {title || ui.location.defaultTitle}
               </H2>
@@ -120,7 +120,7 @@ export default async function LocationSection({ city, title, description, varian
           {remainingCount > 0 && (
             <Link
               href={`/${locationsSlug}`}
-              className="block bg-orange-50 rounded-2xl py-6 mt-4 text-center text-orange-700 hover:bg-orange-100 font-semibold text-lg transition-colors"
+              className="block bg-orange-50 rounded-2xl py-6 px-6 md:px-0 mt-4 text-center text-orange-600 hover:bg-orange-100 font-semibold text-lg transition-colors"
             >
               {ui.location.moreAreas}
             </Link>
@@ -141,7 +141,7 @@ export default async function LocationSection({ city, title, description, varian
       <section className="pt-20">
         <div className="container mx-auto">
           {!hideHeader && (
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10 px-6 md:px-0">
               <div>
                 <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
                   {title || ui.location.defaultTitle}
@@ -154,7 +154,7 @@ export default async function LocationSection({ city, title, description, varian
               </div>
               <Link
                 href={`/${locationsSlug}`}
-                className="inline-flex items-center text-orange-700 hover:text-orange-800 font-semibold mt-4 md:mt-0"
+                className="inline-flex items-center text-orange-600 hover:text-orange-800 font-semibold mt-4 md:mt-0"
               >
                 {ui.location.viewAll}
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -180,7 +180,7 @@ export default async function LocationSection({ city, title, description, varian
           {remainingCount > 0 && (
             <Link
               href={`/${locationsSlug}`}
-              className="block bg-orange-50 rounded-2xl py-6 mt-4 text-center text-orange-700 hover:bg-orange-100 font-semibold text-lg transition-colors"
+              className="block bg-orange-50 rounded-2xl py-6 px-6 md:px-0 mt-4 text-center text-orange-600 hover:bg-orange-100 font-semibold text-lg transition-colors"
             >
               {ui.location.moreAreas}
             </Link>
@@ -197,7 +197,7 @@ export default async function LocationSection({ city, title, description, varian
     <section className="pt-20">
       <div className="container mx-auto">
         {!hideHeader && (
-          <div className="text-center mb-10">
+          <div className="text-center mb-10 px-6 md:px-0">
             <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
               {title || ui.location.defaultTitle}
             </H2>

@@ -59,7 +59,7 @@ export default async function BlogLocationPaginatedPage({
   if (pageNum === 1) {
     redirect(`/blog/${getTranslatedSlug('location', locale)}/${encodeURIComponent(slug)}`)
   }
-  const posts = getPostsByLocation(slug)
+  const posts = getPostsByLocation(slug, locale)
   const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE)
   if (isNaN(pageNum) || pageNum < 1 || pageNum > totalPages) {
     notFound()

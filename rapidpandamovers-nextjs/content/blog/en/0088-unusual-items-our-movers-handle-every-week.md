@@ -18,7 +18,6 @@ images:
   - "/images/blog/2024/11/unusual-items-our-movers-handle-every-week/a-humorous-view-of-a-red-mask-inside-a-r-4.webp"
   - "/images/blog/2024/11/unusual-items-our-movers-handle-every-week/artistic-close-up-of-a-handmade-crab-cla-5.webp"
   - "/images/blog/2024/11/unusual-items-our-movers-handle-every-week/vivid-yellow-and-green-buddha-s-hand-cit-3.webp"
-
 service_link: "/specialty-item-moving"
 location_link: null
 status: "pending"

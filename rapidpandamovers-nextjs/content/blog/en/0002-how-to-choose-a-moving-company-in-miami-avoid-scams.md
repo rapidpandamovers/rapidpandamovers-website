@@ -227,7 +227,7 @@ Looking for professional moving help in Miami? Explore our services:
 
 - [Local Moving](/miami-local-moving) - Full-service moves within Miami-Dade County
 - [Packing Services](/miami-packing-services) - Professional packing to protect your belongings
-- [Residential Moving](/residential-moving) - Comprehensive home moving solutions
+- [Residential Moving](/miami-residential-moving) - Comprehensive home moving solutions
 
 ## Ready to Move Without the Worry?
 

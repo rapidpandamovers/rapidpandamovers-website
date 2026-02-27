@@ -234,7 +234,7 @@ Yes, we specialize in Miami condo moves. Our team is familiar with building requ
 Depending on your moving needs, you might also consider:
 
 - [**Local Moving**](/miami-local-moving) - Efficient same-city relocations throughout Miami-Dade
-- [**Long-Distance Moving**](/long-distance-moving) - Interstate relocations to or from Miami
+- [**Long-Distance Moving**](/miami-long-distance-moving) - Interstate relocations to or from Miami
 - [**Packing Services**](/miami-packing-services) - Professional packing for a stress-free move
 - [**Commercial Moving**](/miami-commercial-moving) - Office and business relocations
 

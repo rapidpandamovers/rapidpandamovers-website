@@ -10,6 +10,7 @@ interface CompareSectionProps {
   conTitle?: string;
   bestFor?: string[];
   costComparison?: string;
+  className?: string;
 }
 
 const bgColors = ['bg-orange-50', 'bg-gray-50']
@@ -22,14 +23,15 @@ export default async function CompareSection({
   conTitle,
   bestFor,
   costComparison,
+  className = '',
 }: CompareSectionProps) {
   const { ui } = (await getMessages()) as any;
   return (
-    <section className="pt-20">
+    <section className={`pt-20 ${className}`}>
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Pros */}
-          <div className={`${bgColors[0]} rounded-4xl p-8`}>
+          <div className={`${bgColors[0]} rounded-4xl p-6 md:p-8`}>
             <H3 className="text-xl font-bold text-gray-800 mb-4">
               {proTitle || `${name} Pros`}
             </H3>
@@ -44,7 +46,7 @@ export default async function CompareSection({
           </div>
 
           {/* Cons */}
-          <div className={`${bgColors[1]} rounded-4xl p-8`}>
+          <div className={`${bgColors[1]} rounded-4xl p-6 md:p-8`}>
             <H3 className="text-xl font-bold text-gray-800 mb-4">
               {conTitle || `${name} Cons`}
             </H3>
@@ -61,7 +63,7 @@ export default async function CompareSection({
 
         {/* Best For (optional) */}
         {bestFor && bestFor.length > 0 && (
-          <div className={`${bgColors[0]} rounded-4xl p-8 mt-8`}>
+          <div className={`${bgColors[0]} rounded-4xl p-6 md:p-8 mt-8`}>
             <H3 className="text-xl font-bold text-gray-800 mb-4">
               {ui.compare.bestFor.replace('{name}', name)}
             </H3>
@@ -78,7 +80,7 @@ export default async function CompareSection({
 
         {/* Cost Comparison (optional) */}
         {costComparison && (
-          <div className={`${bgColors[1]} rounded-4xl p-8 mt-8`}>
+          <div className={`${bgColors[1]} rounded-4xl p-6 md:p-8 mt-8`}>
             <H3 className="text-xl font-bold text-gray-800 mb-4">
               {ui.compare.realCostComparison}
             </H3>

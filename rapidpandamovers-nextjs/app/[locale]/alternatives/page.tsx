@@ -48,7 +48,7 @@ export default async function AlternativesPage() {
       />
 
       {/* Introduction */}
-      <OverviewSection title={<>{content.alternatives.overview.titleBefore}<span className="text-orange-700">{content.alternatives.overview.titleHighlight}</span></>}>
+      <OverviewSection title={<>{content.alternatives.overview.titleBefore}<span className="text-orange-600">{content.alternatives.overview.titleHighlight}</span></>}>
         <p className="text-xl text-gray-600 mb-8">
           {content.alternatives.overview.description}
         </p>
@@ -63,7 +63,7 @@ export default async function AlternativesPage() {
 
       {/* Alternatives Grid */}
       <CompareList
-        title={<>{content.alternatives.compareList.titleBefore}<span className="text-orange-700">{content.alternatives.compareList.titleHighlight}</span></>}
+        title={<>{content.alternatives.compareList.titleBefore}<span className="text-orange-600">{content.alternatives.compareList.titleHighlight}</span></>}
         subtitle={content.alternatives.compareList.subtitle}
         items={alternativesData}
         basePath={`/${alternativesSlug}`}

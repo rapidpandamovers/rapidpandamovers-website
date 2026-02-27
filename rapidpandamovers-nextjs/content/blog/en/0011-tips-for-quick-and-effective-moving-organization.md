@@ -233,7 +233,7 @@ Full-service movers like Rapid Panda Movers can pack everything in your home, in
 Depending on your needs, you might also consider:
 
 - [**Packing Services**](/miami-packing-services) - Professional packing for Miami residents
-- [**Full-Service Moving**](/full-service-moving) - Complete door-to-door solutions
+- [**Full-Service Moving**](/miami-full-service-moving) - Complete door-to-door solutions
 - [**Residential Moving**](/miami-residential-moving) - Home-to-home relocations
 
 ## Ready to Get Started?

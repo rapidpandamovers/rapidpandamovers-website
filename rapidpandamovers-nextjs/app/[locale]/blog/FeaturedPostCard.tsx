@@ -27,7 +27,7 @@ export default function FeaturedPostCard({ post }: FeaturedPostCardProps) {
     <article className="bg-orange-600 rounded-4xl overflow-hidden text-white group text-shadow-sm">
       <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-8">
       {/* Image - left */}
-      <div className="p-8 pb-0 lg:pb-8 lg:pr-0">
+      <div className="p-6 pb-0 md:p-8 md:pb-0 lg:pb-8 lg:pr-0">
         <div className="relative min-h-[240px] lg:min-h-full overflow-hidden rounded-2xl">
           {hasValidImage && !imageError ? (
             <BlogPostLink href={`/blog/${post.slug}`}>
@@ -48,7 +48,7 @@ export default function FeaturedPostCard({ post }: FeaturedPostCardProps) {
       </div>
 
       {/* Content - right */}
-      <div className="lg:col-span-2 flex flex-col justify-center p-8 lg:py-8 lg:pr-8 lg:pl-0">
+      <div className="lg:col-span-2 flex flex-col justify-center p-6 md:p-8 lg:py-8 lg:pr-8 lg:pl-0">
         <div className="flex items-center text-white/80 mb-4">
           <Tag className="w-4 h-4 mr-2" />
           <span className="text-sm font-medium">{ui?.blogCategories?.[post.category] || post.category}</span>
@@ -69,7 +69,7 @@ export default function FeaturedPostCard({ post }: FeaturedPostCardProps) {
 
         <BlogPostLink
           href={`/blog/${post.slug}`}
-          className="inline-flex items-center bg-white text-orange-700 font-semibold px-6 py-3 rounded-lg hover:bg-orange-50 transition-colors w-fit"
+          className="inline-flex items-center bg-white text-orange-600 font-semibold px-6 py-3 rounded-lg hover:bg-orange-50 transition-colors w-fit text-shadow-none"
         >
           {ui?.blog?.readFullArticle || 'Read Full Article'}
           <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

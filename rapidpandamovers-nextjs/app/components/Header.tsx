@@ -6,6 +6,7 @@ import { getMessages, getLocale } from 'next-intl/server'
 import { getTranslatedSlug } from '@/i18n/slug-map'
 import type { Locale } from '@/i18n/config'
 import { LanguageSelectorHeader } from './LanguageSelector'
+import MobileMenu from './MobileMenu'
 
 export default async function Header() {
   const locale = await getLocale() as Locale
@@ -20,7 +21,7 @@ export default async function Header() {
     <>
 
       {/* Main Header */}
-      <header className="bg-white text-sm font-bold">
+      <header className="relative z-[60] bg-white text-sm font-bold">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <Link href="/" className="flex items-center space-x-3">
@@ -155,7 +156,7 @@ export default async function Header() {
 
               <div className="flex items-center space-x-3">
                 <div className="flex flex-col items-center">
-                  <a href={`tel:${phoneTel}`} className="flex items-center justify-center space-x-2 border border-orange-700 text-orange-700 hover:bg-orange-600 hover:text-white font-semibold py-3 px-4 rounded-lg transition-colors w-44">
+                  <a href={`tel:${phoneTel}`} className="flex items-center justify-center space-x-2 border border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white font-semibold py-3 px-4 rounded-lg transition-colors w-44">
                     <Phone className="w-4 h-4" />
                     <span>{phoneFormatted}</span>
                   </a>
@@ -172,18 +173,14 @@ export default async function Header() {
 
             {/* Mobile/tablet: buttons + hamburger */}
             <div className="flex xl:hidden items-center space-x-3">
-              <a href={`tel:${phoneTel}`} className="flex items-center justify-center space-x-2 border border-orange-700 text-orange-700 hover:bg-orange-600 hover:text-white font-semibold py-3 px-4 rounded-lg transition-colors">
+              <a href={`tel:${phoneTel}`} className="hidden md:flex items-center justify-center space-x-2 border border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white font-semibold py-3 px-4 rounded-lg transition-colors">
                 <Phone className="w-4 h-4" />
                 <span>{phoneFormatted}</span>
               </a>
               <Link href={`/${getTranslatedSlug('quote', locale)}`} className="hidden md:flex items-center justify-center border border-orange-600 bg-orange-600 hover:bg-orange-700 hover:border-orange-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors text-shadow-sm">
                 {nav.header.cta.quoteButton}
               </Link>
-              <button className="p-2">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </button>
+              <MobileMenu nav={nav} services={services} cities={cities} locale={locale} phoneTel={phoneTel} phoneFormatted={phoneFormatted} />
             </div>
           </div>
         </div>

@@ -25,7 +25,7 @@ export default async function PromiseSection({
   return (
     <section className="pt-20">
       <div className="container mx-auto">
-        <div className="bg-orange-50 rounded-4xl p-8 md:p-12">
+        <div className="bg-orange-50 rounded-4xl p-6 md:p-12">
           <div className="max-w-4xl mx-auto text-center mb-10">
             <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
               {title}

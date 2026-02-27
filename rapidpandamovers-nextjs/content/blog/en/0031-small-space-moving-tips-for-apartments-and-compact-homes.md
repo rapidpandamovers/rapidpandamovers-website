@@ -232,10 +232,10 @@ Moving into a small space offers a unique opportunity to reevaluate what's truly
 
 Looking for more help with your move? Explore our related services:
 
-- **[Apartment Moving](/apartment-moving)**: Specialized services for apartment relocations of all sizes
-- **[Packing Services](/packing-services)**: Let our team handle the packing so you can focus on your new home
-- **[Storage Solutions](/storage-solutions)**: Temporary or long-term storage for items that need a home
-- **[Local Moving](/local-moving)**: Full-service local moves throughout Miami and South Florida
+- **[Apartment Moving](/miami-apartment-moving)**: Specialized services for apartment relocations of all sizes
+- **[Packing Services](/miami-packing-services)**: Let our team handle the packing so you can focus on your new home
+- **[Storage Solutions](/miami-storage-solutions)**: Temporary or long-term storage for items that need a home
+- **[Local Moving](/miami-local-moving)**: Full-service local moves throughout Miami and South Florida
 
 ## Ready to Start Your Small Space Move?
 

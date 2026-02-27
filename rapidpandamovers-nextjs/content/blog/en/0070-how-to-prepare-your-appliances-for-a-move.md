@@ -17,7 +17,6 @@ images:
   - "/images/blog/2024/09/how-to-prepare-your-appliances-for-a-move/man-pouring-liquid-detergent-into-a-stac-4.webp"
   - "/images/blog/2024/09/how-to-prepare-your-appliances-for-a-move/outdoor-view-of-two-stacked-laundry-mach-3.webp"
   - "/images/blog/2024/09/how-to-prepare-your-appliances-for-a-move/young-woman-with-brown-hair-poses-casual-2.webp"
-
 service_link: "/appliance-moving"
 location_link: null
 status: "pending"

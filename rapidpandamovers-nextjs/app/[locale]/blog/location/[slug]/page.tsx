@@ -39,7 +39,8 @@ export default async function BlogLocationPage({
 }) {
   const { slug } = await params
   const name = getLocationNameBySlug(slug)
-  const posts = getPostsByLocation(slug)
+  const locale = await getLocale() as Locale
+  const posts = getPostsByLocation(slug, locale)
   if (!name || posts.length === 0) {
     notFound()
   }

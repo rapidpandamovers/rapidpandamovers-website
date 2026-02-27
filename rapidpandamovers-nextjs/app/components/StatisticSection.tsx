@@ -61,7 +61,7 @@ export default async function StatisticSection({
   return (
     <section className="pt-20">
       <div className="container mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 px-6 md:px-0">
           <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">{title}</H2>
           <p className="text-gray-600 max-w-2xl mx-auto">{subtitle}</p>
         </div>
@@ -70,7 +70,7 @@ export default async function StatisticSection({
           {statCards.map((card) => {
             const IconComponent = card.icon
             return (
-              <div key={card.label} className={`${card.bg} rounded-4xl p-8 text-center`}>
+              <div key={card.label} className={`${card.bg} rounded-4xl p-6 md:p-8 text-center`}>
                 <div className={`${card.iconBg} rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4`}>
                   <IconComponent className={`w-8 h-8 ${card.iconColor}`} />
                 </div>

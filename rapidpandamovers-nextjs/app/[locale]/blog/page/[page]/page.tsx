@@ -10,16 +10,18 @@ const POSTS_PER_PAGE = 12
 
 // Generate static params for all pages
 export async function generateStaticParams() {
-  const sortedBlog = getPostsSortedByDate()
-  // Exclude featured post from pagination count
-  const postsForPagination = sortedBlog.slice(1)
-  const totalPages = Math.ceil(postsForPagination.length / POSTS_PER_PAGE)
+  return locales.flatMap(locale => {
+    const sortedBlog = getPostsSortedByDate(locale)
+    // Exclude featured post from pagination count
+    const postsForPagination = sortedBlog.slice(1)
+    const totalPages = Math.ceil(postsForPagination.length / POSTS_PER_PAGE)
 
-  // Generate pages 2 through totalPages (page 1 is handled by /blog)
-  const pages = Array.from({ length: totalPages - 1 }, (_, i) => ({
-    page: String(i + 2),
-  }))
-  return locales.flatMap(locale => pages.map(p => ({ locale, ...p })))
+    // Generate pages 2 through totalPages (page 1 is handled by /blog)
+    return Array.from({ length: totalPages - 1 }, (_, i) => ({
+      locale,
+      page: String(i + 2),
+    }))
+  })
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ page: string }> }) {
@@ -37,6 +39,7 @@ export async function generateMetadata({ params }: { params: Promise<{ page: str
 }
 
 export default async function BlogPaginatedPage({ params }: { params: Promise<{ page: string }> }) {
+  const locale = await getLocale() as Locale
   const { page } = await params
   const pageNum = parseInt(page, 10)
 
@@ -46,7 +49,7 @@ export default async function BlogPaginatedPage({ params }: { params: Promise<{ 
   }
 
   // Validate page number
-  const sortedBlog = getPostsSortedByDate()
+  const sortedBlog = getPostsSortedByDate(locale)
   const postsForPagination = sortedBlog.slice(1)
   const totalPages = Math.ceil(postsForPagination.length / POSTS_PER_PAGE)
 

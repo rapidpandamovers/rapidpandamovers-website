@@ -434,12 +434,12 @@ Look for licensed and insured movers with experience in the Miami Beach area. Ra
 
 When planning your Miami Beach relocation, consider these comprehensive services offered by Rapid Panda Movers:
 
-- **[Local Moving Services](/local-moving)**: Expert residential moving within Miami Beach and the greater Miami-Dade area with trained professionals who know the local terrain.
-- **[Packing Services](/packing-services)**: Professional packing services using high-quality materials to protect your belongings during the move.
-- **[Apartment Moving](/apartment-moving)**: Specialized services for high-rise condos and apartment buildings throughout Miami Beach, including elevator coordination and building compliance.
+- **[Local Moving Services](/miami-beach-local-moving)**: Expert residential moving within Miami Beach and the greater Miami-Dade area with trained professionals who know the local terrain.
+- **[Packing Services](/miami-beach-packing-services)**: Professional packing services using high-quality materials to protect your belongings during the move.
+- **[Apartment Moving](/miami-beach-apartment-moving)**: Specialized services for high-rise condos and apartment buildings throughout Miami Beach, including elevator coordination and building compliance.
 - **[Long Distance Moving](/long-distance)**: Relocating to Miami Beach from out of state? We offer comprehensive interstate moving services.
-- **[Storage Solutions](/storage-solutions)**: Secure, climate-controlled storage options for items you may not immediately need in your new home.
-- **[Commercial Moving](/commercial-moving)**: Business relocation services for Miami Beach offices, restaurants, and retail establishments.
+- **[Storage Solutions](/miami-beach-storage-solutions)**: Secure, climate-controlled storage options for items you may not immediately need in your new home.
+- **[Commercial Moving](/miami-beach-commercial-moving)**: Business relocation services for Miami Beach offices, restaurants, and retail establishments.
 
 ## Ready to Make Miami Beach Your Home?
 

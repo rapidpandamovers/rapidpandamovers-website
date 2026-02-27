@@ -7,13 +7,15 @@ import { getLocale } from 'next-intl/server'
 import { generatePageMetadata } from '@/lib/metadata'
 
 export async function generateStaticParams() {
-  const categories = getCategories()
-  const slugs = categories
-    .filter(cat => isEditorialCategory(cat))
-    .map((cat) => ({
-      slug: categoryToSlug(cat),
-    }))
-  return locales.flatMap(locale => slugs.map(s => ({ locale, ...s })))
+  return locales.flatMap(locale => {
+    const categories = getCategories(locale)
+    return categories
+      .filter(cat => isEditorialCategory(cat))
+      .map(cat => ({
+        locale,
+        slug: categoryToSlug(cat),
+      }))
+  })
 }
 
 export async function generateMetadata({
@@ -23,7 +25,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params
   const locale = await getLocale() as Locale
-  const category = getCategoryBySlug(slug)
+  const category = getCategoryBySlug(slug, locale)
   if (!category) {
     return { title: 'Category Not Found' }
   }
@@ -41,7 +43,8 @@ export default async function BlogCategoryPage({
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
-  const category = getCategoryBySlug(slug)
+  const locale = await getLocale() as Locale
+  const category = getCategoryBySlug(slug, locale)
   if (!category || !isEditorialCategory(category)) {
     notFound()
   }

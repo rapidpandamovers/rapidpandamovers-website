@@ -239,7 +239,7 @@ export default function ChecklistSection({
         )
       case 'low':
         return (
-          <span className={`${baseClass} ${forPrint ? 'priority-low' : 'bg-orange-100 text-orange-700'}`}>
+          <span className={`${baseClass} ${forPrint ? 'priority-low' : 'bg-orange-100 text-orange-600'}`}>
             {!forPrint && <Info className="w-3 h-3 mr-1" />}
             {ui.checklist.priority.low}
           </span>
@@ -260,7 +260,7 @@ export default function ChecklistSection({
     return (
       <section className={`py-16 ${className}`}>
         <div className="container mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 px-6 md:px-0">
             <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
               {ui.checklist.previewTitle}
             </H2>
@@ -269,7 +269,7 @@ export default function ChecklistSection({
             </p>
           </div>
 
-          <div className="bg-orange-50 rounded-4xl p-8">
+          <div className="bg-orange-50 rounded-4xl p-6 md:p-8">
             {/* Feature Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               {features.map((feature: any, index: number) => {
@@ -342,7 +342,7 @@ export default function ChecklistSection({
         <div className="no-print mb-12 space-y-6">
 
           {/* Progress + Actions Card */}
-          <div className="bg-gray-50 rounded-4xl p-8 md:p-10">
+          <div className="bg-gray-50 rounded-4xl p-6 md:p-10">
             {/* Progress */}
             <div className="flex items-baseline justify-between mb-3">
               <span className="text-3xl font-bold text-gray-800">{ui.checklist.progress} {totalProgress.percentage}%</span>
@@ -368,7 +368,7 @@ export default function ChecklistSection({
                 </button>
                 <button
                   onClick={handlePrint}
-                  className="inline-flex items-center px-5 py-2.5 border-2 border-orange-700 text-orange-700 hover:bg-orange-600 hover:text-white font-semibold rounded-lg transition-colors"
+                  className="inline-flex items-center px-5 py-2.5 border-2 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white font-semibold rounded-lg transition-colors"
                 >
                   <Printer className="w-5 h-5 mr-2" />
                   {ui.buttons.print}
@@ -386,7 +386,7 @@ export default function ChecklistSection({
                 <Clock className="w-3 h-3 mr-1" />
                 {ui.checklist.priority.medium}
               </span>
-              <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-orange-100 text-orange-700">
+              <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-orange-100 text-orange-600">
                 <Info className="w-3 h-3 mr-1" />
                 {ui.checklist.priority.lowLabel}
               </span>
@@ -423,7 +423,7 @@ export default function ChecklistSection({
                     <div className="mt-4 no-print">
                       <div className="flex items-center justify-between text-xs text-gray-500 mb-1">
                         <span>{progress.completed} {ui.checklist.of} {progress.total} {ui.checklist.complete}</span>
-                        <span className="font-medium text-orange-700">{progress.percentage}%</span>
+                        <span className="font-medium text-orange-600">{progress.percentage}%</span>
                       </div>
                       <div className="h-1.5 bg-gray-200 rounded-full overflow-hidden">
                         <div

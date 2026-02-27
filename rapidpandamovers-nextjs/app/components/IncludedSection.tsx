@@ -38,7 +38,7 @@ export default async function IncludedSection({
   return (
     <section className="pt-20">
       <div className="container mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 px-6 md:px-0">
           <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             {title}
           </H2>
@@ -48,7 +48,7 @@ export default async function IncludedSection({
             </p>
           )}
         </div>
-        <div className={`${bgClass} rounded-4xl p-8`}>
+        <div className={`${bgClass} rounded-4xl p-6 md:p-8`}>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {normalizedItems.map((item, index) => {
               const IconComponent = typeof item.icon === 'string' ? resolveIcon(item.icon) : (item.icon || CheckCircle)

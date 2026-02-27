@@ -52,7 +52,7 @@ export default function RateSection({
     <section className="pt-20">
       <div className="container mx-auto">
         {(title || subtitle) && (
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 px-6 md:px-0">
             {title && (
               <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                 {title}
@@ -71,7 +71,7 @@ export default function RateSection({
             {displayCategories.map((category, catIndex) => {
               const bgColors = ['bg-orange-50', 'bg-gray-50', 'bg-green-50', 'bg-blue-50']
               return (
-                <div key={catIndex} className={`${bgColors[catIndex % bgColors.length]} rounded-4xl p-8`}>
+                <div key={catIndex} className={`${bgColors[catIndex % bgColors.length]} rounded-4xl p-6 md:p-8`}>
                   <H3 className="text-2xl font-bold text-gray-800 mb-4">
                     {category.title}
                   </H3>
@@ -104,7 +104,7 @@ export default function RateSection({
         {/* Additional Services */}
         {additionalServices && additionalServices.services.length > 0 && (
           <div className={displayCategories.length > 0 ? 'mt-16' : ''}>
-            <div className="text-center mb-12">
+            <div className="text-center mb-12 px-6 md:px-0">
               <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                 {additionalServices.title}
               </H2>
@@ -114,7 +114,7 @@ export default function RateSection({
                 </p>
               )}
             </div>
-            <div className="bg-gray-50 rounded-4xl p-8">
+            <div className="bg-gray-50 rounded-4xl p-6 md:p-8">
               <div className="grid md:grid-cols-3 gap-6">
                 {additionalServices.services.map((service, index) => (
                   <div key={index} className="bg-white rounded-2xl p-6 text-center">

@@ -36,26 +36,39 @@ const TurnstileWidget = forwardRef<TurnstileWidgetRef, TurnstileWidgetProps>(
     const containerRef = useRef<HTMLDivElement>(null)
     const widgetIdRef = useRef<string | null>(null)
     const [scriptReady, setScriptReady] = useState(false)
+    const [verified, setVerified] = useState(false)
     const locale = useLocale()
 
+    const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY
+
+    // If no site key, bypass turnstile entirely
+    useEffect(() => {
+      if (!siteKey) {
+        onVerify('bypass')
+        setVerified(true)
+      }
+    }, [siteKey, onVerify])
+
+    const handleVerify = useCallback((token: string) => {
+      setVerified(true)
+      onVerify(token)
+    }, [onVerify])
+
     const renderWidget = useCallback(() => {
-      if (!containerRef.current || !window.turnstile) return
+      if (!containerRef.current || !window.turnstile || !siteKey) return
       // Remove existing widget if any
       if (widgetIdRef.current) {
         window.turnstile.remove(widgetIdRef.current)
         widgetIdRef.current = null
       }
 
-      const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY
-      if (!siteKey) return
-
       widgetIdRef.current = window.turnstile.render(containerRef.current, {
         sitekey: siteKey,
-        callback: onVerify,
+        callback: handleVerify,
         'expired-callback': onExpire,
         language: locale,
       })
-    }, [onVerify, onExpire, locale])
+    }, [handleVerify, onExpire, locale, siteKey])
 
     useEffect(() => {
       if (scriptReady) {
@@ -71,11 +84,17 @@ const TurnstileWidget = forwardRef<TurnstileWidgetRef, TurnstileWidgetProps>(
 
     useImperativeHandle(ref, () => ({
       reset: () => {
+        setVerified(false)
         if (widgetIdRef.current && window.turnstile) {
           window.turnstile.reset(widgetIdRef.current)
         }
       },
     }))
+
+    // Hide when no site key or after auto-pass
+    if (!siteKey || verified) {
+      return null
+    }
 
     return (
       <>

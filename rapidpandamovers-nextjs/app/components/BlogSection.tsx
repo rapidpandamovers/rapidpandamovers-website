@@ -89,7 +89,7 @@ export default async function BlogSection({
   const resolvedViewMoreButtonText = viewMoreButtonText ?? ui?.blog?.viewAllArticles ?? 'View All Articles'
 
   // Get all posts sorted by date (from markdown files)
-  const allPosts = getPostsSortedByDate()
+  const allPosts = getPostsSortedByDate(locale)
   let filteredBlog = excludeSlug
     ? allPosts.filter(post => post.slug !== excludeSlug)
     : [...allPosts]
@@ -153,7 +153,7 @@ export default async function BlogSection({
       <section className={`pt-20 ${className}`}>
         <div className="container mx-auto">
           {!hideHeader && (
-            <div className="text-center mb-10">
+            <div className="text-center mb-10 px-6 md:px-0">
               <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                 {title || ui?.blog?.fallbackTitle || 'Moving Tips & Insights'}
               </H2>
@@ -169,7 +169,7 @@ export default async function BlogSection({
               showImages ? (
                 <BlogPostCard key={post.id} post={post} showExcerpt={showExcerpts} showCategoryPill={showCategoryPill} />
               ) : (
-                <article key={post.id} className="bg-gray-50 rounded-4xl p-8 flex flex-col">
+                <article key={post.id} className="bg-gray-50 rounded-4xl p-6 md:p-8 flex flex-col">
                   <div className="flex items-center text-sm text-gray-500 mb-3">
                     <Calendar className="w-4 h-4 mr-1" />
                     <span>{new Date(post.date).toLocaleDateString()}</span>
@@ -194,7 +194,7 @@ export default async function BlogSection({
                   )}
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="text-orange-700 hover:text-orange-800 font-medium inline-flex items-center mt-auto"
+                    className="text-orange-600 hover:text-orange-800 font-medium inline-flex items-center mt-auto"
                     aria-label={`${ui?.blog?.readFullArticle || 'Read Full Article'}: ${post.title}`}
                   >
                     {ui?.blog?.readFullArticle || 'Read Full Article'}
@@ -206,7 +206,7 @@ export default async function BlogSection({
 
             {/* CTA Boxes */}
             <div className="flex flex-col gap-8">
-              <div className="bg-orange-50 rounded-4xl p-8 flex flex-col flex-1">
+              <div className="bg-orange-50 rounded-4xl p-6 md:p-8 flex flex-col flex-1">
                 <div className="flex-1">
                   <BookOpen className="w-10 h-10 text-orange-500 mb-4" />
                   <H3 className="text-2xl font-bold text-gray-800 mb-3">
@@ -226,7 +226,7 @@ export default async function BlogSection({
               </div>
 
               {showTipsCard && (
-                <div className="bg-orange-50 rounded-4xl p-8 flex flex-col flex-1">
+                <div className="bg-orange-50 rounded-4xl p-6 md:p-8 flex flex-col flex-1">
                   <div className="flex-1">
                     <Lightbulb className="w-10 h-10 text-orange-500 mb-4" />
                     <H3 className="text-2xl font-bold text-gray-800 mb-3">
@@ -258,7 +258,7 @@ export default async function BlogSection({
       <section className={`pt-20 ${className}`}>
         <div className="container mx-auto">
           {!hideHeader && (
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10 px-6 md:px-0">
               <div>
                 <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
                   {title || ui?.blog?.fallbackTitle || 'Moving Tips & Insights'}
@@ -272,7 +272,7 @@ export default async function BlogSection({
               {showViewMore && (
                 <Link
                   href={viewMoreLink}
-                  className="inline-flex items-center text-orange-700 hover:text-orange-800 font-semibold mt-4 md:mt-0"
+                  className="inline-flex items-center text-orange-600 hover:text-orange-800 font-semibold mt-4 md:mt-0"
                 >
                   {resolvedViewMoreButtonText || ui?.blog?.viewAllArticles || 'View All Articles'}
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -303,7 +303,7 @@ export default async function BlogSection({
     <section className={`pt-20 ${className}`}>
       <div className="container mx-auto">
         {!hideHeader && (
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 px-6 md:px-0">
             <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
               {title || ui?.blog?.fallbackTitle || 'Moving Tips & Insights'}
             </H2>
@@ -344,7 +344,7 @@ export default async function BlogSection({
           {showViewMore && viewMorePosition === 'card' && (
             <Link
               href={viewMoreLink}
-              className="bg-orange-50 rounded-4xl p-8 flex flex-col group"
+              className="bg-orange-50 rounded-4xl p-6 md:p-8 flex flex-col group"
             >
               <div className="flex-1">
                 <BookOpen className="w-10 h-10 text-orange-500 mb-4" />

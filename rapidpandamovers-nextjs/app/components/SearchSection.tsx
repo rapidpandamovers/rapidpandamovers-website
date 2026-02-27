@@ -259,7 +259,7 @@ export default function SearchSection({
   return (
     <section className="pt-20">
       <div className="container mx-auto">
-        <div className="text-center mb-8">
+        <div className="text-center mb-8 px-6 md:px-0">
           <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
             {ui.search.findTitle}
           </H2>

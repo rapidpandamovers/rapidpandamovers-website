@@ -336,7 +336,7 @@ Depending on your move, you might also consider:
 
 - [**Local Moving Services**](/miami-local-moving): Full-service local relocations throughout Miami-Dade
 - [**Professional Packing**](/miami-packing-services): Expert packing for fragile and valuable items
-- [**Long-Distance Moving**](/long-distance-moving): Interstate relocations with tracking and guaranteed delivery windows
+- [**Long-Distance Moving**](/miami-long-distance-moving): Interstate relocations with tracking and guaranteed delivery windows
 
 ## Get Your Free Quote
 

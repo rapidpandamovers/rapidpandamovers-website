@@ -17,7 +17,6 @@ images:
   - "/images/blog/2024/12/7-pool-table-moving-myths-debunked/close-up-of-a-billiard-table-with-chalk--2.webp"
   - "/images/blog/2024/12/7-pool-table-moving-myths-debunked/close-up-of-billiard-balls-and-cue-stick-1.webp"
   - "/images/blog/2024/12/7-pool-table-moving-myths-debunked/competitive-billiards-game-in-a-modern-p-3.webp"
-
 service_link: "/pool-table-moving"
 location_link: null
 status: "pending"

@@ -16,13 +16,13 @@ import { H2, H3 } from '@/app/components/Heading'
 
 export async function generateStaticParams() {
   try {
-    const posts = getPublishedPosts()
-    return locales.flatMap(locale =>
-      posts.map((post) => ({
+    return locales.flatMap(locale => {
+      const posts = getPublishedPosts(locale)
+      return posts.map((post) => ({
         locale,
         slug: post.slug,
       }))
-    )
+    })
   } catch (error) {
     console.error('[Blog] Error generating static params:', error)
     return []
@@ -32,15 +32,14 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   try {
     const { slug } = await params
-    const post = getPostBySlug(slug)
+    const locale = await getLocale() as Locale
+    const post = getPostBySlug(slug, locale)
 
     if (!post) {
       return {
         title: 'Post Not Found',
       }
     }
-
-    const locale = await getLocale() as Locale
     return generateBlogMetadata(post, locale)
   } catch (error) {
     console.error('[Blog] Error generating metadata:', error)
@@ -59,7 +58,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   try {
     const paramsResult = await params
     slug = paramsResult.slug
-    post = getPostBySlug(slug)
+    post = getPostBySlug(slug, locale)
   } catch (error) {
     console.error('[BlogPostPage] Error loading post:', error)
     notFound()
@@ -96,7 +95,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <Link
                 key={`${keyPrefix}-bl-${elementKey++}`}
                 href={url}
-                className="text-orange-700 hover:text-orange-800 underline decoration-orange-300"
+                className="text-orange-600 hover:text-orange-800 underline decoration-orange-300"
               >
                 {linkContent}
               </Link>
@@ -108,7 +107,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-orange-700 hover:text-orange-800 underline decoration-orange-300"
+                className="text-orange-600 hover:text-orange-800 underline decoration-orange-300"
               >
                 {linkContent}
               </a>
@@ -131,7 +130,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <Link
                 key={`${keyPrefix}-l-${elementKey++}`}
                 href={url}
-                className="text-orange-700 hover:text-orange-800 underline decoration-orange-300"
+                className="text-orange-600 hover:text-orange-800 underline decoration-orange-300"
               >
                 {linkContent}
               </Link>
@@ -143,7 +142,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-orange-700 hover:text-orange-800 underline decoration-orange-300"
+                className="text-orange-600 hover:text-orange-800 underline decoration-orange-300"
               >
                 {linkContent}
               </a>
@@ -186,7 +185,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <ul key={currentKey++} className="my-6 space-y-3 pl-0">
             {listItems.map((item, i) => (
               <li key={i} className="flex items-start gap-3 text-gray-700 leading-relaxed">
-                <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-orange-100 text-orange-700 text-sm font-medium flex-shrink-0 mt-0.5">
+                <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-orange-100 text-orange-600 text-sm font-medium flex-shrink-0 mt-0.5">
                   {i + 1}
                 </span>
                 <span>{parseInlineMarkdown(item, `li-${i}`)}</span>

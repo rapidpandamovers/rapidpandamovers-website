@@ -1,6 +1,6 @@
 'use client'
 
-import { Star } from 'lucide-react'
+import { Star, Phone } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import { preload } from 'react-dom'
 import { Link } from '@/i18n/routing'
@@ -56,7 +56,7 @@ export default function Hero({
   preload(resolved[0].webp, { as: 'image' })
   preload(resolved[1].webp, { as: 'image' })
 
-  const { ui } = useMessages() as any
+  const { ui, content } = useMessages() as any
   const locale = useLocale() as Locale
   const [pickupZip, setPickupZip] = useState('')
   const [dropoffZip, setDropoffZip] = useState('')
@@ -71,11 +71,11 @@ export default function Hero({
   const quoteSlug = getTranslatedSlug('quote', locale)
   const quoteUrl = `/${quoteSlug}${pickupZip || dropoffZip ? '?' : ''}${pickupZip ? `pickup=${encodeURIComponent(pickupZip)}` : ''}${pickupZip && dropoffZip ? '&' : ''}${dropoffZip ? `dropoff=${encodeURIComponent(dropoffZip)}` : ''}`
   return (
-    <section className="pt-2 px-4 md:px-6 lg:px-8 relative">
+    <section className="pt-2 md:px-6 lg:px-8 relative">
       <div className="container mx-auto rounded-4xl border border-gray-700 bg-black p-6 md:p-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-center">
           {/* Left side - Image */}
-          <div className="relative aspect-[4/3]">
+          <div className="relative aspect-[4/3] order-last lg:order-first">
             <ImageCollage
               slot1Src={resolved[0].webp}
               slot1Fallback={resolved[0].jpg}
@@ -94,6 +94,16 @@ export default function Hero({
           
           {/* Right side - Content */}
           <div className="space-y-6">
+            {/* Rating display — mobile only */}
+            <div className="flex flex-col items-center md:hidden">
+              <div className="flex space-x-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-9 h-9 text-orange-600 fill-current" />
+                ))}
+              </div>
+              <span className="text-white text-center mt-2">{reviewsData.stats.averageRating}{ui.hero.ratingText.replace('{count}', String(reviewsData.stats.totalReviews))}</span>
+            </div>
+
             <div>
               <H1 className="font-display text-4xl md:text-5xl text-white mb-4 font-black tracking-tight">
                 {displayTitle}
@@ -103,8 +113,25 @@ export default function Hero({
               </p>
             </div>
             
-            {/* Quote form */}
-            <div className="space-y-4">
+            {/* Mobile: Phone button */}
+            <div className="md:hidden space-y-4">
+              <a
+                href={`tel:${content.site.phone.replace(/-/g, '')}`}
+                className="flex items-center justify-center space-x-2 w-full bg-orange-600 text-white text-shadow-sm font-bold py-3 px-6 rounded-lg hover:bg-orange-700 transition-colors"
+              >
+                <Phone className="w-5 h-5" />
+                <span>{`(${content.site.phone.slice(0,3)}) ${content.site.phone.slice(4,7)}-${content.site.phone.slice(8)}`}</span>
+              </a>
+              <Link
+                href={quoteUrl}
+                className="block w-full border border-orange-600 text-orange-500 font-bold py-3 px-6 rounded-lg hover:bg-orange-600 hover:text-white transition-colors text-center"
+              >
+                {ui.buttons.getFreeQuote}
+              </Link>
+            </div>
+
+            {/* Desktop: Quote form */}
+            <div className="hidden md:block space-y-4">
               <p className="text-white font-medium">{displayCta}</p>
               <div className="grid grid-cols-2 gap-4">
                 <input
@@ -130,8 +157,8 @@ export default function Hero({
               </Link>
             </div>
             
-            {/* Rating display */}
-            <div className="flex items-center space-x-2">
+            {/* Rating display — desktop only (mobile version is above) */}
+            <div className="hidden md:flex md:flex-row md:items-center md:space-x-2">
               <div className="flex space-x-1">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 text-orange-600 fill-current" />

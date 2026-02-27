@@ -220,6 +220,8 @@ export function getCategories(locale?: string): string[] {
  */
 export function categoryToSlug(category: string): string {
   return category
+    .normalize('NFD')                // Decompose accented characters (é → e + combining accent)
+    .replace(/[\u0300-\u036f]/g, '') // Strip combining diacritical marks
     .toLowerCase()
     .replace(/&/g, 'and')           // Replace & with "and"
     .replace(/[^a-z0-9\s-]/g, '')   // Remove special characters
@@ -231,8 +233,8 @@ export function categoryToSlug(category: string): string {
 /**
  * Resolve URL slug to category display name, or null if no category matches
  */
-export function getCategoryBySlug(slug: string): string | null {
-  const categories = getCategories()
+export function getCategoryBySlug(slug: string, locale?: string): string | null {
+  const categories = getCategories(locale)
   const normalized = decodeURIComponent(slug).toLowerCase()
   return categories.find(cat => categoryToSlug(cat) === normalized) ?? null
 }
@@ -245,7 +247,10 @@ export function getPostsByCategory(category: string, locale?: string): BlogPost[
 }
 
 // Editorial (non-service) categories shown as top-level pills
-const EDITORIAL_CATEGORIES = ['Fun Facts', 'Home & Living', 'Lifestyle', 'Location Guide', 'Moving Tips']
+const EDITORIAL_CATEGORIES = [
+  'Fun Facts', 'Home & Living', 'Lifestyle', 'Location Guide', 'Moving Tips',
+  'Datos Curiosos', 'Hogar y Vida', 'Estilo de Vida', 'Guía del Vecindario', 'Consejos de Mudanza',
+]
 
 /**
  * Check if a category name is editorial (not a service category)

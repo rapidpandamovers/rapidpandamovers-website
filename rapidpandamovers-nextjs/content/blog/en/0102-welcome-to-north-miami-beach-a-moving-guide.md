@@ -108,7 +108,7 @@ Our team has extensive experience helping families relocate to [**North Miami Be
 - **[Apartment Moving](/north-miami-beach-apartment-moving)**: High-rise and condo expertise
 - **[Residential Moving](/north-miami-beach-residential-moving)**: House-to-house moves
 - **[Packing Services](/north-miami-beach-packing-services)**: Full-service packing and materials
-- **[Full-Service Moving](/full-service-moving)**: Complete door-to-door solutions
+- **[Full-Service Moving](/north-miami-beach-full-service-moving)**: Complete door-to-door solutions
 
 ## Ready to Make North Miami Beach Home?
 

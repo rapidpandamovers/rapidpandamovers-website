@@ -163,10 +163,10 @@ Attend local events, join neighborhood associations, volunteer with community or
 
 When planning your move to Miami, consider these professional moving services to make your transition smooth:
 
-- **[Local Moving](/local-moving)**: Full-service local moves within the Miami-Dade area
+- **[Local Moving](/miami-local-moving)**: Full-service local moves within the Miami-Dade area
 - **[Long Distance Moving](/long-distance)**: Interstate relocations to Miami from anywhere in the country
-- **[Packing Services](/packing-services)**: Professional packing to protect your belongings during the move
-- **[Storage Solutions](/storage-solutions)**: Secure storage options if you need time to settle into your new Miami home
+- **[Packing Services](/miami-packing-services)**: Professional packing to protect your belongings during the move
+- **[Storage Solutions](/miami-storage-solutions)**: Secure storage options if you need time to settle into your new Miami home
 
 ## Embracing Miami's Diverse Events Culture
 

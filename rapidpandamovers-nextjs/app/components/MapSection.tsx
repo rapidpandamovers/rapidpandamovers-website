@@ -129,7 +129,7 @@ export default function MapSection({
               href={`https://www.google.com/maps/dir/${encodeURIComponent(route.originZip || `${route.origin}, ${route.originState || 'FL'}`)}/${encodeURIComponent(route.destinationZip || `${route.destination}, ${route.destinationState || 'FL'}`)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-orange-700 hover:text-orange-800 underline"
+              className="text-orange-600 hover:text-orange-800 underline"
             >
               {ui.map.googleMaps}
             </a>
@@ -141,7 +141,7 @@ export default function MapSection({
 
   if (embedded) {
     return (
-      <div className={`my-6 ${className}`}>
+      <div className={`my-8 ${className}`}>
         {displayTitle && <H3 className="text-xl font-bold text-gray-800 mb-4">{displayTitle}</H3>}
         {mapContent}
       </div>

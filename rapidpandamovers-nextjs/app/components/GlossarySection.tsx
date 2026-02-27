@@ -62,7 +62,7 @@ export default function GlossarySection({ className = "", variant = 'preview' }:
                       className={`px-3 py-2 rounded-lg font-medium text-sm transition-all ${
                         activeLetter === letter
                           ? 'bg-orange-600 text-white text-shadow-sm'
-                          : 'bg-white border border-gray-200 text-gray-700 hover:border-orange-600 hover:text-orange-700'
+                          : 'bg-white border border-gray-200 text-gray-700 hover:border-orange-600 hover:text-orange-600'
                       }`}
                     >
                       {letter}
@@ -77,7 +77,7 @@ export default function GlossarySection({ className = "", variant = 'preview' }:
               {sortedTerms.map((item: { term: string; definition: string }, index: number) => (
                 <div
                   key={index}
-                  className="bg-gray-50 rounded-4xl p-8"
+                  className="bg-gray-50 rounded-4xl p-6 md:p-8"
                   data-letter={item.term.charAt(0).toUpperCase()}
                 >
                   <H3 className="text-xl font-bold mb-3">
@@ -101,7 +101,7 @@ export default function GlossarySection({ className = "", variant = 'preview' }:
   return (
     <section className={`py-16 ${className}`}>
       <div className="container mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 px-6 md:px-0">
           <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             {ui.glossary.previewTitle}
           </H2>
@@ -110,11 +110,11 @@ export default function GlossarySection({ className = "", variant = 'preview' }:
           </p>
         </div>
 
-        <div className="bg-gray-50 rounded-4xl p-8">
+        <div className="bg-gray-50 rounded-4xl p-6 md:p-8">
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {sampleTerms.map((item, index) => (
               <div key={index} className="bg-white rounded-2xl p-6 text-left">
-                <H3 className="text-lg font-bold text-orange-700 mb-2">
+                <H3 className="text-lg font-bold text-orange-600 mb-2">
                   {item.term}
                 </H3>
                 <p className="text-gray-600 text-sm line-clamp-2">

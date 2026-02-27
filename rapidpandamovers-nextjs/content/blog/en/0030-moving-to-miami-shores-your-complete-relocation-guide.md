@@ -215,11 +215,11 @@ Most movers won't transport hazardous materials, perishable foods, plants, pets,
 
 Depending on your specific needs, you may benefit from these additional services:
 
-- [Local Moving](/local-moving): Full-service local moves within Miami-Dade County
-- [Packing Services](/packing-services): Professional packing with quality materials and techniques
-- [Apartment Moving](/apartment-moving): Specialized moving for apartments, condos, and high-rises
-- [Storage Solutions](/storage-solutions): Temporary or long-term storage if your new Miami Shores home isn't ready
-- [Commercial Moving](/commercial-moving): Office and business relocation services
+- [Local Moving](/miami-shores-local-moving): Full-service local moves within Miami-Dade County
+- [Packing Services](/miami-shores-packing-services): Professional packing with quality materials and techniques
+- [Apartment Moving](/miami-shores-apartment-moving): Specialized moving for apartments, condos, and high-rises
+- [Storage Solutions](/miami-shores-storage-solutions): Temporary or long-term storage if your new Miami Shores home isn't ready
+- [Commercial Moving](/miami-shores-commercial-moving): Office and business relocation services
 
 ## Ready to Move to Miami Shores?
 

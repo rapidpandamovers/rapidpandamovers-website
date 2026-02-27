@@ -149,7 +149,7 @@ Depending on your family's needs, consider these services for your Miami Beach m
 
 - [**Miami Beach Local Moving**](/miami-beach-local-moving): Full-service local moves within Miami-Dade County
 - [**Miami Beach Packing Services**](/miami-beach-packing-services): Professional packing for a stress-free transition
-- [**Residential Moving**](/residential-moving): Complete home moving solutions for families
+- [**Residential Moving**](/miami-beach-residential-moving): Complete home moving solutions for families
 
 ## Ready to Start Your Miami Beach Move?
 

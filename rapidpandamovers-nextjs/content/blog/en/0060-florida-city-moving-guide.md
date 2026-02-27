@@ -159,7 +159,7 @@ Depending on your needs, you might also consider:
 
 - [**Packing Services**](/florida-city-packing-services): Professional packing for a stress-free move
 - [**Local Moving**](/florida-city-local-moving): Efficient same-city relocations throughout Miami-Dade
-- [**Long Distance Moving**](/long-distance-moving): Interstate moves with full-service options
+- [**Long Distance Moving**](/florida-city-long-distance-moving): Interstate moves with full-service options
 
 ## Ready to Move to Florida City?
 

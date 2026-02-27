@@ -18,7 +18,6 @@ images:
   - "/images/blog/2024/11/what-white-glove-moving-actually-includes/closeup-of-a-gold-watch-buckle-held-by-a-3.webp"
   - "/images/blog/2024/11/what-white-glove-moving-actually-includes/elegant-gold-belt-buckle-with-intricate--1.webp"
   - "/images/blog/2024/11/what-white-glove-moving-actually-includes/white-and-gold-boxing-gloves-resting-ele-4.webp"
-
 service_link: "/white-glove-moving"
 location_link: null
 status: "pending"

@@ -55,7 +55,7 @@ export default async function ServiceSection({ location, variant = 'preview', hi
       <section className="pt-20">
         <div className="container mx-auto">
           {!hideHeader && (
-            <div className="text-center mb-16">
+            <div className="text-center mb-16 px-6 md:px-0">
               <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                 {title || <>{ui.services.defaultTitle}</>}
               </H2>
@@ -69,11 +69,11 @@ export default async function ServiceSection({ location, variant = 'preview', hi
           {location && (
             <div className="mb-8 flex items-center justify-between">
               <p className="text-lg text-gray-600">
-                {ui.services.showingIn} <span className="font-semibold text-orange-700">{location.name}</span>
+                {ui.services.showingIn} <span className="font-semibold text-orange-600">{location.name}</span>
               </p>
               <Link
                 href={`/${servicesSlug}`}
-                className="text-orange-700 hover:text-orange-800 font-medium text-sm"
+                className="text-orange-600 hover:text-orange-800 font-medium text-sm"
               >
                 {ui.services.viewAllLocations}
               </Link>
@@ -118,7 +118,7 @@ export default async function ServiceSection({ location, variant = 'preview', hi
       <section className="pt-20">
         <div className="container mx-auto">
           {!hideHeader && (
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10 px-6 md:px-0">
               <div>
                 <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
                   {title || <>{ui.services.defaultTitle}</>}
@@ -131,7 +131,7 @@ export default async function ServiceSection({ location, variant = 'preview', hi
               </div>
               <Link
                 href={ctaLink}
-                className="inline-flex items-center text-orange-700 hover:text-orange-800 font-semibold mt-4 md:mt-0"
+                className="inline-flex items-center text-orange-600 hover:text-orange-800 font-semibold mt-4 md:mt-0"
               >
                 {ctaText}
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -175,7 +175,7 @@ export default async function ServiceSection({ location, variant = 'preview', hi
       <section className="pt-20">
         <div className="container mx-auto">
           {!hideHeader && (
-            <div className="text-center mb-16">
+            <div className="text-center mb-16 px-6 md:px-0">
               <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                 {title || ui.location.movingServicesIn.replace('{name}', location.name)}
               </H2>
@@ -225,7 +225,7 @@ export default async function ServiceSection({ location, variant = 'preview', hi
     <section className="pt-20">
       <div className="container mx-auto">
         {!hideHeader && (
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 px-6 md:px-0">
             <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
               {title || <>{ui.services.defaultTitle}</>}
             </H2>

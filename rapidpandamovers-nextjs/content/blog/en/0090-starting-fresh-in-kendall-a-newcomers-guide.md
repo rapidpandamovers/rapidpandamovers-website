@@ -91,11 +91,11 @@ Our team has extensive experience helping families relocate to [**Kendall**](/ke
 
 ### What We Offer
 
-- **[Local Moving](/local-moving)**: Perfect for relocations within Miami-Dade
-- **[Apartment Moving](/apartment-moving)**: High-rise and condo expertise
-- **[Residential Moving](/residential-moving)**: House-to-house moves
-- **[Packing Services](/packing-services)**: Full-service packing and materials
-- **[Full-Service Moving](/full-service-moving)**: Complete door-to-door solutions
+- **[Local Moving](/kendall-local-moving)**: Perfect for relocations within Miami-Dade
+- **[Apartment Moving](/kendall-apartment-moving)**: High-rise and condo expertise
+- **[Residential Moving](/kendall-residential-moving)**: House-to-house moves
+- **[Packing Services](/kendall-packing-services)**: Full-service packing and materials
+- **[Full-Service Moving](/kendall-full-service-moving)**: Complete door-to-door solutions
 
 ## Ready to Make Kendall Home?
 

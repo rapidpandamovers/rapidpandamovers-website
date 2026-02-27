@@ -247,7 +247,7 @@ Why pay for professional movers when you could rent a truck and recruit friends?
 
 ## What to Expect from Rapid Panda Movers
 
-When you hire us for [**local moving**](/local-moving), you can expect:
+When you hire us for [**local moving**](/miami-local-moving), you can expect:
 
 1. **Free Consultation**: We assess your needs and provide a transparent quote with no hidden fees
 2. **Professional Crew**: Uniformed, trained moving professionals who treat your home with respect
@@ -277,9 +277,9 @@ Most movers won't transport hazardous materials (propane, gasoline, chemicals), 
 
 Depending on your needs, you might also consider:
 
-- [**Packing Services**](/packing-services) - Professional packing to protect your belongings during transport
-- [**Full-Service Moving**](/full-service-moving) - Complete door-to-door solutions including packing and unpacking
-- [**Residential Moving**](/residential-moving) - Specialized services for house-to-house relocations
+- [**Packing Services**](/miami-packing-services) - Professional packing to protect your belongings during transport
+- [**Full-Service Moving**](/miami-full-service-moving) - Complete door-to-door solutions including packing and unpacking
+- [**Residential Moving**](/miami-residential-moving) - Specialized services for house-to-house relocations
 
 ## Ready to Get Started?
 

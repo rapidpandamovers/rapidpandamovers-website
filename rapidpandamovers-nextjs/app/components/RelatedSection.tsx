@@ -33,7 +33,7 @@ export default async function RelatedSection<T>({
         <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-10 text-center">
           {title}
         </H2>
-        <div className="bg-gray-50 rounded-4xl p-8">
+        <div className="bg-gray-50 rounded-4xl p-6 md:p-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {filteredItems.map((item) => {
               const slug = getSlug(item);
@@ -44,7 +44,7 @@ export default async function RelatedSection<T>({
                   className="bg-white rounded-2xl p-6 text-center hover:shadow-md transition-all group"
                 >
                   {renderItem(item)}
-                  <span className="text-orange-700 text-sm font-medium flex items-center justify-center mt-3">
+                  <span className="text-orange-600 text-sm font-medium flex items-center justify-center mt-3">
                     {ui.buttons.compare}
                     <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
                   </span>

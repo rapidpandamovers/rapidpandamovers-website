@@ -141,7 +141,7 @@ Depending on your Miami Beach moving needs, you might also consider:
 
 - [**Packing Services**](/miami-beach-packing-services) - Professional packing for Miami Beach residents, including heat-sensitive items
 - [**Apartment Moving**](/miami-beach-apartment-moving) - High-rise and condo moving with elevator coordination
-- [**Storage Solutions**](/storage-solutions) - Climate-controlled storage for items you need to store during your transition
+- [**Storage Solutions**](/miami-beach-storage-solutions) - Climate-controlled storage for items you need to store during your transition
 
 ## Ready to Plan Your Summer Move?
 

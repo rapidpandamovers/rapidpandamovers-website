@@ -95,11 +95,11 @@ Our team has extensive experience helping families relocate to [**Golden Beach**
 
 ### What We Offer
 
-- **[Local Moving](/local-moving)**: Perfect for relocations within Miami-Dade
-- **[Apartment Moving](/apartment-moving)**: High-rise and condo expertise
-- **[Residential Moving](/residential-moving)**: House-to-house moves
-- **[Packing Services](/packing-services)**: Full-service packing and materials
-- **[Full-Service Moving](/full-service-moving)**: Complete door-to-door solutions
+- **[Local Moving](/golden-beach-local-moving)**: Perfect for relocations within Miami-Dade
+- **[Apartment Moving](/golden-beach-apartment-moving)**: High-rise and condo expertise
+- **[Residential Moving](/golden-beach-residential-moving)**: House-to-house moves
+- **[Packing Services](/golden-beach-packing-services)**: Full-service packing and materials
+- **[Full-Service Moving](/golden-beach-full-service-moving)**: Complete door-to-door solutions
 
 ## Ready to Make Golden Beach Home?
 

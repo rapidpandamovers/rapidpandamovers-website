@@ -37,7 +37,7 @@ export default async function ComparePage() {
       />
 
       {/* Introduction */}
-      <OverviewSection title={<>{content.compare.overview.titleBefore}<span className="text-orange-700">{content.compare.overview.titleHighlight}</span>{content.compare.overview.titleAfter || ''}</>}>
+      <OverviewSection title={<>{content.compare.overview.titleBefore}<span className="text-orange-600">{content.compare.overview.titleHighlight}</span>{content.compare.overview.titleAfter || ''}</>}>
         <p className="text-xl text-gray-600 mb-8">
           {content.compare.overview.description}
         </p>
@@ -56,7 +56,7 @@ export default async function ComparePage() {
 
       {/* Comparisons Grid */}
       <CompareList
-        title={<>{content.compare.compareList.titleBefore}<span className="text-orange-700">{content.compare.compareList.titleHighlight}</span></>}
+        title={<>{content.compare.compareList.titleBefore}<span className="text-orange-600">{content.compare.compareList.titleHighlight}</span></>}
         subtitle={content.compare.compareList.subtitle}
         items={comparisonsData}
         basePath={`/${compareSlug}`}

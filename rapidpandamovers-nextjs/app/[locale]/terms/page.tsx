@@ -20,30 +20,38 @@ export default async function TermsPage() {
   const terms = content.terms;
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
       <Hero
         title={terms.title}
         description={terms.hero.description}
         cta={terms.hero.cta}
       />
 
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="pt-10">
+        <div className="container mx-auto">
           <div className="max-w-3xl mx-auto prose prose-lg">
             {terms.sections.map((section: any, index: number) => (
               <div key={index} className="mb-8">
                 <H2 className="text-2xl font-bold text-gray-800 mb-4">{section.title}</H2>
                 {'hasContactLinks' in section && section.hasContactLinks ? (
-                  <p className="text-gray-600">
-                    {section.content.split('info@rapidpandamovers.com')[0]}
-                    <a href={`mailto:${content.site.email}`} className="text-orange-700 hover:text-orange-800">
-                      {content.site.email}
-                    </a>
-                    {' '}or call us at{' '}
-                    <a href={`tel:${content.site.phone.replace(/-/g, '')}`} className="text-orange-700 hover:text-orange-800">
-                      ({content.site.phone.slice(0,3)}) {content.site.phone.slice(4,7)}-{content.site.phone.slice(8)}
-                    </a>.
-                  </p>
+                  (() => {
+                    const phoneFormatted = `(${content.site.phone.slice(0,3)}) ${content.site.phone.slice(4,7)}-${content.site.phone.slice(8)}`
+                    const [beforeEmail, afterEmail = ''] = section.content.split(content.site.email)
+                    const [connectingText, trailingText = ''] = afterEmail.split(phoneFormatted)
+                    return (
+                      <p className="text-gray-600">
+                        {beforeEmail}
+                        <a href={`mailto:${content.site.email}`} className="text-orange-600 hover:text-orange-800">
+                          {content.site.email}
+                        </a>
+                        {connectingText}
+                        <a href={`tel:${content.site.phone.replace(/-/g, '')}`} className="text-orange-600 hover:text-orange-800">
+                          {phoneFormatted}
+                        </a>
+                        {trailingText}
+                      </p>
+                    )
+                  })()
                 ) : (
                   <p className="text-gray-600">{section.content}</p>
                 )}

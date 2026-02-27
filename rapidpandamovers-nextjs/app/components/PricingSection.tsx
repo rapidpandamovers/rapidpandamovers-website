@@ -109,7 +109,7 @@ export default async function PricingSection({ houseSizes, originCity, originZip
   return (
     <section className="pt-20 bg-white">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 px-6 md:px-0">
           <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             {ui.pricing.title}
           </H2>
@@ -141,7 +141,7 @@ export default async function PricingSection({ houseSizes, originCity, originZip
                   )}
                 </div>
               )}
-              <p className="text-orange-700 font-semibold mb-3">{category.time}</p>
+              <p className="text-orange-600 font-semibold mb-3">{category.time}</p>
               <p className="text-gray-600 mb-4 text-sm">{category.description}</p>
               <ul className="space-y-2 mb-6">
                 {category.features.map((feature, i) => (

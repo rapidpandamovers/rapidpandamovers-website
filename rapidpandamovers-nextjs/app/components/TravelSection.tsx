@@ -15,6 +15,7 @@ interface TravelSectionProps {
   originHasPage?: boolean
   destinationHasPage?: boolean
   className?: string
+  children?: React.ReactNode
 }
 
 export default async function TravelSection({
@@ -29,6 +30,7 @@ export default async function TravelSection({
   originHasPage = true,
   destinationHasPage = true,
   className = '',
+  children,
 }: TravelSectionProps) {
   const { ui } = (await getMessages()) as any
 
@@ -44,17 +46,78 @@ export default async function TravelSection({
       <div className="container mx-auto">
         <div className="mx-auto">
           {/* Header */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 px-6 md:px-0">
             <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-              {ui.travel.movingFrom.split('{origin}')[0]}<span className="text-orange-700">{origin}</span>{ui.travel.movingFrom.split('{origin}')[1].split('{destination}')[0]}<span className="text-orange-700">{destination}</span>{ui.travel.movingFrom.split('{destination}')[1] || ''}
+              {ui.travel.movingFrom.split('{origin}')[0]}<span className="text-orange-600">{origin}</span>{ui.travel.movingFrom.split('{origin}')[1].split('{destination}')[0]}<span className="text-orange-600">{destination}</span>{ui.travel.movingFrom.split('{destination}')[1] || ''}
             </H2>
             <p className="text-xl text-gray-600 mb-8">
               {ui.travel.movingFromDesc.replace('{origin}', origin).replace('{destination}', destination)}
             </p>
           </div>
 
+          {/* Origin & Destination Cards */}
+          {showLocationLinks && (originSlug || destinationSlug) && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+              {/* Origin Card */}
+              {originSlug && originHasPage ? (
+                <Link
+                  href={`/${originSlug}-movers`}
+                  className="bg-orange-50 rounded-lg p-6 hover:bg-orange-100 transition-colors flex items-center justify-between group"
+                >
+                  <div className="flex items-center space-x-4">
+                    <MapPin className="w-6 h-6 text-orange-500" />
+                    <div>
+                      <h4 className="font-semibold text-gray-700 mb-1">{ui.travel.origin}</h4>
+                      <p className="text-xl font-display font-bold text-gray-800">{origin}</p>
+                    </div>
+                  </div>
+                  <ArrowRight className="w-5 h-5 text-gray-800 group-hover:text-orange-600 group-hover:translate-x-1 transition-all" />
+                </Link>
+              ) : (
+                <div className="bg-orange-50 rounded-lg p-6 flex items-center">
+                  <div className="flex items-center space-x-4">
+                    <MapPin className="w-6 h-6 text-orange-500" />
+                    <div>
+                      <h4 className="font-semibold text-gray-700 mb-1">{ui.travel.origin}</h4>
+                      <p className="text-xl font-display font-bold text-gray-800">{origin}</p>
+                    </div>
+                  </div>
+                </div>
+              )}
+              {/* Destination Card */}
+              {destinationSlug && destinationHasPage ? (
+                <Link
+                  href={`/${destinationSlug}-movers`}
+                  className="bg-orange-50 rounded-lg p-6 hover:bg-orange-100 transition-colors flex items-center justify-between group"
+                >
+                  <div className="flex items-center space-x-4">
+                    <MapPin className="w-6 h-6 text-orange-500" />
+                    <div>
+                      <h4 className="font-semibold text-gray-700 mb-1">{ui.travel.destination}</h4>
+                      <p className="text-xl font-display font-bold text-gray-800">{destination}</p>
+                    </div>
+                  </div>
+                  <ArrowRight className="w-5 h-5 text-gray-800 group-hover:text-orange-600 group-hover:translate-x-1 transition-all" />
+                </Link>
+              ) : (
+                <div className="bg-orange-50 rounded-lg p-6 flex items-center">
+                  <div className="flex items-center space-x-4">
+                    <MapPin className="w-6 h-6 text-orange-500" />
+                    <div>
+                      <h4 className="font-semibold text-gray-700 mb-1">{ui.travel.destination}</h4>
+                      <p className="text-xl font-display font-bold text-gray-800">{destination}</p>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Slot for map or other content between origin/destination and route stats */}
+          {children}
+
           {/* Route Info Cards */}
-          <div className={`grid grid-cols-1 ${startingCost ? 'md:grid-cols-3' : 'md:grid-cols-2'} gap-6 mb-12`}>
+          <div className={`grid grid-cols-1 ${startingCost ? 'md:grid-cols-3' : 'md:grid-cols-2'} gap-6`}>
             <div className="bg-gray-50 rounded-lg p-6 text-center">
               <Navigation className="w-8 h-8 text-orange-500 mx-auto mb-4" />
               <H3 className="text-lg font-semibold text-gray-700 mb-2">{ui.travel.distance}</H3>
@@ -73,69 +136,6 @@ export default async function TravelSection({
               </div>
             )}
           </div>
-
-          {/* Origin & Destination Cards */}
-          {showLocationLinks && (originSlug || destinationSlug) && (
-            <div className="bg-orange-50 rounded-lg p-8">
-              <H3 className="text-2xl font-bold text-gray-800 mb-6 text-center">
-                {ui.travel.originDestination}
-              </H3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* Origin Card */}
-                {originSlug && originHasPage ? (
-                  <Link
-                    href={`/${originSlug}-movers`}
-                    className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow flex items-center justify-between group"
-                  >
-                    <div className="flex items-center space-x-4">
-                      <MapPin className="w-6 h-6 text-orange-500" />
-                      <div>
-                        <h4 className="font-semibold text-gray-700 mb-1">{ui.travel.origin}</h4>
-                        <p className="text-xl font-bold text-gray-800">{origin}</p>
-                      </div>
-                    </div>
-                    <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-orange-600 group-hover:translate-x-1 transition-all" />
-                  </Link>
-                ) : (
-                  <div className="bg-white rounded-lg p-6 shadow-sm flex items-center">
-                    <div className="flex items-center space-x-4">
-                      <MapPin className="w-6 h-6 text-orange-500" />
-                      <div>
-                        <h4 className="font-semibold text-gray-700 mb-1">{ui.travel.origin}</h4>
-                        <p className="text-xl font-bold text-gray-800">{origin}</p>
-                      </div>
-                    </div>
-                  </div>
-                )}
-                {/* Destination Card */}
-                {destinationSlug && destinationHasPage ? (
-                  <Link
-                    href={`/${destinationSlug}-movers`}
-                    className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow flex items-center justify-between group"
-                  >
-                    <div className="flex items-center space-x-4">
-                      <MapPin className="w-6 h-6 text-orange-500" />
-                      <div>
-                        <h4 className="font-semibold text-gray-700 mb-1">{ui.travel.destination}</h4>
-                        <p className="text-xl font-bold text-gray-800">{destination}</p>
-                      </div>
-                    </div>
-                    <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-orange-600 group-hover:translate-x-1 transition-all" />
-                  </Link>
-                ) : (
-                  <div className="bg-white rounded-lg p-6 shadow-sm flex items-center">
-                    <div className="flex items-center space-x-4">
-                      <MapPin className="w-6 h-6 text-orange-500" />
-                      <div>
-                        <h4 className="font-semibold text-gray-700 mb-1">{ui.travel.destination}</h4>
-                        <p className="text-xl font-bold text-gray-800">{destination}</p>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </section>

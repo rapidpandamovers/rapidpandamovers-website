@@ -43,7 +43,7 @@ export function LanguageSelectorHeader() {
               key={loc}
               onClick={() => onChange(loc)}
               className={`block w-full text-left pl-6 pr-6 py-2 text-sm hover:text-orange-600 hover:translate-x-1 transition-all duration-200 ${
-                loc === locale ? 'text-orange-700 font-semibold' : 'text-gray-700'
+                loc === locale ? 'text-orange-600 font-semibold' : 'text-gray-700'
               }`}
             >
               {languageNames[loc]}

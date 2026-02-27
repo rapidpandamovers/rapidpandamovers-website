@@ -265,9 +265,9 @@ The first month in your new home involves ongoing document management:
 
 Depending on your moving needs, you might also consider:
 
-- [**Packing Services**](/packing-services) - Professional packing ensures documents stay organized and protected
-- [**Full-Service Moving**](/full-service-moving) - Complete door-to-door solutions so you can focus on paperwork
-- [**Residential Moving**](/residential-moving) - Expert home relocation throughout Florida
+- [**Packing Services**](/miami-packing-services) - Professional packing ensures documents stay organized and protected
+- [**Full-Service Moving**](/miami-full-service-moving) - Complete door-to-door solutions so you can focus on paperwork
+- [**Residential Moving**](/miami-residential-moving) - Expert home relocation throughout Florida
 
 ## Ready to Get Started?
 

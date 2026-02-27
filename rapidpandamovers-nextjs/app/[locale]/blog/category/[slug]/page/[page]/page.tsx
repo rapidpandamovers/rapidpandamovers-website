@@ -11,18 +11,20 @@ import type { Metadata } from 'next'
 const POSTS_PER_PAGE = 12
 
 export async function generateStaticParams() {
-  const categories = getCategories()
-  const params: { slug: string; page: string }[] = []
-  for (const cat of categories) {
-    if (!isEditorialCategory(cat)) continue
-    const slug = categoryToSlug(cat)
-    const posts = getPostsByCategory(cat)
-    const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE)
-    for (let p = 2; p <= totalPages; p++) {
-      params.push({ slug, page: String(p) })
+  return locales.flatMap(locale => {
+    const categories = getCategories(locale)
+    const params: { locale: string; slug: string; page: string }[] = []
+    for (const cat of categories) {
+      if (!isEditorialCategory(cat)) continue
+      const slug = categoryToSlug(cat)
+      const posts = getPostsByCategory(cat, locale)
+      const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE)
+      for (let p = 2; p <= totalPages; p++) {
+        params.push({ locale, slug, page: String(p) })
+      }
     }
-  }
-  return locales.flatMap(locale => params.map(p => ({ locale, ...p })))
+    return params
+  })
 }
 
 export async function generateMetadata({
@@ -31,12 +33,12 @@ export async function generateMetadata({
   params: Promise<{ slug: string; page: string }>
 }): Promise<Metadata> {
   const { slug, page } = await params
-  const category = getCategoryBySlug(slug)
+  const locale = await getLocale() as Locale
+  const category = getCategoryBySlug(slug, locale)
   if (!category) {
     return { title: 'Category Not Found' }
   }
   const pageNum = parseInt(page, 10)
-  const locale = await getLocale() as Locale
   return generatePageMetadata({
     title: `${category} - Page ${pageNum} | Rapid Panda Movers Blog`,
     description: `${category} - Page ${pageNum}. Moving tips and guides. Expert advice for your Miami move.`,
@@ -52,16 +54,16 @@ export default async function BlogCategoryPaginatedPage({
   params: Promise<{ slug: string; page: string }>
 }) {
   const { slug, page } = await params
-  const category = getCategoryBySlug(slug)
+  const locale = await getLocale() as Locale
+  const category = getCategoryBySlug(slug, locale)
   if (!category || !isEditorialCategory(category)) {
     notFound()
   }
-  const locale = await getLocale() as Locale
   const pageNum = parseInt(page, 10)
   if (pageNum === 1) {
     redirect(`/blog/${getTranslatedSlug('category', locale)}/${encodeURIComponent(slug)}`)
   }
-  const posts = getPostsByCategory(category)
+  const posts = getPostsByCategory(category, locale)
   const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE)
   if (isNaN(pageNum) || pageNum < 1 || pageNum > totalPages) {
     notFound()

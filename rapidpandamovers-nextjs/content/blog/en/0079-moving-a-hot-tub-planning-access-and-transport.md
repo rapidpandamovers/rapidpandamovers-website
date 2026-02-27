@@ -17,7 +17,6 @@ images:
   - "/images/blog/2024/10/moving-a-hot-tub-planning-access-and-transport/a-couple-enjoys-a-serene-afternoon-in-a--2.webp"
   - "/images/blog/2024/10/moving-a-hot-tub-planning-access-and-transport/adult-man-enjoying-relaxation-in-a-woode-3.webp"
   - "/images/blog/2024/10/moving-a-hot-tub-planning-access-and-transport/shirtless-man-smiling-in-an-outdoor-hot--1.webp"
-
 service_link: "/hot-tub-moving"
 location_link: null
 status: "pending"

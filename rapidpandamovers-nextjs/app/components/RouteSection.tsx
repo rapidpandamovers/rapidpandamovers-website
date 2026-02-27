@@ -141,7 +141,7 @@ export default function RouteSection({
     return (
       <section className="pt-20">
         <div className="container mx-auto">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10 px-6 md:px-0">
             <div>
               <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
                 {displayTitle}
@@ -154,7 +154,7 @@ export default function RouteSection({
             </div>
             <Link
               href={ctaHref}
-              className="inline-flex items-center text-orange-700 hover:text-orange-800 font-semibold mt-4 md:mt-0"
+              className="inline-flex items-center text-orange-600 hover:text-orange-800 font-semibold mt-4 md:mt-0"
             >
               {ctaText}
               <ArrowRight className="w-5 h-5 ml-2" />
@@ -170,7 +170,7 @@ export default function RouteSection({
                   <Link
                     key={index}
                     href={`/${getTranslatedSlug(`${route.slug}-movers`, locale)}`}
-                    className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-orange-700 transition-colors group"
+                    className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-orange-600 transition-colors group"
                   >
                     <div className="flex items-center justify-between mb-4">
                       <Navigation className="w-6 h-6 text-orange-500" />
@@ -186,7 +186,7 @@ export default function RouteSection({
                         {ui.routes.startingFrom.replace('${cost}', '$' + cost.toLocaleString())}
                       </p>
                     )}
-                    <div className="text-orange-700 group-hover:text-orange-700 font-medium flex items-center">
+                    <div className="text-orange-600 group-hover:text-orange-600 font-medium flex items-center">
                       {ui.routes.viewRoute}
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </div>
@@ -202,7 +202,7 @@ export default function RouteSection({
   return (
     <section className="pt-20">
       <div className="container mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 px-6 md:px-0">
           <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             {displayTitle}
           </H2>
@@ -222,7 +222,7 @@ export default function RouteSection({
                 <Link
                   key={index}
                   href={`/${getTranslatedSlug(`${route.slug}-movers`, locale)}`}
-                  className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-orange-700 transition-colors group"
+                  className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-orange-600 transition-colors group"
                 >
                   <div className="flex items-center justify-between mb-4">
                     <Navigation className="w-6 h-6 text-orange-500" />
@@ -238,7 +238,7 @@ export default function RouteSection({
                       {ui.routes.startingFrom.replace('${cost}', '$' + cost.toLocaleString())}
                     </p>
                   )}
-                  <div className="text-orange-700 group-hover:text-orange-700 font-medium flex items-center">
+                  <div className="text-orange-600 group-hover:text-orange-600 font-medium flex items-center">
                     {ui.routes.viewRoute}
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -250,7 +250,7 @@ export default function RouteSection({
           <div className="text-center mt-8">
             <button
               onClick={() => setShowAll(!showAll)}
-              className="inline-flex items-center px-6 py-3 border-2 border-orange-700 text-orange-700 font-semibold rounded-lg hover:bg-orange-600 hover:text-white transition-colors"
+              className="inline-flex items-center px-6 py-3 border-2 border-orange-600 text-orange-600 font-semibold rounded-lg hover:bg-orange-600 hover:text-white transition-colors"
             >
               {showAll ? ui.routes.showLess : ui.routes.showAllRoutes.replace('{count}', String(relevantRoutes.length))}
               <ChevronDown className={`w-5 h-5 ml-2 transition-transform ${showAll ? 'rotate-180' : ''}`} />
@@ -261,7 +261,7 @@ export default function RouteSection({
           <div className="text-center mt-8">
             <Link
               href={`/${routesSlug}/${location.slug}`}
-              className="inline-flex items-center px-6 py-3 border-2 border-orange-700 text-orange-700 font-semibold rounded-lg hover:bg-orange-600 hover:text-white transition-colors"
+              className="inline-flex items-center px-6 py-3 border-2 border-orange-600 text-orange-600 font-semibold rounded-lg hover:bg-orange-600 hover:text-white transition-colors"
             >
               {ui.routes.viewAllLocationRoutes.replace('{name}', location.name)}
               <ArrowRight className="w-4 h-4 ml-2" />

@@ -4,7 +4,7 @@ import { getServiceSlugsFromBlog, getPostsByService } from '@/lib/blog'
 import { getServiceBySlug } from '@/lib/data'
 import { locales } from '@/i18n/config'
 import { getLocale } from 'next-intl/server'
-import { getTranslatedSlug } from '@/i18n/slug-map'
+import { getCanonicalSlug, getTranslatedSlug } from '@/i18n/slug-map'
 import type { Locale } from '@/i18n/config'
 import { generatePageMetadata } from '@/lib/metadata'
 import type { Metadata } from 'next'
@@ -13,15 +13,18 @@ const POSTS_PER_PAGE = 12
 
 export async function generateStaticParams() {
   const slugs = getServiceSlugsFromBlog()
-  const params: { slug: string; page: string }[] = []
-  for (const slug of slugs) {
-    const posts = getPostsByService(slug)
-    const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE)
-    for (let p = 2; p <= totalPages; p++) {
-      params.push({ slug, page: String(p) })
+  return locales.flatMap(locale => {
+    const params: { locale: string; slug: string; page: string }[] = []
+    for (const enSlug of slugs) {
+      const posts = getPostsByService(enSlug, locale)
+      const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE)
+      const translatedSlug = getTranslatedSlug(enSlug, locale as Locale)
+      for (let p = 2; p <= totalPages; p++) {
+        params.push({ locale, slug: translatedSlug, page: String(p) })
+      }
     }
-  }
-  return locales.flatMap(locale => params.map(p => ({ locale, ...p })))
+    return params
+  })
 }
 
 export async function generateMetadata({
@@ -30,12 +33,13 @@ export async function generateMetadata({
   params: Promise<{ slug: string; page: string }>
 }): Promise<Metadata> {
   const { slug, page } = await params
-  const service = getServiceBySlug(slug)
+  const locale = await getLocale() as Locale
+  const canonicalSlug = getCanonicalSlug(slug, locale)
+  const service = getServiceBySlug(canonicalSlug)
   if (!service) {
     return { title: 'Service Not Found' }
   }
   const pageNum = parseInt(page, 10)
-  const locale = await getLocale() as Locale
   return generatePageMetadata({
     title: `${service.name} Tips & Guides - Page ${pageNum} | Rapid Panda Movers Blog`,
     description: `${service.name} tips and guides - Page ${pageNum}. Expert advice for your move.`,
@@ -52,7 +56,8 @@ export default async function BlogServicePaginatedPage({
 }) {
   const locale = await getLocale() as Locale
   const { slug, page } = await params
-  const service = getServiceBySlug(slug)
+  const canonicalSlug = getCanonicalSlug(slug, locale)
+  const service = getServiceBySlug(canonicalSlug)
   if (!service) {
     notFound()
   }
@@ -60,10 +65,10 @@ export default async function BlogServicePaginatedPage({
   if (pageNum === 1) {
     redirect(`/blog/${getTranslatedSlug('service', locale)}/${encodeURIComponent(slug)}`)
   }
-  const posts = getPostsByService(slug)
+  const posts = getPostsByService(canonicalSlug, locale)
   const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE)
   if (isNaN(pageNum) || pageNum < 1 || pageNum > totalPages) {
     notFound()
   }
-  return <BlogListPage currentPage={pageNum} serviceSlug={slug} serviceName={service.name} />
+  return <BlogListPage currentPage={pageNum} serviceSlug={canonicalSlug} serviceName={service.name} />
 }

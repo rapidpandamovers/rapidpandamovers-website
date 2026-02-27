@@ -133,7 +133,7 @@ export default async function ServicePage({ service, location }: ServicePageProp
 
       {/* Content Section */}
       <OverviewSection
-        title={<>{ui.services.aboutService.split('{name}')[0]}<span className="text-orange-700">{location ? `${location.name} ${service.name}` : service.name}</span>{ui.services.aboutService.split('{name}')[1]}</>}
+        title={<>{ui.services.aboutService.split('{name}')[0]}<span className="text-orange-600">{location ? `${location.name} ${service.name}` : service.name}</span>{ui.services.aboutService.split('{name}')[1]}</>}
         icon={<ServiceIllustration service={service.slug} className="w-44 h-44" />}
       >
         <p className="text-gray-600 leading-relaxed">{service.description}</p>

@@ -9,6 +9,8 @@ import type { Locale } from '@/i18n/config'
 
 function categoryToSlug(category: string): string {
   return category
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
     .replace(/&/g, 'and')
     .replace(/[^a-z0-9\s-]/g, '')
@@ -19,11 +21,8 @@ function categoryToSlug(category: string): string {
 
 // Non-service/general topic categories shown as top-level pills
 const TOPIC_CATEGORIES = [
-  'Fun Facts',
-  'Home & Living',
-  'Lifestyle',
-  'Location Guide',
-  'Moving Tips',
+  'Fun Facts', 'Home & Living', 'Lifestyle', 'Location Guide', 'Moving Tips',
+  'Datos Curiosos', 'Hogar y Vida', 'Estilo de Vida', 'Guía del Vecindario', 'Consejos de Mudanza',
 ]
 
 interface BlogCategoryFilterProps {
@@ -112,7 +111,7 @@ export default function BlogCategoryFilter({ categories, activeCategory, locatio
                   onClick={() => setServicesOpen(false)}
                   className={`block px-4 py-2 text-sm transition-colors ${
                     activeService === slug
-                      ? 'bg-orange-50 text-orange-700 font-medium'
+                      ? 'bg-orange-50 text-orange-600 font-medium'
                       : 'text-gray-700 hover:bg-gray-50'
                   }`}
                 >
@@ -144,7 +143,7 @@ export default function BlogCategoryFilter({ categories, activeCategory, locatio
                   onClick={() => setLocationsOpen(false)}
                   className={`block px-4 py-2 text-sm transition-colors ${
                     activeLocation === loc.slug
-                      ? 'bg-orange-50 text-orange-700 font-medium'
+                      ? 'bg-orange-50 text-orange-600 font-medium'
                       : 'text-gray-700 hover:bg-gray-50'
                   }`}
                 >

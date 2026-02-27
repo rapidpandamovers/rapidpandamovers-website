@@ -95,11 +95,11 @@ Our team has extensive experience helping families relocate to [**South Miami**]
 
 ### What We Offer
 
-- **[Local Moving](/local-moving)**: Perfect for relocations within Miami-Dade
-- **[Apartment Moving](/apartment-moving)**: High-rise and condo expertise
-- **[Residential Moving](/residential-moving)**: House-to-house moves
-- **[Packing Services](/packing-services)**: Full-service packing and materials
-- **[Full-Service Moving](/full-service-moving)**: Complete door-to-door solutions
+- **[Local Moving](/south-miami-local-moving)**: Perfect for relocations within Miami-Dade
+- **[Apartment Moving](/south-miami-apartment-moving)**: High-rise and condo expertise
+- **[Residential Moving](/south-miami-residential-moving)**: House-to-house moves
+- **[Packing Services](/south-miami-packing-services)**: Full-service packing and materials
+- **[Full-Service Moving](/south-miami-full-service-moving)**: Complete door-to-door solutions
 
 ## Ready to Make South Miami Home?
 

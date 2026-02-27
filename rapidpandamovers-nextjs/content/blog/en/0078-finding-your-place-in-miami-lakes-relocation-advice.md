@@ -90,11 +90,11 @@ Our team has extensive experience helping families relocate to [**Miami Lakes**]
 
 ### What We Offer
 
-- **[Local Moving](/local-moving)**: Perfect for relocations within Miami-Dade
-- **[Apartment Moving](/apartment-moving)**: High-rise and condo expertise
-- **[Residential Moving](/residential-moving)**: House-to-house moves
-- **[Packing Services](/packing-services)**: Full-service packing and materials
-- **[Full-Service Moving](/full-service-moving)**: Complete door-to-door solutions
+- **[Local Moving](/miami-lakes-local-moving)**: Perfect for relocations within Miami-Dade
+- **[Apartment Moving](/miami-lakes-apartment-moving)**: High-rise and condo expertise
+- **[Residential Moving](/miami-lakes-residential-moving)**: House-to-house moves
+- **[Packing Services](/miami-lakes-packing-services)**: Full-service packing and materials
+- **[Full-Service Moving](/miami-lakes-full-service-moving)**: Complete door-to-door solutions
 
 ## Ready to Make Miami Lakes Home?
 

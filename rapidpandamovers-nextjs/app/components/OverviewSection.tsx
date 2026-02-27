@@ -8,6 +8,7 @@ interface OverviewSectionProps {
   website?: string;
   icon?: React.ReactNode;
   children: React.ReactNode;
+  className?: string;
 }
 
 export default async function OverviewSection({
@@ -16,16 +17,17 @@ export default async function OverviewSection({
   website,
   icon,
   children,
+  className = '',
 }: OverviewSectionProps) {
   const { ui } = (await getMessages()) as any;
   return (
-    <section className="pt-20">
+    <section className={`pt-20 ${className}`}>
       <div className="container mx-auto">
-        <div className="bg-gray-50 rounded-4xl p-8">
+        <div className="bg-gray-50 rounded-4xl p-6 md:p-8">
           <div className={icon ? 'flex items-center gap-12' : ''}>
             <div className="flex-1">
-              <div className={`flex items-center ${website ? 'justify-between' : ''} mb-6`}>
-                <H2 className="text-4xl font-bold text-gray-800">
+              <div className="mb-6">
+                <H2 className="text-3xl md:text-4xl font-bold text-gray-800">
                   {title}
                 </H2>
                 {website && (
@@ -33,7 +35,7 @@ export default async function OverviewSection({
                     href={website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-orange-700 hover:text-orange-800 flex items-center text-sm"
+                    className="text-orange-600 hover:text-orange-800 inline-flex items-center text-sm mt-3"
                   >
                     {ui.buttons.visitWebsite}
                     <ExternalLink className="w-4 h-4 ml-1" />

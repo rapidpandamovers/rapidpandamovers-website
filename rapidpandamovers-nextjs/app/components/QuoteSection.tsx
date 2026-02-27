@@ -44,7 +44,7 @@ export default async function QuoteSection({
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
             href={`tel:${phone}`}
-            className="bg-white text-orange-700 font-bold py-4 px-8 rounded-lg hover:bg-orange-50 transition-colors text-center border-2 border-transparent"
+            className="bg-white text-orange-600 font-bold py-4 px-8 rounded-lg hover:bg-orange-50 transition-colors text-center border-2 border-transparent"
           >
             {ui.buttons.callPrefix} {phoneDisplay}
           </a>

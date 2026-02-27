@@ -212,7 +212,7 @@ export default function ReviewSection({
       <section className={`pt-20 ${className}`}>
         <div className="container mx-auto">
           {hasHeader && (
-            <div className="text-center mb-10">
+            <div className="text-center mb-10 px-6 md:px-0">
               {title && (
                 <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                   {title}
@@ -227,7 +227,7 @@ export default function ReviewSection({
           )}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {compactReviews.map((review) => (
-              <div key={review.id} className="bg-gray-50 rounded-4xl p-8 flex flex-col">
+              <div key={review.id} className="bg-gray-50 rounded-4xl p-6 md:p-8 flex flex-col">
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-3">
                     <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center text-white text-shadow-sm font-bold text-lg shadow-sm">
@@ -258,7 +258,7 @@ export default function ReviewSection({
             ))}
 
             {/* CTA Box */}
-            <div className="bg-orange-50 rounded-4xl p-8 flex flex-col">
+            <div className="bg-orange-50 rounded-4xl p-6 md:p-8 flex flex-col">
               <div className="flex-1">
                 <MessageSquare className="w-10 h-10 text-orange-500 mb-4" />
                 <H3 className="text-2xl font-bold text-gray-800 mb-3">
@@ -288,7 +288,7 @@ export default function ReviewSection({
       <section className={`pt-20 ${className}`}>
         <div className="container mx-auto">
           {hasHeader && (
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10 px-6 md:px-0">
               <div>
                 {title && (
                   <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
@@ -304,7 +304,7 @@ export default function ReviewSection({
               {showAllLink && (
                 <Link
                   href={reviewsPath}
-                  className="inline-flex items-center text-orange-700 hover:text-orange-800 font-semibold mt-4 md:mt-0"
+                  className="inline-flex items-center text-orange-600 hover:text-orange-800 font-semibold mt-4 md:mt-0"
                 >
                   {ui.buttons.viewAllReviews}
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -328,7 +328,7 @@ export default function ReviewSection({
       <div className="container mx-auto">
         {/* Header */}
         {hasHeader && (
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 px-6 md:px-0">
             {title && (
               <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                 {title}
@@ -415,20 +415,20 @@ export default function ReviewSection({
         {/* Pagination */}
         {showPagination && totalPages > 1 && (
           <>
-            <div className="flex items-center justify-center gap-2 mt-12">
+            <div className="flex items-center justify-center gap-1 md:gap-2 mt-12">
               {/* Previous Button */}
               {currentPage > 1 ? (
                 <button
                   onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
-                  className="flex items-center px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600 transition-colors"
+                  className="flex items-center px-2 py-2 md:px-4 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600 transition-colors"
                 >
-                  <ChevronLeft className="w-4 h-4 mr-1" />
-                  {ui.pagination.previous}
+                  <ChevronLeft className="w-4 h-4 md:mr-1" />
+                  <span className="hidden md:inline">{ui.pagination.previous}</span>
                 </button>
               ) : (
-                <span className="flex items-center px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-400 cursor-not-allowed opacity-50">
-                  <ChevronLeft className="w-4 h-4 mr-1" />
-                  {ui.pagination.previous}
+                <span className="flex items-center px-2 py-2 md:px-4 rounded-lg border border-gray-300 bg-white text-gray-400 cursor-not-allowed opacity-50">
+                  <ChevronLeft className="w-4 h-4 md:mr-1" />
+                  <span className="hidden md:inline">{ui.pagination.previous}</span>
                 </span>
               )}
 
@@ -436,7 +436,7 @@ export default function ReviewSection({
               <div className="flex items-center gap-1">
                 {(() => {
                   const pages: (number | string)[] = []
-                  const edgeCount = 2
+                  const edgeCount = 1
                   const surroundCount = 1
 
                   const showEllipsisStart = currentPage > edgeCount + surroundCount + 1
@@ -469,14 +469,14 @@ export default function ReviewSection({
 
                   return pages.map((page, idx) => (
                     typeof page === 'string' ? (
-                      <span key={`ellipsis-${idx}`} className="w-10 h-10 flex items-center justify-center text-gray-500">
+                      <span key={`ellipsis-${idx}`} className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center text-gray-500 text-sm md:text-base">
                         ...
                       </span>
                     ) : (
                       <button
                         key={page}
                         onClick={() => setCurrentPage(page)}
-                        className={`w-10 h-10 flex items-center justify-center rounded-lg font-medium transition-colors ${
+                        className={`w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-lg font-medium text-sm md:text-base transition-colors ${
                           currentPage === page
                             ? 'bg-orange-600 text-white text-shadow-sm'
                             : 'bg-white border border-gray-300 text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600'
@@ -493,15 +493,15 @@ export default function ReviewSection({
               {currentPage < totalPages ? (
                 <button
                   onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
-                  className="flex items-center px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600 transition-colors"
+                  className="flex items-center px-2 py-2 md:px-4 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600 transition-colors"
                 >
-                  {ui.pagination.next}
-                  <ChevronRight className="w-4 h-4 ml-1" />
+                  <span className="hidden md:inline">{ui.pagination.next}</span>
+                  <ChevronRight className="w-4 h-4 md:ml-1" />
                 </button>
               ) : (
-                <span className="flex items-center px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-400 cursor-not-allowed opacity-50">
-                  {ui.pagination.next}
-                  <ChevronRight className="w-4 h-4 ml-1" />
+                <span className="flex items-center px-2 py-2 md:px-4 rounded-lg border border-gray-300 bg-white text-gray-400 cursor-not-allowed opacity-50">
+                  <span className="hidden md:inline">{ui.pagination.next}</span>
+                  <ChevronRight className="w-4 h-4 md:ml-1" />
                 </span>
               )}
             </div>
@@ -556,7 +556,7 @@ function ReviewCard({
   const needsTruncation = text.length > TRUNCATE_LENGTH
 
   return (
-    <div className="bg-gray-50 rounded-4xl p-8 flex flex-col">
+    <div className="bg-gray-50 rounded-4xl p-6 md:p-8 flex flex-col">
       {/* Header */}
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center gap-3">
@@ -600,7 +600,7 @@ function ReviewCard({
           {needsTruncation && (
             <button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="text-orange-700 hover:text-orange-800 text-sm font-medium flex items-center gap-1 transition-colors"
+              className="text-orange-600 hover:text-orange-800 text-sm font-medium flex items-center gap-1 transition-colors"
             >
               {isExpanded ? (
                 <>
@@ -630,7 +630,7 @@ function ReviewCard({
       {(review.services?.length > 0 || review.location?.city) && (
         <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-gray-100">
           {review.services?.map((svc: string, idx: number) => (
-            <span key={idx} className="text-xs bg-orange-50 text-orange-700 px-2.5 py-1 rounded-full font-medium">
+            <span key={idx} className="text-xs bg-orange-50 text-orange-600 px-2.5 py-1 rounded-full font-medium">
               {svc.replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase())}
             </span>
           ))}

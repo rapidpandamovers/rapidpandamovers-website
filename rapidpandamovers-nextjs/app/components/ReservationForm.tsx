@@ -518,12 +518,6 @@ export default function ReservationForm() {
           {ui.forms.reservation.disclaimer}
         </p>
 
-        <TurnstileWidget
-          ref={turnstileRef}
-          onVerify={setTurnstileToken}
-          onExpire={() => setTurnstileToken('')}
-        />
-
         <button
           type="submit"
           disabled={isSubmitting || !turnstileToken}
@@ -538,6 +532,12 @@ export default function ReservationForm() {
             ui.forms.reservation.submitButton
           )}
         </button>
+
+        <TurnstileWidget
+          ref={turnstileRef}
+          onVerify={setTurnstileToken}
+          onExpire={() => setTurnstileToken('')}
+        />
       </div>
     </form>
   );

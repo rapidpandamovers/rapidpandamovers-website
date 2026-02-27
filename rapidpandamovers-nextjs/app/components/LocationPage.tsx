@@ -90,8 +90,8 @@ export default async function LocationPage({ city }: LocationPageProps) {
       ];
 
   // Check if location has blog posts (for viewMoreLink)
-  const hasLocationPosts = getPostsByLocation(city.slug).length > 0;
-  const hasParentLocationPosts = isNeighborhood ? getPostsByLocation(city.parentCity!.slug).length > 0 : false;
+  const hasLocationPosts = getPostsByLocation(city.slug, locale).length > 0;
+  const hasParentLocationPosts = isNeighborhood ? getPostsByLocation(city.parentCity!.slug, locale).length > 0 : false;
   const locationSegment = getTranslatedSlug('location', locale);
   const blogViewMoreLink = hasLocationPosts
     ? `/blog/${locationSegment}/${city.slug}`
@@ -118,7 +118,7 @@ export default async function LocationPage({ city }: LocationPageProps) {
 
       {/* Content Section */}
       <OverviewSection
-        title={<>{ui.location.professionalServicesIn.split('{name}')[0]}<span className="text-orange-700">{city.name}</span>{ui.location.professionalServicesIn.split('{name}')[1]}</>}
+        title={<>{ui.location.professionalServicesIn.split('{name}')[0]}<span className="text-orange-600">{city.name}</span>{ui.location.professionalServicesIn.split('{name}')[1]}</>}
       >
 
         {effectiveDescription && (

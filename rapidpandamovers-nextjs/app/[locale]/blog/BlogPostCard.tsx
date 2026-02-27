@@ -45,7 +45,7 @@ export default function BlogPostCard({ post, showExcerpt = true, showCategoryPil
 
   return (
     <article className="bg-gray-50 rounded-4xl overflow-hidden flex flex-col group">
-      <div className="p-8 pb-0">
+      <div className="p-6 pb-0 md:p-8 md:pb-0">
         {hasValidImage && !imageError ? (
           <BlogPostLink href={`/blog/${post.slug}`}>
             <div className="relative h-48 overflow-hidden rounded-2xl">
@@ -66,7 +66,7 @@ export default function BlogPostCard({ post, showExcerpt = true, showCategoryPil
           </BlogPostLink>
         )}
       </div>
-      <div className="p-8 pt-4 flex flex-col flex-1">
+      <div className="p-6 pt-4 md:p-8 md:pt-4 flex flex-col flex-1">
         <div className="flex items-center text-sm text-gray-500 mb-3">
           <Calendar className="w-4 h-4 mr-1" />
           <span>{new Date(post.date).toLocaleDateString()}</span>
@@ -104,7 +104,7 @@ export default function BlogPostCard({ post, showExcerpt = true, showCategoryPil
 
         <BlogPostLink
           href={`/blog/${post.slug}`}
-          className="text-orange-700 hover:text-orange-800 font-medium inline-flex items-center mt-auto"
+          className="text-orange-600 hover:text-orange-800 font-medium inline-flex items-center mt-auto"
           aria-label={`${ui?.blog?.readFullArticle || 'Read Full Article'}: ${post.title}`}
         >
           {ui?.blog?.readFullArticle || 'Read Full Article'}

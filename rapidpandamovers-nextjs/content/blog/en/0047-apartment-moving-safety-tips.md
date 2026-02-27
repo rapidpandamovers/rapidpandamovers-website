@@ -144,10 +144,10 @@ Use cardboard sheets, plastic covers, or felt pads on floors. Our team uses floo
 
 ## Related Services
 
-- [Apartment Moving Services](/apartment-moving) - Full-service apartment relocation
-- [Packing Services](/packing-services) - Professional packing to protect your belongings
-- [Local Moving](/local-moving) - Efficient local moves within Miami
-- [Storage Solutions](/storage-solutions) - Secure storage options during your transition
+- [Apartment Moving Services](/miami-apartment-moving) - Full-service apartment relocation
+- [Packing Services](/miami-packing-services) - Professional packing to protect your belongings
+- [Local Moving](/miami-local-moving) - Efficient local moves within Miami
+- [Storage Solutions](/miami-storage-solutions) - Secure storage options during your transition
 
 ![Svc Close Up Of Vintage Safety Deposit Boxes 3](/images/blog/2024/05/apartment-moving-safety-tips/svc-close-up-of-vintage-safety-deposit-boxes-3.webp)
 

@@ -62,7 +62,7 @@ export default function NewsletterSection({
   return (
     <section className={`pt-20 ${className}`}>
       <div className="container mx-auto">
-        <div className="bg-gray-50 rounded-4xl p-8 md:p-16 text-center mx-auto">
+        <div className="bg-gray-50 rounded-4xl p-6 md:p-16 text-center mx-auto">
           <H3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             {displayTitle}
           </H3>
@@ -81,17 +81,19 @@ export default function NewsletterSection({
           ) : (
             <form onSubmit={handleSubmit} className="max-w-md mx-auto">
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch">
-                <div className="bg-orange-100 border border-orange-100 rounded-lg flex items-center justify-center flex-shrink-0 px-3">
-                  <Mail className="w-6 h-6 text-orange-500" />
+                <div className="flex flex-row gap-3 flex-1 sm:contents">
+                  <div className="bg-orange-100 border border-orange-100 rounded-lg flex items-center justify-center flex-shrink-0 px-3">
+                    <Mail className="w-6 h-6 text-orange-500" />
+                  </div>
+                  <input
+                    id="newsletter-email"
+                    name="email"
+                    type="email"
+                    required
+                    placeholder={ui.forms.newsletter.placeholder}
+                    className="flex-1 min-w-0 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                  />
                 </div>
-                <input
-                  id="newsletter-email"
-                  name="email"
-                  type="email"
-                  required
-                  placeholder={ui.forms.newsletter.placeholder}
-                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                />
                 <button
                   type="submit"
                   disabled={isSubmitting || !turnstileToken}
@@ -105,13 +107,11 @@ export default function NewsletterSection({
                 </button>
               </div>
 
-              <div className="mt-4">
-                <TurnstileWidget
-                  ref={turnstileRef}
-                  onVerify={setTurnstileToken}
-                  onExpire={() => setTurnstileToken('')}
-                />
-              </div>
+              <TurnstileWidget
+                ref={turnstileRef}
+                onVerify={setTurnstileToken}
+                onExpire={() => setTurnstileToken('')}
+              />
 
               {submitStatus === 'error' && (
                 <p className="mt-3 text-sm text-red-600">{ui.messages.newsletterError}</p>

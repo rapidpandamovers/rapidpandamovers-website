@@ -135,7 +135,7 @@ To ensure your Miami relocation goes smoothly, consider these complementary serv
 
 - **[Miami Local Moving](/miami-local-moving):** Full-service local moves within Miami-Dade County
 - **[Miami Packing Services](/miami-packing-services):** Professional packing to protect your belongings and save time
-- **[Storage Solutions](/storage-solutions):** Temporary storage while you handle permit timing or coordinate your move
+- **[Storage Solutions](/miami-storage-solutions):** Temporary storage while you handle permit timing or coordinate your move
 - **[Miami Commercial Moving](/miami-commercial-moving):** Business relocations with specialized permit knowledge
 
 ## FAQs

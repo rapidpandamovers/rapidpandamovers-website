@@ -176,7 +176,7 @@ Depending on your needs, you might also consider:
 
 - [**Packing Services**](/miami-packing-services): Professional packing for Miami residents who want the convenience without lifting
 - [**Apartment Moving**](/miami-apartment-moving): Specialized high-rise and condo moving with elevator coordination
-- [**Full-Service Moving**](/full-service-moving): Complete door-to-door solutions including packing, moving, and unpacking
+- [**Full-Service Moving**](/miami-full-service-moving): Complete door-to-door solutions including packing, moving, and unpacking
 
 ## Get Your Free Quote
 

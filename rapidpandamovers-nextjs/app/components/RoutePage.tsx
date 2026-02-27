@@ -105,19 +105,20 @@ export default async function RoutePage({ route }: RoutePageProps) {
         driveTimeMinutes={route.drive_time_min}
         startingCost={route.avg_cost_usd}
         destinationHasPage={getStateFromName(route.destination_name) === 'FL'}
-      />
-
-      {/* Map Section */}
-      <MapSection
-        route={{
-          origin: fromCityTitle,
-          destination: toCityTitle,
-          originZip: route.origin_zip,
-          destinationZip: route.destination_zip,
-          originState: getStateFromName(route.origin_name),
-          destinationState: getStateFromName(route.destination_name),
-        }}
-      />
+      >
+        {/* Map Section (between origin/destination and distance/drive time) */}
+        <MapSection
+          embedded
+          route={{
+            origin: fromCityTitle,
+            destination: toCityTitle,
+            originZip: route.origin_zip,
+            destinationZip: route.destination_zip,
+            originState: getStateFromName(route.origin_name),
+            destinationState: getStateFromName(route.destination_name),
+          }}
+        />
+      </TravelSection>
 
       {/* Estimated Moving Costs */}
       {route.house_sizes && (

@@ -6,11 +6,12 @@ import { getServiceBySlug } from '@/lib/data'
 import { locales, type Locale } from '@/i18n/config'
 import { getLocale } from 'next-intl/server'
 import { generatePageMetadata } from '@/lib/metadata'
+import { getCanonicalSlug, getTranslatedSlug } from '@/i18n/slug-map'
 
 export async function generateStaticParams() {
   const slugs = getServiceSlugsFromBlog()
   return locales.flatMap(locale =>
-    slugs.map((slug) => ({ locale, slug }))
+    slugs.map((slug) => ({ locale, slug: getTranslatedSlug(slug, locale as Locale) }))
   )
 }
 
@@ -21,7 +22,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params
   const locale = await getLocale() as Locale
-  const service = getServiceBySlug(slug)
+  const canonicalSlug = getCanonicalSlug(slug, locale)
+  const service = getServiceBySlug(canonicalSlug)
   if (!service) {
     return { title: 'Service Not Found' }
   }
@@ -39,10 +41,12 @@ export default async function BlogServicePage({
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
-  const service = getServiceBySlug(slug)
-  const posts = getPostsByService(slug)
+  const locale = await getLocale() as Locale
+  const canonicalSlug = getCanonicalSlug(slug, locale)
+  const service = getServiceBySlug(canonicalSlug)
+  const posts = getPostsByService(canonicalSlug, locale)
   if (!service || posts.length === 0) {
     notFound()
   }
-  return <BlogListPage currentPage={1} serviceSlug={slug} serviceName={service.name} />
+  return <BlogListPage currentPage={1} serviceSlug={canonicalSlug} serviceName={service.name} />
 }

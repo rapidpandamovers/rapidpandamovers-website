@@ -130,7 +130,7 @@ Working with experienced movers provides several advantages for your budgeted mo
 
 ## What to Expect from Rapid Panda Movers
 
-When you hire us for [**residential moving**](/residential-moving), you can expect:
+When you hire us for [**residential moving**](/miami-residential-moving), you can expect:
 
 ![Close Up Of Hands Counting Cash And Usin 2](/images/blog/2024/01/creating-a-realistic-moving-budget-a-step-by-step-guide/close-up-of-hands-counting-cash-and-usin-2.webp)
 
@@ -163,9 +163,9 @@ Your homeowners or renters insurance may cover belongings during a move, so chec
 
 Depending on your needs, you might also consider:
 
-- [**Packing Services**](/packing-services) - Professional packing to save time and protect fragile items
-- [**Local Moving**](/local-moving) - Efficient same-city relocations across Miami-Dade
-- [**Full-Service Moving**](/full-service-moving) - Complete door-to-door solutions including packing and unpacking
+- [**Packing Services**](/miami-packing-services) - Professional packing to save time and protect fragile items
+- [**Local Moving**](/miami-local-moving) - Efficient same-city relocations across Miami-Dade
+- [**Full-Service Moving**](/miami-full-service-moving) - Complete door-to-door solutions including packing and unpacking
 
 ## Ready to Get Started?
 

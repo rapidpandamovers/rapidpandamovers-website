@@ -133,9 +133,9 @@ function getGeneralEntries(locale: Locale, now: string): SitemapEntry[] {
 
 function getBlogEntries(locale: Locale, now: string): SitemapEntry[] {
   const entries: SitemapEntry[] = []
-  const allBlogPosts = getPublishedPosts()
+  const allBlogPosts = getPublishedPosts(locale)
 
-  // Individual blog posts (blog slugs don't translate between locales)
+  // Individual blog posts (blog slugs are locale-specific)
   for (const post of allBlogPosts) {
     const dateStr = post.updated || post.date
     const lastMod = new Date(dateStr).toISOString()
@@ -150,7 +150,7 @@ function getBlogEntries(locale: Locale, now: string): SitemapEntry[] {
   }
 
   // Blog category pages (editorial only) + pagination
-  const categories = getCategories().filter(isEditorialCategory)
+  const categories = getCategories(locale).filter(isEditorialCategory)
   for (const category of categories) {
     const slug = categoryToSlug(category)
     entries.push(forLocale(locale, `/blog/category/${slug}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.6 }))
@@ -162,10 +162,10 @@ function getBlogEntries(locale: Locale, now: string): SitemapEntry[] {
   }
 
   // Blog service pages + pagination
-  const serviceSlugs = getServiceSlugsFromBlog()
+  const serviceSlugs = getServiceSlugsFromBlog(locale)
   for (const slug of serviceSlugs) {
     entries.push(forLocale(locale, `/blog/service/${slug}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.6 }))
-    const posts = getPostsByService(slug)
+    const posts = getPostsByService(slug, locale)
     const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE)
     for (let page = 2; page <= totalPages; page++) {
       entries.push(forLocale(locale, `/blog/service/${slug}/page/${page}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.5 }))
@@ -173,10 +173,10 @@ function getBlogEntries(locale: Locale, now: string): SitemapEntry[] {
   }
 
   // Blog location pages + pagination
-  const blogLocationSlugs = getLocationSlugs()
+  const blogLocationSlugs = getLocationSlugs(locale)
   for (const slug of blogLocationSlugs) {
     entries.push(forLocale(locale, `/blog/location/${slug}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.6 }))
-    const posts = getPostsByLocation(slug)
+    const posts = getPostsByLocation(slug, locale)
     const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE)
     for (let page = 2; page <= totalPages; page++) {
       entries.push(forLocale(locale, `/blog/location/${slug}/page/${page}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.5 }))

@@ -85,7 +85,7 @@ export default function SightSection({
     <section className={`pt-20 ${className}`}>
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-10 px-6 md:px-0">
           <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             {title || defaultTitle}
           </H2>
@@ -166,7 +166,7 @@ export default function SightSection({
                         href={sight.website}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-orange-700 hover:text-orange-800 text-sm font-medium transition-colors"
+                        className="inline-flex items-center text-orange-600 hover:text-orange-800 text-sm font-medium transition-colors"
                       >
                         {ui.buttons.learnMore}
                         <ExternalLink className="w-3 h-3 ml-1" />

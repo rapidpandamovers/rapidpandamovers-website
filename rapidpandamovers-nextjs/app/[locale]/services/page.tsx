@@ -35,7 +35,7 @@ export default async function ServicesPage() {
       {/* Content Section */}
       {servicesContent?.content && (
         <OverviewSection
-          title={<>About Our <span className="text-orange-700">Moving Services</span></>}
+          title={<>About Our <span className="text-orange-600">Moving Services</span></>}
         >
           <p className="text-gray-600 leading-relaxed">{servicesContent.content}</p>
         </OverviewSection>

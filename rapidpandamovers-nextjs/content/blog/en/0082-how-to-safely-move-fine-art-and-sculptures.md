@@ -17,7 +17,6 @@ images:
   - "/images/blog/2024/10/how-to-safely-move-fine-art-and-sculptures/a-museum-hall-showcasing-a-marble-statue-3.webp"
   - "/images/blog/2024/10/how-to-safely-move-fine-art-and-sculptures/a-serene-art-exhibition-featuring-a-scul-1.webp"
   - "/images/blog/2024/10/how-to-safely-move-fine-art-and-sculptures/grayscale-image-of-a-classic-sculpture-i-2.webp"
-
 service_link: "/art-moving"
 location_link: null
 status: "pending"

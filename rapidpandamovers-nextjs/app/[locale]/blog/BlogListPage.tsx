@@ -32,8 +32,8 @@ export default async function BlogListPage({ currentPage, category = null, locat
   let categories: ReturnType<typeof getCategories> = []
 
   try {
-    sortedBlog = getPostsSortedByDate()
-    categories = getCategories()
+    sortedBlog = getPostsSortedByDate(locale)
+    categories = getCategories(locale)
   } catch (error) {
     console.error('[BlogListPage] Error loading posts:', error)
     // sortedBlog and categories remain empty arrays
@@ -47,9 +47,9 @@ export default async function BlogListPage({ currentPage, category = null, locat
   }
 
   const filteredPosts = serviceSlug
-    ? getPostsByService(serviceSlug).sort(dateSorter)
+    ? getPostsByService(serviceSlug, locale).sort(dateSorter)
     : locationSlug
-      ? getPostsByLocation(locationSlug).sort(dateSorter)
+      ? getPostsByLocation(locationSlug, locale).sort(dateSorter)
       : category
         ? sortedBlog.filter(post => post.category === category)
         : sortedBlog
@@ -72,10 +72,12 @@ export default async function BlogListPage({ currentPage, category = null, locat
   const serviceSegment = getTranslatedSlug('service', locale)
   const locationSegment = getTranslatedSlug('location', locale)
   const categorySegment = getTranslatedSlug('category', locale)
+  // serviceSlug is the canonical English slug (for data lookups); translate for URLs
+  const translatedServiceSlug = serviceSlug ? getTranslatedSlug(serviceSlug, locale) : null
   const getPageUrl = (page: number) => {
-    if (serviceSlug) {
-      if (page === 1) return `/blog/${serviceSegment}/${encodeURIComponent(serviceSlug)}`
-      return `/blog/${serviceSegment}/${encodeURIComponent(serviceSlug)}/${pageSlug}/${page}`
+    if (translatedServiceSlug) {
+      if (page === 1) return `/blog/${serviceSegment}/${encodeURIComponent(translatedServiceSlug)}`
+      return `/blog/${serviceSegment}/${encodeURIComponent(translatedServiceSlug)}/${pageSlug}/${page}`
     }
     if (locationSlug) {
       if (page === 1) return `/blog/${locationSegment}/${encodeURIComponent(locationSlug)}`
@@ -93,7 +95,7 @@ export default async function BlogListPage({ currentPage, category = null, locat
   // Generate pagination numbers
   const getPaginationNumbers = (): (number | string)[] => {
     const pages: (number | string)[] = []
-    const edgeCount = 2 // Show 2 pages at each end
+    const edgeCount = 1 // Show 1 page at each end
     const surroundCount = 1 // Show 1 page on each side of current
 
     const showEllipsisStart = currentPage > edgeCount + surroundCount + 1
@@ -142,9 +144,9 @@ export default async function BlogListPage({ currentPage, category = null, locat
         <BlogCategoryFilter
           categories={categories}
           activeCategory={category}
-          locations={getLocationSlugs().map(s => ({ slug: s, name: getLocationNameBySlug(s) || s })).filter(l => l.name !== l.slug).sort((a, b) => a.name.localeCompare(b.name))}
+          locations={getLocationSlugs(locale).map(s => ({ slug: s, name: getLocationNameBySlug(s) || s })).filter(l => l.name !== l.slug).sort((a, b) => a.name.localeCompare(b.name))}
           activeLocation={locationSlug}
-          activeService={serviceSlug}
+          activeService={translatedServiceSlug}
         />
 
         {/* Featured Post (only on page 1 when showing all posts) */}
@@ -189,33 +191,33 @@ export default async function BlogListPage({ currentPage, category = null, locat
 
         {/* Pagination */}
         {totalPages > 1 && (
-          <div className="flex items-center justify-center gap-2 mt-12">
+          <div className="flex items-center justify-center gap-1 md:gap-2 mt-12">
             {currentPage > 1 ? (
               <Link
                 href={getPageUrl(currentPage - 1)}
-                className="flex items-center px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600 transition-colors"
+                className="flex items-center px-2 py-2 md:px-4 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600 transition-colors"
               >
-                <ChevronLeft className="w-4 h-4 mr-1" />
-                {ui?.pagination?.previous || 'Previous'}
+                <ChevronLeft className="w-4 h-4 md:mr-1" />
+                <span className="hidden md:inline">{ui?.pagination?.previous || 'Previous'}</span>
               </Link>
             ) : (
-              <span className="flex items-center px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-400 cursor-not-allowed opacity-50">
-                <ChevronLeft className="w-4 h-4 mr-1" />
-                {ui?.pagination?.previous || 'Previous'}
+              <span className="flex items-center px-2 py-2 md:px-4 rounded-lg border border-gray-300 bg-white text-gray-400 cursor-not-allowed opacity-50">
+                <ChevronLeft className="w-4 h-4 md:mr-1" />
+                <span className="hidden md:inline">{ui?.pagination?.previous || 'Previous'}</span>
               </span>
             )}
 
             <div className="flex items-center gap-1">
               {getPaginationNumbers().map((page, idx) => (
                 page === '...' ? (
-                  <span key={`ellipsis-${idx}`} className="w-10 h-10 flex items-center justify-center text-gray-500">
+                  <span key={`ellipsis-${idx}`} className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center text-gray-500 text-sm md:text-base">
                     ...
                   </span>
                 ) : (
                   <Link
                     key={page}
                     href={getPageUrl(page as number)}
-                    className={`w-10 h-10 flex items-center justify-center rounded-lg font-medium transition-colors ${
+                    className={`w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-lg font-medium text-sm md:text-base transition-colors ${
                       currentPage === page
                         ? 'bg-orange-600 text-white text-shadow-sm'
                         : 'bg-white border border-gray-300 text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600'
@@ -230,15 +232,15 @@ export default async function BlogListPage({ currentPage, category = null, locat
             {currentPage < totalPages ? (
               <Link
                 href={getPageUrl(currentPage + 1)}
-                className="flex items-center px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600 transition-colors"
+                className="flex items-center px-2 py-2 md:px-4 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600 transition-colors"
               >
-                {ui?.pagination?.next || 'Next'}
-                <ChevronRight className="w-4 h-4 ml-1" />
+                <span className="hidden md:inline">{ui?.pagination?.next || 'Next'}</span>
+                <ChevronRight className="w-4 h-4 md:ml-1" />
               </Link>
             ) : (
-              <span className="flex items-center px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-400 cursor-not-allowed opacity-50">
-                {ui?.pagination?.next || 'Next'}
-                <ChevronRight className="w-4 h-4 ml-1" />
+              <span className="flex items-center px-2 py-2 md:px-4 rounded-lg border border-gray-300 bg-white text-gray-400 cursor-not-allowed opacity-50">
+                <span className="hidden md:inline">{ui?.pagination?.next || 'Next'}</span>
+                <ChevronRight className="w-4 h-4 md:ml-1" />
               </span>
             )}
           </div>

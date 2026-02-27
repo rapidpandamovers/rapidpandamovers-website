@@ -105,11 +105,12 @@ export default async function ComparisonPage({ params }: PageProps) {
         name={comparison.competitor.name}
         pros={comparison.competitor_pros}
         cons={comparison.competitor_cons}
+        className="!pt-8"
       />
 
       {/* Why Choose Us */}
       <WhySection
-        title={<>{ui.compare.whyChooseRapidPandaBefore}<span className="text-orange-700">{ui.compare.whyChooseRapidPandaHighlight}</span>{ui.compare.whyChooseRapidPandaAfter}</>}
+        title={<>{ui.compare.whyChooseRapidPandaBefore}<span className="text-orange-600">{ui.compare.whyChooseRapidPandaHighlight}</span>{ui.compare.whyChooseRapidPandaAfter}</>}
         benefits={comparison.why_choose_us}
         ctaText={ui.compare.seeWhyDifferent}
       />

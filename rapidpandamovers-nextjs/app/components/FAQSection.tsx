@@ -92,7 +92,7 @@ export default function FAQSection({
                   {faq.answer}
                 </p>
                 {faq.link && (
-                  <Link href={`/${getTranslatedSlug(faq.link.replace(/^\//, ''), locale)}`} className="inline-flex items-center text-orange-700 hover:text-orange-800 font-medium mt-3">
+                  <Link href={`/${getTranslatedSlug(faq.link.replace(/^\//, ''), locale)}`} className="inline-flex items-center text-orange-600 hover:text-orange-800 font-medium mt-3">
                     {ui.faq.learnMore}
                     <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -114,7 +114,7 @@ export default function FAQSection({
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Left Column - Title & CTA */}
-            <div className="bg-orange-50 rounded-4xl p-8 flex flex-col">
+            <div className="bg-orange-50 rounded-4xl p-6 md:p-8 flex flex-col">
               <div className="flex-1">
                 {title && (
                   <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -143,7 +143,7 @@ export default function FAQSection({
             </div>
 
             {/* Right Column - FAQ Accordion */}
-            <div className="bg-gray-50 rounded-4xl p-8">
+            <div className="bg-gray-50 rounded-4xl p-6 md:p-8">
               <FAQAccordion />
             </div>
           </div>
@@ -157,7 +157,7 @@ export default function FAQSection({
     <section className="pt-20">
       <div className="container mx-auto">
         {title && (
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 px-6 md:px-0">
             <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
               {title}
             </H2>
@@ -169,7 +169,7 @@ export default function FAQSection({
           </div>
         )}
 
-        <div className="bg-gray-50 rounded-4xl p-8">
+        <div className="bg-gray-50 rounded-4xl p-6 md:p-8">
           <FAQAccordion />
         </div>
 
@@ -177,7 +177,7 @@ export default function FAQSection({
           <div className="text-center mt-8">
             <Link
               href={`/${getTranslatedSlug('faq', locale)}`}
-              className="inline-flex items-center text-orange-700 hover:text-orange-800 font-medium"
+              className="inline-flex items-center text-orange-600 hover:text-orange-800 font-medium"
             >
               {ui.faq.viewAllFaqs}
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">

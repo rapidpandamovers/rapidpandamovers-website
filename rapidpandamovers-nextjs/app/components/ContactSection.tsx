@@ -92,7 +92,7 @@ export default function ContactSection({
       <div className="container mx-auto">
         <div className={`grid grid-cols-1 ${showForm ? 'md:grid-cols-2' : ''} gap-8`}>
           {/* Contact Info Side */}
-          <div className="bg-orange-50 rounded-4xl p-8 flex flex-col">
+          <div className="bg-orange-50 rounded-4xl p-6 md:p-8 flex flex-col">
             <H3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">{ui.contact.infoTitle}</H3>
 
             <div className="space-y-6">
@@ -121,7 +121,7 @@ export default function ContactSection({
             </div>
 
             {/* Business Hours */}
-            <div className="bg-orange-600 rounded-2xl p-6 mt-auto pt-6 text-white text-shadow-sm">
+            <div className="bg-orange-600 rounded-2xl p-6 mt-6 md:mt-auto pt-6 text-white text-shadow-sm">
               <div className="flex items-center mb-4">
                 <Clock className="w-6 h-6 mr-3" />
                 <h4 className="text-lg font-semibold">{ui.contact.hoursTitle}</h4>
@@ -139,7 +139,7 @@ export default function ContactSection({
 
           {/* Contact Form Side */}
           {showForm && (
-            <div className="bg-gray-50 rounded-4xl p-8 flex flex-col">
+            <div className="bg-gray-50 rounded-4xl p-6 md:p-8 flex flex-col">
               <H3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">{ui.forms.contact.title}</H3>
 
               {submitStatus === 'success' ? (
@@ -151,7 +151,7 @@ export default function ContactSection({
                   <p className="text-gray-600 mb-6">{ui.messages.contactSuccess.description}</p>
                   <button
                     onClick={() => setSubmitStatus('idle')}
-                    className="text-orange-700 hover:text-orange-800 font-medium"
+                    className="text-orange-600 hover:text-orange-800 font-medium"
                   >
                     {ui.buttons.sendAnother}
                   </button>
@@ -220,12 +220,6 @@ export default function ContactSection({
                     </div>
                   )}
 
-                  <TurnstileWidget
-                    ref={turnstileRef}
-                    onVerify={setTurnstileToken}
-                    onExpire={() => setTurnstileToken('')}
-                  />
-
                   <button
                     type="submit"
                     disabled={isSubmitting || !turnstileToken}
@@ -240,6 +234,12 @@ export default function ContactSection({
                       ui.buttons.sendMessage
                     )}
                   </button>
+
+                  <TurnstileWidget
+                    ref={turnstileRef}
+                    onVerify={setTurnstileToken}
+                    onExpire={() => setTurnstileToken('')}
+                  />
                 </form>
               )}
             </div>

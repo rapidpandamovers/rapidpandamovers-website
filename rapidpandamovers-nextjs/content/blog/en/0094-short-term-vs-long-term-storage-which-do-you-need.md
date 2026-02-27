@@ -17,7 +17,6 @@ images:
   - "/images/blog/2024/11/short-term-vs-long-term-storage-which-do-you-need/a-cluttered-storage-room-filled-with-car-2.webp"
   - "/images/blog/2024/11/short-term-vs-long-term-storage-which-do-you-need/outdoor-view-of-a-metal-shipping-contain-1.webp"
   - "/images/blog/2024/11/short-term-vs-long-term-storage-which-do-you-need/steel-storage-units-in-an-industrial-war-3.webp"
-
 service_link: "/storage-solutions"
 location_link: null
 status: "pending"

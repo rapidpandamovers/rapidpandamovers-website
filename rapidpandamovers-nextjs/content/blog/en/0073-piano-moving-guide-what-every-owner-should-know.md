@@ -17,7 +17,6 @@ images:
   - "/images/blog/2024/10/piano-moving-guide-what-every-owner-should-know/a-close-up-view-of-vintage-piano-keys-sh-3.webp"
   - "/images/blog/2024/10/piano-moving-guide-what-every-owner-should-know/an-elderly-man-playing-piano-in-a-dark-j-1.webp"
   - "/images/blog/2024/10/piano-moving-guide-what-every-owner-should-know/artistic-close-up-of-a-hand-playing-pian-2.webp"
-
 service_link: "/piano-moving"
 location_link: null
 status: "pending"
