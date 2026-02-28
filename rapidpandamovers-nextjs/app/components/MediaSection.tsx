@@ -10,6 +10,7 @@ interface MediaItem {
   type: 'image' | 'video'
   src: string // Image URL, local video path, or YouTube video ID
   thumbnail?: string // Optional thumbnail for videos
+  poster?: string // Poster frame for local videos
   title?: string
   description?: string
 }
@@ -262,6 +263,7 @@ export default function MediaSection({
                           playsInline
                           loop
                           preload="metadata"
+                          poster={item.poster}
                           aria-label={item.title || `Video ${index + 1}`}
                           className="absolute inset-0 w-full h-full object-cover"
                           onEnded={() => setPlayingVideoIndex(null)}

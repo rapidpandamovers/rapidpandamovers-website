@@ -53,6 +53,7 @@ export default async function MovingTipsPage() {
       <ResourceSection
         title={tipsData.resourceSection.title}
         subtitle={tipsData.resourceSection.subtitle}
+        items={content.defaults.resources.items}
         variant="grid"
       />
       <NewsletterSection />

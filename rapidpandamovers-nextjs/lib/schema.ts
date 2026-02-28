@@ -238,6 +238,31 @@ export function generateReviewSchema(options: ReviewSchemaOptions) {
   }
 }
 
+interface VideoSchemaOptions {
+  name: string
+  description: string
+  contentUrl: string
+  thumbnailUrl: string
+  uploadDate: string
+  duration?: string
+}
+
+/**
+ * Generate VideoObject schema for video rich results
+ */
+export function generateVideoSchema(videos: VideoSchemaOptions[]) {
+  return videos.map(v => ({
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: v.name,
+    description: v.description,
+    contentUrl: `${SITE_CONFIG.domain}${v.contentUrl}`,
+    thumbnailUrl: `${SITE_CONFIG.domain}${v.thumbnailUrl}`,
+    uploadDate: v.uploadDate,
+    ...(v.duration && { duration: v.duration }),
+  }))
+}
+
 /**
  * Generate WebSite schema for homepage
  */
@@ -252,6 +277,14 @@ export function generateWebSiteSchema(locale?: string) {
       '@type': 'Organization',
       '@id': `${SITE_CONFIG.domain}/#organization`,
       name: SITE_CONFIG.name,
+    },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${SITE_CONFIG.domain}/search?q={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
     },
   }
 }

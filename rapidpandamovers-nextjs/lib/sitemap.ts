@@ -40,14 +40,14 @@ type ChangeFreq = 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly
  * `esPathOverride` bypasses translatePathname for data slugs that shouldn't
  * be translated (blog post slugs, comparison slugs, etc.).
  */
-function forLocale(
+async function forLocale(
   locale: Locale,
   enPath: string,
   opts: { lastModified: string | Date; changeFrequency: ChangeFreq; priority: number },
   esPathOverride?: string
-): SitemapEntry {
+): Promise<SitemapEntry> {
   const enUrl = `${base}${enPath}`
-  const esPath = esPathOverride ?? translatePathname(enPath, 'en', 'es')
+  const esPath = esPathOverride ?? await translatePathname(enPath, 'en', 'es')
   const esUrl = `${base}/es${esPath}`
 
   return {
@@ -69,7 +69,7 @@ function forLocale(
 // Area generators
 // ---------------------------------------------------------------------------
 
-function getGeneralEntries(locale: Locale, now: string): SitemapEntry[] {
+async function getGeneralEntries(locale: Locale, now: string): Promise<SitemapEntry[]> {
   const entries: SitemapEntry[] = []
 
   // Static pages
@@ -96,42 +96,42 @@ function getGeneralEntries(locale: Locale, now: string): SitemapEntry[] {
     ['/terms', 'yearly', 0.3],
   ]
   for (const [path, freq, priority] of staticPaths) {
-    entries.push(forLocale(locale, path, { lastModified: now, changeFrequency: freq, priority }))
+    entries.push(await forLocale(locale, path, { lastModified: now, changeFrequency: freq, priority }))
   }
 
   // Reviews pagination
   const totalReviewPages = Math.ceil(reviewsData.reviews.length / REVIEWS_PER_PAGE)
   for (let page = 2; page <= totalReviewPages; page++) {
-    entries.push(forLocale(locale, `/reviews/page/${page}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.5 }))
+    entries.push(await forLocale(locale, `/reviews/page/${page}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.5 }))
   }
 
   // Reviews platform pages + pagination
   const reviewPlatforms = Array.from(new Set(reviewsData.reviews.map(r => r.platform)))
   for (const platform of reviewPlatforms) {
-    entries.push(forLocale(locale, `/reviews/${platform}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.6 }))
+    entries.push(await forLocale(locale, `/reviews/${platform}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.6 }))
     const platformReviews = reviewsData.reviews.filter(r => r.platform === platform)
     const totalPages = Math.ceil(platformReviews.length / REVIEWS_PER_PAGE)
     for (let page = 2; page <= totalPages; page++) {
-      entries.push(forLocale(locale, `/reviews/${platform}/page/${page}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.5 }))
+      entries.push(await forLocale(locale, `/reviews/${platform}/page/${page}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.5 }))
     }
   }
 
   // Comparison pages (data slugs — only translate the structural prefix)
   for (const c of comparisons.comparisons) {
     const slug = (c as { slug: string }).slug
-    entries.push(forLocale(locale, `/compare/${slug}`, { lastModified: now, changeFrequency: 'monthly', priority: 0.6 }, `/comparar/${slug}`))
+    entries.push(await forLocale(locale, `/compare/${slug}`, { lastModified: now, changeFrequency: 'monthly', priority: 0.6 }, `/comparar/${slug}`))
   }
 
   // Alternative pages (data slugs — only translate the structural prefix)
   for (const a of alternatives.alternatives) {
     const slug = (a as { slug: string }).slug
-    entries.push(forLocale(locale, `/alternatives/${slug}`, { lastModified: now, changeFrequency: 'monthly', priority: 0.6 }, `/alternativas/${slug}`))
+    entries.push(await forLocale(locale, `/alternatives/${slug}`, { lastModified: now, changeFrequency: 'monthly', priority: 0.6 }, `/alternativas/${slug}`))
   }
 
   return entries
 }
 
-function getBlogEntries(locale: Locale, now: string): SitemapEntry[] {
+async function getBlogEntries(locale: Locale, now: string): Promise<SitemapEntry[]> {
   const entries: SitemapEntry[] = []
   const allBlogPosts = getPublishedPosts(locale)
 
@@ -140,58 +140,58 @@ function getBlogEntries(locale: Locale, now: string): SitemapEntry[] {
     const dateStr = post.updated || post.date
     const lastMod = new Date(dateStr).toISOString()
     const blogPath = `/blog/${post.slug}`
-    entries.push(forLocale(locale, blogPath, { lastModified: lastMod, changeFrequency: 'monthly', priority: 0.6 }, blogPath))
+    entries.push(await forLocale(locale, blogPath, { lastModified: lastMod, changeFrequency: 'monthly', priority: 0.6 }, blogPath))
   }
 
   // Blog pagination
   const totalBlogPages = Math.ceil(allBlogPosts.length / POSTS_PER_PAGE)
   for (let page = 2; page <= totalBlogPages; page++) {
-    entries.push(forLocale(locale, `/blog/page/${page}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.5 }))
+    entries.push(await forLocale(locale, `/blog/page/${page}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.5 }))
   }
 
   // Blog category pages (editorial only) + pagination
   const categories = getCategories(locale).filter(isEditorialCategory)
   for (const category of categories) {
     const slug = categoryToSlug(category)
-    entries.push(forLocale(locale, `/blog/category/${slug}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.6 }))
+    entries.push(await forLocale(locale, `/blog/category/${slug}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.6 }))
     const categoryPosts = allBlogPosts.filter(p => p.category === category)
     const totalPages = Math.ceil(categoryPosts.length / POSTS_PER_PAGE)
     for (let page = 2; page <= totalPages; page++) {
-      entries.push(forLocale(locale, `/blog/category/${slug}/page/${page}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.5 }))
+      entries.push(await forLocale(locale, `/blog/category/${slug}/page/${page}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.5 }))
     }
   }
 
   // Blog service pages + pagination
   const serviceSlugs = getServiceSlugsFromBlog(locale)
   for (const slug of serviceSlugs) {
-    entries.push(forLocale(locale, `/blog/service/${slug}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.6 }))
+    entries.push(await forLocale(locale, `/blog/service/${slug}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.6 }))
     const posts = getPostsByService(slug, locale)
     const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE)
     for (let page = 2; page <= totalPages; page++) {
-      entries.push(forLocale(locale, `/blog/service/${slug}/page/${page}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.5 }))
+      entries.push(await forLocale(locale, `/blog/service/${slug}/page/${page}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.5 }))
     }
   }
 
   // Blog location pages + pagination
   const blogLocationSlugs = getLocationSlugs(locale)
   for (const slug of blogLocationSlugs) {
-    entries.push(forLocale(locale, `/blog/location/${slug}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.6 }))
+    entries.push(await forLocale(locale, `/blog/location/${slug}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.6 }))
     const posts = getPostsByLocation(slug, locale)
     const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE)
     for (let page = 2; page <= totalPages; page++) {
-      entries.push(forLocale(locale, `/blog/location/${slug}/page/${page}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.5 }))
+      entries.push(await forLocale(locale, `/blog/location/${slug}/page/${page}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.5 }))
     }
   }
 
   return entries
 }
 
-function getServicesEntries(locale: Locale, now: string): SitemapEntry[] {
+async function getServicesEntries(locale: Locale, now: string): Promise<SitemapEntry[]> {
   const entries: SitemapEntry[] = []
 
   // Individual service pages
   for (const slug of getServiceSlugs()) {
-    entries.push(forLocale(locale, `/${slug}`, { lastModified: now, changeFrequency: 'monthly', priority: 0.9 }))
+    entries.push(await forLocale(locale, `/${slug}`, { lastModified: now, changeFrequency: 'monthly', priority: 0.9 }))
   }
 
   // Services by location (cities + neighborhoods)
@@ -207,21 +207,21 @@ function getServicesEntries(locale: Locale, now: string): SitemapEntry[] {
   )
 
   for (const city of activeCities) {
-    entries.push(forLocale(locale, `/services/${city.slug}`, { lastModified: now, changeFrequency: 'monthly', priority: 0.7 }))
+    entries.push(await forLocale(locale, `/services/${city.slug}`, { lastModified: now, changeFrequency: 'monthly', priority: 0.7 }))
   }
   for (const slug of allActiveNeighborhoodSlugs) {
-    entries.push(forLocale(locale, `/services/${slug}`, { lastModified: now, changeFrequency: 'monthly', priority: 0.6 }))
+    entries.push(await forLocale(locale, `/services/${slug}`, { lastModified: now, changeFrequency: 'monthly', priority: 0.6 }))
   }
 
   // Location-service combo pages
   for (const slug of getAllLocationServiceSlugs()) {
-    entries.push(forLocale(locale, `/${slug}`, { lastModified: now, changeFrequency: 'monthly', priority: 0.7 }))
+    entries.push(await forLocale(locale, `/${slug}`, { lastModified: now, changeFrequency: 'monthly', priority: 0.7 }))
   }
 
   return entries
 }
 
-function getLocationsEntries(locale: Locale, now: string): SitemapEntry[] {
+async function getLocationsEntries(locale: Locale, now: string): Promise<SitemapEntry[]> {
   const entries: SitemapEntry[] = []
 
   const allCitiesFlat = allCities.states.flatMap(state =>
@@ -232,7 +232,7 @@ function getLocationsEntries(locale: Locale, now: string): SitemapEntry[] {
 
   // City pages
   for (const city of allCitiesFlat) {
-    entries.push(forLocale(locale, `/${city.slug}-movers`, { lastModified: now, changeFrequency: 'monthly', priority: 0.8 }))
+    entries.push(await forLocale(locale, `/${city.slug}-movers`, { lastModified: now, changeFrequency: 'monthly', priority: 0.8 }))
   }
 
   // Neighborhood pages
@@ -240,32 +240,32 @@ function getLocationsEntries(locale: Locale, now: string): SitemapEntry[] {
     (city.neighborhoods || []).filter((n: { is_active?: boolean }) => n.is_active !== false)
   )
   for (const n of allNeighborhoods) {
-    entries.push(forLocale(locale, `/${(n as { slug: string }).slug}-movers`, { lastModified: now, changeFrequency: 'monthly', priority: 0.7 }))
+    entries.push(await forLocale(locale, `/${(n as { slug: string }).slug}-movers`, { lastModified: now, changeFrequency: 'monthly', priority: 0.7 }))
   }
 
   return entries
 }
 
-function getRoutesEntries(locale: Locale, now: string): SitemapEntry[] {
+async function getRoutesEntries(locale: Locale, now: string): Promise<SitemapEntry[]> {
   const entries: SitemapEntry[] = []
 
   // Long distance routes
   const activeLongDistance = allLongDistanceRoutes.filter(r => r.is_active !== false)
   for (const r of activeLongDistance) {
-    entries.push(forLocale(locale, `/${r.slug}-movers`, { lastModified: now, changeFrequency: 'monthly', priority: 0.7 }))
+    entries.push(await forLocale(locale, `/${r.slug}-movers`, { lastModified: now, changeFrequency: 'monthly', priority: 0.7 }))
   }
 
   // Local routes
   const activeLocal = allLocalRoutes.filter((r: { is_active?: boolean }) => r.is_active !== false)
   for (const r of activeLocal) {
-    entries.push(forLocale(locale, `/${(r as { slug: string }).slug}-movers`, { lastModified: now, changeFrequency: 'monthly', priority: 0.6 }))
+    entries.push(await forLocale(locale, `/${(r as { slug: string }).slug}-movers`, { lastModified: now, changeFrequency: 'monthly', priority: 0.6 }))
   }
 
   // Routes pagination
   const totalActiveRoutes = activeLongDistance.length + activeLocal.length
   const totalRoutePages = Math.ceil(totalActiveRoutes / ROUTES_PER_PAGE)
   for (let page = 2; page <= totalRoutePages; page++) {
-    entries.push(forLocale(locale, `/moving-routes/page/${page}`, { lastModified: now, changeFrequency: 'monthly', priority: 0.5 }))
+    entries.push(await forLocale(locale, `/moving-routes/page/${page}`, { lastModified: now, changeFrequency: 'monthly', priority: 0.5 }))
   }
 
   // Routes by location (cities + neighborhoods)
@@ -281,10 +281,10 @@ function getRoutesEntries(locale: Locale, now: string): SitemapEntry[] {
   )
 
   for (const city of activeCities) {
-    entries.push(forLocale(locale, `/moving-routes/${city.slug}`, { lastModified: now, changeFrequency: 'monthly', priority: 0.6 }))
+    entries.push(await forLocale(locale, `/moving-routes/${city.slug}`, { lastModified: now, changeFrequency: 'monthly', priority: 0.6 }))
   }
   for (const slug of allActiveNeighborhoodSlugs) {
-    entries.push(forLocale(locale, `/moving-routes/${slug}`, { lastModified: now, changeFrequency: 'monthly', priority: 0.5 }))
+    entries.push(await forLocale(locale, `/moving-routes/${slug}`, { lastModified: now, changeFrequency: 'monthly', priority: 0.5 }))
   }
 
   return entries
@@ -294,7 +294,7 @@ function getRoutesEntries(locale: Locale, now: string): SitemapEntry[] {
 // Public API
 // ---------------------------------------------------------------------------
 
-export function getEntriesForId(id: string): SitemapEntry[] {
+export async function getEntriesForId(id: string): Promise<SitemapEntry[]> {
   const now = new Date().toISOString()
 
   let area: string

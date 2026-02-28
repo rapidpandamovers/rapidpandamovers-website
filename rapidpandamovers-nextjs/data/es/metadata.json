@@ -3,7 +3,7 @@
     "titleTemplate": "%s | Rapid Panda Movers",
     "defaultTitle": "Rapid Panda Movers - Servicios Profesionales de Mudanza en Miami",
     "description": "Servicios de mudanza económicos, confiables y eficientes en Miami. Cotizaciones gratis, precios transparentes, mudadores licenciados y asegurados.",
-    "ogDescription": "Servicios de mudanza asequibles y confiables en Miami. Cotizaciones gratis, precios transparentes, equipos experimentados.",
+    "ogDescription": "Calificados {rating}/5 por más de {reviewCount} clientes. Mudadores familiares en Miami para mudanzas locales y larga distancia, empaque y almacenamiento. Cotizaciones gratis.",
     "keywords": ["empresa de mudanzas Miami", "mudadores Miami", "mudanza local", "mudanza larga distancia", "servicios de empaque", "mudanzas Miami"]
   },
   "templates": {
@@ -27,8 +27,8 @@
     }
   },
   "home": {
-    "title": "Rapid Panda Movers | Empresa de Mudanzas en Miami",
-    "description": "Servicios profesionales de mudanza en Miami. Mudanzas locales y de larga distancia, empaque y almacenamiento económicos, confiables y eficientes.",
+    "title": "Rapid Panda Movers | Empresa de Mudanzas #1 en Miami",
+    "description": "Calificados {rating}/5 por más de {reviewCount} clientes. Mudadores familiares en Miami para mudanzas locales y larga distancia, empaque y almacenamiento. Cotizaciones gratis.",
     "path": "/"
   },
   "services": {
@@ -125,6 +125,11 @@
     "title": "Reservaciones | Rapid Panda Movers",
     "description": "Reserve su mudanza con Rapid Panda Movers. Servicios profesionales en Miami con precios transparentes y horarios flexibles.",
     "path": "/reservations"
+  },
+  "search": {
+    "title": "Buscar | Rapid Panda Movers",
+    "description": "Busque servicios de mudanza, ubicaciones, rutas y artículos.",
+    "path": "/search"
   },
   "sitemap": {
     "title": "Mapa del Sitio | Rapid Panda Movers",

@@ -1,7 +1,7 @@
 'use client'
 
 import { Star, Phone } from 'lucide-react'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { preload } from 'react-dom'
 import { Link } from '@/i18n/routing'
 import { useMessages, useLocale } from 'next-intl'
@@ -13,16 +13,6 @@ import { H1 } from '@/app/components/Heading'
 
 // Default base paths (without extension) — resolved to WebP/JPG at the right size
 const DEFAULT_IMAGES: [string, string, string] = ['/images/hero/1', '/images/hero/2', '/images/hero/3']
-const RESPONSIVE_WIDTHS = [640, 960, 1280] as const
-
-/** Pick the smallest responsive width that covers the viewport, or full-size */
-function resolveImageUrl(basePath: string, viewportWidth: number): { webp: string; jpg: string } {
-  const size = RESPONSIVE_WIDTHS.find(w => w >= viewportWidth)
-  if (size) {
-    return { webp: `${basePath}-${size}w.webp`, jpg: `${basePath}-${size}w.jpg` }
-  }
-  return { webp: `${basePath}.webp`, jpg: `${basePath}.jpg` }
-}
 
 interface HeroProps {
   title?: string
@@ -40,21 +30,10 @@ export default function Hero({
   images = DEFAULT_IMAGES,
   collageVariant,
 }: HeroProps = {}) {
-  // SSR uses 960w (good balance); client upgrades if needed
-  const [containerWidth, setContainerWidth] = useState(960)
-
-  useEffect(() => {
-    // The collage takes ~half the viewport on desktop, full on mobile
-    const effective = window.innerWidth >= 1024 ? Math.round(window.innerWidth / 2) : window.innerWidth
-    setContainerWidth(effective)
-  }, [])
-
-  const resolved = images.map(img => resolveImageUrl(img, containerWidth))
-
-  // Preload hero images as WebP with JPG fallback
-  preload(resolved[2].webp, { as: 'image', fetchPriority: 'high' })
-  preload(resolved[0].webp, { as: 'image' })
-  preload(resolved[1].webp, { as: 'image' })
+  // Preload hero images at 960w (good SSR default) as WebP
+  preload(`${images[2]}-960w.webp`, { as: 'image', fetchPriority: 'high' })
+  preload(`${images[0]}-960w.webp`, { as: 'image' })
+  preload(`${images[1]}-960w.webp`, { as: 'image' })
 
   const { ui, content } = useMessages() as any
   const locale = useLocale() as Locale
@@ -77,12 +56,7 @@ export default function Hero({
           {/* Left side - Image */}
           <div className="relative aspect-[4/3] order-last lg:order-first">
             <ImageCollage
-              slot1Src={resolved[0].webp}
-              slot1Fallback={resolved[0].jpg}
-              slot2Src={resolved[1].webp}
-              slot2Fallback={resolved[1].jpg}
-              slot3Src={resolved[2].webp}
-              slot3Fallback={resolved[2].jpg}
+              images={images}
               variant={collageVariant}
               alt={{
                 slot1: ui.images?.heroCollage?.slot1 ?? "Professional movers carefully wrapping items for safe transport",
@@ -117,6 +91,7 @@ export default function Hero({
             <div className="md:hidden space-y-4">
               <a
                 href={`tel:${content.site.phone.replace(/-/g, '')}`}
+                aria-label={ui.buttons.callAriaLabel}
                 className="flex items-center justify-center space-x-2 w-full bg-orange-600 text-white text-shadow-sm font-bold py-3 px-6 rounded-lg hover:bg-orange-700 transition-colors"
               >
                 <Phone className="w-5 h-5" />

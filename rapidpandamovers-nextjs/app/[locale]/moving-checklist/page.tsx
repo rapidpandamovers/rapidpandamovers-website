@@ -44,6 +44,7 @@ export default async function MovingChecklistPage() {
         <ResourceSection
           title={checklistData.resourceSection.title}
           subtitle={checklistData.resourceSection.subtitle}
+          items={content.defaults.resources.items}
           variant="grid"
         />
       </div>

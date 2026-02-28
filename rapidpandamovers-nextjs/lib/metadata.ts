@@ -59,7 +59,7 @@ interface MetadataOptions {
 /**
  * Build hreflang alternates for a given English path
  */
-function buildAlternates(enPath: string): Record<string, string> {
+async function buildAlternates(enPath: string): Promise<Record<string, string>> {
   const siteUrl = getSiteUrl()
   const languages: Record<string, string> = {
     'x-default': `${siteUrl}${enPath}`,
@@ -67,7 +67,7 @@ function buildAlternates(enPath: string): Record<string, string> {
   }
   for (const loc of locales) {
     if (loc === defaultLocale) continue
-    const translatedPath = translatePathname(enPath, 'en', loc)
+    const translatedPath = await translatePathname(enPath, 'en', loc)
     languages[loc] = `${siteUrl}/${loc}${translatedPath}`
   }
   return languages
@@ -84,7 +84,7 @@ export function getCanonicalUrl(path: string): string {
 /**
  * Generate consistent metadata for any page
  */
-export function generatePageMetadata(options: MetadataOptions): Metadata {
+export async function generatePageMetadata(options: MetadataOptions): Promise<Metadata> {
   const {
     title,
     description,
@@ -101,7 +101,7 @@ export function generatePageMetadata(options: MetadataOptions): Metadata {
   const enPath = path.startsWith('/') ? path : `/${path}`
   const siteUrl = getSiteUrl()
   const canonicalUrl = locale && locale !== defaultLocale
-    ? `${siteUrl}/${locale}${translatePathname(enPath, 'en', locale)}`
+    ? `${siteUrl}/${locale}${await translatePathname(enPath, 'en', locale)}`
     : getCanonicalUrl(path)
 
   const ogLocale = locale === 'es' ? 'es_US' : 'en_US'
@@ -111,7 +111,7 @@ export function generatePageMetadata(options: MetadataOptions): Metadata {
     description,
     alternates: {
       canonical: canonicalUrl,
-      languages: buildAlternates(enPath),
+      languages: await buildAlternates(enPath),
     },
     openGraph: {
       title,
@@ -125,7 +125,7 @@ export function generatePageMetadata(options: MetadataOptions): Metadata {
           url: image,
           width: 1200,
           height: 630,
-          alt: typeof title === 'string' ? title : SITE_CONFIG.name,
+          alt: 'Rapid Panda Movers logo - black and white panda icon',
         },
       ],
       ...(publishedTime && { publishedTime }),
@@ -170,7 +170,7 @@ interface Location {
 /**
  * Generate metadata for service pages
  */
-export function generateServiceMetadata(service: Service, location?: Location, locale?: Locale): Metadata {
+export async function generateServiceMetadata(service: Service, location?: Location, locale?: Locale): Promise<Metadata> {
   const config = getMetadataConfig(locale)
   const templates = config.templates.service
   const locationName = location?.name
@@ -205,7 +205,7 @@ export function generateServiceMetadata(service: Service, location?: Location, l
 /**
  * Generate metadata for location pages (cities and neighborhoods)
  */
-export function generateLocationMetadata(location: Location, locale?: Locale): Metadata {
+export async function generateLocationMetadata(location: Location, locale?: Locale): Promise<Metadata> {
   const config = getMetadataConfig(locale)
   const templates = config.templates.location
   const isNeighborhood = !!location.parentCity
@@ -264,7 +264,7 @@ function titleCase(s: string): string {
 /**
  * Generate metadata for route pages
  */
-export function generateRouteMetadata(route: Route, locale?: Locale): Metadata {
+export async function generateRouteMetadata(route: Route, locale?: Locale): Promise<Metadata> {
   const config = getMetadataConfig(locale)
   const templates = config.templates.route
   const origin = titleCase(route.origin_name)
@@ -299,7 +299,7 @@ interface BlogPost {
 /**
  * Generate metadata for blog posts
  */
-export function generateBlogMetadata(post: BlogPost, locale?: Locale): Metadata {
+export async function generateBlogMetadata(post: BlogPost, locale?: Locale): Promise<Metadata> {
   const config = getMetadataConfig(locale)
   const title = `${post.title}${config.templates.blogPost.titleSuffix}`
   const description = post.excerpt

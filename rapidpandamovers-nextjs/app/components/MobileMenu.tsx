@@ -21,9 +21,10 @@ interface MobileMenuProps {
   locale: string
   phoneTel: string
   phoneFormatted: string
+  callAriaLabel?: string
 }
 
-export default function MobileMenu({ nav, services, cities, locale, phoneTel, phoneFormatted }: MobileMenuProps) {
+export default function MobileMenu({ nav, services, cities, locale, phoneTel, phoneFormatted, callAriaLabel }: MobileMenuProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [openSection, setOpenSection] = useState<string | null>(null)
   const pathname = usePathname()
@@ -52,8 +53,8 @@ export default function MobileMenu({ nav, services, cities, locale, phoneTel, ph
     setOpenSection(openSection === section ? null : section)
   }
 
-  function onLanguageChange(nextLocale: string) {
-    const translatedPath = translatePathname(pathname, currentLocale as Locale, nextLocale as Locale)
+  async function onLanguageChange(nextLocale: string) {
+    const translatedPath = await translatePathname(pathname, currentLocale as Locale, nextLocale as Locale)
     router.replace(translatedPath, { locale: nextLocale })
     setIsOpen(false)
   }
@@ -229,6 +230,7 @@ export default function MobileMenu({ nav, services, cities, locale, phoneTel, ph
           <div className="space-y-3 pt-4">
             <a
               href={`tel:${phoneTel}`}
+              aria-label={callAriaLabel}
               className="flex items-center justify-center space-x-2 border border-orange-600 bg-orange-600 hover:bg-orange-700 hover:border-orange-600 text-white font-semibold py-3 px-4 rounded-lg transition-colors w-full text-shadow-sm"
             >
               <Phone className="w-4 h-4" />

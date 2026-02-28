@@ -63,6 +63,7 @@ export default async function RatesPage() {
       <ResourceSection
         title={rates.resourceSection.title}
         subtitle={rates.resourceSection.subtitle}
+        items={content.defaults.resources.items}
         variant="grid"
       />
 

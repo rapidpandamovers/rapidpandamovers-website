@@ -15,13 +15,28 @@ type Slot = {
   label?: string;
 };
 
+const RESPONSIVE_WIDTHS = [640, 960, 1280] as const;
+
+/** Pick the smallest responsive width that covers the viewport, or full-size */
+function resolveImageUrl(basePath: string, viewportWidth: number): { webp: string; jpg: string } {
+  const size = RESPONSIVE_WIDTHS.find(w => w >= viewportWidth);
+  if (size) {
+    return { webp: `${basePath}-${size}w.webp`, jpg: `${basePath}-${size}w.jpg` };
+  }
+  return { webp: `${basePath}.webp`, jpg: `${basePath}.jpg` };
+}
+
 type Props = {
-  slot1Src: string;
+  slot1Src?: string;
   slot1Fallback?: string;
-  slot2Src: string;
+  slot2Src?: string;
   slot2Fallback?: string;
-  slot3Src: string;
+  slot3Src?: string;
   slot3Fallback?: string;
+
+  /** Base paths without extension, e.g. ['/images/hero/1', '/images/hero/2', '/images/hero/3'].
+   *  When provided, viewport detection resolves each to WebP/JPG at the right size. */
+  images?: [string, string, string];
 
   className?: string;
 
@@ -334,12 +349,13 @@ const VARIANTS = {
 };
 
 export function ImageCollage({
-  slot1Src,
-  slot1Fallback,
-  slot2Src,
-  slot2Fallback,
-  slot3Src,
-  slot3Fallback,
+  slot1Src: slot1SrcProp,
+  slot1Fallback: slot1FallbackProp,
+  slot2Src: slot2SrcProp,
+  slot2Fallback: slot2FallbackProp,
+  slot3Src: slot3SrcProp,
+  slot3Fallback: slot3FallbackProp,
+  images,
   className,
   accentColor = "#F97315",
   alt,
@@ -348,6 +364,32 @@ export function ImageCollage({
   dots,
   variant = 'default',
 }: Props) {
+  // Viewport-based responsive image resolution when `images` prop is provided
+  const [containerWidth, setContainerWidth] = React.useState(960);
+  React.useEffect(() => {
+    if (!images) return;
+    const effective = window.innerWidth >= 1024 ? Math.round(window.innerWidth / 2) : window.innerWidth;
+    setContainerWidth(effective);
+  }, [images]);
+
+  // Resolve images prop to slot sources
+  let slot1Src = slot1SrcProp ?? '';
+  let slot1Fallback = slot1FallbackProp;
+  let slot2Src = slot2SrcProp ?? '';
+  let slot2Fallback = slot2FallbackProp;
+  let slot3Src = slot3SrcProp ?? '';
+  let slot3Fallback = slot3FallbackProp;
+
+  if (images) {
+    const resolved = images.map(img => resolveImageUrl(img, containerWidth));
+    slot1Src = resolved[0].webp;
+    slot1Fallback = resolved[0].jpg;
+    slot2Src = resolved[1].webp;
+    slot2Fallback = resolved[1].jpg;
+    slot3Src = resolved[2].webp;
+    slot3Fallback = resolved[2].jpg;
+  }
+
   // Track per-slot fallback state for WebP → JPG
   const [src1, setSrc1] = React.useState(slot1Src);
   const [src2, setSrc2] = React.useState(slot2Src);

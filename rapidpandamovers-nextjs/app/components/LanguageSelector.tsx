@@ -22,8 +22,8 @@ export function LanguageSelectorHeader() {
   const pathname = usePathname()
   const router = useRouter()
 
-  function onChange(nextLocale: string) {
-    const translatedPath = translatePathname(pathname, locale as Locale, nextLocale as Locale)
+  async function onChange(nextLocale: string) {
+    const translatedPath = await translatePathname(pathname, locale as Locale, nextLocale as Locale)
     router.replace(translatedPath, { locale: nextLocale })
   }
 
@@ -60,8 +60,8 @@ export function LanguageSelectorFooter() {
   const pathname = usePathname()
   const router = useRouter()
 
-  function onChange(nextLocale: string) {
-    const translatedPath = translatePathname(pathname, locale as Locale, nextLocale as Locale)
+  async function onChange(nextLocale: string) {
+    const translatedPath = await translatePathname(pathname, locale as Locale, nextLocale as Locale)
     router.replace(translatedPath, { locale: nextLocale })
   }
 

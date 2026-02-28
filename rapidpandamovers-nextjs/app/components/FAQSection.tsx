@@ -132,6 +132,7 @@ export default function FAQSection({
                 </p>
                 <a
                   href={`tel:${content.site.phone.replace(/[^0-9]/g, '')}`}
+                  aria-label={ui.buttons.callAriaLabel}
                   className="flex items-center justify-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-shadow-sm"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

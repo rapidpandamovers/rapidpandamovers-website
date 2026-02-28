@@ -96,9 +96,7 @@ export default async function AboutSection({ className = "", variant = "default"
 
             <div className="flex justify-center relative">
                 <ImageCollage
-                  slot1Src="/images/hero/1.jpg"
-                  slot2Src="/images/hero/2.jpg"
-                  slot3Src="/images/hero/3.jpg"
+                  images={['/images/hero/1', '/images/hero/2', '/images/hero/3']}
                   alt={{
                     slot1: ui.images?.aboutCollage?.slot1 ?? "Rapid Panda Movers team loading furniture into moving truck",
                     slot2: ui.images?.aboutCollage?.slot2 ?? "Professional movers carefully wrapping items for safe transport",

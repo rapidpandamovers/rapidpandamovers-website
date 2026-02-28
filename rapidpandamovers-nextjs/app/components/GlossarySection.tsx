@@ -9,12 +9,13 @@ import { H2, H3 } from '@/app/components/Heading';
 interface GlossarySectionProps {
   className?: string;
   variant?: 'preview' | 'full';
+  terms?: { term: string; definition: string }[];
 }
 
-export default function GlossarySection({ className = "", variant = 'preview' }: GlossarySectionProps) {
+export default function GlossarySection({ className = "", variant = 'preview', terms }: GlossarySectionProps) {
   const { content, ui } = useMessages() as any
-  const glossaryData = content.glossary;
-  const sortedTerms = [...glossaryData.terms].sort((a, b) => a.term.localeCompare(b.term));
+  const resolvedTerms = terms ?? content?.glossary?.terms ?? [];
+  const sortedTerms = [...resolvedTerms].sort((a: any, b: any) => a.term.localeCompare(b.term));
   const [activeLetter, setActiveLetter] = useState<string>('');
   const termsRef = useRef<HTMLDivElement>(null);
 

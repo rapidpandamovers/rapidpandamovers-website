@@ -30,12 +30,13 @@ export default async function MovingGlossaryPage() {
         cta={glossaryData.hero.cta}
       />
 
-      <GlossarySection variant="full" />
+      <GlossarySection variant="full" terms={glossaryData.terms} />
 
       {/* Resources Section */}
       <ResourceSection
         title={glossaryData.resourceSection.title}
         subtitle={glossaryData.resourceSection.subtitle}
+        items={content.defaults.resources.items}
         variant="grid"
       />
 

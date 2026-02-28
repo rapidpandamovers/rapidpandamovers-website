@@ -7,8 +7,9 @@ import { getaiGrotesk } from '@/app/fonts'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import { SITE_CONFIG, getSiteUrl } from '@/lib/metadata'
-import { translatePathname } from '@/i18n/slug-map'
 import { defaultLocale, type Locale } from '@/i18n/config'
+import services from '@/data/services.json'
+import reviewsData from '@/data/reviews.json'
 
 export async function generateMetadata({
   params,
@@ -20,6 +21,9 @@ export async function generateMetadata({
   const meta = (messages as any).meta
 
   const site = meta.site
+  const ogDescription = site.ogDescription
+    .replace(/\{rating\}/g, String(reviewsData.stats.averageRating))
+    .replace(/\{reviewCount\}/g, String(reviewsData.stats.totalReviews))
   const ogLocale = locale === 'es' ? 'es_US' : 'en_US'
   const siteUrl = getSiteUrl()
   const canonicalUrl = locale === defaultLocale
@@ -66,20 +70,20 @@ export async function generateMetadata({
       url: canonicalUrl,
       siteName: SITE_CONFIG.name,
       title: site.defaultTitle,
-      description: site.ogDescription,
+      description: ogDescription,
       images: [
         {
           url: SITE_CONFIG.defaultImage,
           width: 1200,
           height: 630,
-          alt: `${SITE_CONFIG.name} - Professional Moving Services`,
+          alt: 'Rapid Panda Movers logo - black and white panda icon',
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
       title: site.defaultTitle,
-      description: site.ogDescription,
+      description: ogDescription,
       images: [SITE_CONFIG.defaultImage],
     },
     robots: {
@@ -100,7 +104,7 @@ export async function generateMetadata({
 function getStructuredData(locale: string) {
   return {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': 'MovingCompany',
     '@id': `${SITE_CONFIG.domain}/#organization`,
     name: SITE_CONFIG.name,
     image: `${SITE_CONFIG.domain}/images/rapidpandamovers-logo.png`,
@@ -149,40 +153,22 @@ function getStructuredData(locale: string) {
     ],
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.7',
-      reviewCount: '56',
+      ratingValue: String(reviewsData.stats.averageRating),
+      reviewCount: String(reviewsData.stats.totalReviews),
       bestRating: '5',
       worstRating: '1',
     },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Moving Services',
-      itemListElement: [
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Local Moving',
-            description: 'Professional local moving services within Miami-Dade County',
-          },
+      itemListElement: services.map((s: any) => ({
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: s.name,
+          description: s.description.slice(0, 160),
         },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Long Distance Moving',
-            description: 'Interstate and cross-country moving services',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Packing Services',
-            description: 'Professional packing and unpacking services',
-          },
-        },
-      ],
+      })),
     },
   }
 }
@@ -202,6 +188,11 @@ export default async function LocaleLayout({
   }
 
   const messages = await getMessages()
+  // Exclude meta (server-only) and content (67KB) from the layout-level client provider.
+  // Keep only content.site (~200B) since it's needed by many client components (Hero, FAQSection, etc).
+  // Pages that need additional content keys use nested NextIntlClientProvider.
+  const { meta, content, ...clientMessages } = messages as Record<string, any>
+  clientMessages.content = { site: content.site }
   const structuredData = getStructuredData(locale)
 
   return (
@@ -216,7 +207,7 @@ export default async function LocaleLayout({
         />
       </head>
       <body className="bg-white text-slate-900 font-sans antialiased min-h-screen flex flex-col">
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider messages={clientMessages}>
           <Header />
           <main className="flex-grow">
             {children}

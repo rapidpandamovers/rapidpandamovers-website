@@ -26,16 +26,18 @@ interface SearchSectionProps {
   placeholder?: string;
   showBackground?: boolean;
   posts?: BlogPost[];
+  initialQuery?: string;
 }
 
 export default function SearchSection({
   placeholder: placeholderProp,
   showBackground = true,
-  posts = []
+  posts = [],
+  initialQuery,
 }: SearchSectionProps) {
   const { ui } = useMessages() as any;
   const placeholder = placeholderProp ?? ui.search.defaultPlaceholder;
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState(initialQuery ?? '');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);

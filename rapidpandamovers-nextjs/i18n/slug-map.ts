@@ -1,8 +1,5 @@
 import type { Locale } from './config'
 import { staticPathTranslations } from './routing'
-import enBlogIndex from '@/content/blog/en/index.json'
-import esBlogIndex from '@/content/blog/es/index.json'
-
 /**
  * Bidirectional slug translation for dynamic and static routes.
  * Handles: services, cities, neighborhoods, routes, location-service combos,
@@ -45,17 +42,19 @@ const serviceSlugMap: Record<string, Record<string, string>> = {
   },
 }
 
-// Blog slug translation maps (built from index.json files)
-// Maps: en-slug → es-slug and es-slug → en-slug
-const blogSlugMap: Record<string, Record<string, string>> = { en: {}, es: {} }
-const enById = new Map(enBlogIndex.map((p: { id: number; slug: string }) => [p.id, p.slug]))
-const esById = new Map(esBlogIndex.map((p: { id: number; slug: string }) => [p.id, p.slug]))
-for (const [id, enSlug] of enById) {
-  const esSlug = esById.get(id)
-  if (esSlug) {
-    blogSlugMap.en[enSlug] = esSlug  // en→es
-    blogSlugMap.es[esSlug] = enSlug  // es→en
+// Blog slug translation maps — lazy-loaded to avoid bundling 140KB into every page's client JS
+let _blogSlugMap: Record<string, Record<string, string>> | null = null
+
+async function getBlogSlugMap(): Promise<Record<string, Record<string, string>>> {
+  if (!_blogSlugMap) {
+    const blogSlugPairs = (await import('@/data/blog-slug-map.json')).default
+    _blogSlugMap = { en: {}, es: {} }
+    for (const [enSlug, esSlug] of Object.entries(blogSlugPairs)) {
+      _blogSlugMap.en[enSlug] = esSlug as string
+      _blogSlugMap.es[esSlug as string] = enSlug
+    }
   }
+  return _blogSlugMap
 }
 
 // Reverse lookup cache
@@ -253,7 +252,7 @@ export function getTranslatedSlug(canonicalSlug: string, locale: Locale): string
  * e.g. "/resenas/pagina/4" (es) → "/reviews/page/4" (en)
  * e.g. "/reviews/page/4" (en) → "/resenas/pagina/4" (es)
  */
-export function translatePathname(pathname: string, fromLocale: Locale, toLocale: Locale): string {
+export async function translatePathname(pathname: string, fromLocale: Locale, toLocale: Locale): Promise<string> {
   if (fromLocale === toLocale) return pathname
 
   const segments = pathname.split('/')
@@ -264,6 +263,7 @@ export function translatePathname(pathname: string, fromLocale: Locale, toLocale
     const postSlug = segments[2]
     const blogSubPaths = ['category', 'categoria', 'service', 'servicio', 'location', 'ubicacion', 'page', 'pagina']
     if (!blogSubPaths.includes(postSlug)) {
+      const blogSlugMap = await getBlogSlugMap()
       const map = blogSlugMap[fromLocale]
       if (map && map[postSlug]) {
         return `/blog/${map[postSlug]}`

@@ -45,6 +45,7 @@ export default async function FAQPage() {
       <ResourceSection
         title={content.faq.resourceSection.title}
         subtitle={content.faq.resourceSection.subtitle}
+        items={content.defaults.resources.items}
         variant="grid"
       />
 

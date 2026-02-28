@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "email:dev": "email dev --dir emails"
+    "email:dev": "email dev --dir emails",
+    "generate:blog-slug-map": "node scripts/generate-blog-slug-map.js"
   },
   "keywords": [],
   "author": "",

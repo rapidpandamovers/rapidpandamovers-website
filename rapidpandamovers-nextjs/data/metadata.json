@@ -3,7 +3,7 @@
     "titleTemplate": "%s | Rapid Panda Movers",
     "defaultTitle": "Rapid Panda Movers - Professional Moving Services in Miami",
     "description": "Budget-friendly, reliable, and efficient moving services in Miami. Free quotes, transparent pricing, licensed & insured movers.",
-    "ogDescription": "Affordable, reliable moving services in Miami. Free quotes, transparent pricing, experienced crews. Licensed & insured.",
+    "ogDescription": "Rated {rating}/5 by {reviewCount}+ customers. Miami's family-owned movers for local & long-distance moving, packing & storage. Free quotes — no hidden fees.",
     "keywords": ["moving company Miami", "movers Miami", "local moving", "long distance moving", "packing services", "Miami movers"]
   },
   "templates": {
@@ -27,8 +27,8 @@
     }
   },
   "home": {
-    "title": "Rapid Panda Movers | Miami Moving Company",
-    "description": "Professional moving services in Miami. Budget-friendly, reliable, and efficient local & long-distance moving, packing, and storage solutions.",
+    "title": "Rapid Panda Movers | #1 Rated Miami Moving Company",
+    "description": "Rated {rating}/5 by {reviewCount}+ customers. Miami's family-owned movers for local & long-distance moving, packing & storage. Free quotes — no hidden fees.",
     "path": "/"
   },
   "services": {
@@ -125,6 +125,11 @@
     "title": "Reservations | Rapid Panda Movers",
     "description": "Book your move with Rapid Panda Movers. Professional moving services in Miami with transparent pricing and flexible scheduling.",
     "path": "/reservations"
+  },
+  "search": {
+    "title": "Search | Rapid Panda Movers",
+    "description": "Search for moving services, locations, routes, and blog posts.",
+    "path": "/search"
   },
   "sitemap": {
     "title": "Sitemap | Rapid Panda Movers",

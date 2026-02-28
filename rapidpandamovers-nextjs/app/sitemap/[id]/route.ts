@@ -14,7 +14,7 @@ export async function GET(
     return new NextResponse('Not Found', { status: 404 })
   }
 
-  const entries = getEntriesForId(id)
+  const entries = await getEntriesForId(id)
 
   return new NextResponse(entriesToXml(entries), {
     headers: {

@@ -24,6 +24,7 @@ interface ResourceSectionProps {
   className?: string
   maxItems?: number
   variant?: 'default' | 'compact' | 'grid'
+  items?: Resource[]
 }
 
 export default function ResourceSection({
@@ -32,10 +33,11 @@ export default function ResourceSection({
   className = '',
   maxItems,
   variant = 'default',
+  items,
 }: ResourceSectionProps) {
   const { content: contentData } = useMessages() as any
-  const defaults = contentData.defaults.resources
-  const resources: Resource[] = defaults.items
+  const defaults = contentData?.defaults?.resources ?? {}
+  const resources: Resource[] = items ?? defaults.items ?? []
   const displayTitle = title ?? defaults.title
   const displaySubtitle = subtitle ?? defaults.subtitle
   const pathname = usePathname()
