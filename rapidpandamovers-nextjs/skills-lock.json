@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "skills": {
+    "schema-markup": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "computedHash": "81cab81a871142289a3d7dab32bc04fb611d35e0e098e1aa8592bf48b12a7fb9"
+    },
+    "seo-audit": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "computedHash": "27156d103697411bba81520fef469e77bfba4c65d904c841e4965a158d531fbd"
+    }
+  }
+}

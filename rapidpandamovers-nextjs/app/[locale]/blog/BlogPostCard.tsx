@@ -69,7 +69,7 @@ export default function BlogPostCard({ post, showExcerpt = true, showCategoryPil
       <div className="p-6 pt-4 md:p-8 md:pt-4 flex flex-col flex-1">
         <div className="flex items-center text-sm text-gray-500 mb-3">
           <Calendar className="w-4 h-4 mr-1" />
-          <span>{new Date(post.date).toLocaleDateString()}</span>
+          <span>{new Date(post.date + 'T00:00:00').toLocaleDateString()}</span>
           <span className="mx-2">&middot;</span>
           <Clock className="w-4 h-4 mr-1" />
           <span>{post.readTime}</span>

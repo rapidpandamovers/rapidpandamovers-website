@@ -54,7 +54,7 @@ export default function FeaturedPostCard({ post }: FeaturedPostCardProps) {
           <span className="text-sm font-medium">{ui?.blogCategories?.[post.category] || post.category}</span>
           <span className="mx-3">&bull;</span>
           <Calendar className="w-4 h-4 mr-1" />
-          <span className="text-sm">{new Date(post.date).toLocaleDateString()}</span>
+          <span className="text-sm">{new Date(post.date + 'T00:00:00').toLocaleDateString()}</span>
         </div>
 
         <H2 className="text-3xl md:text-4xl font-bold mb-4">

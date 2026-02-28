@@ -172,8 +172,7 @@ export function getPostSummaries(locale?: string): BlogPostSummary[] {
 export function isPublished(post: { date: string }): boolean {
   const today = new Date()
   today.setHours(0, 0, 0, 0)
-  const postDate = new Date(post.date)
-  postDate.setHours(0, 0, 0, 0)
+  const postDate = new Date(post.date + 'T00:00:00')
   return postDate <= today
 }
 

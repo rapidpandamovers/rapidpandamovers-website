@@ -32,7 +32,8 @@ export default function ContactSection({
     setIsSubmitting(true)
     setSubmitStatus('idle')
 
-    const formData = new FormData(e.currentTarget)
+    const form = e.currentTarget
+    const formData = new FormData(form)
     const data = {
       name: formData.get('name'),
       email: formData.get('email'),
@@ -49,8 +50,8 @@ export default function ContactSection({
       })
 
       if (response.ok) {
+        form.reset()
         setSubmitStatus('success')
-        e.currentTarget.reset()
       } else {
         setSubmitStatus('error')
       }
@@ -121,7 +122,7 @@ export default function ContactSection({
             </div>
 
             {/* Business Hours */}
-            <div className="bg-orange-600 rounded-2xl p-6 mt-6 md:mt-auto pt-6 text-white text-shadow-sm">
+            <div className="bg-orange-600 rounded-2xl p-6 mt-6 md:mt-12 pt-6 text-white text-shadow-sm">
               <div className="flex items-center mb-4">
                 <Clock className="w-6 h-6 mr-3" />
                 <h4 className="text-lg font-semibold">{ui.contact.hoursTitle}</h4>

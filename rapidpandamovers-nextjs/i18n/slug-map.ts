@@ -1,5 +1,7 @@
 import type { Locale } from './config'
 import { staticPathTranslations } from './routing'
+import enBlogIndex from '@/content/blog/en/index.json'
+import esBlogIndex from '@/content/blog/es/index.json'
 
 /**
  * Bidirectional slug translation for dynamic and static routes.
@@ -41,6 +43,19 @@ const serviceSlugMap: Record<string, Record<string, string>> = {
     'storage-solutions': 'soluciones-de-almacenamiento',
     'junk-removal': 'retiro-de-basura',
   },
+}
+
+// Blog slug translation maps (built from index.json files)
+// Maps: en-slug → es-slug and es-slug → en-slug
+const blogSlugMap: Record<string, Record<string, string>> = { en: {}, es: {} }
+const enById = new Map(enBlogIndex.map((p: { id: number; slug: string }) => [p.id, p.slug]))
+const esById = new Map(esBlogIndex.map((p: { id: number; slug: string }) => [p.id, p.slug]))
+for (const [id, enSlug] of enById) {
+  const esSlug = esById.get(id)
+  if (esSlug) {
+    blogSlugMap.en[enSlug] = esSlug  // en→es
+    blogSlugMap.es[esSlug] = enSlug  // es→en
+  }
 }
 
 // Reverse lookup cache
@@ -243,6 +258,18 @@ export function translatePathname(pathname: string, fromLocale: Locale, toLocale
 
   const segments = pathname.split('/')
   // segments[0] is '' (leading slash), segments[1] is first path part, etc.
+
+  // Handle blog post slugs: /blog/<post-slug> → look up translated slug
+  if (segments[1] === 'blog' && segments.length >= 3 && segments[2]) {
+    const postSlug = segments[2]
+    const blogSubPaths = ['category', 'categoria', 'service', 'servicio', 'location', 'ubicacion', 'page', 'pagina']
+    if (!blogSubPaths.includes(postSlug)) {
+      const map = blogSlugMap[fromLocale]
+      if (map && map[postSlug]) {
+        return `/blog/${map[postSlug]}`
+      }
+    }
+  }
 
   const translated = segments.map((segment, i) => {
     if (!segment || i === 0) return segment

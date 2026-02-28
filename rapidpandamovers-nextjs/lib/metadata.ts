@@ -8,7 +8,7 @@ import metadataEs from '@/data/es/metadata.json'
 export const SITE_CONFIG = {
   name: 'Rapid Panda Movers',
   domain: 'https://www.rapidpandamovers.com',
-  defaultImage: 'https://www.rapidpandamovers.com/images/rapidpandamovers-og.jpg',
+  defaultImage: '/images/rapidpandamovers-og.jpg',
   phone: '(786) 585-4269',
   email: 'info@rapidpandamovers.com',
   address: {

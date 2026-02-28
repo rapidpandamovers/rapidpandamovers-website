@@ -237,9 +237,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           const [, alt, src] = imageMatch
           // Skip if this is the featured image
           if (src !== post.featured) {
-            const floatClass = imageIndex % 2 === 0
-              ? 'sm:float-left sm:mr-6 sm:mb-4'
-              : 'sm:float-right sm:ml-6 sm:mb-4'
+            const floatClass = 'sm:float-right sm:ml-6 sm:mb-4'
             const isFirstBodyImage = imageIndex === 0
             imageIndex++
 
@@ -248,7 +246,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             const ext = src.match(/\.(webp|jpg|jpeg|png)$/)?.[1] || 'webp'
 
             elements.push(
-              <figure key={currentKey++} className={`my-6 ${floatClass} sm:w-64 md:w-72`}>
+              <figure key={currentKey++} className={`my-6 ${floatClass} sm:w-64 md:w-80 lg:w-96`}>
                 <div className="overflow-hidden rounded-lg shadow-lg">
                   <Image
                     src={src}
@@ -319,7 +317,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <Breadcrumbs items={breadcrumbItems} showBackground={true} />
 
       {/* Article Content */}
-      <article className="container mx-auto">
+      <article className="container mx-auto px-6 md:px-0">
         {/* Lead/Excerpt */}
         <div className="py-8 border-b border-gray-200">
           <p className="text-xl md:text-2xl text-gray-600 leading-relaxed font-light">

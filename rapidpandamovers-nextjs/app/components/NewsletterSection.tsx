@@ -31,7 +31,8 @@ export default function NewsletterSection({
     setIsSubmitting(true)
     setSubmitStatus('idle')
 
-    const formData = new FormData(e.currentTarget)
+    const form = e.currentTarget
+    const formData = new FormData(form)
     const data = {
       email: formData.get('email'),
       turnstileToken,
@@ -45,8 +46,8 @@ export default function NewsletterSection({
       })
 
       if (response.ok) {
+        form.reset()
         setSubmitStatus('success')
-        e.currentTarget.reset()
       } else {
         setSubmitStatus('error')
       }

@@ -97,7 +97,7 @@ export default function BlogHeroImage({ featured, title, category, date, readTim
           <div className="flex items-center text-gray-300 text-sm gap-4">
             <div className="flex items-center">
               <Calendar className="w-4 h-4 mr-2" />
-              <span>{new Date(date).toLocaleDateString('en-US', {
+              <span>{new Date(date + 'T00:00:00').toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric'
@@ -134,7 +134,7 @@ export default function BlogHeroImage({ featured, title, category, date, readTim
       <div className="flex items-center text-gray-600 text-sm gap-4">
         <div className="flex items-center">
           <Calendar className="w-4 h-4 mr-2" />
-          <span>{new Date(date).toLocaleDateString('en-US', {
+          <span>{new Date(date + 'T00:00:00').toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
