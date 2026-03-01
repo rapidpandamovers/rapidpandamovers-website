@@ -65,6 +65,7 @@ export default async function RatesPage() {
         subtitle={rates.resourceSection.subtitle}
         items={content.defaults.resources.items}
         variant="grid"
+        pathname="/moving-rates"
       />
 
       {/* Quote CTA Section */}

@@ -396,9 +396,11 @@ export function ImageCollage({
   const [src3, setSrc3] = React.useState(slot3Src);
 
   // Sync if props change (e.g., responsive resize)
-  React.useEffect(() => { setSrc1(slot1Src) }, [slot1Src]);
-  React.useEffect(() => { setSrc2(slot2Src) }, [slot2Src]);
-  React.useEffect(() => { setSrc3(slot3Src) }, [slot3Src]);
+  React.useEffect(() => {
+    setSrc1(slot1Src);
+    setSrc2(slot2Src);
+    setSrc3(slot3Src);
+  }, [slot1Src, slot2Src, slot3Src]);
   const uid = React.useId().replace(/:/g, "");
 
   // Native template canvas (adjust if your template PNG uses a different size)

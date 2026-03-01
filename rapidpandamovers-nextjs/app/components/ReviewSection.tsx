@@ -1,7 +1,8 @@
 'use client'
 
 import { useState, useMemo, useEffect } from 'react'
-import { Star, Quote, ChevronLeft, ChevronRight, ChevronDown, ChevronUp, BadgeCheck, MessageSquare, ArrowRight } from 'lucide-react'
+import { Quote, ChevronLeft, ChevronRight, ChevronDown, ChevronUp, BadgeCheck, MessageSquare, ArrowRight } from 'lucide-react'
+import StarRating from '@/app/components/StarRating'
 import { H2, H3 } from '@/app/components/Heading'
 import { Link } from '@/i18n/routing'
 import reviewsData from '@/data/reviews.json'
@@ -27,6 +28,8 @@ interface ReviewSectionProps {
   showPagination?: boolean
   className?: string
   variant?: 'default' | 'compact' | 'carousel' | 'left'
+  // Performance: pass pre-filtered reviews from server to avoid bundling all reviews in client JS
+  reviews?: typeof reviewsData.reviews
 }
 
 // Platform icons as simple SVG components
@@ -120,7 +123,8 @@ export default function ReviewSection({
   showAllLink = true,
   showPagination = false,
   className = "",
-  variant = 'default'
+  variant = 'default',
+  reviews,
 }: ReviewSectionProps) {
   const { ui } = useMessages() as any
   const locale = useLocale()
@@ -132,36 +136,36 @@ export default function ReviewSection({
 
   // Filter reviews based on props (without limit for pagination)
   const allFilteredReviews = useMemo(() => {
-    let reviews = reviewsData.reviews
+    let sourceReviews = reviews ?? reviewsData.reviews
 
     // Filter by platform if selected
     if (selectedPlatform) {
-      reviews = reviews.filter(r => r.platform === selectedPlatform)
+      sourceReviews = sourceReviews.filter(r => r.platform === selectedPlatform)
     }
 
     // Filter by location
     if (city) {
-      reviews = reviews.filter(r => r.location?.city === city)
+      sourceReviews = sourceReviews.filter(r => r.location?.city === city)
     }
     if (neighborhood) {
-      reviews = reviews.filter(r => r.location?.neighborhood === neighborhood)
+      sourceReviews = sourceReviews.filter(r => r.location?.neighborhood === neighborhood)
     }
 
     // Filter by service (check if service is in the services array)
     if (service) {
-      reviews = reviews.filter(r => (r.services as string[] | undefined)?.includes(service))
+      sourceReviews = sourceReviews.filter(r => (r.services as string[] | undefined)?.includes(service))
     }
 
     // Filter by route
     if (route) {
-      reviews = reviews.filter(r => r.route === route)
+      sourceReviews = sourceReviews.filter(r => r.route === route)
     }
 
     // Sort by ID descending (newest first)
-    reviews = [...reviews].sort((a, b) => parseInt(b.id) - parseInt(a.id))
+    sourceReviews = [...sourceReviews].sort((a, b) => parseInt(b.id) - parseInt(a.id))
 
-    return reviews
-  }, [city, neighborhood, service, route, selectedPlatform])
+    return sourceReviews
+  }, [reviews, city, neighborhood, service, route, selectedPlatform])
 
   // Calculate pagination
   const totalPages = showPagination ? Math.ceil(allFilteredReviews.length / perPage) : 1
@@ -245,11 +249,7 @@ export default function ReviewSection({
                     <PlatformIcon platform={review.platform} />
                   </div>
                 </div>
-                <div className="flex items-center gap-1 mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className={`w-4 h-4 ${i < review.rating ? 'text-orange-600 fill-current' : 'text-gray-200'}`} />
-                  ))}
-                </div>
+                <StarRating rating={review.rating} size="w-4 h-4" className="mb-3" />
                 <div className="flex-1">
                   <Quote className="w-8 h-8 text-gray-300 mb-2" />
                   <p className="text-gray-700 leading-relaxed line-clamp-4">{getReviewText(review, locale).displayText}</p>
@@ -315,7 +315,7 @@ export default function ReviewSection({
 
           <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {filteredReviews.map((review) => (
-              <ReviewCard key={review.id} review={review} formatDate={formatDate} />
+              <ReviewCard key={review.id} review={review} formatDate={formatDate} ui={ui} locale={locale} />
             ))}
           </div>
         </div>
@@ -382,7 +382,7 @@ export default function ReviewSection({
               >
                 {filteredReviews.map((review) => (
                   <div key={review.id} className="w-full md:w-1/3 flex-shrink-0 px-3">
-                    <ReviewCard review={review} formatDate={formatDate} />
+                    <ReviewCard review={review} formatDate={formatDate} ui={ui} locale={locale} />
                   </div>
                 ))}
               </div>
@@ -407,7 +407,7 @@ export default function ReviewSection({
         ) : (
           <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {filteredReviews.map((review) => (
-              <ReviewCard key={review.id} review={review} formatDate={formatDate} />
+              <ReviewCard key={review.id} review={review} formatDate={formatDate} ui={ui} locale={locale} />
             ))}
           </div>
         )}
@@ -543,12 +543,14 @@ function getReviewText(review: typeof reviewsData.reviews[0], locale: string) {
 function ReviewCard({
   review,
   formatDate,
+  ui,
+  locale,
 }: {
   review: typeof reviewsData.reviews[0]
   formatDate: (date: string) => string
+  ui: any
+  locale: string
 }) {
-  const { ui } = useMessages() as any
-  const locale = useLocale()
   const [isExpanded, setIsExpanded] = useState(false)
   const [showOriginal, setShowOriginal] = useState(false)
   const { displayText, isTranslated, originalText } = getReviewText(review, locale)
@@ -579,16 +581,7 @@ function ReviewCard({
       </div>
 
       {/* Rating */}
-      <div className="flex items-center gap-1 mb-3">
-        {[...Array(5)].map((_, i) => (
-          <Star
-            key={i}
-            className={`w-4 h-4 ${
-              i < review.rating ? 'text-orange-600 fill-current' : 'text-gray-200'
-            }`}
-          />
-        ))}
-      </div>
+      <StarRating rating={review.rating} size="w-4 h-4" className="mb-3" />
 
       {/* Review Text */}
       <div className="flex-1">

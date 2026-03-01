@@ -1,9 +1,11 @@
 import { Link } from '@/i18n/routing'
-import SearchSection from '@/app/components/SearchSection'
-import BlogSection from '@/app/components/BlogSection'
+import dynamic from 'next/dynamic'
 import { getPostsSortedByDate } from '@/lib/blog'
 import { getMessages } from 'next-intl/server'
 import { H1, H2 } from '@/app/components/Heading'
+
+const SearchSection = dynamic(() => import('@/app/components/SearchSection'))
+const BlogSection = dynamic(() => import('@/app/components/BlogSection'))
 
 export default async function NotFound() {
   const { ui } = (await getMessages()) as any

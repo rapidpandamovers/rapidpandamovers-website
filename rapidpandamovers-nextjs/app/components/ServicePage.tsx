@@ -12,9 +12,12 @@ import ProblemSection from './ProblemSection';
 import SolutionSection from './SolutionSection';
 import OverviewSection from './OverviewSection';
 import ServiceIllustration from './ServiceIllustration';
-import FAQSection from './FAQSection';
+import dynamic from 'next/dynamic';
 import Breadcrumbs from './Breadcrumbs';
-import { ServiceSchema, FAQSchema } from './Schema';
+import ServiceSchema from './Schema/ServiceSchema';
+import FAQSchema from './Schema/FAQSchema';
+
+const FAQSection = dynamic(() => import('./FAQSection'));
 import { getMessages, getLocale } from 'next-intl/server';
 import { getTranslatedSlug } from '@/i18n/slug-map';
 import type { Locale } from '@/i18n/config';

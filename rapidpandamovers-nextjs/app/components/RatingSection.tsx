@@ -1,6 +1,6 @@
-import { Star } from 'lucide-react'
 import { getMessages } from 'next-intl/server'
 import { H2 } from '@/app/components/Heading'
+import StarRating from '@/app/components/StarRating'
 
 interface PlatformRating {
   name: string
@@ -98,11 +98,7 @@ export default async function RatingSection({
                   <div className="flex items-center gap-2">
                     <span className="text-lg md:text-2xl font-bold text-gray-900">{rating.rating}</span>
                     {rating.rating !== 'A+' && (
-                      <div className="hidden md:flex items-center">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-3.5 h-3.5 text-orange-600 fill-current" />
-                        ))}
-                      </div>
+                      <StarRating size="w-3.5 h-3.5" className="hidden md:flex" />
                     )}
                   </div>
                 </div>

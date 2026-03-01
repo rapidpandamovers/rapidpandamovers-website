@@ -8,7 +8,8 @@ import RoutePage from '@/app/components/RoutePage';
 import { locales } from '@/i18n/config';
 import type { Locale } from '@/i18n/config';
 import { getCanonicalSlug, getTranslatedSlug } from '@/i18n/slug-map';
-import { ServiceSchema, RouteSchema } from '@/app/components/Schema';
+import ServiceSchema from '@/app/components/Schema/ServiceSchema';
+import RouteSchema from '@/app/components/Schema/RouteSchema';
 import { SITE_CONFIG } from '@/lib/metadata';
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string; locale: string }> }): Promise<Metadata> {

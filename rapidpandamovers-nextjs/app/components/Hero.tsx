@@ -1,15 +1,11 @@
-'use client'
-
-import { Star, Phone } from 'lucide-react'
-import { useState } from 'react'
 import { preload } from 'react-dom'
-import { Link } from '@/i18n/routing'
-import { useMessages, useLocale } from 'next-intl'
-import { getTranslatedSlug } from '@/i18n/slug-map'
+import { getMessages, getLocale } from 'next-intl/server'
 import type { Locale } from '@/i18n/config'
 import reviewsData from '@/data/reviews.json'
 import { ImageCollage } from './ImageCollage'
 import { H1 } from '@/app/components/Heading'
+import StarRating from '@/app/components/StarRating'
+import HeroQuoteForm from './HeroQuoteForm'
 
 // Default base paths (without extension) — resolved to WebP/JPG at the right size
 const DEFAULT_IMAGES: [string, string, string] = ['/images/hero/1', '/images/hero/2', '/images/hero/3']
@@ -23,7 +19,7 @@ interface HeroProps {
   collageVariant?: 'default' | 'variant1' | 'variant2' | 'variant3' | 'variant4'
 }
 
-export default function Hero({
+export default async function Hero({
   title,
   description,
   cta,
@@ -35,20 +31,14 @@ export default function Hero({
   preload(`${images[0]}-960w.webp`, { as: 'image' })
   preload(`${images[1]}-960w.webp`, { as: 'image' })
 
-  const { ui, content } = useMessages() as any
-  const locale = useLocale() as Locale
-  const [pickupZip, setPickupZip] = useState('')
-  const [dropoffZip, setDropoffZip] = useState('')
+  const { ui, content } = (await getMessages()) as any
+  const locale = (await getLocale()) as Locale
 
   // Use provided props with fallback defaults
   const displayTitle = title || ui.hero.defaultTitle
   const displayDescription = description || ui.hero.defaultDescription
   const displayCta = cta || ui.hero.defaultCta
 
-
-  // Build quote URL with zip codes
-  const quoteSlug = getTranslatedSlug('quote', locale)
-  const quoteUrl = `/${quoteSlug}${pickupZip || dropoffZip ? '?' : ''}${pickupZip ? `pickup=${encodeURIComponent(pickupZip)}` : ''}${pickupZip && dropoffZip ? '&' : ''}${dropoffZip ? `dropoff=${encodeURIComponent(dropoffZip)}` : ''}`
   return (
     <section className="pt-2 md:px-6 lg:px-8 relative">
       <div className="container mx-auto rounded-4xl border border-gray-700 bg-black p-6 md:p-16">
@@ -65,16 +55,12 @@ export default function Hero({
               }}
             />
           </div>
-          
+
           {/* Right side - Content */}
           <div className="space-y-6">
             {/* Rating display — mobile only */}
             <div className="flex flex-col items-center md:hidden">
-              <div className="flex space-x-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-9 h-9 text-orange-600 fill-current" />
-                ))}
-              </div>
+              <StarRating size="w-9 h-9" />
               <span className="text-white text-center mt-2">{reviewsData.stats.averageRating}{ui.hero.ratingText.replace('{count}', String(reviewsData.stats.totalReviews))}</span>
             </div>
 
@@ -86,59 +72,21 @@ export default function Hero({
                 {displayDescription}
               </p>
             </div>
-            
-            {/* Mobile: Phone button */}
-            <div className="md:hidden space-y-4">
-              <a
-                href={`tel:${content.site.phone.replace(/-/g, '')}`}
-                aria-label={ui.buttons.callAriaLabel}
-                className="flex items-center justify-center space-x-2 w-full bg-orange-600 text-white text-shadow-sm font-bold py-3 px-6 rounded-lg hover:bg-orange-700 transition-colors"
-              >
-                <Phone className="w-5 h-5" />
-                <span>{`(${content.site.phone.slice(0,3)}) ${content.site.phone.slice(4,7)}-${content.site.phone.slice(8)}`}</span>
-              </a>
-              <Link
-                href={quoteUrl}
-                className="block w-full border border-orange-600 text-orange-500 font-bold py-3 px-6 rounded-lg hover:bg-orange-600 hover:text-white transition-colors text-center"
-              >
-                {ui.buttons.getFreeQuote}
-              </Link>
-            </div>
 
-            {/* Desktop: Quote form */}
-            <div className="hidden md:block space-y-4">
-              <p className="text-white font-medium">{displayCta}</p>
-              <div className="grid grid-cols-2 gap-4">
-                <input
-                  type="text"
-                  placeholder={ui.forms.hero.pickupPlaceholder}
-                  value={pickupZip}
-                  onChange={(e) => setPickupZip(e.target.value)}
-                  className="px-4 py-3 bg-gray-800 border border-gray-600 text-white placeholder-gray-400 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                />
-                <input
-                  type="text"
-                  placeholder={ui.forms.hero.dropoffPlaceholder}
-                  value={dropoffZip}
-                  onChange={(e) => setDropoffZip(e.target.value)}
-                  className="px-4 py-3 bg-gray-800 border border-gray-600 text-white placeholder-gray-400 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                />
-              </div>
-              <Link
-                href={quoteUrl}
-                className="block w-full bg-orange-600 text-white text-shadow-sm font-bold py-3 px-6 rounded-lg hover:bg-orange-700 transition-colors text-center"
-              >
-                {ui.buttons.getFreeQuote}
-              </Link>
-            </div>
-            
-            {/* Rating display — desktop only (mobile version is above) */}
+            {/* Mobile + Desktop CTAs (client component) */}
+            <HeroQuoteForm
+              locale={locale}
+              ctaText={displayCta}
+              pickupPlaceholder={ui.forms.hero.pickupPlaceholder}
+              dropoffPlaceholder={ui.forms.hero.dropoffPlaceholder}
+              buttonText={ui.buttons.getFreeQuote}
+              phone={content.site.phone}
+              callAriaLabel={ui.buttons.callAriaLabel}
+            />
+
+            {/* Rating display — desktop only */}
             <div className="hidden md:flex md:flex-row md:items-center md:space-x-2">
-              <div className="flex space-x-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-orange-600 fill-current" />
-                ))}
-              </div>
+              <StarRating />
               <span className="text-white">{reviewsData.stats.averageRating}{ui.hero.ratingText.replace('{count}', String(reviewsData.stats.totalReviews))}</span>
             </div>
           </div>

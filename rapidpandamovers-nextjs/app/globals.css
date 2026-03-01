@@ -56,6 +56,11 @@
   .text-shadow-sm {
     text-shadow: 0 1px 12px rgba(124, 45, 18, 1);
   }
+
+  .cv-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 500px;
+  }
 }
 
 /* Hide native video captions — rendered as custom React overlay instead */

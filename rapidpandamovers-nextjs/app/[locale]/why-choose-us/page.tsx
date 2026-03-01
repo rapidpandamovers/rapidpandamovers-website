@@ -4,7 +4,9 @@ import IncludedSection from '@/app/components/IncludedSection'
 import PromiseSection from '@/app/components/PromiseSection'
 import WhySection from '@/app/components/WhySection'
 import CompareTable from '@/app/components/CompareTable'
-import ReviewSection from '@/app/components/ReviewSection'
+import dynamic from 'next/dynamic'
+
+const ReviewSection = dynamic(() => import('@/app/components/ReviewSection'))
 import QuoteSection from '@/app/components/QuoteSection'
 import { getMessages, getLocale } from 'next-intl/server'
 import { generatePageMetadata } from '@/lib/metadata'

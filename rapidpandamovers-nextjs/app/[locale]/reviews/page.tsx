@@ -1,6 +1,6 @@
 import ReviewsListPage from './ReviewsListPage'
 import QuoteSection from '@/app/components/QuoteSection'
-import { ReviewSchema } from '@/app/components/Schema'
+import ReviewSchema from '@/app/components/Schema/ReviewSchema'
 import reviewsData from '@/data/reviews.json'
 import { getMessages, getLocale } from 'next-intl/server'
 import { generatePageMetadata } from '@/lib/metadata'

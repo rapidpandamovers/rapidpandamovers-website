@@ -1,10 +1,8 @@
-'use client'
-
-import { usePathname, Link } from '@/i18n/routing'
 import { ArrowRight } from 'lucide-react'
 import { resolveIcon } from '@/lib/icons'
-import { useMessages } from 'next-intl'
+import { getMessages } from 'next-intl/server'
 import { H2, H3 } from '@/app/components/Heading'
+import { Link } from '@/i18n/routing'
 
 interface Resource {
   title: string
@@ -25,27 +23,30 @@ interface ResourceSectionProps {
   maxItems?: number
   variant?: 'default' | 'compact' | 'grid'
   items?: Resource[]
+  pathname?: string
 }
 
-export default function ResourceSection({
+export default async function ResourceSection({
   title,
   subtitle,
   className = '',
   maxItems,
   variant = 'default',
   items,
+  pathname = '',
 }: ResourceSectionProps) {
-  const { content: contentData } = useMessages() as any
+  const { content: contentData } = (await getMessages()) as any
   const defaults = contentData?.defaults?.resources ?? {}
   const resources: Resource[] = items ?? defaults.items ?? []
   const displayTitle = title ?? defaults.title
   const displaySubtitle = subtitle ?? defaults.subtitle
-  const pathname = usePathname()
 
   // Filter out the current page and its sub-pages from the resources list
-  const filteredResources = resources.filter(
-    (resource) => resource.href !== pathname && !pathname.startsWith(resource.href + '/')
-  )
+  const filteredResources = pathname
+    ? resources.filter(
+        (resource) => resource.href !== pathname && !pathname.startsWith(resource.href + '/')
+      )
+    : resources
 
   // Apply maxItems limit if specified
   const displayResources = maxItems
@@ -62,7 +63,7 @@ export default function ResourceSection({
         <div className="container mx-auto">
           <H3 className="text-xl font-bold text-gray-800 mb-6">{displayTitle}</H3>
           <div className="flex flex-wrap gap-3">
-            {displayResources.map((resource) => (
+            {displayResources.map((resource: Resource) => (
               <Link
                 key={resource.href}
                 href={resource.href}
@@ -88,7 +89,7 @@ export default function ResourceSection({
           </div>
           <div className="bg-gray-50 rounded-4xl p-6 md:p-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {displayResources.map((resource) => (
+              {displayResources.map((resource: Resource) => (
                 <Link
                   key={resource.href}
                   href={resource.href}
@@ -122,7 +123,7 @@ export default function ResourceSection({
         </div>
         <div className="bg-gray-50 rounded-4xl p-6 md:p-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {displayResources.map((resource) => (
+            {displayResources.map((resource: Resource) => (
               <Link
                 key={resource.href}
                 href={resource.href}

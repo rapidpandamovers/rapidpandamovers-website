@@ -260,6 +260,7 @@ export default async function BlogListPage({ currentPage, category = null, locat
         title={content.blog.resourceSection.title}
         subtitle={content.blog.resourceSection.subtitle}
         variant="grid"
+        pathname="/blog"
       />
 
       <NewsletterSection />

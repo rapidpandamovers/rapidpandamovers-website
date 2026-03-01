@@ -2,7 +2,21 @@
 
 import { useState, useEffect } from 'react'
 import { Link, usePathname } from '@/i18n/routing'
-import { Phone, Mail, MapPin, Clock, ChevronRight, ChevronDown } from 'lucide-react'
+function ChevronRightIcon({ className }: { className?: string }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="m9 18 6-6-6-6"/>
+    </svg>
+  )
+}
+
+function ChevronDownIcon({ className }: { className?: string }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="m6 9 6 6 6-6"/>
+    </svg>
+  )
+}
 
 interface FooterDrawersProps {
   nav: any
@@ -179,9 +193,9 @@ function DrawerSection({
       >
         <span>{title}</span>
         {isOpen ? (
-          <ChevronDown className="w-5 h-5 text-gray-400" />
+          <ChevronDownIcon className="w-5 h-5 text-gray-400" />
         ) : (
-          <ChevronRight className="w-5 h-5 text-gray-400" />
+          <ChevronRightIcon className="w-5 h-5 text-gray-400" />
         )}
       </button>
       <div

@@ -1,6 +1,5 @@
 import { Link } from '@/i18n/routing'
 import Image from 'next/image'
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin } from 'lucide-react'
 import { getAllActiveCities, getLocalizedServices } from '@/lib/data'
 import comparisons from '@/data/comparisons.json'
 import alternatives from '@/data/alternatives.json'
@@ -9,14 +8,70 @@ import { getTranslatedSlug } from '@/i18n/slug-map'
 import type { Locale } from '@/i18n/config'
 import { LanguageSelectorFooter } from './LanguageSelector'
 import { H3 } from '@/app/components/Heading'
-import FooterDrawers from './FooterDrawers'
+import FooterDrawers from './FooterDrawersLoader'
+
+function PhoneIcon({ className }: { className?: string }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+    </svg>
+  )
+}
+
+function MailIcon({ className }: { className?: string }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+    </svg>
+  )
+}
+
+function MapPinIcon({ className }: { className?: string }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/>
+    </svg>
+  )
+}
+
+function ClockIcon({ className }: { className?: string }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+    </svg>
+  )
+}
+
+function FacebookIcon({ className }: { className?: string }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+    </svg>
+  )
+}
+
+function InstagramIcon({ className }: { className?: string }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+    </svg>
+  )
+}
+
+function LinkedinIcon({ className }: { className?: string }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/>
+    </svg>
+  )
+}
 
 function SocialIcon({ platform, size = 'default' }: { platform: string; size?: 'default' | 'lg' }) {
   const cls = size === 'lg' ? 'w-7 h-7' : 'w-5 h-5'
   const ytCls = size === 'lg' ? 'w-9 h-9' : 'w-7 h-7'
   switch (platform) {
     case 'facebook':
-      return <Facebook className={cls} />
+      return <FacebookIcon className={cls} />
     case 'x':
       return (
         <svg className={cls} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -24,9 +79,9 @@ function SocialIcon({ platform, size = 'default' }: { platform: string; size?: '
         </svg>
       )
     case 'instagram':
-      return <Instagram className={cls} />
+      return <InstagramIcon className={cls} />
     case 'linkedin':
-      return <Linkedin className={cls} />
+      return <LinkedinIcon className={cls} />
     case 'tiktok':
       return (
         <svg className={cls} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -78,22 +133,22 @@ export default async function Footer() {
             <H3 className="text-base font-bold mb-4 text-white">{ui.contact.contactUs}</H3>
             <div className="space-y-3 text-sm">
               <a href={`tel:${phoneTel}`} aria-label={ui.buttons.callAriaLabel} className="flex items-start space-x-3 text-gray-400 hover:text-orange-500 transition-colors">
-                <Phone className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
+                <PhoneIcon className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
                 <span className="font-semibold text-white">{phoneFormatted}</span>
               </a>
               <a href={`mailto:${email}`} className="flex items-start space-x-3 text-gray-400 hover:text-orange-500 transition-colors">
-                <Mail className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
+                <MailIcon className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
                 <span>{email}</span>
               </a>
               <div className="flex items-start space-x-3">
-                <MapPin className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
+                <MapPinIcon className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
                 <div className="text-gray-400">
                   <p>{addressLine1}</p>
                   <p>{addressLine2}</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <Clock className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
+                <ClockIcon className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
                 <div className="text-gray-400">
                   {hours.map((entry: { label: string; time: string }, i: number) => (
                     <p key={i}>{entry.label}: {entry.time}</p>
@@ -199,24 +254,24 @@ export default async function Footer() {
             <H3 className="text-lg font-bold mb-4 text-white">{ui.contact.contactUs}</H3>
             <div className="space-y-4 text-sm">
               <a href={`tel:${phoneTel}`} aria-label={ui.buttons.callAriaLabel} className="flex items-start space-x-3 text-gray-400 hover:text-orange-500 transition-colors">
-                <Phone className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
+                <PhoneIcon className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="font-semibold text-white">{phoneFormatted}</p>
                 </div>
               </a>
               <a href={`mailto:${email}`} className="flex items-start space-x-3 text-gray-400 hover:text-orange-500 transition-colors">
-                <Mail className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
+                <MailIcon className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
                 <span>{email}</span>
               </a>
               <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
+                <MapPinIcon className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
                 <div className="text-gray-400">
                   <p>{addressLine1}</p>
                   <p>{addressLine2}</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <Clock className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
+                <ClockIcon className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
                 <div className="text-gray-400">
                   {hours.map((entry: { label: string; time: string }, i: number) => (
                     <p key={i}>{entry.label}: {entry.time}</p>

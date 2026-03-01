@@ -5,7 +5,13 @@ import { usePathname, useRouter } from '@/i18n/routing'
 import { locales } from '@/i18n/config'
 import type { Locale } from '@/i18n/config'
 import { translatePathname } from '@/i18n/slug-map'
-import { Globe } from 'lucide-react'
+function GlobeIcon({ className }: { className?: string }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/>
+    </svg>
+  )
+}
 
 const languageNames: Record<string, string> = {
   en: 'English',
@@ -30,7 +36,7 @@ export function LanguageSelectorHeader() {
   return (
     <div className="relative group">
       <button className="flex items-center space-x-1 text-gray-700 hover:text-orange-600 transition-colors uppercase">
-        <Globe className="w-4 h-4" />
+        <GlobeIcon className="w-4 h-4" />
         <span className="text-sm font-bold">{localeCodes[locale]}</span>
         <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />

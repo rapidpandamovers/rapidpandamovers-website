@@ -38,6 +38,7 @@ export default async function MovingGlossaryPage() {
         subtitle={glossaryData.resourceSection.subtitle}
         items={content.defaults.resources.items}
         variant="grid"
+        pathname="/moving-glossary"
       />
 
       <NewsletterSection />

@@ -4,7 +4,7 @@ import Hero from '@/app/components/Hero'
 import FAQSection from '@/app/components/FAQSection'
 import ResourceSection from '@/app/components/ResourceSection'
 import QuoteSection from '@/app/components/QuoteSection'
-import { FAQSchema } from '@/app/components/Schema'
+import FAQSchema from '@/app/components/Schema/FAQSchema'
 import { generatePageMetadata } from '@/lib/metadata'
 import type { Locale } from '@/i18n/config'
 
@@ -47,6 +47,7 @@ export default async function FAQPage() {
         subtitle={content.faq.resourceSection.subtitle}
         items={content.defaults.resources.items}
         variant="grid"
+        pathname="/faq"
       />
 
       {/* CTA Section */}

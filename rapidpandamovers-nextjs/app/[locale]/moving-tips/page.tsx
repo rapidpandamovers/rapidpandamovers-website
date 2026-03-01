@@ -55,6 +55,7 @@ export default async function MovingTipsPage() {
         subtitle={tipsData.resourceSection.subtitle}
         items={content.defaults.resources.items}
         variant="grid"
+        pathname="/moving-tips"
       />
       <NewsletterSection />
     </div>
