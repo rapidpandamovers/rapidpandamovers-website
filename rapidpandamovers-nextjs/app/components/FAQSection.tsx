@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useMemo } from 'react'
+import { ArrowRight } from 'lucide-react'
 import { Link } from '@/i18n/routing'
 import { useMessages, useLocale } from 'next-intl'
 import { getTranslatedSlug } from '@/i18n/slug-map'
@@ -94,9 +95,7 @@ export default function FAQSection({
                 {faq.link && (
                   <Link href={`/${getTranslatedSlug(faq.link.replace(/^\//, ''), locale)}`} className="inline-flex items-center text-orange-700 hover:text-orange-800 font-medium mt-3">
                     {ui.faq.learnMore}
-                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
+                    <ArrowRight className="w-4 h-4 ml-1" />
                   </Link>
                 )}
               </div>
@@ -181,9 +180,7 @@ export default function FAQSection({
               className="inline-flex items-center text-orange-700 hover:text-orange-800 font-medium"
             >
               {ui.faq.viewAllFaqs}
-              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
+              <ArrowRight className="w-4 h-4 ml-1" />
             </Link>
           </div>
         )}

@@ -13,7 +13,6 @@ interface OverviewSectionProps {
 
 export default async function OverviewSection({
   title,
-  name,
   website,
   icon,
   children,

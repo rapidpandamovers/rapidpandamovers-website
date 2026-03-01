@@ -89,7 +89,7 @@ export default async function ServiceSection({ location, variant = 'preview', hi
               >
                 <div className="bg-white rounded-b-4xl p-6 flex-1">
                   <div className="flex justify-center mb-4">
-                    <ServiceIllustration service={service.slug} className="w-24 h-24" />
+                    <ServiceIllustration service={service.slug} className="w-24 h-24" label={service.name} />
                   </div>
                   <H3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-orange-700 transition-colors text-center">
                     {getDisplayName(service.name)}
@@ -148,7 +148,7 @@ export default async function ServiceSection({ location, variant = 'preview', hi
               >
                 <div className="bg-white rounded-b-4xl p-6 flex-1">
                   <div className="flex justify-center mb-4">
-                    <ServiceIllustration service={service.slug} className="w-24 h-24" />
+                    <ServiceIllustration service={service.slug} className="w-24 h-24" label={service.name} />
                   </div>
                   <H3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-orange-700 transition-colors text-center">
                     {getDisplayName(service.name)}
@@ -193,7 +193,7 @@ export default async function ServiceSection({ location, variant = 'preview', hi
               >
                 <div className="bg-white rounded-b-4xl p-6 flex-1">
                   <div className="flex justify-center mb-4">
-                    <ServiceIllustration service={service.slug} className="w-24 h-24" />
+                    <ServiceIllustration service={service.slug} className="w-24 h-24" label={service.name} />
                   </div>
                   <H3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-orange-700 transition-colors text-center">
                     {getDisplayName(service.name)}
@@ -244,7 +244,7 @@ export default async function ServiceSection({ location, variant = 'preview', hi
             >
               <div className="bg-white rounded-b-4xl p-6 flex-1">
                 <div className="flex justify-center mb-4">
-                  <ServiceIllustration service={service.slug} className="w-24 h-24" />
+                  <ServiceIllustration service={service.slug} className="w-24 h-24" label={service.name} />
                 </div>
                 <H3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-orange-700 transition-colors text-center">
                   {service.name}

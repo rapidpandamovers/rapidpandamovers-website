@@ -1,5 +1,5 @@
 import { Link } from '@/i18n/routing'
-import { CheckCircle } from 'lucide-react'
+import { CheckCircle, ArrowRight } from 'lucide-react'
 import { ImageCollage } from './ImageCollage'
 import { getMessages, getLocale } from 'next-intl/server'
 import { getTranslatedSlug } from '@/i18n/slug-map'
@@ -56,9 +56,7 @@ export default async function AboutSection({ className = "", variant = "default"
                   </p>
                   <Link href={`/${getTranslatedSlug('why-choose-us', locale)}`} className="inline-flex items-center text-orange-700 hover:text-orange-800 font-medium">
                     {ui.about.whyChoose}
-                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
+                    <ArrowRight className="w-4 h-4 ml-1" />
                   </Link>
                 </div>
               )}
@@ -88,15 +86,14 @@ export default async function AboutSection({ className = "", variant = "default"
                 className="inline-flex items-center bg-orange-700 hover:bg-orange-800 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
               >
                 {ui.about.learnMoreAboutUs}
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
 
             <div className="flex justify-center relative">
                 <ImageCollage
                   images={['/images/hero/1', '/images/hero/2', '/images/hero/3']}
+                  containerLabel={ui.images?.aboutCollageLabel}
                   alt={{
                     slot1: ui.images?.aboutCollage?.slot1 ?? "Rapid Panda Movers team loading furniture into moving truck",
                     slot2: ui.images?.aboutCollage?.slot2 ?? "Professional movers carefully wrapping items for safe transport",

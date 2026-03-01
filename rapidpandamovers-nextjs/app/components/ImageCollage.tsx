@@ -72,6 +72,9 @@ type Props = {
 
   /** Variant layout - different arrangements of the three slots */
   variant?: 'default' | 'variant1' | 'variant2' | 'variant3' | 'variant4';
+
+  /** Accessible label for the collage container SVG */
+  containerLabel?: string;
 };
 
 /**
@@ -363,6 +366,7 @@ export function ImageCollage({
   slots,
   dots,
   variant = 'default',
+  containerLabel,
 }: Props) {
   // Viewport-based responsive image resolution when `images` prop is provided
   const [containerWidth, setContainerWidth] = React.useState(960);
@@ -523,7 +527,7 @@ export function ImageCollage({
       viewBox={`0 0 ${VB_W} ${VB_H}`}
       width="100%"
       role="img"
-      aria-label="Collage template"
+      aria-label={containerLabel || "Photo collage"}
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >

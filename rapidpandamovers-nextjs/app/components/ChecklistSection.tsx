@@ -2,7 +2,7 @@
 
 import { useState, useRef } from 'react'
 import { Link } from '@/i18n/routing'
-import { CheckCircle, Clock, AlertCircle, Info, Printer, ClipboardList, ArrowRight, Calendar, Download } from 'lucide-react'
+import { Clock, AlertCircle, Info, Printer, ArrowRight, Download } from 'lucide-react'
 import { useMessages } from 'next-intl'
 import { resolveIcon } from '@/lib/icons'
 import { H1, H2, H3 } from '@/app/components/Heading'
@@ -29,8 +29,6 @@ interface ChecklistSectionProps {
 }
 
 export default function ChecklistSection({
-  title = 'Moving Checklist',
-  subtitle,
   categories = [],
   showPrintButton = false,
   variant = 'preview',

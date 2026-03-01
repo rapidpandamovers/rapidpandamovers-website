@@ -30,10 +30,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string; page: string }>
+  params: Promise<{ slug: string; page: string; locale: string }>
 }): Promise<Metadata> {
-  const { slug, page } = await params
-  const locale = await getLocale() as Locale
+  const { slug, page, locale: localeParam } = await params
+  const locale = localeParam as Locale
   const canonicalSlug = getCanonicalSlug(slug, locale)
   const service = getServiceBySlug(canonicalSlug)
   if (!service) {

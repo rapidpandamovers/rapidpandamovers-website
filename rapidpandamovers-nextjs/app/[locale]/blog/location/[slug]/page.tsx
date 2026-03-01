@@ -16,10 +16,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string; locale: string }>
 }): Promise<Metadata> {
-  const { slug } = await params
-  const locale = await getLocale() as Locale
+  const { slug, locale: localeParam } = await params
+  const locale = localeParam as Locale
   const name = getLocationNameBySlug(slug)
   if (!name) {
     return { title: 'Location Not Found' }

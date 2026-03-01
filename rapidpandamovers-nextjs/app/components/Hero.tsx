@@ -48,6 +48,7 @@ export default async function Hero({
             <ImageCollage
               images={images}
               variant={collageVariant}
+              containerLabel={ui.images?.heroCollageLabel}
               alt={{
                 slot1: ui.images?.heroCollage?.slot1 ?? "Professional movers carefully wrapping items for safe transport",
                 slot2: ui.images?.heroCollage?.slot2 ?? "Rapid Panda Movers providing service to a customer",

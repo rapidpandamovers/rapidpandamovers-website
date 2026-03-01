@@ -24,10 +24,10 @@ export async function generateStaticParams() {
   })
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ page: string }> }) {
-  const { page } = await params
+export async function generateMetadata({ params }: { params: Promise<{ page: string; locale: string }> }) {
+  const { page, locale: localeParam } = await params
   const pageNum = parseInt(page, 10)
-  const locale = await getLocale() as Locale
+  const locale = localeParam as Locale
 
   return generatePageMetadata({
     title: `Blog - Page ${pageNum} | Rapid Panda Movers`,

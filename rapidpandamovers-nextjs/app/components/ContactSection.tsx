@@ -7,21 +7,15 @@ import { H3 } from '@/app/components/Heading'
 import TurnstileWidget, { TurnstileWidgetRef } from '@/app/components/TurnstileWidget'
 
 interface ContactSectionProps {
-  title?: string
-  description?: string
   className?: string
   showForm?: boolean
 }
 
 export default function ContactSection({
-  title: titleProp,
-  description: descriptionProp,
   className = "",
   showForm = true
 }: ContactSectionProps) {
   const { ui, content } = useMessages() as any
-  const title = titleProp ?? ui.contact.getInTouch
-  const description = descriptionProp ?? ui.contact.getInTouchDesc
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const [turnstileToken, setTurnstileToken] = useState('')

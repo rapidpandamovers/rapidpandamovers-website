@@ -6,9 +6,10 @@ import React from 'react'
 interface ServiceIllustrationProps {
   service: string;
   className?: string;
+  label?: string;
 }
 
-export default function ServiceIllustration({ service, className = "w-24 h-24" }: ServiceIllustrationProps) {
+export default function ServiceIllustration({ service, className = "w-24 h-24", label }: ServiceIllustrationProps) {
   const illustrations: Record<string, React.ReactElement> = {
     'packing-services': (
       <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
@@ -659,5 +660,9 @@ export default function ServiceIllustration({ service, className = "w-24 h-24" }
     </svg>
   );
 
-  return illustrations[service] || defaultIllustration;
+  const illustration = illustrations[service] || defaultIllustration;
+  return React.cloneElement(illustration as React.ReactElement<React.SVGProps<SVGSVGElement>>, {
+    role: 'img',
+    'aria-label': label || service,
+  });
 }

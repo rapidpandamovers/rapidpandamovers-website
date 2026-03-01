@@ -1,4 +1,4 @@
-import { CheckCircle, XCircle, DollarSign, Star } from 'lucide-react';
+import { CheckCircle, XCircle } from 'lucide-react';
 import { getMessages } from 'next-intl/server';
 import { H3 } from '@/app/components/Heading';
 
