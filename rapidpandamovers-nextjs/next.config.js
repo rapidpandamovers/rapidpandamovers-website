@@ -22,6 +22,18 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 60 * 60 * 24 * 365, // 1 year cache
   },
+  async rewrites() {
+    return [
+      {
+        source: '/api/script.js',
+        destination: 'https://rybbit.hosthoncho.com/api/script.js',
+      },
+      {
+        source: '/api/track',
+        destination: 'https://rybbit.hosthoncho.com/api/track',
+      },
+    ];
+  },
   async redirects() {
     return redirectsData.redirects.map(redirect => ({
       source: redirect.source,

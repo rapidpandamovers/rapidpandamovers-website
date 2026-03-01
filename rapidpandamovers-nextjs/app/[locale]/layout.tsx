@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { notFound } from 'next/navigation'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
@@ -143,6 +144,11 @@ export default async function LocaleLayout({
           </main>
           <Footer />
         </NextIntlClientProvider>
+        <Script
+          src="/api/script.js"
+          data-site-id="306cc99bf49e"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   )
