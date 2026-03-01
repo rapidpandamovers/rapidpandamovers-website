@@ -258,7 +258,7 @@
   "location": {
     "neighborhoodsTitle": "Neighborhoods We Serve in {city}",
     "neighborhoodsSubtitle": "We provide moving services throughout all neighborhoods in {city}",
-    "defaultTitle": "Locations We Serve",
+    "defaultTitle": "Miami-Dade Locations We Serve",
     "defaultSubtitle": "Serving {count}+ cities and neighborhoods across Miami-Dade County",
     "viewAll": "View All Locations",
     "moreAreas": "Proudly serving every corner of Miami-Dade County & more!",
@@ -275,7 +275,7 @@
     "populationLabel": "Population"
   },
   "quote": {
-    "defaultTitle": "Let Us Handle the Heavy Lifting",
+    "defaultTitle": "Get a Free Moving Quote Today",
     "defaultSubtitle": "Skip the DIY stress. Get a free quote from Rapid Panda Movers and discover how affordable full-service moving can be."
   },
   "promise": {
@@ -302,7 +302,7 @@
     "defaultDescription": "Subscribe to our newsletter for the latest moving tips, guides, and special offers from Rapid Panda Movers."
   },
   "media": {
-    "defaultTitle": "See Us In Action",
+    "defaultTitle": "Miami Movers in Action",
     "defaultDescription": "Watch our professional team handle moves with care and precision",
     "defaultItems": [
       { "title": "Brickell Moving", "description": "Downtown Miami relocations" },
@@ -336,9 +336,9 @@
   },
   "images": {
     "heroCollage": {
-      "slot1": "Professional movers carefully wrapping items for safe transport",
-      "slot2": "Rapid Panda Movers providing service to a customer",
-      "slot3": "Rapid Panda Movers team standing next to a moving truck"
+      "slot1": "Professional Miami movers carefully wrapping items for safe transport",
+      "slot2": "Rapid Panda Movers providing moving service to a Miami customer",
+      "slot3": "Rapid Panda Movers team standing next to a moving truck in Miami"
     },
     "aboutCollage": {
       "slot1": "Rapid Panda Movers team loading furniture into moving truck",
@@ -402,7 +402,7 @@
   },
   "services": {
     "breadcrumb": "Services",
-    "defaultTitle": "Our Moving Services",
+    "defaultTitle": "Miami Moving Services",
     "defaultSubtitle": "Professional moving services tailored to meet your specific needs, timeline, and budget.",
     "showingIn": "Showing services available in",
     "viewAllLocations": "View All Locations →",
@@ -476,6 +476,8 @@
     "learnMore": "Learn more",
     "haveMoreQuestions": "Have more questions?",
     "haveMoreQuestionsDesc": "Our team is ready to help with your move.",
+    "or": "or",
+    "sendUsMessage": "Send Us a Message",
     "viewAllFaqs": "View All FAQs"
   },
   "statistics": {

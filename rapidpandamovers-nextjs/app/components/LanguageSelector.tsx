@@ -42,8 +42,8 @@ export function LanguageSelectorHeader() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </button>
-      <div className="absolute right-0 mt-2 w-44 bg-orange-700 rounded-4xl overflow-hidden border-2 border-orange-700 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-        <div className="bg-white rounded-b-4xl py-2">
+      <div className="absolute right-0 mt-2 w-44 bg-white rounded-4xl overflow-hidden border-2 border-orange-700 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+        <div className="py-2">
           {locales.map((loc) => (
             <button
               key={loc}

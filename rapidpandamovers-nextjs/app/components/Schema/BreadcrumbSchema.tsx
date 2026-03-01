@@ -18,7 +18,7 @@ export default function BreadcrumbSchema({
   items,
   includeHome = true,
 }: BreadcrumbSchemaProps) {
-  if (!items || items.length === 0) {
+  if (!items || (items.length === 0 && !includeHome)) {
     return null
   }
 

@@ -7,8 +7,8 @@ import { getaiGrotesk } from '@/app/fonts'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 import { SITE_CONFIG, getSiteUrl } from '@/lib/metadata'
+import { generateMovingCompanySchema } from '@/lib/schema'
 import { defaultLocale, type Locale } from '@/i18n/config'
-import services from '@/data/services.json'
 import reviewsData from '@/data/reviews.json'
 
 export async function generateMetadata({
@@ -37,7 +37,6 @@ export async function generateMetadata({
       template: site.titleTemplate,
     },
     description: site.description,
-    keywords: site.keywords,
     authors: [{ name: SITE_CONFIG.name }],
     creator: SITE_CONFIG.name,
     publisher: SITE_CONFIG.name,
@@ -76,7 +75,7 @@ export async function generateMetadata({
           url: SITE_CONFIG.defaultImage,
           width: 1200,
           height: 630,
-          alt: 'Rapid Panda Movers logo - black and white panda icon',
+          alt: 'Rapid Panda Movers - trusted family-owned moving company serving Miami-Dade County, Florida',
         },
       ],
     },
@@ -96,79 +95,6 @@ export async function generateMetadata({
         'max-image-preview': 'large',
         'max-snippet': -1,
       },
-    },
-  }
-}
-
-// Structured data for LocalBusiness
-function getStructuredData(locale: string) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'MovingCompany',
-    '@id': `${SITE_CONFIG.domain}/#organization`,
-    name: SITE_CONFIG.name,
-    image: `${SITE_CONFIG.domain}/images/rapidpandamovers-logo.png`,
-    logo: `${SITE_CONFIG.domain}/images/rapidpandamovers-logo.png`,
-    description: 'Professional moving services in Miami. Local and long-distance moving, packing, storage solutions.',
-    url: SITE_CONFIG.domain,
-    telephone: SITE_CONFIG.phone,
-    email: SITE_CONFIG.email,
-    inLanguage: locale === 'es' ? 'es' : 'en',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: SITE_CONFIG.address.street,
-      addressLocality: SITE_CONFIG.address.city,
-      addressRegion: SITE_CONFIG.address.state,
-      postalCode: SITE_CONFIG.address.zip,
-      addressCountry: 'US',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 25.7617,
-      longitude: -80.1918,
-    },
-    areaServed: [
-      {
-        '@type': 'City',
-        name: 'Miami',
-      },
-      {
-        '@type': 'AdministrativeArea',
-        name: 'Miami-Dade County',
-      },
-    ],
-    priceRange: '$$',
-    openingHoursSpecification: [
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-        opens: '08:00',
-        closes: '20:00',
-      },
-    ],
-    sameAs: [
-      'https://www.facebook.com/rapidpandamovers',
-      'https://www.instagram.com/rapidpandamovers',
-      'https://www.yelp.com/biz/rapid-panda-movers-miami',
-    ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: String(reviewsData.stats.averageRating),
-      reviewCount: String(reviewsData.stats.totalReviews),
-      bestRating: '5',
-      worstRating: '1',
-    },
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: 'Moving Services',
-      itemListElement: services.map((s: any) => ({
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: s.name,
-          description: s.description.slice(0, 160),
-        },
-      })),
     },
   }
 }
@@ -193,7 +119,7 @@ export default async function LocaleLayout({
   // Pages that need additional content keys use nested NextIntlClientProvider.
   const { meta, content, ...clientMessages } = messages as Record<string, any>
   clientMessages.content = { site: content.site }
-  const structuredData = getStructuredData(locale)
+  const structuredData = generateMovingCompanySchema(locale)
 
   return (
     <html lang={locale} className={`${getaiGrotesk.variable}`}>
@@ -207,9 +133,12 @@ export default async function LocaleLayout({
         />
       </head>
       <body className="bg-white text-slate-900 font-sans antialiased min-h-screen flex flex-col">
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:bg-orange-700 focus:text-white focus:px-4 focus:py-2 focus:top-2 focus:left-2 focus:rounded">
+          Skip to content
+        </a>
         <NextIntlClientProvider messages={clientMessages}>
           <Header />
-          <main className="flex-grow">
+          <main id="main-content" className="flex-grow">
             {children}
           </main>
           <Footer />

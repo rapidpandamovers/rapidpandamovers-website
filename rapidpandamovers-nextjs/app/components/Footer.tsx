@@ -7,7 +7,6 @@ import { getMessages, getLocale } from 'next-intl/server'
 import { getTranslatedSlug } from '@/i18n/slug-map'
 import type { Locale } from '@/i18n/config'
 import { LanguageSelectorFooter } from './LanguageSelector'
-import { H3 } from '@/app/components/Heading'
 import FooterDrawers from './FooterDrawersLoader'
 
 function PhoneIcon({ className }: { className?: string }) {
@@ -130,7 +129,7 @@ export default async function Footer() {
 
           {/* Contact Info — always visible */}
           <div className="pt-6">
-            <H3 className="text-base font-bold mb-4 text-white">{ui.contact.contactUs}</H3>
+            <p className="font-display text-base font-bold mb-4 text-white">{ui.contact.contactUs}</p>
             <div className="space-y-3 text-sm">
               <a href={`tel:${phoneTel}`} aria-label={ui.buttons.callAriaLabel} className="flex items-start space-x-3 text-gray-400 hover:text-orange-700 transition-colors">
                 <PhoneIcon className="w-4 h-4 text-orange-700 flex-shrink-0 mt-0.5" />
@@ -142,10 +141,10 @@ export default async function Footer() {
               </a>
               <div className="flex items-start space-x-3">
                 <MapPinIcon className="w-4 h-4 text-orange-700 flex-shrink-0 mt-0.5" />
-                <div className="text-gray-400">
+                <address className="text-gray-400 not-italic">
                   <p>{addressLine1}</p>
                   <p>{addressLine2}</p>
-                </div>
+                </address>
               </div>
               <div className="flex items-start space-x-3">
                 <ClockIcon className="w-4 h-4 text-orange-700 flex-shrink-0 mt-0.5" />
@@ -178,7 +177,7 @@ export default async function Footer() {
         <div className="hidden md:grid md:grid-cols-4 gap-8 mb-12">
           {/* Moving Services */}
           <div>
-            <H3 className="text-lg font-bold mb-4 text-white">{nav.footer.sections.services.title}</H3>
+            <p className="font-display text-lg font-bold mb-4 text-white">{nav.footer.sections.services.title}</p>
             <ul className="space-y-2 text-sm">
               {services.map((service) => (
                 <li key={service.slug}>
@@ -192,7 +191,7 @@ export default async function Footer() {
 
           {/* Moving Locations */}
           <div>
-            <H3 className="text-lg font-bold mb-4 text-white">{nav.footer.sections.locations.title}</H3>
+            <p className="font-display text-lg font-bold mb-4 text-white">{nav.footer.sections.locations.title}</p>
             <ul className="space-y-2 text-sm">
               {cities.map((city) => (
                 <li key={city.slug}>
@@ -206,7 +205,7 @@ export default async function Footer() {
 
           {/* Resources & Company */}
           <div>
-            <H3 className="text-lg font-bold mb-4 text-white">{nav.footer.sections.resources.title}</H3>
+            <p className="font-display text-lg font-bold mb-4 text-white">{nav.footer.sections.resources.title}</p>
             <ul className="space-y-2 text-sm mb-8">
               {nav.footer.sections.resources.items.map((item: any) => (
                 <li key={item.href}>
@@ -215,7 +214,7 @@ export default async function Footer() {
               ))}
             </ul>
 
-            <H3 className="text-lg font-bold mb-4 text-white">{nav.footer.sections.company.title}</H3>
+            <p className="font-display text-lg font-bold mb-4 text-white">{nav.footer.sections.company.title}</p>
             <ul className="space-y-2 text-sm mb-8">
               {nav.footer.sections.company.items.map((item: any) => (
                 <li key={item.href}>
@@ -224,7 +223,7 @@ export default async function Footer() {
               ))}
             </ul>
 
-            <H3 className="text-lg font-bold mb-4 text-white">{nav.footer.sections.compare.title}</H3>
+            <p className="font-display text-lg font-bold mb-4 text-white">{nav.footer.sections.compare.title}</p>
             <ul className="space-y-2 text-sm mb-8">
               <li><Link href={`/${getTranslatedSlug('compare', locale)}`} className="text-gray-400 hover:text-orange-700 transition-colors">{nav.footer.sections.compare.allLabel}</Link></li>
               {comparisons.comparisons.map((comparison) => (
@@ -236,7 +235,7 @@ export default async function Footer() {
               ))}
             </ul>
 
-            <H3 className="text-lg font-bold mb-4 text-white">{nav.footer.sections.alternatives.title}</H3>
+            <p className="font-display text-lg font-bold mb-4 text-white">{nav.footer.sections.alternatives.title}</p>
             <ul className="space-y-2 text-sm">
               <li><Link href={`/${getTranslatedSlug('alternatives', locale)}`} className="text-gray-400 hover:text-orange-700 transition-colors">{nav.footer.sections.alternatives.allLabel}</Link></li>
               {alternatives.alternatives.map((alt) => (
@@ -251,7 +250,7 @@ export default async function Footer() {
 
           {/* Contact Info */}
           <div>
-            <H3 className="text-lg font-bold mb-4 text-white">{ui.contact.contactUs}</H3>
+            <p className="font-display text-lg font-bold mb-4 text-white">{ui.contact.contactUs}</p>
             <div className="space-y-4 text-sm">
               <a href={`tel:${phoneTel}`} aria-label={ui.buttons.callAriaLabel} className="flex items-start space-x-3 text-gray-400 hover:text-orange-700 transition-colors">
                 <PhoneIcon className="w-5 h-5 text-orange-700 flex-shrink-0 mt-0.5" />
@@ -265,10 +264,10 @@ export default async function Footer() {
               </a>
               <div className="flex items-start space-x-3">
                 <MapPinIcon className="w-5 h-5 text-orange-700 flex-shrink-0 mt-0.5" />
-                <div className="text-gray-400">
+                <address className="text-gray-400 not-italic">
                   <p>{addressLine1}</p>
                   <p>{addressLine2}</p>
-                </div>
+                </address>
               </div>
               <div className="flex items-start space-x-3">
                 <ClockIcon className="w-5 h-5 text-orange-700 flex-shrink-0 mt-0.5" />

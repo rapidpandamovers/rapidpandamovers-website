@@ -1,4 +1,5 @@
 import { Link } from '@/i18n/routing'
+import { ArrowRight, Phone } from 'lucide-react'
 import { getMessages, getLocale } from 'next-intl/server'
 import { getTranslatedSlug } from '@/i18n/slug-map'
 import type { Locale } from '@/i18n/config'
@@ -41,19 +42,21 @@ export default async function QuoteSection({
         <p className="text-xl text-white mb-8 max-w-4xl mx-auto">
           {subtitle}
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch">
           <a
             href={`tel:${phone}`}
             aria-label={ui.buttons.callAriaLabel}
-            className="bg-white text-orange-700 font-bold py-4 px-8 rounded-lg hover:bg-orange-50 transition-colors text-center border-2 border-transparent"
+            className="flex items-center justify-center gap-2 bg-white text-orange-700 font-bold py-3 px-8 rounded-lg hover:bg-orange-50 transition-colors border-2 border-transparent sm:flex-1 sm:max-w-xs"
           >
+            <Phone className="w-4 h-4" />
             {ui.buttons.callPrefix} {phoneDisplay}
           </a>
           <Link
             href={buttonHref}
-            className="border-2 border-white text-white font-bold py-4 px-8 rounded-lg hover:bg-orange-800 transition-colors text-center"
+            className="flex items-center justify-center gap-2 border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-orange-800 transition-colors sm:flex-1 sm:max-w-xs"
           >
             {buttonText}
+            <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </div>

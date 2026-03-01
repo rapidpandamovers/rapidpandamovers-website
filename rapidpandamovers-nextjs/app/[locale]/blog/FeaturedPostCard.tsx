@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { Calendar, Tag, ImageOff } from 'lucide-react'
 import BlogPostLink from './BlogPostLink'
 import { useMessages } from 'next-intl'
-import { H2 } from '@/app/components/Heading'
+import { H3 } from '@/app/components/Heading'
 
 interface FeaturedPostCardProps {
   post: {
@@ -57,11 +57,11 @@ export default function FeaturedPostCard({ post }: FeaturedPostCardProps) {
           <span className="text-sm">{new Date(post.date + 'T00:00:00').toLocaleDateString()}</span>
         </div>
 
-        <H2 className="text-3xl md:text-4xl font-bold mb-4">
+        <H3 className="text-3xl md:text-4xl font-bold mb-4">
           <BlogPostLink href={`/blog/${post.slug}`} className="hover:text-white/80 transition-colors">
             {post.title}
           </BlogPostLink>
-        </H2>
+        </H3>
 
         <p className="text-xl text-white/80 mb-6 leading-relaxed">
           {post.excerpt}

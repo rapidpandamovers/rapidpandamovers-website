@@ -290,7 +290,7 @@ export default async function BlogSection({
 
           {/* Blog Posts Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {sortedBlog.slice(showFeatured ? 1 : 0, showFeatured ? maxPosts + 1 : maxPosts).map((post) => (
+            {sortedBlog.slice(showFeatured ? 1 : 0, maxPosts).map((post) => (
               <BlogPostCard key={post.id} post={post} showExcerpt={showExcerpts} showCategoryPill={showCategoryPill} />
             ))}
           </div>
@@ -307,7 +307,7 @@ export default async function BlogSection({
             <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
               {title || ui?.blog?.fallbackTitle || 'Moving Tips & Insights'}
             </H2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               {subtitle || ui?.blog?.fallbackSubtitle || 'Expert advice and practical tips to make your move smooth and affordable'}
             </p>
           </div>
@@ -336,7 +336,7 @@ export default async function BlogSection({
         
         {/* Blog Posts Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {sortedBlog.slice(showFeatured ? 1 : 0, showFeatured ? maxPosts + 1 : maxPosts).map((post) => (
+          {sortedBlog.slice(showFeatured ? 1 : 0, maxPosts).map((post) => (
             <BlogPostCard key={post.id} post={post} showExcerpt={showExcerpts} showCategoryPill={showCategoryPill} />
           ))}
 

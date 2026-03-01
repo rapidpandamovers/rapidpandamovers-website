@@ -8,13 +8,14 @@ import LocationSection from '@/app/components/LocationSection'
 import AboutSection from '@/app/components/AboutSection'
 import BlogSection from '@/app/components/BlogSection'
 import QuoteSection from '@/app/components/QuoteSection'
-import WebSiteSchema from '@/app/components/Schema/WebSiteSchema'
-import FAQSchema from '@/app/components/Schema/FAQSchema'
-import VideoSchema from '@/app/components/Schema/VideoSchema'
 import { getMessages, getLocale } from 'next-intl/server'
-import { generatePageMetadata } from '@/lib/metadata'
+import { generatePageMetadata, getSiteUrl, SITE_CONFIG } from '@/lib/metadata'
 import type { Locale } from '@/i18n/config'
+import { latestReviews } from '@/lib/utils'
+import { generateWebSiteSchema, generateWebPageSchema, generateNavigationSchema, generateFAQSchema, generateVideoSchema, generateIndividualReviewsSchema, generateHowToSchema } from '@/lib/schema'
 import reviewsData from '@/data/reviews.json'
+import navEn from '@/data/navigation.json'
+import navEs from '@/data/es/navigation.json'
 
 // Below-fold client components — lazy loaded
 const MediaSection = dynamic(() => import('@/app/components/MediaSection'))
@@ -30,40 +31,94 @@ function interpolateReviewStats(text: string): string {
 export async function generateMetadata() {
   const locale = await getLocale() as Locale
   const { meta } = (await getMessages()) as any
-  return generatePageMetadata({
+  const ogSubtitle = `Rated ${reviewsData.stats.averageRating}/5 by ${reviewsData.stats.totalReviews}+ customers`
+  const siteUrl = getSiteUrl()
+  const pageMetadata = await generatePageMetadata({
     title: meta.home.title,
     description: interpolateReviewStats(meta.home.description),
     path: meta.home.path,
     locale,
+    image: `${siteUrl}/api/og?title=${encodeURIComponent(meta.home.title)}&subtitle=${encodeURIComponent(ogSubtitle)}`,
   })
+  // Use absolute title to ensure brand suffix is always present.
+  // The layout's title.template doesn't reliably apply to the home page.
+  return {
+    ...pageMetadata,
+    title: { absolute: `${meta.home.title} | ${SITE_CONFIG.name}` },
+  }
 }
 
 export default async function Home() {
   const locale = await getLocale() as Locale
-  const { content, ui } = (await getMessages()) as any
+  const { content, meta, ui } = (await getMessages()) as any
+
+  // Use same first 5 FAQs for both schema and display so Google rich snippets match the page
+  const faqs = (content.faq.questions as any[]).slice(0, 5)
+
+  // Build single @graph JSON-LD combining all page-level schemas
+  const nav = locale === 'es' ? navEs : navEn
+  const videos = content.home.mediaSection.videos
+
+  const homeReviews = latestReviews(reviewsData.reviews, 3)
+
+  const webSite = generateWebSiteSchema(locale)
+  const webPage = generateWebPageSchema({
+    name: meta.home.title,
+    description: interpolateReviewStats(meta.home.description),
+    path: locale === 'es' ? '/es' : '/',
+    locale,
+    datePublished: '2021-08-01',
+    dateModified: process.env.BUILD_DATE || '2026-03-01',
+  })
+  const navigation = generateNavigationSchema(nav as any, locale)
+  const faq = generateFAQSchema(faqs, locale, '2026-02-15')
+  const videoSchemas = generateVideoSchema(videos, locale)
+  const individualReviews = generateIndividualReviewsSchema(homeReviews)
+  const howTo = generateHowToSchema(
+    content.defaults.process.title,
+    content.defaults.process.subtitle,
+    content.defaults.process.steps,
+    locale,
+  )
+
+  // Strip individual @context keys and merge into a single @graph
+  const stripContext = (obj: any) => {
+    const { '@context': _, ...rest } = obj
+    return rest
+  }
+  const graphItems = [
+    stripContext(webSite),
+    stripContext(webPage),
+    // Navigation schema already has its own @graph array of SiteNavigationElement items
+    ...((navigation as any)['@graph'] || []),
+    stripContext(faq),
+    stripContext(howTo),
+    ...videoSchemas.map(stripContext),
+    ...individualReviews,
+  ]
+  const combinedSchema = {
+    '@context': 'https://schema.org',
+    '@graph': graphItems,
+  }
 
   return (
     <>
-      <WebSiteSchema locale={locale} />
-      <FAQSchema faqs={content.faq.questions} locale={locale} />
-      <VideoSchema videos={[
-        { name: 'Professional movers wrapping furniture', description: 'Rapid Panda Movers team carefully wrapping and protecting furniture before a local move in Miami.', contentUrl: '/videos/1.mp4', thumbnailUrl: '/images/video-thumb-1.webp', uploadDate: '2026-02-15', duration: 'PT10S' },
-        { name: 'Rapid Panda Movers truck in Miami', description: 'Rapid Panda Movers branded truck ready for a residential move in the Miami area.', contentUrl: '/videos/2.mp4', thumbnailUrl: '/images/video-thumb-2.webp', uploadDate: '2026-02-15', duration: 'PT10S' },
-        { name: 'Moving team carrying items into new home', description: 'Professional moving crew transporting belongings into a customer\'s new home in South Florida.', contentUrl: '/videos/3.mp4', thumbnailUrl: '/images/video-thumb-3.webp', uploadDate: '2026-02-15', duration: 'PT5S' },
-        { name: 'Movers organizing boxes in home', description: 'Rapid Panda Movers team organizing and placing boxes in a customer\'s home during a local move.', contentUrl: '/videos/4.mp4', thumbnailUrl: '/images/video-thumb-4.webp', uploadDate: '2026-02-15', duration: 'PT5S' },
-      ]} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }}
+      />
       <Hero
         title={content.home.hero.title}
         description={content.home.hero.description}
         cta={content.home.hero.cta}
       />
       <RatingSection />
-      <div className="cv-auto">
+      <div className="cv-auto" id="videos">
         <MediaSection
           showArrows={false}
           showDots={false}
           enableModal={false}
-          description=""
+          description={content.home.mediaSection.description}
           items={[
             { type: 'video', src: '/videos/1.mp4', poster: '/images/video-thumb-1.webp', title: ui.media?.videoTitles?.[0] ?? 'Professional movers wrapping furniture' },
             { type: 'video', src: '/videos/2.mp4', poster: '/images/video-thumb-2.webp', title: ui.media?.videoTitles?.[1] ?? 'Rapid Panda Movers truck in Miami' },
@@ -72,46 +127,58 @@ export default async function Home() {
           ]}
         />
       </div>
-      <div className="cv-auto">
+      <div className="cv-auto" id="reviews">
         <ReviewSection
           variant="left"
           title={content.home.reviewSection.title}
           showPagination={false}
           showPlatformFilter={false}
           limit={3}
-          reviews={reviewsData.reviews.slice(0, 3)}
+          reviews={homeReviews}
         />
       </div>
-      <Suspense fallback={<div className="h-96" />}>
-        <ServiceSection variant="left" />
-      </Suspense>
-      <Suspense fallback={<div className="h-96" />}>
-        <LocationSection variant="left" />
-      </Suspense>
-      <div className="cv-auto">
-        <FAQSection variant="compact" faqs={content.faq.questions} />
+      <div className="cv-auto" id="services">
+        <Suspense fallback={null}>
+          <ServiceSection variant="left" />
+        </Suspense>
       </div>
-      <Suspense fallback={<div className="h-96" />}>
-        <BlogSection
-          variant="left"
-          title={content.home.blogSection.title}
-          showFeatured={false}
-          showCategories={false}
-          showExcerpts={false}
-          showCategoryPill={false}
-          showViewMore
-          viewMoreButtonText={content.home.blogSection.viewMoreButtonText}
-          viewMoreLink="/blog"
-          maxPosts={3}
-        />
-      </Suspense>
-      <Suspense fallback={<div className="h-96" />}>
-        <WhySection variant="left" />
-      </Suspense>
-      <Suspense fallback={<div className="h-96" />}>
-        <AboutSection />
-      </Suspense>
-      <QuoteSection />
+      <div className="cv-auto" id="locations">
+        <Suspense fallback={null}>
+          <LocationSection variant="left" />
+        </Suspense>
+      </div>
+      <div className="cv-auto" id="faq">
+        <FAQSection variant="compact" faqs={faqs} compactCount={5} />
+      </div>
+      <div className="cv-auto" id="blog">
+        <Suspense fallback={null}>
+          <BlogSection
+            variant="left"
+            title={content.home.blogSection.title}
+            showFeatured={false}
+            showCategories={false}
+            showExcerpts={true}
+            showCategoryPill={false}
+            showViewMore
+            viewMoreButtonText={content.home.blogSection.viewMoreButtonText}
+            viewMoreLink="/blog"
+            maxPosts={3}
+          />
+        </Suspense>
+      </div>
+      <div className="cv-auto" id="why-choose-us">
+        <Suspense fallback={null}>
+          <WhySection variant="left" />
+        </Suspense>
+      </div>
+      <div className="cv-auto" id="about">
+        <Suspense fallback={null}>
+          <AboutSection />
+        </Suspense>
+      </div>
+      <div id="quote">
+        <QuoteSection />
+      </div>
     </>
   )
 }

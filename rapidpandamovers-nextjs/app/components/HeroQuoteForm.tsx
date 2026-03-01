@@ -8,6 +8,7 @@ function PhoneIcon({ className }: { className?: string }) {
     </svg>
   )
 }
+import { ArrowRight } from 'lucide-react'
 import { Link } from '@/i18n/routing'
 import { getTranslatedSlug } from '@/i18n/slug-map'
 import type { Locale } from '@/i18n/config'
@@ -51,9 +52,10 @@ export default function HeroQuoteForm({
         </a>
         <Link
           href={`/${quoteSlug}`}
-          className="block w-full bg-orange-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-orange-800 transition-colors text-center"
+          className="flex items-center justify-center gap-2 w-full bg-orange-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-orange-800 transition-colors"
         >
           {buttonText}
+          <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
 
@@ -78,9 +80,10 @@ export default function HeroQuoteForm({
         </div>
         <Link
           href={quoteUrl}
-          className="block w-full bg-orange-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-orange-800 transition-colors text-center"
+          className="flex items-center justify-center gap-2 w-full bg-orange-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-orange-800 transition-colors"
         >
           {buttonText}
+          <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
     </>

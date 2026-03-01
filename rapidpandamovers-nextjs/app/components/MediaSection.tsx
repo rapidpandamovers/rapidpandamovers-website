@@ -279,6 +279,7 @@ export default function MediaSection({
                                 src={`/videos/captions/${match[1]}-${locale}.vtt`}
                                 srcLang={locale}
                                 label={locale === 'es' ? 'Español' : 'English'}
+                                default
                               />
                             )
                           })()}
@@ -336,7 +337,7 @@ export default function MediaSection({
                         {/* Image/Thumbnail */}
                         <Image
                           src={item.type === 'video' ? (item.thumbnail || getYouTubeThumbnail(item.src)) : item.src}
-                          alt={item.title || `Media ${index + 1}`}
+                          alt={item.title || item.description || 'Media'}
                           fill
                           className="object-cover group-hover:scale-105 transition-transform duration-300"
                         />

@@ -8,7 +8,7 @@ import BlogPostLink from './BlogPostLink'
 import { useMessages, useLocale } from 'next-intl'
 import { getTranslatedSlug } from '@/i18n/slug-map'
 import type { Locale } from '@/i18n/config'
-import { H2 } from '@/app/components/Heading'
+import { H3 } from '@/app/components/Heading'
 
 const EDITORIAL_CATEGORIES = ['Fun Facts', 'Home & Living', 'Lifestyle', 'Location Guide', 'Moving Tips']
 
@@ -90,11 +90,11 @@ export default function BlogPostCard({ post, showExcerpt = true, showCategoryPil
           )
         })()}
 
-        <H2 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-orange-700 transition-colors">
+        <H3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-orange-700 transition-colors">
           <BlogPostLink href={`/blog/${post.slug}`}>
             {post.title}
           </BlogPostLink>
-        </H2>
+        </H3>
 
         {showExcerpt && (
           <p className="text-gray-600 mb-4 line-clamp-3 flex-1">

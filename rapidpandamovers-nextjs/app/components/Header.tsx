@@ -4,6 +4,7 @@ import { getAllActiveCities, getLocalizedServices } from '@/lib/data'
 import { getMessages, getLocale } from 'next-intl/server'
 import { getTranslatedSlug } from '@/i18n/slug-map'
 import type { Locale } from '@/i18n/config'
+import { ArrowRight } from 'lucide-react'
 import { LanguageSelectorHeader } from './LanguageSelector'
 import MobileMenu from './MobileMenuLoader'
 
@@ -42,12 +43,12 @@ export default async function Header() {
               />
             </Link>
 
-            <nav className="hidden xl:flex items-center space-x-4">
+            <nav aria-label="Main navigation" className="hidden xl:flex items-center space-x-4">
               <Link href="/" className="text-gray-700 hover:text-orange-700 transition-colors uppercase">
                 {nav.header.home.label}
               </Link>
               <div className="relative group">
-                <button className="text-gray-700 hover:text-orange-700 transition-colors flex items-center uppercase">
+                <button className="text-gray-700 hover:text-orange-700 transition-colors flex items-center uppercase" aria-haspopup="true" aria-expanded="false">
                   {nav.header.services.label}
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -70,7 +71,7 @@ export default async function Header() {
                 </div>
               </div>
               <div className="relative group">
-                <button className="text-gray-700 hover:text-orange-700 transition-colors flex items-center uppercase">
+                <button className="text-gray-700 hover:text-orange-700 transition-colors flex items-center uppercase" aria-haspopup="true" aria-expanded="false">
                   {nav.header.locations.label}
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -93,7 +94,7 @@ export default async function Header() {
                 </div>
               </div>
               <div className="relative group">
-                <button className="text-gray-700 hover:text-orange-700 transition-colors flex items-center uppercase">
+                <button className="text-gray-700 hover:text-orange-700 transition-colors flex items-center uppercase" aria-haspopup="true" aria-expanded="false">
                   {nav.header.compare.label}
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -115,7 +116,7 @@ export default async function Header() {
                 </div>
               </div>
               <div className="relative group">
-                <button className="text-gray-700 hover:text-orange-700 transition-colors flex items-center uppercase">
+                <button className="text-gray-700 hover:text-orange-700 transition-colors flex items-center uppercase" aria-haspopup="true" aria-expanded="false">
                   {nav.header.resources.label}
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -137,7 +138,7 @@ export default async function Header() {
                 </div>
               </div>
               <div className="relative group">
-                <button className="text-gray-700 hover:text-orange-700 transition-colors flex items-center uppercase">
+                <button className="text-gray-700 hover:text-orange-700 transition-colors flex items-center uppercase" aria-haspopup="true" aria-expanded="false">
                   {nav.header.company.label}
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -170,8 +171,9 @@ export default async function Header() {
                   <span className="text-xs text-gray-500 mt-1">{content.site.header.phoneSubtext}</span>
                 </div>
                 <div className="flex flex-col items-center">
-                  <Link href={`/${getTranslatedSlug('quote', locale)}`} className="flex items-center justify-center border border-orange-700 bg-orange-700 hover:bg-orange-800 hover:border-orange-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors w-44">
+                  <Link href={`/${getTranslatedSlug('quote', locale)}`} className="flex items-center justify-center gap-2 border border-orange-700 bg-orange-700 hover:bg-orange-800 hover:border-orange-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors w-44">
                     {nav.header.cta.quoteButton}
+                    <ArrowRight className="w-4 h-4" />
                   </Link>
                   <span className="text-xs text-gray-500 mt-1">{content.site.header.quoteSubtext}</span>
                 </div>
@@ -184,8 +186,9 @@ export default async function Header() {
                 <PhoneIcon className="w-4 h-4" />
                 <span>{phoneFormatted}</span>
               </a>
-              <Link href={`/${getTranslatedSlug('quote', locale)}`} className="hidden md:flex items-center justify-center border border-orange-700 bg-orange-700 hover:bg-orange-800 hover:border-orange-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors">
+              <Link href={`/${getTranslatedSlug('quote', locale)}`} className="hidden md:flex items-center justify-center gap-2 border border-orange-700 bg-orange-700 hover:bg-orange-800 hover:border-orange-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors">
                 {nav.header.cta.quoteButton}
+                <ArrowRight className="w-4 h-4" />
               </Link>
               <MobileMenu nav={nav} services={services} cities={cities} locale={locale} phoneTel={phoneTel} phoneFormatted={phoneFormatted} callAriaLabel={ui.buttons.callAriaLabel} />
             </div>

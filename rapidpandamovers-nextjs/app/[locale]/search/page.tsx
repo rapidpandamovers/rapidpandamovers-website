@@ -1,4 +1,5 @@
 import SearchSection from '@/app/components/SearchSection'
+import BlogSection from '@/app/components/BlogSection'
 import { getMessages, getLocale } from 'next-intl/server'
 import { generatePageMetadata } from '@/lib/metadata'
 import type { Locale } from '@/i18n/config'
@@ -29,7 +30,7 @@ export default async function SearchPage({
     <div className="min-h-screen">
       <section className="pt-20">
         <div className="container mx-auto px-4 text-center">
-          <H1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          <H1 className="text-3xl md:text-4xl font-bold text-orange-700 mb-4">
             {ui.search.findTitle}
           </H1>
           <p className="text-lg text-gray-600 max-w-xl mx-auto mb-8">
@@ -42,6 +43,13 @@ export default async function SearchPage({
         showBackground={false}
         posts={posts}
         initialQuery={q}
+      />
+
+      <BlogSection
+        showCategories={false}
+        showViewMore
+        viewMoreLink="/blog"
+        maxPosts={3}
       />
     </div>
   )

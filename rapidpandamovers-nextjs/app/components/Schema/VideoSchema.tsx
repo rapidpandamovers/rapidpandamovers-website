@@ -12,17 +12,18 @@ interface Video {
 
 interface VideoSchemaProps {
   videos: Video[]
+  locale?: string
 }
 
 /**
  * VideoObject schema component for video rich results
  */
-export default function VideoSchema({ videos }: VideoSchemaProps) {
+export default function VideoSchema({ videos, locale }: VideoSchemaProps) {
   if (!videos || videos.length === 0) {
     return null
   }
 
-  const schemas = generateVideoSchema(videos)
+  const schemas = generateVideoSchema(videos, locale)
 
   return (
     <>

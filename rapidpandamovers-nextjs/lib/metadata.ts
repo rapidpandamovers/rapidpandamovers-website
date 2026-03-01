@@ -44,6 +44,14 @@ function interpolate(template: string, vars: Record<string, string>): string {
   )
 }
 
+/**
+ * Append brand name to title if not already present
+ */
+function brandedTitle(title: string): string {
+  if (title.includes(SITE_CONFIG.name)) return title
+  return `${title} | ${SITE_CONFIG.name}`
+}
+
 interface MetadataOptions {
   title: string
   description: string
@@ -61,14 +69,16 @@ interface MetadataOptions {
  */
 async function buildAlternates(enPath: string): Promise<Record<string, string>> {
   const siteUrl = getSiteUrl()
+  const enUrl = enPath === '/' ? siteUrl : `${siteUrl}${enPath}`
   const languages: Record<string, string> = {
-    'x-default': `${siteUrl}${enPath}`,
-    en: `${siteUrl}${enPath}`,
+    'x-default': enUrl,
+    en: enUrl,
   }
   for (const loc of locales) {
     if (loc === defaultLocale) continue
     const translatedPath = await translatePathname(enPath, 'en', loc)
-    languages[loc] = `${siteUrl}/${loc}${translatedPath}`
+    const locPath = enPath === '/' ? '' : translatedPath
+    languages[loc] = `${siteUrl}/${loc}${locPath}`
   }
   return languages
 }
@@ -78,6 +88,7 @@ async function buildAlternates(enPath: string): Promise<Record<string, string>> 
  */
 export function getCanonicalUrl(path: string): string {
   const cleanPath = path.startsWith('/') ? path : `/${path}`
+  if (cleanPath === '/') return getSiteUrl()
   return `${getSiteUrl()}${cleanPath}`
 }
 
@@ -105,6 +116,12 @@ export async function generatePageMetadata(options: MetadataOptions): Promise<Me
     : getCanonicalUrl(path)
 
   const ogLocale = locale === 'es' ? 'es_US' : 'en_US'
+  const ogTitle = brandedTitle(title)
+
+  // Use dynamic OG image unless a custom image was provided
+  const ogImage = image !== SITE_CONFIG.defaultImage
+    ? image
+    : `${siteUrl}/api/og?title=${encodeURIComponent(title)}`
 
   const metadata: Metadata = {
     title,
@@ -114,7 +131,7 @@ export async function generatePageMetadata(options: MetadataOptions): Promise<Me
       languages: await buildAlternates(enPath),
     },
     openGraph: {
-      title,
+      title: ogTitle,
       description,
       url: canonicalUrl,
       siteName: SITE_CONFIG.name,
@@ -122,10 +139,10 @@ export async function generatePageMetadata(options: MetadataOptions): Promise<Me
       type,
       images: [
         {
-          url: image,
+          url: ogImage,
           width: 1200,
           height: 630,
-          alt: 'Rapid Panda Movers logo - black and white panda icon',
+          alt: `${title} - ${SITE_CONFIG.name}`,
         },
       ],
       ...(publishedTime && { publishedTime }),
@@ -133,9 +150,9 @@ export async function generatePageMetadata(options: MetadataOptions): Promise<Me
     },
     twitter: {
       card: 'summary_large_image',
-      title,
+      title: ogTitle,
       description,
-      images: [image],
+      images: [ogImage],
     },
   }
 

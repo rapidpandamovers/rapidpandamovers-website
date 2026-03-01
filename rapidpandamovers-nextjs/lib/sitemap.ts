@@ -295,7 +295,7 @@ async function getRoutesEntries(locale: Locale, now: string): Promise<SitemapEnt
 // ---------------------------------------------------------------------------
 
 export async function getEntriesForId(id: string): Promise<SitemapEntry[]> {
-  const now = new Date().toISOString()
+  const buildDate = process.env.BUILD_DATE || new Date().toISOString().split('T')[0]
 
   let area: string
   let locale: Locale
@@ -310,15 +310,15 @@ export async function getEntriesForId(id: string): Promise<SitemapEntry[]> {
 
   switch (area) {
     case 'general':
-      return getGeneralEntries(locale, now)
+      return getGeneralEntries(locale, buildDate)
     case 'blog':
-      return getBlogEntries(locale, now)
+      return getBlogEntries(locale, buildDate)
     case 'services':
-      return getServicesEntries(locale, now)
+      return getServicesEntries(locale, buildDate)
     case 'locations':
-      return getLocationsEntries(locale, now)
+      return getLocationsEntries(locale, buildDate)
     case 'routes':
-      return getRoutesEntries(locale, now)
+      return getRoutesEntries(locale, buildDate)
     default:
       return []
   }
@@ -368,7 +368,7 @@ export function entriesToXml(entries: SitemapEntry[]): string {
  * Generate sitemap index XML.
  */
 export function sitemapIndexXml(): string {
-  const now = new Date().toISOString()
+  const buildDate = process.env.BUILD_DATE || new Date().toISOString().split('T')[0]
 
   let xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
   xml += '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
@@ -376,7 +376,7 @@ export function sitemapIndexXml(): string {
   for (const id of SITEMAP_IDS) {
     xml += '<sitemap>\n'
     xml += `<loc>${base}/sitemap/${id}.xml</loc>\n`
-    xml += `<lastmod>${now}</lastmod>\n`
+    xml += `<lastmod>${buildDate}</lastmod>\n`
     xml += '</sitemap>\n'
   }
 

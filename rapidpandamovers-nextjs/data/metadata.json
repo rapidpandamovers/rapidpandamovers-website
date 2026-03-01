@@ -8,86 +8,86 @@
   },
   "templates": {
     "service": {
-      "title": "{serviceName} in Miami | Rapid Panda Movers",
-      "titleWithLocation": "{locationName} {serviceName} | Rapid Panda Movers",
+      "title": "{serviceName} in Miami",
+      "titleWithLocation": "{locationName} {serviceName}",
       "description": "Professional {serviceName} services in {locationStr}. Experienced crews, transparent pricing, and reliable service. Get your free quote today!",
       "descriptionDefault": "{serviceDescription}"
     },
     "location": {
-      "title": "{locationName} Movers | Moving Services in {locationStr} | Rapid Panda Movers",
+      "title": "{locationName} Movers | Moving Services in {locationStr}",
       "descriptionCity": "Professional moving services in {locationName}. Expert local and long-distance moving with experienced crews and transparent pricing. Get your free quote!",
       "descriptionNeighborhood": "Professional moving services in {locationName}, {parentCity}. Local movers you can trust with experienced crews and transparent pricing."
     },
     "route": {
-      "title": "{origin} to {destination} Movers | Rapid Panda Movers",
+      "title": "{origin} to {destination} Movers",
       "description": "Professional moving services from {origin} to {destination}. {distance} miles, experienced crews, competitive rates. Get your free moving quote today!"
     },
     "blogPost": {
-      "titleSuffix": " | Rapid Panda Movers Blog"
+      "titleSuffix": ""
     }
   },
   "home": {
-    "title": "Rapid Panda Movers | #1 Rated Miami Moving Company",
-    "description": "Rated {rating}/5 by {reviewCount}+ customers. Miami's family-owned movers for local & long-distance moving, packing & storage. Free quotes — no hidden fees.",
+    "title": "Family-Owned Miami Moving Company",
+    "description": "Rated {rating}/5 by {reviewCount}+ customers. Miami's family-owned movers for local & long-distance moving, packing & storage. Get a free quote — no hidden fees.",
     "path": "/"
   },
   "services": {
-    "title": "Professional Moving Services in Miami | Rapid Panda Movers",
+    "title": "Professional Moving Services in Miami",
     "description": "Local moving, apartment moves, packing, long-distance, commercial, and storage solutions in Miami. Transparent pricing.",
     "path": "/services"
   },
   "locations": {
-    "title": "Service Areas | Rapid Panda Movers Miami",
+    "title": "Miami Moving Service Areas",
     "description": "Rapid Panda Movers serves all of Miami-Dade County including Miami, Hialeah, Coral Gables, Doral, Homestead, and more.",
     "path": "/locations"
   },
   "about": {
-    "title": "About Us - Miami Moving Company | Rapid Panda Movers",
+    "title": "About Us - Miami Moving Company",
     "description": "Learn about Rapid Panda Movers, a family-owned Miami moving company committed to excellence and serving our community since day one.",
     "path": "/about-us"
   },
   "reviews": {
-    "title": "Customer Reviews | Rapid Panda Movers",
+    "title": "Customer Reviews",
     "description": "Read real reviews from our satisfied customers. See why Miami trusts Rapid Panda Movers for their local and long-distance moves.",
     "path": "/reviews"
   },
   "faq": {
-    "title": "Frequently Asked Questions | Rapid Panda Movers",
+    "title": "Frequently Asked Questions",
     "description": "Find answers to common questions about our moving services, pricing, insurance, and more. Get the information you need for a stress-free move.",
     "path": "/faq"
   },
   "tips": {
-    "title": "Moving Tips & Resources | Rapid Panda Movers",
+    "title": "Moving Tips & Resources",
     "description": "Expert moving tips, guides, and resources from Miami's trusted moving company. Everything you need for a smooth, stress-free move.",
     "path": "/moving-tips"
   },
   "contact": {
-    "title": "Contact Us | Rapid Panda Movers",
+    "title": "Contact Us",
     "description": "Contact Rapid Panda Movers for a free moving quote. Call (786) 585-4269 or fill out our form.",
     "path": "/contact-us"
   },
   "blog": {
-    "title": "Blog | Rapid Panda Movers",
+    "title": "Moving Blog",
     "description": "Moving tips, guides, and insights from Miami's trusted moving company. Expert advice for your next move.",
     "path": "/blog"
   },
   "whyChooseUs": {
-    "title": "Why Choose Rapid Panda Movers | Miami Moving Company",
+    "title": "Why Choose Us - Miami Moving Company",
     "description": "Discover why Miami residents trust Rapid Panda Movers. Licensed, insured, transparent pricing, experienced crews, and 100% satisfaction guaranteed.",
     "path": "/why-choose-us"
   },
   "privacy": {
-    "title": "Privacy Policy | Rapid Panda Movers",
+    "title": "Privacy Policy",
     "description": "Privacy policy for Rapid Panda Movers. Learn how we collect, use, and protect your personal information.",
     "path": "/privacy"
   },
   "terms": {
-    "title": "Terms & Conditions | Rapid Panda Movers",
+    "title": "Terms & Conditions",
     "description": "Terms and conditions for Rapid Panda Movers. Read our terms and conditions for using our moving services.",
     "path": "/terms"
   },
   "compare": {
-    "title": "Compare Movers | Rapid Panda Movers vs Competitors",
+    "title": "Compare Miami Movers",
     "description": "Compare Rapid Panda Movers to other Miami moving companies. See side-by-side comparisons of services, pricing, and customer reviews.",
     "path": "/compare"
   },
@@ -97,42 +97,42 @@
     "path": "/alternatives"
   },
   "quote": {
-    "title": "Get a Free Moving Quote | Rapid Panda Movers",
+    "title": "Get a Free Moving Quote",
     "description": "Request a free, no-obligation moving quote from Rapid Panda Movers. Get transparent pricing for your Miami move.",
     "path": "/quote"
   },
   "rates": {
-    "title": "Transparent Moving Rates | Rapid Panda Movers",
+    "title": "Transparent Moving Rates",
     "description": "Fair, upfront pricing with no hidden fees. See our transparent moving rates for local and long-distance moves in Miami.",
     "path": "/moving-rates"
   },
   "checklist": {
-    "title": "Complete Moving Checklist | Rapid Panda Movers",
+    "title": "Complete Moving Checklist",
     "description": "Your comprehensive guide to a successful move. Use our complete moving checklist to stay organized.",
     "path": "/moving-checklist"
   },
   "glossary": {
-    "title": "Moving Terms Glossary | Rapid Panda Movers",
+    "title": "Moving Terms Glossary",
     "description": "Common moving terms and definitions. Learn the terminology used in the moving industry.",
     "path": "/moving-glossary"
   },
   "routes": {
-    "title": "Moving Routes | Rapid Panda Movers",
+    "title": "Moving Routes",
     "description": "Browse all our moving routes. Professional moving services for local and long distance moves across Florida and nationwide.",
     "path": "/moving-routes"
   },
   "reservations": {
-    "title": "Reservations | Rapid Panda Movers",
+    "title": "Reservations",
     "description": "Book your move with Rapid Panda Movers. Professional moving services in Miami with transparent pricing and flexible scheduling.",
     "path": "/reservations"
   },
   "search": {
-    "title": "Search | Rapid Panda Movers",
+    "title": "Search",
     "description": "Search for moving services, locations, routes, and blog posts.",
     "path": "/search"
   },
   "sitemap": {
-    "title": "Sitemap | Rapid Panda Movers",
+    "title": "Sitemap",
     "description": "Browse all pages on the Rapid Panda Movers website.",
     "path": "/sitemap"
   }

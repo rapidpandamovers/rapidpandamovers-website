@@ -72,12 +72,12 @@ export default async function RatingSection({
   ratings = ratings ?? defaultRatings
 
   return (
-    <section className={`-mt-8 relative z-[-1] ${className}`}>
+    <section className={`-mt-8 relative ${className}`}>
       <div className="container mx-auto">
         <div className="bg-gray-100 rounded-b-4xl px-6 pt-14 pb-6 md:px-8">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
           {/* Title */}
-          <H2 className="text-xl md:text-2xl font-bold text-gray-900 lg:flex-shrink-0">
+          <H2 className="text-xl md:text-[1.35rem] font-bold text-gray-900 lg:flex-shrink-0">
             {title}
           </H2>
 

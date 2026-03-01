@@ -1,6 +1,6 @@
 {
   "buttons": {
-    "getQuote": "Obtenga Su Cotización Gratis",
+    "getQuote": "Cotización Gratis",
     "getFreeQuote": "Cotización Gratis",
     "learnMore": "Más Información",
     "viewAll": "Ver Todos",
@@ -258,7 +258,7 @@
   "location": {
     "neighborhoodsTitle": "Vecindarios que Servimos en {city}",
     "neighborhoodsSubtitle": "Brindamos servicios de mudanza en todos los vecindarios de {city}",
-    "defaultTitle": "Ubicaciones que Servimos",
+    "defaultTitle": "Ubicaciones en Miami-Dade Que Servimos",
     "defaultSubtitle": "Sirviendo {count}+ ciudades y vecindarios en el Condado de Miami-Dade",
     "viewAll": "Ver Todas las Ubicaciones",
     "moreAreas": "¡Sirviendo con orgullo cada rincón del Condado de Miami-Dade y más!",
@@ -275,7 +275,7 @@
     "populationLabel": "Población"
   },
   "quote": {
-    "defaultTitle": "Déjenos Hacer el Trabajo Pesado",
+    "defaultTitle": "Obtenga una Cotización de Mudanza Gratis Hoy",
     "defaultSubtitle": "Evite el estrés del bricolaje. Obtenga una cotización gratis de Rapid Panda Movers y descubra lo económico que puede ser un servicio completo de mudanza."
   },
   "promise": {
@@ -302,7 +302,7 @@
     "defaultDescription": "Suscríbase a nuestro boletín para los últimos consejos, guías y ofertas especiales de Rapid Panda Movers."
   },
   "media": {
-    "defaultTitle": "Véanos en Acción",
+    "defaultTitle": "Nuestros Mudanceros de Miami en Acción",
     "defaultDescription": "Vea cómo nuestro equipo profesional maneja las mudanzas con cuidado y precisión",
     "defaultItems": [
       { "title": "Mudanza en Brickell", "description": "Reubicaciones en el centro de Miami" },
@@ -336,9 +336,9 @@
   },
   "images": {
     "heroCollage": {
-      "slot1": "Mudadores profesionales envolviendo artículos cuidadosamente para un transporte seguro",
-      "slot2": "Rapid Panda Movers brindando servicio a un cliente",
-      "slot3": "Equipo de Rapid Panda Movers junto a un camión de mudanzas"
+      "slot1": "Mudadores profesionales en Miami envolviendo artículos cuidadosamente para un transporte seguro",
+      "slot2": "Rapid Panda Movers brindando servicio de mudanza a un cliente en Miami",
+      "slot3": "Equipo de Rapid Panda Movers junto a un camión de mudanzas en Miami"
     },
     "aboutCollage": {
       "slot1": "Equipo de Rapid Panda Movers cargando muebles en el camión de mudanzas",
@@ -402,7 +402,7 @@
   },
   "services": {
     "breadcrumb": "Servicios",
-    "defaultTitle": "Nuestros Servicios de Mudanza",
+    "defaultTitle": "Servicios de Mudanza en Miami",
     "defaultSubtitle": "Servicios profesionales de mudanza diseñados para sus necesidades, horarios y presupuesto específicos.",
     "showingIn": "Mostrando servicios disponibles en",
     "viewAllLocations": "Ver Todas las Ubicaciones →",
@@ -476,6 +476,8 @@
     "learnMore": "Más información",
     "haveMoreQuestions": "¿Tiene más preguntas?",
     "haveMoreQuestionsDesc": "Nuestro equipo está listo para ayudarle con su mudanza.",
+    "or": "o",
+    "sendUsMessage": "Envíenos un Mensaje",
     "viewAllFaqs": "Ver Todas las Preguntas Frecuentes"
   },
   "statistics": {

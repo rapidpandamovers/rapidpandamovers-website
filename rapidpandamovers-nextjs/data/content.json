@@ -155,8 +155,8 @@
   },
   "home": {
     "hero": {
-      "title": "#1 Family-Owned Miami Movers",
-      "description": "Low-cost local & long-distance moving, packing & storage services in Miami",
+      "title": "Your Trusted Family-Owned Miami Movers",
+      "description": "Affordable local and long-distance moving, packing, storage and installation services across Miami-Dade County.",
       "cta": "Get Started with a Free Quote",
       "image_url": ""
     },
@@ -213,11 +213,20 @@
         "Little Havana"
       ]
     },
+    "mediaSection": {
+      "description": "From careful furniture wrapping to efficient truck loading, see how our licensed and insured Miami moving team handles every relocation with precision and care.",
+      "videos": [
+        { "name": "Professional movers wrapping furniture", "description": "Rapid Panda Movers team carefully wrapping and protecting furniture before a local move in Miami.", "contentUrl": "/videos/1.mp4", "thumbnailUrl": "/images/video-thumb-1.webp", "uploadDate": "2025-10-15", "duration": "PT10S" },
+        { "name": "Rapid Panda Movers truck in Miami", "description": "Rapid Panda Movers branded truck ready for a residential move in the Miami area.", "contentUrl": "/videos/2.mp4", "thumbnailUrl": "/images/video-thumb-2.webp", "uploadDate": "2025-10-20", "duration": "PT10S" },
+        { "name": "Moving team carrying items into new home", "description": "Professional moving crew transporting belongings into a customer's new home in South Florida.", "contentUrl": "/videos/3.mp4", "thumbnailUrl": "/images/video-thumb-3.webp", "uploadDate": "2025-11-01", "duration": "PT5S" },
+        { "name": "Movers organizing boxes in home", "description": "Rapid Panda Movers team organizing and placing boxes in a customer's home during a local move.", "contentUrl": "/videos/4.mp4", "thumbnailUrl": "/images/video-thumb-4.webp", "uploadDate": "2025-11-05", "duration": "PT5S" }
+      ]
+    },
     "reviewSection": {
-      "title": "What Our Customers Say"
+      "title": "What Miami Customers Say About Us"
     },
     "blogSection": {
-      "title": "Moving Tips & Insights",
+      "title": "Miami Moving Tips & Insights",
       "viewMoreButtonText": "View All Articles"
     }
   },

@@ -40,7 +40,7 @@ export default async function Hero({
   const displayCta = cta || ui.hero.defaultCta
 
   return (
-    <section className="pt-2 md:px-6 lg:px-8 relative">
+    <section className="pt-2 md:px-6 lg:px-8 relative z-10">
       <div className="container mx-auto rounded-4xl border border-gray-700 bg-black p-6 md:p-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-center">
           {/* Left side - Image */}
@@ -66,7 +66,7 @@ export default async function Hero({
             </div>
 
             <div>
-              <H1 className="font-display text-4xl md:text-5xl text-white mb-4 font-black tracking-tight">
+              <H1 className="font-display text-4xl md:text-5xl text-white mb-4 font-black leading-[1.15]">
                 {displayTitle}
               </H1>
               <p className="text-xl text-white mb-8">

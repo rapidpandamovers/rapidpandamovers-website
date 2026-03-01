@@ -8,86 +8,86 @@
   },
   "templates": {
     "service": {
-      "title": "{serviceName} en Miami | Rapid Panda Movers",
-      "titleWithLocation": "{serviceName} en {locationName} | Rapid Panda Movers",
+      "title": "{serviceName} en Miami",
+      "titleWithLocation": "{serviceName} en {locationName}",
       "description": "Servicios profesionales de {serviceName} en {locationStr}. Equipos experimentados, precios transparentes y servicio confiable. ¡Obtenga su cotización gratis!",
       "descriptionDefault": "{serviceDescription}"
     },
     "location": {
-      "title": "Mudanzas en {locationName} | Servicios de Mudanza en {locationStr} | Rapid Panda Movers",
+      "title": "Mudanzas en {locationName} | Servicios de Mudanza en {locationStr}",
       "descriptionCity": "Servicios profesionales de mudanza en {locationName}. Mudanzas locales y de larga distancia con equipos experimentados y precios transparentes.",
       "descriptionNeighborhood": "Servicios profesionales de mudanza en {locationName}, {parentCity}. Mudadores locales de confianza con equipos experimentados y precios transparentes."
     },
     "route": {
-      "title": "Mudanzas de {origin} a {destination} | Rapid Panda Movers",
+      "title": "Mudanzas de {origin} a {destination}",
       "description": "Servicios profesionales de mudanza de {origin} a {destination}. {distance} millas, equipos experimentados, tarifas competitivas."
     },
     "blogPost": {
-      "titleSuffix": " | Blog de Rapid Panda Movers"
+      "titleSuffix": ""
     }
   },
   "home": {
-    "title": "Rapid Panda Movers | Empresa de Mudanzas #1 en Miami",
-    "description": "Calificados {rating}/5 por más de {reviewCount} clientes. Mudadores familiares en Miami para mudanzas locales y larga distancia, empaque y almacenamiento. Cotizaciones gratis.",
+    "title": "Empresa de Mudanzas Familiar en Miami",
+    "description": "Calificados {rating}/5 por más de {reviewCount} clientes. Mudadores familiares en Miami para mudanzas locales y larga distancia, empaque y almacenamiento. Solicite una cotización gratis.",
     "path": "/"
   },
   "services": {
-    "title": "Servicios Profesionales de Mudanza en Miami | Rapid Panda Movers",
+    "title": "Servicios Profesionales de Mudanza en Miami",
     "description": "Mudanzas locales, de apartamentos, empaque, larga distancia, comerciales y almacenamiento en Miami. Precios transparentes.",
     "path": "/services"
   },
   "locations": {
-    "title": "Áreas de Servicio | Rapid Panda Movers Miami",
+    "title": "Áreas de Servicio de Mudanza en Miami",
     "description": "Rapid Panda Movers sirve todo el Condado de Miami-Dade incluyendo Miami, Hialeah, Coral Gables, Doral, Homestead y más.",
     "path": "/locations"
   },
   "about": {
-    "title": "Sobre Nosotros - Empresa de Mudanzas en Miami | Rapid Panda Movers",
+    "title": "Sobre Nosotros - Empresa de Mudanzas en Miami",
     "description": "Conozca a Rapid Panda Movers, una empresa familiar de mudanzas en Miami comprometida con la excelencia y el servicio a nuestra comunidad.",
     "path": "/about-us"
   },
   "reviews": {
-    "title": "Reseñas de Clientes | Rapid Panda Movers",
+    "title": "Reseñas de Clientes",
     "description": "Lea reseñas reales de nuestros clientes satisfechos. Vea por qué Miami confía en Rapid Panda Movers para sus mudanzas locales y de larga distancia.",
     "path": "/reviews"
   },
   "faq": {
-    "title": "Preguntas Frecuentes | Rapid Panda Movers",
+    "title": "Preguntas Frecuentes",
     "description": "Encuentre respuestas a preguntas comunes sobre nuestros servicios de mudanza, precios, seguro y más.",
     "path": "/faq"
   },
   "tips": {
-    "title": "Consejos y Recursos de Mudanza | Rapid Panda Movers",
+    "title": "Consejos y Recursos de Mudanza",
     "description": "Consejos expertos de mudanza, guías y recursos de la empresa de mudanzas de confianza de Miami.",
     "path": "/moving-tips"
   },
   "contact": {
-    "title": "Contáctenos | Rapid Panda Movers",
+    "title": "Contáctenos",
     "description": "Contacte a Rapid Panda Movers para una cotización gratis. Llame al (786) 585-4269 o complete nuestro formulario.",
     "path": "/contact-us"
   },
   "blog": {
-    "title": "Blog | Rapid Panda Movers",
+    "title": "Blog de Mudanzas",
     "description": "Consejos de mudanza, guías e información de la empresa de mudanzas de confianza de Miami.",
     "path": "/blog"
   },
   "whyChooseUs": {
-    "title": "¿Por Qué Elegir Rapid Panda Movers? | Empresa de Mudanzas en Miami",
+    "title": "¿Por Qué Elegirnos? - Mudanzas en Miami",
     "description": "Descubra por qué los residentes de Miami confían en Rapid Panda Movers. Licenciados, asegurados, precios transparentes y satisfacción garantizada.",
     "path": "/why-choose-us"
   },
   "privacy": {
-    "title": "Política de Privacidad | Rapid Panda Movers",
+    "title": "Política de Privacidad",
     "description": "Política de privacidad de Rapid Panda Movers. Conozca cómo recopilamos, usamos y protegemos su información personal.",
     "path": "/privacy"
   },
   "terms": {
-    "title": "Términos y Condiciones | Rapid Panda Movers",
+    "title": "Términos y Condiciones",
     "description": "Términos y condiciones de Rapid Panda Movers. Lea nuestros términos para el uso de nuestros servicios de mudanza.",
     "path": "/terms"
   },
   "compare": {
-    "title": "Comparar Mudanzas | Rapid Panda Movers vs Competidores",
+    "title": "Comparar Empresas de Mudanza en Miami",
     "description": "Compare Rapid Panda Movers con otras empresas de mudanza en Miami. Comparaciones lado a lado de servicios, precios y reseñas.",
     "path": "/compare"
   },
@@ -97,42 +97,42 @@
     "path": "/alternatives"
   },
   "quote": {
-    "title": "Cotización de Mudanza Gratis | Rapid Panda Movers",
+    "title": "Cotización de Mudanza Gratis",
     "description": "Solicite una cotización gratis sin compromiso de Rapid Panda Movers. Precios transparentes para su mudanza en Miami.",
     "path": "/quote"
   },
   "rates": {
-    "title": "Tarifas Transparentes de Mudanza | Rapid Panda Movers",
+    "title": "Tarifas Transparentes de Mudanza",
     "description": "Precios justos y directos sin cargos ocultos. Vea nuestras tarifas transparentes para mudanzas locales y de larga distancia en Miami.",
     "path": "/moving-rates"
   },
   "checklist": {
-    "title": "Lista Completa de Mudanza | Rapid Panda Movers",
+    "title": "Lista Completa de Mudanza",
     "description": "Su guía completa para una mudanza exitosa. Use nuestra lista de verificación completa para mantenerse organizado.",
     "path": "/moving-checklist"
   },
   "glossary": {
-    "title": "Glosario de Términos de Mudanza | Rapid Panda Movers",
+    "title": "Glosario de Términos de Mudanza",
     "description": "Términos comunes de mudanza y sus definiciones. Aprenda la terminología de la industria de mudanzas.",
     "path": "/moving-glossary"
   },
   "routes": {
-    "title": "Rutas de Mudanza | Rapid Panda Movers",
+    "title": "Rutas de Mudanza",
     "description": "Explore todas nuestras rutas de mudanza. Servicios profesionales para mudanzas locales y de larga distancia en Florida y todo el país.",
     "path": "/moving-routes"
   },
   "reservations": {
-    "title": "Reservaciones | Rapid Panda Movers",
+    "title": "Reservaciones",
     "description": "Reserve su mudanza con Rapid Panda Movers. Servicios profesionales en Miami con precios transparentes y horarios flexibles.",
     "path": "/reservations"
   },
   "search": {
-    "title": "Buscar | Rapid Panda Movers",
+    "title": "Buscar",
     "description": "Busque servicios de mudanza, ubicaciones, rutas y artículos.",
     "path": "/search"
   },
   "sitemap": {
-    "title": "Mapa del Sitio | Rapid Panda Movers",
+    "title": "Mapa del Sitio",
     "description": "Explore todas las páginas del sitio web de Rapid Panda Movers.",
     "path": "/sitemap"
   }

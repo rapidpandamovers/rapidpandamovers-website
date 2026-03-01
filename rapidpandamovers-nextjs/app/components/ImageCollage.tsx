@@ -522,6 +522,7 @@ export function ImageCollage({
   );
 
   return (
+    <>
     <svg
       className={className}
       viewBox={`0 0 ${VB_W} ${VB_H}`}
@@ -529,7 +530,6 @@ export function ImageCollage({
       role="img"
       aria-label={containerLabel || "Photo collage"}
       xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
     >
       <defs>
         <clipPath id={clip.slot1} clipPathUnits="userSpaceOnUse">
@@ -566,15 +566,12 @@ export function ImageCollage({
         <g clipPath={`url(#${clip.slot1})`}>
           <image
             href={src1}
-            xlinkHref={src1}
-            x={bbox1.x}
-            y={bbox1.y}
-            width={bbox1.width}
-            height={bbox1.height}
+            x={bbox1.x} y={bbox1.y}
+            width={bbox1.width} height={bbox1.height}
             preserveAspectRatio="xMidYMid slice"
             onError={slot1Fallback ? () => setSrc1(slot1Fallback) : undefined}
           >
-            {alt?.slot1 ? <title>{alt.slot1}</title> : null}
+            <title>{alt?.slot1 || ''}</title>
           </image>
         </g>
       )}
@@ -584,15 +581,12 @@ export function ImageCollage({
         <g clipPath={`url(#${clip.slot2})`}>
           <image
             href={src2}
-            xlinkHref={src2}
-            x={bbox2.x}
-            y={bbox2.y}
-            width={bbox2.width}
-            height={bbox2.height}
+            x={bbox2.x} y={bbox2.y}
+            width={bbox2.width} height={bbox2.height}
             preserveAspectRatio="xMidYMid slice"
             onError={slot2Fallback ? () => setSrc2(slot2Fallback) : undefined}
           >
-            {alt?.slot2 ? <title>{alt.slot2}</title> : null}
+            <title>{alt?.slot2 || ''}</title>
           </image>
         </g>
       )}
@@ -602,15 +596,12 @@ export function ImageCollage({
         <g clipPath={`url(#${clip.slot3})`}>
           <image
             href={src3}
-            xlinkHref={src3}
-            x={bbox3.x}
-            y={bbox3.y}
-            width={bbox3.width}
-            height={bbox3.height}
+            x={bbox3.x} y={bbox3.y}
+            width={bbox3.width} height={bbox3.height}
             preserveAspectRatio="xMidYMid slice"
             onError={slot3Fallback ? () => setSrc3(slot3Fallback) : undefined}
           >
-            {alt?.slot3 ? <title>{alt.slot3}</title> : null}
+            <title>{alt?.slot3 || ''}</title>
           </image>
         </g>
       )}
@@ -637,5 +628,12 @@ export function ImageCollage({
         </>
       ) : null}
     </svg>
+    {/* Hidden img tags for search engine crawlability */}
+    <div className="sr-only">
+      {src1 && <img src={src1} alt={alt?.slot1 || ''} />}
+      {src2 && <img src={src2} alt={alt?.slot2 || ''} />}
+      {src3 && <img src={src3} alt={alt?.slot3 || ''} />}
+    </div>
+    </>
   );
 }

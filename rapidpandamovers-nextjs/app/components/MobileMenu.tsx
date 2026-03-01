@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { ArrowRight } from 'lucide-react'
 import { Link, usePathname, useRouter } from '@/i18n/routing'
 import { useLocale } from 'next-intl'
 function PhoneIcon({ className }: { className?: string }) {
@@ -94,11 +95,11 @@ export default function MobileMenu({ nav, services, cities, locale, phoneTel, ph
   return (
     <>
       {/* Hamburger / Close toggle */}
-      <button onClick={() => setIsOpen(!isOpen)} className="p-2" aria-label={isOpen ? 'Close menu' : 'Open menu'}>
+      <button onClick={() => setIsOpen(!isOpen)} className="p-3 -mr-[4px]" aria-label={isOpen ? 'Close menu' : 'Open menu'}>
         {isOpen ? (
-          <XIcon className="w-8 h-8" />
+          <XIcon className="w-10 h-10" />
         ) : (
-          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         )}
@@ -268,9 +269,10 @@ export default function MobileMenu({ nav, services, cities, locale, phoneTel, ph
             </a>
             <Link
               href="/quote"
-              className="flex items-center justify-center border border-orange-700 text-orange-700 hover:bg-orange-700 hover:text-white font-semibold py-3 px-4 rounded-lg transition-colors w-full"
+              className="flex items-center justify-center gap-2 border border-orange-700 text-orange-700 hover:bg-orange-700 hover:text-white font-semibold py-3 px-4 rounded-lg transition-colors w-full"
             >
               {nav.header.cta.quoteButton}
+              <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
