@@ -78,7 +78,7 @@ export default function FooterDrawers({
       >
         {services.map((service) => (
           <li key={service.slug}>
-            <Link href={`/${service.slug}`} className="text-gray-400 hover:text-orange-500 transition-colors text-sm">
+            <Link href={`/${service.slug}`} className="text-gray-400 hover:text-orange-700 transition-colors text-sm">
               {service.name}
             </Link>
           </li>
@@ -93,7 +93,7 @@ export default function FooterDrawers({
       >
         {cities.map((city) => (
           <li key={city.slug}>
-            <Link href={`/${city.slug}-movers`} className="text-gray-400 hover:text-orange-500 transition-colors text-sm">
+            <Link href={`/${city.slug}-movers`} className="text-gray-400 hover:text-orange-700 transition-colors text-sm">
               {nameTemplate.replace('{name}', city.name)}
             </Link>
           </li>
@@ -108,7 +108,7 @@ export default function FooterDrawers({
       >
         {nav.footer.sections.resources.items.map((item: any) => (
           <li key={item.href}>
-            <Link href={item.href} className="text-gray-400 hover:text-orange-500 transition-colors text-sm">
+            <Link href={item.href} className="text-gray-400 hover:text-orange-700 transition-colors text-sm">
               {item.label}
             </Link>
           </li>
@@ -123,7 +123,7 @@ export default function FooterDrawers({
       >
         {nav.footer.sections.company.items.map((item: any) => (
           <li key={item.href}>
-            <Link href={item.href} className="text-gray-400 hover:text-orange-500 transition-colors text-sm">
+            <Link href={item.href} className="text-gray-400 hover:text-orange-700 transition-colors text-sm">
               {item.label}
             </Link>
           </li>
@@ -137,13 +137,13 @@ export default function FooterDrawers({
         onToggle={() => toggleSection('compare')}
       >
         <li>
-          <Link href="/compare" className="text-gray-400 hover:text-orange-500 transition-colors text-sm">
+          <Link href="/compare" className="text-gray-400 hover:text-orange-700 transition-colors text-sm">
             {nav.footer.sections.compare.allLabel}
           </Link>
         </li>
         {comparisons.map((comparison) => (
           <li key={comparison.slug}>
-            <Link href={`/compare/${comparison.slug}`} className="text-gray-400 hover:text-orange-500 transition-colors text-sm">
+            <Link href={`/compare/${comparison.slug}`} className="text-gray-400 hover:text-orange-700 transition-colors text-sm">
               {nav.footer.sections.compare.prefix} {comparison.competitor.name}
             </Link>
           </li>
@@ -157,13 +157,13 @@ export default function FooterDrawers({
         onToggle={() => toggleSection('alternatives')}
       >
         <li>
-          <Link href="/alternatives" className="text-gray-400 hover:text-orange-500 transition-colors text-sm">
+          <Link href="/alternatives" className="text-gray-400 hover:text-orange-700 transition-colors text-sm">
             {nav.footer.sections.alternatives.allLabel}
           </Link>
         </li>
         {alternatives.map((alt) => (
           <li key={alt.slug}>
-            <Link href={`/alternatives/${alt.slug}`} className="text-gray-400 hover:text-orange-500 transition-colors text-sm">
+            <Link href={`/alternatives/${alt.slug}`} className="text-gray-400 hover:text-orange-700 transition-colors text-sm">
               {alt.alternative.name}
             </Link>
           </li>

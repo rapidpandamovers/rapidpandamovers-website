@@ -35,7 +35,7 @@ export default async function OverviewSection({
                     href={website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-orange-600 hover:text-orange-800 inline-flex items-center text-sm mt-3"
+                    className="text-orange-700 hover:text-orange-800 inline-flex items-center text-sm mt-3"
                   >
                     {ui.buttons.visitWebsite}
                     <ExternalLink className="w-4 h-4 ml-1" />

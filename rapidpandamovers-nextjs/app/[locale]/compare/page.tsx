@@ -37,7 +37,7 @@ export default async function ComparePage() {
       />
 
       {/* Introduction */}
-      <OverviewSection title={<>{content.compare.overview.titleBefore}<span className="text-orange-600">{content.compare.overview.titleHighlight}</span>{content.compare.overview.titleAfter || ''}</>}>
+      <OverviewSection title={<>{content.compare.overview.titleBefore}<span className="text-orange-700">{content.compare.overview.titleHighlight}</span>{content.compare.overview.titleAfter || ''}</>}>
         <p className="text-xl text-gray-600 mb-8">
           {content.compare.overview.description}
         </p>
@@ -45,7 +45,7 @@ export default async function ComparePage() {
           {[Scale, Star, Shield].map((Icon, i) => (
             <div key={i} className="text-center">
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Icon className="w-8 h-8 text-orange-500" />
+                <Icon className="w-8 h-8 text-orange-700" />
               </div>
               <H3 className="font-bold text-gray-800 mb-2">{content.compare.overview.features[i].title}</H3>
               <p className="text-gray-600">{content.compare.overview.features[i].description}</p>
@@ -56,7 +56,7 @@ export default async function ComparePage() {
 
       {/* Comparisons Grid */}
       <CompareList
-        title={<>{content.compare.compareList.titleBefore}<span className="text-orange-600">{content.compare.compareList.titleHighlight}</span></>}
+        title={<>{content.compare.compareList.titleBefore}<span className="text-orange-700">{content.compare.compareList.titleHighlight}</span></>}
         subtitle={content.compare.compareList.subtitle}
         items={comparisonsData}
         basePath={`/${compareSlug}`}
@@ -65,14 +65,14 @@ export default async function ComparePage() {
         renderCard={(comparison: any) => (
           <>
             <div className="flex items-center justify-between mb-4">
-              <Scale className="w-8 h-8 text-orange-500" />
+              <Scale className="w-8 h-8 text-orange-700" />
               {comparison.competitor.rating !== 'N/A' && comparison.competitor.rating !== 'Mixed' && (
                 <span className="text-sm bg-gray-100 px-3 py-1 rounded-full text-gray-600">
                   {comparison.competitor.rating}
                 </span>
               )}
             </div>
-            <H3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-orange-600 transition-colors">
+            <H3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-orange-700 transition-colors">
               vs {comparison.competitor.name}
             </H3>
             <p className="text-gray-600 text-sm mb-4 line-clamp-2">

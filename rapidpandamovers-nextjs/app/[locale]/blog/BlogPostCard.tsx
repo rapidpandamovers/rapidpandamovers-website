@@ -90,7 +90,7 @@ export default function BlogPostCard({ post, showExcerpt = true, showCategoryPil
           )
         })()}
 
-        <H2 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-orange-600 transition-colors">
+        <H2 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-orange-700 transition-colors">
           <BlogPostLink href={`/blog/${post.slug}`}>
             {post.title}
           </BlogPostLink>
@@ -104,7 +104,7 @@ export default function BlogPostCard({ post, showExcerpt = true, showCategoryPil
 
         <BlogPostLink
           href={`/blog/${post.slug}`}
-          className="text-orange-600 hover:text-orange-800 font-medium inline-flex items-center mt-auto"
+          className="text-orange-700 hover:text-orange-800 font-medium inline-flex items-center mt-auto"
           aria-label={`${ui?.blog?.readFullArticle || 'Read Full Article'}: ${post.title}`}
         >
           {ui?.blog?.readFullArticle || 'Read Full Article'}

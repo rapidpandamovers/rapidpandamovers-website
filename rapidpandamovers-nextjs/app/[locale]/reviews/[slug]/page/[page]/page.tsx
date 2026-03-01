@@ -1,6 +1,7 @@
 import { notFound, redirect } from 'next/navigation'
 import ReviewsListPage, { REVIEWS_PER_PAGE } from '../../../ReviewsListPage'
 import QuoteSection from '@/app/components/QuoteSection'
+import Hero from '@/app/components/Hero'
 import reviewsData from '@/data/reviews.json'
 import { locales } from '@/i18n/config'
 import { getMessages, getLocale } from 'next-intl/server'
@@ -72,6 +73,11 @@ export default async function ReviewsPlatformPaginatedPage({
 
   return (
     <>
+      <Hero
+        title={content.reviews.title}
+        description={content.reviews.description}
+        cta={content.reviews.hero.cta}
+      />
       <ReviewsListPage currentPage={pageNum} platform={slug} />
       <QuoteSection
         title={content.reviews.quote.title}

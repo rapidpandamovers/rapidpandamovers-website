@@ -34,24 +34,24 @@ export default async function QuoteSection({
   phoneDisplay = phoneDisplay ?? defaultPhoneDisplay
   return (
     <section className="pt-20">
-      <div className="container mx-auto rounded-4xl bg-orange-600 p-8 md:p-16 text-center">
-        <H2 className="text-3xl md:text-4xl font-bold text-white text-shadow-sm mb-4">
+      <div className="container mx-auto rounded-4xl bg-orange-700 p-8 md:p-16 text-center">
+        <H2 className="text-3xl md:text-4xl font-bold text-white mb-4">
           {title}
         </H2>
-        <p className="text-xl text-white text-shadow-sm mb-8 max-w-4xl mx-auto">
+        <p className="text-xl text-white mb-8 max-w-4xl mx-auto">
           {subtitle}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
             href={`tel:${phone}`}
             aria-label={ui.buttons.callAriaLabel}
-            className="bg-white text-orange-600 font-bold py-4 px-8 rounded-lg hover:bg-orange-50 transition-colors text-center border-2 border-transparent"
+            className="bg-white text-orange-700 font-bold py-4 px-8 rounded-lg hover:bg-orange-50 transition-colors text-center border-2 border-transparent"
           >
             {ui.buttons.callPrefix} {phoneDisplay}
           </a>
           <Link
             href={buttonHref}
-            className="border-2 border-white text-white text-shadow-sm font-bold py-4 px-8 rounded-lg hover:bg-orange-700 transition-colors text-center"
+            className="border-2 border-white text-white font-bold py-4 px-8 rounded-lg hover:bg-orange-800 transition-colors text-center"
           >
             {buttonText}
           </Link>

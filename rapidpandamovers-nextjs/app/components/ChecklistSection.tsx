@@ -239,7 +239,7 @@ export default function ChecklistSection({
         )
       case 'low':
         return (
-          <span className={`${baseClass} ${forPrint ? 'priority-low' : 'bg-orange-100 text-orange-600'}`}>
+          <span className={`${baseClass} ${forPrint ? 'priority-low' : 'bg-orange-100 text-orange-700'}`}>
             {!forPrint && <Info className="w-3 h-3 mr-1" />}
             {ui.checklist.priority.low}
           </span>
@@ -277,7 +277,7 @@ export default function ChecklistSection({
                 return (
                   <div key={index} className="bg-white rounded-2xl p-6 text-center">
                     <div className="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <IconComponent className="w-7 h-7 text-orange-500" />
+                      <IconComponent className="w-7 h-7 text-orange-700" />
                     </div>
                     <H3 className="font-bold text-gray-800 mb-1">{feature.title}</H3>
                     <p className="text-sm text-gray-600">{feature.desc}</p>
@@ -290,7 +290,7 @@ export default function ChecklistSection({
             <div className="text-center">
               <Link
                 href="/moving-checklist"
-                className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white font-semibold px-8 py-4 rounded-lg transition-colors text-shadow-sm"
+                className="inline-flex items-center bg-orange-700 hover:bg-orange-800 text-white font-semibold px-8 py-4 rounded-lg transition-colors"
               >
                 {ui.buttons.viewFullChecklist}
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -361,14 +361,14 @@ export default function ChecklistSection({
                 <button
                   onClick={handleDownloadPDF}
                   disabled={isGenerating}
-                  className="inline-flex items-center px-5 py-2.5 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-shadow-sm"
+                  className="inline-flex items-center px-5 py-2.5 bg-orange-700 hover:bg-orange-800 text-white font-semibold rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <Download className="w-5 h-5 mr-2" />
                   {isGenerating ? ui.buttons.generating : ui.buttons.downloadPdf}
                 </button>
                 <button
                   onClick={handlePrint}
-                  className="inline-flex items-center px-5 py-2.5 border-2 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white font-semibold rounded-lg transition-colors"
+                  className="inline-flex items-center px-5 py-2.5 border-2 border-orange-700 text-orange-700 hover:bg-orange-700 hover:text-white font-semibold rounded-lg transition-colors"
                 >
                   <Printer className="w-5 h-5 mr-2" />
                   {ui.buttons.print}
@@ -386,7 +386,7 @@ export default function ChecklistSection({
                 <Clock className="w-3 h-3 mr-1" />
                 {ui.checklist.priority.medium}
               </span>
-              <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-orange-100 text-orange-600">
+              <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-orange-100 text-orange-700">
                 <Info className="w-3 h-3 mr-1" />
                 {ui.checklist.priority.lowLabel}
               </span>
@@ -423,7 +423,7 @@ export default function ChecklistSection({
                     <div className="mt-4 no-print">
                       <div className="flex items-center justify-between text-xs text-gray-500 mb-1">
                         <span>{progress.completed} {ui.checklist.of} {progress.total} {ui.checklist.complete}</span>
-                        <span className="font-medium text-orange-600">{progress.percentage}%</span>
+                        <span className="font-medium text-orange-700">{progress.percentage}%</span>
                       </div>
                       <div className="h-1.5 bg-gray-200 rounded-full overflow-hidden">
                         <div

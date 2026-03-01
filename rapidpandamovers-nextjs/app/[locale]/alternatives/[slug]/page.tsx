@@ -85,14 +85,14 @@ export default async function AlternativePage({ params }: PageProps) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="bg-white rounded-lg p-4">
             <div className="flex items-center mb-2">
-              <DollarSign className="w-5 h-5 text-orange-500 mr-2" />
+              <DollarSign className="w-5 h-5 text-orange-700 mr-2" />
               <span className="text-gray-500 text-sm">{ui.alternatives.localMoves}</span>
             </div>
             <p className="font-bold text-gray-800">{alternative.pricing.local}</p>
           </div>
           <div className="bg-white rounded-lg p-4">
             <div className="flex items-center mb-2">
-              <Truck className="w-5 h-5 text-orange-500 mr-2" />
+              <Truck className="w-5 h-5 text-orange-700 mr-2" />
               <span className="text-gray-500 text-sm">{ui.alternatives.longDistance}</span>
             </div>
             <p className="font-bold text-gray-800">{alternative.pricing.long_distance}</p>
@@ -100,7 +100,7 @@ export default async function AlternativePage({ params }: PageProps) {
           {'monthly_storage' in alternative.pricing && (
             <div className="bg-white rounded-lg p-4">
               <div className="flex items-center mb-2">
-                <Clock className="w-5 h-5 text-orange-500 mr-2" />
+                <Clock className="w-5 h-5 text-orange-700 mr-2" />
                 <span className="text-gray-500 text-sm">{ui.alternatives.monthlyStorage}</span>
               </div>
               <p className="font-bold text-gray-800">{alternative.pricing.monthly_storage}</p>
@@ -109,7 +109,7 @@ export default async function AlternativePage({ params }: PageProps) {
           {'hourly_rate' in alternative.pricing && (
             <div className="bg-white rounded-lg p-4">
               <div className="flex items-center mb-2">
-                <Clock className="w-5 h-5 text-orange-500 mr-2" />
+                <Clock className="w-5 h-5 text-orange-700 mr-2" />
                 <span className="text-gray-500 text-sm">{ui.alternatives.hourlyRate}</span>
               </div>
               <p className="font-bold text-gray-800">{alternative.pricing.hourly_rate}</p>
@@ -132,7 +132,7 @@ export default async function AlternativePage({ params }: PageProps) {
 
       {/* Why Full-Service is Better */}
       <WhySection
-        title={<>{ui.alternatives.whyFullServiceBefore}<span className="text-orange-600">{ui.alternatives.whyFullServiceHighlight}</span>{ui.alternatives.whyFullServiceAfter}</>}
+        title={<>{ui.alternatives.whyFullServiceBefore}<span className="text-orange-700">{ui.alternatives.whyFullServiceHighlight}</span>{ui.alternatives.whyFullServiceAfter}</>}
         benefits={alternative.why_full_service_better}
         ctaText={ui.alternatives.seeWhyDifferent}
       />
@@ -153,7 +153,7 @@ export default async function AlternativePage({ params }: PageProps) {
         renderItem={(a: any) => (
           <>
             <span className="text-xs text-gray-500">{a.alternative.type}</span>
-            <h4 className="font-semibold text-gray-800 group-hover:text-orange-600 transition-colors mt-1">
+            <h4 className="font-semibold text-gray-800 group-hover:text-orange-700 transition-colors mt-1">
               {a.alternative.name}
             </h4>
           </>

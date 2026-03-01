@@ -41,11 +41,11 @@ export default async function PrivacyPage() {
                     return (
                       <p className="text-gray-600">
                         {beforeEmail}
-                        <a href={`mailto:${content.site.email}`} className="text-orange-600 hover:text-orange-800">
+                        <a href={`mailto:${content.site.email}`} className="text-orange-700 hover:text-orange-800">
                           {content.site.email}
                         </a>
                         {connectingText}
-                        <a href={`tel:${content.site.phone.replace(/-/g, '')}`} className="text-orange-600 hover:text-orange-800">
+                        <a href={`tel:${content.site.phone.replace(/-/g, '')}`} className="text-orange-700 hover:text-orange-800">
                           {phoneFormatted}
                         </a>
                         {trailingText}

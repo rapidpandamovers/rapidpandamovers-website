@@ -38,11 +38,11 @@ export default async function SolutionSection({
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto">
           {solutions.map((solution, index) => (
-            <div key={index} className="bg-orange-600 rounded-4xl p-6 md:p-8 flex items-start space-x-4">
+            <div key={index} className="bg-orange-700 rounded-4xl p-6 md:p-8 flex items-start space-x-4">
               <CheckCircle className="w-6 h-6 text-white flex-shrink-0 mt-1" />
               <div>
-                <H3 className="text-xl font-bold text-white text-shadow-sm mb-2">{solution.title}</H3>
-                <p className="text-orange-100 text-shadow-sm">{solution.description}</p>
+                <H3 className="text-xl font-bold text-white mb-2">{solution.title}</H3>
+                <p className="text-orange-100">{solution.description}</p>
               </div>
             </div>
           ))}

@@ -150,7 +150,7 @@ export default function RoutesContent({ currentPage, fromLocation }: RoutesConte
       {fromLocation && (
         <div className="pt-20">
           <div className="container mx-auto">
-            <div className="bg-orange-50 rounded-2xl p-4 flex items-center justify-center gap-2 text-orange-600">
+            <div className="bg-orange-50 rounded-2xl p-4 flex items-center justify-center gap-2 text-orange-700">
               <MapPin className="w-5 h-5" />
               <span>{ui.routes.showingRoutesFrom.split('{location}')[0]}<strong>{titleCase(fromLocation)}</strong>{ui.routes.showingRoutesFrom.split('{location}')[1]}</span>
               <Link
@@ -173,7 +173,7 @@ export default function RoutesContent({ currentPage, fromLocation }: RoutesConte
                 href={`/${movingRoutesSlug}`}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   !routeType
-                    ? 'bg-orange-600 text-white text-shadow-sm'
+                    ? 'bg-orange-700 text-white'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -183,7 +183,7 @@ export default function RoutesContent({ currentPage, fromLocation }: RoutesConte
                 href={`/${movingRoutesSlug}?type=long-distance`}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   routeType === 'long-distance'
-                    ? 'bg-orange-600 text-white text-shadow-sm'
+                    ? 'bg-orange-700 text-white'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -193,7 +193,7 @@ export default function RoutesContent({ currentPage, fromLocation }: RoutesConte
                 href={`/${movingRoutesSlug}?type=local`}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   routeType === 'local'
-                    ? 'bg-orange-600 text-white text-shadow-sm'
+                    ? 'bg-orange-700 text-white'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -218,23 +218,23 @@ export default function RoutesContent({ currentPage, fromLocation }: RoutesConte
                     <Link
                       key={index}
                       href={`/${getTranslatedSlug(`${route.slug}-movers`, locale)}`}
-                      className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-orange-600 transition-colors group"
+                      className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-orange-700 transition-colors group"
                     >
                       <div className="flex items-center justify-between mb-4">
-                        <Navigation className="w-6 h-6 text-orange-500" />
+                        <Navigation className="w-6 h-6 text-orange-700" />
                         <span className="text-sm text-gray-500">
                           {route.distance_mi} mi &bull; {timeDisplay}
                         </span>
                       </div>
-                      <H3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-orange-600 transition-colors">
+                      <H3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-orange-700 transition-colors">
                         {titleCase(route.origin_name)} {ui.routes.to} {titleCase(route.destination_name)}
                       </H3>
                       {cost && (
-                        <p className="text-orange-600 font-bold text-lg mb-3">
+                        <p className="text-orange-700 font-bold text-lg mb-3">
                           {ui.routes.startingFrom.replace('{cost}', cost.toLocaleString())}
                         </p>
                       )}
-                      <div className="text-orange-600 group-hover:text-orange-600 font-medium flex items-center">
+                      <div className="text-orange-700 group-hover:text-orange-700 font-medium flex items-center">
                         {ui.routes.viewRoute}
                         <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                       </div>
@@ -250,7 +250,7 @@ export default function RoutesContent({ currentPage, fromLocation }: RoutesConte
                   {currentPage > 1 ? (
                     <Link
                       href={getPageUrl(currentPage - 1)}
-                      className="flex items-center px-2 py-2 md:px-4 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600 transition-colors"
+                      className="flex items-center px-2 py-2 md:px-4 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-700 hover:text-orange-700 transition-colors"
                     >
                       <ChevronLeft className="w-4 h-4 md:mr-1" />
                       <span className="hidden md:inline">{ui.pagination.previous}</span>
@@ -274,8 +274,8 @@ export default function RoutesContent({ currentPage, fromLocation }: RoutesConte
                           href={getPageUrl(page)}
                           className={`w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-lg font-medium text-sm md:text-base transition-colors ${
                             currentPage === page
-                              ? 'bg-orange-600 text-white text-shadow-sm'
-                              : 'bg-white border border-gray-300 text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600'
+                              ? 'bg-orange-700 text-white'
+                              : 'bg-white border border-gray-300 text-gray-700 hover:bg-orange-50 hover:border-orange-700 hover:text-orange-700'
                           }`}
                         >
                           {page}
@@ -287,7 +287,7 @@ export default function RoutesContent({ currentPage, fromLocation }: RoutesConte
                   {currentPage < totalPages ? (
                     <Link
                       href={getPageUrl(currentPage + 1)}
-                      className="flex items-center px-2 py-2 md:px-4 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600 transition-colors"
+                      className="flex items-center px-2 py-2 md:px-4 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-700 hover:text-orange-700 transition-colors"
                     >
                       <span className="hidden md:inline">{ui.pagination.next}</span>
                       <ChevronRight className="w-4 h-4 md:ml-1" />
@@ -318,7 +318,7 @@ export default function RoutesContent({ currentPage, fromLocation }: RoutesConte
             </p>
             <Link
               href={`/${movingRoutesSlug}`}
-              className="inline-flex items-center px-6 py-3 bg-orange-600 text-white text-shadow-sm font-semibold rounded-lg hover:bg-orange-700 transition-colors"
+              className="inline-flex items-center px-6 py-3 bg-orange-700 text-white font-semibold rounded-lg hover:bg-orange-800 transition-colors"
             >
               {ui.routes.viewAllRoutes}
             </Link>
@@ -335,7 +335,7 @@ export default function RoutesContent({ currentPage, fromLocation }: RoutesConte
             </p>
             <Link
               href={getPageUrl(1)}
-              className="inline-flex items-center px-6 py-3 bg-orange-600 text-white text-shadow-sm font-semibold rounded-lg hover:bg-orange-700 transition-colors"
+              className="inline-flex items-center px-6 py-3 bg-orange-700 text-white font-semibold rounded-lg hover:bg-orange-800 transition-colors"
             >
               {ui.routes.viewPage1}
             </Link>

@@ -71,7 +71,7 @@ export default async function WhyChooseUsPage() {
       <div className="text-center -mt-10 pt-20">
         <Link
           href="/compare"
-          className="text-orange-600 hover:text-orange-800 font-medium inline-flex items-center"
+          className="text-orange-700 hover:text-orange-800 font-medium inline-flex items-center"
         >
           {pageData.compareLink}
         </Link>

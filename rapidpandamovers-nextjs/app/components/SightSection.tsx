@@ -145,7 +145,7 @@ export default function SightSection({
 
                   {/* Content */}
                   <div className="p-5">
-                    <H3 className="text-lg font-bold text-gray-800 mb-2 group-hover:text-orange-600 transition-colors">
+                    <H3 className="text-lg font-bold text-gray-800 mb-2 group-hover:text-orange-700 transition-colors">
                       {sight.name}
                     </H3>
                     <p className="text-gray-600 text-sm mb-3 line-clamp-2">
@@ -166,7 +166,7 @@ export default function SightSection({
                         href={sight.website}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-orange-600 hover:text-orange-800 text-sm font-medium transition-colors"
+                        className="inline-flex items-center text-orange-700 hover:text-orange-800 text-sm font-medium transition-colors"
                       >
                         {ui.buttons.learnMore}
                         <ExternalLink className="w-3 h-3 ml-1" />

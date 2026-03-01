@@ -44,7 +44,7 @@ export default async function RelatedSection<T>({
                   className="bg-white rounded-2xl p-6 text-center hover:shadow-md transition-all group"
                 >
                   {renderItem(item)}
-                  <span className="text-orange-600 text-sm font-medium flex items-center justify-center mt-3">
+                  <span className="text-orange-700 text-sm font-medium flex items-center justify-center mt-3">
                     {ui.buttons.compare}
                     <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
                   </span>

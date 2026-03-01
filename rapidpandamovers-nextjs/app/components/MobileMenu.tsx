@@ -118,7 +118,7 @@ export default function MobileMenu({ nav, services, cities, locale, phoneTel, ph
 
         {/* Card panel */}
         <div
-          className={`absolute top-24 left-4 right-4 bg-white border-2 border-orange-600 rounded-4xl shadow-[0_8px_60px_-10px_rgba(0,0,0,0.4)] max-h-[calc(100dvh-7rem)] flex flex-col transform transition-all duration-300 ease-in-out ${
+          className={`absolute top-24 left-4 right-4 bg-white border-2 border-orange-700 rounded-4xl shadow-[0_8px_60px_-10px_rgba(0,0,0,0.4)] max-h-[calc(100dvh-7rem)] flex flex-col transform transition-all duration-300 ease-in-out ${
             isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
           }`}
         >
@@ -145,7 +145,7 @@ export default function MobileMenu({ nav, services, cities, locale, phoneTel, ph
               <Link
                 key={service.slug}
                 href={`/${service.slug}`}
-                className="block py-2.5 text-gray-600 hover:text-orange-600 transition-colors text-sm"
+                className="block py-2.5 text-gray-600 hover:text-orange-700 transition-colors text-sm"
               >
                 {service.name}
               </Link>
@@ -162,7 +162,7 @@ export default function MobileMenu({ nav, services, cities, locale, phoneTel, ph
               <Link
                 key={city.slug}
                 href={`/${city.slug}-movers`}
-                className="block py-2.5 text-gray-600 hover:text-orange-600 transition-colors text-sm"
+                className="block py-2.5 text-gray-600 hover:text-orange-700 transition-colors text-sm"
               >
                 {nameTemplate.replace('{name}', city.name)}
               </Link>
@@ -179,14 +179,14 @@ export default function MobileMenu({ nav, services, cities, locale, phoneTel, ph
               <Link
                 key={item.href}
                 href={item.href}
-                className="block py-2.5 text-gray-600 hover:text-orange-600 transition-colors text-sm"
+                className="block py-2.5 text-gray-600 hover:text-orange-700 transition-colors text-sm"
               >
                 {item.label}
               </Link>
             ))}
             <Link
               href={nav.header.compare.bottomLink.href}
-              className="block py-2.5 text-gray-600 hover:text-orange-600 transition-colors text-sm"
+              className="block py-2.5 text-gray-600 hover:text-orange-700 transition-colors text-sm"
             >
               {nav.header.compare.bottomLink.label}
             </Link>
@@ -202,14 +202,14 @@ export default function MobileMenu({ nav, services, cities, locale, phoneTel, ph
               <Link
                 key={item.href}
                 href={item.href}
-                className="block py-2.5 text-gray-600 hover:text-orange-600 transition-colors text-sm"
+                className="block py-2.5 text-gray-600 hover:text-orange-700 transition-colors text-sm"
               >
                 {item.label}
               </Link>
             ))}
             <Link
               href={nav.header.resources.bottomLink.href}
-              className="block py-2.5 text-gray-600 hover:text-orange-600 transition-colors text-sm"
+              className="block py-2.5 text-gray-600 hover:text-orange-700 transition-colors text-sm"
             >
               {nav.header.resources.bottomLink.label}
             </Link>
@@ -225,14 +225,14 @@ export default function MobileMenu({ nav, services, cities, locale, phoneTel, ph
               <Link
                 key={item.href}
                 href={item.href}
-                className="block py-2.5 text-gray-600 hover:text-orange-600 transition-colors text-sm"
+                className="block py-2.5 text-gray-600 hover:text-orange-700 transition-colors text-sm"
               >
                 {item.label}
               </Link>
             ))}
             <Link
               href={nav.header.company.bottomLink.href}
-              className="block py-2.5 text-gray-600 hover:text-orange-600 transition-colors text-sm"
+              className="block py-2.5 text-gray-600 hover:text-orange-700 transition-colors text-sm"
             >
               {nav.header.company.bottomLink.label}
             </Link>
@@ -249,7 +249,7 @@ export default function MobileMenu({ nav, services, cities, locale, phoneTel, ph
               <button
                 key={loc}
                 onClick={() => onLanguageChange(loc)}
-                className="block py-2.5 text-gray-600 hover:text-orange-600 transition-colors text-sm"
+                className="block py-2.5 text-gray-600 hover:text-orange-700 transition-colors text-sm"
               >
                 {languageNames[loc]}
               </button>
@@ -261,14 +261,14 @@ export default function MobileMenu({ nav, services, cities, locale, phoneTel, ph
             <a
               href={`tel:${phoneTel}`}
               aria-label={callAriaLabel}
-              className="flex items-center justify-center space-x-2 border border-orange-600 bg-orange-600 hover:bg-orange-700 hover:border-orange-600 text-white font-semibold py-3 px-4 rounded-lg transition-colors w-full text-shadow-sm"
+              className="flex items-center justify-center space-x-2 border border-orange-700 bg-orange-700 hover:bg-orange-800 hover:border-orange-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors w-full"
             >
               <PhoneIcon className="w-4 h-4" />
               <span>{phoneFormatted}</span>
             </a>
             <Link
               href="/quote"
-              className="flex items-center justify-center border border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white font-semibold py-3 px-4 rounded-lg transition-colors w-full"
+              className="flex items-center justify-center border border-orange-700 text-orange-700 hover:bg-orange-700 hover:text-white font-semibold py-3 px-4 rounded-lg transition-colors w-full"
             >
               {nav.header.cta.quoteButton}
             </Link>
@@ -298,7 +298,7 @@ function AccordionSection({
       <button
         onClick={onToggle}
         className={`flex items-center justify-between w-[calc(100%+1.5rem)] py-3 px-3 -mx-3 font-display font-semibold text-lg rounded-xl transition-colors duration-200 ${
-          isOpen ? 'bg-orange-100 text-orange-600' : 'text-gray-800'
+          isOpen ? 'bg-orange-100 text-orange-700' : 'text-gray-800'
         }`}
       >
         <span className="flex items-center gap-2">{icon}{stripDiacritics(title)}</span>

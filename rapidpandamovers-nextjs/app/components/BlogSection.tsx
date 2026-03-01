@@ -183,7 +183,7 @@ export default async function BlogSection({
                     </span>
                   )}
                   <H3 className="text-xl font-bold text-gray-800 mb-3">
-                    <Link href={`/blog/${post.slug}`} className="hover:text-orange-600 transition-colors">
+                    <Link href={`/blog/${post.slug}`} className="hover:text-orange-700 transition-colors">
                       {post.title}
                     </Link>
                   </H3>
@@ -194,7 +194,7 @@ export default async function BlogSection({
                   )}
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="text-orange-600 hover:text-orange-800 font-medium inline-flex items-center mt-auto"
+                    className="text-orange-700 hover:text-orange-800 font-medium inline-flex items-center mt-auto"
                     aria-label={`${ui?.blog?.readFullArticle || 'Read Full Article'}: ${post.title}`}
                   >
                     {ui?.blog?.readFullArticle || 'Read Full Article'}
@@ -208,7 +208,7 @@ export default async function BlogSection({
             <div className="flex flex-col gap-8">
               <div className="bg-orange-50 rounded-4xl p-6 md:p-8 flex flex-col flex-1">
                 <div className="flex-1">
-                  <BookOpen className="w-10 h-10 text-orange-500 mb-4" />
+                  <BookOpen className="w-10 h-10 text-orange-700 mb-4" />
                   <H3 className="text-2xl font-bold text-gray-800 mb-3">
                     {resolvedViewMoreTitle}
                   </H3>
@@ -218,7 +218,7 @@ export default async function BlogSection({
                 </div>
                 <Link
                   href={viewMoreLink}
-                  className="flex items-center justify-center gap-2 bg-orange-600 hover:bg-orange-700 text-white text-shadow-sm font-semibold py-3 px-6 rounded-lg transition-colors"
+                  className="flex items-center justify-center gap-2 bg-orange-700 hover:bg-orange-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
                 >
                   {resolvedViewMoreButtonText || ui?.blog?.browseAllArticles || 'Browse All Articles'}
                   <ArrowRight className="w-4 h-4" />
@@ -228,7 +228,7 @@ export default async function BlogSection({
               {showTipsCard && (
                 <div className="bg-orange-50 rounded-4xl p-6 md:p-8 flex flex-col flex-1">
                   <div className="flex-1">
-                    <Lightbulb className="w-10 h-10 text-orange-500 mb-4" />
+                    <Lightbulb className="w-10 h-10 text-orange-700 mb-4" />
                     <H3 className="text-2xl font-bold text-gray-800 mb-3">
                       {ui?.blog?.moreTips || 'More Tips'}
                     </H3>
@@ -238,7 +238,7 @@ export default async function BlogSection({
                   </div>
                   <Link
                     href={`/${getTranslatedSlug('moving-tips', locale)}`}
-                    className="flex items-center justify-center gap-2 bg-orange-600 hover:bg-orange-700 text-white text-shadow-sm font-semibold py-3 px-6 rounded-lg transition-colors"
+                    className="flex items-center justify-center gap-2 bg-orange-700 hover:bg-orange-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
                   >
                     {ui?.blog?.browseMovingTips || 'Browse Moving Tips'}
                     <ArrowRight className="w-4 h-4" />
@@ -272,7 +272,7 @@ export default async function BlogSection({
               {showViewMore && (
                 <Link
                   href={viewMoreLink}
-                  className="inline-flex items-center text-orange-600 hover:text-orange-800 font-semibold mt-4 md:mt-0"
+                  className="inline-flex items-center text-orange-700 hover:text-orange-800 font-semibold mt-4 md:mt-0"
                 >
                   {resolvedViewMoreButtonText || ui?.blog?.viewAllArticles || 'View All Articles'}
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -316,7 +316,7 @@ export default async function BlogSection({
         {/* Categories Filter */}
         {showCategories && !hideHeader && (
           <div className="flex flex-wrap justify-center gap-3 mb-12">
-            <button className="bg-orange-600 text-white text-shadow-sm px-4 py-2 rounded-full text-sm font-medium">
+            <button className="bg-orange-700 text-white px-4 py-2 rounded-full text-sm font-medium">
               {ui?.blog?.allPosts || 'All Posts'}
             </button>
             {categories.map((category) => (
@@ -347,7 +347,7 @@ export default async function BlogSection({
               className="bg-orange-50 rounded-4xl p-6 md:p-8 flex flex-col group"
             >
               <div className="flex-1">
-                <BookOpen className="w-10 h-10 text-orange-500 mb-4" />
+                <BookOpen className="w-10 h-10 text-orange-700 mb-4" />
                 <H3 className="text-xl font-bold text-gray-800 mb-3">
                   {resolvedViewMoreTitle}
                 </H3>
@@ -355,7 +355,7 @@ export default async function BlogSection({
                   {resolvedViewMoreSubtitle}
                 </p>
               </div>
-              <div className="flex items-center justify-center gap-2 bg-orange-600 hover:bg-orange-700 text-white text-shadow-sm font-semibold py-3 px-6 rounded-lg transition-colors">
+              <div className="flex items-center justify-center gap-2 bg-orange-700 hover:bg-orange-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
                 {resolvedViewMoreButtonText || ui?.blog?.browseAllArticles || 'Browse All Articles'}
                 <ArrowRight className="w-4 h-4" />
               </div>
@@ -368,7 +368,7 @@ export default async function BlogSection({
           <div className="text-center mt-12">
             <Link
               href={viewMoreLink}
-              className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white text-shadow-sm font-semibold py-3 px-8 rounded-lg transition-colors"
+              className="inline-flex items-center bg-orange-700 hover:bg-orange-800 text-white font-semibold py-3 px-8 rounded-lg transition-colors"
             >
               {resolvedViewMoreButtonText}
               <ArrowRight className="w-5 h-5 ml-2" />

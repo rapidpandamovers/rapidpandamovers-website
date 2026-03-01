@@ -234,13 +234,13 @@ export default function ReviewSection({
               <div key={review.id} className="bg-gray-50 rounded-4xl p-6 md:p-8 flex flex-col">
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center text-white text-shadow-sm font-bold text-lg shadow-sm">
+                    <div className="w-12 h-12 bg-orange-700 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-sm">
                       {review.author.charAt(0)}
                     </div>
                     <div>
                       <div className="flex items-center gap-2">
                         <p className="font-semibold text-gray-900">{review.author}</p>
-                        {review.verified && <BadgeCheck className="w-4 h-4 text-orange-500" />}
+                        {review.verified && <BadgeCheck className="w-4 h-4 text-orange-700" />}
                       </div>
                       <p className="text-sm text-gray-500">{formatDate(review.date)}</p>
                     </div>
@@ -260,7 +260,7 @@ export default function ReviewSection({
             {/* CTA Box */}
             <div className="bg-orange-50 rounded-4xl p-6 md:p-8 flex flex-col">
               <div className="flex-1">
-                <MessageSquare className="w-10 h-10 text-orange-500 mb-4" />
+                <MessageSquare className="w-10 h-10 text-orange-700 mb-4" />
                 <H3 className="text-2xl font-bold text-gray-800 mb-3">
                   {ui.review.ctaTitle}
                 </H3>
@@ -270,7 +270,7 @@ export default function ReviewSection({
               </div>
               <Link
                 href={reviewsPath}
-                className="flex items-center justify-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-shadow-sm"
+                className="flex items-center justify-center gap-2 bg-orange-700 hover:bg-orange-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
               >
                 {ui.buttons.viewAllReviews}
                 <ArrowRight className="w-4 h-4" />
@@ -304,7 +304,7 @@ export default function ReviewSection({
               {showAllLink && (
                 <Link
                   href={reviewsPath}
-                  className="inline-flex items-center text-orange-600 hover:text-orange-800 font-semibold mt-4 md:mt-0"
+                  className="inline-flex items-center text-orange-700 hover:text-orange-800 font-semibold mt-4 md:mt-0"
                 >
                   {ui.buttons.viewAllReviews}
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -349,8 +349,8 @@ export default function ReviewSection({
               onClick={() => setSelectedPlatform(null)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                 selectedPlatform === null
-                  ? 'bg-orange-600 text-white text-shadow-sm'
-                  : 'bg-white text-gray-700 hover:bg-orange-50 hover:text-orange-600'
+                  ? 'bg-orange-700 text-white'
+                  : 'bg-white text-gray-700 hover:bg-orange-50 hover:text-orange-700'
               }`}
             >
               {ui.review.allReviews}
@@ -361,8 +361,8 @@ export default function ReviewSection({
                 onClick={() => setSelectedPlatform(platform)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors flex items-center gap-2 ${
                   selectedPlatform === platform
-                    ? 'bg-orange-600 text-white text-shadow-sm'
-                    : 'bg-white text-gray-700 hover:bg-orange-50 hover:text-orange-600'
+                    ? 'bg-orange-700 text-white'
+                    : 'bg-white text-gray-700 hover:bg-orange-50 hover:text-orange-700'
                 }`}
               >
                 <PlatformIcon platform={platform} />
@@ -391,13 +391,13 @@ export default function ReviewSection({
               <>
                 <button
                   onClick={prevSlide}
-                  className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-orange-600 hover:bg-orange-700 text-white p-2 rounded-full shadow-lg transition-colors text-shadow-sm"
+                  className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-orange-700 hover:bg-orange-800 text-white p-2 rounded-full shadow-lg transition-colors"
                 >
                   <ChevronLeft className="w-6 h-6" />
                 </button>
                 <button
                   onClick={nextSlide}
-                  className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-orange-600 hover:bg-orange-700 text-white p-2 rounded-full shadow-lg transition-colors text-shadow-sm"
+                  className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-orange-700 hover:bg-orange-800 text-white p-2 rounded-full shadow-lg transition-colors"
                 >
                   <ChevronRight className="w-6 h-6" />
                 </button>
@@ -420,7 +420,7 @@ export default function ReviewSection({
               {currentPage > 1 ? (
                 <button
                   onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
-                  className="flex items-center px-2 py-2 md:px-4 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600 transition-colors"
+                  className="flex items-center px-2 py-2 md:px-4 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-700 hover:text-orange-700 transition-colors"
                 >
                   <ChevronLeft className="w-4 h-4 md:mr-1" />
                   <span className="hidden md:inline">{ui.pagination.previous}</span>
@@ -478,8 +478,8 @@ export default function ReviewSection({
                         onClick={() => setCurrentPage(page)}
                         className={`w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-lg font-medium text-sm md:text-base transition-colors ${
                           currentPage === page
-                            ? 'bg-orange-600 text-white text-shadow-sm'
-                            : 'bg-white border border-gray-300 text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600'
+                            ? 'bg-orange-700 text-white'
+                            : 'bg-white border border-gray-300 text-gray-700 hover:bg-orange-50 hover:border-orange-700 hover:text-orange-700'
                         }`}
                       >
                         {page}
@@ -493,7 +493,7 @@ export default function ReviewSection({
               {currentPage < totalPages ? (
                 <button
                   onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
-                  className="flex items-center px-2 py-2 md:px-4 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600 transition-colors"
+                  className="flex items-center px-2 py-2 md:px-4 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-700 hover:text-orange-700 transition-colors"
                 >
                   <span className="hidden md:inline">{ui.pagination.next}</span>
                   <ChevronRight className="w-4 h-4 md:ml-1" />
@@ -518,7 +518,7 @@ export default function ReviewSection({
           <div className="text-center mt-12">
             <Link
               href={reviewsPath}
-              className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors text-shadow-sm"
+              className="inline-flex items-center bg-orange-700 hover:bg-orange-800 text-white font-semibold py-3 px-8 rounded-lg transition-colors"
             >
               {ui.review.viewAllReviews}
               <ArrowRight className="w-5 h-5 ml-2" />
@@ -562,14 +562,14 @@ function ReviewCard({
       {/* Header */}
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center text-white text-shadow-sm font-bold text-lg shadow-sm">
+          <div className="w-12 h-12 bg-orange-700 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-sm">
             {review.author.charAt(0)}
           </div>
           <div>
             <div className="flex items-center gap-2">
               <p className="font-semibold text-gray-900">{review.author}</p>
               {review.verified && (
-                <BadgeCheck className="w-4 h-4 text-orange-500" />
+                <BadgeCheck className="w-4 h-4 text-orange-700" />
               )}
             </div>
             <p className="text-sm text-gray-500">{formatDate(review.date)}</p>
@@ -593,7 +593,7 @@ function ReviewCard({
           {needsTruncation && (
             <button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="text-orange-600 hover:text-orange-800 text-sm font-medium flex items-center gap-1 transition-colors"
+              className="text-orange-700 hover:text-orange-800 text-sm font-medium flex items-center gap-1 transition-colors"
             >
               {isExpanded ? (
                 <>
@@ -623,7 +623,7 @@ function ReviewCard({
       {(review.services?.length > 0 || review.location?.city) && (
         <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-gray-100">
           {review.services?.map((svc: string, idx: number) => (
-            <span key={idx} className="text-xs bg-orange-50 text-orange-600 px-2.5 py-1 rounded-full font-medium">
+            <span key={idx} className="text-xs bg-orange-50 text-orange-700 px-2.5 py-1 rounded-full font-medium">
               {svc.replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase())}
             </span>
           ))}

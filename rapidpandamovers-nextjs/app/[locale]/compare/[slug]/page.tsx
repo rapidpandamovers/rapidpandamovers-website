@@ -110,7 +110,7 @@ export default async function ComparisonPage({ params }: PageProps) {
 
       {/* Why Choose Us */}
       <WhySection
-        title={<>{ui.compare.whyChooseRapidPandaBefore}<span className="text-orange-600">{ui.compare.whyChooseRapidPandaHighlight}</span>{ui.compare.whyChooseRapidPandaAfter}</>}
+        title={<>{ui.compare.whyChooseRapidPandaBefore}<span className="text-orange-700">{ui.compare.whyChooseRapidPandaHighlight}</span>{ui.compare.whyChooseRapidPandaAfter}</>}
         benefits={comparison.why_choose_us}
         ctaText={ui.compare.seeWhyDifferent}
       />
@@ -129,7 +129,7 @@ export default async function ComparisonPage({ params }: PageProps) {
         basePath={`/${compareSlug}`}
         getSlug={(c: any) => c.slug}
         renderItem={(c: any) => (
-          <h4 className="font-semibold text-gray-800 group-hover:text-orange-600 transition-colors">
+          <h4 className="font-semibold text-gray-800 group-hover:text-orange-700 transition-colors">
             vs {c.competitor.name}
           </h4>
         )}

@@ -39,7 +39,7 @@ export default async function ProblemSection({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto">
           {problems.map((problem, index) => (
             <div key={index} className="bg-black rounded-4xl p-6 md:p-8 flex items-start space-x-4">
-              <AlertCircle className="w-6 h-6 text-orange-500 flex-shrink-0 mt-1" />
+              <AlertCircle className="w-6 h-6 text-orange-700 flex-shrink-0 mt-1" />
               <div>
                 <H3 className="text-xl font-bold text-white mb-2">{problem.title}</H3>
                 <p className="text-gray-300">{problem.description}</p>

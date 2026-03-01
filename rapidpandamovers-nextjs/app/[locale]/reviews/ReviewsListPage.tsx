@@ -7,7 +7,6 @@ import reviewsData from '@/data/reviews.json'
 import { useMessages, useLocale } from 'next-intl'
 import { getTranslatedSlug } from '@/i18n/slug-map'
 import type { Locale } from '@/i18n/config'
-import Hero from '@/app/components/Hero'
 import { PlatformIcon } from '@/app/components/ReviewSection'
 
 export const REVIEWS_PER_PAGE = 9
@@ -22,8 +21,6 @@ export default function ReviewsListPage({ currentPage, platform }: ReviewsListPa
   const { content, ui } = useMessages() as any
   const locale = useLocale()
   const dateLocale = locale === 'es' ? 'es-US' : 'en-US'
-  const { reviews: reviewsContent } = content
-
   // Get all reviews sorted by ID descending (newest first)
   const allReviews = useMemo(() => {
     let reviews = reviewsData.reviews
@@ -104,13 +101,6 @@ export default function ReviewsListPage({ currentPage, platform }: ReviewsListPa
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <Hero
-        title={reviewsContent.title}
-        description={reviewsContent.description}
-        cta={reviewsContent.hero.cta}
-      />
-
       {/* Reviews Section */}
       <section className="pt-20">
         <div className="container mx-auto">
@@ -121,7 +111,7 @@ export default function ReviewsListPage({ currentPage, platform }: ReviewsListPa
               href={`/${reviewsSlug}`}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                 !platform
-                  ? 'bg-orange-600 text-white text-shadow-sm'
+                  ? 'bg-orange-700 text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -133,7 +123,7 @@ export default function ReviewsListPage({ currentPage, platform }: ReviewsListPa
                 href={`/${reviewsSlug}/${p}`}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors flex items-center gap-2 ${
                   platform === p
-                    ? 'bg-orange-600 text-white text-shadow-sm'
+                    ? 'bg-orange-700 text-white'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -157,7 +147,7 @@ export default function ReviewsListPage({ currentPage, platform }: ReviewsListPa
                 {currentPage > 1 ? (
                   <Link
                     href={getPageUrl(currentPage - 1)}
-                    className="flex items-center px-2 py-2 md:px-4 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600 transition-colors"
+                    className="flex items-center px-2 py-2 md:px-4 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-700 hover:text-orange-700 transition-colors"
                   >
                     <ChevronLeft className="w-4 h-4 md:mr-1" />
                     <span className="hidden md:inline">{ui.pagination.previous}</span>
@@ -181,8 +171,8 @@ export default function ReviewsListPage({ currentPage, platform }: ReviewsListPa
                         href={getPageUrl(page)}
                         className={`w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-lg font-medium text-sm md:text-base transition-colors ${
                           currentPage === page
-                            ? 'bg-orange-600 text-white text-shadow-sm'
-                            : 'bg-white border border-gray-300 text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600'
+                            ? 'bg-orange-700 text-white'
+                            : 'bg-white border border-gray-300 text-gray-700 hover:bg-orange-50 hover:border-orange-700 hover:text-orange-700'
                         }`}
                       >
                         {page}
@@ -194,7 +184,7 @@ export default function ReviewsListPage({ currentPage, platform }: ReviewsListPa
                 {currentPage < totalPages ? (
                   <Link
                     href={getPageUrl(currentPage + 1)}
-                    className="flex items-center px-2 py-2 md:px-4 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600 transition-colors"
+                    className="flex items-center px-2 py-2 md:px-4 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-700 hover:text-orange-700 transition-colors"
                   >
                     <span className="hidden md:inline">{ui.pagination.next}</span>
                     <ChevronRight className="w-4 h-4 md:ml-1" />
@@ -250,14 +240,14 @@ function ReviewCard({
       {/* Header */}
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center text-white text-shadow-sm font-bold text-lg shadow-sm">
+          <div className="w-12 h-12 bg-orange-700 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-sm">
             {review.author.charAt(0)}
           </div>
           <div>
             <div className="flex items-center gap-2">
               <h4 className="font-semibold text-gray-900">{review.author}</h4>
               {review.verified && (
-                <BadgeCheck className="w-4 h-4 text-orange-500" />
+                <BadgeCheck className="w-4 h-4 text-orange-700" />
               )}
             </div>
             <p className="text-sm text-gray-500">{formatDate(review.date)}</p>
@@ -274,7 +264,7 @@ function ReviewCard({
           <Star
             key={i}
             className={`w-4 h-4 ${
-              i < review.rating ? 'text-orange-600 fill-current' : 'text-gray-200'
+              i < review.rating ? 'text-orange-700 fill-current' : 'text-gray-200'
             }`}
           />
         ))}
@@ -290,7 +280,7 @@ function ReviewCard({
           {needsTruncation && (
             <button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="text-orange-600 hover:text-orange-800 text-sm font-medium flex items-center gap-1 transition-colors"
+              className="text-orange-700 hover:text-orange-800 text-sm font-medium flex items-center gap-1 transition-colors"
             >
               {isExpanded ? (
                 <>
@@ -320,7 +310,7 @@ function ReviewCard({
       {(review.services?.length > 0 || review.location?.city) && (
         <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-gray-100">
           {review.services?.map((svc: string, idx: number) => (
-            <span key={idx} className="text-xs bg-orange-50 text-orange-600 px-2.5 py-1 rounded-full font-medium">
+            <span key={idx} className="text-xs bg-orange-50 text-orange-700 px-2.5 py-1 rounded-full font-medium">
               {svc.replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase())}
             </span>
           ))}

@@ -195,7 +195,7 @@ export default async function BlogListPage({ currentPage, category = null, locat
             {currentPage > 1 ? (
               <Link
                 href={getPageUrl(currentPage - 1)}
-                className="flex items-center px-2 py-2 md:px-4 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600 transition-colors"
+                className="flex items-center px-2 py-2 md:px-4 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-700 hover:text-orange-700 transition-colors"
               >
                 <ChevronLeft className="w-4 h-4 md:mr-1" />
                 <span className="hidden md:inline">{ui?.pagination?.previous || 'Previous'}</span>
@@ -219,8 +219,8 @@ export default async function BlogListPage({ currentPage, category = null, locat
                     href={getPageUrl(page as number)}
                     className={`w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-lg font-medium text-sm md:text-base transition-colors ${
                       currentPage === page
-                        ? 'bg-orange-600 text-white text-shadow-sm'
-                        : 'bg-white border border-gray-300 text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600'
+                        ? 'bg-orange-700 text-white'
+                        : 'bg-white border border-gray-300 text-gray-700 hover:bg-orange-50 hover:border-orange-700 hover:text-orange-700'
                     }`}
                   >
                     {page}
@@ -232,7 +232,7 @@ export default async function BlogListPage({ currentPage, category = null, locat
             {currentPage < totalPages ? (
               <Link
                 href={getPageUrl(currentPage + 1)}
-                className="flex items-center px-2 py-2 md:px-4 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600 transition-colors"
+                className="flex items-center px-2 py-2 md:px-4 rounded-lg border border-gray-300 bg-white text-gray-700 hover:bg-orange-50 hover:border-orange-700 hover:text-orange-700 transition-colors"
               >
                 <span className="hidden md:inline">{ui?.pagination?.next || 'Next'}</span>
                 <ChevronRight className="w-4 h-4 md:ml-1" />

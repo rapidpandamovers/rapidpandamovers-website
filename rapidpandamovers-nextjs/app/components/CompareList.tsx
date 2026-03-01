@@ -36,16 +36,16 @@ export default async function CompareList<T>({
           </p>
         </div>
 
-        <div className="bg-gray-50 rounded-4xl p-6 md:p-8">
+        <div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {items.map((item) => (
               <Link
                 key={getSlug(item)}
                 href={`${basePath}/${getSlug(item)}`}
-                className="bg-white rounded-2xl p-6 hover:shadow-md transition-all group"
+                className="bg-gray-50 rounded-2xl p-6 hover:shadow-md transition-all group"
               >
                 {renderCard(item)}
-                <div className="flex items-center text-orange-600 font-medium">
+                <div className="flex items-center text-orange-700 font-medium">
                   {ctaText}
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>

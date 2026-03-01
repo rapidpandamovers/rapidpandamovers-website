@@ -23,14 +23,14 @@ export async function generateMetadata() {
 }
 
 const typeIcons: Record<string, React.ReactNode> = {
-  'Container/Pod Service': <Package className="w-8 h-8 text-orange-500" />,
-  'Servicio de Contenedores/Pods': <Package className="w-8 h-8 text-orange-500" />,
-  'Truck Rental Service': <Truck className="w-8 h-8 text-orange-500" />,
-  'Servicio de Alquiler de Camiones': <Truck className="w-8 h-8 text-orange-500" />,
-  'Labor-Only Service': <Users className="w-8 h-8 text-orange-500" />,
-  'Servicio de Solo Mano de Obra': <Users className="w-8 h-8 text-orange-500" />,
-  'Freight/Container Service': <Package className="w-8 h-8 text-orange-500" />,
-  'Servicio de Carga/Contenedores': <Package className="w-8 h-8 text-orange-500" />,
+  'Container/Pod Service': <Package className="w-8 h-8 text-orange-700" />,
+  'Servicio de Contenedores/Pods': <Package className="w-8 h-8 text-orange-700" />,
+  'Truck Rental Service': <Truck className="w-8 h-8 text-orange-700" />,
+  'Servicio de Alquiler de Camiones': <Truck className="w-8 h-8 text-orange-700" />,
+  'Labor-Only Service': <Users className="w-8 h-8 text-orange-700" />,
+  'Servicio de Solo Mano de Obra': <Users className="w-8 h-8 text-orange-700" />,
+  'Freight/Container Service': <Package className="w-8 h-8 text-orange-700" />,
+  'Servicio de Carga/Contenedores': <Package className="w-8 h-8 text-orange-700" />,
 };
 
 export default async function AlternativesPage() {
@@ -48,13 +48,13 @@ export default async function AlternativesPage() {
       />
 
       {/* Introduction */}
-      <OverviewSection title={<>{content.alternatives.overview.titleBefore}<span className="text-orange-600">{content.alternatives.overview.titleHighlight}</span></>}>
+      <OverviewSection title={<>{content.alternatives.overview.titleBefore}<span className="text-orange-700">{content.alternatives.overview.titleHighlight}</span></>}>
         <p className="text-xl text-gray-600 mb-8">
           {content.alternatives.overview.description}
         </p>
         <div className="bg-orange-50 rounded-xl p-6 text-left">
           <H3 className="font-bold text-gray-800 mb-3 flex items-center">
-            <HelpCircle className="w-5 h-5 text-orange-500 mr-2" />
+            <HelpCircle className="w-5 h-5 text-orange-700 mr-2" />
             {content.alternatives.overview.tipTitle}
           </H3>
           <p className="text-gray-700" dangerouslySetInnerHTML={{ __html: content.alternatives.overview.tipContent }} />
@@ -63,7 +63,7 @@ export default async function AlternativesPage() {
 
       {/* Alternatives Grid */}
       <CompareList
-        title={<>{content.alternatives.compareList.titleBefore}<span className="text-orange-600">{content.alternatives.compareList.titleHighlight}</span></>}
+        title={<>{content.alternatives.compareList.titleBefore}<span className="text-orange-700">{content.alternatives.compareList.titleHighlight}</span></>}
         subtitle={content.alternatives.compareList.subtitle}
         items={alternativesData}
         basePath={`/${alternativesSlug}`}
@@ -72,12 +72,12 @@ export default async function AlternativesPage() {
         renderCard={(alt: any) => (
           <>
             <div className="flex items-center justify-between mb-4">
-              {typeIcons[alt.alternative.type] || <Package className="w-8 h-8 text-orange-500" />}
+              {typeIcons[alt.alternative.type] || <Package className="w-8 h-8 text-orange-700" />}
               <span className="text-xs bg-gray-100 px-3 py-1 rounded-full text-gray-600">
                 {alt.alternative.type}
               </span>
             </div>
-            <H3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-orange-600 transition-colors">
+            <H3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-orange-700 transition-colors">
               {alt.alternative.name}
             </H3>
             <p className="text-gray-600 text-sm mb-4 line-clamp-2">

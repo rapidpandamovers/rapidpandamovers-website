@@ -62,9 +62,9 @@ export default async function LocationSection({ city, title, description, varian
                 href={`/${getTranslatedSlug(`${neighborhood.slug}-movers`, locale)}`}
                 className="bg-gray-50 rounded-2xl p-5 flex items-center gap-3 hover:bg-orange-50 transition-colors group"
               >
-                <MapPin className="w-5 h-5 text-orange-500 flex-shrink-0" />
+                <MapPin className="w-5 h-5 text-orange-700 flex-shrink-0" />
                 <div>
-                  <span className="font-medium text-gray-800 group-hover:text-orange-600 transition-colors">
+                  <span className="font-medium text-gray-800 group-hover:text-orange-700 transition-colors">
                     {neighborhood.name}
                   </span>
                   {neighborhood.zip_codes && neighborhood.zip_codes.length > 0 && (
@@ -109,8 +109,8 @@ export default async function LocationSection({ city, title, description, varian
                 href={`/${getTranslatedSlug(`${city.slug}-movers`, locale)}`}
                 className="bg-gray-50 rounded-2xl p-5 flex items-center gap-3 hover:bg-orange-50 transition-colors group"
               >
-                <MapPin className="w-5 h-5 text-orange-500 flex-shrink-0" />
-                <span className="font-medium text-gray-800 group-hover:text-orange-600 transition-colors">
+                <MapPin className="w-5 h-5 text-orange-700 flex-shrink-0" />
+                <span className="font-medium text-gray-800 group-hover:text-orange-700 transition-colors">
                   {city.name}
                 </span>
               </Link>
@@ -120,7 +120,7 @@ export default async function LocationSection({ city, title, description, varian
           {remainingCount > 0 && (
             <Link
               href={`/${locationsSlug}`}
-              className="block bg-orange-50 rounded-2xl py-6 px-6 md:px-0 mt-4 text-center text-orange-600 hover:bg-orange-100 font-semibold text-lg transition-colors"
+              className="block bg-orange-50 rounded-2xl py-6 px-6 md:px-0 mt-4 text-center text-orange-700 hover:bg-orange-100 font-semibold text-lg transition-colors"
             >
               {ui.location.moreAreas}
             </Link>
@@ -154,7 +154,7 @@ export default async function LocationSection({ city, title, description, varian
               </div>
               <Link
                 href={`/${locationsSlug}`}
-                className="inline-flex items-center text-orange-600 hover:text-orange-800 font-semibold mt-4 md:mt-0"
+                className="inline-flex items-center text-orange-700 hover:text-orange-800 font-semibold mt-4 md:mt-0"
               >
                 {ui.location.viewAll}
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -169,8 +169,8 @@ export default async function LocationSection({ city, title, description, varian
                 href={`/${getTranslatedSlug(`${city.slug}-movers`, locale)}`}
                 className="bg-gray-50 rounded-2xl p-5 flex items-center gap-3 hover:bg-orange-50 transition-colors group"
               >
-                <MapPin className="w-5 h-5 text-orange-500 flex-shrink-0" />
-                <span className="font-medium text-gray-800 group-hover:text-orange-600 transition-colors">
+                <MapPin className="w-5 h-5 text-orange-700 flex-shrink-0" />
+                <span className="font-medium text-gray-800 group-hover:text-orange-700 transition-colors">
                   {city.name}
                 </span>
               </Link>
@@ -180,7 +180,7 @@ export default async function LocationSection({ city, title, description, varian
           {remainingCount > 0 && (
             <Link
               href={`/${locationsSlug}`}
-              className="block bg-orange-50 rounded-2xl py-6 px-6 md:px-0 mt-4 text-center text-orange-600 hover:bg-orange-100 font-semibold text-lg transition-colors"
+              className="block bg-orange-50 rounded-2xl py-6 px-6 md:px-0 mt-4 text-center text-orange-700 hover:bg-orange-100 font-semibold text-lg transition-colors"
             >
               {ui.location.moreAreas}
             </Link>
@@ -214,8 +214,8 @@ export default async function LocationSection({ city, title, description, varian
               href={`/${getTranslatedSlug(`${city.slug}-movers`, locale)}`}
               className="bg-gray-50 rounded-2xl p-5 flex items-center gap-3 hover:bg-orange-50 transition-colors group"
             >
-              <MapPin className="w-5 h-5 text-orange-500 flex-shrink-0" />
-              <span className="font-medium text-gray-800 group-hover:text-orange-600 transition-colors">
+              <MapPin className="w-5 h-5 text-orange-700 flex-shrink-0" />
+              <span className="font-medium text-gray-800 group-hover:text-orange-700 transition-colors">
                 {city.name}
               </span>
             </Link>

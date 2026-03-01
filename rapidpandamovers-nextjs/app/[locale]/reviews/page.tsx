@@ -1,6 +1,7 @@
 import ReviewsListPage from './ReviewsListPage'
 import QuoteSection from '@/app/components/QuoteSection'
 import ReviewSchema from '@/app/components/Schema/ReviewSchema'
+import Hero from '@/app/components/Hero'
 import reviewsData from '@/data/reviews.json'
 import { getMessages, getLocale } from 'next-intl/server'
 import { generatePageMetadata } from '@/lib/metadata'
@@ -27,6 +28,11 @@ export default async function ReviewsPage() {
         ratingValue={reviewsData.stats.averageRating.toString()}
         reviewCount={reviewsData.stats.totalReviews.toString()}
         locale={locale}
+      />
+      <Hero
+        title={content.reviews.title}
+        description={content.reviews.description}
+        cta={content.reviews.hero.cta}
       />
       <ReviewsListPage currentPage={1} />
       <QuoteSection

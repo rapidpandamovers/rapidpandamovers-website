@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import ReviewsListPage from '../ReviewsListPage'
 import QuoteSection from '@/app/components/QuoteSection'
+import Hero from '@/app/components/Hero'
 import reviewsData from '@/data/reviews.json'
 import { locales, type Locale } from '@/i18n/config'
 import { getMessages, getLocale } from 'next-intl/server'
@@ -48,6 +49,11 @@ export default async function ReviewsPlatformPage({
 
   return (
     <>
+      <Hero
+        title={content.reviews.title}
+        description={content.reviews.description}
+        cta={content.reviews.hero.cta}
+      />
       <ReviewsListPage currentPage={1} platform={slug} />
       <QuoteSection
         title={content.reviews.quote.title}

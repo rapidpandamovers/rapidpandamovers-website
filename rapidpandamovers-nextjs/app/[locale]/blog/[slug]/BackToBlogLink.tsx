@@ -52,7 +52,7 @@ export default function BackToBlogLink() {
     <a
       href={backUrl}
       onClick={handleClick}
-      className="inline-flex items-center text-orange-600 hover:text-orange-800 mb-0 transition-colors cursor-pointer"
+      className="inline-flex items-center text-orange-700 hover:text-orange-800 mb-0 transition-colors cursor-pointer"
     >
       <ArrowLeft className="w-4 h-4 mr-2" />
       {ui?.blog?.backToBlog || 'Back to Blog'}

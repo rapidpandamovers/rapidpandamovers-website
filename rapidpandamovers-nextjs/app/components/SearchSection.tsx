@@ -179,15 +179,15 @@ export default function SearchSection({
     switch (type) {
       case 'city':
       case 'neighborhood':
-        return <MapPin className="w-5 h-5 text-orange-500" />;
+        return <MapPin className="w-5 h-5 text-orange-700" />;
       case 'service':
-        return <Truck className="w-5 h-5 text-orange-500" />;
+        return <Truck className="w-5 h-5 text-orange-700" />;
       case 'route':
-        return <Navigation className="w-5 h-5 text-orange-500" />;
+        return <Navigation className="w-5 h-5 text-orange-700" />;
       case 'blog':
-        return <FileText className="w-5 h-5 text-orange-500" />;
+        return <FileText className="w-5 h-5 text-orange-700" />;
       default:
-        return <Search className="w-5 h-5 text-orange-500" />;
+        return <Search className="w-5 h-5 text-orange-700" />;
     }
   };
 

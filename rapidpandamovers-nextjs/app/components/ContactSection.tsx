@@ -108,21 +108,21 @@ export default function ContactSection({
                     className="flex items-start group p-4 -m-4 rounded-xl"
                   >
                     <div className="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mr-4 group-hover:bg-orange-200 transition-colors flex-shrink-0">
-                      <IconComponent className="w-6 h-6 text-orange-500" />
+                      <IconComponent className="w-6 h-6 text-orange-700" />
                     </div>
                     <div className="flex-1 min-w-0">
                       <h4 className="font-semibold text-gray-800 mb-1">{item.title}</h4>
                       <p className="text-gray-700 font-medium break-words">{item.value}</p>
                       <p className="text-sm text-gray-500 mt-1">{item.description}</p>
                     </div>
-                    <ArrowRight className="w-5 h-5 text-gray-300 group-hover:text-orange-600 group-hover:translate-x-1 transition-all mt-4 flex-shrink-0" />
+                    <ArrowRight className="w-5 h-5 text-gray-300 group-hover:text-orange-700 group-hover:translate-x-1 transition-all mt-4 flex-shrink-0" />
                   </a>
                 )
               })}
             </div>
 
             {/* Business Hours */}
-            <div className="bg-orange-600 rounded-2xl p-6 mt-6 md:mt-12 pt-6 text-white text-shadow-sm">
+            <div className="bg-orange-700 rounded-2xl p-6 mt-6 md:mt-12 pt-6 text-white">
               <div className="flex items-center mb-4">
                 <Clock className="w-6 h-6 mr-3" />
                 <h4 className="text-lg font-semibold">{ui.contact.hoursTitle}</h4>
@@ -152,7 +152,7 @@ export default function ContactSection({
                   <p className="text-gray-600 mb-6">{ui.messages.contactSuccess.description}</p>
                   <button
                     onClick={() => setSubmitStatus('idle')}
-                    className="text-orange-600 hover:text-orange-800 font-medium"
+                    className="text-orange-700 hover:text-orange-800 font-medium"
                   >
                     {ui.buttons.sendAnother}
                   </button>
@@ -224,7 +224,7 @@ export default function ContactSection({
                   <button
                     type="submit"
                     disabled={isSubmitting || !turnstileToken}
-                    className="w-full bg-orange-600 hover:bg-orange-700 disabled:bg-orange-300 text-white text-shadow-sm font-semibold py-4 px-6 rounded-lg transition-colors flex items-center justify-center"
+                    className="w-full bg-orange-700 hover:bg-orange-800 disabled:bg-orange-300 text-white font-semibold py-4 px-6 rounded-lg transition-colors flex items-center justify-center"
                   >
                     {isSubmitting ? (
                       <>

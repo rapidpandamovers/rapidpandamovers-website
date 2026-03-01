@@ -33,11 +33,11 @@
   }
 
   .btn-primary {
-    @apply bg-orange-600 hover:bg-orange-700 text-white font-medium py-3 px-6 rounded-lg transition-colors text-shadow-sm;
+    @apply bg-orange-700 hover:bg-orange-800 text-white font-medium py-3 px-6 rounded-lg transition-colors;
   }
 
   .btn-secondary {
-    @apply bg-white hover:bg-gray-100 text-orange-600 font-medium py-3 px-6 rounded-lg transition-colors;
+    @apply bg-white hover:bg-gray-100 text-orange-700 font-medium py-3 px-6 rounded-lg transition-colors;
   }
   
   .gradient-text {
@@ -51,10 +51,6 @@
     @media (width >= 80rem) {
       max-width: 80rem;
     }
-  }
-
-  .text-shadow-sm {
-    text-shadow: 0 1px 12px rgba(124, 45, 18, 1);
   }
 
   .cv-auto {

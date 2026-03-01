@@ -55,7 +55,7 @@ export default async function IncludedSection({
               return (
                 <div key={index} className="bg-white rounded-2xl p-6 text-center">
                   <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="w-6 h-6 text-orange-500" />
+                    <IconComponent className="w-6 h-6 text-orange-700" />
                   </div>
                   <H3 className="font-bold text-gray-800 mb-2">{item.title}</H3>
                   {item.desc && <p className="text-gray-600 text-sm">{item.desc}</p>}

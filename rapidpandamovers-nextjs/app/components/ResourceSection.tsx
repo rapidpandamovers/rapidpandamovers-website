@@ -69,7 +69,7 @@ export default async function ResourceSection({
                 href={resource.href}
                 className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-xl hover:bg-orange-50 transition-colors"
               >
-                <span className="text-orange-600"><ResourceIcon name={resource.icon} /></span>
+                <span className="text-orange-700"><ResourceIcon name={resource.icon} /></span>
                 <span className="font-medium text-gray-800">{resource.title}</span>
               </Link>
             ))}
@@ -95,11 +95,11 @@ export default async function ResourceSection({
                   href={resource.href}
                   className="group flex items-center gap-4 bg-white rounded-2xl p-5 hover:bg-orange-50 transition-colors"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center text-orange-600 group-hover:bg-orange-700 group-hover:text-white transition-colors">
+                  <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center text-orange-700 group-hover:bg-orange-800 group-hover:text-white transition-colors">
                     <ResourceIcon name={resource.icon} />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <H3 className="font-semibold text-gray-800 group-hover:text-orange-600 transition-colors">
+                    <H3 className="font-semibold text-gray-800 group-hover:text-orange-700 transition-colors">
                       {resource.title}
                     </H3>
                     <p className="text-sm text-gray-600 truncate">{resource.description}</p>
@@ -129,16 +129,16 @@ export default async function ResourceSection({
                 href={resource.href}
                 className="group flex items-center gap-4 bg-white rounded-2xl p-5 hover:bg-orange-50 transition-colors"
               >
-                <div className="flex-shrink-0 w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center text-orange-600 group-hover:bg-orange-700 group-hover:text-white transition-colors">
+                <div className="flex-shrink-0 w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center text-orange-700 group-hover:bg-orange-800 group-hover:text-white transition-colors">
                   <ResourceIcon name={resource.icon} />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <H3 className="font-semibold text-gray-800 group-hover:text-orange-600 transition-colors">
+                  <H3 className="font-semibold text-gray-800 group-hover:text-orange-700 transition-colors">
                     {resource.title}
                   </H3>
                   <p className="text-sm text-gray-500 truncate">{resource.description}</p>
                 </div>
-                <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-orange-600 group-hover:translate-x-1 transition-all flex-shrink-0" />
+                <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-orange-700 group-hover:translate-x-1 transition-all flex-shrink-0" />
               </Link>
             ))}
           </div>

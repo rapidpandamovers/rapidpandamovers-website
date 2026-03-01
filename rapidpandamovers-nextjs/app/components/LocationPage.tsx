@@ -118,7 +118,7 @@ export default async function LocationPage({ city }: LocationPageProps) {
 
       {/* Content Section */}
       <OverviewSection
-        title={<>{ui.location.professionalServicesIn.split('{name}')[0]}<span className="text-orange-600">{city.name}</span>{ui.location.professionalServicesIn.split('{name}')[1]}</>}
+        title={<>{ui.location.professionalServicesIn.split('{name}')[0]}<span className="text-orange-700">{city.name}</span>{ui.location.professionalServicesIn.split('{name}')[1]}</>}
       >
 
         {effectiveDescription && (

@@ -75,7 +75,7 @@ export default async function WhySection({
               return (
                 <div key={index} className={`${bgColors[index % bgColors.length]} rounded-4xl p-6 md:p-8`}>
                   <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6">
-                    <IconComponent className="w-8 h-8 text-orange-500" />
+                    <IconComponent className="w-8 h-8 text-orange-700" />
                   </div>
                   <H3 className="text-xl font-bold text-gray-800 mb-3">{benefit.title}</H3>
                   {benefit.desc && <p className="text-gray-600 mb-4">{benefit.desc}</p>}
@@ -117,7 +117,7 @@ export default async function WhySection({
             {displayCtaLink && (
               <Link
                 href={displayCtaLink}
-                className="inline-flex items-center text-orange-600 hover:text-orange-800 font-semibold mt-4 md:mt-0"
+                className="inline-flex items-center text-orange-700 hover:text-orange-800 font-semibold mt-4 md:mt-0"
               >
                 {displayCtaText}
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -131,7 +131,7 @@ export default async function WhySection({
               return (
                 <div key={index} className={`${bgColors[index % bgColors.length]} rounded-4xl p-6 md:p-8`}>
                   <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6">
-                    <IconComponent className="w-8 h-8 text-orange-500" />
+                    <IconComponent className="w-8 h-8 text-orange-700" />
                   </div>
                   <H3 className="text-xl font-bold text-gray-800 mb-3">{benefit.title}</H3>
                   {benefit.desc && <p className="text-gray-600">{benefit.desc}</p>}
@@ -165,7 +165,7 @@ export default async function WhySection({
             return (
               <div key={index} className={`${bgColors[index % bgColors.length]} rounded-4xl p-6 md:p-8`}>
                 <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6">
-                  <IconComponent className="w-8 h-8 text-orange-500" />
+                  <IconComponent className="w-8 h-8 text-orange-700" />
                 </div>
                 <H3 className="text-xl font-bold text-gray-800 mb-3">{benefit.title}</H3>
                 {benefit.desc && <p className="text-gray-600">{benefit.desc}</p>}
@@ -176,7 +176,7 @@ export default async function WhySection({
 
         {displayCtaLink && (
           <div className="text-center mt-10">
-            <Link href={displayCtaLink} className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors text-shadow-sm">
+            <Link href={displayCtaLink} className="inline-flex items-center bg-orange-700 hover:bg-orange-800 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
               {displayCtaText}
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>

@@ -110,7 +110,7 @@ export default function ReservationForm() {
         <p className="text-gray-600 text-lg mb-6">
           {ui.forms.reservation.successDescription}
         </p>
-        <a href="/" className="inline-block bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors text-shadow-sm">
+        <a href="/" className="inline-block bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-800 transition-colors">
           {ui.forms.reservation.returnHome}
         </a>
       </div>
@@ -260,7 +260,7 @@ export default function ReservationForm() {
             </div>
           </div>
           <label className="flex items-center mt-3">
-            <input type="checkbox" name="pickup-storage" className="mr-3 w-4 h-4 text-orange-500" />
+            <input type="checkbox" name="pickup-storage" className="mr-3 w-4 h-4 text-orange-700" />
             <span className="text-sm text-gray-600">{ui.forms.reservation.labels.pickupStorage}</span>
           </label>
         </div>
@@ -340,7 +340,7 @@ export default function ReservationForm() {
             </div>
           </div>
           <label className="flex items-center mt-3">
-            <input type="checkbox" name="dropoff-storage" className="mr-3 w-4 h-4 text-orange-500" />
+            <input type="checkbox" name="dropoff-storage" className="mr-3 w-4 h-4 text-orange-700" />
             <span className="text-sm text-gray-600">{ui.forms.reservation.labels.dropoffStorage}</span>
           </label>
         </div>
@@ -431,15 +431,15 @@ export default function ReservationForm() {
               {ui.forms.reservation.labels.packingServices}
             </label>
             <div className="grid md:grid-cols-3 gap-4">
-              <label className="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-orange-600">
+              <label className="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-orange-700">
                 <input type="radio" name="packing" value={ui.forms.reservation.packingOptions.none} className="mr-3" defaultChecked />
                 <span>{ui.forms.reservation.packingOptions.none}</span>
               </label>
-              <label className="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-orange-600">
+              <label className="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-orange-700">
                 <input type="radio" name="packing" value={ui.forms.reservation.packingOptions.partial} className="mr-3" />
                 <span>{ui.forms.reservation.packingOptions.partial}</span>
               </label>
-              <label className="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-orange-600">
+              <label className="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-orange-700">
                 <input type="radio" name="packing" value={ui.forms.reservation.packingOptions.full} className="mr-3" />
                 <span>{ui.forms.reservation.packingOptions.full}</span>
               </label>
@@ -453,8 +453,8 @@ export default function ReservationForm() {
             </label>
             <div className="grid md:grid-cols-2 gap-4">
               {(['unpacking', 'furniture', 'piano', 'storage', 'specialty', 'cleaning'] as const).map((key, index) => (
-                <label key={key} className="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer hover:border-orange-600">
-                  <input type="checkbox" name={`service-${key}`} className="mr-3 w-4 h-4 text-orange-500" />
+                <label key={key} className="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer hover:border-orange-700">
+                  <input type="checkbox" name={`service-${key}`} className="mr-3 w-4 h-4 text-orange-700" />
                   <span>{(ui.forms.reservation.additionalServiceOptions as string[])[index]}</span>
                 </label>
               ))}
@@ -521,7 +521,7 @@ export default function ReservationForm() {
         <button
           type="submit"
           disabled={isSubmitting || !turnstileToken}
-          className="mt-4 bg-orange-600 hover:bg-orange-700 text-white px-12 py-4 rounded-lg font-semibold text-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center text-shadow-sm"
+          className="mt-4 bg-orange-700 hover:bg-orange-800 text-white px-12 py-4 rounded-lg font-semibold text-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center"
         >
           {isSubmitting ? (
             <>

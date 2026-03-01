@@ -132,23 +132,23 @@ export default async function Footer() {
           <div className="pt-6">
             <H3 className="text-base font-bold mb-4 text-white">{ui.contact.contactUs}</H3>
             <div className="space-y-3 text-sm">
-              <a href={`tel:${phoneTel}`} aria-label={ui.buttons.callAriaLabel} className="flex items-start space-x-3 text-gray-400 hover:text-orange-500 transition-colors">
-                <PhoneIcon className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
+              <a href={`tel:${phoneTel}`} aria-label={ui.buttons.callAriaLabel} className="flex items-start space-x-3 text-gray-400 hover:text-orange-700 transition-colors">
+                <PhoneIcon className="w-4 h-4 text-orange-700 flex-shrink-0 mt-0.5" />
                 <span className="font-semibold text-white">{phoneFormatted}</span>
               </a>
-              <a href={`mailto:${email}`} className="flex items-start space-x-3 text-gray-400 hover:text-orange-500 transition-colors">
-                <MailIcon className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
+              <a href={`mailto:${email}`} className="flex items-start space-x-3 text-gray-400 hover:text-orange-700 transition-colors">
+                <MailIcon className="w-4 h-4 text-orange-700 flex-shrink-0 mt-0.5" />
                 <span>{email}</span>
               </a>
               <div className="flex items-start space-x-3">
-                <MapPinIcon className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
+                <MapPinIcon className="w-4 h-4 text-orange-700 flex-shrink-0 mt-0.5" />
                 <div className="text-gray-400">
                   <p>{addressLine1}</p>
                   <p>{addressLine2}</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <ClockIcon className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
+                <ClockIcon className="w-4 h-4 text-orange-700 flex-shrink-0 mt-0.5" />
                 <div className="text-gray-400">
                   {hours.map((entry: { label: string; time: string }, i: number) => (
                     <p key={i}>{entry.label}: {entry.time}</p>
@@ -163,7 +163,7 @@ export default async function Footer() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center text-gray-400 hover:text-orange-500 transition-colors"
+                    className="flex items-center justify-center text-gray-400 hover:text-orange-700 transition-colors"
                     aria-label={social.label}
                   >
                     <SocialIcon platform={social.platform} size="lg" />
@@ -182,7 +182,7 @@ export default async function Footer() {
             <ul className="space-y-2 text-sm">
               {services.map((service) => (
                 <li key={service.slug}>
-                  <Link href={`/${getTranslatedSlug(service.slug, locale)}`} className="text-gray-400 hover:text-orange-500 transition-colors">
+                  <Link href={`/${getTranslatedSlug(service.slug, locale)}`} className="text-gray-400 hover:text-orange-700 transition-colors">
                     {service.name}
                   </Link>
                 </li>
@@ -196,7 +196,7 @@ export default async function Footer() {
             <ul className="space-y-2 text-sm">
               {cities.map((city) => (
                 <li key={city.slug}>
-                  <Link href={`/${getTranslatedSlug(`${city.slug}-movers`, locale)}`} className="text-gray-400 hover:text-orange-500 transition-colors">
+                  <Link href={`/${getTranslatedSlug(`${city.slug}-movers`, locale)}`} className="text-gray-400 hover:text-orange-700 transition-colors">
                     {nameTemplate.replace('{name}', city.name)}
                   </Link>
                 </li>
@@ -210,7 +210,7 @@ export default async function Footer() {
             <ul className="space-y-2 text-sm mb-8">
               {nav.footer.sections.resources.items.map((item: any) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-gray-400 hover:text-orange-500 transition-colors">{item.label}</Link>
+                  <Link href={item.href} className="text-gray-400 hover:text-orange-700 transition-colors">{item.label}</Link>
                 </li>
               ))}
             </ul>
@@ -219,17 +219,17 @@ export default async function Footer() {
             <ul className="space-y-2 text-sm mb-8">
               {nav.footer.sections.company.items.map((item: any) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-gray-400 hover:text-orange-500 transition-colors">{item.label}</Link>
+                  <Link href={item.href} className="text-gray-400 hover:text-orange-700 transition-colors">{item.label}</Link>
                 </li>
               ))}
             </ul>
 
             <H3 className="text-lg font-bold mb-4 text-white">{nav.footer.sections.compare.title}</H3>
             <ul className="space-y-2 text-sm mb-8">
-              <li><Link href={`/${getTranslatedSlug('compare', locale)}`} className="text-gray-400 hover:text-orange-500 transition-colors">{nav.footer.sections.compare.allLabel}</Link></li>
+              <li><Link href={`/${getTranslatedSlug('compare', locale)}`} className="text-gray-400 hover:text-orange-700 transition-colors">{nav.footer.sections.compare.allLabel}</Link></li>
               {comparisons.comparisons.map((comparison) => (
                 <li key={comparison.slug}>
-                  <Link href={`/${getTranslatedSlug('compare', locale)}/${comparison.slug}`} className="text-gray-400 hover:text-orange-500 transition-colors">
+                  <Link href={`/${getTranslatedSlug('compare', locale)}/${comparison.slug}`} className="text-gray-400 hover:text-orange-700 transition-colors">
                     {nav.footer.sections.compare.prefix} {comparison.competitor.name}
                   </Link>
                 </li>
@@ -238,10 +238,10 @@ export default async function Footer() {
 
             <H3 className="text-lg font-bold mb-4 text-white">{nav.footer.sections.alternatives.title}</H3>
             <ul className="space-y-2 text-sm">
-              <li><Link href={`/${getTranslatedSlug('alternatives', locale)}`} className="text-gray-400 hover:text-orange-500 transition-colors">{nav.footer.sections.alternatives.allLabel}</Link></li>
+              <li><Link href={`/${getTranslatedSlug('alternatives', locale)}`} className="text-gray-400 hover:text-orange-700 transition-colors">{nav.footer.sections.alternatives.allLabel}</Link></li>
               {alternatives.alternatives.map((alt) => (
                 <li key={alt.slug}>
-                  <Link href={`/${getTranslatedSlug('alternatives', locale)}/${alt.slug}`} className="text-gray-400 hover:text-orange-500 transition-colors">
+                  <Link href={`/${getTranslatedSlug('alternatives', locale)}/${alt.slug}`} className="text-gray-400 hover:text-orange-700 transition-colors">
                     {alt.alternative.name}
                   </Link>
                 </li>
@@ -253,25 +253,25 @@ export default async function Footer() {
           <div>
             <H3 className="text-lg font-bold mb-4 text-white">{ui.contact.contactUs}</H3>
             <div className="space-y-4 text-sm">
-              <a href={`tel:${phoneTel}`} aria-label={ui.buttons.callAriaLabel} className="flex items-start space-x-3 text-gray-400 hover:text-orange-500 transition-colors">
-                <PhoneIcon className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
+              <a href={`tel:${phoneTel}`} aria-label={ui.buttons.callAriaLabel} className="flex items-start space-x-3 text-gray-400 hover:text-orange-700 transition-colors">
+                <PhoneIcon className="w-5 h-5 text-orange-700 flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="font-semibold text-white">{phoneFormatted}</p>
                 </div>
               </a>
-              <a href={`mailto:${email}`} className="flex items-start space-x-3 text-gray-400 hover:text-orange-500 transition-colors">
-                <MailIcon className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
+              <a href={`mailto:${email}`} className="flex items-start space-x-3 text-gray-400 hover:text-orange-700 transition-colors">
+                <MailIcon className="w-5 h-5 text-orange-700 flex-shrink-0 mt-0.5" />
                 <span>{email}</span>
               </a>
               <div className="flex items-start space-x-3">
-                <MapPinIcon className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
+                <MapPinIcon className="w-5 h-5 text-orange-700 flex-shrink-0 mt-0.5" />
                 <div className="text-gray-400">
                   <p>{addressLine1}</p>
                   <p>{addressLine2}</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <ClockIcon className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
+                <ClockIcon className="w-5 h-5 text-orange-700 flex-shrink-0 mt-0.5" />
                 <div className="text-gray-400">
                   {hours.map((entry: { label: string; time: string }, i: number) => (
                     <p key={i}>{entry.label}: {entry.time}</p>
@@ -286,7 +286,7 @@ export default async function Footer() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`text-gray-400 hover:text-orange-500 transition-colors${social.platform === 'youtube' ? ' flex items-center' : ''}`}
+                    className={`text-gray-400 hover:text-orange-700 transition-colors${social.platform === 'youtube' ? ' flex items-center' : ''}`}
                     aria-label={social.label}
                   >
                     <SocialIcon platform={social.platform} />
@@ -315,7 +315,7 @@ export default async function Footer() {
             <div className="flex flex-col items-center gap-4 pb-4 md:pb-0 md:flex-row md:gap-0 md:space-x-6 text-sm">
               <div className="flex items-center space-x-6">
                 {nav.footer.legalLinks.map((link: any) => (
-                  <Link key={link.href} href={link.href} className="text-gray-400 hover:text-orange-500 transition-colors">{link.label}</Link>
+                  <Link key={link.href} href={link.href} className="text-gray-400 hover:text-orange-700 transition-colors">{link.label}</Link>
                 ))}
               </div>
               <div className="flex items-center space-x-6">

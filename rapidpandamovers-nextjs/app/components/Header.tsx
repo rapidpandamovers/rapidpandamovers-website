@@ -43,21 +43,21 @@ export default async function Header() {
             </Link>
 
             <nav className="hidden xl:flex items-center space-x-4">
-              <Link href="/" className="text-gray-700 hover:text-orange-600 transition-colors uppercase">
+              <Link href="/" className="text-gray-700 hover:text-orange-700 transition-colors uppercase">
                 {nav.header.home.label}
               </Link>
               <div className="relative group">
-                <button className="text-gray-700 hover:text-orange-600 transition-colors flex items-center uppercase">
+                <button className="text-gray-700 hover:text-orange-700 transition-colors flex items-center uppercase">
                   {nav.header.services.label}
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                <div className="absolute left-0 mt-2 w-230 bg-orange-600 rounded-4xl overflow-hidden border-2 border-orange-600 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="absolute left-0 mt-2 w-230 bg-orange-700 rounded-4xl overflow-hidden border-2 border-orange-700 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="bg-white rounded-b-4xl py-2">
                     <div className="grid grid-cols-3 gap-0 py-2">
                       {services.map((service, i) => (
-                        <Link key={service.slug} href={`/${getTranslatedSlug(service.slug, locale)}`} className={`block pl-6 py-2 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200 rounded ${i % 3 === 2 ? 'pr-6' : 'pr-0'}`}>
+                        <Link key={service.slug} href={`/${getTranslatedSlug(service.slug, locale)}`} className={`block pl-6 py-2 text-gray-700 hover:text-orange-700 hover:translate-x-1 transition-all duration-200 rounded ${i % 3 === 2 ? 'pr-6' : 'pr-0'}`}>
                           <div className="font-medium text-sm">{service.name}</div>
                         </Link>
                       ))}
@@ -70,17 +70,17 @@ export default async function Header() {
                 </div>
               </div>
               <div className="relative group">
-                <button className="text-gray-700 hover:text-orange-600 transition-colors flex items-center uppercase">
+                <button className="text-gray-700 hover:text-orange-700 transition-colors flex items-center uppercase">
                   {nav.header.locations.label}
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                <div className="absolute left-0 mt-2 w-200 bg-orange-600 rounded-4xl overflow-hidden border-2 border-orange-600 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="absolute left-0 mt-2 w-200 bg-orange-700 rounded-4xl overflow-hidden border-2 border-orange-700 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="bg-white rounded-b-4xl py-2">
                     <div className="grid grid-cols-3 gap-0 py-2">
                       {cities.map((city, i) => (
-                        <Link key={city.slug} href={`/${getTranslatedSlug(`${city.slug}-movers`, locale)}`} className={`block pl-6 py-2 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200 rounded ${i % 3 === 2 ? 'pr-6' : 'pr-0'}`}>
+                        <Link key={city.slug} href={`/${getTranslatedSlug(`${city.slug}-movers`, locale)}`} className={`block pl-6 py-2 text-gray-700 hover:text-orange-700 hover:translate-x-1 transition-all duration-200 rounded ${i % 3 === 2 ? 'pr-6' : 'pr-0'}`}>
                           <div className="font-medium text-sm">{nameTemplate.replace('{name}', city.name)}</div>
                         </Link>
                       ))}
@@ -93,16 +93,16 @@ export default async function Header() {
                 </div>
               </div>
               <div className="relative group">
-                <button className="text-gray-700 hover:text-orange-600 transition-colors flex items-center uppercase">
+                <button className="text-gray-700 hover:text-orange-700 transition-colors flex items-center uppercase">
                   {nav.header.compare.label}
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                <div className="absolute left-0 mt-2 w-72 bg-orange-600 rounded-4xl overflow-hidden border-2 border-orange-600 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="absolute left-0 mt-2 w-72 bg-orange-700 rounded-4xl overflow-hidden border-2 border-orange-700 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="bg-white rounded-b-4xl py-2">
                     {nav.header.compare.items.map((item: any) => (
-                      <Link key={item.href} href={item.href} className="block pl-6 pr-6 py-3 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200">
+                      <Link key={item.href} href={item.href} className="block pl-6 pr-6 py-3 text-gray-700 hover:text-orange-700 hover:translate-x-1 transition-all duration-200">
                         <div className="font-medium">{item.label}</div>
                         <div className="text-sm text-gray-500 font-normal">{item.description}</div>
                       </Link>
@@ -115,16 +115,16 @@ export default async function Header() {
                 </div>
               </div>
               <div className="relative group">
-                <button className="text-gray-700 hover:text-orange-600 transition-colors flex items-center uppercase">
+                <button className="text-gray-700 hover:text-orange-700 transition-colors flex items-center uppercase">
                   {nav.header.resources.label}
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                <div className="absolute left-0 mt-2 w-72 bg-orange-600 rounded-4xl overflow-hidden border-2 border-orange-600 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="absolute left-0 mt-2 w-72 bg-orange-700 rounded-4xl overflow-hidden border-2 border-orange-700 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="bg-white rounded-b-4xl py-2">
                     {nav.header.resources.items.map((item: any) => (
-                      <Link key={item.href} href={item.href} className="block pl-6 pr-6 py-3 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200">
+                      <Link key={item.href} href={item.href} className="block pl-6 pr-6 py-3 text-gray-700 hover:text-orange-700 hover:translate-x-1 transition-all duration-200">
                         <div className="font-medium">{item.label}</div>
                         <div className="text-sm text-gray-500 font-normal">{item.description}</div>
                       </Link>
@@ -137,16 +137,16 @@ export default async function Header() {
                 </div>
               </div>
               <div className="relative group">
-                <button className="text-gray-700 hover:text-orange-600 transition-colors flex items-center uppercase">
+                <button className="text-gray-700 hover:text-orange-700 transition-colors flex items-center uppercase">
                   {nav.header.company.label}
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                <div className="absolute left-0 mt-2 w-72 bg-orange-600 rounded-4xl overflow-hidden border-2 border-orange-600 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="absolute left-0 mt-2 w-72 bg-orange-700 rounded-4xl overflow-hidden border-2 border-orange-700 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="bg-white rounded-b-4xl py-2">
                     {nav.header.company.items.map((item: any) => (
-                      <Link key={item.href} href={item.href} className="block pl-6 pr-6 py-3 text-gray-700 hover:text-orange-600 hover:translate-x-1 transition-all duration-200">
+                      <Link key={item.href} href={item.href} className="block pl-6 pr-6 py-3 text-gray-700 hover:text-orange-700 hover:translate-x-1 transition-all duration-200">
                         <div className="font-medium">{item.label}</div>
                         <div className="text-sm text-gray-500 font-normal">{item.description}</div>
                       </Link>
@@ -163,14 +163,14 @@ export default async function Header() {
 
               <div className="flex items-center space-x-3">
                 <div className="flex flex-col items-center">
-                  <a href={`tel:${phoneTel}`} aria-label={ui.buttons.callAriaLabel} className="flex items-center justify-center space-x-2 border border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white font-semibold py-3 px-4 rounded-lg transition-colors w-44">
+                  <a href={`tel:${phoneTel}`} aria-label={ui.buttons.callAriaLabel} className="flex items-center justify-center space-x-2 border border-orange-700 text-orange-700 hover:bg-orange-700 hover:text-white font-semibold py-3 px-4 rounded-lg transition-colors w-44">
                     <PhoneIcon className="w-4 h-4" />
                     <span>{phoneFormatted}</span>
                   </a>
                   <span className="text-xs text-gray-500 mt-1">{content.site.header.phoneSubtext}</span>
                 </div>
                 <div className="flex flex-col items-center">
-                  <Link href={`/${getTranslatedSlug('quote', locale)}`} className="flex items-center justify-center border border-orange-600 bg-orange-600 hover:bg-orange-700 hover:border-orange-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors w-44 text-shadow-sm">
+                  <Link href={`/${getTranslatedSlug('quote', locale)}`} className="flex items-center justify-center border border-orange-700 bg-orange-700 hover:bg-orange-800 hover:border-orange-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors w-44">
                     {nav.header.cta.quoteButton}
                   </Link>
                   <span className="text-xs text-gray-500 mt-1">{content.site.header.quoteSubtext}</span>
@@ -180,11 +180,11 @@ export default async function Header() {
 
             {/* Mobile/tablet: buttons + hamburger */}
             <div className="flex xl:hidden items-center space-x-3">
-              <a href={`tel:${phoneTel}`} aria-label={ui.buttons.callAriaLabel} className="hidden md:flex items-center justify-center space-x-2 border border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white font-semibold py-3 px-4 rounded-lg transition-colors">
+              <a href={`tel:${phoneTel}`} aria-label={ui.buttons.callAriaLabel} className="hidden md:flex items-center justify-center space-x-2 border border-orange-700 text-orange-700 hover:bg-orange-700 hover:text-white font-semibold py-3 px-4 rounded-lg transition-colors">
                 <PhoneIcon className="w-4 h-4" />
                 <span>{phoneFormatted}</span>
               </a>
-              <Link href={`/${getTranslatedSlug('quote', locale)}`} className="hidden md:flex items-center justify-center border border-orange-600 bg-orange-600 hover:bg-orange-700 hover:border-orange-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors text-shadow-sm">
+              <Link href={`/${getTranslatedSlug('quote', locale)}`} className="hidden md:flex items-center justify-center border border-orange-700 bg-orange-700 hover:bg-orange-800 hover:border-orange-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors">
                 {nav.header.cta.quoteButton}
               </Link>
               <MobileMenu nav={nav} services={services} cities={cities} locale={locale} phoneTel={phoneTel} phoneFormatted={phoneFormatted} callAriaLabel={ui.buttons.callAriaLabel} />

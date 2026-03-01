@@ -24,7 +24,7 @@ export default function FeaturedPostCard({ post }: FeaturedPostCardProps) {
   const hasValidImage = post.featured && typeof post.featured === 'string' && post.featured.startsWith('/')
 
   return (
-    <article className="bg-orange-600 rounded-4xl overflow-hidden text-white group text-shadow-sm">
+    <article className="bg-orange-700 rounded-4xl overflow-hidden text-white group">
       <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-8">
       {/* Image - left */}
       <div className="p-6 pb-0 md:p-8 md:pb-0 lg:pb-8 lg:pr-0">
@@ -69,7 +69,7 @@ export default function FeaturedPostCard({ post }: FeaturedPostCardProps) {
 
         <BlogPostLink
           href={`/blog/${post.slug}`}
-          className="inline-flex items-center bg-white text-orange-600 font-semibold px-6 py-3 rounded-lg hover:bg-orange-50 transition-colors w-fit text-shadow-none"
+          className="inline-flex items-center bg-white text-orange-700 font-semibold px-6 py-3 rounded-lg hover:bg-orange-50 transition-colors w-fit text-shadow-none"
         >
           {ui?.blog?.readFullArticle || 'Read Full Article'}
           <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

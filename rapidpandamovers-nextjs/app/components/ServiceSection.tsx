@@ -69,11 +69,11 @@ export default async function ServiceSection({ location, variant = 'preview', hi
           {location && (
             <div className="mb-8 flex items-center justify-between">
               <p className="text-lg text-gray-600">
-                {ui.services.showingIn} <span className="font-semibold text-orange-600">{location.name}</span>
+                {ui.services.showingIn} <span className="font-semibold text-orange-700">{location.name}</span>
               </p>
               <Link
                 href={`/${servicesSlug}`}
-                className="text-orange-600 hover:text-orange-800 font-medium text-sm"
+                className="text-orange-700 hover:text-orange-800 font-medium text-sm"
               >
                 {ui.services.viewAllLocations}
               </Link>
@@ -85,18 +85,18 @@ export default async function ServiceSection({ location, variant = 'preview', hi
               <Link
                 key={index}
                 href={getHref(service.slug)}
-                className="bg-orange-600 group-hover:bg-orange-700 rounded-4xl overflow-hidden border-2 border-orange-600 hover:shadow-md transition-all group flex flex-col"
+                className="bg-orange-700 group-hover:bg-orange-800 rounded-4xl overflow-hidden border-2 border-orange-700 hover:shadow-md transition-all group flex flex-col"
               >
                 <div className="bg-white rounded-b-4xl p-6 flex-1">
                   <div className="flex justify-center mb-4">
                     <ServiceIllustration service={service.slug} className="w-24 h-24" />
                   </div>
-                  <H3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-orange-600 transition-colors text-center">
+                  <H3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-orange-700 transition-colors text-center">
                     {getDisplayName(service.name)}
                   </H3>
                   <p className="text-gray-600 text-center">{service.description}</p>
                 </div>
-                <div className="text-white text-shadow-sm font-medium flex items-center justify-center py-3">
+                <div className="text-white font-medium flex items-center justify-center py-3">
                   {ui.services.learnMore}
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -131,7 +131,7 @@ export default async function ServiceSection({ location, variant = 'preview', hi
               </div>
               <Link
                 href={ctaLink}
-                className="inline-flex items-center text-orange-600 hover:text-orange-800 font-semibold mt-4 md:mt-0"
+                className="inline-flex items-center text-orange-700 hover:text-orange-800 font-semibold mt-4 md:mt-0"
               >
                 {ctaText}
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -144,18 +144,18 @@ export default async function ServiceSection({ location, variant = 'preview', hi
               <Link
                 key={index}
                 href={getHref(service.slug)}
-                className="bg-orange-600 group-hover:bg-orange-700 rounded-4xl overflow-hidden border-2 border-orange-600 hover:shadow-md transition-all group flex flex-col"
+                className="bg-orange-700 group-hover:bg-orange-800 rounded-4xl overflow-hidden border-2 border-orange-700 hover:shadow-md transition-all group flex flex-col"
               >
                 <div className="bg-white rounded-b-4xl p-6 flex-1">
                   <div className="flex justify-center mb-4">
                     <ServiceIllustration service={service.slug} className="w-24 h-24" />
                   </div>
-                  <H3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-orange-600 transition-colors text-center">
+                  <H3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-orange-700 transition-colors text-center">
                     {getDisplayName(service.name)}
                   </H3>
                   <p className="text-gray-600 text-center">{service.description}</p>
                 </div>
-                <div className="text-white text-shadow-sm font-medium flex items-center justify-center py-3">
+                <div className="text-white font-medium flex items-center justify-center py-3">
                   {ui.services.learnMore}
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -189,18 +189,18 @@ export default async function ServiceSection({ location, variant = 'preview', hi
               <Link
                 key={index}
                 href={getHref(service.slug)}
-                className="bg-orange-600 group-hover:bg-orange-700 rounded-4xl overflow-hidden border-2 border-orange-600 hover:shadow-md transition-all group flex flex-col"
+                className="bg-orange-700 group-hover:bg-orange-800 rounded-4xl overflow-hidden border-2 border-orange-700 hover:shadow-md transition-all group flex flex-col"
               >
                 <div className="bg-white rounded-b-4xl p-6 flex-1">
                   <div className="flex justify-center mb-4">
                     <ServiceIllustration service={service.slug} className="w-24 h-24" />
                   </div>
-                  <H3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-orange-600 transition-colors text-center">
+                  <H3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-orange-700 transition-colors text-center">
                     {getDisplayName(service.name)}
                   </H3>
                   <p className="text-gray-600 text-center">{service.description}</p>
                 </div>
-                <div className="text-white text-shadow-sm font-medium flex items-center justify-center py-3">
+                <div className="text-white font-medium flex items-center justify-center py-3">
                   {ui.services.learnMore}
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -208,7 +208,7 @@ export default async function ServiceSection({ location, variant = 'preview', hi
             ))}
           </div>
           <div className="text-center mt-12">
-            <Link href={`/${servicesSlug}/${location.slug}`} className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white text-shadow-sm font-semibold py-3 px-8 rounded-lg transition-colors">
+            <Link href={`/${servicesSlug}/${location.slug}`} className="inline-flex items-center bg-orange-700 hover:bg-orange-800 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
               {ui.services.viewAllServicesIn.replace('{name}', location.name)}
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
@@ -240,13 +240,13 @@ export default async function ServiceSection({ location, variant = 'preview', hi
             <Link
               key={index}
               href={getHref(service.slug)}
-              className="bg-orange-600 group-hover:bg-orange-700 rounded-4xl overflow-hidden border-2 border-orange-600 hover:shadow-md transition-all group flex flex-col"
+              className="bg-orange-700 group-hover:bg-orange-800 rounded-4xl overflow-hidden border-2 border-orange-700 hover:shadow-md transition-all group flex flex-col"
             >
               <div className="bg-white rounded-b-4xl p-6 flex-1">
                 <div className="flex justify-center mb-4">
                   <ServiceIllustration service={service.slug} className="w-24 h-24" />
                 </div>
-                <H3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-orange-600 transition-colors text-center">
+                <H3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-orange-700 transition-colors text-center">
                   {service.name}
                 </H3>
                 <p className="text-gray-600 text-center">{service.description}</p>
@@ -260,7 +260,7 @@ export default async function ServiceSection({ location, variant = 'preview', hi
         </div>
 
         <div className="text-center mt-12">
-          <Link href={`/${servicesSlug}`} className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white text-shadow-sm font-semibold py-3 px-8 rounded-lg transition-colors">
+          <Link href={`/${servicesSlug}`} className="inline-flex items-center bg-orange-700 hover:bg-orange-800 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
             {ui.services.viewAllServices}
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>

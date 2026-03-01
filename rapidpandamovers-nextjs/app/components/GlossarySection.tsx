@@ -62,8 +62,8 @@ export default function GlossarySection({ className = "", variant = 'preview', t
                       onClick={() => scrollToLetter(letter)}
                       className={`px-3 py-2 rounded-lg font-medium text-sm transition-all ${
                         activeLetter === letter
-                          ? 'bg-orange-600 text-white text-shadow-sm'
-                          : 'bg-white border border-gray-200 text-gray-700 hover:border-orange-600 hover:text-orange-600'
+                          ? 'bg-orange-700 text-white'
+                          : 'bg-white border border-gray-200 text-gray-700 hover:border-orange-700 hover:text-orange-700'
                       }`}
                     >
                       {letter}
@@ -115,7 +115,7 @@ export default function GlossarySection({ className = "", variant = 'preview', t
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {sampleTerms.map((item, index) => (
               <div key={index} className="bg-white rounded-2xl p-6 text-left">
-                <H3 className="text-lg font-bold text-orange-600 mb-2">
+                <H3 className="text-lg font-bold text-orange-700 mb-2">
                   {item.term}
                 </H3>
                 <p className="text-gray-600 text-sm line-clamp-2">
@@ -128,7 +128,7 @@ export default function GlossarySection({ className = "", variant = 'preview', t
           <div className="text-center">
             <Link
               href="/moving-glossary"
-              className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors text-shadow-sm"
+              className="inline-flex items-center bg-orange-700 hover:bg-orange-800 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
             >
               {ui.buttons.viewFullGlossary}
               <ArrowRight className="w-5 h-5 ml-2" />

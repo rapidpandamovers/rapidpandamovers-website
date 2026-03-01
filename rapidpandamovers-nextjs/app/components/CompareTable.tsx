@@ -54,7 +54,7 @@ export default async function CompareTable({
 
                   return (
                     <tr key={rowIndex} className="transition-colors">
-                      <td className={`p-5 ${bgClass} ${row.highlight ? 'font-bold text-orange-600 text-base' : 'font-semibold text-gray-800 text-base'} ${isFirst ? 'rounded-tl-2xl' : ''} ${isLast ? 'rounded-bl-2xl' : ''} ${!isLast ? 'border-b border-gray-200' : ''}`}>
+                      <td className={`p-5 ${bgClass} ${row.highlight ? 'font-bold text-orange-700 text-base' : 'font-semibold text-gray-800 text-base'} ${isFirst ? 'rounded-tl-2xl' : ''} ${isLast ? 'rounded-bl-2xl' : ''} ${!isLast ? 'border-b border-gray-200' : ''}`}>
                         {row.option}
                       </td>
                       {row.cells.map((cell, cellIndex) => {

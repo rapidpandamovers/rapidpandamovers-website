@@ -67,7 +67,7 @@ export default async function Breadcrumbs({
                   // Linked item
                   <Link
                     href={item.href}
-                    className="text-orange-600 hover:text-orange-800 hover:underline flex items-center gap-1 truncate max-w-[200px]"
+                    className="text-orange-700 hover:text-orange-800 hover:underline flex items-center gap-1 truncate max-w-[200px]"
                   >
                     {isHome && <Home className="w-4 h-4 flex-shrink-0" />}
                     {!isHome && item.label}

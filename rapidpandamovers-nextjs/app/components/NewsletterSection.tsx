@@ -84,7 +84,7 @@ export default function NewsletterSection({
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch">
                 <div className="flex flex-row gap-3 flex-1 sm:contents">
                   <div className="bg-orange-100 border border-orange-100 rounded-lg flex items-center justify-center flex-shrink-0 px-3">
-                    <Mail className="w-6 h-6 text-orange-500" />
+                    <Mail className="w-6 h-6 text-orange-700" />
                   </div>
                   <input
                     id="newsletter-email"
@@ -98,7 +98,7 @@ export default function NewsletterSection({
                 <button
                   type="submit"
                   disabled={isSubmitting || !turnstileToken}
-                  className="bg-orange-600 hover:bg-orange-700 disabled:bg-orange-300 text-white font-semibold px-6 py-3 rounded-lg transition-colors flex items-center justify-center text-shadow-sm"
+                  className="bg-orange-700 hover:bg-orange-800 disabled:bg-orange-300 text-white font-semibold px-6 py-3 rounded-lg transition-colors flex items-center justify-center"
                 >
                   {isSubmitting ? (
                     <Loader2 className="w-5 h-5 animate-spin" />

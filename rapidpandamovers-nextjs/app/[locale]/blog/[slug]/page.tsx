@@ -95,7 +95,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <Link
                 key={`${keyPrefix}-bl-${elementKey++}`}
                 href={url}
-                className="text-orange-600 hover:text-orange-800 underline decoration-orange-300"
+                className="text-orange-700 hover:text-orange-800 underline decoration-orange-300"
               >
                 {linkContent}
               </Link>
@@ -107,7 +107,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-orange-600 hover:text-orange-800 underline decoration-orange-300"
+                className="text-orange-700 hover:text-orange-800 underline decoration-orange-300"
               >
                 {linkContent}
               </a>
@@ -130,7 +130,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <Link
                 key={`${keyPrefix}-l-${elementKey++}`}
                 href={url}
-                className="text-orange-600 hover:text-orange-800 underline decoration-orange-300"
+                className="text-orange-700 hover:text-orange-800 underline decoration-orange-300"
               >
                 {linkContent}
               </Link>
@@ -142,7 +142,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-orange-600 hover:text-orange-800 underline decoration-orange-300"
+                className="text-orange-700 hover:text-orange-800 underline decoration-orange-300"
               >
                 {linkContent}
               </a>
@@ -185,7 +185,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <ul key={currentKey++} className="my-6 space-y-3 pl-0">
             {listItems.map((item, i) => (
               <li key={i} className="flex items-start gap-3 text-gray-700 leading-relaxed">
-                <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-orange-100 text-orange-600 text-sm font-medium flex-shrink-0 mt-0.5">
+                <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-orange-100 text-orange-700 text-sm font-medium flex-shrink-0 mt-0.5">
                   {i + 1}
                 </span>
                 <span>{parseInlineMarkdown(item, `li-${i}`)}</span>

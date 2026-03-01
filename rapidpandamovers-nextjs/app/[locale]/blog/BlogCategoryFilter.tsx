@@ -68,7 +68,7 @@ export default function BlogCategoryFilter({ categories, activeCategory, locatio
   const pillClass = (isActive: boolean) =>
     `px-4 py-2 rounded-full text-sm font-medium transition-colors ${
       isActive
-        ? 'bg-orange-600 text-white text-shadow-sm'
+        ? 'bg-orange-700 text-white'
         : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
     }`
 
@@ -111,7 +111,7 @@ export default function BlogCategoryFilter({ categories, activeCategory, locatio
                   onClick={() => setServicesOpen(false)}
                   className={`block px-4 py-2 text-sm transition-colors ${
                     activeService === slug
-                      ? 'bg-orange-50 text-orange-600 font-medium'
+                      ? 'bg-orange-50 text-orange-700 font-medium'
                       : 'text-gray-700 hover:bg-gray-50'
                   }`}
                 >
@@ -143,7 +143,7 @@ export default function BlogCategoryFilter({ categories, activeCategory, locatio
                   onClick={() => setLocationsOpen(false)}
                   className={`block px-4 py-2 text-sm transition-colors ${
                     activeLocation === loc.slug
-                      ? 'bg-orange-50 text-orange-600 font-medium'
+                      ? 'bg-orange-50 text-orange-700 font-medium'
                       : 'text-gray-700 hover:bg-gray-50'
                   }`}
                 >

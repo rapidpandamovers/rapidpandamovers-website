@@ -44,14 +44,14 @@ export default function HeroQuoteForm({
         <a
           href={`tel:${phone.replace(/-/g, '')}`}
           aria-label={callAriaLabel}
-          className="flex items-center justify-center space-x-2 w-full bg-orange-600 text-white text-shadow-sm font-bold py-3 px-6 rounded-lg hover:bg-orange-700 transition-colors"
+          className="flex items-center justify-center space-x-2 w-full bg-white text-orange-700 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
         >
           <PhoneIcon className="w-5 h-5" />
           <span>{`(${phone.slice(0,3)}) ${phone.slice(4,7)}-${phone.slice(8)}`}</span>
         </a>
         <Link
           href={`/${quoteSlug}`}
-          className="block w-full border border-orange-600 text-orange-500 font-bold py-3 px-6 rounded-lg hover:bg-orange-600 hover:text-white transition-colors text-center"
+          className="block w-full bg-orange-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-orange-800 transition-colors text-center"
         >
           {buttonText}
         </Link>
@@ -78,7 +78,7 @@ export default function HeroQuoteForm({
         </div>
         <Link
           href={quoteUrl}
-          className="block w-full bg-orange-600 text-white text-shadow-sm font-bold py-3 px-6 rounded-lg hover:bg-orange-700 transition-colors text-center"
+          className="block w-full bg-orange-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-orange-800 transition-colors text-center"
         >
           {buttonText}
         </Link>

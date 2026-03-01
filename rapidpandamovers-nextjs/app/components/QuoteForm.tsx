@@ -81,7 +81,7 @@ export default function QuoteForm({
       </div>
       <H3 className="text-xl font-bold text-gray-800 mb-2">{ui.forms.quote.successTitle}</H3>
       <p className="text-gray-600 mb-6">{ui.forms.quote.successDescription}</p>
-      <a href="/" className="inline-block bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors text-shadow-sm">
+      <a href="/" className="inline-block bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-800 transition-colors">
         {ui.forms.quote.returnHome}
       </a>
     </div>
@@ -232,7 +232,7 @@ export default function QuoteForm({
       <button
         type="submit"
         disabled={isSubmitting || !turnstileToken}
-        className="w-full bg-orange-600 text-white font-bold py-4 text-lg rounded-lg hover:bg-orange-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center text-shadow-sm"
+        className="w-full bg-orange-700 text-white font-bold py-4 text-lg rounded-lg hover:bg-orange-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
       >
         {isSubmitting ? (
           <>
@@ -257,21 +257,21 @@ export default function QuoteForm({
       <H3 className="text-xl font-bold mb-4">{ui.forms.quote.contactTitle}</H3>
       <div className="space-y-4">
         <div className="flex items-center space-x-3">
-          <Phone className="w-5 h-5 text-orange-500 flex-shrink-0" />
+          <Phone className="w-5 h-5 text-orange-700 flex-shrink-0" />
           <div>
             <p className="font-medium">{content.site.phone}</p>
             <p className="text-sm text-gray-600">{content.contact.contact_info.hours}</p>
           </div>
         </div>
         <div className="flex items-center space-x-3">
-          <Mail className="w-5 h-5 text-orange-500 flex-shrink-0" />
+          <Mail className="w-5 h-5 text-orange-700 flex-shrink-0" />
           <div>
             <p className="font-medium">{content.site.email}</p>
             <p className="text-sm text-gray-600">{ui.forms.quote.emailSupport}</p>
           </div>
         </div>
         <div className="flex items-center space-x-3">
-          <MapPin className="w-5 h-5 text-orange-500 flex-shrink-0" />
+          <MapPin className="w-5 h-5 text-orange-700 flex-shrink-0" />
           <div>
             <p className="font-medium">{ui.forms.quote.locationCity}</p>
             <p className="text-sm text-gray-600">{ui.forms.quote.locationArea}</p>
@@ -279,7 +279,7 @@ export default function QuoteForm({
         </div>
       </div>
 
-      <div className="mt-8 bg-orange-600 text-white text-shadow-sm rounded-lg p-6">
+      <div className="mt-8 bg-orange-700 text-white rounded-lg p-6">
         <H3 className="text-xl font-bold mb-4">{ui.forms.quote.whyChooseTitle}</H3>
         <ul className="space-y-2 text-sm">
           {(ui.forms.quote.whyChooseItems as string[]).map((item: string, index: number) => (

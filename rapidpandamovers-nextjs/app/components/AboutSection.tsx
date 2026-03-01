@@ -32,7 +32,7 @@ export default async function AboutSection({ className = "", variant = "default"
               <ul className="space-y-3">
                 {about.values.map((value: any, index: number) => (
                   <li key={index} className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-orange-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-orange-700 mr-2 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-700">{value.description}</span>
                   </li>
                 ))}
@@ -54,7 +54,7 @@ export default async function AboutSection({ className = "", variant = "default"
                   <p className="text-sm text-gray-600 mb-4">
                     {ui.about.knowDifferentDesc}
                   </p>
-                  <Link href={`/${getTranslatedSlug('why-choose-us', locale)}`} className="inline-flex items-center text-orange-600 hover:text-orange-800 font-medium">
+                  <Link href={`/${getTranslatedSlug('why-choose-us', locale)}`} className="inline-flex items-center text-orange-700 hover:text-orange-800 font-medium">
                     {ui.about.whyChoose}
                     <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -85,7 +85,7 @@ export default async function AboutSection({ className = "", variant = "default"
               ))}
               <Link
                 href={`/${getTranslatedSlug('about-us', locale)}`}
-                className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white text-shadow-sm font-semibold px-6 py-3 rounded-lg transition-colors"
+                className="inline-flex items-center bg-orange-700 hover:bg-orange-800 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
               >
                 {ui.about.learnMoreAboutUs}
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

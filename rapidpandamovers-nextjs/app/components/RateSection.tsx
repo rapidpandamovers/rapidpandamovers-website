@@ -87,7 +87,7 @@ export default function RateSection({
                           <h4 className="text-lg font-semibold text-gray-800">
                             {rate.service}
                           </h4>
-                          <span className="text-2xl font-bold text-orange-600">
+                          <span className="text-2xl font-bold text-orange-700">
                             {rate.rate}
                           </span>
                         </div>
@@ -121,7 +121,7 @@ export default function RateSection({
                     <H3 className="text-xl font-semibold text-gray-800 mb-2">
                       {service.service}
                     </H3>
-                    <div className="text-3xl font-bold text-orange-600 mb-4">
+                    <div className="text-3xl font-bold text-orange-700 mb-4">
                       {service.rate}
                     </div>
                     <p className="text-gray-600">{service.description}</p>

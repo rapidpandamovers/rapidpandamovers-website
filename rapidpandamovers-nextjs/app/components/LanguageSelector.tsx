@@ -35,21 +35,21 @@ export function LanguageSelectorHeader() {
 
   return (
     <div className="relative group">
-      <button className="flex items-center space-x-1 text-gray-700 hover:text-orange-600 transition-colors uppercase">
+      <button className="flex items-center space-x-1 text-gray-700 hover:text-orange-700 transition-colors uppercase">
         <GlobeIcon className="w-4 h-4" />
         <span className="text-sm font-bold">{localeCodes[locale]}</span>
         <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </button>
-      <div className="absolute right-0 mt-2 w-44 bg-orange-600 rounded-4xl overflow-hidden border-2 border-orange-600 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+      <div className="absolute right-0 mt-2 w-44 bg-orange-700 rounded-4xl overflow-hidden border-2 border-orange-700 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
         <div className="bg-white rounded-b-4xl py-2">
           {locales.map((loc) => (
             <button
               key={loc}
               onClick={() => onChange(loc)}
-              className={`block w-full text-left pl-6 pr-6 py-2 text-sm hover:text-orange-600 hover:translate-x-1 transition-all duration-200 ${
-                loc === locale ? 'text-orange-600 font-semibold' : 'text-gray-700'
+              className={`block w-full text-left pl-6 pr-6 py-2 text-sm hover:text-orange-700 hover:translate-x-1 transition-all duration-200 ${
+                loc === locale ? 'text-orange-700 font-semibold' : 'text-gray-700'
               }`}
             >
               {languageNames[loc]}
