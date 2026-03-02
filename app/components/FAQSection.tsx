@@ -108,27 +108,27 @@ export default function FAQSection({
     return (
       <section className="pt-20">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-5 lg:gap-8">
             {/* Left Column - Title & CTA (2/5 = 40%) */}
-            <div className="lg:col-span-2 bg-orange-50 rounded-4xl p-6 md:p-8 flex flex-col">
+            <div className="lg:col-span-2 lg:bg-orange-50 lg:rounded-4xl lg:p-8 flex flex-col">
               <div className="flex-1">
                 {title && (
-                  <div className="flex flex-col md:flex-row md:items-end md:justify-between lg:flex-col lg:items-start mb-4">
-                    <H2 className="text-3xl md:text-4xl font-bold text-gray-800">
+                  <div className="flex flex-col md:flex-row md:items-end md:justify-between lg:flex-col lg:items-start mb-10 lg:mb-4 px-6 lg:px-0">
+                    <H2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
                       {title}
                     </H2>
                     <Link
                       href={`/${getTranslatedSlug('faq', locale)}`}
-                      className="inline-flex items-center text-orange-700 hover:text-orange-800 font-semibold mt-2 md:mt-0 lg:mt-2"
+                      className="inline-flex items-center text-orange-700 hover:text-orange-800 font-semibold mt-4 md:mt-0 lg:mt-4"
                     >
                       {ui.faq.viewAllFaqs}
-                      <ArrowRight className="w-4 h-4 ml-1" />
+                      <ArrowRight className="w-5 h-5 ml-2" />
                     </Link>
                   </div>
                 )}
               </div>
 
-              <div className="bg-white rounded-2xl p-6 mt-2">
+              <div className="hidden lg:block bg-white rounded-2xl p-6 mt-2">
                 <H3 className="text-xl font-semibold text-gray-800 mb-2">
                   {ui.faq.haveMoreQuestions}
                 </H3>

@@ -89,8 +89,10 @@ export async function GET(request: NextRequest) {
             background: '#0f0f0f',
           }}
         >
-          {/* Background image - full bleed */}
+          {/* Background image - full bleed (img required by Satori) */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
+            alt=""
             src={imageUrl}
             width={WIDTH}
             height={HEIGHT}
