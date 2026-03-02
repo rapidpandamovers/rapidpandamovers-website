@@ -1,103 +1,276 @@
-import { ImageResponse } from 'next/og'
 import { type NextRequest } from 'next/server'
+import { join } from 'path'
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs'
+import sharp from 'sharp'
 
-// Full logo inlined as a data URI (white fill for dark background)
+// Full logo inlined as SVG (white fill for dark background)
 const LOGO_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0.00 0.00 400.00 234.00"><path fill="#fff" d="M132.77 22.44A.5.5 0 00133.56 22.04L133.56 10.44A.74.74 0 01134.3 9.7L148.56 9.7A.63.63 0 01149.19 10.33L149.19 33.12A2.64 2.64 0 00150.26 35.24Q176.3 54.38 203.13 74.11 206.85 76.84 204.28 80.51 202.84 82.55 200.52 85.53 197.73 89.12 194.08 86.44 158.02 59.92 104.6 20.73A.79.78-44.6 00103.67 20.73Q66.48 48.01 12.02 88.01C6.56 92.02 5.08 86.46 2.35 83.41 0 80.78-.41 78.21 2.53 76.01Q3.9 74.98 103 2.18A1.93 1.92 44.8 01105.27 2.18L132.77 22.44Z"/><circle fill="#fff" cx="347.58" cy="21.5" r="4.55"/><path fill="#fff" d="M380.27 32.26L380.27 21.65A4.21 4.21 0 01384.7 17.45L384.95 17.46A4.35 4.34 1.1 01389.11 21.78Q389.19 35 389.18 58.01C389.17 63.26 380.87 63.66 381.21 57.38A.28.28 0 00380.7 57.21Q375.9 64.36 366.76 60.92C356.21 56.95 355.44 38.78 363.26 31.98 367.9 27.94 374.97 27.84 379.59 32.54A.4.4 0 00380.27 32.26ZM373.7589 35.7201A9.75 7.1-90.3 00366.7101 45.5072 9.75 7.1-90.3 00373.8611 55.2199 9.75 7.1-90.3 00380.9099 45.4328 9.75 7.1-90.3 00373.7589 35.7201Z"/><path fill="#fff" d="M256.52 40.55C258.77 42.2 260.93 42.48 261.13 46.07Q261.45 51.87 262.62 57.16C262.98 58.78 262.15 60.79 260.37 61.41 255.72 63.01 252.85 60.57 252.42 55.93 251.96 50.97 252.93 43.98 245.02 44.29Q240.8 44.45 236.57 44.29A.71.71 0 00235.83 45L235.83 57.18A4.6 4.6 0 01230.9 61.77L230.59 61.74A4.99 4.98 1.5 01225.89 56.79Q225.76 28.89 225.99 22.53 226.09 19.98 228.24 18.68 229.44 17.95 232.86 17.96 237.37 17.96 249.89 18.06C257.19 18.11 263.09 22.54 262.93 30.29Q262.78 37.11 256.61 39.78A.45.45 0 00256.52 40.55ZM235.81 26.16L235.85 36.48A.59.59 0 00236.44 37.07L247.52 37.03A5.51 5.24-.2 00253.01 31.77L253.01 30.75A5.51 5.24-.2 00247.48 25.53L236.4 25.57A.59.59 0 00235.81 26.16Z"/><path fill="#fff" d="M289.8 57.23C284.88 62.2 274.92 64.68 270.23 58.12 266.25 52.55 269.02 45.58 275.59 43.85Q279.29 42.87 285.18 42.43C287.05 42.3 289.51 41.71 289.67 39.33Q289.85 36.83 287.04 36 282.02 34.51 278.34 37.6C276.33 39.29 275.38 40.73 272.97 40.11 270.18 39.4 269.98 36.29 271.33 34.18 275.14 28.19 286.18 28.36 292.12 30.14 297.55 31.77 298.48 34.92 298.42 40.57 298.33 47.96 298.16 52.52 299.21 58.31A2.04 1.99-40.2 01299.11 59.35Q298.13 61.88 295.95 62.01 291.04 62.31 290.38 57.42A.34.34 0 00289.8 57.23ZM289.15 46.76L286.9 47.62A1.6 1.25-52 01286.5 47.72C282.92 48.18 275.08 49.13 277.6 53.92Q278.62 55.87 280.45 56.04 289.83 56.93 289.95 47.32A.59.58 79.7 00289.15 46.76Z"/><path fill="#fff" d="M315.5 58.38A.4.4 0 00314.82 58.65L314.78 69.24A4.2 4.2 0 01310.34 73.41L310.09 73.4A4.34 4.34 0 01305.96 69.07Q305.93 55.88 306.04 32.92C306.07 27.68 314.36 27.31 313.99 33.58A.28.28 0 00314.5 33.75Q319.32 26.64 328.42 30.11C338.94 34.11 339.63 52.25 331.8 59 327.15 63.02 320.09 63.09 315.5 58.38ZM321.1711 35.7507A9.73 7.11-90.7 00314.1805 45.5669 9.73 7.11-90.7 00321.4089 55.2093 9.73 7.11-90.7 00328.3995 45.3931 9.73 7.11-90.7 00321.1711 35.7507Z"/><rect fill="#fff" x="-4.33" y="-16.4" transform="translate(347.57,45.47) rotate(0.1)" width="8.66" height="32.8" rx="4.19"/><path fill="#fff" d="M308.08 109.96A.55.55 0 00308.9 109.47Q308.75 96.34 308.87 83.64C308.94 75.43 320.17 73.23 323.18 81.12Q323.69 82.48 323.69 85.32 323.67 99.55 323.69 136.5C323.7 151.59 315.33 164.51 300.91 169.3 284.2 174.84 266.66 166.37 259.92 150.13 255.7 139.97 257.41 127.19 264.07 118.34 274.64 104.32 292.61 101.25 308.08 109.96ZM308.83 137.98A18.28 18.28 0 00290.55 119.7 18.28 18.28 0 00272.27 137.98 18.28 18.28 0 00290.55 156.26 18.28 18.28 0 00308.83 137.98Z"/><path fill="#fff" d="M144.02 96.07C140.23 90.82 143.24 87.12 147.4 83.91Q154.65 78.32 163.09 77.32C176.32 75.76 187.79 86.22 179.05 99.31 176.52 103.1 169.62 110.18 164.52 106.64Q155.03 100.06 148.25 98.67 147.01 98.42 145.96 97.66 144.29 96.46 144.02 96.07Z"/><path fill="#fff" d="M62.45 96.22Q62.21 96.63 60.63 97.95 59.64 98.78 58.42 99.12 51.76 101 42.77 108.25C37.94 112.15 30.54 105.59 27.75 102 18.08 89.58 28.76 78.31 42.06 78.91Q50.56 79.29 58.19 84.34C62.57 87.24 65.85 90.71 62.45 96.22Z"/><path fill="#fff" d="M53.11 165.99A.32.32 0 0052.78 166.31Q52.63 192.3 52.76 221.01C52.77 224.65 51.4 228.76 47.34 229.39 38.61 230.75 37.87 224.3 38.03 217.07Q38.09 213.95 38.06 136 38.06 129.56 41.71 122.74C56.62 94.87 97.64 101.18 103.56 132.07 106.55 147.7 97.22 163.72 81.92 169.19Q68.1 174.14 54.13 166.31 53.6 166.01 53.11 165.99ZM89.35 138A18.24 18.24 0 0071.11 119.76 18.24 18.24 0 0052.87 138 18.24 18.24 0 0071.11 156.24 18.24 18.24 0 0089.35 138Z"/><path fill="#fff" d="M160.55 165.82A.35.35 0 00160.04 165.65C143.58 176.44 122.64 170.29 113.06 153.43 109.18 146.59 108.18 136.45 110.6 128.73Q115.01 114.61 127.66 108.45C150.09 97.52 174.9 113.6 175.26 138.28Q175.46 151.76 175.25 165.17 175.2 168.14 172.18 170.39C167.28 174.02 162.49 170.73 160.55 165.82ZM160.5 137.97A18.28 18.28 0 00142.22 119.69 18.28 18.28 0 00123.94 137.97 18.28 18.28 0 00142.22 156.25 18.28 18.28 0 00160.5 137.97Z"/><path fill="#fff" d="M381.64 165.85A.35.35 0 00381.14 165.68C364.65 176.43 343.73 170.24 334.19 153.36 330.33 146.51 329.35 136.37 331.79 128.66Q336.23 114.55 348.89 108.42C371.34 97.54 396.11 113.67 396.41 138.35Q396.58 151.83 396.34 165.24 396.29 168.21 393.26 170.45C388.36 174.07 383.57 170.77 381.64 165.85ZM381.66 137.98A18.27 18.27 0 00363.39 119.71 18.27 18.27 0 00345.12 137.98 18.27 18.27 0 00363.39 156.25 18.27 18.27 0 00381.66 137.98Z"/><path fill="#fff" d="M216.09 106.11C230.77 106.1 243.83 116.25 247.58 130.2 249.98 139.14 248.41 154.22 248.82 161.75 249.11 167.04 245.74 171.75 240.03 170.66 235.2 169.74 234.09 165.84 234.14 160.81Q234.16 159.55 234.23 146.02 234.29 135.46 232.78 132.23C229.63 125.5 223.69 121.06 216.09 121.06 208.5 121.06 202.55 125.51 199.41 132.24Q197.9 135.48 197.97 146.04 198.05 159.57 198.08 160.83C198.13 165.85 197.02 169.76 192.19 170.68 186.48 171.77 183.11 167.07 183.4 161.78 183.8 154.25 182.22 139.17 184.61 130.23 188.35 116.27 201.4 106.11 216.09 106.11Z"/><path fill="#fff" d="M73.09 201.66C77.15 196.2 85.98 195.08 89.77 201.61A.39.38 51.9 0090.38 201.69Q97.17 194.56 105.73 198.52C109.33 200.17 109.88 203.96 109.96 208.02Q110.1 215.37 109.91 223.9A3.91 3.91 0 01105.95 227.72L105.68 227.72A3.88 3.88 0 01101.86 224.07Q101.79 222.92 101.79 210.38C101.79 207.06 100.97 203.48 97.07 203.92 92.35 204.45 91.16 208.09 91.26 212.63Q91.38 217.93 91.28 223.86A3.96 3.95-89.4 0187.32 227.74L87.17 227.74A3.94 3.94 0 0183.24 223.78Q83.32 215.72 83.16 208.91C83.01 202.33 75.99 202.71 73.32 207.36Q72.73 208.4 72.77 210.91 72.87 217.42 72.73 223.7A4.11 4.11 0 0168.69 227.71L68.45 227.71A3.8 3.8 0 0164.59 223.95Q64.53 216.11 64.57 200.92C64.58 196.93 70.2 195.52 71.79 199.48Q72.05 200.14 72.53 201.57A.32.32 0 0073.09 201.66Z"/><path fill="#fff" d="M221.2 203.15Q221.06 202.58 222.73 200C227.05 193.34 236.13 199.69 230.5 204.66A1.48 1.43 21.1 01229.65 205.02L226.06 205.32A4.04 4.04 0 00222.72 207.65Q221.64 209.99 221.53 213.77 221.39 218.69 221.47 223.76A3.88 3.88 0 01217.43 227.69L217.19 227.68A3.99 3.99 0 01213.36 223.75Q213.31 220.52 213.37 200.94C213.38 196.54 218.84 195.88 220.49 199.54A1.99 1.92-55.7 01220.65 200.49Q220.47 202.77 220.91 203.3A.17.17 0 00221.2 203.15Z"/><path fill="#fff" d="M242.83 205.55Q242.93 207.56 245.01 208.05 252.04 209.73 254.74 210.76C264.1 214.31 261.46 225.1 252.91 227.18Q244.18 229.32 237.12 224.95C235.15 223.73 233.43 220.47 235.31 218.31 238.11 215.1 241.25 219.46 243.41 220.85Q247.33 223.35 250.83 221.32 252.16 220.55 252.31 219.75A2.7 2.52 12.8 00250.32 216.82C243.68 215.08 235.25 214.33 234.59 207.58 233.51 196.61 247.17 195.79 254.49 198.52 257.04 199.47 259.81 201.15 259 204.32Q258.13 207.73 254.44 206.6A2.4 2.28 71.5 01253.67 206.19C250.4 203.61 246.94 201.65 243.31 204.48A1.27 1.26-20.9 00242.83 205.55Z"/><path fill="#fff" d="M356.11 201.65C360.16 196.2 368.97 195.09 372.76 201.6A.39.38 51.9 00373.37 201.68Q380.14 194.57 388.69 198.52C392.28 200.17 392.83 203.95 392.91 208Q393.05 215.34 392.86 223.85A3.9 3.9 0 01388.91 227.67L388.64 227.67A3.88 3.87 88.6 01384.82 224.02Q384.75 222.88 384.75 210.36C384.75 207.05 383.94 203.47 380.04 203.91 375.33 204.44 374.14 208.07 374.24 212.6Q374.36 217.89 374.26 223.81A3.95 3.94-89.4 01370.31 227.69L370.16 227.69A3.93 3.93 0 01366.24 223.73Q366.32 215.69 366.16 208.89C366.01 202.32 359 202.7 356.34 207.34Q355.75 208.38 355.79 210.89 355.89 217.39 355.75 223.65A4.1 4.1 0 01351.71 227.66L351.47 227.66A3.79 3.79 0 01347.62 223.9Q347.56 216.08 347.6 200.91C347.61 196.93 353.22 195.52 354.81 199.48Q355.07 200.14 355.55 201.56A.32.32 0 00356.11 201.65Z"/><path fill="#fff" d="M145.4109 214.3685A13.58 13.58 0 01131.76 227.8772L128.9201 227.8624A13.58 13.58 0 01115.4114 214.2114L115.4291 210.8315A13.58 13.58 0 01129.08 197.3228L131.9199 197.3376A13.58 13.58 0 01145.4286 210.9886L145.4109 214.3685ZM130.3935 203.03A9.48 7.09-90.1 00123.32 212.5224 9.48 7.09-90.1 00130.4265 221.99 9.48 7.09-90.1 00137.5 212.4976 9.48 7.09-90.1 00130.3935 203.03Z"/><path fill="#fff" d="M161.27 218.37Q161.56 218.37 161.67 217.99 164.13 209.86 166.83 200.32A4.09 4.09 0 01171.91 197.51L172.25 197.6A3.7 3.7 0 01174.76 202.42L166.54 225.36A3.92 3.91-87 01163.79 227.84Q163.64 227.88 161.26 227.88 158.89 227.88 158.74 227.84A3.92 3.91 87.1 01155.99 225.35L147.8 202.41A3.7 3.7 0 01150.31 197.59L150.65 197.5A4.09 4.09 0 01155.73 200.31Q158.42 209.86 160.87 217.99 160.98 218.37 161.27 218.37Z"/><path fill="#fff" d="M185.36 214.67C185.59 219.74 190.65 222.33 195.19 221.26 197.52 220.7 198.34 219.89 200.49 218.33Q201.69 217.45 202.89 217.64C207.67 218.4 205.68 223.82 202.53 225.52 196.76 228.65 188.13 228.84 182.89 224.9 176.35 219.97 175.91 209.76 179.91 203.46 186.02 193.83 203.58 195.36 206.95 206.85 208.09 210.73 208.52 214.21 203.29 214.11Q197.42 214 185.95 214.06A.59.59 0 00185.36 214.67ZM185.94 209.41L199.6 209.29A.13.13 0 00199.73 209.16L199.73 209.09A6.79 6.2-.5 00192.88 202.95L192.54 202.95A6.79 6.2-.5 00185.81 209.21L185.81 209.28A.13.13 0 00185.94 209.41Z"/><path fill="#fff" d="M304.41 216.41C306.5 216.16 309.38 217.39 308.83 219.9 307.13 227.65 297.63 228.89 291.04 227.15 281.24 224.56 279.79 213.29 283.15 205.14 286.63 196.74 299.58 194.6 306.29 200.26 308.87 202.45 310.45 206.35 306.36 208.09A3.03 3.03 0 01303.02 207.44L300.34 204.77A2.53 2.51-12.8 00299.38 204.17C291.78 201.54 289.59 208.41 289.82 214.47 290.01 219.28 294.5 223.36 299.39 220.77 301.03 219.9 302.1 217.93 303.46 216.81A1.86 1.82-67.1 01304.41 216.41Z"/><path fill="#fff" d="M342.2429 214.2847A13.76 13.76 0 01328.2449 227.8025L325.4053 227.7529A13.76 13.76 0 01311.8875 213.7549L311.9371 210.9153A13.76 13.76 0 01325.9351 197.3975L328.7747 197.4471A13.76 13.76 0 01342.2925 211.4451L342.2429 214.2847ZM327.1265 203.04A9.47 7.06-89.9 00320.05 212.4977 9.47 7.06-89.9 00327.0935 221.98 9.47 7.06-89.9 00334.17 212.5223 9.47 7.06-89.9 00327.1265 203.04Z"/><circle fill="#fff" cx="271.21" cy="223.03" r="4.54"/></svg>`
-const LOGO_DATA_URI = `data:image/svg+xml;base64,${btoa(LOGO_SVG)}`
+
+const WIDTH = 1200
+const HEIGHT = 630
+
+function escapeXml(str: string): string {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;')
+}
+
+function wrapText(text: string, maxCharsPerLine: number): string[] {
+  const words = text.split(' ')
+  const lines: string[] = []
+  let currentLine = ''
+
+  for (const word of words) {
+    if ((currentLine + ' ' + word).trim().length > maxCharsPerLine) {
+      if (currentLine) lines.push(currentLine)
+      currentLine = word
+    } else {
+      currentLine = currentLine ? currentLine + ' ' + word : word
+    }
+  }
+  if (currentLine) lines.push(currentLine)
+  return lines.slice(0, 3) // Max 3 lines
+}
+
+function buildStarsSvg(x: number, y: number): string {
+  const stars: string[] = []
+  for (let i = 0; i < 5; i++) {
+    stars.push(
+      `<path transform="translate(${x + i * 44}, ${y})" fill="#f97316" d="M16 2l4.944 10.016L32 13.632l-8 7.792L25.888 32 16 26.832 6.112 32 8 21.424 0 13.632l11.056-1.616L16 2z"/>`
+    )
+  }
+  return stars.join('\n')
+}
+
+function buildSvg(title: string, subtitle: string): string {
+  const escapedTitle = escapeXml(title)
+  const escapedSubtitle = escapeXml(subtitle)
+
+  // Wrap title text — adjust chars per line based on font size
+  const titleLines = wrapText(escapedTitle, 28)
+  const titleFontSize = titleLines.length > 2 ? 52 : 60
+  const lineHeight = titleFontSize * 1.15
+
+  // Position title lines vertically centered
+  const titleBlockHeight = titleLines.length * lineHeight
+  const titleStartY = (HEIGHT - titleBlockHeight) / 2 + 40
+
+  const titleTextElements = titleLines
+    .map((line, i) => {
+      const y = titleStartY + i * lineHeight
+      return `<text x="60" y="${y}" font-family="Getai Grotesk Display, sans-serif" font-size="${titleFontSize}" font-weight="900" fill="#ffffff">${line}</text>`
+    })
+    .join('\n')
+
+  const subtitleY = titleStartY + titleLines.length * lineHeight + 16
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${HEIGHT}" viewBox="0 0 ${WIDTH} ${HEIGHT}">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#171717"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="${WIDTH}" height="${HEIGHT}" fill="url(#bg)"/>
+
+  <!-- Subtle grid pattern -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <rect width="40" height="40" fill="none"/>
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  </pattern>
+  <rect width="${WIDTH}" height="${HEIGHT}" fill="url(#grid)"/>
+
+  <!-- Orange accent glow (top-right) -->
+  <circle cx="1100" cy="80" r="300" fill="rgba(249,115,22,0.06)"/>
+
+  <!-- Logo (scaled to ~200px wide) -->
+  <g transform="translate(60, 48) scale(0.5)">
+    ${LOGO_SVG.replace(/<\/?svg[^>]*>/g, '')}
+  </g>
+
+  <!-- 5-star rating -->
+  ${buildStarsSvg(920, 58)}
+
+  <!-- Title -->
+  ${titleTextElements}
+
+  <!-- Subtitle -->
+  <text x="60" y="${subtitleY}" font-family="Getai Grotesk Display, sans-serif" font-size="24" fill="#9ca3af">${escapedSubtitle}</text>
+
+  <!-- Bottom accent bar -->
+  <rect x="60" y="${HEIGHT - 48}" width="1080" height="6" rx="3" fill="#f97316"/>
+</svg>`
+}
+
+function buildSvgOverlay(title: string, subtitle: string): string {
+  const escapedTitle = escapeXml(title)
+  const escapedSubtitle = escapeXml(subtitle)
+
+  // Left content panel width; image starts at ~720
+  const contentWidth = 680
+  const fadeStart = contentWidth - 40 // Where the gradient fade begins
+  const fadeEnd = contentWidth + 120  // Where the fade ends (transparent)
+
+  const titleLines = wrapText(escapedTitle, 22)
+  const titleFontSize = titleLines.length > 2 ? 46 : 54
+  const lineHeight = titleFontSize * 1.15
+
+  const titleBlockHeight = titleLines.length * lineHeight
+  const titleStartY = (HEIGHT - titleBlockHeight) / 2 + 40
+
+  const titleTextElements = titleLines
+    .map((line, i) => {
+      const y = titleStartY + i * lineHeight
+      return `<text x="60" y="${y}" font-family="Getai Grotesk Display, sans-serif" font-size="${titleFontSize}" font-weight="900" fill="#ffffff">${line}</text>`
+    })
+    .join('\n')
+
+  const subtitleY = titleStartY + titleLines.length * lineHeight + 16
+
+  // SVG overlay: opaque dark left side fading to transparent on the right
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${HEIGHT}" viewBox="0 0 ${WIDTH} ${HEIGHT}">
+  <defs>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0f0f0f" stop-opacity="1"/>
+      <stop offset="${((fadeStart / WIDTH) * 100).toFixed(0)}%" stop-color="#0f0f0f" stop-opacity="1"/>
+      <stop offset="${((fadeEnd / WIDTH) * 100).toFixed(0)}%" stop-color="#0f0f0f" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0f0f0f" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Dark overlay fading from opaque-left to transparent-right -->
+  <rect width="${WIDTH}" height="${HEIGHT}" fill="url(#fade)"/>
+
+  <!-- Subtle grid pattern on left side -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <rect width="40" height="40" fill="none"/>
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  </pattern>
+  <rect width="${contentWidth}" height="${HEIGHT}" fill="url(#grid)"/>
+
+  <!-- Logo (scaled) -->
+  <g transform="translate(60, 48) scale(0.45)">
+    ${LOGO_SVG.replace(/<\/?svg[^>]*>/g, '')}
+  </g>
+
+  <!-- 5-star rating -->
+  ${buildStarsSvg(440, 56)}
+
+  <!-- Title -->
+  ${titleTextElements}
+
+  <!-- Subtitle -->
+  <text x="60" y="${subtitleY}" font-family="Getai Grotesk Display, sans-serif" font-size="22" fill="#9ca3af">${escapedSubtitle}</text>
+
+  <!-- Bottom accent bar -->
+  <rect x="60" y="${HEIGHT - 48}" width="${contentWidth - 80}" height="6" rx="3" fill="#f97316"/>
+</svg>`
+}
+
+function setupFontconfig() {
+  const fontsDir = join(process.cwd(), 'fonts')
+  const tmpFontsDir = '/tmp/og-fonts'
+  const tmpConf = '/tmp/fonts.conf'
+
+  if (!existsSync(tmpFontsDir)) {
+    mkdirSync(tmpFontsDir, { recursive: true })
+  }
+
+  const fontSrc = join(fontsDir, 'DTGetaiGroteskDisplay-Black.otf')
+  const fontDest = join(tmpFontsDir, 'DTGetaiGroteskDisplay-Black.otf')
+  if (existsSync(fontSrc) && !existsSync(fontDest)) {
+    writeFileSync(fontDest, readFileSync(fontSrc))
+  }
+
+  const confSrc = join(fontsDir, 'fonts.conf')
+  if (existsSync(confSrc) && !existsSync(tmpConf)) {
+    writeFileSync(tmpConf, readFileSync(confSrc, 'utf-8'))
+  }
+
+  process.env.FONTCONFIG_FILE = tmpConf
+  process.env.FONTCONFIG_PATH = '/tmp'
+}
 
 export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl
   const title = searchParams.get('title') || 'Rapid Panda Movers'
   const subtitle = searchParams.get('subtitle') || 'Professional Moving Services in Miami'
+  const imageParam = searchParams.get('image')
 
   try {
-    return new ImageResponse(
-      (
-        <div
-          style={{
-            width: '100%',
-            height: '100%',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-            backgroundColor: '#000',
-            padding: '60px',
-          }}
-        >
-          {/* Top bar */}
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-            }}
-          >
-            <img
-              src={LOGO_DATA_URI}
-              height="120"
-              style={{ height: '120px' }}
-            />
+    setupFontconfig()
 
-            {/* Stars */}
-            <div style={{ display: 'flex', gap: '8px' }}>
-              {[1, 2, 3, 4, 5].map((i) => (
-                <svg key={i} width="56" height="56" viewBox="0 0 24 24" fill="#f97316">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                </svg>
-              ))}
-            </div>
-          </div>
+    let webpBuffer: Buffer
 
-          {/* Main content */}
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '20px',
-              flex: 1,
-              justifyContent: 'center',
-              paddingLeft: '10px',
-            }}
-          >
-            <div
-              style={{
-                fontSize: '56px',
-                fontWeight: 700,
-                color: '#fff',
-                lineHeight: 1.2,
-                maxWidth: '900px',
-              }}
-            >
-              {title}
-            </div>
-            <div
-              style={{
-                fontSize: '24px',
-                color: '#9ca3af',
-                maxWidth: '700px',
-              }}
-            >
-              {subtitle}
-            </div>
-          </div>
+    if (imageParam) {
+      // Fetch the featured image
+      let imageBuffer: Buffer
+      try {
+        if (imageParam.startsWith('http')) {
+          const res = await fetch(imageParam)
+          if (!res.ok) throw new Error(`Failed to fetch image: ${res.status}`)
+          imageBuffer = Buffer.from(await res.arrayBuffer())
+        } else {
+          // Local file path
+          const imagePath = join(process.cwd(), 'public', imageParam)
+          imageBuffer = readFileSync(imagePath)
+        }
+      } catch {
+        // If image fetch fails, fall back to no-image layout
+        const fallbackSvg = buildSvg(title, subtitle)
+        webpBuffer = await sharp(Buffer.from(fallbackSvg))
+          .resize(WIDTH, HEIGHT)
+          .webp({ quality: 80 })
+          .toBuffer()
 
-          {/* Bottom accent bar */}
-          <div
-            style={{
-              width: '1060px',
-              height: '6px',
-              backgroundColor: '#f97316',
-              borderRadius: '3px',
-              marginLeft: '10px',
-            }}
-          />
-        </div>
-      ),
-      {
-        width: 1200,
-        height: 630,
+        return new Response(new Uint8Array(webpBuffer), {
+          headers: {
+            'Content-Type': 'image/webp',
+            'Cache-Control': 'public, max-age=31536000, immutable',
+          },
+        })
+      }
+
+      // Resize featured image to fill the full canvas (used as background)
+      const resizedImage = await sharp(imageBuffer)
+        .resize(WIDTH, HEIGHT, { fit: 'cover' })
+        .png()
+        .toBuffer()
+
+      // Build transparent SVG overlay (dark left side fading to transparent right)
+      const overlaySvg = buildSvgOverlay(title, subtitle)
+      const overlayPng = await sharp(Buffer.from(overlaySvg))
+        .resize(WIDTH, HEIGHT)
+        .png()
+        .toBuffer()
+
+      // Composite: full-bleed image → transparent overlay on top
+      webpBuffer = await sharp(resizedImage)
+        .composite([
+          { input: overlayPng, left: 0, top: 0 },
+        ])
+        .webp({ quality: 80 })
+        .toBuffer()
+    } else {
+      // Simple layout — no image
+      const svgString = buildSvg(title, subtitle)
+      webpBuffer = await sharp(Buffer.from(svgString))
+        .resize(WIDTH, HEIGHT)
+        .webp({ quality: 80 })
+        .toBuffer()
+    }
+
+    return new Response(new Uint8Array(webpBuffer), {
+      headers: {
+        'Content-Type': 'image/webp',
+        'Cache-Control': 'public, max-age=31536000, immutable',
       },
-    )
+    })
   } catch {
     return new Response('Failed to generate image', { status: 500 })
   }

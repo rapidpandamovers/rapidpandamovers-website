@@ -133,6 +133,7 @@ export default function SearchSection({
     setResults(limitedResults);
     setIsOpen(limitedResults.length > 0);
     setActiveIndex(-1);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query]);
 
   // Handle keyboard navigation

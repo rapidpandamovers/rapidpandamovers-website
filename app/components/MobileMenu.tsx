@@ -52,10 +52,9 @@ interface MobileMenuProps {
   locale: string
   phoneTel: string
   phoneFormatted: string
-  callAriaLabel?: string
 }
 
-export default function MobileMenu({ nav, services, cities, locale, phoneTel, phoneFormatted, callAriaLabel }: MobileMenuProps) {
+export default function MobileMenu({ nav, services, cities, locale, phoneTel, phoneFormatted }: MobileMenuProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [openSection, setOpenSection] = useState<string | null>(null)
   const pathname = usePathname()
@@ -64,7 +63,7 @@ export default function MobileMenu({ nav, services, cities, locale, phoneTel, ph
 
   // Close menu on route change
   useEffect(() => {
-    setIsOpen(false)
+    setIsOpen(false) // eslint-disable-line react-hooks/set-state-in-effect
     setOpenSection(null)
   }, [pathname])
 
@@ -261,7 +260,6 @@ export default function MobileMenu({ nav, services, cities, locale, phoneTel, ph
           <div className="space-y-3 pt-4">
             <a
               href={`tel:${phoneTel}`}
-              aria-label={callAriaLabel}
               className="flex items-center justify-center space-x-2 border border-orange-700 bg-orange-700 hover:bg-orange-800 hover:border-orange-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors w-full"
             >
               <PhoneIcon className="w-4 h-4" />

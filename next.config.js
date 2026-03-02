@@ -5,11 +5,15 @@ const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  productionBrowserSourceMaps: true,
   env: {
     BUILD_DATE: new Date().toISOString().split('T')[0],
   },
   experimental: {
     optimizePackageImports: ['lucide-react'],
+  },
+  outputFileTracingIncludes: {
+    '/api/og': ['./fonts/**/*'],
   },
   images: {
     remotePatterns: [
@@ -31,6 +35,10 @@ const nextConfig = {
       {
         source: '/api/track',
         destination: 'https://rybbit.hosthoncho.com/api/track',
+      },
+      {
+        source: '/api/site/:path*',
+        destination: 'https://rybbit.hosthoncho.com/api/site/:path*',
       },
     ];
   },

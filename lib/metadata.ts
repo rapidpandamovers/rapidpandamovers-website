@@ -321,7 +321,14 @@ export async function generateBlogMetadata(post: BlogPost, locale?: Locale): Pro
   const title = `${post.title}${config.templates.blogPost.titleSuffix}`
   const description = post.excerpt
   const path = `/blog/${post.slug}`
-  const image = post.featured || SITE_CONFIG.defaultImage
+
+  // Always use dynamic OG route; pass featured image as param when available
+  const ogUrl = new URL(`${getSiteUrl()}/api/og`)
+  ogUrl.searchParams.set('title', post.title)
+  if (post.featured) {
+    ogUrl.searchParams.set('image', post.featured)
+  }
+  const image = ogUrl.toString()
 
   return generatePageMetadata({
     title,

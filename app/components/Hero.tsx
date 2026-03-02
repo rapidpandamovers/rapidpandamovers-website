@@ -82,7 +82,6 @@ export default async function Hero({
               dropoffPlaceholder={ui.forms.hero.dropoffPlaceholder}
               buttonText={ui.buttons.getFreeQuote}
               phone={content.site.phone}
-              callAriaLabel={ui.buttons.callAriaLabel}
             />
 
             {/* Rating display — desktop only */}

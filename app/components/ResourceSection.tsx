@@ -13,7 +13,7 @@ interface Resource {
 
 function ResourceIcon({ name }: { name: string }) {
   const Icon = resolveIcon(name)
-  return <Icon className="w-6 h-6" />
+  return <Icon className="w-6 h-6" /> // eslint-disable-line react-hooks/static-components
 }
 
 interface ResourceSectionProps {

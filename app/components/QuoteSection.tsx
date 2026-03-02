@@ -45,7 +45,6 @@ export default async function QuoteSection({
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch">
           <a
             href={`tel:${phone}`}
-            aria-label={ui.buttons.callAriaLabel}
             className="flex items-center justify-center gap-2 bg-white text-orange-700 font-bold py-3 px-8 rounded-lg hover:bg-orange-50 transition-colors border-2 border-transparent sm:flex-1 sm:max-w-xs"
           >
             <Phone className="w-4 h-4" />

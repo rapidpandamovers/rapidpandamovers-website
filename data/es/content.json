@@ -216,10 +216,38 @@
     "mediaSection": {
       "description": "Desde el empaque cuidadoso de muebles hasta la carga eficiente del camión, vea cómo nuestro equipo de mudanzas licenciado y asegurado en Miami maneja cada reubicación con precisión y cuidado.",
       "videos": [
-        { "name": "Mudadores profesionales empacando muebles", "description": "El equipo de Rapid Panda Movers empacando y protegiendo cuidadosamente los muebles antes de una mudanza local en Miami.", "contentUrl": "/videos/1.mp4", "thumbnailUrl": "/images/video-thumb-1.webp", "uploadDate": "2025-10-15", "duration": "PT10S" },
-        { "name": "Camion de Rapid Panda Movers en Miami", "description": "Camion de Rapid Panda Movers listo para una mudanza residencial en el area de Miami.", "contentUrl": "/videos/2.mp4", "thumbnailUrl": "/images/video-thumb-2.webp", "uploadDate": "2025-10-20", "duration": "PT10S" },
-        { "name": "Equipo de mudanza llevando articulos al nuevo hogar", "description": "Equipo profesional de mudanza transportando pertenencias al nuevo hogar de un cliente en el sur de Florida.", "contentUrl": "/videos/3.mp4", "thumbnailUrl": "/images/video-thumb-3.webp", "uploadDate": "2025-11-01", "duration": "PT5S" },
-        { "name": "Mudadores organizando cajas en el hogar", "description": "El equipo de Rapid Panda Movers organizando y colocando cajas en el hogar de un cliente durante una mudanza local.", "contentUrl": "/videos/4.mp4", "thumbnailUrl": "/images/video-thumb-4.webp", "uploadDate": "2025-11-05", "duration": "PT5S" }
+        {
+          "name": "Mudadores profesionales empacando muebles",
+          "description": "El equipo de Rapid Panda Movers empacando y protegiendo cuidadosamente los muebles antes de una mudanza local en Miami.",
+          "contentUrl": "/videos/1.mp4",
+          "thumbnailUrl": "/images/video-thumb-1.webp",
+          "uploadDate": "2025-10-15",
+          "duration": "PT10S"
+        },
+        {
+          "name": "Camion de Rapid Panda Movers en Miami",
+          "description": "Camion de Rapid Panda Movers listo para una mudanza residencial en el area de Miami.",
+          "contentUrl": "/videos/2.mp4",
+          "thumbnailUrl": "/images/video-thumb-2.webp",
+          "uploadDate": "2025-10-20",
+          "duration": "PT10S"
+        },
+        {
+          "name": "Equipo de mudanza llevando articulos al nuevo hogar",
+          "description": "Equipo profesional de mudanza transportando pertenencias al nuevo hogar de un cliente en el sur de Florida.",
+          "contentUrl": "/videos/3.mp4",
+          "thumbnailUrl": "/images/video-thumb-3.webp",
+          "uploadDate": "2025-11-01",
+          "duration": "PT5S"
+        },
+        {
+          "name": "Mudadores organizando cajas en el hogar",
+          "description": "El equipo de Rapid Panda Movers organizando y colocando cajas en el hogar de un cliente durante una mudanza local.",
+          "contentUrl": "/videos/4.mp4",
+          "thumbnailUrl": "/images/video-thumb-4.webp",
+          "uploadDate": "2025-11-05",
+          "duration": "PT5S"
+        }
       ]
     },
     "reviewSection": {
@@ -416,41 +444,6 @@
   "reviews": {
     "title": "Lo que dicen nuestros clientes",
     "description": "Resenas reales de clientes satisfechos",
-    "stats": {
-      "total_moves": "1000+",
-      "customer_satisfaction": "98%",
-      "years_experience": "5+",
-      "average_rating": 4.7,
-      "total_reviews": 56,
-      "five_star_count": 53,
-      "four_star_count": 1,
-      "three_star_count": 0,
-      "two_star_count": 0,
-      "one_star_count": 2
-    },
-    "platforms": {
-      "google": {
-        "name": "Google",
-        "icon": "google",
-        "url": "https://www.google.com/maps/place/Rapid+Panda+Movers",
-        "rating": 4.8,
-        "reviewCount": 51
-      },
-      "yelp": {
-        "name": "Yelp",
-        "icon": "yelp",
-        "url": "https://www.yelp.com/biz/rapid-panda-movers-miami",
-        "rating": 4.2,
-        "reviewCount": 5
-      },
-      "bbb": {
-        "name": "BBB",
-        "icon": "bbb",
-        "url": "https://www.bbb.org/us/fl/miami/profile/moving-companies/rapid-panda-movers-llc-0633-92024179",
-        "rating": "A+",
-        "reviewCount": 0
-      }
-    },
     "hero": {
       "cta": "Obtenga su cotizacion gratuita"
     },

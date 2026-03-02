@@ -114,14 +114,18 @@ export default function MediaSection({
     return () => clearInterval(interval)
   }, [autoScroll, autoScrollInterval, activeIndex])
 
+  // Lock body scroll when modal is open
+  useEffect(() => {
+    document.body.style.overflow = activeIndex !== null ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [activeIndex])
+
   const openModal = (index: number) => {
     setActiveIndex(index)
-    document.body.style.overflow = 'hidden'
   }
 
   const closeModal = () => {
     setActiveIndex(null)
-    document.body.style.overflow = 'unset'
   }
 
   const navigateModal = (direction: 'prev' | 'next') => {

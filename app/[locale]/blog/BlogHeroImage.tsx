@@ -29,11 +29,11 @@ export default function BlogHeroImage({ featured, title, category, date, readTim
     if (referrer) {
       try {
         const url = new URL(referrer)
-        // Check if referrer is from the same origin and is a blog listing page
         if (url.origin === window.location.origin) {
           if (/\/blog(\/page\/\d+|\/pagina\/\d+)?$/.test(url.pathname)) {
-            setBackUrl(url.pathname)
+            setBackUrl(url.pathname) // eslint-disable-line react-hooks/set-state-in-effect
             setCanGoBack(true)
+            return
           }
         }
       } catch {
@@ -41,12 +41,12 @@ export default function BlogHeroImage({ featured, title, category, date, readTim
       }
     }
 
-    // Also check sessionStorage for blog page history
+    // Fallback: check sessionStorage for blog page history
     const storedBlogPage = sessionStorage.getItem('lastBlogPage')
-    if (storedBlogPage && !canGoBack) {
+    if (storedBlogPage) {
       setBackUrl(storedBlogPage)
     }
-  }, [canGoBack])
+  }, [])
 
   const handleBackClick = (e: React.MouseEvent) => {
     e.preventDefault()

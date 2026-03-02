@@ -20,7 +20,6 @@ interface HeroQuoteFormProps {
   dropoffPlaceholder: string
   buttonText: string
   phone: string
-  callAriaLabel: string
 }
 
 export default function HeroQuoteForm({
@@ -30,7 +29,6 @@ export default function HeroQuoteForm({
   dropoffPlaceholder,
   buttonText,
   phone,
-  callAriaLabel,
 }: HeroQuoteFormProps) {
   const [pickupZip, setPickupZip] = useState('')
   const [dropoffZip, setDropoffZip] = useState('')
@@ -44,7 +42,6 @@ export default function HeroQuoteForm({
       <div className="md:hidden space-y-4">
         <a
           href={`tel:${phone.replace(/-/g, '')}`}
-          aria-label={callAriaLabel}
           className="flex items-center justify-center space-x-2 w-full bg-white text-orange-700 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
         >
           <PhoneIcon className="w-5 h-5" />

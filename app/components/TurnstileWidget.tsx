@@ -45,7 +45,7 @@ const TurnstileWidget = forwardRef<TurnstileWidgetRef, TurnstileWidgetProps>(
     useEffect(() => {
       if (!siteKey) {
         onVerify('bypass')
-        setVerified(true)
+        setVerified(true) // eslint-disable-line react-hooks/set-state-in-effect
       }
     }, [siteKey, onVerify])
 

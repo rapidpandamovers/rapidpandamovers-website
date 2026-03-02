@@ -164,7 +164,7 @@ export default async function Header() {
 
               <div className="flex items-center space-x-3">
                 <div className="flex flex-col items-center">
-                  <a href={`tel:${phoneTel}`} aria-label={ui.buttons.callAriaLabel} className="flex items-center justify-center space-x-2 border border-orange-700 text-orange-700 hover:bg-orange-700 hover:text-white font-semibold py-3 px-4 rounded-lg transition-colors w-44">
+                  <a href={`tel:${phoneTel}`} className="flex items-center justify-center space-x-2 border border-orange-700 text-orange-700 hover:bg-orange-700 hover:text-white font-semibold py-3 px-4 rounded-lg transition-colors w-44">
                     <PhoneIcon className="w-4 h-4" />
                     <span>{phoneFormatted}</span>
                   </a>
@@ -182,7 +182,7 @@ export default async function Header() {
 
             {/* Mobile/tablet: buttons + hamburger */}
             <div className="flex xl:hidden items-center space-x-3">
-              <a href={`tel:${phoneTel}`} aria-label={ui.buttons.callAriaLabel} className="hidden md:flex items-center justify-center space-x-2 border border-orange-700 text-orange-700 hover:bg-orange-700 hover:text-white font-semibold py-3 px-4 rounded-lg transition-colors">
+              <a href={`tel:${phoneTel}`} className="hidden md:flex items-center justify-center space-x-2 border border-orange-700 text-orange-700 hover:bg-orange-700 hover:text-white font-semibold py-3 px-4 rounded-lg transition-colors">
                 <PhoneIcon className="w-4 h-4" />
                 <span>{phoneFormatted}</span>
               </a>
@@ -190,7 +190,7 @@ export default async function Header() {
                 {nav.header.cta.quoteButton}
                 <ArrowRight className="w-4 h-4" />
               </Link>
-              <MobileMenu nav={nav} services={services} cities={cities} locale={locale} phoneTel={phoneTel} phoneFormatted={phoneFormatted} callAriaLabel={ui.buttons.callAriaLabel} />
+              <MobileMenu nav={nav} services={services} cities={cities} locale={locale} phoneTel={phoneTel} phoneFormatted={phoneFormatted} />
             </div>
           </div>
         </div>

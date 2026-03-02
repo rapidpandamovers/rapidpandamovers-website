@@ -50,7 +50,7 @@ export default function FAQSection({
     setOpenIndex(openIndex === index ? null : index)
   }
 
-  const FAQAccordion = () => (
+  const faqAccordion = (
     <div className="space-y-4">
       {displayFaqs.map((faq: FAQ, index: number) => (
         <div key={index} className="bg-white border border-gray-200 rounded-xl">
@@ -137,7 +137,6 @@ export default function FAQSection({
                 </p>
                 <a
                   href={`tel:${content.site.phone.replace(/[^0-9]/g, '')}`}
-                  aria-label={ui.buttons.callAriaLabel}
                   className="flex items-center justify-center gap-2 bg-orange-700 hover:bg-orange-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -147,7 +146,7 @@ export default function FAQSection({
                 </a>
                 <div className="flex items-center gap-3 mt-3">
                   <div className="h-px flex-1 bg-gray-200" />
-                  <span className="text-base font-medium text-gray-400">{ui.faq.or ?? 'or'}</span>
+                  <span className="text-base font-medium text-gray-500">{ui.faq.or ?? 'or'}</span>
                   <div className="h-px flex-1 bg-gray-200" />
                 </div>
                 <Link
@@ -162,7 +161,7 @@ export default function FAQSection({
 
             {/* Right Column - FAQ Accordion (3/5 = 60%) */}
             <div className="lg:col-span-3 bg-gray-50 rounded-4xl p-6 md:p-8">
-              <FAQAccordion />
+              {faqAccordion}
             </div>
           </div>
         </div>
@@ -188,7 +187,7 @@ export default function FAQSection({
         )}
 
         <div className="bg-gray-50 rounded-4xl p-6 md:p-8">
-          <FAQAccordion />
+          {faqAccordion}
         </div>
 
         {showViewAllLink && (

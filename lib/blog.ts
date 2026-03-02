@@ -174,13 +174,14 @@ export function getPostSummaries(locale?: string): BlogPostSummary[] {
 }
 
 /**
- * Check if a post is published (date is today or earlier)
+ * Check if a post is published (date is today or earlier, based on 6am EST)
  */
 export function isPublished(post: { date: string }): boolean {
-  const today = new Date()
-  today.setHours(0, 0, 0, 0)
-  const postDate = new Date(post.date + 'T00:00:00')
-  return postDate <= today
+  // Current time in US Eastern (handles EST/EDT automatically)
+  const nowET = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/New_York' }))
+  // Posts go live at 6am ET on their publish date
+  const publishAt = new Date(post.date + 'T06:00:00')
+  return publishAt <= nowET
 }
 
 /**

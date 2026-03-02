@@ -131,7 +131,7 @@ export default async function Footer() {
           <div className="pt-6">
             <p className="font-display text-base font-bold mb-4 text-white">{ui.contact.contactUs}</p>
             <div className="space-y-3 text-sm">
-              <a href={`tel:${phoneTel}`} aria-label={ui.buttons.callAriaLabel} className="flex items-start space-x-3 text-gray-400 hover:text-orange-700 transition-colors">
+              <a href={`tel:${phoneTel}`} className="flex items-start space-x-3 text-gray-400 hover:text-orange-700 transition-colors">
                 <PhoneIcon className="w-4 h-4 text-orange-700 flex-shrink-0 mt-0.5" />
                 <span className="font-semibold text-white">{phoneFormatted}</span>
               </a>
@@ -252,7 +252,7 @@ export default async function Footer() {
           <div>
             <p className="font-display text-lg font-bold mb-4 text-white">{ui.contact.contactUs}</p>
             <div className="space-y-4 text-sm">
-              <a href={`tel:${phoneTel}`} aria-label={ui.buttons.callAriaLabel} className="flex items-start space-x-3 text-gray-400 hover:text-orange-700 transition-colors">
+              <a href={`tel:${phoneTel}`} className="flex items-start space-x-3 text-gray-400 hover:text-orange-700 transition-colors">
                 <PhoneIcon className="w-5 h-5 text-orange-700 flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="font-semibold text-white">{phoneFormatted}</p>

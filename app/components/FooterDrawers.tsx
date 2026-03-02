@@ -51,7 +51,7 @@ export default function FooterDrawers({
 
   // Collapse all sections on route change
   useEffect(() => {
-    setOpenSections(new Set())
+    setOpenSections(new Set()) // eslint-disable-line react-hooks/set-state-in-effect
   }, [pathname])
 
   function toggleSection(section: string) {

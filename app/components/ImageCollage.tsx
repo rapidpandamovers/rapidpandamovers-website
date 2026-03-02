@@ -351,6 +351,55 @@ const VARIANTS = {
   },
 };
 
+function DebugShape({
+  d,
+  pts,
+  center,
+  label,
+  stroke,
+}: {
+  d: string;
+  pts: [Pt, Pt, Pt, Pt];
+  center: { cx: number; cy: number };
+  label: string;
+  stroke: string;
+}) {
+  return (
+    <g pointerEvents="none">
+      {/* Outline of the rounded quad (path and points are already in global space) */}
+      <path d={d} fill="none" stroke={stroke} strokeWidth={6} />
+
+      {/* Corner points */}
+      {pts.map((p, i) => (
+        <g key={i}>
+          <circle cx={p.x} cy={p.y} r={10} fill={stroke} />
+          <text
+            x={p.x + 14}
+            y={p.y - 14}
+            fontSize={34}
+            fill={stroke}
+            fontFamily="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto"
+          >
+            {i}
+          </text>
+        </g>
+      ))}
+
+      {/* Center + label */}
+      <circle cx={center.cx} cy={center.cy} r={10} fill={stroke} />
+      <text
+        x={center.cx + 14}
+        y={center.cy + 44}
+        fontSize={44}
+        fill={stroke}
+        fontFamily="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto"
+      >
+        {label}
+      </text>
+    </g>
+  );
+}
+
 export function ImageCollage({
   slot1Src: slot1SrcProp,
   slot1Fallback: slot1FallbackProp,
@@ -474,53 +523,6 @@ export function ImageCollage({
   const bbox2 = bboxRect(rotPts2);
   const bbox3 = bboxRect(rotPts3);
 
-  const DebugShape = ({
-    d,
-    pts,
-    center,
-    label,
-    stroke,
-  }: {
-    d: string;
-    pts: [Pt, Pt, Pt, Pt];
-    center: { cx: number; cy: number };
-    label: string;
-    stroke: string;
-  }) => (
-    <g pointerEvents="none">
-      {/* Outline of the rounded quad (path and points are already in global space) */}
-      <path d={d} fill="none" stroke={stroke} strokeWidth={6} />
-
-      {/* Corner points */}
-      {pts.map((p, i) => (
-        <g key={i}>
-          <circle cx={p.x} cy={p.y} r={10} fill={stroke} />
-          <text
-            x={p.x + 14}
-            y={p.y - 14}
-            fontSize={34}
-            fill={stroke}
-            fontFamily="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto"
-          >
-            {i}
-          </text>
-        </g>
-      ))}
-
-      {/* Center + label */}
-      <circle cx={center.cx} cy={center.cy} r={10} fill={stroke} />
-      <text
-        x={center.cx + 14}
-        y={center.cy + 44}
-        fontSize={44}
-        fill={stroke}
-        fontFamily="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto"
-      >
-        {label}
-      </text>
-    </g>
-  );
-
   return (
     <>
     <svg
@@ -630,9 +632,12 @@ export function ImageCollage({
     </svg>
     {/* Hidden img tags for search engine crawlability */}
     <div className="sr-only">
-      {src1 && <img src={src1} alt={alt?.slot1 || ''} />}
-      {src2 && <img src={src2} alt={alt?.slot2 || ''} />}
-      {src3 && <img src={src3} alt={alt?.slot3 || ''} />}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      {src1 && <img src={src1} alt={alt?.slot1 || ''} width={960} height={640} />}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      {src2 && <img src={src2} alt={alt?.slot2 || ''} width={960} height={640} />}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      {src3 && <img src={src3} alt={alt?.slot3 || ''} width={960} height={640} />}
     </div>
     </>
   );
