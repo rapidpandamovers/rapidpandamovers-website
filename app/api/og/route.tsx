@@ -6,14 +6,31 @@ export const runtime = 'edge'
 const WIDTH = 1200
 const HEIGHT = 630
 
-// Load custom font at module level (cached across invocations)
+// Load custom fonts at module level (cached across invocations)
 const fontPromise = fetch(
   new URL('../../../fonts/DTGetaiGroteskDisplay-Black.otf', import.meta.url)
 ).then((res) => res.arrayBuffer())
 
+// Load Inter Bold (static weight) for subtitle text
+const interBoldPromise = fetch(
+  'https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf'
+).then((res) => res.arrayBuffer())
+
+// Load logo SVG, swap dark fill to white, and encode as data URI
+const logoPromise = fetch(
+  new URL('../../../public/images/rapidpandamovers-logo.svg', import.meta.url)
+).then(async (res) => {
+  let svg = await res.text()
+  // Strip XML declaration and DOCTYPE so it's a clean SVG for data URI
+  svg = svg.replace(/<\?xml[^?]*\?>/, '').replace(/<!DOCTYPE[^>]*>/, '').trim()
+  // Replace dark fill with white for use on dark backgrounds
+  svg = svg.replace(/fill="#141c21"/g, 'fill="#ffffff"')
+  return `data:image/svg+xml;base64,${btoa(svg)}`
+})
+
 function StarIcon() {
   return (
-    <svg width="32" height="32" viewBox="0 0 32 32" fill="#f97316">
+    <svg width="80" height="80" viewBox="0 0 32 32" fill="#f97316">
       <path d="M16 2l4.944 10.016L32 13.632l-8 7.792L25.888 32 16 26.832 6.112 32 8 21.424 0 13.632l11.056-1.616L16 2z" />
     </svg>
   )
@@ -21,7 +38,7 @@ function StarIcon() {
 
 function FiveStars() {
   return (
-    <div style={{ display: 'flex', gap: '8px' }}>
+    <div style={{ display: 'flex', gap: '12px' }}>
       <StarIcon />
       <StarIcon />
       <StarIcon />
@@ -31,37 +48,24 @@ function FiveStars() {
   )
 }
 
-function LogoText() {
-  return (
-    <div
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        gap: '12px',
-        fontSize: '28px',
-        fontWeight: 900,
-        color: '#ffffff',
-        fontFamily: 'Getai Grotesk Display',
-      }}
-    >
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          width: '48px',
-          height: '48px',
-          borderRadius: '12px',
-          background: '#f97316',
-          fontSize: '28px',
-        }}
-      >
-        RP
-      </div>
-      Rapid Panda Movers
-    </div>
-  )
+function getSiteUrl(): string {
+  return process.env.NEXT_PUBLIC_SITE_URL || 'https://www.rapidpandamovers.com'
 }
+
+const fonts = (fontData: ArrayBuffer, interBoldData: ArrayBuffer) => [
+  {
+    name: 'Getai Grotesk Display',
+    data: fontData,
+    style: 'normal' as const,
+    weight: 900 as const,
+  },
+  {
+    name: 'Inter',
+    data: interBoldData,
+    style: 'normal' as const,
+    weight: 700 as const,
+  },
+]
 
 export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl
@@ -70,13 +74,20 @@ export async function GET(request: NextRequest) {
     searchParams.get('subtitle') || 'Professional Moving Services in Miami'
   const imageParam = searchParams.get('image')
 
-  const fontData = await fontPromise
+  const [fontData, interBoldData, logoDataUri] = await Promise.all([fontPromise, interBoldPromise, logoPromise])
 
-  // Layout with featured image on the right
+  // Layout with featured image as full-bleed background
   if (imageParam) {
-    const imageUrl = imageParam.startsWith('http')
-      ? imageParam
-      : `https://www.rapidpandamovers.com${imageParam.startsWith('/') ? '' : '/'}${imageParam}`
+    const siteUrl = getSiteUrl()
+    let imageUrl: string
+    if (imageParam.startsWith('http')) {
+      imageUrl = imageParam
+    } else if (imageParam.endsWith('.webp')) {
+      // Satori doesn't support WebP — route through Next.js image optimization to get JPEG
+      imageUrl = `${siteUrl}/_next/image?url=${encodeURIComponent(imageParam)}&w=${WIDTH}&q=80`
+    } else {
+      imageUrl = `${siteUrl}${imageParam.startsWith('/') ? '' : '/'}${imageParam}`
+    }
 
     return new ImageResponse(
       (
@@ -89,7 +100,7 @@ export async function GET(request: NextRequest) {
             background: '#0f0f0f',
           }}
         >
-          {/* Background image - full bleed (img required by Satori) */}
+          {/* Background image - full bleed */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             alt=""
@@ -106,7 +117,7 @@ export async function GET(request: NextRequest) {
             }}
           />
 
-          {/* Dark gradient overlay - opaque left, transparent right */}
+          {/* Dark overlay for readability */}
           <div
             style={{
               position: 'absolute',
@@ -115,8 +126,7 @@ export async function GET(request: NextRequest) {
               width: WIDTH,
               height: HEIGHT,
               display: 'flex',
-              background:
-                'linear-gradient(to right, #0f0f0f 40%, #0f0f0fdd 55%, transparent 70%)',
+              background: 'rgba(0,0,0,0.55)',
             }}
           />
 
@@ -126,14 +136,15 @@ export async function GET(request: NextRequest) {
               position: 'absolute',
               top: 0,
               left: 0,
-              width: '680px',
+              width: WIDTH,
               height: HEIGHT,
               display: 'flex',
               flexDirection: 'column',
-              justifyContent: 'center',
+              justifyContent: 'flex-end',
               padding: '60px',
             }}
           >
+            {/* Top bar: logo + stars */}
             <div
               style={{
                 display: 'flex',
@@ -145,21 +156,28 @@ export async function GET(request: NextRequest) {
                 right: '60px',
               }}
             >
-              <LogoText />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                alt="Rapid Panda Movers"
+                src={logoDataUri}
+                height={128}
+                style={{ height: '128px' }}
+              />
               <FiveStars />
             </div>
 
+            {/* Title + subtitle */}
             <div
               style={{
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '16px',
-                marginTop: '20px',
+                marginBottom: '40px',
               }}
             >
               <div
                 style={{
-                  fontSize: title.length > 40 ? 46 : 54,
+                  fontSize: title.length > 40 ? 56 : 64,
                   fontWeight: 900,
                   color: '#ffffff',
                   lineHeight: 1.15,
@@ -170,9 +188,10 @@ export async function GET(request: NextRequest) {
               </div>
               <div
                 style={{
-                  fontSize: 22,
-                  color: '#9ca3af',
-                  fontFamily: 'Getai Grotesk Display',
+                  fontSize: 36,
+                  fontWeight: 700,
+                  fontFamily: 'Inter',
+                  color: '#d1d5db',
                 }}
               >
                 {subtitle}
@@ -182,10 +201,7 @@ export async function GET(request: NextRequest) {
             {/* Bottom accent bar */}
             <div
               style={{
-                position: 'absolute',
-                bottom: '48px',
-                left: '60px',
-                width: '540px',
+                width: '1080px',
                 height: '6px',
                 borderRadius: '3px',
                 background: '#f97316',
@@ -198,14 +214,7 @@ export async function GET(request: NextRequest) {
       {
         width: WIDTH,
         height: HEIGHT,
-        fonts: [
-          {
-            name: 'Getai Grotesk Display',
-            data: fontData,
-            style: 'normal',
-            weight: 900,
-          },
-        ],
+        fonts: fonts(fontData, interBoldData),
         headers: {
           'Cache-Control': 'public, max-age=31536000, immutable',
         },
@@ -222,9 +231,10 @@ export async function GET(request: NextRequest) {
           height: HEIGHT,
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'center',
+          justifyContent: 'flex-end',
           background: 'linear-gradient(135deg, #0a0a0a, #171717)',
           position: 'relative',
+          padding: '60px',
         }}
       >
         {/* Orange accent glow */}
@@ -253,7 +263,13 @@ export async function GET(request: NextRequest) {
             right: '60px',
           }}
         >
-          <LogoText />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            alt="Rapid Panda Movers"
+            src={logoDataUri}
+            height={128}
+            style={{ height: '128px' }}
+          />
           <FiveStars />
         </div>
 
@@ -263,12 +279,12 @@ export async function GET(request: NextRequest) {
             display: 'flex',
             flexDirection: 'column',
             gap: '16px',
-            padding: '0 60px',
+            marginBottom: '40px',
           }}
         >
           <div
             style={{
-              fontSize: title.length > 40 ? 52 : 60,
+              fontSize: title.length > 40 ? 60 : 68,
               fontWeight: 900,
               color: '#ffffff',
               lineHeight: 1.15,
@@ -279,9 +295,10 @@ export async function GET(request: NextRequest) {
           </div>
           <div
             style={{
-              fontSize: 24,
+              fontSize: 36,
+              fontWeight: 700,
+              fontFamily: 'Inter',
               color: '#9ca3af',
-              fontFamily: 'Getai Grotesk Display',
             }}
           >
             {subtitle}
@@ -291,9 +308,6 @@ export async function GET(request: NextRequest) {
         {/* Bottom accent bar */}
         <div
           style={{
-            position: 'absolute',
-            bottom: '48px',
-            left: '60px',
             width: '1080px',
             height: '6px',
             borderRadius: '3px',
@@ -306,14 +320,7 @@ export async function GET(request: NextRequest) {
     {
       width: WIDTH,
       height: HEIGHT,
-      fonts: [
-        {
-          name: 'Getai Grotesk Display',
-          data: fontData,
-          style: 'normal',
-          weight: 900,
-        },
-      ],
+      fonts: fonts(fontData, interBoldData),
       headers: {
         'Cache-Control': 'public, max-age=31536000, immutable',
       },
