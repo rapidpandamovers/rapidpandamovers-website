@@ -11,7 +11,6 @@
       "title": "Expert Packing & Unpacking Services in Miami",
       "description": "Professional packing services with high-quality materials",
       "cta": "Get Your Free Packing Quote"
-
     },
     "problems": [
       {
@@ -101,6 +100,10 @@
       {
         "question": "Do you provide unpacking services too?",
         "answer": "Yes! We offer complete unpacking services at your new home. Our team will unpack boxes, place items where you want them, and remove all packing materials. You can choose full unpacking or just help with specific rooms."
+      },
+      {
+        "question": "Can you pack fragile or high-value items like china and crystal?",
+        "answer": "Absolutely. Our packers are trained in specialty wrapping techniques for fragile items like china, crystal, glassware, and artwork. We use dish-pack boxes with cell dividers, multi-layer bubble wrap, and custom padding to keep delicate items safe. Each piece is individually wrapped and secured so nothing shifts during transport."
       }
     ],
     "is_active": true
@@ -117,7 +120,6 @@
       "title": "Experience Stress-Free Local Moving in Miami",
       "description": "Professional local moving services within Miami-Dade County",
       "cta": "Get Your Free Local Moving Quote"
-
     },
     "problems": [
       {
@@ -217,6 +219,10 @@
       {
         "question": "What areas do you serve for local moves?",
         "answer": "We serve all of Miami-Dade County including Miami, Coral Gables, Miami Beach, Hialeah, Doral, Aventura, Kendall, Homestead, Brickell, Coconut Grove, and surrounding areas."
+      },
+      {
+        "question": "Do your movers disassemble and reassemble furniture?",
+        "answer": "Yes, furniture disassembly and reassembly are included with every local move at no extra charge. Our crew brings the tools needed for beds, dining tables, desks, and shelving units. We keep all hardware bagged and labeled so everything goes back together quickly at your new home."
       }
     ],
     "is_active": true
@@ -233,7 +239,6 @@
       "title": "Reliable Interstate Moving Services",
       "description": "Professional long-distance moving across all 50 states",
       "cta": "Get Your Free Long Distance Quote"
-
     },
     "problems": [
       {
@@ -333,6 +338,10 @@
       {
         "question": "Will the same crew load and unload my belongings?",
         "answer": "Yes! Unlike many long-distance movers, we use dedicated trucks and crews. Your belongings stay on one truck with our team from pickup to delivery—no warehouses, no transfers, and no middlemen."
+      },
+      {
+        "question": "How do you calculate the cost of a long distance move?",
+        "answer": "Long distance moves are priced based on the total weight of your shipment, the distance traveled, and any additional services like packing or storage. We provide a detailed written estimate after an in-home or virtual survey so there are no surprises on moving day. Our pricing is transparent with no hidden fees."
       }
     ],
     "is_active": true
@@ -347,7 +356,6 @@
       "title": "Experience Stress-Free Residential Moving in Miami",
       "description": "Full-service home moves with careful protection",
       "cta": "Get Your Free Residential Moving Quote"
-
     },
     "problems": [
       {
@@ -433,6 +441,10 @@
       {
         "question": "Do you move items into storage?",
         "answer": "Absolutely. We can move your belongings directly to a storage facility if your new home isn't ready yet. We also offer coordination with storage facilities and can handle pickup from storage when you're ready."
+      },
+      {
+        "question": "How far in advance should I schedule my residential move?",
+        "answer": "We recommend booking at least two to three weeks in advance, especially during the busy season from May through September. However, we understand that plans change and we do our best to accommodate shorter timelines. Contact us as early as possible to secure your preferred moving date."
       }
     ],
     "is_active": true
@@ -449,7 +461,6 @@
       "title": "Professional Business & Office Relocations",
       "description": "Commercial moving services designed to minimize downtime",
       "cta": "Get Your Free Commercial Quote"
-
     },
     "problems": [
       {
@@ -561,6 +572,10 @@
       {
         "question": "Do you offer office furniture assembly services?",
         "answer": "Yes, we handle complete disassembly at your current location and reassembly at your new office. This includes desks, cubicles, conference tables, and other office furniture. Everything is placed according to your floor plan."
+      },
+      {
+        "question": "Do you provide a dedicated project manager for commercial moves?",
+        "answer": "Yes, every commercial move is assigned a dedicated project manager who coordinates the entire relocation from start to finish. They handle scheduling, floor plans, IT coordination, and communication with your building management to ensure a seamless transition with minimal disruption to your operations."
       }
     ],
     "is_active": true
@@ -577,7 +592,6 @@
       "title": "Specialized Furniture Moving Services",
       "description": "Expert handling for all types of furniture",
       "cta": "Get Your Free Furniture Moving Quote"
-
     },
     "problems": [
       {
@@ -659,6 +673,10 @@
       {
         "question": "What if my furniture doesn't fit through the door?",
         "answer": "Our experienced crews know techniques for maneuvering large furniture through tight spaces. In rare cases where furniture truly won't fit, we can often remove doors or hinges temporarily. We'll assess this during your estimate."
+      },
+      {
+        "question": "Do you provide blankets and padding for all furniture?",
+        "answer": "Yes, every piece of furniture is wrapped in thick moving blankets and secured with stretch wrap at no extra charge. For high-value or delicate pieces like glass tabletops and antique dressers, we add additional layers of protection. Our goal is to deliver your furniture in the same condition we picked it up."
       }
     ],
     "is_active": true
@@ -675,7 +693,6 @@
       "title": "Discrete Celebrity Moving Services",
       "description": "Confidential moves for high-profile clients",
       "cta": "Get Your Free Celebrity Moving Quote"
-
     },
     "problems": [
       {
@@ -739,6 +756,10 @@
       {
         "question": "Can you handle high-value items and artwork?",
         "answer": "Yes, we're experienced with moving valuable art, collectibles, and luxury furnishings. We offer custom crating, climate-controlled transport, and full-value insurance options based on professional appraisals."
+      },
+      {
+        "question": "Do your crew members sign confidentiality agreements?",
+        "answer": "Yes, every team member assigned to a celebrity or high-profile move signs a strict non-disclosure agreement before the job begins. We take client privacy seriously and can also coordinate with your legal or management team on any additional confidentiality requirements you may have."
       }
     ],
     "is_active": true
@@ -755,7 +776,6 @@
       "title": "Budget-Friendly Apartment Moving in Miami",
       "description": "Specialized apartment moving services for all sizes",
       "cta": "Get Your Free Apartment Moving Quote"
-
     },
     "problems": [
       {
@@ -863,6 +883,10 @@
       {
         "question": "Do you bring floor protection for my apartment building?",
         "answer": "Yes, we bring floor runners, door jamb protectors, and elevator pads as standard practice. This protects both your apartment and common areas, and satisfies most building requirements for professional moves."
+      },
+      {
+        "question": "What happens if my apartment building has moving hour restrictions?",
+        "answer": "Many apartment buildings and HOAs restrict moving to certain hours or require advance booking of freight elevators. We work with your building management to schedule within their rules and ensure we have all the necessary permits. Just share your building's requirements and we'll handle the rest."
       }
     ],
     "is_active": true
@@ -879,7 +903,6 @@
       "title": "Complete Full-Service Moving Solutions",
       "description": "End-to-end moving services from start to finish",
       "cta": "Get Your Free Full-Service Quote"
-
     },
     "problems": [
       {
@@ -943,6 +966,10 @@
       {
         "question": "Do you remove packing materials after unpacking?",
         "answer": "Yes! After unpacking, we break down all boxes and remove packing materials from your new home. You won't have to deal with mountains of cardboard and bubble wrap—we take it all away."
+      },
+      {
+        "question": "How long does a full-service move typically take?",
+        "answer": "For a typical 2-3 bedroom home, full-service packing takes about half a day, with loading and transport on move day taking another 4-6 hours. Unpacking at your new home can often be done the same day or the following morning. We'll provide a detailed timeline during your estimate so you can plan accordingly."
       }
     ],
     "is_active": true
@@ -959,7 +986,6 @@
       "title": "Labor Only Moving Services",
       "description": "Professional moving labor when you provide the truck",
       "cta": "Get Your Free Labor Quote"
-
     },
     "problems": [
       {
@@ -1023,6 +1049,10 @@
       {
         "question": "Can you help load a portable moving container?",
         "answer": "Absolutely. We regularly load PODS, ABF U-Pack, 1-800-PACK-RAT, and similar containers. Our crews know how to maximize space and secure items properly for container transport."
+      },
+      {
+        "question": "Do I need to be present during a labor-only move?",
+        "answer": "We recommend being present or having a designated point person on-site to direct our crew on where items should go. This ensures everything is placed exactly where you want it and avoids any confusion. If you can't be there, you can provide detailed written instructions and floor plans."
       }
     ],
     "is_active": true
@@ -1039,7 +1069,6 @@
       "title": "Specialized Military Moving Services",
       "description": "Moving services designed for military personnel and families",
       "cta": "Get Your Free Military Moving Quote"
-
     },
     "problems": [
       {
@@ -1103,6 +1132,10 @@
       {
         "question": "Can you move my family if I'm deployed?",
         "answer": "Yes, we regularly work with military families when the service member can't be present. We'll coordinate with your spouse, family member, or designated representative to ensure a smooth relocation."
+      },
+      {
+        "question": "Can you coordinate with the Transportation Management Office (TMO)?",
+        "answer": "Yes, our team is familiar with military moving procedures and can coordinate directly with your base TMO. We understand the paperwork involved in PCS moves, including weight allowances and required documentation, and we'll help ensure everything is in order for reimbursement through your service branch."
       }
     ],
     "is_active": true
@@ -1119,7 +1152,6 @@
       "title": "Last Minute Same Day Moving Services",
       "description": "Rapid response moving services for urgent relocations",
       "cta": "Get Your Same Day Quote"
-
     },
     "problems": [
       {
@@ -1183,6 +1215,10 @@
       {
         "question": "Do I need to have everything packed for same-day service?",
         "answer": "Not necessarily. We can provide packing services as part of your same-day move. However, if you can pack smaller items in advance, it helps us complete the move faster."
+      },
+      {
+        "question": "How do I book a same-day move?",
+        "answer": "Simply call us as early in the day as possible. We check crew availability in real time and can often dispatch a team within a few hours. The sooner you call, the better your chances of getting a same-day slot. You can also reach us through our website contact form for a quick response."
       }
     ],
     "is_active": true
@@ -1199,7 +1235,6 @@
       "title": "Compassionate Senior Moving Services",
       "description": "Assisted living and retirement home moves with care",
       "cta": "Get Your Free Senior Moving Quote"
-
     },
     "problems": [
       {
@@ -1263,6 +1298,10 @@
       {
         "question": "How do you handle sentimental items and memories?",
         "answer": "We treat every item with respect and care. Our crews are trained to be patient and understanding when items have sentimental value. We take extra time to properly wrap and protect cherished belongings."
+      },
+      {
+        "question": "Do you offer help with sorting and organizing before the move?",
+        "answer": "Yes, we offer pre-move planning sessions where we help seniors and their families decide what to keep, donate, or discard. We coordinate with local donation services for items that are no longer needed and can help organize belongings before packing begins so the transition feels manageable and stress-free."
       }
     ],
     "is_active": true
@@ -1279,7 +1318,6 @@
       "title": "Student Moving Services for All Education Levels",
       "description": "School, college and university moves with student-friendly pricing",
       "cta": "Get Your Free Student Moving Quote"
-
     },
     "problems": [
       {
@@ -1343,6 +1381,10 @@
       {
         "question": "Can you store my stuff over summer break?",
         "answer": "Yes, we can coordinate storage solutions for summer break and move your belongings back when the new semester starts. This is a popular option for students who don't want to ship everything home."
+      },
+      {
+        "question": "Can you move just a few items like a bed and desk?",
+        "answer": "Absolutely. We handle moves of all sizes, including small student moves with just a few pieces of furniture and some boxes. Our hourly pricing makes small moves affordable, and our minimum booking time is designed to accommodate even the quickest apartment or dorm move."
       }
     ],
     "is_active": true
@@ -1359,7 +1401,6 @@
       "title": "Specialized Safe Moving Services",
       "description": "Secure transportation for gun safes and money safes",
       "cta": "Get Your Free Safe Moving Quote"
-
     },
     "problems": [
       {
@@ -1423,6 +1464,10 @@
       {
         "question": "Do I need to empty my safe before the move?",
         "answer": "For lighter safes, contents can often stay inside. For heavier safes or long moves, we may recommend removing contents to reduce weight and protect valuables. We'll advise you based on your specific situation."
+      },
+      {
+        "question": "How do you transport a safe without damaging it?",
+        "answer": "We use heavy-duty appliance dollies, moving straps, and floor protection to safely maneuver your safe through your home and into our truck. The safe is padded with moving blankets and secured inside the vehicle to prevent any shifting during transport. Our crew is trained in proper weight distribution and lifting techniques for heavy items."
       }
     ],
     "is_active": true
@@ -1439,7 +1484,6 @@
       "title": "Art and Valuables Moving with Extra Care",
       "description": "Specialized handling for antiques, art, and valuable items",
       "cta": "Get Your Free Antique Moving Quote"
-
     },
     "problems": [
       {
@@ -1503,6 +1547,10 @@
       {
         "question": "Do you have experience with valuable collectibles?",
         "answer": "Yes, we've moved valuable collections including fine art, antique furniture, vintage items, and memorabilia. Our crews are trained in proper handling techniques and understand the irreplaceable nature of these items."
+      },
+      {
+        "question": "Do you use climate-controlled trucks for antique moves?",
+        "answer": "We can arrange climate-controlled transport for antiques and fine art that are sensitive to temperature and humidity changes. This is especially important for long-distance moves or when items will be in transit for extended periods. Let us know about your collection and we'll recommend the right level of protection."
       }
     ],
     "is_active": true
@@ -1519,7 +1567,6 @@
       "title": "Professional Office Moving Services",
       "description": "Office relocations with minimal disruption and efficient execution",
       "cta": "Get Your Free Office Moving Quote"
-
     },
     "problems": [
       {
@@ -1605,6 +1652,10 @@
       {
         "question": "Do you handle confidential documents securely?",
         "answer": "Absolutely. We use sealed containers for confidential files and can work with your security protocols. Our crews are professionals who understand the importance of business confidentiality."
+      },
+      {
+        "question": "Can you help with office furniture installation at the new space?",
+        "answer": "Yes, our team handles full disassembly at your current office and reassembly at your new location, including modular workstations, conference tables, and shelving. We follow your new floor plan to place everything where it belongs so your team can get back to work as quickly as possible."
       }
     ],
     "is_active": true
@@ -1621,7 +1672,6 @@
       "title": "Same Building Moving Services",
       "description": "Efficient moves within the same building",
       "cta": "Get Your Free Same Building Quote"
-
     },
     "problems": [
       {
@@ -1685,6 +1735,10 @@
       {
         "question": "Is same-building moving cheaper than a regular local move?",
         "answer": "Yes, since there's no transportation involved, same-building moves are typically our most affordable service. You're paying only for labor time, which is minimal for short-distance moves."
+      },
+      {
+        "question": "Will you protect the hallways and common areas during the move?",
+        "answer": "Yes, we lay down floor runners, use corner guards, and protect elevator interiors to prevent any damage to your building's common areas. Many buildings require this protection, and we come prepared with all the materials needed. We also clean up thoroughly once the move is complete."
       }
     ],
     "is_active": true
@@ -1701,7 +1755,6 @@
       "title": "Last Minute Moving Services",
       "description": "Urgent moving services for last-minute relocations",
       "cta": "Get Your Last Minute Quote"
-
     },
     "problems": [
       {
@@ -1765,6 +1818,10 @@
       {
         "question": "Can you do a last-minute long-distance move?",
         "answer": "Yes, we can accommodate urgent long-distance moves within Florida and to other states. Availability for immediate long-distance moves depends on truck scheduling, so call us right away to discuss options."
+      },
+      {
+        "question": "What should I prioritize if I have very little time to prepare?",
+        "answer": "Focus on gathering important documents, medications, and valuables you want to keep with you. Our crew can handle everything else, including packing, when they arrive. If you have time, start with the kitchen and closets since those rooms have the most items. We bring all the packing materials needed so you don't have to make a supply run."
       }
     ],
     "is_active": true
@@ -1781,7 +1838,6 @@
       "title": "Hourly Moving Services",
       "description": "Flexible hourly moving with transparent pricing",
       "cta": "Get Your Hourly Moving Quote"
-
     },
     "problems": [
       {
@@ -1845,6 +1901,10 @@
       {
         "question": "What if my move takes less time than expected?",
         "answer": "You only pay for the time actually used (above the 2-hour minimum). If our efficient crew finishes faster than expected, you pay less. We don't pad time or work slowly."
+      },
+      {
+        "question": "Do you include travel time in your hourly rate?",
+        "answer": "Our clock starts when the crew arrives at your pickup location and stops when they finish at your destination. We do not charge for travel time from our warehouse to your home or back. This means you only pay for the time our team is actively working on your move."
       }
     ],
     "is_active": true
@@ -1861,7 +1921,6 @@
       "title": "Special Needs Moving Services",
       "description": "Compassionate moving for individuals with special requirements",
       "cta": "Get Your Free Special Needs Quote"
-
     },
     "problems": [
       {
@@ -1925,6 +1984,10 @@
       {
         "question": "Can family members or caregivers be involved in the move?",
         "answer": "Absolutely. We encourage involvement from family members or caregivers who understand specific needs. They can direct placement, oversee equipment setup, and help ensure the new space is arranged optimally."
+      },
+      {
+        "question": "Can you help set up the new home to be accessible before the move?",
+        "answer": "Yes, we can do a pre-move walkthrough of your new home to ensure pathways are clear and furniture placement allows for wheelchair access, walkers, or other mobility aids. We work with you or your caregiver to arrange the new space for comfort, safety, and accessibility before bringing in your belongings."
       }
     ],
     "is_active": true
@@ -1941,7 +2004,6 @@
       "title": "Professional Appliance Moving Services",
       "description": "Safe transport for all your major household appliances",
       "cta": "Get Your Free Appliance Moving Quote"
-
     },
     "problems": [
       {
@@ -2005,6 +2067,10 @@
       {
         "question": "Should I empty my refrigerator before the move?",
         "answer": "Yes, we recommend emptying and defrosting your refrigerator 24 hours before the move. This prevents water damage during transport and keeps the compressor safe. We can advise you on the full prep steps when you book."
+      },
+      {
+        "question": "Can you move a washer and dryer that are stacked?",
+        "answer": "Yes, we handle stacked washer and dryer units regularly. Our crew will safely separate the units, disconnect hoses and vents, and transport each appliance individually with full padding. At your new home, we can restack and reconnect them so they're ready to use."
       }
     ],
     "is_active": true
@@ -2021,7 +2087,6 @@
       "title": "Professional Piano Moving Services",
       "description": "Expert piano transport with specialized equipment and care",
       "cta": "Get Your Free Piano Moving Quote"
-
     },
     "problems": [
       {
@@ -2085,6 +2150,10 @@
       {
         "question": "How far in advance should I book piano moving?",
         "answer": "We recommend booking at least one week in advance for piano moves, though we can sometimes accommodate shorter notice. Piano moves require specialized crew scheduling and equipment, so earlier booking ensures your preferred date."
+      },
+      {
+        "question": "Do you carry insurance specifically for piano moves?",
+        "answer": "Yes, all piano moves are covered by our comprehensive moving insurance, which includes full replacement value protection. Given the high value and delicate nature of pianos, we recommend discussing coverage options during your estimate. We also offer additional valuation coverage for concert-grade or vintage instruments."
       }
     ],
     "is_active": true
@@ -2101,7 +2170,6 @@
       "title": "Professional Pool Table Moving Services",
       "description": "Expert disassembly, transport, and reassembly with precision leveling",
       "cta": "Get Your Free Pool Table Moving Quote"
-
     },
     "problems": [
       {
@@ -2165,6 +2233,10 @@
       {
         "question": "What sizes of pool tables do you move?",
         "answer": "We move all standard pool table sizes including 7-foot, 8-foot, and 9-foot tables, as well as snooker tables. We handle all major brands and table types, including slate and non-slate models."
+      },
+      {
+        "question": "Do you level the pool table after reassembly?",
+        "answer": "Yes, our technicians use precision levels to ensure your pool table plays perfectly after reassembly. We adjust the legs and shims as needed to account for any differences in your new floor surface. A level table is essential for fair play, and we don't consider the job done until it's right."
       }
     ],
     "is_active": true
@@ -2181,7 +2253,6 @@
       "title": "Professional Hot Tub Moving Services",
       "description": "Expert spa relocation with specialized equipment and crews",
       "cta": "Get Your Free Hot Tub Moving Quote"
-
     },
     "problems": [
       {
@@ -2245,6 +2316,10 @@
       {
         "question": "How many people does it take to move a hot tub?",
         "answer": "Typically 4-6 movers depending on the size of the hot tub and the access challenges at your property. We always bring the right crew size for a safe, efficient move."
+      },
+      {
+        "question": "How much does it cost to move a hot tub?",
+        "answer": "Hot tub moving costs depend on the size and weight of the unit, access conditions at both locations, and the distance of the move. Most local hot tub moves in the Miami area range from a few hundred to over a thousand dollars. We provide a free on-site estimate so you get an accurate price before we begin."
       }
     ],
     "is_active": true
@@ -2261,7 +2336,6 @@
       "title": "Professional Art Moving Services",
       "description": "White-glove transport for fine art, sculptures, and collections",
       "cta": "Get Your Free Art Moving Quote"
-
     },
     "problems": [
       {
@@ -2325,6 +2399,10 @@
       {
         "question": "Can you handle a full gallery or collection move?",
         "answer": "Absolutely. We've moved private collections and gallery exhibitions throughout Miami. We create a detailed inventory and handling plan for each piece, coordinate timing, and can work with your curator or art advisor throughout the process."
+      },
+      {
+        "question": "How do you handle oversized artwork that won't fit through standard doors?",
+        "answer": "For oversized pieces, we assess all possible entry and exit points and may use sliding glass doors, balconies, or even window openings when necessary. We build custom crates on-site to protect large works and use specialized rigging equipment for safe transport. Our team plans every detail in advance to avoid any surprises on moving day."
       }
     ],
     "is_active": true
@@ -2341,7 +2419,6 @@
       "title": "White Glove Moving Services",
       "description": "Premium moving service with the highest level of care and attention",
       "cta": "Get Your Free White Glove Quote"
-
     },
     "problems": [
       {
@@ -2405,6 +2482,10 @@
       {
         "question": "How far in advance should I book white glove service?",
         "answer": "We recommend booking at least 1-2 weeks ahead to ensure our white glove crew and materials are reserved for your date. However, we do our best to accommodate shorter notice when possible."
+      },
+      {
+        "question": "Can you handle the entire move from packing to final placement?",
+        "answer": "That's exactly what white glove service is designed for. We manage every detail from carefully packing each item with premium materials to placing furniture and decor in its exact spot at your new home. We even unpack boxes, remove all packing materials, and make sure every room looks move-in ready before we leave."
       }
     ],
     "is_active": true
@@ -2421,7 +2502,6 @@
       "title": "Specialty Item Moving Services",
       "description": "Expert handling for unusual, oversized, and high-value items",
       "cta": "Get Your Free Specialty Moving Quote"
-
     },
     "problems": [
       {
@@ -2485,6 +2565,10 @@
       {
         "question": "Do you move gym equipment like treadmills and weight machines?",
         "answer": "Yes, we handle all types of gym equipment including treadmills, ellipticals, weight machines, and free weight sets. We disassemble what's needed, use appropriate dollies and ramps, and reassemble at your new location."
+      },
+      {
+        "question": "How do you determine if an item needs specialty moving?",
+        "answer": "We consider an item specialty if it's unusually heavy, fragile, oversized, or requires special handling techniques beyond standard moving. During your estimate, we'll identify any items that need extra attention and explain our plan for each one. Common examples include safes, pianos, aquariums, wine collections, and exercise equipment."
       }
     ],
     "is_active": true
@@ -2501,7 +2585,6 @@
       "title": "Storage Solutions in Miami",
       "description": "Secure, climate-controlled storage for any timeline",
       "cta": "Get Your Free Storage Quote"
-
     },
     "problems": [
       {
@@ -2565,6 +2648,10 @@
       {
         "question": "How long can I store my belongings?",
         "answer": "There's no minimum or maximum storage duration. Store for a few days between moves or for several months while you find your new home. Our month-to-month plans give you complete flexibility."
+      },
+      {
+        "question": "Is there a minimum storage period?",
+        "answer": "We offer flexible storage with no long-term commitment required. Whether you need storage for a few days between moves or several months while you settle into a new home, we accommodate your timeline. Monthly billing starts from your move-in date and you can access or retrieve your items with advance notice."
       }
     ],
     "is_active": true
@@ -2581,7 +2668,6 @@
       "title": "Professional Junk Removal Services",
       "description": "Fast, responsible removal of furniture, appliances, and clutter",
       "cta": "Get Your Free Junk Removal Quote"
-
     },
     "problems": [
       {
@@ -2645,6 +2731,10 @@
       {
         "question": "Can you do junk removal on moving day?",
         "answer": "Absolutely. Many clients combine junk removal with their move—we clear out what you don't want before or after loading. This is a great way to avoid paying to move items you're getting rid of anyway."
+      },
+      {
+        "question": "How quickly can you schedule a junk removal?",
+        "answer": "We often have same-day or next-day availability for junk removal. Just call or submit a request through our website and we'll provide a time window that works for you. For large cleanouts or estate clearances, we recommend scheduling a day or two ahead so we can bring the right size crew and truck."
       }
     ],
     "is_active": true

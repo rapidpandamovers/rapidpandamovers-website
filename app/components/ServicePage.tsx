@@ -172,6 +172,7 @@ export default async function ServicePage({ service, location }: ServicePageProp
           subtitle={ui.services.faqSubtitle.replace('{name}', service.name.toLowerCase())}
           faqs={service.faq}
           variant="compact"
+          compactCount={5}
         />
       )}
 

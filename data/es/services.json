@@ -11,7 +11,6 @@
       "title": "Servicios Expertos de Empaque y Desempaque en Miami",
       "description": "Servicios profesionales de empaque con materiales de alta calidad",
       "cta": "Obtenga Su Cotización de Empaque Gratis"
-
     },
     "problems": [
       {
@@ -101,6 +100,10 @@
       {
         "question": "¿También ofrecen servicios de desempaque?",
         "answer": "¡Sí! Ofrecemos servicios completos de desempaque en su nuevo hogar. Nuestro equipo desempacará las cajas, colocará los artículos donde usted los desee y retirará todos los materiales de empaque. Puede elegir desempaque completo o solo ayuda con habitaciones específicas."
+      },
+      {
+        "question": "¿Pueden empacar artículos frágiles o de alto valor como porcelana y cristal?",
+        "answer": "Por supuesto. Nuestros empacadores están capacitados en técnicas especializadas de envoltorio para artículos frágiles como porcelana, cristal, vasos y obras de arte. Usamos cajas para vajilla con divisores, envoltura de burbujas multicapa y acolchado personalizado para mantener los artículos delicados seguros. Cada pieza se envuelve y asegura individualmente para que nada se mueva durante el transporte."
       }
     ],
     "is_active": true
@@ -117,7 +120,6 @@
       "title": "Experimente una Mudanza Local sin Estrés en Miami",
       "description": "Servicios profesionales de mudanza local dentro del Condado de Miami-Dade",
       "cta": "Obtenga Su Cotización de Mudanza Local Gratis"
-
     },
     "problems": [
       {
@@ -217,6 +219,10 @@
       {
         "question": "¿Qué áreas cubren para mudanzas locales?",
         "answer": "Servimos todo el Condado de Miami-Dade incluyendo Miami, Coral Gables, Miami Beach, Hialeah, Doral, Aventura, Kendall, Homestead, Brickell, Coconut Grove y áreas circundantes."
+      },
+      {
+        "question": "¿Sus mudanceros desarman y rearman los muebles?",
+        "answer": "Sí, el desarme y rearme de muebles está incluido en cada mudanza local sin costo adicional. Nuestro equipo trae las herramientas necesarias para camas, mesas de comedor, escritorios y estanterías. Guardamos toda la tornillería en bolsas etiquetadas para que todo se rearme rápidamente en su nuevo hogar."
       }
     ],
     "is_active": true
@@ -233,7 +239,6 @@
       "title": "Servicios Confiables de Mudanza Interestatal",
       "description": "Mudanzas profesionales de larga distancia en los 50 estados",
       "cta": "Obtenga Su Cotización de Larga Distancia Gratis"
-
     },
     "problems": [
       {
@@ -333,6 +338,10 @@
       {
         "question": "¿El mismo equipo cargará y descargará mis pertenencias?",
         "answer": "¡Sí! A diferencia de muchos mudadores de larga distancia, usamos camiones y equipos dedicados. Sus pertenencias permanecen en un camión con nuestro equipo desde la recogida hasta la entrega, sin almacenes, sin transferencias y sin intermediarios."
+      },
+      {
+        "question": "¿Cómo calculan el costo de una mudanza de larga distancia?",
+        "answer": "Las mudanzas de larga distancia se calculan según el peso total de su envío, la distancia recorrida y cualquier servicio adicional como empaque o almacenamiento. Proporcionamos un presupuesto detallado por escrito después de una inspección presencial o virtual para que no haya sorpresas el día de la mudanza. Nuestros precios son transparentes sin cargos ocultos."
       }
     ],
     "is_active": true
@@ -347,7 +356,6 @@
       "title": "Experimente una Mudanza Residencial sin Estrés en Miami",
       "description": "Mudanzas completas de hogares con protección cuidadosa",
       "cta": "Obtenga Su Cotización de Mudanza Residencial Gratis"
-
     },
     "problems": [
       {
@@ -433,6 +441,10 @@
       {
         "question": "¿Mudan artículos a almacenamiento?",
         "answer": "Por supuesto. Podemos mover sus pertenencias directamente a una instalación de almacenamiento si su nuevo hogar aún no está listo. También ofrecemos coordinación con instalaciones de almacenamiento y podemos encargarnos de la recogida del almacenamiento cuando esté listo."
+      },
+      {
+        "question": "¿Con cuánta anticipación debo programar mi mudanza residencial?",
+        "answer": "Recomendamos reservar con al menos dos a tres semanas de anticipación, especialmente durante la temporada alta de mayo a septiembre. Sin embargo, entendemos que los planes cambian y hacemos lo posible por acomodar plazos más cortos. Contáctenos lo antes posible para asegurar su fecha preferida de mudanza."
       }
     ],
     "is_active": true
@@ -449,7 +461,6 @@
       "title": "Reubicaciones Profesionales de Negocios y Oficinas",
       "description": "Servicios de mudanza comercial diseñados para minimizar el tiempo de inactividad",
       "cta": "Obtenga Su Cotización Comercial Gratis"
-
     },
     "problems": [
       {
@@ -561,6 +572,10 @@
       {
         "question": "¿Ofrecen servicios de ensamblaje de muebles de oficina?",
         "answer": "Sí, manejamos el desarme completo en su ubicación actual y el reensamblaje en su nueva oficina. Esto incluye escritorios, cubículos, mesas de conferencias y otros muebles de oficina. Todo se coloca según su plano de distribución."
+      },
+      {
+        "question": "¿Proporcionan un gerente de proyecto dedicado para mudanzas comerciales?",
+        "answer": "Sí, a cada mudanza comercial se le asigna un gerente de proyecto dedicado que coordina toda la reubicación de principio a fin. Se encargan de la programación, planos de planta, coordinación de TI y comunicación con la administración de su edificio para garantizar una transición sin problemas con mínima interrupción a sus operaciones."
       }
     ],
     "is_active": true
@@ -577,7 +592,6 @@
       "title": "Servicios Especializados de Mudanza de Muebles",
       "description": "Manejo experto para todo tipo de muebles",
       "cta": "Obtenga Su Cotización de Mudanza de Muebles Gratis"
-
     },
     "problems": [
       {
@@ -659,6 +673,10 @@
       {
         "question": "¿Qué pasa si mis muebles no pasan por la puerta?",
         "answer": "Nuestros equipos experimentados conocen técnicas para maniobrar muebles grandes a través de espacios estrechos. En casos raros donde los muebles realmente no pasan, a menudo podemos retirar puertas o bisagras temporalmente. Evaluaremos esto durante su presupuesto."
+      },
+      {
+        "question": "¿Proporcionan mantas y acolchado para todos los muebles?",
+        "answer": "Sí, cada pieza de mobiliario se envuelve en mantas gruesas de mudanza y se asegura con plástico elástico sin costo adicional. Para piezas de alto valor o delicadas como mesas de vidrio y cómodas antiguas, añadimos capas adicionales de protección. Nuestro objetivo es entregar sus muebles en la misma condición en que los recogimos."
       }
     ],
     "is_active": true
@@ -675,7 +693,6 @@
       "title": "Servicios Discretos de Mudanza para Celebridades",
       "description": "Mudanzas confidenciales para clientes de alto perfil",
       "cta": "Obtenga Su Cotización de Mudanza para Celebridades Gratis"
-
     },
     "problems": [
       {
@@ -739,6 +756,10 @@
       {
         "question": "¿Pueden manejar artículos de alto valor y obras de arte?",
         "answer": "Sí, tenemos experiencia moviendo arte valioso, coleccionables y mobiliario de lujo. Ofrecemos embalaje personalizado, transporte con clima controlado y opciones de seguro de valor completo basadas en avalúos profesionales."
+      },
+      {
+        "question": "¿Los miembros de su equipo firman acuerdos de confidencialidad?",
+        "answer": "Sí, cada miembro del equipo asignado a una mudanza de celebridad o perfil alto firma un estricto acuerdo de no divulgación antes de comenzar el trabajo. Nos tomamos la privacidad del cliente muy en serio y también podemos coordinar con su equipo legal o de gestión sobre cualquier requisito adicional de confidencialidad que pueda tener."
       }
     ],
     "is_active": true
@@ -755,7 +776,6 @@
       "title": "Mudanza de Apartamentos Económica en Miami",
       "description": "Servicios especializados de mudanza de apartamentos para todos los tamaños",
       "cta": "Obtenga Su Cotización de Mudanza de Apartamento Gratis"
-
     },
     "problems": [
       {
@@ -863,6 +883,10 @@
       {
         "question": "¿Traen protección de pisos para mi edificio de apartamentos?",
         "answer": "Sí, traemos protectores de piso, protectores de marco de puerta y acolchado de ascensor como práctica estándar. Esto protege tanto su apartamento como las áreas comunes, y satisface la mayoría de los requisitos del edificio para mudanzas profesionales."
+      },
+      {
+        "question": "¿Qué pasa si mi edificio tiene restricciones de horario para mudanzas?",
+        "answer": "Muchos edificios de apartamentos y asociaciones de propietarios restringen las mudanzas a ciertos horarios o requieren reserva anticipada del elevador de carga. Trabajamos con la administración de su edificio para programar dentro de sus reglas y asegurarnos de tener todos los permisos necesarios. Solo comparta los requisitos de su edificio y nosotros nos encargamos del resto."
       }
     ],
     "is_active": true
@@ -879,7 +903,6 @@
       "title": "Soluciones Completas de Mudanza de Servicio Completo",
       "description": "Servicios de mudanza de principio a fin desde el inicio hasta el final",
       "cta": "Obtenga Su Cotización de Servicio Completo Gratis"
-
     },
     "problems": [
       {
@@ -943,6 +966,10 @@
       {
         "question": "¿Retiran los materiales de empaque después de desempacar?",
         "answer": "¡Sí! Después de desempacar, desarmamos todas las cajas y retiramos los materiales de empaque de su nuevo hogar. No tendrá que lidiar con montañas de cartón y plástico de burbujas: nos llevamos todo."
+      },
+      {
+        "question": "¿Cuánto tiempo toma típicamente una mudanza de servicio completo?",
+        "answer": "Para un hogar típico de 2-3 habitaciones, el empaque de servicio completo toma aproximadamente medio día, con la carga y transporte el día de la mudanza tomando otras 4-6 horas. El desempaque en su nuevo hogar a menudo puede hacerse el mismo día o a la mañana siguiente. Le proporcionaremos un cronograma detallado durante su presupuesto para que pueda planificar."
       }
     ],
     "is_active": true
@@ -959,7 +986,6 @@
       "title": "Servicios de Mudanza Solo Mano de Obra",
       "description": "Mano de obra profesional para mudanzas cuando usted proporciona el camión",
       "cta": "Obtenga Su Cotización de Mano de Obra Gratis"
-
     },
     "problems": [
       {
@@ -1023,6 +1049,10 @@
       {
         "question": "¿Pueden ayudar a cargar un contenedor de mudanza portátil?",
         "answer": "Por supuesto. Regularmente cargamos PODS, ABF U-Pack, 1-800-PACK-RAT y contenedores similares. Nuestros equipos saben cómo maximizar el espacio y asegurar los artículos correctamente para el transporte en contenedores."
+      },
+      {
+        "question": "¿Necesito estar presente durante una mudanza de solo mano de obra?",
+        "answer": "Recomendamos estar presente o tener una persona designada en el lugar para dirigir a nuestro equipo sobre dónde deben ir los artículos. Esto asegura que todo se coloque exactamente donde usted quiere y evita confusiones. Si no puede estar, puede proporcionar instrucciones escritas detalladas y planos de planta."
       }
     ],
     "is_active": true
@@ -1039,7 +1069,6 @@
       "title": "Servicios Especializados de Mudanza Militar",
       "description": "Servicios de mudanza diseñados para personal militar y sus familias",
       "cta": "Obtenga Su Cotización de Mudanza Militar Gratis"
-
     },
     "problems": [
       {
@@ -1103,6 +1132,10 @@
       {
         "question": "¿Pueden mudar a mi familia si estoy desplegado?",
         "answer": "Sí, regularmente trabajamos con familias militares cuando el miembro del servicio no puede estar presente. Nos coordinaremos con su cónyuge, familiar o representante designado para asegurar una reubicación sin problemas."
+      },
+      {
+        "question": "¿Pueden coordinarse con la Oficina de Gestión de Transporte (TMO)?",
+        "answer": "Sí, nuestro equipo está familiarizado con los procedimientos de mudanza militar y puede coordinarse directamente con la TMO de su base. Entendemos el papeleo involucrado en mudanzas PCS, incluyendo las asignaciones de peso y la documentación requerida, y le ayudaremos a asegurar que todo esté en orden para el reembolso a través de su rama de servicio."
       }
     ],
     "is_active": true
@@ -1119,7 +1152,6 @@
       "title": "Servicios de Mudanza de Último Minuto el Mismo Día",
       "description": "Servicios de mudanza de respuesta rápida para reubicaciones urgentes",
       "cta": "Obtenga Su Cotización del Mismo Día"
-
     },
     "problems": [
       {
@@ -1183,6 +1215,10 @@
       {
         "question": "¿Necesito tener todo empacado para el servicio del mismo día?",
         "answer": "No necesariamente. Podemos proporcionar servicios de empaque como parte de su mudanza del mismo día. Sin embargo, si puede empacar artículos más pequeños con anticipación, nos ayuda a completar la mudanza más rápido."
+      },
+      {
+        "question": "¿Cómo reservo una mudanza para el mismo día?",
+        "answer": "Simplemente llámenos lo más temprano posible en el día. Verificamos la disponibilidad del equipo en tiempo real y a menudo podemos enviar un equipo en pocas horas. Cuanto antes llame, mejores serán sus posibilidades de obtener un espacio para el mismo día. También puede contactarnos a través de nuestro formulario web para una respuesta rápida."
       }
     ],
     "is_active": true
@@ -1199,7 +1235,6 @@
       "title": "Servicios Compasivos de Mudanza para Personas Mayores",
       "description": "Mudanzas a vivienda asistida y hogares de retiro con cuidado",
       "cta": "Obtenga Su Cotización de Mudanza para Personas Mayores Gratis"
-
     },
     "problems": [
       {
@@ -1263,6 +1298,10 @@
       {
         "question": "¿Cómo manejan los artículos sentimentales y los recuerdos?",
         "answer": "Tratamos cada artículo con respeto y cuidado. Nuestros equipos están capacitados para ser pacientes y comprensivos cuando los artículos tienen valor sentimental. Nos tomamos tiempo extra para envolver y proteger adecuadamente las pertenencias preciadas."
+      },
+      {
+        "question": "¿Ofrecen ayuda con la clasificación y organización antes de la mudanza?",
+        "answer": "Sí, ofrecemos sesiones de planificación previa a la mudanza donde ayudamos a los adultos mayores y sus familias a decidir qué conservar, donar o desechar. Coordinamos con servicios locales de donación para artículos que ya no se necesitan y podemos ayudar a organizar las pertenencias antes de comenzar el empaque para que la transición sea manejable y sin estrés."
       }
     ],
     "is_active": true
@@ -1279,7 +1318,6 @@
       "title": "Servicios de Mudanza Estudiantil para Todos los Niveles Educativos",
       "description": "Mudanzas escolares, universitarias y de educación superior con precios estudiantiles",
       "cta": "Obtenga Su Cotización de Mudanza Estudiantil Gratis"
-
     },
     "problems": [
       {
@@ -1343,6 +1381,10 @@
       {
         "question": "¿Pueden almacenar mis cosas durante las vacaciones de verano?",
         "answer": "Sí, podemos coordinar soluciones de almacenamiento para las vacaciones de verano y mover sus pertenencias de regreso cuando comience el nuevo semestre. Esta es una opción popular para estudiantes que no quieren enviar todo a casa."
+      },
+      {
+        "question": "¿Pueden mover solo algunos artículos como una cama y un escritorio?",
+        "answer": "Por supuesto. Manejamos mudanzas de todos los tamaños, incluyendo pequeñas mudanzas estudiantiles con solo unos cuantos muebles y algunas cajas. Nuestro precio por hora hace que las mudanzas pequeñas sean accesibles, y nuestro tiempo mínimo de reserva está diseñado para acomodar incluso la mudanza más rápida de apartamento o dormitorio."
       }
     ],
     "is_active": true
@@ -1359,7 +1401,6 @@
       "title": "Servicios Especializados de Mudanza de Cajas Fuertes",
       "description": "Transporte seguro para cajas fuertes de armas y de dinero",
       "cta": "Obtenga Su Cotización de Mudanza de Cajas Fuertes Gratis"
-
     },
     "problems": [
       {
@@ -1423,6 +1464,10 @@
       {
         "question": "¿Necesito vaciar mi caja fuerte antes de la mudanza?",
         "answer": "Para cajas fuertes más livianas, el contenido a menudo puede quedarse adentro. Para cajas fuertes más pesadas o mudanzas largas, podemos recomendar retirar el contenido para reducir el peso y proteger los objetos de valor. Le asesoraremos según su situación específica."
+      },
+      {
+        "question": "¿Cómo transportan una caja fuerte sin dañarla?",
+        "answer": "Usamos carritos industriales para electrodomésticos, correas de mudanza y protección para pisos para maniobrar su caja fuerte de manera segura a través de su hogar y hacia nuestro camión. La caja fuerte se acolcha con mantas de mudanza y se asegura dentro del vehículo para evitar cualquier movimiento durante el transporte. Nuestro equipo está capacitado en distribución de peso adecuada y técnicas de levantamiento para artículos pesados."
       }
     ],
     "is_active": true
@@ -1439,7 +1484,6 @@
       "title": "Mudanza de Arte y Objetos de Valor con Cuidado Extra",
       "description": "Manejo especializado para antigüedades, arte y artículos valiosos",
       "cta": "Obtenga Su Cotización de Mudanza de Antigüedades Gratis"
-
     },
     "problems": [
       {
@@ -1503,6 +1547,10 @@
       {
         "question": "¿Tienen experiencia con coleccionables valiosos?",
         "answer": "Sí, hemos mudado colecciones valiosas incluyendo arte fino, muebles antiguos, artículos vintage y memorabilia. Nuestros equipos están capacitados en técnicas adecuadas de manejo y entienden la naturaleza irremplazable de estos artículos."
+      },
+      {
+        "question": "¿Usan camiones con control de clima para mudanzas de antigüedades?",
+        "answer": "Podemos organizar transporte con control de clima para antigüedades y obras de arte sensibles a cambios de temperatura y humedad. Esto es especialmente importante para mudanzas de larga distancia o cuando los artículos estarán en tránsito por períodos prolongados. Cuéntenos sobre su colección y le recomendaremos el nivel adecuado de protección."
       }
     ],
     "is_active": true
@@ -1519,7 +1567,6 @@
       "title": "Servicios Profesionales de Mudanza de Oficinas",
       "description": "Reubicaciones de oficinas con mínima interrupción y ejecución eficiente",
       "cta": "Obtenga Su Cotización de Mudanza de Oficina Gratis"
-
     },
     "problems": [
       {
@@ -1605,6 +1652,10 @@
       {
         "question": "¿Manejan documentos confidenciales de forma segura?",
         "answer": "Por supuesto. Usamos contenedores sellados para archivos confidenciales y podemos trabajar con sus protocolos de seguridad. Nuestros equipos son profesionales que entienden la importancia de la confidencialidad empresarial."
+      },
+      {
+        "question": "¿Pueden ayudar con la instalación de muebles de oficina en el nuevo espacio?",
+        "answer": "Sí, nuestro equipo maneja el desarme completo en su oficina actual y el rearme en su nueva ubicación, incluyendo estaciones de trabajo modulares, mesas de conferencia y estanterías. Seguimos su nuevo plano de planta para colocar todo donde corresponde para que su equipo pueda volver al trabajo lo antes posible."
       }
     ],
     "is_active": true
@@ -1621,7 +1672,6 @@
       "title": "Servicios de Mudanza Dentro del Mismo Edificio",
       "description": "Mudanzas eficientes dentro del mismo edificio",
       "cta": "Obtenga Su Cotización de Mudanza en el Mismo Edificio Gratis"
-
     },
     "problems": [
       {
@@ -1685,6 +1735,10 @@
       {
         "question": "¿La mudanza dentro del mismo edificio es más económica que una mudanza local regular?",
         "answer": "Sí, dado que no hay transporte involucrado, las mudanzas dentro del mismo edificio son típicamente nuestro servicio más económico. Solo paga por el tiempo de mano de obra, que es mínimo para mudanzas de corta distancia."
+      },
+      {
+        "question": "¿Protegerán los pasillos y áreas comunes durante la mudanza?",
+        "answer": "Sí, colocamos protectores de piso, usamos protectores de esquinas y protegemos los interiores del elevador para evitar cualquier daño a las áreas comunes de su edificio. Muchos edificios requieren esta protección, y venimos preparados con todos los materiales necesarios. También limpiamos a fondo una vez que la mudanza se completa."
       }
     ],
     "is_active": true
@@ -1701,7 +1755,6 @@
       "title": "Servicios de Mudanza de Último Minuto",
       "description": "Servicios de mudanza urgente para reubicaciones de último minuto",
       "cta": "Obtenga Su Cotización de Último Minuto"
-
     },
     "problems": [
       {
@@ -1765,6 +1818,10 @@
       {
         "question": "¿Pueden hacer una mudanza de larga distancia de último minuto?",
         "answer": "Sí, podemos acomodar mudanzas urgentes de larga distancia dentro de Florida y a otros estados. La disponibilidad para mudanzas inmediatas de larga distancia depende de la programación de camiones, así que llámenos de inmediato para discutir opciones."
+      },
+      {
+        "question": "¿Qué debo priorizar si tengo muy poco tiempo para prepararme?",
+        "answer": "Concéntrese en reunir documentos importantes, medicamentos y objetos de valor que quiera llevar consigo. Nuestro equipo puede encargarse de todo lo demás, incluyendo el empaque, cuando lleguen. Si tiene tiempo, empiece por la cocina y los clósets ya que esas habitaciones tienen más artículos. Traemos todos los materiales de empaque necesarios para que no tenga que ir a comprar suministros."
       }
     ],
     "is_active": true
@@ -1781,7 +1838,6 @@
       "title": "Servicios de Mudanza por Hora",
       "description": "Mudanza flexible por hora con precios transparentes",
       "cta": "Obtenga Su Cotización de Mudanza por Hora"
-
     },
     "problems": [
       {
@@ -1845,6 +1901,10 @@
       {
         "question": "¿Qué pasa si mi mudanza toma menos tiempo del esperado?",
         "answer": "Solo paga por el tiempo realmente utilizado (por encima del mínimo de 2 horas). Si nuestro equipo eficiente termina antes de lo esperado, paga menos. No inflamos el tiempo ni trabajamos lentamente."
+      },
+      {
+        "question": "¿Incluyen el tiempo de viaje en su tarifa por hora?",
+        "answer": "Nuestro reloj comienza cuando el equipo llega a su lugar de recogida y se detiene cuando terminan en su destino. No cobramos por el tiempo de viaje desde nuestra bodega hasta su hogar o de regreso. Esto significa que solo paga por el tiempo que nuestro equipo está trabajando activamente en su mudanza."
       }
     ],
     "is_active": true
@@ -1861,7 +1921,6 @@
       "title": "Servicios de Mudanza para Necesidades Especiales",
       "description": "Mudanzas compasivas para personas con requisitos especiales",
       "cta": "Obtenga Su Cotización de Necesidades Especiales Gratis"
-
     },
     "problems": [
       {
@@ -1925,6 +1984,10 @@
       {
         "question": "¿Los familiares o cuidadores pueden participar en la mudanza?",
         "answer": "Por supuesto. Alentamos la participación de familiares o cuidadores que entienden necesidades específicas. Pueden dirigir la colocación, supervisar la instalación de equipos y ayudar a asegurar que el nuevo espacio esté organizado de manera óptima."
+      },
+      {
+        "question": "¿Pueden ayudar a preparar el nuevo hogar para que sea accesible antes de la mudanza?",
+        "answer": "Sí, podemos hacer un recorrido previo por su nuevo hogar para asegurar que los pasillos estén despejados y la colocación de muebles permita el acceso en silla de ruedas, andadores u otras ayudas de movilidad. Trabajamos con usted o su cuidador para organizar el nuevo espacio para comodidad, seguridad y accesibilidad antes de traer sus pertenencias."
       }
     ],
     "is_active": true
@@ -1941,7 +2004,6 @@
       "title": "Servicios Profesionales de Mudanza de Electrodomésticos",
       "description": "Transporte seguro para todos sus electrodomésticos principales del hogar",
       "cta": "Obtenga Su Cotización de Mudanza de Electrodomésticos Gratis"
-
     },
     "problems": [
       {
@@ -2005,6 +2067,10 @@
       {
         "question": "¿Debo vaciar mi refrigerador antes de la mudanza?",
         "answer": "Sí, recomendamos vaciar y descongelar su refrigerador 24 horas antes de la mudanza. Esto previene daños por agua durante el transporte y mantiene seguro el compresor. Podemos asesorarle sobre los pasos completos de preparación cuando reserve."
+      },
+      {
+        "question": "¿Pueden mover una lavadora y secadora apiladas?",
+        "answer": "Sí, manejamos unidades apiladas de lavadora y secadora regularmente. Nuestro equipo separará las unidades de manera segura, desconectará mangueras y conductos, y transportará cada electrodoméstico individualmente con acolchado completo. En su nuevo hogar, podemos volver a apilarlas y reconectarlas para que estén listas para usar."
       }
     ],
     "is_active": true
@@ -2021,7 +2087,6 @@
       "title": "Servicios Profesionales de Mudanza de Pianos",
       "description": "Transporte experto de pianos con equipo especializado y cuidado",
       "cta": "Obtenga Su Cotización de Mudanza de Piano Gratis"
-
     },
     "problems": [
       {
@@ -2085,6 +2150,10 @@
       {
         "question": "¿Con cuánta anticipación debo reservar la mudanza de un piano?",
         "answer": "Recomendamos reservar al menos una semana de anticipación para mudanzas de pianos, aunque a veces podemos acomodar con menos aviso. Las mudanzas de pianos requieren programación especializada del equipo y del personal, así que reservar antes asegura su fecha preferida."
+      },
+      {
+        "question": "¿Llevan seguro específico para mudanzas de pianos?",
+        "answer": "Sí, todas las mudanzas de pianos están cubiertas por nuestro seguro integral de mudanza, que incluye protección de valor de reemplazo completo. Dado el alto valor y la naturaleza delicada de los pianos, recomendamos discutir las opciones de cobertura durante su presupuesto. También ofrecemos cobertura de valoración adicional para instrumentos de concierto o vintage."
       }
     ],
     "is_active": true
@@ -2101,7 +2170,6 @@
       "title": "Servicios Profesionales de Mudanza de Mesas de Billar",
       "description": "Desarme experto, transporte y reensamblaje con nivelación de precisión",
       "cta": "Obtenga Su Cotización de Mudanza de Mesa de Billar Gratis"
-
     },
     "problems": [
       {
@@ -2165,6 +2233,10 @@
       {
         "question": "¿Qué tamaños de mesas de billar mudan?",
         "answer": "Movemos todos los tamaños estándar de mesas de billar incluyendo mesas de 7 pies, 8 pies y 9 pies, así como mesas de snooker. Manejamos todas las marcas principales y tipos de mesa, incluyendo modelos con y sin pizarra."
+      },
+      {
+        "question": "¿Nivelan la mesa de billar después del reensamblaje?",
+        "answer": "Sí, nuestros técnicos usan niveles de precisión para asegurar que su mesa de billar juegue perfectamente después del reensamblaje. Ajustamos las patas y calzas según sea necesario para compensar cualquier diferencia en la superficie del piso de su nuevo espacio. Una mesa nivelada es esencial para un juego justo, y no consideramos el trabajo terminado hasta que esté bien."
       }
     ],
     "is_active": true
@@ -2181,7 +2253,6 @@
       "title": "Servicios Profesionales de Mudanza de Jacuzzis",
       "description": "Reubicación experta de spas con equipo y equipos especializados",
       "cta": "Obtenga Su Cotización de Mudanza de Jacuzzi Gratis"
-
     },
     "problems": [
       {
@@ -2245,6 +2316,10 @@
       {
         "question": "¿Cuántas personas se necesitan para mover un jacuzzi?",
         "answer": "Típicamente de 4 a 6 mudadores dependiendo del tamaño del jacuzzi y los desafíos de acceso en su propiedad. Siempre traemos el tamaño de equipo adecuado para una mudanza segura y eficiente."
+      },
+      {
+        "question": "¿Cuánto cuesta mover un jacuzzi?",
+        "answer": "Los costos de mudanza de jacuzzi dependen del tamaño y peso de la unidad, las condiciones de acceso en ambas ubicaciones y la distancia de la mudanza. La mayoría de las mudanzas locales de jacuzzi en el área de Miami van desde unos cientos hasta más de mil dólares. Proporcionamos un presupuesto gratuito en el sitio para que obtenga un precio exacto antes de comenzar."
       }
     ],
     "is_active": true
@@ -2261,7 +2336,6 @@
       "title": "Servicios Profesionales de Mudanza de Arte",
       "description": "Transporte de guante blanco para arte fino, esculturas y colecciones",
       "cta": "Obtenga Su Cotización de Mudanza de Arte Gratis"
-
     },
     "problems": [
       {
@@ -2325,6 +2399,10 @@
       {
         "question": "¿Pueden manejar una mudanza completa de galería o colección?",
         "answer": "Por supuesto. Hemos mudado colecciones privadas y exhibiciones de galerías en todo Miami. Creamos un inventario detallado y un plan de manejo para cada pieza, coordinamos el horario, y podemos trabajar con su curador o asesor de arte durante todo el proceso."
+      },
+      {
+        "question": "¿Cómo manejan obras de arte de gran tamaño que no caben por puertas estándar?",
+        "answer": "Para piezas de gran tamaño, evaluamos todos los posibles puntos de entrada y salida y podemos usar puertas corredizas de vidrio, balcones o incluso aberturas de ventanas cuando sea necesario. Construimos cajas personalizadas en el sitio para proteger obras grandes y usamos equipo especializado de aparejo para un transporte seguro. Nuestro equipo planifica cada detalle con anticipación para evitar sorpresas el día de la mudanza."
       }
     ],
     "is_active": true
@@ -2341,7 +2419,6 @@
       "title": "Servicios de Mudanza de Guante Blanco",
       "description": "Servicio de mudanza premium con el más alto nivel de cuidado y atención",
       "cta": "Obtenga Su Cotización de Guante Blanco Gratis"
-
     },
     "problems": [
       {
@@ -2405,6 +2482,10 @@
       {
         "question": "¿Con cuánta anticipación debo reservar el servicio de guante blanco?",
         "answer": "Recomendamos reservar al menos 1 a 2 semanas antes para asegurar que nuestro equipo de guante blanco y los materiales estén reservados para su fecha. Sin embargo, hacemos nuestro mejor esfuerzo para acomodar aviso más corto cuando sea posible."
+      },
+      {
+        "question": "¿Pueden encargarse de toda la mudanza desde el empaque hasta la colocación final?",
+        "answer": "Exactamente para eso está diseñado el servicio de guante blanco. Gestionamos cada detalle desde empacar cuidadosamente cada artículo con materiales premium hasta colocar muebles y decoración en su lugar exacto en su nuevo hogar. Incluso desempacamos cajas, retiramos todos los materiales de empaque y nos aseguramos de que cada habitación esté lista para vivir antes de irnos."
       }
     ],
     "is_active": true
@@ -2421,7 +2502,6 @@
       "title": "Servicios de Mudanza de Artículos Especiales",
       "description": "Manejo experto para artículos inusuales, de gran tamaño y de alto valor",
       "cta": "Obtenga Su Cotización de Mudanza Especial Gratis"
-
     },
     "problems": [
       {
@@ -2485,6 +2565,10 @@
       {
         "question": "¿Mudan equipo de gimnasio como caminadoras y máquinas de pesas?",
         "answer": "Sí, manejamos todo tipo de equipo de gimnasio incluyendo caminadoras, elípticas, máquinas de pesas y juegos de pesas libres. Desarmamos lo necesario, usamos carritos y rampas apropiados, y reensamblamos en su nueva ubicación."
+      },
+      {
+        "question": "¿Cómo determinan si un artículo necesita mudanza especializada?",
+        "answer": "Consideramos un artículo como especializado si es inusualmente pesado, frágil, de gran tamaño o requiere técnicas de manejo especiales más allá de una mudanza estándar. Durante su presupuesto, identificaremos cualquier artículo que necesite atención extra y explicaremos nuestro plan para cada uno. Ejemplos comunes incluyen cajas fuertes, pianos, acuarios, colecciones de vino y equipos de ejercicio."
       }
     ],
     "is_active": true
@@ -2501,7 +2585,6 @@
       "title": "Soluciones de Almacenamiento en Miami",
       "description": "Almacenamiento seguro y con clima controlado para cualquier plazo",
       "cta": "Obtenga Su Cotización de Almacenamiento Gratis"
-
     },
     "problems": [
       {
@@ -2565,6 +2648,10 @@
       {
         "question": "¿Cuánto tiempo puedo almacenar mis pertenencias?",
         "answer": "No hay duración mínima ni máxima de almacenamiento. Almacene por unos pocos días entre mudanzas o por varios meses mientras encuentra su nuevo hogar. Nuestros planes mes a mes le dan total flexibilidad."
+      },
+      {
+        "question": "¿Hay un período mínimo de almacenamiento?",
+        "answer": "Ofrecemos almacenamiento flexible sin compromiso a largo plazo. Ya sea que necesite almacenamiento por unos días entre mudanzas o varios meses mientras se instala en un nuevo hogar, nos adaptamos a su cronograma. La facturación mensual comienza desde su fecha de ingreso y puede acceder o retirar sus artículos con aviso previo."
       }
     ],
     "is_active": true
@@ -2581,7 +2668,6 @@
       "title": "Servicios Profesionales de Retiro de Basura",
       "description": "Retiro rápido y responsable de muebles, electrodomésticos y desorden",
       "cta": "Obtenga Su Cotización de Retiro de Basura Gratis"
-
     },
     "problems": [
       {
@@ -2645,6 +2731,10 @@
       {
         "question": "¿Pueden hacer retiro de basura el día de la mudanza?",
         "answer": "Por supuesto. Muchos clientes combinan el retiro de basura con su mudanza: limpiamos lo que no quiere antes o después de cargar. Esta es una excelente manera de evitar pagar por mover artículos de los que se va a deshacer de todos modos."
+      },
+      {
+        "question": "¿Qué tan rápido pueden programar un retiro de basura?",
+        "answer": "A menudo tenemos disponibilidad para el mismo día o el día siguiente para retiro de basura. Solo llame o envíe una solicitud a través de nuestro sitio web y le proporcionaremos una ventana de tiempo que funcione para usted. Para limpiezas grandes o liquidaciones de propiedades, recomendamos programar con uno o dos días de anticipación para que podamos llevar el equipo y camión del tamaño adecuado."
       }
     ],
     "is_active": true
