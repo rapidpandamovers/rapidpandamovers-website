@@ -20,6 +20,12 @@
       "service": "rapidpandamovers"
     }
   ],
+  "kv_namespaces": [
+    {
+      "binding": "NEXT_INC_CACHE_KV",
+      "id": "9c41286de62c4e7ea53997db672c4843"
+    }
+  ],
   "observability": {
     "enabled": true
   }
