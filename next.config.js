@@ -5,6 +5,7 @@ const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  serverExternalPackages: ['sharp'],
   productionBrowserSourceMaps: true,
   env: {
     BUILD_DATE: new Date().toISOString().split('T')[0],
