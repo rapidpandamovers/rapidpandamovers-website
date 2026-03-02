@@ -1,6 +1,6 @@
 # Rapid Panda Movers - Next.js Website
 
-A modern, bilingual (English/Spanish) website for Rapid Panda Movers, a Miami-based moving company. Built with Next.js 15.5, TypeScript, and Tailwind CSS 4.1. Migrated from WordPress/Avada and deployed on Cloudflare Pages.
+A modern, bilingual (English/Spanish) website for Rapid Panda Movers, a Miami-based moving company. Built with Next.js 15.5, TypeScript, and Tailwind CSS 4.1. Migrated from WordPress/Avada and deployed on Vercel.
 
 ## Features
 
@@ -24,7 +24,7 @@ A modern, bilingual (English/Spanish) website for Rapid Panda Movers, a Miami-ba
 | i18n | next-intl v4 (en, es) |
 | Icons | Lucide React |
 | UI | React 19.1 |
-| Deployment | Cloudflare Pages |
+| Deployment | Vercel |
 | Spam Protection | Cloudflare Turnstile |
 
 ## Project Structure
@@ -270,7 +270,7 @@ Service pages include JSON-LD schemas for:
 
 ## Deployment
 
-Deployed on **Cloudflare Pages** with:
+Deployed on **Vercel** with:
 - Automatic builds from the main branch
 - Edge caching and CDN
 - Cloudflare Turnstile for form protection
