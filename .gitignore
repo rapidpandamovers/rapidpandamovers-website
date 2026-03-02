@@ -1,133 +1,54 @@
-# macOS
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
 .DS_Store
-.AppleDouble
-.LSOverride
-Icon
-._*
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+*.pem
 
-# Archives
-*.zip
-*.tar
-*.tar.gz
-*.rar
-*.7z
-*.gz
-*.bz2
-
-# Node.js / Next.js
-node_modules/
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
-.npm
-.yarn/
-.next/
-out/
-build/
-dist/
-.cache/
-.parcel-cache/
-.turbo/
-.vercel/
+
+# local env files
+.env*.local
+.env
+
+# vercel
+.vercel
+
+# typescript
 *.tsbuildinfo
 next-env.d.ts
 
+# OpenNext / Cloudflare
+.open-next
+.wrangler
+.dev.vars
+
+# Generated blog data (built by prebuild script)
+data/blog-posts-*.json
+
 # Python
-.venv/
-venv/
 __pycache__/
-*.py[cod]
-*$py.class
-.Python
-*.so
-.eggs/
-*.egg
-*.egg-info/
-dist/
-*.manifest
+.venv/
 
-# WordPress
-wp-config.php
-**/wp-config.php
-wp-content/uploads/
-wp-content/cache/
-wp-content/backup-db/
-wp-content/advanced-cache.php
-wp-content/wp-cache-config.php
-wp-content/debug.log
-wp-content/upgrade/
-wp-content/backups/
-wp-content/blogs.dir/
-wp-content/updraft/
-**/wp-content/plugins/*/logs/
-**/wp-content/plugins/*/vendor/**/build/
-**/wp-includes/css/dist/
-**/wp-includes/js/dist/
-**/wp-content/plugins/*/css/dist/
-**/wp-content/plugins/*/js/dist/
-*.sql
-*.sql.gz
-
-# Environment variables (keep .env.example)
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-.env*.local
-!.env.example
-
-# IDE / Editor
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-.project
-.classpath
-.settings/
-*.sublime-project
-*.sublime-workspace
-*.code-workspace
-
-# Logs
-logs/
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-lerna-debug.log*
-.pnpm-debug.log*
-
-# Testing
-coverage/
-.nyc_output/
-*.lcov
-.jest/
-
-# Temporary files
-tmp/
-temp/
-*.tmp
-*.temp
-*.bak
-*.backup
-
-# OS generated files
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-$RECYCLE.BIN/
+# AI/editor configs
+.agent/
+.agents/
+.claude/
+.cursor/
+.gemini/
+.mcp.json
