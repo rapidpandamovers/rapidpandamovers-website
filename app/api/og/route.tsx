@@ -47,12 +47,26 @@ function getSiteUrl(): string {
 }
 
 /**
- * Convert a local image to a JPEG data URI that Satori can render.
- * Handles WebP and any other format sharp supports.
+ * Convert an image to a JPEG data URI that Satori can render.
+ * Tries filesystem first (local dev), falls back to HTTP fetch (Vercel).
  */
 async function imageToDataUri(imagePath: string): Promise<string> {
-  const fullPath = join(process.cwd(), 'public', imagePath)
-  const jpegBuffer = await sharp(readFileSync(fullPath))
+  let imageBuffer: Buffer
+
+  try {
+    // Try filesystem first (works in local dev)
+    const fullPath = join(process.cwd(), 'public', imagePath)
+    imageBuffer = readFileSync(fullPath)
+  } catch {
+    // Filesystem not available (Vercel serverless) — fetch via HTTP
+    const siteUrl = getSiteUrl()
+    const url = `${siteUrl}${imagePath.startsWith('/') ? '' : '/'}${imagePath}`
+    const res = await fetch(url)
+    if (!res.ok) throw new Error(`Failed to fetch image: ${res.status}`)
+    imageBuffer = Buffer.from(await res.arrayBuffer())
+  }
+
+  const jpegBuffer = await sharp(imageBuffer)
     .resize(WIDTH, HEIGHT, { fit: 'cover' })
     .jpeg({ quality: 80 })
     .toBuffer()
@@ -87,17 +101,13 @@ export async function GET(request: NextRequest) {
   if (imageParam) {
     let imageUrl: string
 
-    if (imageParam.startsWith('http')) {
-      imageUrl = imageParam
-    } else {
-      // Local image — use sharp to convert to JPEG data URI (handles WebP, AVIF, etc.)
-      try {
-        imageUrl = await imageToDataUri(imageParam)
-      } catch {
-        // If image can't be read, fall back to URL
-        const siteUrl = getSiteUrl()
-        imageUrl = `${siteUrl}${imageParam.startsWith('/') ? '' : '/'}${imageParam}`
-      }
+    try {
+      imageUrl = imageParam.startsWith('http')
+        ? imageParam
+        : await imageToDataUri(imageParam)
+    } catch {
+      // If all conversion fails, skip the background image
+      imageUrl = ''
     }
 
     return new ImageResponse(
