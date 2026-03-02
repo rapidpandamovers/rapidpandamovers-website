@@ -1,32 +1,26 @@
 import { ImageResponse } from 'next/og'
 import { type NextRequest } from 'next/server'
-
-export const runtime = 'edge'
+import { readFileSync } from 'fs'
+import { join } from 'path'
+import sharp from 'sharp'
 
 const WIDTH = 1200
 const HEIGHT = 630
 
-// Load custom fonts at module level (cached across invocations)
-const fontPromise = fetch(
-  new URL('../../../fonts/DTGetaiGroteskDisplay-Black.otf', import.meta.url)
-).then((res) => res.arrayBuffer())
+// Load fonts and logo once at module level
+const fontData = readFileSync(join(process.cwd(), 'fonts/DTGetaiGroteskDisplay-Black.otf'))
 
-// Load Inter Bold (static weight) for subtitle text
 const interBoldPromise = fetch(
   'https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf'
 ).then((res) => res.arrayBuffer())
 
-// Load logo SVG, swap dark fill to white, and encode as data URI
-const logoPromise = fetch(
-  new URL('../../../public/images/rapidpandamovers-logo.svg', import.meta.url)
-).then(async (res) => {
-  let svg = await res.text()
-  // Strip XML declaration and DOCTYPE so it's a clean SVG for data URI
-  svg = svg.replace(/<\?xml[^?]*\?>/, '').replace(/<!DOCTYPE[^>]*>/, '').trim()
-  // Replace dark fill with white for use on dark backgrounds
-  svg = svg.replace(/fill="#141c21"/g, 'fill="#ffffff"')
-  return `data:image/svg+xml;base64,${btoa(svg)}`
-})
+// Load logo SVG with white fill for dark backgrounds
+const logoSvg = readFileSync(join(process.cwd(), 'public/images/rapidpandamovers-logo.svg'), 'utf-8')
+  .replace(/<\?xml[^?]*\?>/, '')
+  .replace(/<!DOCTYPE[^>]*>/, '')
+  .trim()
+  .replace(/fill="#141c21"/g, 'fill="#ffffff"')
+const logoDataUri = `data:image/svg+xml;base64,${Buffer.from(logoSvg).toString('base64')}`
 
 function StarIcon() {
   return (
@@ -52,7 +46,20 @@ function getSiteUrl(): string {
   return process.env.NEXT_PUBLIC_SITE_URL || 'https://www.rapidpandamovers.com'
 }
 
-const fonts = (fontData: ArrayBuffer, interBoldData: ArrayBuffer) => [
+/**
+ * Convert a local image to a JPEG data URI that Satori can render.
+ * Handles WebP and any other format sharp supports.
+ */
+async function imageToDataUri(imagePath: string): Promise<string> {
+  const fullPath = join(process.cwd(), 'public', imagePath)
+  const jpegBuffer = await sharp(readFileSync(fullPath))
+    .resize(WIDTH, HEIGHT, { fit: 'cover' })
+    .jpeg({ quality: 80 })
+    .toBuffer()
+  return `data:image/jpeg;base64,${jpegBuffer.toString('base64')}`
+}
+
+const allFonts = (interBoldData: ArrayBuffer) => [
   {
     name: 'Getai Grotesk Display',
     data: fontData,
@@ -74,19 +81,23 @@ export async function GET(request: NextRequest) {
     searchParams.get('subtitle') || 'Professional Moving Services in Miami'
   const imageParam = searchParams.get('image')
 
-  const [fontData, interBoldData, logoDataUri] = await Promise.all([fontPromise, interBoldPromise, logoPromise])
+  const interBoldData = await interBoldPromise
 
   // Layout with featured image as full-bleed background
   if (imageParam) {
-    const siteUrl = getSiteUrl()
     let imageUrl: string
+
     if (imageParam.startsWith('http')) {
       imageUrl = imageParam
-    } else if (imageParam.endsWith('.webp')) {
-      // Satori doesn't support WebP — route through Next.js image optimization to get JPEG
-      imageUrl = `${siteUrl}/_next/image?url=${encodeURIComponent(imageParam)}&w=${WIDTH}&q=80`
     } else {
-      imageUrl = `${siteUrl}${imageParam.startsWith('/') ? '' : '/'}${imageParam}`
+      // Local image — use sharp to convert to JPEG data URI (handles WebP, AVIF, etc.)
+      try {
+        imageUrl = await imageToDataUri(imageParam)
+      } catch {
+        // If image can't be read, fall back to URL
+        const siteUrl = getSiteUrl()
+        imageUrl = `${siteUrl}${imageParam.startsWith('/') ? '' : '/'}${imageParam}`
+      }
     }
 
     return new ImageResponse(
@@ -214,7 +225,7 @@ export async function GET(request: NextRequest) {
       {
         width: WIDTH,
         height: HEIGHT,
-        fonts: fonts(fontData, interBoldData),
+        fonts: allFonts(interBoldData),
         headers: {
           'Cache-Control': 'public, max-age=31536000, immutable',
         },
@@ -320,7 +331,7 @@ export async function GET(request: NextRequest) {
     {
       width: WIDTH,
       height: HEIGHT,
-      fonts: fonts(fontData, interBoldData),
+      fonts: allFonts(interBoldData),
       headers: {
         'Cache-Control': 'public, max-age=31536000, immutable',
       },
