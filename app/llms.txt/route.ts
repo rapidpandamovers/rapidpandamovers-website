@@ -13,7 +13,7 @@ function buildContent(services: Array<{ name: string; slug: string; description:
 Rapid Panda Movers is a licensed and insured moving company based in Miami, Florida. We specialize in local and long-distance moves, offering comprehensive moving services including packing, storage, and specialty item handling.
 
 - Phone: (786) 585-4269
-- Email: info@rapidpandamovers.com
+- Email: arcastro@rapidpandamovers.com
 - Address: 7001 North Waterway Dr #107, Miami, FL 33155
 - Hours: Open 7 days a week, 8:00 AM - 8:00 PM
 - Rating: 4.7 stars across 56+ verified reviews

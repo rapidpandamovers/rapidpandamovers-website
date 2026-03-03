@@ -227,7 +227,7 @@ SMTP_HOST=smtp.example.com
 SMTP_PORT=587
 SMTP_USER=your-email
 SMTP_PASS=your-password
-CONTACT_EMAIL=info@rapidpandamovers.com
+CONTACT_EMAIL=arcastro@rapidpandamovers.com
 
 # Cloudflare Turnstile
 NEXT_PUBLIC_TURNSTILE_SITE_KEY=your-site-key

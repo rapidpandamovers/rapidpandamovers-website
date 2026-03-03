@@ -52,7 +52,7 @@ export default function EmailLayout({ preview, children }: EmailLayoutProps) {
             <Text style={footerText}>
               <Link href="tel:7865854269" style={footerLink}>(786) 585-4269</Link>
               {' | '}
-              <Link href="mailto:info@rapidpandamovers.com" style={footerLink}>info@rapidpandamovers.com</Link>
+              <Link href="mailto:arcastro@rapidpandamovers.com" style={footerLink}>arcastro@rapidpandamovers.com</Link>
             </Text>
             <Text style={footerText}>
               <Link href="https://www.rapidpandamovers.com" style={footerLink}>www.rapidpandamovers.com</Link>

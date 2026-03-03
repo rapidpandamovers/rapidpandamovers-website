@@ -10,7 +10,7 @@ export const SITE_CONFIG = {
   domain: 'https://www.rapidpandamovers.com',
   defaultImage: '/images/rapidpandamovers-og.jpg',
   phone: '(786) 585-4269',
-  email: 'info@rapidpandamovers.com',
+  email: 'arcastro@rapidpandamovers.com',
   address: {
     street: '7001 North Waterway Dr #107',
     city: 'Miami',
