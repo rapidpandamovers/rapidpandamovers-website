@@ -5,12 +5,31 @@ import { Quote, ChevronLeft, ChevronRight, ChevronDown, ChevronUp, BadgeCheck, M
 import StarRating from '@/app/components/StarRating'
 import { H2, H3 } from '@/app/components/Heading'
 import { Link } from '@/i18n/routing'
-import reviewsData from '@/data/reviews.json'
 import { useMessages, useLocale } from 'next-intl'
 import { getTranslatedSlug } from '@/i18n/slug-map'
 import type { Locale } from '@/i18n/config'
 
 const TRUNCATE_LENGTH = 200 // Characters before showing "Read more"
+
+const PLATFORM_NAMES: Record<string, string> = {
+  google: 'Google', yelp: 'Yelp', facebook: 'Facebook', trustpilot: 'Trustpilot',
+  thumbtack: 'Thumbtack', consumeraffairs: 'ConsumerAffairs', hireahelper: 'HireAHelper',
+  angi: 'Angi', moverscom: 'Movers.com', bbb: 'BBB',
+}
+
+export type Review = {
+  id: string
+  author: string
+  rating: number
+  text: string
+  date: string
+  platform: string
+  verified: boolean
+  location?: any
+  services?: any
+  route?: any
+  translations?: any
+}
 
 interface ReviewSectionProps {
   // Filter options
@@ -28,8 +47,9 @@ interface ReviewSectionProps {
   showPagination?: boolean
   className?: string
   variant?: 'default' | 'compact' | 'carousel' | 'left'
-  // Performance: pass pre-filtered reviews from server to avoid bundling all reviews in client JS
-  reviews?: typeof reviewsData.reviews
+  // Reviews data — pass from server to avoid bundling full dataset in client JS
+  reviews?: Review[]
+  platforms?: string[]
 }
 
 // Platform icons as simple SVG components
@@ -125,6 +145,7 @@ export default function ReviewSection({
   className = "",
   variant = 'default',
   reviews,
+  platforms: platformsProp,
 }: ReviewSectionProps) {
   const { ui } = useMessages() as any
   const locale = useLocale()
@@ -136,7 +157,7 @@ export default function ReviewSection({
 
   // Filter reviews based on props (without limit for pagination)
   const allFilteredReviews = useMemo(() => {
-    let sourceReviews = reviews ?? reviewsData.reviews
+    let sourceReviews = reviews ?? []
 
     // Filter by platform if selected
     if (selectedPlatform) {
@@ -186,9 +207,9 @@ export default function ReviewSection({
 
   // Get unique platforms from filtered reviews for filter buttons
   const availablePlatforms = useMemo(() => {
-    const platforms = new Set(reviewsData.reviews.map(r => r.platform))
+    const platforms = new Set(platformsProp ?? (reviews ?? []).map(r => r.platform))
     return Array.from(platforms)
-  }, [])
+  }, [platformsProp, reviews])
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString)
@@ -366,7 +387,7 @@ export default function ReviewSection({
                 }`}
               >
                 <PlatformIcon platform={platform} />
-                {reviewsData.platforms[platform as keyof typeof reviewsData.platforms]?.name || platform.charAt(0).toUpperCase() + platform.slice(1)}
+                {PLATFORM_NAMES[platform] || platform.charAt(0).toUpperCase() + platform.slice(1)}
               </button>
             ))}
           </div>
@@ -531,8 +552,8 @@ export default function ReviewSection({
 }
 
 // Helper to get display text for a review based on locale
-function getReviewText(review: typeof reviewsData.reviews[0], locale: string) {
-  const translations = (review as any).translations
+function getReviewText(review: Review, locale: string) {
+  const translations = review.translations
   if (locale !== 'en' && translations?.[locale]?.text) {
     return { displayText: translations[locale].text, isTranslated: true, originalText: review.text }
   }
@@ -546,7 +567,7 @@ function ReviewCard({
   ui,
   locale,
 }: {
-  review: typeof reviewsData.reviews[0]
+  review: Review
   formatDate: (date: string) => string
   ui: any
   locale: string

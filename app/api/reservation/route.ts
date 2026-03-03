@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse, after } from 'next/server';
 import { reservationSchema } from '@/lib/validation';
 import { verifyTurnstile } from '@/lib/turnstile';
 import { reservationRateLimit } from '@/lib/rate-limit';
@@ -42,8 +42,14 @@ export async function POST(request: NextRequest) {
     // 4. Sanitize
     const sanitized = sanitizeObject(formData);
 
-    // 5. Send email
-    await sendReservationNotification(sanitized);
+    // 5. Send email after response (non-blocking)
+    after(async () => {
+      try {
+        await sendReservationNotification(sanitized);
+      } catch (err) {
+        console.error('Failed to send reservation email:', err);
+      }
+    });
 
     return NextResponse.json({ success: true });
   } catch (error) {

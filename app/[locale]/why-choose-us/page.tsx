@@ -11,6 +11,8 @@ import QuoteSection from '@/app/components/QuoteSection'
 import { getMessages, getLocale } from 'next-intl/server'
 import { generatePageMetadata } from '@/lib/metadata'
 import type { Locale } from '@/i18n/config'
+import { latestReviews } from '@/lib/utils'
+import reviewsData from '@/data/reviews.json'
 
 export async function generateMetadata() {
   const locale = await getLocale() as Locale
@@ -51,6 +53,7 @@ export default async function WhyChooseUsPage() {
         variant="compact"
         title={pageData.reviewSection.title}
         subtitle={pageData.reviewSection.subtitle}
+        reviews={latestReviews(reviewsData.reviews, 3)}
       />
 
       {/* Additional Reasons */}

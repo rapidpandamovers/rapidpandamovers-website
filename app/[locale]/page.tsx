@@ -170,7 +170,7 @@ export default async function Home() {
           <AboutSection />
         </Suspense>
       </div>
-      <div id="quote">
+      <div className="cv-auto" id="quote">
         <QuoteSection />
       </div>
     </>

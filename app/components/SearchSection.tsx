@@ -5,7 +5,8 @@ import { Search, MapPin, Truck, Navigation, X, FileText } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import { useMessages } from 'next-intl';
 import { H2 } from '@/app/components/Heading';
-import { getAllActiveCities, getAllActiveServices, allRoutes, allLocalRoutes, titleCase } from '@/lib/data';
+import { getAllActiveCities, getAllActiveServices, titleCase } from '@/lib/data';
+import { allRoutes, allLocalRoutes } from '@/lib/routes-data';
 
 interface SearchResult {
   type: 'city' | 'neighborhood' | 'service' | 'route' | 'blog';

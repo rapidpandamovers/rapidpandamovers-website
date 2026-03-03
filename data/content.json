@@ -450,6 +450,12 @@
     "quote": {
       "title": "Join Our Satisfied Customers",
       "subtitle": "Experience the Rapid Panda difference. Get your free quote today and see why Miami trusts us with their moves."
+    },
+    "stats": {
+      "total_moves": "2,500+",
+      "customer_satisfaction": "98%",
+      "years_experience": "5+",
+      "average_rating": 4.6
     }
   },
   "faq": {

@@ -1,6 +1,5 @@
 import { notFound, redirect } from 'next/navigation';
 import RoutesContent from '../../RoutesContent';
-import { allLongDistanceRoutes, allLocalRoutes } from '@/lib/data';
 import { locales } from '@/i18n/config';
 import { generatePageMetadata } from '@/lib/metadata';
 import { getLocale } from 'next-intl/server';
@@ -9,6 +8,7 @@ import type { Locale } from '@/i18n/config';
 const ROUTES_PER_PAGE = 24;
 
 export async function generateStaticParams() {
+  const { allLongDistanceRoutes, allLocalRoutes } = await import('@/lib/routes-data');
   const totalRoutes =
     allLongDistanceRoutes.filter(r => r.is_active !== false).length +
     allLocalRoutes.filter(r => r.is_active !== false).length;
@@ -41,6 +41,7 @@ export default async function RoutesPaginatedPage({ params }: { params: Promise<
     redirect('/moving-routes');
   }
 
+  const { allLongDistanceRoutes, allLocalRoutes } = await import('@/lib/routes-data');
   const totalRoutes =
     allLongDistanceRoutes.filter(r => r.is_active !== false).length +
     allLocalRoutes.filter(r => r.is_active !== false).length;

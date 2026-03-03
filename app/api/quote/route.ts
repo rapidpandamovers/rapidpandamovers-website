@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse, after } from 'next/server';
 import { quoteSchema } from '@/lib/validation';
 import { verifyTurnstile } from '@/lib/turnstile';
 import { quoteRateLimit } from '@/lib/rate-limit';
@@ -42,8 +42,14 @@ export async function POST(request: NextRequest) {
     // 4. Sanitize
     const sanitized = sanitizeObject(formData);
 
-    // 5. Send email
-    await sendQuoteNotification(sanitized);
+    // 5. Send email after response (non-blocking)
+    after(async () => {
+      try {
+        await sendQuoteNotification(sanitized);
+      } catch (err) {
+        console.error('Failed to send quote email:', err);
+      }
+    });
 
     return NextResponse.json({ success: true });
   } catch (error) {

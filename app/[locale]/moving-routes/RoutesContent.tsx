@@ -3,7 +3,8 @@
 import { useMemo } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Link } from '@/i18n/routing';
-import { allLongDistanceRoutes, allLocalRoutes, titleCase } from '@/lib/data';
+import { titleCase } from '@/lib/data';
+import { allLongDistanceRoutes, allLocalRoutes } from '@/lib/routes-data';
 import { MapPin, Navigation, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useMessages, useLocale } from 'next-intl';
 import { getTranslatedSlug } from '@/i18n/slug-map';

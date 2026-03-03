@@ -6,16 +6,10 @@ import comparisons from '@/data/comparisons.json';
 import esComparisons from '@/data/es/comparisons.json';
 import alternatives from '@/data/alternatives.json';
 import esAlternatives from '@/data/es/alternatives.json';
-import longDistanceRoutes from '@/data/long_distance_routes.json';
-import localRoutes from '@/data/local_routes.json';
 import pageContent from '@/data/content.json';
 
 export const allCities = cities;
 export const allServices = services;
-export const allLongDistanceRoutes = longDistanceRoutes as typeof longDistanceRoutes;
-export const allLocalRoutes = localRoutes as Array<typeof longDistanceRoutes[number]>;
-// Combined routes for backwards compatibility
-export const allRoutes = [...longDistanceRoutes, ...(localRoutes as Array<typeof longDistanceRoutes[number]>)];
 export const allContent = pageContent;
 
 export const getServiceBySlug = (slug: string) => {
@@ -160,12 +154,6 @@ export const getCityBySlug = (slug: string) => {
     }
   }
   return null;
-};
-
-export const getRouteBySlug = (slug: string) => {
-  // Handle slugs with or without -movers suffix
-  const cleanSlug = slug.endsWith('-movers') ? slug.replace(/-movers$/, '') : slug;
-  return allRoutes.find(r => r.slug === cleanSlug);
 };
 
 export const getNeighborhoodBySlug = (slug: string) => {

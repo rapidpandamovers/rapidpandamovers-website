@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { getServiceBySlug, getCityBySlug, getRouteBySlug, getNeighborhoodBySlug, getServiceSlugs, getLocationServiceBySlug, getLocalizedServiceBySlug, getLocalizedCityBySlug, getLocalizedNeighborhoodBySlug } from '@/lib/data';
+import { getServiceBySlug, getCityBySlug, getNeighborhoodBySlug, getServiceSlugs, getLocationServiceBySlug, getLocalizedServiceBySlug, getLocalizedCityBySlug, getLocalizedNeighborhoodBySlug } from '@/lib/data';
 import { generateServiceMetadata, generateLocationMetadata, generateRouteMetadata } from '@/lib/metadata';
 import ServicePage from '@/app/components/ServicePage';
 import LocationPage from '@/app/components/LocationPage';
@@ -41,7 +41,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     return generateLocationMetadata(neighborhood, loc);
   }
 
-  // Check for route page
+  // Check for route page (lazy-load to avoid 6MB JSON blocking metadata)
+  const { getRouteBySlug } = await import('@/lib/routes-data');
   const route = getRouteBySlug(canonical);
   if (route) {
     return generateRouteMetadata(route, loc);
@@ -62,6 +63,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string;
   const service = getServiceBySlug(canonical);
   const city = getCityBySlug(canonical);
   const neighborhood = getNeighborhoodBySlug(canonical);
+  const { getRouteBySlug } = await import('@/lib/routes-data');
   const route = getRouteBySlug(canonical);
 
   // Location-specific service pages (e.g., /miami-local-moving)
@@ -141,7 +143,8 @@ export async function generateStaticParams() {
 }
 
 function getStaticSlugs() {
-  const { allCities, allRoutes, getServiceSlugs, getAllLocationServiceSlugs } = require('@/lib/data');
+  const { allCities, getServiceSlugs, getAllLocationServiceSlugs } = require('@/lib/data');
+  const { allRoutes } = require('@/lib/routes-data');
   const allCitiesFlat = allCities.states.flatMap((state: any) =>
     state.counties.flatMap((county: any) => county.cities)
   );

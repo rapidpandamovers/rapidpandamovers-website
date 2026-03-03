@@ -74,9 +74,15 @@ async function buildAlternates(enPath: string): Promise<Record<string, string>> 
     'x-default': enUrl,
     en: enUrl,
   }
-  for (const loc of locales) {
-    if (loc === defaultLocale) continue
-    const translatedPath = await translatePathname(enPath, 'en', loc)
+  const translations = await Promise.all(
+    locales
+      .filter(loc => loc !== defaultLocale)
+      .map(async (loc) => ({
+        loc,
+        path: await translatePathname(enPath, 'en', loc),
+      }))
+  )
+  for (const { loc, path: translatedPath } of translations) {
     const locPath = enPath === '/' ? '' : translatedPath
     languages[loc] = `${siteUrl}/${loc}${locPath}`
   }
@@ -111,8 +117,17 @@ export async function generatePageMetadata(options: MetadataOptions): Promise<Me
   // For non-default locale, build the localized canonical URL
   const enPath = path.startsWith('/') ? path : `/${path}`
   const siteUrl = getSiteUrl()
-  const canonicalUrl = locale && locale !== defaultLocale
-    ? `${siteUrl}/${locale}${await translatePathname(enPath, 'en', locale)}`
+
+  // Start both async operations in parallel
+  const [translatedPath, languages] = await Promise.all([
+    locale && locale !== defaultLocale
+      ? translatePathname(enPath, 'en', locale)
+      : Promise.resolve(null),
+    buildAlternates(enPath),
+  ])
+
+  const canonicalUrl = translatedPath
+    ? `${siteUrl}/${locale}${translatedPath}`
     : getCanonicalUrl(path)
 
   const ogLocale = locale === 'es' ? 'es_US' : 'en_US'
@@ -128,7 +143,7 @@ export async function generatePageMetadata(options: MetadataOptions): Promise<Me
     description,
     alternates: {
       canonical: canonicalUrl,
-      languages: await buildAlternates(enPath),
+      languages,
     },
     openGraph: {
       title: ogTitle,

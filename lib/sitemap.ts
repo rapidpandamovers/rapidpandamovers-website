@@ -1,4 +1,4 @@
-import { allCities, allLongDistanceRoutes, allLocalRoutes, getServiceSlugs, getAllLocationServiceSlugs, getAllActiveCities } from '@/lib/data'
+import { allCities, getServiceSlugs, getAllLocationServiceSlugs, getAllActiveCities } from '@/lib/data'
 import { getPublishedPosts, getCategories, categoryToSlug, isEditorialCategory, getServiceSlugsFromBlog, getPostsByService, getLocationSlugs, getPostsByLocation } from '@/lib/blog'
 import comparisons from '@/data/comparisons.json'
 import alternatives from '@/data/alternatives.json'
@@ -248,6 +248,7 @@ async function getLocationsEntries(locale: Locale, now: string): Promise<Sitemap
 
 async function getRoutesEntries(locale: Locale, now: string): Promise<SitemapEntry[]> {
   const entries: SitemapEntry[] = []
+  const { allLongDistanceRoutes, allLocalRoutes } = await import('@/lib/routes-data')
 
   // Long distance routes
   const activeLongDistance = allLongDistanceRoutes.filter(r => r.is_active !== false)
