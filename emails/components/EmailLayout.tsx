@@ -87,6 +87,9 @@ const header: React.CSSProperties = {
 
 const logo: React.CSSProperties = {
   margin: '0 auto',
+  backgroundColor: '#ffffff',
+  borderRadius: '8px',
+  padding: '8px',
 };
 
 const content: React.CSSProperties = {
