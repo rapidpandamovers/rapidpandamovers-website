@@ -2,7 +2,6 @@ import { ImageResponse } from 'next/og'
 import { type NextRequest } from 'next/server'
 import { readFileSync } from 'fs'
 import { join } from 'path'
-import sharp from 'sharp'
 
 const WIDTH = 1200
 const HEIGHT = 630
@@ -51,6 +50,8 @@ function getSiteUrl(): string {
  * No filesystem reads — avoids bundling public/ into the serverless function.
  */
 async function imageToDataUri(imagePath: string): Promise<string> {
+  const sharp = (await import('sharp')).default
+
   const siteUrl = getSiteUrl()
   const url = `${siteUrl}${imagePath.startsWith('/') ? '' : '/'}${imagePath}`
   const res = await fetch(url)
@@ -59,7 +60,7 @@ async function imageToDataUri(imagePath: string): Promise<string> {
 
   const jpegBuffer = await sharp(imageBuffer)
     .resize(WIDTH, HEIGHT, { fit: 'cover' })
-    .jpeg({ quality: 60 })
+    .jpeg({ quality: 50 })
     .toBuffer()
   return `data:image/jpeg;base64,${jpegBuffer.toString('base64')}`
 }
@@ -231,8 +232,10 @@ export async function GET(request: NextRequest) {
       }
     )
 
+    // Satori's PNG preserves alpha from the rgba overlay incorrectly — flatten to JPEG to fix compositing
+    const sharp = (await import('sharp')).default
     const pngBuffer = Buffer.from(await pngResponse.arrayBuffer())
-    const jpegBuffer = await sharp(pngBuffer).jpeg({ quality: 80 }).toBuffer()
+    const jpegBuffer = await sharp(pngBuffer).flatten({ background: '#0f0f0f' }).jpeg({ quality: 90 }).toBuffer()
 
     return new Response(new Uint8Array(jpegBuffer), {
       headers: {
