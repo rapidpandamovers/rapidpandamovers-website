@@ -33,19 +33,13 @@ export async function generateMetadata() {
   const { meta } = (await getMessages()) as any
   const ogSubtitle = `Rated ${reviewsData.stats.averageRating}/5 by ${reviewsData.stats.totalReviews}+ customers`
   const siteUrl = getSiteUrl()
-  const pageMetadata = await generatePageMetadata({
-    title: meta.home.title,
+  return generatePageMetadata({
+    title: `${meta.home.title} | ${SITE_CONFIG.name}`,
     description: interpolateReviewStats(meta.home.description),
     path: meta.home.path,
     locale,
     image: `${siteUrl}/api/og?title=${encodeURIComponent(meta.home.title)}&subtitle=${encodeURIComponent(ogSubtitle)}`,
   })
-  // Use absolute title to ensure brand suffix is always present.
-  // The layout's title.template doesn't reliably apply to the home page.
-  return {
-    ...pageMetadata,
-    title: { absolute: `${meta.home.title} | ${SITE_CONFIG.name}` },
-  }
 }
 
 export default async function Home() {

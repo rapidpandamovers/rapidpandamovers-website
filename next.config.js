@@ -6,7 +6,7 @@ const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   serverExternalPackages: ['sharp'],
-  productionBrowserSourceMaps: true,
+  productionBrowserSourceMaps: false,
   env: {
     BUILD_DATE: new Date().toISOString().split('T')[0],
   },
@@ -70,6 +70,32 @@ const nextConfig = {
         source: '/:path((?:en|es)?)',
         headers: [
           { key: 'CDN-Cache-Control', value: 'public, s-maxage=3600, stale-while-revalidate=86400' },
+        ],
+      },
+      // Cache static pages (services, about, FAQ, etc.)
+      {
+        source: '/:locale(en|es)?/:slug([a-z0-9-]+)',
+        headers: [
+          { key: 'CDN-Cache-Control', value: 'public, s-maxage=3600, stale-while-revalidate=86400' },
+        ],
+      },
+      // Long cache for static assets (fonts, images)
+      {
+        source: '/fonts/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+      {
+        source: '/images/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+      {
+        source: '/videos/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
         ],
       },
     ];
