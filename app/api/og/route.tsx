@@ -59,7 +59,7 @@ async function imageToDataUri(imagePath: string): Promise<string> {
 
   const jpegBuffer = await sharp(imageBuffer)
     .resize(WIDTH, HEIGHT, { fit: 'cover' })
-    .jpeg({ quality: 80 })
+    .jpeg({ quality: 60 })
     .toBuffer()
   return `data:image/jpeg;base64,${jpegBuffer.toString('base64')}`
 }
@@ -101,7 +101,8 @@ export async function GET(request: NextRequest) {
       imageUrl = ''
     }
 
-    return new ImageResponse(
+    // Render to PNG via Satori, then convert to JPEG (photos as PNG = ~950KB, JPEG = ~80KB)
+    const pngResponse = new ImageResponse(
       (
         <div
           style={{
@@ -227,11 +228,18 @@ export async function GET(request: NextRequest) {
         width: WIDTH,
         height: HEIGHT,
         fonts: allFonts(interBoldData),
-        headers: {
-          'Cache-Control': 'public, max-age=31536000, immutable',
-        },
       }
     )
+
+    const pngBuffer = Buffer.from(await pngResponse.arrayBuffer())
+    const jpegBuffer = await sharp(pngBuffer).jpeg({ quality: 80 }).toBuffer()
+
+    return new Response(new Uint8Array(jpegBuffer), {
+      headers: {
+        'Content-Type': 'image/jpeg',
+        'Cache-Control': 'public, max-age=31536000, immutable',
+      },
+    })
   }
 
   // Simple layout — no image
