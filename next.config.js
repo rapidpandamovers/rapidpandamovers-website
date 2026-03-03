@@ -16,6 +16,9 @@ const nextConfig = {
   outputFileTracingIncludes: {
     '/api/og': ['./fonts/**/*'],
   },
+  outputFileTracingExcludes: {
+    '/api/og': ['./public/**/*'],
+  },
   images: {
     remotePatterns: [
       {

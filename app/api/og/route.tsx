@@ -7,15 +7,15 @@ import sharp from 'sharp'
 const WIDTH = 1200
 const HEIGHT = 630
 
-// Load fonts and logo once at module level
+// Load fonts and logo once at module level (all from ./fonts/, which is in outputFileTracingIncludes)
 const fontData = readFileSync(join(process.cwd(), 'fonts/DTGetaiGroteskDisplay-Black.otf'))
 
 const interBoldPromise = fetch(
   'https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf'
 ).then((res) => res.arrayBuffer())
 
-// Load logo SVG with white fill for dark backgrounds
-const logoSvg = readFileSync(join(process.cwd(), 'public/images/rapidpandamovers-logo.svg'), 'utf-8')
+// Load logo SVG with white fill for dark backgrounds (from fonts/ dir to avoid tracing public/)
+const logoSvg = readFileSync(join(process.cwd(), 'fonts/rapidpandamovers-logo.svg'), 'utf-8')
   .replace(/<\?xml[^?]*\?>/, '')
   .replace(/<!DOCTYPE[^>]*>/, '')
   .trim()
@@ -47,24 +47,15 @@ function getSiteUrl(): string {
 }
 
 /**
- * Convert an image to a JPEG data URI that Satori can render.
- * Tries filesystem first (local dev), falls back to HTTP fetch (Vercel).
+ * Fetch an image via HTTP and convert to JPEG data URI with sharp.
+ * No filesystem reads — avoids bundling public/ into the serverless function.
  */
 async function imageToDataUri(imagePath: string): Promise<string> {
-  let imageBuffer: Buffer
-
-  try {
-    // Try filesystem first (works in local dev)
-    const fullPath = join(process.cwd(), 'public', imagePath)
-    imageBuffer = readFileSync(fullPath)
-  } catch {
-    // Filesystem not available (Vercel serverless) — fetch via HTTP
-    const siteUrl = getSiteUrl()
-    const url = `${siteUrl}${imagePath.startsWith('/') ? '' : '/'}${imagePath}`
-    const res = await fetch(url)
-    if (!res.ok) throw new Error(`Failed to fetch image: ${res.status}`)
-    imageBuffer = Buffer.from(await res.arrayBuffer())
-  }
+  const siteUrl = getSiteUrl()
+  const url = `${siteUrl}${imagePath.startsWith('/') ? '' : '/'}${imagePath}`
+  const res = await fetch(url)
+  if (!res.ok) throw new Error(`Failed to fetch image: ${res.status}`)
+  const imageBuffer = Buffer.from(await res.arrayBuffer())
 
   const jpegBuffer = await sharp(imageBuffer)
     .resize(WIDTH, HEIGHT, { fit: 'cover' })
