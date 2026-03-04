@@ -12,6 +12,10 @@ import { generateMovingCompanySchema } from '@/lib/schema'
 import { defaultLocale, type Locale } from '@/i18n/config'
 import reviewsData from '@/data/reviews.json'
 
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }))
+}
+
 export async function generateMetadata({
   params,
 }: {

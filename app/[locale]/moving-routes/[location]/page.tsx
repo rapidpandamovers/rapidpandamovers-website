@@ -3,6 +3,15 @@ import RoutesContent from '../RoutesContent';
 import { getLocale } from 'next-intl/server';
 import { generatePageMetadata } from '@/lib/metadata';
 import type { Locale } from '@/i18n/config';
+import { locales } from '@/i18n/config';
+import { getAllRouteLocations } from '@/lib/routes-data';
+
+export async function generateStaticParams() {
+  const locations = getAllRouteLocations();
+  return locales.flatMap(locale =>
+    locations.map(location => ({ locale, location }))
+  );
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ location: string }> }) {
   const { location } = await params;

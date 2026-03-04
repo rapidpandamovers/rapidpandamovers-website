@@ -4,6 +4,23 @@ import RoutesContent from '../../../RoutesContent';
 import { generatePageMetadata } from '@/lib/metadata';
 import { getLocale } from 'next-intl/server';
 import type { Locale } from '@/i18n/config';
+import { locales } from '@/i18n/config';
+import { getAllRouteLocations, getTotalPagesForLocation } from '@/lib/routes-data';
+
+export async function generateStaticParams() {
+  const locations = getAllRouteLocations();
+  return locales.flatMap(locale =>
+    locations.flatMap(location => {
+      const totalPages = getTotalPagesForLocation(location);
+      // Only generate pages 2+ (page 1 redirects to the location root)
+      return Array.from({ length: Math.max(0, totalPages - 1) }, (_, i) => ({
+        locale,
+        location,
+        page: String(i + 2),
+      }));
+    })
+  );
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ location: string; page: string }> }) {
   const { location, page } = await params;
