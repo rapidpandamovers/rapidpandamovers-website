@@ -164,7 +164,7 @@ Each step uses a dedicated script. Follow these steps in sequence:
 | 3 | `blog_similar.py` | Find duplicate/similar posts |
 | 4-6 | Manual editing + skills | Content validation, rewriting, **update image_keywords** |
 | 7 | `blog_categorize.py` | Set category from service_link |
-| 8 | `blog_images.py --all` | Download, rename, resize, embed images |
+| 8 | `blog_images.py --all` | Download, rename, embed images (no responsive sizes) |
 | 9 | `blog_wordcount.py --fix` | Update readTime, fix excerpt length |
 | 10 | `blog_validate.py` | Final validation |
 
@@ -188,8 +188,8 @@ python scripts/blog/blog_similar.py {POST_ID}
 # Step 7: Update category
 python scripts/blog/blog_categorize.py {POST_ID}
 
-# Step 8: Process images (download, rename, resize, embed, cleanup)
-python scripts/blog/blog_images.py {POST_ID} --clean --download --rename --resize --embed --update-array --cleanup
+# Step 8: Process images (download, rename, embed, cleanup — no responsive sizes)
+python scripts/blog/blog_images.py {POST_ID} --clean --download --rename --embed --update-array --cleanup
 # Or use --all for all image steps:
 python scripts/blog/blog_images.py {POST_ID} --all --query "senior moving"
 
@@ -829,9 +829,9 @@ sed -n '/^---$/,/^---$/d; p' {file} | wc -w
 
 - **3-5 images per post** (not a fixed number)
 - **WebP format** for all images (smaller file size, better quality)
-- **Responsive sizes** with srcset for different viewports
-- **Lazy loading** for all images below the fold
-- **Eager loading** only for featured/hero image (LCP optimization)
+- **NO responsive sizes** — use the single base WebP file only (no 400w/800w/1200w/1600w variants)
+- **Simple markdown** for image embeds: `![Alt text](/path/to/image.webp)`
+- **Lazy loading** is handled by the blog renderer automatically
 
 ### Step 0: Build Content-Matched Search Queries (CRITICAL)
 
@@ -880,8 +880,8 @@ python scripts/blog/blog_images.py 0001 --download
 # Specify count (default is random 3-5 for variety)
 python scripts/blog/blog_images.py 0001 --download --count 4
 
-# Full workflow: download + rename + resize
-python scripts/blog/blog_images.py 0001 --download --rename --resize
+# Full workflow: download + rename
+python scripts/blog/blog_images.py 0001 --download --rename
 ```
 
 ---
@@ -929,36 +929,7 @@ Naming convention:
 - Example: `senior-moving-checklist-packing-boxes.webp`
 - **Never use generic names** like `pexels-12345.jpg`
 
-### Step 3: Convert to WebP and Generate Responsive Sizes
-
-Use the `blog_resize.py` script:
-
-```bash
-# Convert to WebP and generate responsive sizes
-python scripts/blog/blog_resize.py 0001
-
-# Or specify a directory directly
-python scripts/blog/blog_resize.py --dir public/images/blog/2024/01/post-slug/
-```
-
-This converts to WebP and generates sizes: 400w, 800w, 1200w, 1600w using macOS `sips`.
-
-Output structure:
-```
-public/images/blog/2024/01/post-slug/
-├── featured.webp           # Original/largest
-├── featured-400w.webp      # Mobile
-├── featured-800w.webp      # Mobile retina / Tablet
-├── featured-1200w.webp     # Desktop
-├── featured-1600w.webp     # Desktop retina
-├── image-2.webp            # Second image
-├── image-2-400w.webp
-├── image-2-800w.webp
-├── image-2-1200w.webp
-└── ...                     # 3-5 images total
-```
-
-### Step 4: Update Frontmatter
+### Step 3: Update Frontmatter
 
 ```yaml
 featured: "/images/blog/2024/01/slug/featured.webp"
@@ -969,40 +940,21 @@ images:
   - "/images/blog/2024/01/slug/image-checklist.webp"  # 3-5 images
 ```
 
-### Step 5: Embed Responsive Images in Body Copy
+### Step 4: Embed Images in Body Copy
 
-Use the responsive image markdown syntax with srcset:
+Use simple markdown image syntax (no srcset/responsive sizes):
 
 ```markdown
 ## Section Heading
 
 Paragraph of content here...
 
-<figure>
-  <img
-    src="/images/blog/2024/01/slug/image-1-800w.webp"
-    srcset="
-      /images/blog/2024/01/slug/image-1-400w.webp 400w,
-      /images/blog/2024/01/slug/image-1-800w.webp 800w,
-      /images/blog/2024/01/slug/image-1-1200w.webp 1200w
-    "
-    sizes="(max-width: 768px) 100vw, 800px"
-    alt="Descriptive alt text with keywords"
-    width="800"
-    height="600"
-    loading="lazy"
-  />
-</figure>
+![Descriptive alt text with keywords](/images/blog/2024/01/slug/image-name.webp)
 
 More content continues...
 ```
 
-**For simple markdown (when renderer doesn't support HTML):**
-```markdown
-![Descriptive alt text](/images/blog/2024/01/slug/image-1.webp)
-```
-
-### Step 6: Validate Image-Content Match
+### Step 5: Validate Image-Content Match
 
 **Before finalizing, verify images match the content:**
 
@@ -1034,14 +986,6 @@ More content continues...
 - Don't cluster images together
 - Featured image displays at top automatically (from frontmatter)
 - Additional images go in body copy to break up text
-
-### Loading Strategy (Core Web Vitals)
-
-| Image Position | loading | fetchpriority | Why |
-|----------------|---------|---------------|-----|
-| Featured/Hero (LCP) | `eager` | `high` | Optimize LCP, prioritize download |
-| First body image | `eager` | omit | May be above fold |
-| All other images | `lazy` | omit | Defer until near viewport |
 
 ---
 
@@ -1130,6 +1074,82 @@ Does the post have a location_link (e.g., /miami-movers, /pinecrest-movers)?
 3. **Lifestyle post (food, activities, plants)** → `null`
 4. **General tips (no location)** → `/{service}` or `/residential-moving`
 5. **Multiple services mentioned** → Pick PRIMARY from title
+
+### Body Content Links Must Be Location-Aware
+
+**CRITICAL: Links in the post body MUST match the location context of the post.**
+
+When a post is about a specific location (city or neighborhood), ALL service links in the body content must use the location-specific format, not generic service links.
+
+**Every city AND neighborhood has its own service pages.** The site generates `/{slug}-{service}` pages for ALL locations including neighborhoods. This means:
+- `west-flagler-local-moving` is a valid page
+- `brickell-packing-services` is a valid page
+- `coconut-grove-apartment-moving` is a valid page
+
+| Post Location | WRONG (generic) | ALSO WRONG (city instead of neighborhood) | RIGHT (location-aware) |
+|---------------|-----------------|------------------------------------------|----------------------|
+| West Flagler | `[Local Moving](/local-moving)` | `[Local Moving](/miami-local-moving)` | `[Local Moving](/west-flagler-local-moving)` |
+| Brickell | `[Packing](/packing-services)` | `[Packing](/miami-packing-services)` | `[Packing](/brickell-packing-services)` |
+| Coconut Grove | `[Apartment](/apartment-moving)` | `[Apartment](/miami-apartment-moving)` | `[Apartment](/coconut-grove-apartment-moving)` |
+| Pinecrest (city) | `[Local Moving](/local-moving)` | N/A | `[Local Moving](/pinecrest-local-moving)` |
+| (no location) | N/A | N/A | `[Local Moving](/local-moving)` ← generic OK |
+
+#### How to determine the body link slug
+
+Look at the post title/content to identify the specific location (city or neighborhood). Use that as the slug for ALL body content links.
+
+**Determining the slug from the post:**
+- Post about West Flagler → body links use `/west-flagler-{service}`
+- Post about Coconut Grove → body links use `/coconut-grove-{service}`
+- Post about Coral Gables → body links use `/coral-gables-{service}`
+- Post about Miami (general) → body links use `/miami-{service}`
+- Post about no specific location → body links use generic `/{service}`
+
+**IMPORTANT: Frontmatter vs Body links are DIFFERENT:**
+- `service_link` in frontmatter: Use **base service link** (e.g., `/local-moving`) — used for category matching
+- `location_link` in frontmatter: Use **city-level link** (e.g., `/miami-movers` for Miami neighborhoods) — used for category matching
+- Body content links: Use the **most specific location slug** (neighborhood or city) — for user navigation
+
+Example for a West Flagler post:
+```yaml
+# Frontmatter (base/city level for category matching)
+service_link: "/local-moving"
+location_link: "/miami-movers"
+```
+```markdown
+# Body links (neighborhood-specific for navigation)
+[**Local Moving**](/west-flagler-local-moving)
+[**West Flagler**](/west-flagler-movers)
+```
+
+#### Miami Neighborhoods (use these slugs, NOT "miami")
+
+```
+allapattah, arts-entertainment-district, bay-point, belle-meade, brickell,
+brickell-key, buena-vista, coconut-grove, coral-way-shenandoah, design-district,
+downtown-cbd-park-west, edgewater, flagami, grapeland-heights,
+health-district-civic-center, little-haiti, little-havana, liberty-city, midtown,
+morningside, overtown, palm-grove, spring-garden, the-roads,
+upper-eastside-mimo, virginia-key, watson-island, west-flagler, wynwood
+```
+
+#### Independent Cities (NOT neighborhoods of Miami)
+
+```
+coral-gables, doral, aventura, bal-harbour, bay-harbor-islands, cutler-bay,
+el-portal, florida-city, golden-beach, hialeah, hialeah-gardens, homestead,
+indian-creek, key-biscayne, medley, miami-beach, miami-gardens, miami-lakes,
+miami-shores, miami-springs, north-bay-village, north-miami, north-miami-beach,
+opa-locka, palmetto-bay, pinecrest, south-miami, sunny-isles-beach, surfside,
+sweetwater, virginia-gardens, west-miami, westchester, kendall
+```
+
+**Checklist for every post:**
+- [ ] All `[Service Name](/service)` links in body use `/{location}-{service}` format with the MOST SPECIFIC slug (neighborhood or city)
+- [ ] `service_link` in frontmatter uses the BASE service link (e.g., `/local-moving`, `/packing-services`) — NOT location-prefixed
+- [ ] `location_link` in frontmatter uses the CITY-LEVEL link (e.g., `/miami-movers` for Miami neighborhoods, `/coral-gables-movers` for Coral Gables)
+- [ ] CTA section links to `/quote` and `/reviews` (these are NOT location-specific)
+- [ ] Location page link in body uses most specific `/{neighborhood-or-city}-movers` format
 
 ---
 

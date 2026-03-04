@@ -42,7 +42,9 @@ def find_post_file(post_id: str) -> Path:
         return Path(post_id)
 
     padded = post_id.zfill(4)
-    matches = glob.glob(str(PROJECT_ROOT / f"content/blog/{padded}-*.md"))
+    matches = glob.glob(str(PROJECT_ROOT / f"content/blog/en/{padded}-*.md"))
+    if not matches:
+        matches = glob.glob(str(PROJECT_ROOT / f"content/blog/en/{padded}-*.md"))
     if matches:
         return Path(matches[0])
     return None
@@ -85,7 +87,7 @@ def find_similar_posts(target_title: str, target_id: int = None, limit: int = 10
         return []
 
     # Load all posts
-    post_files = glob.glob(str(PROJECT_ROOT / "content/blog/*.md"))
+    post_files = glob.glob(str(PROJECT_ROOT / "content/blog/en/*.md"))
 
     similarities = []
     for pf in post_files:

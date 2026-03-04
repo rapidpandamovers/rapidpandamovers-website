@@ -58,7 +58,9 @@ def find_post_file(post_id: str) -> Path:
         return Path(post_id)
 
     padded = post_id.zfill(4)
-    matches = glob.glob(str(PROJECT_ROOT / f"content/blog/{padded}-*.md"))
+    matches = glob.glob(str(PROJECT_ROOT / f"content/blog/en/{padded}-*.md"))
+    if not matches:
+        matches = glob.glob(str(PROJECT_ROOT / f"content/blog/en/{padded}-*.md"))
     if matches:
         return Path(matches[0])
     return None
@@ -66,7 +68,10 @@ def find_post_file(post_id: str) -> Path:
 
 def find_all_posts() -> list:
     """Find all blog post files."""
-    return sorted(glob.glob(str(PROJECT_ROOT / "content/blog/*.md")))
+    posts = sorted(glob.glob(str(PROJECT_ROOT / "content/blog/en/*.md")))
+    if not posts:
+        posts = sorted(glob.glob(str(PROJECT_ROOT / "content/blog/en/*.md")))
+    return posts
 
 
 def parse_frontmatter(content: str) -> dict:

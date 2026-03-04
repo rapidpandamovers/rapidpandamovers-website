@@ -50,6 +50,7 @@ interface ReviewSectionProps {
   // Reviews data — pass from server to avoid bundling full dataset in client JS
   reviews?: Review[]
   platforms?: string[]
+  minRating?: number
 }
 
 // Platform icons as simple SVG components
@@ -146,6 +147,7 @@ export default function ReviewSection({
   variant = 'default',
   reviews,
   platforms: platformsProp,
+  minRating = 4,
 }: ReviewSectionProps) {
   const { ui } = useMessages() as any
   const locale = useLocale()
@@ -158,6 +160,9 @@ export default function ReviewSection({
   // Filter reviews based on props (without limit for pagination)
   const allFilteredReviews = useMemo(() => {
     let sourceReviews = reviews ?? []
+
+    // Filter by minimum rating and require text
+    sourceReviews = sourceReviews.filter(r => r.rating >= minRating && (r.text ?? '').trim() !== '')
 
     // Filter by platform if selected
     if (selectedPlatform) {
@@ -186,7 +191,7 @@ export default function ReviewSection({
     sourceReviews = [...sourceReviews].sort((a, b) => parseInt(b.id) - parseInt(a.id))
 
     return sourceReviews
-  }, [reviews, city, neighborhood, service, route, selectedPlatform])
+  }, [reviews, city, neighborhood, service, route, selectedPlatform, minRating])
 
   // Calculate pagination
   const totalPages = showPagination ? Math.ceil(allFilteredReviews.length / perPage) : 1

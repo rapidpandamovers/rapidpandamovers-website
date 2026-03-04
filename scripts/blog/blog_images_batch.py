@@ -36,7 +36,10 @@ def parse_frontmatter(content: str) -> dict:
 def get_posts_needing_images() -> list:
     """Find all posts with missing image directories."""
     posts = []
-    for filepath in sorted(glob.glob("content/blog/*.md")):
+    blog_files = sorted(glob.glob("content/blog/en/*.md"))
+    if not blog_files:
+        blog_files = sorted(glob.glob("content/blog/en/*.md"))
+    for filepath in blog_files:
         if filepath.endswith('STATUS.md') or filepath.endswith('index.json'):
             continue
 

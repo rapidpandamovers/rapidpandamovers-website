@@ -19,10 +19,10 @@ Embed & Finalize:
     python scripts/blog/blog_images.py 0001 --fix-paths                   # Fix image_folder/featured paths
 
 Full Workflows:
-    python scripts/blog/blog_images.py 0001 --download --rename --resize  # Download workflow
+    python scripts/blog/blog_images.py 0001 --download --rename           # Download workflow
     python scripts/blog/blog_images.py 0001 --embed --update-array --cleanup  # Embed workflow
     python scripts/blog/blog_images.py 0001 --clean --download            # Clean first, then download
-    python scripts/blog/blog_images.py 0001 --all                         # Full workflow (all steps)
+    python scripts/blog/blog_images.py 0001 --all                         # Full workflow (no responsive sizes)
 
 Options:
     --clean          Remove ALL existing images (folder + frontmatter + body embeds)
@@ -33,7 +33,7 @@ Options:
     --update-array   Update images array in frontmatter
     --cleanup        Remove images not referenced in frontmatter/body
     --fix-paths      Fix image_folder and featured paths to match slug
-    --all            Run full workflow: download, rename, resize, embed, update-array, cleanup
+    --all            Run full workflow: download, rename, embed, update-array, cleanup (no resize)
     --count N        Number of images (3-5). If omitted, randomly chosen for variety.
     --query "..."    Custom search query (USE SIMPLE 2-3 WORD TERMS!)
 
@@ -238,7 +238,9 @@ def check_cwebp() -> bool:
 def find_post_file(post_id: str) -> Path:
     """Find post file by ID."""
     padded = post_id.zfill(4)
-    matches = glob.glob(str(PROJECT_ROOT / f"content/blog/{padded}-*.md"))
+    matches = glob.glob(str(PROJECT_ROOT / f"content/blog/en/{padded}-*.md"))
+    if not matches:
+        matches = glob.glob(str(PROJECT_ROOT / f"content/blog/{padded}-*.md"))
     if matches:
         return Path(matches[0])
     return None
@@ -994,7 +996,7 @@ def main():
     do_clean = '--clean' in args or do_all
     do_download = '--download' in args or do_all
     do_rename = '--rename' in args or do_all
-    do_resize = '--resize' in args or do_all
+    do_resize = '--resize' in args  # NOT included in --all (responsive sizes deprecated)
     do_embed = '--embed' in args or do_all
     do_update_array = '--update-array' in args or do_all
     do_cleanup = '--cleanup' in args or do_all

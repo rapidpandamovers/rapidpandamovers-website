@@ -120,12 +120,12 @@ def find_post_file(post_id: str) -> Path:
 
     # Try with leading zeros
     padded = post_id.zfill(4)
-    matches = glob.glob(f"content/blog/{padded}-*.md")
+    matches = glob.glob(f"content/blog/en/{padded}-*.md")
     if matches:
         return Path(matches[0])
 
     # Try without leading zeros
-    matches = glob.glob(f"content/blog/{post_id}-*.md")
+    matches = glob.glob(f"content/blog/en/{post_id}-*.md")
     if matches:
         return Path(matches[0])
 
@@ -212,7 +212,7 @@ def main():
         args.remove('--fix')
 
     if '--all' in args:
-        files = sorted(glob.glob("content/blog/*.md"))
+        files = sorted(glob.glob("content/blog/en/*.md"))
         posts = [Path(f) for f in files if not f.endswith('index.json')]
     else:
         post_id = args[0]
