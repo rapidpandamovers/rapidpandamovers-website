@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { Link, usePathname } from '@/i18n/routing'
+import { stripDiacritics } from '@/lib/strip-diacritics'
 function ChevronRightIcon({ className }: { className?: string }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -191,7 +192,7 @@ function DrawerSection({
         onClick={onToggle}
         className="flex items-center justify-between w-full py-4 text-white font-bold text-base font-display"
       >
-        <span>{title}</span>
+        <span>{stripDiacritics(title)}</span>
         {isOpen ? (
           <ChevronDownIcon className="w-5 h-5 text-gray-400" />
         ) : (

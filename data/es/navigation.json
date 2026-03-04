@@ -78,11 +78,12 @@
     ],
     "social": [
       { "platform": "facebook", "url": "https://www.facebook.com/raapidpandamovers/", "label": "Facebook" },
-      { "platform": "x", "url": "#", "label": "X" },
       { "platform": "instagram", "url": "https://www.instagram.com/rapidpandamovers/", "label": "Instagram" },
+      { "platform": "x", "url": "#", "label": "X" },
+      { "platform": "youtube", "url": "#", "label": "YouTube" },
       { "platform": "linkedin", "url": "#", "label": "LinkedIn" },
-      { "platform": "tiktok", "url": "#", "label": "TikTok" },
-      { "platform": "youtube", "url": "#", "label": "YouTube" }
+      { "platform": "pinterest", "url": "#", "label": "Pinterest" },
+      { "platform": "tiktok", "url": "#", "label": "TikTok" }
     ]
   }
 }

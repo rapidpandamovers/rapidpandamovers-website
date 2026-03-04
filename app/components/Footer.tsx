@@ -7,6 +7,7 @@ import { getMessages, getLocale } from 'next-intl/server'
 import { getTranslatedSlug } from '@/i18n/slug-map'
 import type { Locale } from '@/i18n/config'
 import { LanguageSelectorFooter } from './LanguageSelector'
+import { stripDiacritics } from '@/lib/strip-diacritics'
 import FooterDrawers from './FooterDrawersLoader'
 
 function PhoneIcon({ className }: { className?: string }) {
@@ -135,7 +136,7 @@ export default async function Footer() {
 
           {/* Contact Info — always visible */}
           <div className="pt-6">
-            <p className="font-display text-base font-bold mb-4 text-white">{ui.contact.contactUs}</p>
+            <p className="font-display text-base font-bold mb-4 text-white">{stripDiacritics(ui.contact.contactUs)}</p>
             <div className="space-y-3 text-sm">
               <a href={`tel:${phoneTel}`} className="flex items-start space-x-3 text-gray-400 hover:text-orange-700 transition-colors">
                 <PhoneIcon className="w-4 h-4 text-orange-700 flex-shrink-0 mt-0.5" />
@@ -161,7 +162,7 @@ export default async function Footer() {
                 </div>
               </div>
               {/* Social Media */}
-              <div className="grid grid-cols-7 pt-8">
+              <div className="flex justify-between pt-8">
                 {nav.footer.social.map((social: any) => (
                   <a
                     key={social.platform}
@@ -256,7 +257,7 @@ export default async function Footer() {
 
           {/* Contact Info */}
           <div>
-            <p className="font-display text-lg font-bold mb-4 text-white">{ui.contact.contactUs}</p>
+            <p className="font-display text-lg font-bold mb-4 text-white">{stripDiacritics(ui.contact.contactUs)}</p>
             <div className="space-y-4 text-sm">
               <a href={`tel:${phoneTel}`} className="flex items-start space-x-3 text-gray-400 hover:text-orange-700 transition-colors">
                 <PhoneIcon className="w-5 h-5 text-orange-700 flex-shrink-0 mt-0.5" />
@@ -284,7 +285,7 @@ export default async function Footer() {
                 </div>
               </div>
               {/* Social Media */}
-              <div className="flex items-center space-x-4 pt-2">
+              <div className="flex items-center justify-between pt-2">
                 {nav.footer.social.map((social: any) => (
                   <a
                     key={social.platform}
@@ -311,10 +312,17 @@ export default async function Footer() {
                 alt="Rapid Panda Movers"
                 width={68}
                 height={40}
-                className="h-16 md:h-10 w-auto brightness-0 invert mb-3 md:mb-0"
+                className="h-16 md:h-10 w-auto brightness-0 invert mb-3 md:mb-0 -ml-[5px] md:ml-0"
               />
-              <p className="text-gray-400 text-sm">
-                {nav.footer.copyright.replace('{year}', String(new Date().getFullYear()))}
+              <p className="text-gray-400 text-sm text-center md:text-left">
+                {(() => {
+                  const full = nav.footer.copyright.replace('{year}', String(new Date().getFullYear()))
+                  const parts = full.split(/\.\s+/)
+                  if (parts.length > 1) {
+                    return <>{parts[0]}.<br className="md:hidden" />{' '}{parts.slice(1).join('. ')}</>
+                  }
+                  return full
+                })()}
               </p>
             </div>
             <div className="flex flex-col items-center gap-4 pb-4 md:pb-0 md:flex-row md:gap-0 md:space-x-6 text-sm">
