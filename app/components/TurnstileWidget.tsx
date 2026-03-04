@@ -22,6 +22,15 @@ declare global {
   }
 }
 
+// Shared script-load tracking across all TurnstileWidget instances
+let scriptLoaded = false
+const listeners = new Set<() => void>()
+
+function notifyScriptReady() {
+  scriptLoaded = true
+  listeners.forEach(fn => fn())
+}
+
 interface TurnstileWidgetProps {
   onVerify: (token: string) => void
   onExpire?: () => void
@@ -48,6 +57,17 @@ const TurnstileWidget = forwardRef<TurnstileWidgetRef, TurnstileWidgetProps>(
         setVerified(true) // eslint-disable-line react-hooks/set-state-in-effect
       }
     }, [siteKey, onVerify])
+
+    // Subscribe to shared script-load notification
+    useEffect(() => {
+      if (scriptLoaded || (typeof window !== 'undefined' && window.turnstile)) {
+        setScriptReady(true)
+        return
+      }
+      const handler = () => setScriptReady(true)
+      listeners.add(handler)
+      return () => { listeners.delete(handler) }
+    }, [])
 
     const handleVerify = useCallback((token: string) => {
       setVerified(true)
@@ -101,7 +121,7 @@ const TurnstileWidget = forwardRef<TurnstileWidgetRef, TurnstileWidgetProps>(
         <Script
           src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"
           strategy="afterInteractive"
-          onReady={() => setScriptReady(true)}
+          onReady={notifyScriptReady}
         />
         <div ref={containerRef} className="min-h-[65px]">
           {!scriptReady && (

@@ -108,11 +108,13 @@ export default function NewsletterSection({
                 </button>
               </div>
 
-              <TurnstileWidget
-                ref={turnstileRef}
-                onVerify={setTurnstileToken}
-                onExpire={() => setTurnstileToken('')}
-              />
+              <div className="mt-4">
+                <TurnstileWidget
+                  ref={turnstileRef}
+                  onVerify={setTurnstileToken}
+                  onExpire={() => setTurnstileToken('')}
+                />
+              </div>
 
               {submitStatus === 'error' && (
                 <p className="mt-3 text-sm text-red-600">{ui.messages.newsletterError}</p>
