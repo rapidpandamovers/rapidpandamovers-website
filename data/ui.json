@@ -101,6 +101,17 @@
       },
       "serviceOptions": ["Packing", "Loading/Unloading", "Transportation", "Unpacking", "Furniture Assembly", "Storage"]
     },
+    "claims": {
+      "sections": { "contact": "Contact Information", "details": "Claim Details" },
+      "labels": { "fullName": "Full Name *", "email": "Email Address *", "phone": "Phone Number *", "reference": "Booking/Reference Number", "description": "Description of Issue *" },
+      "placeholders": { "fullName": "John Doe", "email": "john@example.com", "phone": "(305) 555-0123", "reference": "Optional", "description": "Please describe the issue, including details about any damaged or lost items..." },
+      "submit": "Submit Claim",
+      "submitting": "Submitting...",
+      "successTitle": "Claim Submitted Successfully!",
+      "successDescription": "Our team will review your claim and contact you within 2 business days.",
+      "returnHome": "Return to Homepage",
+      "errorMessage": "Something went wrong. Please try again or call us at {phone}."
+    },
     "reservation": {
       "successTitle": "Reservation Request Submitted!",
       "successDescription": "Thank you for choosing Rapid Panda Movers. We'll contact you within 24 hours to confirm your booking.",

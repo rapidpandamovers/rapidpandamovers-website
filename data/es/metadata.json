@@ -121,6 +121,11 @@
     "description": "Explore todas nuestras rutas de mudanza. Servicios profesionales para mudanzas locales y de larga distancia en Florida y todo el país.",
     "path": "/moving-routes"
   },
+  "claims": {
+    "title": "Reclamaciones - Rapid Panda Movers",
+    "description": "Presente una reclamación por cualquier problema después de su mudanza. Estamos comprometidos a resolver problemas de manera rápida y justa.",
+    "path": "/claims"
+  },
   "reservations": {
     "title": "Reservaciones",
     "description": "Reserve su mudanza con Rapid Panda Movers. Servicios profesionales en Miami con precios transparentes y horarios flexibles.",

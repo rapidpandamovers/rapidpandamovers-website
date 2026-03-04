@@ -1567,6 +1567,13 @@
       "cta": "Ingrese sus codigos postales para comenzar"
     }
   },
+  "claims": {
+    "hero": {
+      "title": "Presentar una Reclamación",
+      "description": "Estamos comprometidos a resolver cualquier problema de su mudanza de manera rápida y justa",
+      "cta": "Obtenga su cotizacion gratuita"
+    }
+  },
   "reservations": {
     "hero": {
       "title": "Reserve su mudanza hoy",

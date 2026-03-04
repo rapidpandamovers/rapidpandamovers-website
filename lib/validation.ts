@@ -49,6 +49,15 @@ export const reservationSchema = z.object({
   turnstileToken: z.string().min(1, 'CAPTCHA verification is required'),
 });
 
+export const claimsSchema = z.object({
+  name: z.string().trim().min(1, 'Name is required').max(200),
+  email: z.string().trim().email('Invalid email address').max(320),
+  phone: z.string().trim().min(1, 'Phone is required').max(30),
+  reference: z.string().trim().max(100).optional(),
+  description: z.string().trim().min(1, 'Description is required').max(5000),
+  turnstileToken: z.string().min(1, 'CAPTCHA verification is required'),
+});
+
 export const newsletterSchema = z.object({
   email: z.string().trim().email('Invalid email address').max(320),
   turnstileToken: z.string().min(1, 'CAPTCHA verification is required'),
@@ -57,4 +66,5 @@ export const newsletterSchema = z.object({
 export type ContactData = z.infer<typeof contactSchema>;
 export type QuoteData = z.infer<typeof quoteSchema>;
 export type ReservationData = z.infer<typeof reservationSchema>;
+export type ClaimsData = z.infer<typeof claimsSchema>;
 export type NewsletterData = z.infer<typeof newsletterSchema>;

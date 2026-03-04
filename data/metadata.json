@@ -121,6 +121,11 @@
     "description": "Browse all our moving routes. Professional moving services for local and long distance moves across Florida and nationwide.",
     "path": "/moving-routes"
   },
+  "claims": {
+    "title": "Claims - Rapid Panda Movers",
+    "description": "File a claim for any issues after your move. We're committed to resolving problems quickly and fairly.",
+    "path": "/claims"
+  },
   "reservations": {
     "title": "Reservations",
     "description": "Book your move with Rapid Panda Movers. Professional moving services in Miami with transparent pricing and flexible scheduling.",

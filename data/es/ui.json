@@ -101,6 +101,17 @@
       },
       "serviceOptions": ["Empaque", "Carga/Descarga", "Transporte", "Desempaque", "Ensamblaje de Muebles", "Almacenamiento"]
     },
+    "claims": {
+      "sections": { "contact": "Información de Contacto", "details": "Detalles de la Reclamación" },
+      "labels": { "fullName": "Nombre Completo *", "email": "Correo Electrónico *", "phone": "Número de Teléfono *", "reference": "Número de Reservación/Referencia", "description": "Descripción del Problema *" },
+      "placeholders": { "fullName": "Juan Pérez", "email": "juan@ejemplo.com", "phone": "(305) 555-0123", "reference": "Opcional", "description": "Por favor describa el problema, incluyendo detalles sobre artículos dañados o perdidos..." },
+      "submit": "Enviar Reclamación",
+      "submitting": "Enviando...",
+      "successTitle": "¡Reclamación Enviada Exitosamente!",
+      "successDescription": "Nuestro equipo revisará su reclamación y le contactará dentro de 2 días hábiles.",
+      "returnHome": "Volver al Inicio",
+      "errorMessage": "Algo salió mal. Por favor intente de nuevo o llámenos al {phone}."
+    },
     "reservation": {
       "successTitle": "¡Solicitud de Reservación Enviada!",
       "successDescription": "Gracias por elegir Rapid Panda Movers. Le contactaremos dentro de 24 horas para confirmar su reservación.",

@@ -46,4 +46,5 @@ function createRateLimit(opts: RateLimitOptions) {
 export const contactRateLimit = createRateLimit({ windowMs: 15 * 60 * 1000, max: 10 });
 export const quoteRateLimit = createRateLimit({ windowMs: 15 * 60 * 1000, max: 5 });
 export const reservationRateLimit = createRateLimit({ windowMs: 15 * 60 * 1000, max: 5 });
+export const claimsRateLimit = createRateLimit({ windowMs: 15 * 60 * 1000, max: 5 });
 export const newsletterRateLimit = createRateLimit({ windowMs: 15 * 60 * 1000, max: 3 });

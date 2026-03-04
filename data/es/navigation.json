@@ -36,6 +36,7 @@
         { "label": "Sobre Nosotros", "description": "Sobre Rapid Panda Movers", "href": "/sobre-nosotros" },
         { "label": "Contáctenos", "description": "Póngase en contacto", "href": "/contacto" },
         { "label": "Reseñas", "description": "Testimonios reales", "href": "/resenas" },
+        { "label": "Reclamaciones", "description": "Presentar una reclamación", "href": "/reclamaciones" },
         { "label": "Reservaciones", "description": "Reserve su mudanza", "href": "/reservaciones" }
       ],
       "bottomLink": { "label": "Cotización Gratis", "description": "Obtenga un presupuesto gratis", "href": "/cotizacion" }
@@ -64,6 +65,7 @@
           { "label": "Sobre Nosotros", "href": "/sobre-nosotros" },
           { "label": "Contáctenos", "href": "/contacto" },
           { "label": "Reseñas", "href": "/resenas" },
+          { "label": "Reclamaciones", "href": "/reclamaciones" },
           { "label": "Reservaciones", "href": "/reservaciones" },
           { "label": "Cotización Gratis", "href": "/cotizacion" }
         ]

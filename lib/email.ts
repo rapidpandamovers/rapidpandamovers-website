@@ -2,6 +2,7 @@ import nodemailer from 'nodemailer';
 import { render } from '@react-email/components';
 import QuoteRequestEmail from '@/emails/QuoteRequestEmail';
 import ReservationRequestEmail from '@/emails/ReservationRequestEmail';
+import ClaimsRequestEmail from '@/emails/ClaimsRequestEmail';
 import ContactFormEmail from '@/emails/ContactFormEmail';
 import NewsletterSignupEmail from '@/emails/NewsletterSignupEmail';
 
@@ -88,6 +89,21 @@ export async function sendReservationNotification(data: {
   const html = await render(ReservationRequestEmail(data));
   await sendEmail({
     subject: `New Reservation: ${data.name} on ${data.moveDate}`,
+    html,
+    replyTo: data.email,
+  });
+}
+
+export async function sendClaimsNotification(data: {
+  name: string;
+  email: string;
+  phone: string;
+  reference?: string;
+  description: string;
+}) {
+  const html = await render(ClaimsRequestEmail(data));
+  await sendEmail({
+    subject: `New Claim: ${data.name}`,
     html,
     replyTo: data.email,
   });

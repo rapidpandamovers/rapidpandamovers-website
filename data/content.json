@@ -1567,6 +1567,13 @@
       "cta": "Enter your zip codes to get started"
     }
   },
+  "claims": {
+    "hero": {
+      "title": "File a Claim",
+      "description": "We're committed to resolving any issues from your move quickly and fairly",
+      "cta": "Get Your Free Quote"
+    }
+  },
   "reservations": {
     "hero": {
       "title": "Book Your Move Today",

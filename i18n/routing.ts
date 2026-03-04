@@ -21,6 +21,7 @@ export const staticPathTranslations: Record<string, Record<string, string>> = {
     'about-us': 'sobre-nosotros',
     'contact-us': 'contacto',
     'quote': 'cotizacion',
+    'claims': 'reclamaciones',
     'reservations': 'reservaciones',
     'services': 'servicios',
     'locations': 'ubicaciones',
