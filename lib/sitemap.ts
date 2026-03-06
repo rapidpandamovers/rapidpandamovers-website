@@ -92,6 +92,7 @@ async function getGeneralEntries(locale: Locale, now: string): Promise<SitemapEn
     ['/compare', 'monthly', 0.7],
     ['/alternatives', 'monthly', 0.7],
     ['/why-choose-us', 'monthly', 0.7],
+    ['/claims', 'monthly', 0.5],
     ['/privacy', 'yearly', 0.3],
     ['/terms', 'yearly', 0.3],
   ]
@@ -133,50 +134,54 @@ async function getGeneralEntries(locale: Locale, now: string): Promise<SitemapEn
 
 async function getBlogEntries(locale: Locale, now: string): Promise<SitemapEntry[]> {
   const entries: SitemapEntry[] = []
-  const allBlogPosts = getPublishedPosts(locale)
+  const localePosts = getPublishedPosts(locale)
 
-  // Individual blog posts (blog slugs are locale-specific)
-  for (const post of allBlogPosts) {
-    const dateStr = post.updated || post.date
+  // Individual blog posts (blog slugs are locale-specific — need explicit overrides)
+  const enPosts = getPublishedPosts('en')
+  const blogSlugMap = (await import('@/data/blog-slug-map.json')).default as Record<string, string>
+  for (const enPost of enPosts) {
+    const dateStr = enPost.updated || enPost.date
     const lastMod = new Date(dateStr).toISOString()
-    const blogPath = `/blog/${post.slug}`
-    entries.push(await forLocale(locale, blogPath, { lastModified: lastMod, changeFrequency: 'monthly', priority: 0.6 }, blogPath))
+    const enPath = `/blog/${enPost.slug}`
+    const esSlug = blogSlugMap[enPost.slug] || enPost.slug
+    entries.push(await forLocale(locale, enPath, { lastModified: lastMod, changeFrequency: 'monthly', priority: 0.6 }, `/blog/${esSlug}`))
   }
 
   // Blog pagination
-  const totalBlogPages = Math.ceil(allBlogPosts.length / POSTS_PER_PAGE)
+  const totalBlogPages = Math.ceil(localePosts.length / POSTS_PER_PAGE)
   for (let page = 2; page <= totalBlogPages; page++) {
     entries.push(await forLocale(locale, `/blog/page/${page}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.5 }))
   }
 
   // Blog category pages (editorial only) + pagination
-  const categories = getCategories(locale).filter(isEditorialCategory)
-  for (const category of categories) {
-    const slug = categoryToSlug(category)
-    entries.push(await forLocale(locale, `/blog/category/${slug}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.6 }))
-    const categoryPosts = allBlogPosts.filter(p => p.category === category)
-    const totalPages = Math.ceil(categoryPosts.length / POSTS_PER_PAGE)
+  // Always use EN slugs as canonical — translatePathname handles ES conversion
+  const enCategories = getCategories('en').filter(isEditorialCategory)
+  for (const enCategory of enCategories) {
+    const enSlug = categoryToSlug(enCategory)
+    entries.push(await forLocale(locale, `/blog/category/${enSlug}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.6 }))
+    const enCategoryPosts = enPosts.filter(p => p.category === enCategory)
+    const totalPages = Math.ceil(enCategoryPosts.length / POSTS_PER_PAGE)
     for (let page = 2; page <= totalPages; page++) {
-      entries.push(await forLocale(locale, `/blog/category/${slug}/page/${page}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.5 }))
+      entries.push(await forLocale(locale, `/blog/category/${enSlug}/page/${page}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.5 }))
     }
   }
 
-  // Blog service pages + pagination
-  const serviceSlugs = getServiceSlugsFromBlog(locale)
-  for (const slug of serviceSlugs) {
-    entries.push(await forLocale(locale, `/blog/service/${slug}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.6 }))
-    const posts = getPostsByService(slug, locale)
+  // Blog service pages + pagination (EN service slugs as canonical)
+  const enServiceSlugs = getServiceSlugsFromBlog('en')
+  for (const enSlug of enServiceSlugs) {
+    entries.push(await forLocale(locale, `/blog/service/${enSlug}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.6 }))
+    const posts = getPostsByService(enSlug, 'en')
     const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE)
     for (let page = 2; page <= totalPages; page++) {
-      entries.push(await forLocale(locale, `/blog/service/${slug}/page/${page}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.5 }))
+      entries.push(await forLocale(locale, `/blog/service/${enSlug}/page/${page}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.5 }))
     }
   }
 
-  // Blog location pages + pagination
-  const blogLocationSlugs = getLocationSlugs(locale)
+  // Blog location pages + pagination (location slugs are the same in both locales)
+  const blogLocationSlugs = getLocationSlugs('en')
   for (const slug of blogLocationSlugs) {
     entries.push(await forLocale(locale, `/blog/location/${slug}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.6 }))
-    const posts = getPostsByLocation(slug, locale)
+    const posts = getPostsByLocation(slug, 'en')
     const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE)
     for (let page = 2; page <= totalPages; page++) {
       entries.push(await forLocale(locale, `/blog/location/${slug}/page/${page}`, { lastModified: now, changeFrequency: 'weekly', priority: 0.5 }))
@@ -262,11 +267,27 @@ async function getRoutesEntries(locale: Locale, now: string): Promise<SitemapEnt
     entries.push(await forLocale(locale, `/${(r as { slug: string }).slug}-movers`, { lastModified: now, changeFrequency: 'monthly', priority: 0.6 }))
   }
 
-  // Routes pagination
+  // Route type pages
+  entries.push(await forLocale(locale, `/moving-routes/long-distance`, { lastModified: now, changeFrequency: 'monthly', priority: 0.7 }))
+  entries.push(await forLocale(locale, `/moving-routes/local`, { lastModified: now, changeFrequency: 'monthly', priority: 0.7 }))
+
+  // Routes pagination (all)
   const totalActiveRoutes = activeLongDistance.length + activeLocal.length
   const totalRoutePages = Math.ceil(totalActiveRoutes / ROUTES_PER_PAGE)
   for (let page = 2; page <= totalRoutePages; page++) {
     entries.push(await forLocale(locale, `/moving-routes/page/${page}`, { lastModified: now, changeFrequency: 'monthly', priority: 0.5 }))
+  }
+
+  // Routes pagination (long-distance)
+  const totalLdPages = Math.ceil(activeLongDistance.length / ROUTES_PER_PAGE)
+  for (let page = 2; page <= totalLdPages; page++) {
+    entries.push(await forLocale(locale, `/moving-routes/long-distance/page/${page}`, { lastModified: now, changeFrequency: 'monthly', priority: 0.5 }))
+  }
+
+  // Routes pagination (local)
+  const totalLocalPages = Math.ceil(activeLocal.length / ROUTES_PER_PAGE)
+  for (let page = 2; page <= totalLocalPages; page++) {
+    entries.push(await forLocale(locale, `/moving-routes/local/page/${page}`, { lastModified: now, changeFrequency: 'monthly', priority: 0.5 }))
   }
 
   // Routes by location (cities + neighborhoods)

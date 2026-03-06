@@ -42,6 +42,32 @@ const serviceSlugMap: Record<string, Record<string, string>> = {
   },
 }
 
+// Blog category slug translations (editorial categories not in serviceSlugMap)
+const categorySlugsMap: Record<string, Record<string, string>> = {
+  es: {
+    'moving-tips': 'consejos-de-mudanza',
+    'location-guide': 'guia-del-vecindario',
+    'home-and-living': 'hogar-y-vida',
+    'lifestyle': 'estilo-de-vida',
+    'fun-facts': 'datos-curiosos',
+  },
+}
+
+const reverseCategorySlugMap: Record<string, Record<string, string>> = {}
+
+function getReverseCategoryMap(locale: string): Record<string, string> {
+  if (!reverseCategorySlugMap[locale]) {
+    reverseCategorySlugMap[locale] = {}
+    const map = categorySlugsMap[locale]
+    if (map) {
+      for (const [en, localized] of Object.entries(map)) {
+        reverseCategorySlugMap[locale][localized] = en
+      }
+    }
+  }
+  return reverseCategorySlugMap[locale] || {}
+}
+
 // Blog slug translation maps — lazy-loaded to avoid bundling 140KB into every page's client JS
 let _blogSlugMap: Record<string, Record<string, string>> | null = null
 
@@ -160,6 +186,12 @@ export function getCanonicalSlug(translatedSlug: string, locale: Locale): string
     return reverseServices[translatedSlug]
   }
 
+  // Check blog category slugs
+  const reverseCategories = getReverseCategoryMap(locale)
+  if (reverseCategories[translatedSlug]) {
+    return reverseCategories[translatedSlug]
+  }
+
   // Check route slugs (e.g., "miami-a-orlando-movers" → needs both route + location translation)
   // First strip mudanzas- prefix if present and handle route pattern
   if (translatedSlug.startsWith('mudanzas-')) {
@@ -207,6 +239,12 @@ export function getTranslatedSlug(canonicalSlug: string, locale: Locale): string
   // Check service slugs
   if (serviceMap && serviceMap[canonicalSlug]) {
     return serviceMap[canonicalSlug]
+  }
+
+  // Check blog category slugs
+  const categoryMap = categorySlugsMap[locale]
+  if (categoryMap && categoryMap[canonicalSlug]) {
+    return categoryMap[canonicalSlug]
   }
 
   // Check location slugs with -movers suffix

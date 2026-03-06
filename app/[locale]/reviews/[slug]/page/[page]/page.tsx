@@ -1,5 +1,7 @@
 import { notFound } from 'next/navigation'
-import ReviewsListPage, { REVIEWS_PER_PAGE } from '../../../ReviewsListPage'
+import ReviewsListPage from '../../../ReviewsListPage'
+
+const REVIEWS_PER_PAGE = 9
 import QuoteSection from '@/app/components/QuoteSection'
 import Hero from '@/app/components/Hero'
 import reviewsData from '@/data/reviews.json'

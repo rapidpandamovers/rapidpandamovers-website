@@ -47,11 +47,15 @@ const nextConfig = {
     ];
   },
   async redirects() {
-    return redirectsData.redirects.map(redirect => ({
-      source: redirect.source,
-      destination: redirect.destination,
-      permanent: redirect.permanent,
-    }));
+    return redirectsData.redirects.map(redirect => {
+      const r = {
+        source: redirect.source,
+        destination: redirect.destination,
+        permanent: redirect.permanent,
+      };
+      if (redirect.has) r.has = redirect.has;
+      return r;
+    });
   },
   async headers() {
     return [

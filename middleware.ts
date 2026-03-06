@@ -35,10 +35,14 @@ export default function middleware(request: NextRequest) {
       }
 
       // 2. Translate nested path segments (e.g., "pagina" → "page", "ubicacion" → "location")
-      const nestedSegments = ['pagina', 'ubicacion', 'servicio', 'categoria']
+      const nestedSegments = ['pagina', 'ubicacion', 'servicio', 'categoria', 'larga-distancia']
       for (const seg of nestedSegments) {
         if (reversePaths[seg]) {
-          newPathname = newPathname.replace(`/${seg}/`, `/${reversePaths[seg]}/`)
+          // Match segment between slashes or at end of path
+          newPathname = newPathname.replace(
+            new RegExp(`/${seg}(/|$)`),
+            `/${reversePaths[seg]}$1`
+          )
         }
       }
 

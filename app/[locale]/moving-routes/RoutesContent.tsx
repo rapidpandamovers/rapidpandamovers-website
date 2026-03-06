@@ -1,7 +1,6 @@
 'use client';
 
 import { useMemo } from 'react';
-import { useSearchParams } from 'next/navigation';
 import { Link } from '@/i18n/routing';
 import { titleCase } from '@/lib/data';
 import { allLongDistanceRoutes, allLocalRoutes } from '@/lib/routes-data';
@@ -37,14 +36,13 @@ function getRouteCost(route: Route): number | undefined {
 interface RoutesContentProps {
   currentPage: number;
   fromLocation?: string;
+  routeType?: 'long-distance' | 'local' | null;
 }
 
-export default function RoutesContent({ currentPage, fromLocation }: RoutesContentProps) {
+export default function RoutesContent({ currentPage, fromLocation, routeType }: RoutesContentProps) {
   const { ui } = useMessages() as any;
   const locale = useLocale() as Locale;
   const movingRoutesSlug = getTranslatedSlug('moving-routes', locale);
-  const searchParams = useSearchParams();
-  const routeType = searchParams.get('type');
 
   const longDistanceRoutes = useMemo(() =>
     allLongDistanceRoutes.filter(r => r.is_active !== false),
@@ -96,21 +94,17 @@ export default function RoutesContent({ currentPage, fromLocation }: RoutesConte
   const startIndex = (currentPage - 1) * ROUTES_PER_PAGE;
   const paginatedRoutes = allFilteredRoutes.slice(startIndex, startIndex + ROUTES_PER_PAGE);
 
-  // Generate page URL with path-based location
+  // Generate page URL with path-based segments
   const pageSlug = getTranslatedSlug('page', locale);
+  const typeSlug = routeType ? getTranslatedSlug(routeType, locale) : null;
   const getPageUrl = (page: number) => {
-    const params = new URLSearchParams();
-    if (routeType) params.set('type', routeType);
-    const queryString = params.toString();
-
-    let base: string;
     if (fromLocation) {
-      base = page === 1 ? `/${movingRoutesSlug}/${fromLocation}` : `/${movingRoutesSlug}/${fromLocation}/${pageSlug}/${page}`;
-    } else {
-      base = page === 1 ? `/${movingRoutesSlug}` : `/${movingRoutesSlug}/${pageSlug}/${page}`;
+      return page === 1 ? `/${movingRoutesSlug}/${fromLocation}` : `/${movingRoutesSlug}/${fromLocation}/${pageSlug}/${page}`;
     }
-
-    return queryString ? `${base}?${queryString}` : base;
+    if (typeSlug) {
+      return page === 1 ? `/${movingRoutesSlug}/${typeSlug}` : `/${movingRoutesSlug}/${typeSlug}/${pageSlug}/${page}`;
+    }
+    return page === 1 ? `/${movingRoutesSlug}` : `/${movingRoutesSlug}/${pageSlug}/${page}`;
   };
 
   // Pagination numbers (same logic as reviews/blog)
@@ -181,7 +175,7 @@ export default function RoutesContent({ currentPage, fromLocation }: RoutesConte
                 {ui.routes.allRoutes}
               </Link>
               <Link
-                href={`/${movingRoutesSlug}?type=long-distance`}
+                href={`/${movingRoutesSlug}/${getTranslatedSlug('long-distance', locale)}`}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   routeType === 'long-distance'
                     ? 'bg-orange-700 text-white'
@@ -191,7 +185,7 @@ export default function RoutesContent({ currentPage, fromLocation }: RoutesConte
                 {ui.routes.longDistance}
               </Link>
               <Link
-                href={`/${movingRoutesSlug}?type=local`}
+                href={`/${movingRoutesSlug}/${getTranslatedSlug('local', locale)}`}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   routeType === 'local'
                     ? 'bg-orange-700 text-white'

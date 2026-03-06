@@ -42,5 +42,7 @@ export const staticPathTranslations: Record<string, Record<string, string>> = {
     'location': 'ubicacion',
     'service': 'servicio',
     'category': 'categoria',
+    'long-distance': 'larga-distancia',
+    'local': 'local',
   },
 }

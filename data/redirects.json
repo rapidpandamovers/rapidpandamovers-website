@@ -6,6 +6,18 @@
       "permanent": true
     },
     {
+      "source": "/moving-routes",
+      "has": [{ "type": "query", "key": "type", "value": "long-distance" }],
+      "destination": "/moving-routes/long-distance",
+      "permanent": true
+    },
+    {
+      "source": "/moving-routes",
+      "has": [{ "type": "query", "key": "type", "value": "local" }],
+      "destination": "/moving-routes/local",
+      "permanent": true
+    },
+    {
       "source": "/blogs",
       "destination": "/blog",
       "permanent": true
