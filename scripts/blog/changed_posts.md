@@ -7,6 +7,43 @@ Generated: 2026-03-05
 - **52 posts**: Weather fixes only (factual inaccuracies corrected)
 - **143 posts**: Month mismatch fixes (title month aligned to publication date, filenames/slugs/image folders renamed)
 - **1 post**: Full 10-step rewrite (post 90)
+- **27 posts**: Fabricated holiday tie-in fixes (holiday >3 weeks from pub date, replaced with month/season)
+
+---
+
+## 4. Fabricated Holiday Tie-In Fixes (27 posts)
+
+These posts had holidays referenced in titles/content that were more than 3 weeks from the publication date. Holiday removed, replaced with correct month/season.
+
+| ID | Old Title | New Title | Pub Date | Status | Translated |
+|----|-----------|-----------|----------|--------|------------|
+| 0166 | Long Distance Moving Planning for Easter Season | Long Distance Moving in February: Planning Your Miami Relocation | 2025-02-10 | completed | true |
+| 0207 | Top Apartment Moving Recommendations for Memorial Day | Top Apartment Moving Recommendations for April in Miami | 2025-04-07 | completed | true |
+| 0219 | Father's Day Commercial Moving Strategies in Miami | Spring Commercial Moving Strategies in Miami for April | 2025-04-22 | completed | true |
+| 0267 | How to Handle Antique Moving During Labor Day | How to Handle Antique Moving in June: Summer Tips for Miami | 2025-06-24 | completed | true |
+| 0293 | Local Moving Tips for Labor Day | Local Moving Tips for July in Miami | 2025-07-29 | completed | true |
+| 0298 | Labor Day Last Minute Moving Tips for Miami Residents | Last-Minute Moving Tips for August in Miami | 2025-08-05 | completed | true |
+| 0324 | How to Handle Same Building Moving During Halloween | How to Handle Same Building Moving in September | 2025-09-09 | completed | true |
+| 0328 | Special Needs Moving Tips for Halloween | Special Needs Moving Tips for September in Miami | 2025-09-15 | completed | true |
+| 0344 | Top Same Day Moving Recommendations for Thanksgiving | Top Same Day Moving Tips for October in Miami | 2025-10-07 | completed | true |
+| 0353 | Veterans Day Student Moving Strategies in Miami | Student Moving Tips for October in Miami | 2025-10-20 | completed | true |
+| 0386 | Top Student Moving Recommendations for the New Year | Student Moving Tips for December in Miami | 2025-12-01 | completed | true |
+| 0419 | Antique Moving Planning for Valentine's Day Season | Antique Moving Tips for January in Miami | 2026-01-13 | completed | true |
+| 0423 | How to Handle Packing Services During Valentine's Day | Professional Packing Services for Your January Move in Miami | 2026-01-19 | completed | true |
+| 0474 | How to Handle Military Moving During Mother's Day | Military Moving in March: PCS Tips for South Florida | 2026-03-30 | completed | true |
+| 0496 | How to Handle Last Minute Moving During Memorial Day | Last-Minute Moving in April: Quick Tips for Miami Residents | 2026-04-28 | completed | true |
+| 0555 | Top Long Distance Moving Recommendations for Labor Day | Long Distance Moving from Miami in July: What You Should Know | 2026-07-14 | completed | true |
+| 0600 | How to Handle Celebrity Moving During Veterans Day | Celebrity Moving in September: Discreet Relocations in Miami | 2026-09-14 | completed | true |
+| 0716 | How to Handle Local Moving During Mother's Day | Local Moving in February: Tips for a Smooth Miami Winter Move | 2027-02-15 | completed | true |
+| 0852 | Halloween Local Moving Strategies in Miami | August Local Moving in Miami: Beat the Heat and Storms | 2027-08-17 | completed | true |
+| 0882 | Office Moving Tips for Thanksgiving | Office Moving in September: Minimize Downtime Before Q4 | 2027-09-27 | completed | true |
+| 0903 | Hourly Moving Tips for New Year Planning | Hourly Moving in October: Save Money on Your Miami Fall Move | 2027-10-26 | completed | true |
+| 1035 | Hourly Moving Essentials for Halloween | Hourly Moving in April: Spring Into Your Miami Move | 2028-04-18 | completed | true |
+| 1049 | Thanksgiving Guide to Full-Service Moving in Miami | Your Guide to Full-Service Moving in Miami This May | 2028-05-08 | completed | true |
+| 1088 | Senior Moving Essentials for Valentine's Day | Senior Moving Essentials for Miami in June | 2028-06-27 | completed | true |
+| 1117 | Mother's Day Same Building Moving Strategies in Miami | Same Building Moving Strategies for Miami in August | 2028-08-04 | completed | true |
+| 1119 | Mother's Day Safe Moving Strategies in Miami | Safe Moving Strategies for Miami in August | 2028-08-08 | completed | true |
+| 1132 | Father's Day Antique Moving Tips for Miami Residents | Antique Moving Tips for Miami Residents in August | 2028-08-25 | completed | true |
 
 ---
 
