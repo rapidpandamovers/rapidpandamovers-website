@@ -6,6 +6,166 @@
       "permanent": true
     },
     {
+      "source": "/cross-country-move-costs",
+      "destination": "/blog/cost-estimation-for-cross-country-moving",
+      "permanent": true
+    },
+    {
+      "source": "/es/acerca-de-nosotros",
+      "destination": "/es/sobre-nosotros",
+      "permanent": true
+    },
+    {
+      "source": "/home-2021",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/landing-page",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/residential-moving-rpm",
+      "destination": "/residential-moving",
+      "permanent": true
+    },
+    {
+      "source": "/areas-we-serve",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/exclusive-offers",
+      "destination": "/quote",
+      "permanent": true
+    },
+    {
+      "source": "/fort-lauderdale",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/miami-dade-county",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/sunrise",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/blog/cross-country-move-costs",
+      "destination": "/blog/cost-estimation-for-cross-country-moving",
+      "permanent": true
+    },
+    {
+      "source": "/blog/eco-friendly-packing-materials",
+      "destination": "/blog/embrace-green-moving-with-eco-packing-materials",
+      "permanent": true
+    },
+    {
+      "source": "/blog/hiring-apartment-movers",
+      "destination": "/blog/smart-hiring-choosing-apartment-movers",
+      "permanent": true
+    },
+    {
+      "source": "/blog/last-minute-local-move",
+      "destination": "/blog/rapid-guide-to-a-last-minute-local-move",
+      "permanent": true
+    },
+    {
+      "source": "/blog/long-distance-move-planning",
+      "destination": "/blog/from-start-to-finish-planning-your-long-distance-move",
+      "permanent": true
+    },
+    {
+      "source": "/blog/long-distance-moving-guide-a-helpful-checklist-for-a-stress-free-move",
+      "destination": "/blog/essential-long-distance-moving-tips-for-october",
+      "permanent": true
+    },
+    {
+      "source": "/blog/miami-beach-employment-job-market-2024",
+      "destination": "/blog/miami-beach-job-market-moving-employment-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog/miami-fl-diy-vs-professional-moving",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/miami-fl-eco-friendly-moving",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/miami-fl-packing-unpacking-tips",
+      "destination": "/blog/efficient-miami-fl-packing-unpacking-tips",
+      "permanent": true
+    },
+    {
+      "source": "/blog/miami-fl-transport-accessibility",
+      "destination": "/blog/miami-fl-transport-options-for-new-residents",
+      "permanent": true
+    },
+    {
+      "source": "/blog/moving-gun-safe-stairs",
+      "destination": "/blog/step-by-step-moving-a-gun-safe-upstairs",
+      "permanent": true
+    },
+    {
+      "source": "/blog/moving-with-pets-apartments",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/navigating-the-costs-of-moving-a-gun-safe-a-comprehensive-guide",
+      "destination": "/blog/gun-safe-moving-costs",
+      "permanent": true
+    },
+    {
+      "source": "/blog/packing-electronics-safely",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/packing-like-a-professional-master-the-art-of-efficient-moving",
+      "destination": "/blog/packing-like-a-pro-master-efficient-moving-techniques",
+      "permanent": true
+    },
+    {
+      "source": "/blog/packing-tips-apartment",
+      "destination": "/blog/packing-tips-for-an-apartment-move",
+      "permanent": true
+    },
+    {
+      "source": "/blog/planning-residential-move",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/preparing-gun-safe-move",
+      "destination": "/blog/preparing-a-gun-safe-for-a-move-steps-and-tips",
+      "permanent": true
+    },
+    {
+      "source": "/blog/senior-local-moving-guide",
+      "destination": "/blog/fall-senior-moving-insights-for-miami",
+      "permanent": true
+    },
+    {
+      "source": "/blog/understanding-miami-s-2024-real-estate-market",
+      "destination": "/blog/understanding-miamis-real-estate-market",
+      "permanent": true
+    },
+    {
+      "source": "/blog/unpacking-organizing-apartment",
+      "destination": "/blog/unpacking-organizing-your-apartment-a-step-by-step-guide",
+      "permanent": true
+    },
+    {
       "source": "/moving-routes",
       "has": [{ "type": "query", "key": "type", "value": "long-distance" }],
       "destination": "/moving-routes/long-distance",
