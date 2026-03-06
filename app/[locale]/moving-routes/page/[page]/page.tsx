@@ -1,4 +1,4 @@
-import { notFound, redirect } from 'next/navigation';
+import { notFound } from 'next/navigation';
 import RoutesContent from '../../RoutesContent';
 import { locales } from '@/i18n/config';
 import { generatePageMetadata } from '@/lib/metadata';
@@ -6,6 +6,8 @@ import { getLocale } from 'next-intl/server';
 import type { Locale } from '@/i18n/config';
 
 const ROUTES_PER_PAGE = 24;
+
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
   const { allLongDistanceRoutes, allLocalRoutes } = await import('@/lib/routes-data');
@@ -36,10 +38,6 @@ export async function generateMetadata({ params }: { params: Promise<{ page: str
 export default async function RoutesPaginatedPage({ params }: { params: Promise<{ page: string }> }) {
   const { page } = await params;
   const pageNum = parseInt(page, 10);
-
-  if (pageNum === 1) {
-    redirect('/moving-routes');
-  }
 
   const { allLongDistanceRoutes, allLocalRoutes } = await import('@/lib/routes-data');
   const totalRoutes =

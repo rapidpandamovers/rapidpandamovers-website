@@ -132,6 +132,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string;
   notFound();
 }
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const enSlugs = getStaticSlugs();
   return locales.flatMap(locale =>

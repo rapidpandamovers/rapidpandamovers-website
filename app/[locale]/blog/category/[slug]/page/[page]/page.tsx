@@ -1,14 +1,15 @@
-import { notFound, redirect } from 'next/navigation'
+import { notFound } from 'next/navigation'
 import BlogListPage from '../../../../BlogListPage'
 import { getCategoryBySlug, getPostsByCategory, getCategories, categoryToSlug, isEditorialCategory } from '@/lib/blog'
 import { locales } from '@/i18n/config'
 import { getLocale } from 'next-intl/server'
-import { getTranslatedSlug } from '@/i18n/slug-map'
 import type { Locale } from '@/i18n/config'
 import { generatePageMetadata } from '@/lib/metadata'
 import type { Metadata } from 'next'
 
 const POSTS_PER_PAGE = 12
+
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
   return locales.flatMap(locale => {
@@ -60,9 +61,6 @@ export default async function BlogCategoryPaginatedPage({
     notFound()
   }
   const pageNum = parseInt(page, 10)
-  if (pageNum === 1) {
-    redirect(`/blog/${getTranslatedSlug('category', locale)}/${encodeURIComponent(slug)}`)
-  }
   const posts = getPostsByCategory(category, locale)
   const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE)
   if (isNaN(pageNum) || pageNum < 1 || pageNum > totalPages) {

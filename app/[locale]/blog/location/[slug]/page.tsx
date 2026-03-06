@@ -6,6 +6,8 @@ import { locales, type Locale } from '@/i18n/config'
 import { getLocale } from 'next-intl/server'
 import { generatePageMetadata } from '@/lib/metadata'
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const slugs = getLocationSlugs()
   return locales.flatMap(locale =>

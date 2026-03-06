@@ -8,6 +8,8 @@ import { locales, type Locale } from '@/i18n/config'
 import { getMessages, getLocale } from 'next-intl/server'
 import { generatePageMetadata } from '@/lib/metadata'
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const cities = getAllActiveCities()
   const locations = cities.map(city => ({ location: city.slug }))
@@ -21,8 +23,8 @@ export async function generateMetadata({ params }: { params: Promise<{ location:
   const name = titleCase(location)
 
   return generatePageMetadata({
-    title: `${ui.locations.movingServicesIn.replace('{name}', name)} | Rapid Panda Movers`,
-    description: ui.locations.heroDescriptionCity.replace('{name}', name),
+    title: `${ui.location.movingServicesIn.replace('{name}', name)} | Rapid Panda Movers`,
+    description: ui.location.heroDescriptionCity.replace('{name}', name),
     path: `/services/${location}`,
     locale,
   })
@@ -46,8 +48,8 @@ export default async function ServicesLocationPage({ params }: { params: Promise
   return (
     <div className="min-h-screen">
       <Hero
-        title={ui.locations.movingServicesIn.replace('{name}', name)}
-        description={ui.locations.heroDescriptionCity.replace('{name}', name)}
+        title={ui.location.movingServicesIn.replace('{name}', name)}
+        description={ui.location.heroDescriptionCity.replace('{name}', name)}
         cta={content.services.hero.cta}
       />
 

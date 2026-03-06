@@ -14,6 +14,8 @@ import { getTranslatedSlug } from '@/i18n/slug-map'
 import type { Locale } from '@/i18n/config'
 import { H2, H3 } from '@/app/components/Heading'
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   try {
     return locales.flatMap(locale => {

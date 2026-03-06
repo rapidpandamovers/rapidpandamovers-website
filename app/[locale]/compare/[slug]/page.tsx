@@ -19,6 +19,8 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const slugs = comparisons.comparisons.map((comparison) => ({
     slug: comparison.slug,

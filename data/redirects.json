@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/sitemap-index.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
       "source": "/blogs",
       "destination": "/blog",
       "permanent": true

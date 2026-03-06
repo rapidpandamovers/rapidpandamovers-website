@@ -1,4 +1,4 @@
-import { redirect } from 'next/navigation';
+import { notFound } from 'next/navigation';
 import { titleCase } from '@/lib/data';
 import RoutesContent from '../../../RoutesContent';
 import { generatePageMetadata } from '@/lib/metadata';
@@ -6,6 +6,8 @@ import { getLocale } from 'next-intl/server';
 import type { Locale } from '@/i18n/config';
 import { locales } from '@/i18n/config';
 import { getAllRouteLocations, getTotalPagesForLocation } from '@/lib/routes-data';
+
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
   const locations = getAllRouteLocations();
@@ -39,14 +41,6 @@ export async function generateMetadata({ params }: { params: Promise<{ location:
 export default async function RoutesLocationPaginatedPage({ params }: { params: Promise<{ location: string; page: string }> }) {
   const { location, page } = await params;
   const pageNum = parseInt(page, 10);
-
-  if (isNaN(pageNum) || pageNum < 1) {
-    redirect(`/moving-routes/${location}`);
-  }
-
-  if (pageNum === 1) {
-    redirect(`/moving-routes/${location}`);
-  }
 
   return <RoutesContent currentPage={pageNum} fromLocation={location} />;
 }

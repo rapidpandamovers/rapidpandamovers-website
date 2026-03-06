@@ -1,4 +1,4 @@
-import { notFound, redirect } from 'next/navigation'
+import { notFound } from 'next/navigation'
 import ReviewsListPage, { REVIEWS_PER_PAGE } from '../../../ReviewsListPage'
 import QuoteSection from '@/app/components/QuoteSection'
 import Hero from '@/app/components/Hero'
@@ -8,6 +8,8 @@ import { getMessages, getLocale } from 'next-intl/server'
 import { generatePageMetadata } from '@/lib/metadata'
 import type { Locale } from '@/i18n/config'
 import type { Metadata } from 'next'
+
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
   const platforms = Array.from(new Set(reviewsData.reviews.map(r => r.platform)))
@@ -56,11 +58,6 @@ export default async function ReviewsPlatformPaginatedPage({
   const validPlatforms = new Set(reviewsData.reviews.map(r => r.platform))
   if (!validPlatforms.has(slug)) {
     notFound()
-  }
-
-  // Redirect page 1 to canonical URL
-  if (pageNum === 1) {
-    redirect(`/reviews/${encodeURIComponent(slug)}`)
   }
 
   // Validate page number

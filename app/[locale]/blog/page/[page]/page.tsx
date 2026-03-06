@@ -1,4 +1,4 @@
-import { notFound, redirect } from 'next/navigation'
+import { notFound } from 'next/navigation'
 import BlogListPage from '../../BlogListPage'
 import { getPostsSortedByDate } from '@/lib/blog'
 import { locales } from '@/i18n/config'
@@ -7,6 +7,8 @@ import { getLocale } from 'next-intl/server'
 import type { Locale } from '@/i18n/config'
 
 const POSTS_PER_PAGE = 12
+
+export const dynamicParams = false;
 
 // Generate static params for all pages
 export async function generateStaticParams() {
@@ -42,11 +44,6 @@ export default async function BlogPaginatedPage({ params }: { params: Promise<{ 
   const locale = await getLocale() as Locale
   const { page } = await params
   const pageNum = parseInt(page, 10)
-
-  // Redirect page 1 to /blog
-  if (pageNum === 1) {
-    redirect('/blog')
-  }
 
   // Validate page number
   const sortedBlog = getPostsSortedByDate(locale)

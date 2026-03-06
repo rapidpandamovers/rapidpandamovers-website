@@ -8,6 +8,8 @@ import { getLocale } from 'next-intl/server'
 import { generatePageMetadata } from '@/lib/metadata'
 import { getCanonicalSlug, getTranslatedSlug } from '@/i18n/slug-map'
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const slugs = getServiceSlugsFromBlog()
   return locales.flatMap(locale =>

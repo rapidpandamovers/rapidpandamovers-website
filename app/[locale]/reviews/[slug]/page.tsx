@@ -8,6 +8,8 @@ import { locales, type Locale } from '@/i18n/config'
 import { getMessages, getLocale } from 'next-intl/server'
 import { generatePageMetadata } from '@/lib/metadata'
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const platforms = new Set(reviewsData.reviews.map(r => r.platform))
   const slugs = Array.from(platforms).map((platform) => ({

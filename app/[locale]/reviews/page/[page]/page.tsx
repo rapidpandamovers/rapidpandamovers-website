@@ -1,4 +1,4 @@
-import { notFound, redirect } from 'next/navigation'
+import { notFound } from 'next/navigation'
 import ReviewsListPage from '../../ReviewsListPage'
 import QuoteSection from '@/app/components/QuoteSection'
 import Hero from '@/app/components/Hero'
@@ -9,6 +9,8 @@ import { generatePageMetadata } from '@/lib/metadata'
 import type { Locale } from '@/i18n/config'
 
 const REVIEWS_PER_PAGE = 9
+
+export const dynamicParams = false;
 
 // Generate static params for all pages
 export async function generateStaticParams() {
@@ -40,11 +42,6 @@ export default async function ReviewsPaginatedPage({ params }: { params: Promise
   const { page } = await params
   const pageNum = parseInt(page, 10)
   const { content } = (await getMessages()) as any
-
-  // Redirect page 1 to /reviews
-  if (pageNum === 1) {
-    redirect('/reviews')
-  }
 
   // Validate page number
   const totalReviews = reviewsData.reviews.length

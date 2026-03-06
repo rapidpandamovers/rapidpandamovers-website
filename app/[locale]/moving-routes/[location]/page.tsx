@@ -6,6 +6,8 @@ import type { Locale } from '@/i18n/config';
 import { locales } from '@/i18n/config';
 import { getAllRouteLocations } from '@/lib/routes-data';
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const locations = getAllRouteLocations();
   return locales.flatMap(locale =>
